@@ -1,0 +1,283 @@
+{
+  "version": 3,
+  "page": "02",
+  "status": "planning-guide-not-reviewed",
+  "direction": "left-to-right, top-to-bottom",
+  "panels": [
+    {
+      "id": "02-1",
+      "rect": [
+        24,
+        24,
+        976,
+        520
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "narration",
+          "text": "The clinic begins its Welbuk onboarding.",
+          "rect": [
+            48,
+            48,
+            299,
+            106
+          ],
+          "center": [
+            197.5,
+            101
+          ],
+          "mouth": null
+        },
+        {
+          "number": 2,
+          "speaker": "narration",
+          "text": "WELBUK PRACTICE for the clinic",
+          "rect": [
+            704,
+            48,
+            294,
+            106
+          ],
+          "center": [
+            851,
+            101
+          ],
+          "mouth": null
+        }
+      ],
+      "faces": {},
+      "protected": [],
+      "intent": {
+        "entry": [
+          40,
+          40
+        ],
+        "exit": [
+          990,
+          540
+        ]
+      },
+      "groups": null,
+      "warnings": [
+        {
+          "from": 1,
+          "to": 2,
+          "reason": "左から右へ戻る移動と縦方向の範囲が重なる。段差・余白・人物の配置を目視で検討する。"
+        }
+      ]
+    },
+    {
+      "id": "02-2",
+      "rect": [
+        24,
+        568,
+        600,
+        520
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "ananya",
+          "text": "We can organise our clinic workflow here.",
+          "rect": [
+            44,
+            588,
+            308,
+            106
+          ],
+          "center": [
+            198,
+            641
+          ],
+          "mouth": [
+            449,
+            880
+          ]
+        }
+      ],
+      "faces": {
+        "ananya": {
+          "anchor": [
+            449,
+            880
+          ],
+          "face": [
+            384,
+            748,
+            130,
+            165
+          ]
+        }
+      },
+      "protected": [],
+      "intent": {
+        "entry": [
+          44,
+          590
+        ],
+        "exit": [
+          620,
+          1080
+        ]
+      },
+      "groups": null,
+      "warnings": []
+    },
+    {
+      "id": "02-3",
+      "rect": [
+        648,
+        568,
+        352,
+        520
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "meera",
+          "text": "And our team can use tools suited to each staff role.",
+          "rect": [
+            664,
+            584,
+            272,
+            138
+          ],
+          "center": [
+            800,
+            653
+          ],
+          "mouth": [
+            898,
+            878
+          ]
+        },
+        {
+          "number": 2,
+          "speaker": "narration",
+          "text": "WELBUK CARE for clinic staff",
+          "rect": [
+            664,
+            968,
+            234,
+            106
+          ],
+          "center": [
+            781,
+            1021
+          ],
+          "mouth": null
+        }
+      ],
+      "faces": {
+        "meera": {
+          "anchor": [
+            898,
+            878
+          ],
+          "face": [
+            838,
+            758,
+            120,
+            150
+          ]
+        }
+      },
+      "protected": [],
+      "intent": {
+        "entry": [
+          664,
+          590
+        ],
+        "exit": [
+          990,
+          1080
+        ]
+      },
+      "groups": null,
+      "warnings": []
+    },
+    {
+      "id": "02-4",
+      "rect": [
+        24,
+        1112,
+        976,
+        352
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "ananya",
+          "text": "One team. Better coordination.",
+          "rect": [
+            64,
+            1132,
+            290,
+            106
+          ],
+          "center": [
+            209,
+            1185
+          ],
+          "mouth": [
+            384,
+            1407
+          ]
+        }
+      ],
+      "faces": {
+        "ananya": {
+          "anchor": [
+            384,
+            1407
+          ],
+          "face": [
+            324,
+            1287,
+            120,
+            150
+          ]
+        },
+        "meera": {
+          "anchor": [
+            682,
+            1388
+          ],
+          "face": [
+            624,
+            1272,
+            115,
+            145
+          ]
+        }
+      },
+      "protected": [],
+      "intent": {
+        "entry": [
+          40,
+          1130
+        ],
+        "exit": [
+          990,
+          1505
+        ]
+      },
+      "groups": null,
+      "warnings": []
+    }
+  ],
+  "checklist": [
+    "番号と誘導線を隠した画像を先に読み、予測した発話順を記録する",
+    "最初のセリフへ上・左から入れるか",
+    "近い非連続の吹き出しを一組と誤認して返答を飛ばさないか",
+    "前の会話のまとまりを読み終えてから次のまとまりへ進めるか",
+    "返答へ自然に移り、視線が大きく逆戻りしないか",
+    "顔の向き・視線・手や小道具の動作と読順がつながるか",
+    "話者への尾が別人物や重要物を横切らないか",
+    "場所・時間・回想の切替と物の移動を直前直後から理解できるか",
+    "最後のセリフ・反応から次のコマへ移れるか",
+    "大きなコマ・余白・情報公開の順がページの感情の狙いに合うか",
+    "話題の境界と段・ページ境界が一致し、不要な読み戻りを誘わないか"
+  ]
+}
