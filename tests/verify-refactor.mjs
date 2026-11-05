@@ -11,13 +11,14 @@ import {
   columns,
   speechColumns,
   box,
+  horizontalAdvance,
   segmentEntry,
   overlap,
   createLettering,
 } from '../src/lettering.mjs';
 import { findDialogueLayout } from '../src/dialogue-layout.mjs';
 import { resolveStoryState } from '../src/story-state.mjs';
-import { resolvedNarrativeState } from '../src/reading-flow.mjs';
+import { resolvedNarrativeState, readingFlow } from '../src/reading-flow.mjs';
 import { captureWorkflow } from './workflow-fixture.mjs';
 
 assert.deepEqual(columns('あいうえお。', 5), ['あいうえお。']);
@@ -83,11 +84,50 @@ assert.deepEqual(
   box(panel, { ...panel.dialogue[0], textDirection: 'horizontal' }).slice(2),
   [114, 74],
 );
+// English horizontal lettering is measured proportionally; full-width text keeps 26px cells.
+assert.equal(horizontalAdvance('覚えている。'), 6 * 26);
+assert.equal(
+  horizontalAdvance('Yes, please.'),
+  18 + 15 + 15 + 8 + 8 + 15 + 8 + 15 + 15 + 15 + 15 + 8,
+);
+assert.deepEqual(
+  box(panel, {
+    ...panel.dialogue[0],
+    text: 'Yes, please.',
+    textColumns: undefined,
+    capacity: 20,
+    textDirection: 'horizontal',
+  }).slice(2),
+  [horizontalAdvance('Yes, please.') + 36, 74],
+);
 assert.equal(overlap([0, 0, 10, 10], [10, 0, 10, 10]), false);
 assert.equal(segmentEntry([0, 5], [20, 5], [10, 0, 10, 10]), 0.5);
 assert.equal(segmentEntry([0, 20], [20, 20], [10, 0, 10, 10]), null);
 const lettering = createLettering(cast);
 assert.equal(lettering.tailGeometry(panel, { speaker: 'n' }), null);
+// Opt-in label captions get a distinct box; ordinary captions are unchanged.
+const labelled = createLettering({
+  ...cast,
+  l: { kind: 'caption', variant: 'label' },
+});
+assert.match(
+  labelled.balloon(panel, { ...panel.dialogue[0], speaker: 'l' }),
+  /rx="10" fill="#e6f4f3"/,
+);
+assert.doesNotMatch(
+  lettering.balloon(panel, { ...panel.dialogue[0], speaker: 'n' }),
+  /#e6f4f3|rx=/,
+);
+// readingFlow keeps the right-to-left guide by default and records an opted-in direction.
+assert.equal(
+  readingFlow({ id: '01', panels: [] }, box).direction,
+  'right-to-left, top-to-bottom',
+);
+assert.equal(
+  readingFlow({ id: '01', panels: [] }, box, 'left-to-right, top-to-bottom')
+    .direction,
+  'left-to-right, top-to-bottom',
+);
 const tail = lettering.tailGeometry(panel, panel.dialogue[0]);
 assert.equal(segmentEntry(tail.base, tail.tip, panel.speakers.a.face), null);
 const before = structuredClone(panel);

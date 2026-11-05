@@ -68,6 +68,14 @@ function validate(data = config) {
   assert.ok(Array.isArray(data.pages) && data.pages.length, 'No pages');
   const panelIds = new Set();
   const ids = new Set();
+  // Japanese manga reads right to left; readingDirection opts a work into
+  // left-to-right panel and balloon order (e.g. English comics).
+  const leftToRight = data.readingDirection === 'left-to-right';
+  assert.ok(
+    data.readingDirection === undefined ||
+      ['right-to-left', 'left-to-right'].includes(data.readingDirection),
+    'readingDirection must be right-to-left or left-to-right',
+  );
   for (const page of data.pages) {
     if (data.version >= 3) {
       assert.ok(page.expectation?.length, 'Missing reader expectation');
@@ -158,8 +166,11 @@ function validate(data = config) {
       if (i) {
         const prev = page.panels[i - 1].rect;
         assert.ok(
-          y > prev[1] || (y === prev[1] && x < prev[0]),
-          'Reading order must be top to bottom, right to left',
+          y > prev[1] ||
+            (y === prev[1] && (leftToRight ? x > prev[0] : x < prev[0])),
+          leftToRight
+            ? 'Reading order must be top to bottom, left to right'
+            : 'Reading order must be top to bottom, right to left',
         );
       }
       for (const r of p.protected || [])
@@ -249,7 +260,9 @@ function validate(data = config) {
           if (j) {
             const a = bounds[j - 1];
             assert.ok(
-              b[1] >= a[1] && (b[0] <= a[0] || b[1] >= a[1] + 80),
+              b[1] >= a[1] &&
+                ((leftToRight ? b[0] >= a[0] : b[0] <= a[0]) ||
+                  b[1] >= a[1] + 80),
               'Ambiguous dialogue reading order: ' + p.id,
             );
           }
@@ -496,7 +509,9 @@ if (command === 'layout') {
   );
 } else if (command === 'plan') {
   fs.mkdirSync(path.join(dir, 'reading-flow'), { recursive: true });
-  const flow = config.pages.map((page) => readingFlow(page, box));
+  const flow = config.pages.map((page) =>
+    readingFlow(page, box, config.narrativeDesign?.direction),
+  );
   fs.writeFileSync(
     path.join(dir, 'narrative-plan.json'),
     JSON.stringify(narrativePlan(config), null, 2),
@@ -876,7 +891,16 @@ if (command === 'layout') {
   fs.writeFileSync(
     path.join(output, 'reader.html'),
     fs
-      .readFileSync(path.join(root, 'templates', 'reader.html'), 'utf8')
+      .readFileSync(
+        path.join(
+          root,
+          'templates',
+          config.readingDirection === 'left-to-right'
+            ? 'reader-ltr.html'
+            : 'reader.html',
+        ),
+        'utf8',
+      )
       .replaceAll('{{TITLE}}', xml(config.title))
       .replaceAll('{{AUTHOR}}', xml(config.author || ''))
       .replace(
@@ -893,7 +917,7 @@ if (command === 'layout') {
   );
   fs.writeFileSync(
     path.join(output, 'index.html'),
-    `<!doctype html><html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${xml(config.title)} 改訂版</title><style>body{background:#e7e5e0;margin:0;font-family:Meiryo,sans-serif}header{max-width:850px;margin:28px auto;padding:20px}h1{font-size:24px}main{max-width:950px;margin:auto}img{width:100%;display:block;margin-bottom:26px}@media print{header{display:none}img{height:100vh;object-fit:contain;break-after:page}}</style><header><h1>${xml(config.title)} — 改訂版</h1><p>原作：${xml(config.author || '')} ／ 右から左、上から下へ。セリフとコマ割りを先に確定して制作。</p><a href="${path.relative(output, path.join(dir, 'storyboards', 'index.html')).replaceAll('\\', '/')}">制作前のネーム</a> · <a href="reader.html">1ページずつ読む</a></header><main>${config.pages.map((p) => `<img src="page-${p.id}.svg" alt="${xml(p.panels.flatMap((q) => q.dialogue.map((d) => `${d.speaker}: ${d.text.replace(/\n/g, '')}`)).join(' / '))}">`).join('')}</main></html>`,
+    `<!doctype html><html lang="${config.readingDirection === 'left-to-right' ? 'en' : 'ja'}"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${xml(config.title)}${config.readingDirection === 'left-to-right' ? '' : ' 改訂版'}</title><style>body{background:#e7e5e0;margin:0;font-family:Meiryo,sans-serif}header{max-width:850px;margin:28px auto;padding:20px}h1{font-size:24px}main{max-width:950px;margin:auto}img{width:100%;display:block;margin-bottom:26px}@media print{header{display:none}img{height:100vh;object-fit:contain;break-after:page}}</style>${config.readingDirection === 'left-to-right' ? `<header><h1>${xml(config.title)}</h1><p>${config.author ? `Source: ${xml(config.author)} / ` : ''}Read left to right, top to bottom.</p><a href="${path.relative(output, path.join(dir, 'storyboards', 'index.html')).replaceAll('\\', '/')}">Storyboards</a> · <a href="reader.html">Read one page at a time</a></header>` : `<header><h1>${xml(config.title)} — 改訂版</h1><p>原作：${xml(config.author || '')} ／ 右から左、上から下へ。セリフとコマ割りを先に確定して制作。</p><a href="${path.relative(output, path.join(dir, 'storyboards', 'index.html')).replaceAll('\\', '/')}">制作前のネーム</a> · <a href="reader.html">1ページずつ読む</a></header>`}<main>${config.pages.map((p) => `<img src="page-${p.id}.svg" alt="${xml(p.panels.flatMap((q) => q.dialogue.map((d) => `${d.speaker}: ${d.text.replace(/\n/g, '')}`)).join(' / '))}">`).join('')}</main></html>`,
   );
   console.log(
     `Built ${config.pages.length} pages and reproducibility manifest`,

@@ -48,6 +48,22 @@ export function speechColumns(speech) {
   );
   return speech.textColumns;
 }
+// Estimated horizontal advance at the 26px lettering size. Full-width (CJK)
+// characters keep the original 26px cell, so Japanese layouts are unchanged;
+// half-width Latin text (English dialogue) is measured proportionally so that
+// balloons fit their words instead of reserving a full-width cell per letter.
+export function horizontalAdvance(text) {
+  let total = 0;
+  for (const c of text) {
+    const code = c.codePointAt(0);
+    if (code >= 0x1100) total += 26;
+    else if (c === ' ') total += 8;
+    else if (/[.,:;'!|ijlIt]/.test(c)) total += 8;
+    else if (/[A-Z0-9mwMW@&%]/.test(c)) total += 18;
+    else total += 15;
+  }
+  return total;
+}
 export function box(panel, speech) {
   const lines = speechColumns(speech);
   validateTextSizeRanges(speech);
@@ -58,7 +74,8 @@ export function box(panel, speech) {
   );
   const horizontal = speech.textDirection === 'horizontal';
   const longest = Math.max(...lines.map((s) => [...s].length));
-  const width = horizontal ? longest * 26 + 36 : lines.length * 28 + 36;
+  const widest = Math.max(...lines.map(horizontalAdvance));
+  const width = horizontal ? widest + 36 : lines.length * 28 + 36;
   const height = horizontal ? lines.length * 32 + 42 : longest * 27 + 42;
   const [x, y, w] = panel.rect;
   return [
@@ -209,7 +226,12 @@ export function createLettering(cast) {
     const tail = t
       ? `<path data-speaker="${d.speaker}" d="M ${t.a.join(' ')} L ${t.tip.join(' ')} L ${t.b.join(' ')}" fill="white" stroke="black" stroke-width="2"/>`
       : '';
-    const shape = `<rect x="${x}" y="${y}" width="${w}" height="${h}" ${isCaption ? '' : `rx="${Math.min(34, w / 3)}"`} fill="white" stroke="black" stroke-width="2"/>`;
+    // cast.variant "label" (opt-in) marks typeset signage/product labels so they
+    // read differently from narration captions.
+    const label = isCaption && cast[d.speaker]?.variant === 'label';
+    const shape = label
+      ? `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="10" fill="#e6f4f3" stroke="#1d6f6a" stroke-width="3"/>`
+      : `<rect x="${x}" y="${y}" width="${w}" height="${h}" ${isCaption ? '' : `rx="${Math.min(34, w / 3)}"`} fill="white" stroke="black" stroke-width="2"/>`;
     let offset = 0;
     const content = lines.map((text) => {
       const result = sizedText(text, d, offset);
