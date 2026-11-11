@@ -1,31 +1,24 @@
 {
-  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-05-9ae30704f9d1d9cd592534675170861bb2b2d37656c3cc063d13993500ab37c8.json",
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-05-878784381abcdafffe9490359c4d6e609a904bdbf4275d460cfb8bcdea794d1f.json",
   "reviewer": {
     "role": "subagent",
-    "task": "claude-code-agent:manga-reviewer:aea9f69e7dc10be5e",
+    "task": "claude-code-agent:manga-reviewer:ac034b27e1e1f05cf",
     "reportedTask": null,
     "taskSource": "Agent ID returned by the Claude Code Agent tool to the parent."
   },
   "status": "pass",
   "observations": [
-    "Reviewer identity: the runtime did not give me a task ID, so task is null. The parent must record the real Agent ID.",
-    "Instructions: the request JSON has no 'instructions' field. I followed docs/PROMPTS.md and the r14 response structure.",
-    "Viewing order: I opened storyboards-unnumbered/page-05.png with Read before the script, then storyboards/page-05.png. I also read the full page 5 script and boundary context, source page 5, responses/storyboard-r14-05.json and the accepted art assets/panels/05-1.png, 05-2.png, 05-3.png, 05-4.png and, for the exit, 06-1.png. All images loaded and were legible.",
-    "My unnumbered reading of page 05, in order: Ananya 'Hello, Ravi. Tell me what brings you in.' (top); Ravi 'I've been feeling tired lately.' (middle-left); caption 'Technology supports the workflow. The conversation stays human.' (middle-right); Ananya 'We'll go through your concerns and decide the right next steps together.' (bottom). This matches the script and source page 5.",
-    "Face boxes checked against the art (my own estimates, mapping each panel image onto its rect). 05-1: Ananya at about x243-326, y80-184, consistent with [252,62,70,90]. The balloon (x354-565, y40-178) covers only the window and plant top. Her open hand (about y246-295) is below it. Ravi at about x730-812, consistent with [733,55,75,92]. 05-2: Ravi at about x319-427, y646-779, consistent with [330,628,95,135]. The balloon grazes only the top of Ananya's back-of-head hair. 05-3: Ananya at about x676-759, y708-805 against [645,738,115,100]. The caption bottom (y690) overlaps about 18px of hair top; her eyes are near y757. The caption's right part overlaps the back of Ravi's foreground head, not a face. 05-4: Ananya at about x291-373 and the balloon starts at x404. The balloon bottom (y1270) overlaps her raised fingertips (about x431-513, y1263+) by about 7px, a lettering check. Ravi at about x726-793 is clear of the balloon (ends x691).",
-    "First-reader (1), the 05-1/05-4 balloons cover Ananya's face: not borne out by the art; there is 28-31px of clearance. The cut-off names are placeholder labels.",
-    "First-reader (2), the 05-4 speaker is ambiguous: resolved by the art. Ananya speaks with an open mouth and open hand while Ravi nods (motion marks) with his mouth closed, the tail points left, and 'your concerns' is clearly the doctor's line.",
-    "First-reader (3), the 05-2 balloon sits on the listener's side: the top-left entry is natural in left-to-right reading. Ravi's open mouth plus the tail identify him, and Ananya is only the back of a head. Acceptable.",
-    "First-reader (4), the 05-3 caption is on the border: cosmetic; it covers hair only.",
-    "First-reader (5) and (6), the consultation is thin and 'Technology' has no referent: the lines are fixed by the source. The new pages 3-4 (QR, TV, tablet alert) now come right before this page, and 05-3's art shows the closed laptop pushed aside, so 'Technology' has a referent and the human contrast is stronger.",
-    "Lettering notes (not blocking): nudge the 05-4 balloon up or right a few pixels to clear Ananya's fingertips, and confirm the short tails in 05-1 and 05-4 reach her mouth side.",
-    "Continuity: the 05-1 bag on the floor follows 04-2's 'back on his shoulder as he walks in (05-1)'. The tablet is absent in every 05 panel, consistent with doctor-tablet after 04-3."
+    "Identity: the runtime did not give me a task identity, so task is null. The parent must record the actual Agent ID.",
+    "What I opened with Read: workflow/storyboards-unnumbered/page-05.png, workflow/storyboards/page-05.png (numbered PNG; the request hashes the SVG, and the PNG layout matches the unnumbered one), workflow/review/page-04.png, page-05.png and page-06.png. I also read the 05 script and the 04/06 boundary context in this request, source/original.txt PAGE 5 and the revision note. I read the script before looking at the images.",
+    "Unnumbered PNG: 4 panels. Natural order: 05-1 Ananya 'Hello, Ravi. Tell me what brings you in.'; 05-2 Ravi 'I've been feeling tired lately.'; 05-3 narration; 05-4 Ananya 'We'll go through your concerns...'. This matches the script.",
+    "Balloon placement against the accepted art in review/page-05.png:\n- 05-1: the balloon starts at about x355, to the right of Ananya's face (about x205-320). Its tail goes to her open mouth and it does not cover her face.\n- 05-4: the balloon sits between the two figures. The tail goes to Ananya's open mouth, with her open-hand gesture; Ravi has a closed smile and nod marks.\n- 05-2: the balloon is over the back-of-head side (Ananya is kind:head, no face). The tail reaches Ravi's open mouth.",
+    "Props and facing in the art match the records: the tablet is not shown from 05-1 on, the closed laptop stays on the desk, and Ravi's bag is on the floor beside his chair in 05-1 and 05-4. Screen direction holds: Ananya at left, Ravi at right in 05-1, 05-3 and 05-4; 05-2 is a reverse over-the-shoulder shot with Ananya's back of head at the left, which is consistent.",
+    "Minor, non-blocking, accepted art: the closed laptop sits at screen-right of Ananya in 04-3 and at the far-left end of the desk in 05-1 and 05-4. The camera angle differs between the panels (frontal versus side), so a reader is unlikely to notice. No change required.",
+    "Script against source: all lines are verbatim from source PAGE 5. No diagnosis or treatment advice is drawn or stated."
   ],
   "issues": [],
   "readingReview": {
     "withoutGuides": true,
-    "firstReadingHash": "01ab6675860106e6afff07880c25274bb3f432278c7091882059ce2bfdb1306d",
-    "comparison": "My order matches the first reader's, with no skips. Their face-cover and speaker concerns come from placeholder labels and short tails, and my own estimates from the accepted art do not bear them out. The narrative-thinness and 'Technology' points come from the source and are now supported by the new pages 3-4 and the visible closed laptop. Only a small lettering nudge for 05-4 remains.",
     "predictedOrder": [
       {
         "panel": "05-1",
@@ -53,37 +46,40 @@
       }
     ],
     "observations": [
-      "The question in 05-1 and the answer in 05-2 are adjacent down the left side, so nothing is skipped. 05-3 is a silent listening beat (nod marks in the art) and reads before the reply in 05-4.",
-      "Screen direction stays Ananya-left, Ravi-right through all four panels, including the over-the-shoulder reverse shots in 05-2 and 05-3."
+      "Each panel has one text element, so the order is panel order, with no proximity trap. The question in 05-1 is answered in 05-2 directly below-left, the natural next panel.",
+      "In 05-2 Ravi's hand at his neck and his open mouth make him the speaker even though the balloon sits at the left. The tail resolves it, and Ananya's back of head is not a competing face.",
+      "In 05-3 the slow nod (motion marks) beside her ear gives the visible reaction to Ravi's concern. The caption reads as the commentary on it, and the panel exits right toward 05-4."
     ],
     "transitions": [
       {
         "from": "04-3",
         "to": "05-1",
-        "observation": "Same consultation room across the page turn: the 05-1 art matches the 04-3 plan (window, pothos, desk, closed laptop) and shows no tablet. Ravi sits down with his bag on the floor. Plan only on the 04-3 side."
+        "observation": "From Ananya alone with her tablet in the consultation room to the same room (window, plants, closed laptop) with Ravi seated and the tablet put away. 'Hello, Ravi' follows 'RAVI · READY', which is clear cause and effect. The bag on the floor continues from 04-2."
       },
       {
         "from": "05-1",
         "to": "05-2",
-        "observation": "Reverse angle over Ananya's shoulder. Ravi answers 'what brings you in', and his hand rubbing his neck supports 'tired'."
+        "observation": "Her question 'what brings you in' is answered by 'I've been feeling tired lately'. Reverse angle with Ananya's back of head at the left and Ravi's hand rubbing his neck, as recorded."
       },
       {
         "from": "05-2",
         "to": "05-3",
-        "observation": "Reverse angle over Ravi's shoulder: Ananya listens, folded hands and a nod mark, responding to his concern. The closed laptop is at the desk edge."
+        "observation": "Reverse shot. Ananya listens with folded hands and nods, with Ravi's back of head and green shoulder at the right, keeping her at left and him at right. A silent reaction to his concern, with the narration on top."
       },
       {
         "from": "05-3",
         "to": "05-4",
-        "observation": "Back to the 05-1 two-shot. Her open-hand reply follows the listening beat, and Ravi nods."
+        "observation": "Back to the two-shot, Ananya at left gesturing, Ravi at right nodding. Her reply 'We'll go through your concerns...' follows the listening beat. Hands and bag match the records."
       },
       {
         "from": "05-4",
         "to": "06-1",
-        "observation": "Place change back to reception with no caption. The accepted 06-1 art clearly shows the counter (white top, teal front), monitor, teal waiting chairs with other patients, and Ravi with his bag on his shoulder taking out his phone. Same costumes, same visit. Readable, and it is the same reception that pages 3-4 will show."
+        "observation": "From the consultation room to the reception desk in review/page-06.png. Ravi has his bag back on his shoulder and his phone in his right hand; Meera, in the same blue kurta, points at the phone. The place change comes after the conversation ends, and the props carry over (bag from the floor to his shoulder, phone from his pocket to his hand)."
       }
-    ]
+    ],
+    "firstReadingHash": "01ab6675860106e6afff07880c25274bb3f432278c7091882059ce2bfdb1306d",
+    "comparison": "Agreements: the first reader's order matches the script.\n(1) Balloon on Ananya's face in 05-1 and 05-4: resolved by the art. Both balloons sit clear of her drawn face, and the clipped name label exists only in the guide image.\n(2) 05-4 speaker ambiguity: resolved. The tail goes to Ananya's open mouth and her gesture; Ravi is shown nodding with a closed mouth.\n(3) 05-2 balloon on the listener's side: acceptable. The listener is only a back of head, and the tail and Ravi's open mouth settle the speaker.\n(4) 05-3 caption at the frame corner: a lettering cosmetic, legible.\n(5) Thin consultation: the art adds a visible nod in 05-3. The dialogue is fixed by the source, and the source forbids medical advice.\n(6) 'Technology' with nothing visible: now answered by the new page 4 (TV slot call, tablet notification) and by the closed laptop on the desk in 05-1 and 05-4.\nNo unresolved items."
   },
-  "fingerprint": "9ae30704f9d1d9cd592534675170861bb2b2d37656c3cc063d13993500ab37c8",
-  "recordedAt": "2026-11-11T10:51:57.911Z"
+  "fingerprint": "878784381abcdafffe9490359c4d6e609a904bdbf4275d460cfb8bcdea794d1f",
+  "recordedAt": "2026-11-11T11:17:14.605Z"
 }

@@ -1,34 +1,27 @@
 {
-  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-04-21024a680e3aedf50b9a6a0cd2e5d014d3a9133bd1c3a4f6b5a1da64f2656a57.json",
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-04-cdc1ce0d9c8f7faeba44185e81c1b21b733da74d2d17c5961d2af9e545ece2ba.json",
   "reviewer": {
     "role": "subagent",
-    "task": "claude-code-agent:manga-reviewer:aea9f69e7dc10be5e",
+    "task": "claude-code-agent:manga-reviewer:ac034b27e1e1f05cf",
     "reportedTask": null,
     "taskSource": "Agent ID returned by the Claude Code Agent tool to the parent."
   },
   "status": "pass",
   "observations": [
-    "Reviewer identity: the runtime did not give me a task ID, so task is null. The parent must record the real Agent ID.",
-    "Instructions: the request JSON has no 'instructions' field. I followed docs/PROMPTS.md and the r14 response structure.",
-    "Viewing order: I opened storyboards-unnumbered/page-04.png with Read before the script, then storyboards/page-04.png. I also read reading-flow/page-04.json, the full page 4 script and boundary context, source page 4, REVISION-2026-11-11.md and responses/storyboard-r14-04.json. For continuity I looked at 05-1.png (consultation room), 06-1.png and 06-3.png (reception) and the nurse.png and checkin-patients.png sheets. I did NOT open assets/panels/04-*.png and I certify no art for this page, because those files are old placeholders.",
-    "My unnumbered reading of page 04, in order: 'Soon, his slot comes up.', then 'NOW · A-12' (top-right); 'A quick vitals check first.', then the nurse balloon 'Hi, Ravi! Just relax your arm for me.' (its tail runs down to the nurse box; Ravi's box is lower-left); 'Dr. Ananya is notified when he's ready.', then 'RAVI · READY' (below Ananya's box). This matches the script and source page 4.",
-    "Changes since r14, checked: (1) 04-1 now records hands for Ravi, Raman and Priya and props for waiting-tv, ravi-phone, shoulder-bag, walking-stick and priya-phone. They continue 03-5 consistently: cane in Raman's right hand, phone in Priya's left in her lap, Ravi's phone going into his pocket, bag back on his left shoulder. (2) 04-1's TV is one highlighted empty strip in the upper-right part, under the label (x744-934, y84-158), and its 'before' now reads 'one strip listing the three slots (03-5)', matching the corrected 03-5. (3) 04-2 has a place-change transition, Ravi smiling and nodding back at the nurse, and a glimpse of the white reception counter with its teal front and a teal waiting-chair corner behind the nurse. That counter matches the accepted 06-1/06-3 art (white top, teal front, teal waiting chairs), so the vitals corner reads as 'beside reception'.",
-    "First-reader (a), 'his' has no antecedent: resolved across the page turn. 03-5 ends on Ravi named and seated rightmost, and in 04-1 he is the figure rising toward the TV. Optional: 'Soon, Ravi's slot comes up.' would remove all doubt, but this is not blocking.",
-    "First-reader (b), A-12 is not linked to Ravi: resolved by the 03-5 seating order matching A-10 · A-11 · A-12, together with Ravi alone standing in 04-1 and the nurse naming him in 04-2.",
-    "First-reader (c), setting not established: resolved by planned art. 04-1 is the same waiting area with the TV; 04-2 shows the vitals kit plus the reception counter and chair glimpse.",
-    "First-reader (d), the nurse is unnamed: costume (lavender scrubs, lanyard from nurse.png), the BP cuff and the caption establish her role. This is intended.",
-    "First-reader (e), Ananya not introduced and her location unclear: she is established on pages 1-2, and the caption names her. The 04-3 art is planned in the consultation room (window, plant, closed laptop pushed aside), the same room the accepted 05-1 art shows (wooden desk, closed laptop at left, window with pothos, no tablet). The cut is carried by the place-change and by a background unlike the reception in 04-2.",
-    "First-reader (f), present tense and where 'RAVI · READY' appears: the tablet held in both hands, screen angled toward the reader, sits under the label rect (x698-918, y1188-1262), so the label reads as her screen, not a wall board. The general caption was approved by the user as the step caption.",
-    "First-reader (g), vitals never finish and Ravi never reacts: Ravi's nod now gives a reaction. 'When he's ready' plus 04-3's production 'before' covers the compression, which is acceptable.",
-    "First-reader (h), caption-heavy page with an empty top panel: the short step captions were requested by the user. The 04-1 top panel will hold the TV, the rising Ravi and the seated Raman and Priya, so it is not empty in the art.",
-    "Generation advice (not blocking): (1) 04-1 says Raman and Priya are 'still seated in the same order nearby'. To keep the 03-5 order (Raman, Priya, Ravi from left to right) they should sit to Ravi's screen-LEFT, under or below the caption (caption x40-255, y40-146), with Ravi at x354-429 and the TV at the right. State this explicitly in the prompt so the generator does not place them to his right and reverse the order. (2) In 04-2 the cuff and oximeter are on Ravi's LEFT arm while he faces the nurse at the right. Use a three-quarter front view so his left arm reaches forward onto the side table on the nurse's side; in strict profile facing right, that arm would be on the far side and hidden. (3) The nurse 'stands', but her planned face [384,938] is only 90px above seated Ravi's [134,1028], and the tail is long (y723 to about y883). Draw her upright with her head around y800-850, then measure again and shorten the tail at lettering. (4) In 04-3 keep the tablet screen under the label rect and use 05-1 as the room reference. Measure all faces again after generation.",
-    "Automatic warning on 04-1 (step 1 to step 2): the caption leads left to right to the label in the same band, a forward move in this left-to-right comic."
+    "Identity: the runtime did not give me a task identity, so task is null. The parent must record the actual Agent ID.",
+    "What I opened with Read: workflow/storyboards-unnumbered/page-04.png, workflow/storyboards/page-04.png (numbered PNG; the request hashes the SVG, and the PNG layout matches the unnumbered one), workflow/review/page-04.png and page-05.png, and assets/panels/04-1.png at full size. I also read the 04 script and the 03/05 boundary context in this request, workflow/reading-flow/page-04.json, source/original.txt PAGE 4 and the revision note. I read the script before looking at the images.",
+    "Unnumbered PNG: 3 panels (wide top, two tall below). Natural order:\n- 04-1: caption 'Soon, his slot comes up.', then the label 'NOW · A-12' at the top-right.\n- 04-2: caption 'A quick vitals check first.', then the nurse's balloon 'Hi, Ravi! Just relax your arm for me.'\n- 04-3: caption 'Dr. Ananya is notified when he's ready.', then 'RAVI · READY'.\nThis matches the script.",
+    "Planned edit 1, 04-1: the accepted 04-1.png shows Raman (with stick) and Priya (with phone) still seated in the two chairs at screen-left of Ravi while the TV calls A-12. In the current art this contradicts the queue, because A-10 and A-11 should already have gone in. The record (scene, plus production.before 'Mr. Raman (A-10) and Priya (A-11) were called in before him') makes those chairs empty, which resolves the contradiction and shows the queue moving.\nThe edit must remove both figures completely, including Raman's walking stick and Priya's phone and bag, leaving two empty blue chairs. It must keep the grey-shirt figure seen from behind, Meera at the desk, the vitals cart and the QR stand inside at the left. After that, the empty chairs plus 'NOW · A-12' plus 'his slot' are enough for a reader.",
+    "Face boxes against the art:\n- 04-1 Ravi [577,71,72,72] and Meera [908,205,44,50] match the drawn faces. The label sits on the TV's blank strip.\n- 04-2 nurse [389,739,102,110]: the balloon's bottom is at about y722, just above her hair, and its tail points down to her. It does not cover her face, Ravi's face [93,842,95,110], or the protected cuff arm [199,1047,204,109] and bulb hand [327,955,105,99], which both match the art.\n- 04-3 Ananya [730,834,116,150] matches. The 'RAVI · READY' label lands on the tablet's notification card, so it reads as on-screen text.",
+    "04-1 props match the records: Ravi's bag is back on his left shoulder, with the watch on the strap hand, and his right hand is at his trouser pocket tucking the phone away. The vitals cart beside reception in 04-1 (also visible behind Meera in 03-1) sets up the 04-2 vitals corner.",
+    "04-2 props match the records: bag on the floor beside his chair, phone not visible. Behind the nurse at the right there is a glimpse of the white reception counter and a teal chair, which places the vitals corner beside reception.",
+    "Artwork-stage check, not a storyboard issue: from the image alone I could not confirm whether the cuffed arm in 04-2 is Ravi's left. The watch is on that wrist, which is consistent with the record.",
+    "Script against source: the captions, labels and nurse line are verbatim from source PAGE 4 as revised (r13 changed the nurse's line; recorded).",
+    "After the image edit, the artwork stage must re-inspect the edited 04-1 and lettering must use a re-rendered page-04.png."
   ],
   "issues": [],
   "readingReview": {
     "withoutGuides": true,
-    "firstReadingHash": "9a90b6af1ec8d95bed2d7331f2c24faf1349fddc80fe8bbeb7b29f1345066bbf",
-    "comparison": "My order matches the first reader's: wide top panel, then bottom-left, then bottom-right, caption before balloon or label in each, with no skips. Their reference concerns ('his', A-12, Ananya's introduction and location) are resolved by the adjacent pages and the planned art, now including the 04-2 counter glimpse and Ravi's nod. The remaining points are user-requested format or acceptable compression. I add generation notes on the seating order in 04-1 and on the nurse's height and Ravi's arm in 04-2; none blocks generation.",
     "predictedOrder": [
       {
         "panel": "04-1",
@@ -53,32 +46,35 @@
       }
     ],
     "observations": [
-      "In 04-2 the caption (top-left) comes before the balloon (offset lower right). The tail runs straight down to the nurse without crossing Ravi's box, and Ravi, lower left, is the person addressed.",
-      "In 04-3 the eye moves down from the caption through Ananya's face to the tablet label, ending low on the right before the page turn."
+      "04-1 has the caption at top-left and the label at top-right in one band. Ravi stands between them looking up at the TV, so his gaze carries the eye from the caption to the label. The automatic warning (overlapping vertical band) is a same-row left-to-right move, not a backtrack.",
+      "In 04-2 the caption (top-left) leads to the balloon (upper right) and down the tail to the nurse. Ravi's smile at the lower left is the silent reply. Only one balloon, so there is no proximity confusion.",
+      "In 04-3 the caption (top) leads to Ananya's lowered gaze and down to the label on the tablet. Her eye line points at the label, so the tall panel guides the eye downward rather than leaving dead space."
     ],
     "transitions": [
       {
         "from": "03-5",
         "to": "04-1",
-        "observation": "Same waiting area after a short wait ('Soon'). The single-strip TV now shows 'NOW · A-12'. Ravi rises with his bag on his shoulder and pockets his phone, while Raman and Priya stay seated with the same props. Plan only."
+        "observation": "Same waiting area, TV and blue chairs. Ravi rises with his bag back on his shoulder. By the records the two chairs where Raman and Priya sat are now empty, showing that A-10 and A-11 were called first and that 'NOW · A-12' is his. The current art still shows them seated; planned edit 1 resolves this."
       },
       {
         "from": "04-1",
         "to": "04-2",
-        "observation": "Place change to the vitals corner beside reception, carried by the caption 'A quick vitals check first.' and the white/teal counter and chair glimpse behind the nurse. The bag moves from his shoulder to the floor and the phone stays in his pocket, both recorded. Plan only."
+        "observation": "From the waiting area to the vitals corner beside reception. The caption 'A quick vitals check first.' and the counter and teal chair behind the nurse carry the move. The vitals cart seen in 04-1 next to reception prepares the location. The walk between is skipped, which the word 'first' covers."
       },
       {
         "from": "04-2",
         "to": "04-3",
-        "observation": "Place change to the consultation room. The caption names Ananya and the tablet label names Ravi, so cause (vitals done) and effect (alert) are clear without anyone walking over. Plan only."
+        "observation": "Cut to the consultation room: window, plant, closed laptop at the lower right, Ananya with her tablet. The caption gives the cause, 'notified when he's ready', meaning after the vitals check. The left-to-right panel order puts the notification after the vitals."
       },
       {
         "from": "04-3",
         "to": "05-1",
-        "observation": "Page turn into the same consultation room: the accepted 05-1 art has the window, pothos, desk and closed laptop the 04-3 plan specifies, and no tablet, consistent with 'put away in the drawer'. Ananya greets Ravi by name and his bag is on the floor. Plan only on the 04-3 side."
+        "observation": "The same consultation room in review/page-05.png: window with plants, a closed laptop on the desk. The tablet is no longer visible (put away, per the record), Ravi sits with his bag on the floor, and Ananya greets him by name. The setting is carried over and the visit is the same."
       }
-    ]
+    ],
+    "firstReadingHash": "77b957eb5a40da69b50a0f93e9fc927e457e2f4159674e7d5253a3d4a3e427ef",
+    "comparison": "Agreements: the first reader's order matches the script.\n(a) 'his' refers back to page 3, and A-12 is mapped only here: acceptable. Ravi is the last panel subject on page 3 and the rightmost seated figure under A-12. The planned empty chairs reinforce the mapping.\n(b) Meera's role in 04-1: resolved by the art. She is visibly typing at the reception monitor in the background and is not calling anyone; the screen calls the slot.\n(c) The nurse is introduced only by her label: the lavender scrubs, lanyard and cuff bulb in the art identify her role.\n(d) Ambiguity of 'when he's ready' and Ananya's place: resolved by the art. The consultation room (window, plant, desk, closed laptop) and the tablet notification card under 'RAVI · READY' place it after the vitals.\n(e) Empty tall panel: resolved. The art fills it with Ananya and her tablet.\n(f) The walk is skipped: minor, covered by 'first'.\nNo unresolved items once the recorded 04-1 edit is executed."
   },
-  "fingerprint": "21024a680e3aedf50b9a6a0cd2e5d014d3a9133bd1c3a4f6b5a1da64f2656a57",
-  "recordedAt": "2026-11-11T10:51:57.656Z"
+  "fingerprint": "cdc1ce0d9c8f7faeba44185e81c1b21b733da74d2d17c5961d2af9e545ece2ba",
+  "recordedAt": "2026-11-11T11:17:14.317Z"
 }
