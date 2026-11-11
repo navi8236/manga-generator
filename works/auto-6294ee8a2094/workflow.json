@@ -73,6 +73,7 @@
       },
       "objects": {
         "monitor": "Reception desktop monitor and keyboard; screen faces Meera, only blank fields visible if seen.",
+        "desk-phone": "A navy smartphone lying on the reception desk beside Meera’s keyboard in 03-1 (the reception’s own phone). Supplement recorded from the generated art; it is not Ravi’s phone.",
         "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 5 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
       }
     },
@@ -571,24 +572,26 @@
               "text": "The clinic begins its Welbuk onboarding.",
               "textColumns": [
                 "The clinic begins its ",
-                "Welbuk onboarding."
+                "Welbuk ",
+                "onboarding."
               ],
               "textDirection": "horizontal",
               "side": "left",
-              "x": 24,
-              "dy": 24
+              "x": 0,
+              "dy": 0
             },
             {
               "speaker": "label",
               "text": "WELBUK PRACTICE for the clinic",
               "textColumns": [
                 "WELBUK PRACTICE ",
-                "for the clinic"
+                "for the ",
+                "clinic"
               ],
               "textDirection": "horizontal",
               "side": "left",
-              "x": 640,
-              "dy": 24
+              "x": 682,
+              "dy": 0
             }
           ]
         },
@@ -624,8 +627,8 @@
             "after": "Meera joins with a staff phone (02-3).",
             "hands": {
               "ananya": {
-                "left": "resting on the laptop trackpad",
-                "right": "index finger lightly tapping her lower lip"
+                "left": "index finger resting at her chin",
+                "right": "resting on the laptop trackpad"
               }
             },
             "props": [
@@ -930,6 +933,13 @@
                 "during": "on his shoulder, strap held",
                 "after": "on his shoulder",
                 "heldBy": "ravi.left"
+              },
+              {
+                "id": "desk-phone",
+                "before": "on the reception desk",
+                "during": "lying on the desk beside Meera’s keyboard",
+                "after": "on the desk",
+                "heldBy": "none"
               }
             ]
           },
@@ -942,8 +952,8 @@
                 90
               ],
               "anchor": [
-                450,
-                135
+                445,
+                118
               ]
             },
             "meera": {
@@ -964,14 +974,13 @@
               "speaker": "ravi",
               "text": "Good morning! I'd like to see the doctor.",
               "textColumns": [
-                "Good morning! ",
-                "I'd like to see ",
-                "the doctor."
+                "Good morning! I'd like ",
+                "to see the doctor."
               ],
               "textDirection": "horizontal",
               "side": "left",
-              "x": 20,
-              "dy": 20
+              "x": 4,
+              "dy": 4
             }
           ]
         },
@@ -1025,7 +1034,7 @@
               },
               {
                 "id": "ravi-phone",
-                "before": "in Ravi’s hand as he arrives",
+                "before": "in Ravi’s pocket as he arrives (not visible in 03-1)",
                 "during": "held low at the desk in the foreground",
                 "after": "set down on the desk",
                 "heldBy": "ravi.right"
@@ -1265,7 +1274,7 @@
               ],
               "textDirection": "horizontal",
               "side": "left",
-              "x": 600,
+              "x": 440,
               "dy": 8
             }
           ]
@@ -1536,15 +1545,14 @@
               "speaker": "narration",
               "text": "Technology supports the workflow. The conversation stays human.",
               "textColumns": [
-                "Technology supports ",
-                "the workflow. ",
-                "The conversation ",
+                "Technology supports the ",
+                "workflow. The conversation ",
                 "stays human."
               ],
               "textDirection": "horizontal",
               "side": "left",
-              "x": 18,
-              "dy": 18
+              "x": 4,
+              "dy": 4
             }
           ]
         },
@@ -1936,14 +1944,13 @@
               "text": "That's the idea. Let's walk through what is available to you.",
               "textColumns": [
                 "That's the idea. ",
-                "Let's walk through ",
-                "what is available ",
-                "to you."
+                "Let's walk through what ",
+                "is available to you."
               ],
               "textDirection": "horizontal",
               "side": "left",
-              "x": 16,
-              "dy": 16
+              "x": 8,
+              "dy": 8
             }
           ],
           "protected": [

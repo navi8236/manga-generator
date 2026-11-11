@@ -181,6 +181,8 @@ config.sections = {
     objects: {
       monitor:
         'Reception desktop monitor and keyboard; screen faces Meera, only blank fields visible if seen.',
+      'desk-phone':
+        'A navy smartphone lying on the reception desk beside Meera’s keyboard in 03-1 (the reception’s own phone). Supplement recorded from the generated art; it is not Ravi’s phone.',
       'ravi-phone':
         'Ravi’s own smartphone (dark blue case). On page 5 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text.',
     },
@@ -399,8 +401,8 @@ const pages = [];
         },
         speakers: {},
         dialogue: [
-          line('narration', ['The clinic begins its', 'Welbuk onboarding.'], 24, 24),
-          line('label', ['WELBUK PRACTICE', 'for the clinic'], 640, 24),
+          line('narration', ['The clinic begins its', 'Welbuk', 'onboarding.'], 0, 0),
+          line('label', ['WELBUK PRACTICE', 'for the', 'clinic'], 682, 0),
         ],
       },
       {
@@ -526,7 +528,7 @@ const pages = [];
           props: [prop('shoulder-bag', 'on Ravi’s shoulder', 'on his shoulder, strap held', 'on his shoulder', 'ravi.left')],
         },
         speakers: { ravi: speaker(r1, [270, 200, 125, 160]) },
-        dialogue: [line('ravi', ['Good morning!', "I'd like to see", 'the doctor.'], 20, 20)],
+        dialogue: [line('ravi', ["Good morning! I'd like", 'to see the doctor.'], 4, 4)],
       },
       {
         id: '03-2',
@@ -612,7 +614,7 @@ const pages = [];
           ravi: speaker(r4, [220, 175, 110, 140]),
           meera: speaker(r4, [640, 165, 120, 150]),
         },
-        dialogue: [line('meera', ["You're all set, Ravi.", 'Please have a seat.'], 600, 8)],
+        dialogue: [line('meera', ["You're all set, Ravi.", 'Please have a seat.'], 440, 8)],
       },
     ],
   });
@@ -712,7 +714,7 @@ const pages = [];
         },
         speakers: { ananya: speaker(r3, [190, 220, 150, 190]) },
         dialogue: [
-          line('narration', ['Technology supports', 'the workflow.', 'The conversation', 'stays human.'], 18, 18),
+          line('narration', ['Technology supports the', 'workflow. The conversation', 'stays human.'], 4, 4),
         ],
       },
       {
@@ -851,7 +853,7 @@ const pages = [];
         },
         speakers: { meera: speaker(r3, [150, 250, 130, 165]) },
         dialogue: [
-          line('meera', ["That's the idea.", "Let's walk through", 'what is available', 'to you.'], 16, 16),
+          line('meera', ["That's the idea.", "Let's walk through what", 'is available to you.'], 8, 8),
         ],
       },
       {
@@ -1044,20 +1046,24 @@ const MEASURED = {
     hands: { meera: hands('holding the desk-phone receiver to her ear (background)', 'writing in the register (background)') },
   },
   '02-1': { speakers: { ananya: F(300, 165, 110, 145, 372, 290) } },
-  '02-2': { speakers: { ananya: F(365, 655, 105, 115, 425, 752) } },
+  '02-2': {
+    speakers: { ananya: F(365, 655, 105, 115, 425, 752) },
+    hands: { ananya: hands('index finger resting at her chin', 'resting on the laptop trackpad') },
+  },
   '02-3': { speakers: { meera: F(855, 802, 46, 56, 874, 847) }, protected: [[821, 844, 27, 40]] },
   '02-4': {
     speakers: { ananya: F(325, 1170, 72, 90, 367, 1245), meera: F(700, 1130, 70, 88, 737, 1200) },
     protected: [[668, 1365, 62, 80]],
   },
   '03-1': {
-    speakers: { ravi: F(405, 62, 78, 90, 450, 135), meera: F(92, 222, 68, 100, 148, 300) },
+    speakers: { ravi: F(405, 62, 78, 90, 445, 118), meera: F(92, 222, 68, 100, 148, 300) },
     hands: { meera: hands('typing on the keyboard', 'typing on the keyboard') },
+    addProps: [prop('desk-phone', 'on the reception desk', 'lying on the desk beside Meera’s keyboard', 'on the desk', 'none')],
   },
   '03-2': {
     speakers: { meera: F(772, 238, 92, 95, 815, 315), ravi: F(628, 225, 62, 80, 668, 290) },
     hands: { ravi: hands('out of frame', 'holding ravi-phone low at the desk (foreground)') },
-    addProps: [prop('ravi-phone', 'in Ravi’s hand as he arrives', 'held low at the desk in the foreground', 'set down on the desk', 'ravi.right')],
+    addProps: [prop('ravi-phone', 'in Ravi’s pocket as he arrives (not visible in 03-1)', 'held low at the desk in the foreground', 'set down on the desk', 'ravi.right')],
   },
   '03-3': {
     speakers: { ravi: F(238, 668, 95, 120, 285, 770), meera: F(752, 688, 85, 100, 790, 770) },
