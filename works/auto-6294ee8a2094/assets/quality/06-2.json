@@ -1,7 +1,7 @@
 {
   "panel": "06-2",
-  "fingerprint": "d64411e18eb0e0f0e08ce6850cca31f3d49c13b1564421196a5729fde12db2bd",
-  "observation": "Vision vignette: specialist welcomes at a modern clinic; dotted links between clinics. Inspected at 25% (contact sheet), 100% (full panel) and 200% (face crops), and on the composed page.",
+  "fingerprint": "3f4ad292484080266a288c1fddbeba976dd5184d61c10ae72878d806041999f0",
+  "observation": "Ravi holds the phone toward the reader with calendar and heart cards. Inspected at 25% (contact sheet), 100% (full panel) and 200% (face crops), and on the composed page.",
   "views": {
     "thumbnail": true,
     "native": true,
@@ -10,15 +10,15 @@
   "checks": {
     "anatomy": {
       "result": "pass",
-      "note": "Open right hand and standing pose correct."
+      "note": "Both hands grip the phone with readable fingers."
     },
     "contact": {
       "result": "pass",
-      "note": "None beyond standing."
+      "note": "His right hand's fingers wrap the phone's left edge; his left hand (watch) supports the lower right corner with the thumb on the screen edge."
     },
     "objects": {
       "result": "pass",
-      "note": "Stethoscope worn only; no logos or text."
+      "note": "Screen shows two cards with icons only; no text or data."
     },
     "faces": {
       "result": "pass",
@@ -26,32 +26,38 @@
     },
     "linework": {
       "result": "pass",
-      "note": "Light airy palette and rounded vignette edge."
+      "note": "Close-up line weight appropriate."
     },
     "background": {
       "result": "pass",
-      "note": "Clinic and small linked silhouettes carry the vision idea."
+      "note": "Soft waiting area behind."
     },
     "continuity": {
       "result": "pass",
-      "note": "Specialist matches the vision sheet."
+      "note": "Watch on left wrist and bag strap kept."
     },
     "lettering": {
       "result": "pass",
-      "note": "Label in the top-left corner and a three-line caption along the bottom band; the welcoming hand (now protected) and the clinic entrance stay visible after artwork review r2."
+      "note": "Question balloon top-left; WELBUK HEALTH label at lower left stops before the phone."
     }
   },
-  "issues": [],
+  "issues": [
+    {
+      "category": "faces",
+      "description": "Gaze goes slightly screen-right rather than toward Meera off-panel left; accepted as a minor deviation.",
+      "status": "resolved"
+    }
+  ],
   "faceIdentity": {
-    "specialist": {
-      "reference": "works/auto-6294ee8a2094/assets/characters/vision-cast.png",
+    "ravi": {
+      "reference": "works/auto-6294ee8a2094/assets/characters/main-cast.png",
       "traits": [
-        "kind eyes behind thin rimless rectangular glasses",
-        "bushy salt-and-pepper brows",
-        "long face with smile lines and neat grey moustache"
+        "narrow warm eyes creasing at the corners",
+        "thick straight dark brows close to the eyes",
+        "square jaw with short trimmed beard and broad nose"
       ],
-      "expression": "Kind welcoming smile"
+      "expression": "Curious hopeful smile glancing up"
     }
   },
-  "reviewedAt": "2026-11-11T09:32:01.200Z"
+  "reviewedAt": "2026-11-11T11:21:02.288Z"
 }
