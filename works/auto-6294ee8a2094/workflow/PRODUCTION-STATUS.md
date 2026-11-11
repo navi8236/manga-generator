@@ -1,57 +1,64 @@
-# A Better Way to Care — Welbuk: production status (2026-11-11)
+# A Better Way to Care — Welbuk: production status (2026-11-11, seven-page revision)
 
 Work: `works/auto-6294ee8a2094` (MANGA_PROJECT=works/auto-6294ee8a2094/workflow.json)
-Status: **complete** (`node cli/auto.mjs finish` passed; see `automation.json`).
+Status: **all stage reviews pass; built, PDF verified, locked and bundled.**
+`node cli/auto.mjs finish` was **not** completed for this revision. It refuses with
+"Original changed: start a new automatic work", because the work's source was revised at the
+user's request after `auto start`. The check was not bypassed. `automation.json` therefore still
+describes the six-page version and is superseded by this file.
 
-## Deliverables
-- Six page PNGs: `output/page-01.png` … `output/page-06.png` (SVG alongside).
-- HTML reader: `output/reader.html` (left-to-right English reader; `output/index.html`).
-- PDF: `output/pdf/manga.pdf` (6 A5 pages; `pdf.mjs verify`: embedded pixels match the PNGs).
+## Deliverables (seven pages)
+- Page PNGs and SVGs: `output/page-01.png` … `output/page-07.png`.
+- HTML reader: `output/reader.html` (left-to-right) and `output/index.html`.
+- PDF: `output/pdf/manga.pdf` (7 A5 pages; `pdf.mjs verify`: embedded pixels match the PNGs).
+  Poppler renders were inspected (`workflow/pdf-inspection.json`). Pages 3-4 were viewed at 150 dpi
+  and the unchanged pages on a 60 dpi contact sheet.
 - Layers for external editing: `output/layers/`.
-- Reproducibility lock: `workflow.lock.json` (sha256 a10bf06b…).
-- Release package: `releases/auto-6294ee8a2094-v8-a10bf06b.tar.gz`
-  (sha256 a33c6098d8277b504f2a70c65bc0e9e9ca786a54db7f5d493e6c475540c5e6fd, 314 MB).
-  It is not in git: `releases/` is gitignored and the file exceeds GitHub's 100 MB limit.
-  All its inputs are committed; rebuild it with `node cli/reproduce.mjs bundle --compressed`
-  (the lock makes the archive contents verifiable by hash).
+- Reproducibility lock: `workflow.lock.json` (sha256 34995c9f…).
+- Release package: `releases/auto-6294ee8a2094-v8-34995c9f.tar.gz`
+  (sha256 ac64dc172d92a9ab4eff5a65ad00b6975ae8d5a5ef878da081c1ba685d57877f, 442 MB; "Verified portable
+  archive"). It is not in git: `releases/` is gitignored and the file exceeds GitHub's limit. Rebuild
+  it with `node cli/reproduce.mjs bundle --compressed`.
+- The previous six-page release (`releases/auto-6294ee8a2094-v8-a10bf06b.tar.gz`) was left untouched.
 
-## How it was made
-- Renderer: Higgsfield `gpt_image_2_6` (ComfyUI was impossible here: no GPU, huggingface.co blocked;
-  the user approved Higgsfield). Every generation/edit is saved with its exact request, job ID,
-  reference IDs and image hash (`assets/candidates/*/*.run.json`, `workflow/higgsfield-jobs.json`,
-  `workflow/generation-log.json`). 23 panels, plus targeted edits recorded in `workflow/edits/`.
-- English dialogue is composed by the shared lettering code, never painted into the art.
-- Independent manga-reviewer subagent reviews for every stage (`workflow/stage-reviews/responses/`):
-  source, script (r16 pass), storyboard first readings + comparisons, artwork for all 23 panels,
-  lettering first readings + comparisons, final first reading + final comparison (pass).
-  Reviewer task IDs are the Agent IDs returned to the parent; subagents reported none.
-- Image-only first readings were recorded before every comparison (two-phase reading protocol).
-- Quality review (eight checks + face identity) for every panel: `workflow/quality/*.review.json`.
-- PDF inspected page by page after Poppler rendering: `workflow/pdf-inspection.json`.
+## 2026-11-11 revision (user requests)
+- Self check-in flow, and a page with three check-in routes (front desk always an option, Welbuk
+  Health app, QR code) that all get slots on the screen. The requests are quoted in
+  `source/REVISION-2026-11-11.md` along with the confirmed decisions. The doctor stays Dr. Ananya
+  ("her tablet").
+- New page 3 (5 panels): front desk (Mr. Raman with Meera), app (Priya, outside), QR scan (Ravi),
+  consent form, and all three seated under one TV strip "A-10 · A-11 · A-12".
+- New page 4 (3 panels): "NOW · A-12" with Raman's and Priya's chairs empty (they were called
+  first), the nurse's vitals check, and Dr. Ananya's tablet showing "RAVI · READY".
+- Old pages 4-6 became pages 5-7 with the same accepted images (`workflow/renumber-2026-11-11.json`).
+- Wording changes after review (recorded in the revision file): the 03-1 caption became "A later
+  morning: patients can always check in at the front desk."; the nurse's line became "Hi, Ravi! Just
+  relax your arm for me."
+- New reference sheets: `assets/characters/nurse.png`, `assets/characters/checkin-patients.png`.
 
-## Fixes made from reviews (summary)
-- Lettering: 03-1 tail rerouted off Ravi's hand; 03-4/05-3 tails made visible; 04-3 caption off
-  Ananya's head; 02-1 label/caption cover blank art; 06-2 caption moved so the welcoming hand shows.
-- Art edits: 02-3 reframed in the evening office; 02-4 blank corner filled and relit to evening;
-  03-1 braid side; 03-2/03-3 bag shoulder and bangle wrist; 03-3 cream counter;
-  01-1 clinic exterior matched to the later teal-awning entrance (door opened);
-  01-2/01-3 window awning made teal. 05-2 eyeline edit was rejected; the glance is recorded as deliberate.
-- Records (scene/hands/props) repeatedly corrected to match the accepted art.
+## How the new art was made
+- Higgsfield `gpt_image_2_6`, 8 new panel generations plus 4 targeted edits:
+  - 03-1: background patients recoloured;
+  - 03-2: an outdoor QR stand removed;
+  - 04-1: empty chairs;
+  - 04-1: kiosk restyled to match 03-1/03-3.
+  Exact requests, job IDs, reference IDs and hashes are in `workflow/generation-inputs/`,
+  `workflow/generation-history/`, `assets/candidates/*/*.run.json` and `workflow/edits/`.
+  `workflow/generation-log.json` lists 27 panels.
+- Each image was inspected before acceptance. Quality records were written for every panel; the new
+  face crops are in `workflow/quality/sheets/` (rebuilt by `tools/quality-sheets.py`).
 
-## Known minor, accepted points (reviewers judged non-blocking)
-- Waiting-chair style varies on page 1 and page 4; Ananya's bun reads looser in some front views.
-- The navy reception phone in 03-1 resembles Ravi's phone.
-- Source wording kept verbatim (e.g. "Our time belongs with patients").
-- AI image generation is non-deterministic; the reproducible part is composition from the adopted art.
+## Reviews (independent manga-reviewer subagents, `workflow/stage-reviews/responses/`)
+- Source r6, script r27, storyboard first readings and comparisons (latest r17), artwork for all
+  27 panels (r10-r12), lettering first readings and comparisons (r9-r10), and final first reading
+  plus comparison (r5). All pass.
+- Every change-request was fixed and re-reviewed: the TV strip, queue logic, the chair direction,
+  palette, the QR stand, the kiosk style and the tablet label.
+- Reviewer task IDs are the Agent IDs returned to the parent; the subagents reported none.
 
-## 2026-11-11 revision in progress (seven pages)
-- User requests: self check-in flow, and a page with three check-in routes (front desk always an
-  option, Welbuk Health app, QR) all getting slots on the screen. See `source/REVISION-2026-11-11.md`.
-- New pages 3 (5 panels) and 4 (3 panels); old pages 4-6 renumbered to 5-7 with the same accepted
-  images (`workflow/renumber-2026-11-11.json`). New reference sheets: `assets/characters/nurse.png`,
-  `assets/characters/checkin-patients.png`.
-- NOTE: `assets/panels/03-*.png` and `04-*.png` currently still hold the OLD page 3/4 art (re-accepted
-  by a helper-script mistake while the new panels were not yet generated). They are placeholders and
-  will be replaced by the new generations; no review has been or will be recorded against them.
-- The previous release (`releases/auto-6294ee8a2094-v8-a10bf06b.tar.gz`) and `automation.json` describe
-  the six-page version and are superseded once this revision finishes.
+## Known minor points judged acceptable by the reviewers
+- The 04-3 "RAVI · READY" label is wrapped after the dot and slightly overlaps the drawn card and the
+  tablet's bottom bezel. The shared lettering code sizes the box from the text length.
+- Waiting-chair and plant-pot styles vary a little between panels.
+- Page 7's "Tomorrow … us" voice and the unintroduced vision figures are verbatim source.
+- AI image generation is non-deterministic; what is reproducible is the composition from the adopted art.
