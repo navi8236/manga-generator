@@ -828,7 +828,7 @@ const pages = [];
         speakers: { ananya: speaker(r3, [150, 470, 90, 110]) },
         dialogue: [
           line('narration', ['Dr. Ananya is', "notified when", "he's ready."], 16, 16),
-          line('label', ['RAVI · READY'], 140, 729),
+          line('label', ['RAVI ·', 'READY'], 182, 734),
         ],
       },
     ],

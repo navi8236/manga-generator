@@ -1,84 +1,80 @@
 {
-  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/lettering-04-73e80a41c4a33fa60462642570b7f04746f61efd15588e02dddb7e909a089b95.json",
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/lettering-04-d7290901720fbde19e0d9ac557bb7fbe0e04330cd7b68b8a6292cd9cbfd12172.json",
   "reviewer": {
     "role": "subagent",
-    "task": "claude-code-agent:manga-reviewer:a03fec2ac01324263",
+    "task": "claude-code-agent:manga-reviewer:a22643e98ce8e91a4",
     "reportedTask": null,
     "taskSource": "Agent ID returned by the Claude Code Agent tool to the parent."
   },
-  "status": "pass",
+  "status": "changes-requested",
   "observations": [
-    "Identity: the runtime did not give me a task ID. reviewer.task is null.",
-    "What I read: this request's requiredTransitions, the page-04 plan and firstReading. I opened workflow/review/page-04.png with Read and looked at it; it was readable.",
-    "Every text matches the script word for word: 'Hello, Ravi. Tell me what brings you in.', 'I've been feeling tired lately.', caption 'Technology supports the workflow. The conversation stays human.', 'We'll go through your concerns and decide the right next steps together.'",
-    "Tails: 04-1 points left to Ananya's mouth. 04-2 reaches Ravi's face. 04-4 points left to Ananya and clearly not to Ravi, whose head is just right of the balloon.",
-    "Known point, 04-3: the caption's right edge (about x=933) comes right up to the hair of Ravi's back-of-head at the panel's right edge, at most touching it. That area is a back-of-head 'head' region, not a face, and Ananya's face, folded hands and stethoscope are all clear. Acceptable.",
-    "Hands and props match the plan. Ravi rubs his neck with his right hand while his watch-wearing left hand rests on his knee (04-2). The laptop stays closed and pushed aside. The bag stays on the floor beside the chair in 04-1 and 04-4.",
-    "First-reading concern (a): the 04-3 caption comes straight from the source's panel 3. Placed over the listening panel, it reads as a pause before her reply. Accepted. Concern (b): her generic reply is the source text and avoids medical advice. Accepted. Concern (c): the transition reads from the setting."
+    "The runtime supplied no subagent/task identity, so task is null. I opened page-04.png and the text-free panel assets/panels/04-3.png with Read and looked at both.",
+    "04-1: the caption 'Soon, his slot comes up.' is at top-left over the window and wall. The 'NOW · A-12' label sits on the wall TV, just past its left bezel by a few pixels, and clearly belongs to that screen. Ravi's face, his bag strap and the desk are clear.",
+    "04-2: the caption 'A quick vitals check first.' is at top-left. The balloon 'Hi, Ravi! Just relax your arm for me.' has a short tail down to the Nurse's head. Ravi's face, the BP cuff, bulb, monitor and pulse oximeter are clear.",
+    "04-3: the caption 'Dr. Ananya is notified when he's ready.' is on the plain upper wall, clear of the face.",
+    "04-3 label 'RAVI · READY': it occupies about page x748-968, y1197-1270. The text-free art shows the notification card at about x786-926, with its white strip at about x800-910, y1212-1241. So the label is much wider than the card. It covers the whole card and both tablet bezels. On the right it hides the thumb and front fingers of the hand gripping the tablet's right edge (her left hand, about x917-975). On the left it clips the fingertips of the hand on the left edge (her right hand, about x749-776). Its top edge meets the bottom of the check badge."
   ],
-  "issues": [],
+  "issues": [
+    {
+      "problem": "The 04-3 'RAVI · READY' screen label is wider than the drawn notification card. It hides the thumb and fingers of Dr. Ananya's hand gripping the tablet's right edge, clips the fingertips of her hand on the left edge, and meets the bottom of the check badge. Shrink and reposition it to fit the blank white strip (about page x800-910, y1210-1245; panel-local about x192-302, dy742-777) so both grips and the badge stay visible, then re-preview.",
+      "location": "Page 04, panel 04-3, dialogue 2 (label 'RAVI · READY') over doctor-tablet and Ananya's hands",
+      "resolved": false
+    }
+  ],
   "readingReview": {
     "withoutGuides": true,
-    "firstReadingHash": "ae1b07e7e09655685ee529eead5c94884a9e8c306d1fad0cc2c6c7886d07597f",
     "predictedOrder": [
       {
         "panel": "04-1",
         "dialogue": [
-          1
+          1,
+          2
         ]
       },
       {
         "panel": "04-2",
         "dialogue": [
-          1
+          1,
+          2
         ]
       },
       {
         "panel": "04-3",
         "dialogue": [
-          1
-        ]
-      },
-      {
-        "panel": "04-4",
-        "dialogue": [
-          1
+          1,
+          2
         ]
       }
     ],
     "observations": [
-      "Order: top tier, middle-left, middle-right, bottom tier. The middle-right caption is clearly a box with no tail and does not compete with Ravi's balloon.",
-      "The 04-4 balloon is close to Ravi's head, but its tail points left, so I read it as Ananya's line."
+      "Natural scan: 04-1 caption at top-left, then the TV label at top-right; 04-2 caption, then the Nurse balloon below it; 04-3 caption, then the tablet label. This is the script order.",
+      "There is only one spoken line, so no reply can be skipped. The caption-then-label pairs read top to bottom without crossing."
     ],
     "transitions": [
       {
-        "from": "03-4",
+        "from": "03-5",
         "to": "04-1",
-        "observation": "Cut from the reception to the consultation room. Ravi is seated with his bag on the floor and Ananya greets him at her desk, so it reads as the same visit."
+        "observation": "Same waiting room and wall TV. The slot list becomes 'NOW · A-12', the third slot, matching Ravi's seat in 03-5. Ravi stands, phone put away, bag back on his shoulder. The vitals cart and Meera's desk are visible behind, setting up 04-2."
       },
       {
         "from": "04-1",
         "to": "04-2",
-        "observation": "Over-the-shoulder shot with Ananya's bun at left in the foreground and Ravi in the same blue chair answering. The left/right axis is kept."
+        "observation": "Ravi, seated in the vitals corner seen in 04-1, gets a BP check from the Nurse. The caption 'A quick vitals check first.' names the step."
       },
       {
         "from": "04-2",
         "to": "04-3",
-        "observation": "Reverse shot with Ravi's back at right and Ananya listening at left, so the screen direction is kept. The caption works as a pause."
+        "observation": "Place change to the consultation room. The caption 'Dr. Ananya is notified when he's ready.' explains the cut, and the tablet label ties it to Ravi."
       },
       {
         "from": "04-3",
-        "to": "04-4",
-        "observation": "The two-shot returns to the 04-1 staging with the bag on the floor. Her reply follows the listening beat."
-      },
-      {
-        "from": "04-4",
         "to": "05-1",
-        "observation": "Back at the reception desk with Ravi's bag on his shoulder and his phone out. Leaving after the visit is clear without a caption."
+        "observation": "Same consultation room (window, plant, closed laptop on the desk). The tablet is no longer shown and Ravi is now seated across from Ananya for her greeting. The cut across the new page boundary is clear."
       }
     ],
-    "comparison": "My reading order is the same as the first reading's. Its 04-3 caption-edge point is confirmed: the caption touches only the back-of-head hair, so it is acceptable. Its dialogue concerns follow the source and are accepted."
+    "firstReadingHash": "2ff7a40caa8329f78c67bca45b64a235c7517bdd8e683db1f256653a73d2a411",
+    "comparison": "The first reading's order and speaker match the script exactly. Its note (a) is confirmed against the text-free 04-3 art: the label also hides the gripping fingers on both sides, so this is a concrete defect and the reason for changes-requested. Note (b), the upright box on an angled TV, still reads as on-screen and is acceptable. Note (c), 'his slot', is answered by A-12 on page 03 and the caption. Note (d), the place change, is explained by the caption. Only (a) is unresolved."
   },
-  "fingerprint": "73e80a41c4a33fa60462642570b7f04746f61efd15588e02dddb7e909a089b95",
-  "recordedAt": "2026-11-11T09:12:05.405Z"
+  "fingerprint": "d7290901720fbde19e0d9ac557bb7fbe0e04330cd7b68b8a6292cd9cbfd12172",
+  "recordedAt": "2026-11-11T11:36:00.911Z"
 }
