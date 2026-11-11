@@ -181,7 +181,7 @@ config.sections = {
     objects: {
       monitor:
         'Reception desktop monitor and keyboard; screen faces Meera, only blank fields visible if seen.',
-      'desk-phone':
+      'reception-mobile':
         'A navy smartphone lying on the reception desk beside Meera’s keyboard in 03-1 (the reception’s own phone). Supplement recorded from the generated art; it is not Ravi’s phone.',
       'ravi-phone':
         'Ravi’s own smartphone (dark blue case). On page 5 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text.',
@@ -284,7 +284,7 @@ const pages = [];
         beat: 'A warm, busy morning at the clinic',
         rect: r1,
         scene:
-          'Wide establishing shot of a friendly neighbourhood clinic in Tamil Nadu in morning sun: whitewashed entrance, simple awning, potted plants. Dr. Ananya stands in the doorway left of centre, smiling and welcoming an elderly patient seen from behind; two more patients wait on a bench, seen from behind or in small side view without detailed faces.',
+          'Wide establishing shot of a friendly neighbourhood clinic in Tamil Nadu in morning sun: whitewashed entrance, simple awning, potted plants. Dr. Ananya stands in the doorway left of centre, smiling and welcoming an elderly patient seen from behind; two more patients wait on perforated metal chairs at right, seen from behind or in small side view without detailed faces.',
         action: 'Ananya gestures the patient inside with an open left hand.',
         emotion: 'Warm, welcoming, energetic morning.',
         camera: 'Wide, eye level, slight high angle; empty sky band at top-left for the caption.',
@@ -381,7 +381,7 @@ const pages = [];
         beat: 'Onboarding begins on a laptop',
         rect: r1,
         scene:
-          'Close shot over a desk: a clean silver laptop with a generic setup form of blank rounded fields and simple blocks (no text, no logos). Dr. Ananya’s hands (teal sleeves under white coat cuffs) type on the keyboard. Evening window light. Clear empty areas at top-left and top-right for labels.',
+          'Over-the-shoulder shot from behind Dr. Ananya’s left shoulder (her bun, gold stud and calm profile visible) at a desk: a clean silver laptop with a generic setup form of blank rounded fields and simple blocks (no text, no logos). Both her hands (teal sleeves under white coat cuffs) type on the keyboard. A mug on a coaster. Evening window light. Clear empty areas at top-left and top-right for labels.',
         action: 'Fingers typing into the blank setup fields.',
         emotion: 'Calm, fresh start.',
         camera: 'Close-up, three-quarter view of the laptop from behind Ananya’s right shoulder.',
@@ -443,7 +443,7 @@ const pages = [];
         readingFlow: { entry: [664, 590], exit: [990, 1080] },
         production: {
           moment: 'Meera holds up the staff phone and speaks.',
-          before: 'Ananya handed her the phone to try the staff app.',
+          before: 'Meera picked up the staff phone from the desk to try the staff app.',
           after: 'Both share a confident look (02-4).',
           hands: { meera: hands('relaxed at her side, empty', 'holding staff-phone at upper chest') },
           props: [prop('staff-phone', 'on the desk', 'in Meera’s right hand, abstract staff screen', 'in Meera’s hand', 'meera.right')],
@@ -509,7 +509,7 @@ const pages = [];
         beat: 'Ravi arrives',
         rect: r1,
         scene:
-          'Ravi walks in through the clinic door toward reception, smiling and raising his right hand in a friendly wave; left hand holds the strap of a small shoulder bag. Morning light from the doorway behind him. Background: waiting chairs.',
+          'Ravi walks in through the clinic door toward reception, smiling and raising his right hand in a friendly wave; left hand holds the strap of a small shoulder bag. Morning light from the doorway behind him. Camera from behind the reception desk: Meera sits in the left foreground, seen over her shoulder, typing on the keyboard and looking up at him; the monitor faces the reader showing only abstract icons and blank blocks; a navy reception mobile phone lies on the desk beside her keyboard. Background: waiting chairs with patients seen from behind.',
         action: 'Ravi waves as he approaches the desk.',
         emotion: 'Warm, approachable.',
         camera: 'Medium-full shot from the reception side, slight low angle.',
@@ -537,7 +537,7 @@ const pages = [];
         beat: 'Meera asks for consent to register',
         rect: r2,
         scene:
-          'Meera behind the tidy reception desk (desktop monitor at her side, screen angled away), gentle smile, left palm open toward Ravi (off-panel left) in an inviting, asking gesture; right hand resting on the desk.',
+          'Meera behind the tidy reception desk (desktop monitor at her side, screen angled away), gentle smile, left palm open in an inviting, asking gesture; right hand resting on the desk. Ravi in the left foreground, seen over his shoulder (beard edge, green shirt, bag strap), his right hand holding his dark-blue phone low at the desk edge.',
         action: 'Meera asks politely, leaning slightly forward.',
         emotion: 'Friendly, respectful.',
         camera: 'Tall medium shot, slightly from the left.',
@@ -655,7 +655,7 @@ const pages = [];
           before: 'Ravi was called in from the waiting area.',
           after: 'Ravi explains why he came (04-2).',
           hands: {
-            ananya: hands('resting on the desk', 'open palm welcoming Ravi'),
+            ananya: hands('open palm welcoming Ravi', 'resting on the desk'),
             ravi: hands('on the chair armrest as he sits', 'resting on his knee'),
           },
           props: [
@@ -676,7 +676,7 @@ const pages = [];
         beat: 'Ravi shares a routine concern',
         rect: r2,
         scene:
-          'Close-up of Ravi in the patient chair, turned toward the doctor (off-panel left), rubbing the back of his neck with his right hand, a slightly tired but candid expression; left hand resting on his knee. Plain wall behind.',
+          'Close-up of Ravi in the patient chair, turned toward the doctor, whose back of head (low bun, gold stud, white-coat shoulder) is in the left foreground, rubbing the back of his neck with his right hand, a slightly tired but candid expression; left hand resting on his knee. Plain wall behind.',
         action: 'Ravi explains, a little sheepish.',
         emotion: 'Mildly tired, honest.',
         camera: 'Medium close-up from the doctor’s side, Ravi facing screen-left.',
@@ -699,7 +699,7 @@ const pages = [];
         beat: 'The doctor listens; technology stays in the background',
         rect: r3,
         scene:
-          'Dr. Ananya leans slightly forward at her desk, hands folded, listening with full attention and gentle eye contact toward Ravi (off-panel right), keeping Ananya-left / Ravi-right screen direction from 04-1. The closed laptop sits pushed aside at the edge of the desk.',
+          'Dr. Ananya leans slightly forward at her desk, hands folded, listening with full attention and gentle eye contact toward Ravi, whose back of head and green-shirted shoulder are in the right foreground, keeping Ananya-left / Ravi-right screen direction from 04-1. The closed laptop sits pushed aside at the edge of the desk.',
         action: 'Ananya nods slowly while listening.',
         emotion: 'Attentive, compassionate.',
         camera: 'Medium close-up from Ravi’s side, Ananya facing screen-right.',
@@ -735,7 +735,7 @@ const pages = [];
           before: 'She listened to Ravi’s concern.',
           after: 'Ravi picks up his bag and returns to reception (page 5).',
           hands: {
-            ananya: hands('resting on the desk', 'open reassuring gesture toward Ravi'),
+            ananya: hands('open reassuring gesture toward Ravi', 'resting on the desk'),
             ravi: hands('resting on his knee', 'resting on his knee'),
           },
           props: [prop('shoulder-bag', 'beside his chair', 'on the floor beside his chair', 'back on his shoulder as he leaves', 'none')],
@@ -791,7 +791,7 @@ const pages = [];
             ravi: hands('resting on the desk edge', 'holding ravi-phone'),
           },
           props: [
-            prop('ravi-phone', 'carried by Ravi since registration (put away during the consultation)', 'in Ravi’s right hand, Meera pointing at it', 'held by Ravi', 'ravi.right'),
+            prop('ravi-phone', 'pocketed at reception after registration (03-4)', 'in Ravi’s right hand, Meera pointing at it', 'held by Ravi', 'ravi.right'),
             prop('shoulder-bag', 'on Ravi’s shoulder', 'on his shoulder', 'on his shoulder', 'none'),
           ],
         },
@@ -810,7 +810,7 @@ const pages = [];
         beat: 'Ravi sees a conceptual app screen',
         rect: r2,
         scene:
-          'Ravi holds his own phone (dark blue case) in both hands at chest height, screen toward the reader: a friendly conceptual app screen with simple rounded cards, a calendar icon and a heart icon, no text and no personal data. Ravi’s curious, hopeful face above it, glancing up toward Meera (off-panel left).',
+          'Ravi holds his own phone (dark blue case) in both hands at chest height, screen toward the reader: a friendly conceptual app screen with simple rounded cards, a calendar icon and a heart icon, no text and no personal data. Ravi’s curious, hopeful face above it, glancing up as he asks.',
         action: 'Ravi studies the screen and looks up with a question.',
         emotion: 'Curious, hopeful.',
         camera: 'Medium close-up, slight high angle over the phone.',
@@ -838,7 +838,7 @@ const pages = [];
         beat: 'Meera offers a walkthrough of what is available',
         rect: r3,
         scene:
-          'Meera smiles warmly, facing screen-right toward Ravi (off-panel right, keeping Meera-left / Ravi-right from 05-1), right hand gesturing toward his phone, left hand resting on the desk. Tidy reception background.',
+          'Meera smiles warmly, facing screen-right toward Ravi, who is seen from behind in the right foreground holding his phone in his left hand (keeping Meera-left / Ravi-right from 05-1), right hand gesturing toward his phone, left hand resting on the desk. Tidy reception background.',
         action: 'Meera answers and offers to walk him through.',
         emotion: 'Warm, honest, helpful.',
         camera: 'Tall medium shot.',
@@ -864,7 +864,7 @@ const pages = [];
         beat: 'Ravi leaves, reassured',
         rect: r4,
         scene:
-          'Outside the clinic entrance in morning sun: Ravi steps out onto the street, smiling and waving back toward the door with his right hand; his phone is in his left hand at his side. Simple street and awning.',
+          'Outside the clinic entrance in morning sun: Ravi steps out onto the street, smiling and waving back toward the door with his right hand; his phone is in his left hand at his side. Dr. Ananya and Meera wave back from the glass doorway at left. Simple street and teal awning.',
         action: 'Ravi waves goodbye while walking.',
         emotion: 'Reassured, light.',
         camera: 'Wide shot from the street, eye level.',
@@ -1058,7 +1058,7 @@ const MEASURED = {
   '03-1': {
     speakers: { ravi: F(405, 62, 78, 90, 445, 118), meera: F(92, 222, 68, 100, 148, 300) },
     hands: { meera: hands('typing on the keyboard', 'typing on the keyboard') },
-    addProps: [prop('desk-phone', 'on the reception desk', 'lying on the desk beside Meera’s keyboard', 'on the desk', 'none')],
+    addProps: [prop('reception-mobile', 'on the reception desk', 'lying on the desk beside Meera’s keyboard', 'on the desk', 'none')],
   },
   '03-2': {
     speakers: { meera: F(772, 238, 92, 95, 815, 315), ravi: F(628, 225, 62, 80, 668, 290) },
