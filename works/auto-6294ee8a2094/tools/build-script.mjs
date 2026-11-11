@@ -725,7 +725,7 @@ const pages = [];
         beat: 'Ravi’s slot comes up',
         rect: r1,
         scene:
-          'Waiting area, wide: Ravi rises from his chair with the shoulder bag back on his left shoulder, looking up at the wall-mounted TV in the upper-right part of the panel, whose light-teal screen shows one clean, empty white highlighted strip where his slot will be lettered (draw NO text or numbers). Mr. Raman and Priya still seated nearby. Plain wall at the upper left for a caption.',
+          'Waiting area, wide: Ravi rises from his chair with the shoulder bag back on his left shoulder, looking up at the wall-mounted TV in the upper-right part of the panel, whose light-teal screen shows one clean, empty white highlighted strip where his slot will be lettered (draw NO text or numbers). Mr. Raman (glasses, walking stick upright in his right hand) and Priya (ponytail, coral kurti, phone in her lap) still seated in the same order nearby, watching him go. Plain wall at the upper left for a caption.',
         action: 'Ravi stands as his slot comes up.',
         emotion: 'Ready, pleased.',
         camera: 'Wide shot of the waiting area, eye level.',
@@ -740,11 +740,17 @@ const pages = [];
           moment: 'Ravi stands as the screen highlights his slot.',
           before: 'He waited after his slot appeared (03-5).',
           after: 'The nurse takes his vitals (04-2).',
-          hands: { ravi: hands('holding the shoulder-bag strap', 'tucking ravi-phone into his trouser pocket') },
+          hands: {
+            ravi: hands('holding the shoulder-bag strap', 'tucking ravi-phone into his trouser pocket'),
+            raman: hands('resting on his knee', 'holding the walking-stick'),
+            priya: hands('holding priya-phone in her lap', 'resting on the armrest'),
+          },
           props: [
             prop('waiting-tv', 'one strip listing the three slots (03-5)', 'one highlighted empty strip for the called slot', 'on the wall', 'none'),
             prop('ravi-phone', 'in his hand', 'being tucked into his trouser pocket', 'in his pocket', 'ravi.right'),
             prop('shoulder-bag', 'on his lap', 'back on his left shoulder', 'on his shoulder', 'ravi.left'),
+            prop('walking-stick', 'in Mr. Raman’s hand (03-5)', 'held upright beside his knee as he waits', 'in his hand', 'raman.right'),
+            prop('priya-phone', 'in Priya’s lap (03-5)', 'held in her lap', 'in her lap', 'priya.left'),
           ],
         },
         speakers: { ravi: speaker(r1, [330, 110, 75, 90]) },
@@ -760,11 +766,16 @@ const pages = [];
         beat: 'The nurse takes his vitals',
         rect: r2,
         scene:
-          'Small vitals corner beside reception, tall framing: Ravi sits at the lower left in a chair, relaxed, his left arm resting on a little side table with a blood-pressure cuff on his upper arm and a fingertip pulse oximeter on his left index finger (wristwatch still visible on that wrist); his shoulder bag on the floor beside his chair. The nurse (from the nurse sheet: chin-length wavy bob, lavender scrubs, blank lanyard card) stands at the right holding the cuff’s hand bulb, speaking kindly to him. A small monitor on the table shows only abstract shapes, no numbers. Plain wall in the upper third for a caption and a balloon.',
+          'Small vitals corner beside reception, tall framing: Ravi sits at the lower left in a chair, relaxed, his left arm resting on a little side table with a blood-pressure cuff on his upper arm and a fingertip pulse oximeter on his left index finger (wristwatch still visible on that wrist); his shoulder bag on the floor beside his chair. The nurse (from the nurse sheet: chin-length wavy bob, lavender scrubs, blank lanyard card) stands at the right holding the cuff’s hand bulb, speaking kindly to him; Ravi smiles and nods back at her. A small monitor on the table shows only abstract shapes, no numbers. Plain wall in the upper third for a caption and a balloon.',
         action: 'The nurse begins the vitals check.',
         emotion: 'Friendly, efficient; Ravi at ease.',
         camera: 'Tall medium two-shot, eye level.',
         information: 'Routine vitals before the consultation; no readings shown.',
+        transition: {
+          kind: 'place-change',
+          bridge: 'From the waiting area (04-1) to the small vitals corner beside reception; the caption "A quick vitals check first." and the reception counter edge in the background carry the move.',
+          settingBasis: 'Revised source: "A nurse takes his vitals." The vitals corner beside reception is a manga supplement.',
+        },
         readingFlow: { entry: [40, 484], exit: [580, 1456] },
         production: {
           moment: 'The nurse is about to squeeze the cuff bulb and smiles at Ravi.',
