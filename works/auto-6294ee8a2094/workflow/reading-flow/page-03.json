@@ -9,38 +9,50 @@
       "rect": [
         24,
         24,
-        560,
-        456
+        488,
+        440
       ],
       "steps": [
         {
           "number": 1,
           "speaker": "narration",
-          "text": "Ravi arrives for his visit.",
+          "text": "The front desk is always an option.",
           "rect": [
             40,
             40,
-            206,
+            267,
             106
           ],
           "center": [
-            143,
+            173.5,
             93
           ],
           "mouth": null
         }
       ],
       "faces": {
-        "ravi": {
+        "meera": {
           "anchor": [
-            359,
-            212
+            364,
+            250
           ],
           "face": [
             324,
-            144,
-            70,
-            85
+            174,
+            80,
+            95
+          ]
+        },
+        "raman": {
+          "anchor": [
+            174,
+            270
+          ],
+          "face": [
+            134,
+            194,
+            80,
+            95
           ]
         }
       },
@@ -51,8 +63,8 @@
           40
         ],
         "exit": [
-          580,
-          470
+          508,
+          460
         ]
       },
       "groups": null,
@@ -61,52 +73,52 @@
     {
       "id": "03-2",
       "rect": [
-        608,
+        536,
         24,
-        392,
-        456
+        464,
+        440
       ],
       "steps": [
         {
           "number": 1,
           "speaker": "narration",
-          "text": "Scan to check in.",
+          "text": "Some check in ahead on the Welbuk Health app.",
           "rect": [
-            624,
+            552,
             40,
-            252,
-            74
+            354,
+            106
           ],
           "center": [
-            750,
-            77
+            729,
+            93
           ],
           "mouth": null
         }
       ],
       "faces": {
-        "ravi": {
+        "priya": {
           "anchor": [
-            823,
-            292
+            806,
+            230
           ],
           "face": [
-            778,
-            204,
-            90,
-            110
+            766,
+            154,
+            80,
+            95
           ]
         }
       },
       "protected": [],
       "intent": {
         "entry": [
-          620,
+          552,
           40
         ],
         "exit": [
-          990,
-          470
+          996,
+          460
         ]
       },
       "groups": null,
@@ -116,38 +128,51 @@
       "id": "03-3",
       "rect": [
         24,
-        504,
-        392,
-        456
+        488,
+        464,
+        440
       ],
       "steps": [
         {
           "number": 1,
           "speaker": "narration",
-          "text": "A short form on his own phone, shared with consent.",
+          "text": "Ravi scans the QR code at the door.",
           "rect": [
             40,
-            520,
-            293,
-            138
+            504,
+            273,
+            106
           ],
           "center": [
-            186.5,
-            589
+            176.5,
+            557
           ],
           "mouth": null
         }
       ],
-      "faces": {},
+      "faces": {
+        "ravi": {
+          "anchor": [
+            287,
+            742
+          ],
+          "face": [
+            244,
+            658,
+            85,
+            105
+          ]
+        }
+      },
       "protected": [],
       "intent": {
         "entry": [
           40,
-          520
+          504
         ],
         "exit": [
-          410,
-          950
+          484,
+          924
         ]
       },
       "groups": null,
@@ -156,68 +181,133 @@
     {
       "id": "03-4",
       "rect": [
-        440,
-        504,
-        560,
-        456
+        512,
+        488,
+        488,
+        440
       ],
       "steps": [
         {
           "number": 1,
           "speaker": "narration",
-          "text": "His token appears on the screen.",
+          "text": "A short form on his own phone, shared with consent.",
           "rect": [
-            456,
-            520,
-            274,
+            528,
+            504,
+            388,
             106
           ],
           "center": [
-            593,
-            573
+            722,
+            557
+          ],
+          "mouth": null
+        }
+      ],
+      "faces": {},
+      "protected": [],
+      "intent": {
+        "entry": [
+          528,
+          504
+        ],
+        "exit": [
+          996,
+          924
+        ]
+      },
+      "groups": null,
+      "warnings": []
+    },
+    {
+      "id": "03-5",
+      "rect": [
+        24,
+        952,
+        976,
+        512
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "narration",
+          "text": "Every check-in gets a slot on the screen.",
+          "rect": [
+            40,
+            968,
+            304,
+            106
+          ],
+          "center": [
+            192,
+            1021
           ],
           "mouth": null
         },
         {
           "number": 2,
           "speaker": "label",
-          "text": "TOKEN A-12",
+          "text": "A-10 · A-11 · A-12",
           "rect": [
-            770,
-            624,
-            203,
+            664,
+            1012,
+            305,
             74
           ],
           "center": [
-            871.5,
-            661
+            816.5,
+            1049
           ],
           "mouth": null
         }
       ],
       "faces": {
-        "ravi": {
+        "raman": {
           "anchor": [
-            588,
-            826
+            389,
+            1320
           ],
           "face": [
-            550,
-            754,
-            75,
-            90
+            354,
+            1252,
+            70,
+            85
+          ]
+        },
+        "priya": {
+          "anchor": [
+            519,
+            1310
+          ],
+          "face": [
+            484,
+            1242,
+            70,
+            85
+          ]
+        },
+        "ravi": {
+          "anchor": [
+            649,
+            1310
+          ],
+          "face": [
+            614,
+            1242,
+            70,
+            85
           ]
         }
       },
       "protected": [],
       "intent": {
         "entry": [
-          456,
-          520
+          40,
+          968
         ],
         "exit": [
-          990,
-          950
+          996,
+          1456
         ]
       },
       "groups": null,
@@ -228,145 +318,6 @@
           "reason": "左から右へ戻る移動と縦方向の範囲が重なる。段差・余白・人物の配置を目視で検討する。"
         }
       ]
-    },
-    {
-      "id": "03-5",
-      "rect": [
-        24,
-        984,
-        560,
-        480
-      ],
-      "steps": [
-        {
-          "number": 1,
-          "speaker": "nurse",
-          "text": "Let's check your vitals, Ravi.",
-          "rect": [
-            294,
-            1000,
-            259,
-            106
-          ],
-          "center": [
-            423.5,
-            1053
-          ],
-          "mouth": [
-            437,
-            1234
-          ]
-        }
-      ],
-      "faces": {
-        "ravi": {
-          "anchor": [
-            157,
-            1264
-          ],
-          "face": [
-            114,
-            1184,
-            85,
-            100
-          ]
-        },
-        "nurse": {
-          "anchor": [
-            437,
-            1234
-          ],
-          "face": [
-            394,
-            1154,
-            85,
-            100
-          ]
-        }
-      },
-      "protected": [],
-      "intent": {
-        "entry": [
-          40,
-          1000
-        ],
-        "exit": [
-          580,
-          1450
-        ]
-      },
-      "groups": null,
-      "warnings": []
-    },
-    {
-      "id": "03-6",
-      "rect": [
-        608,
-        984,
-        392,
-        480
-      ],
-      "steps": [
-        {
-          "number": 1,
-          "speaker": "narration",
-          "text": "Dr. Ananya is notified when he's ready.",
-          "rect": [
-            624,
-            1000,
-            324,
-            106
-          ],
-          "center": [
-            786,
-            1053
-          ],
-          "mouth": null
-        },
-        {
-          "number": 2,
-          "speaker": "label",
-          "text": "RAVI · READY",
-          "rect": [
-            718,
-            1324,
-            219,
-            74
-          ],
-          "center": [
-            827.5,
-            1361
-          ],
-          "mouth": null
-        }
-      ],
-      "faces": {
-        "ananya": {
-          "anchor": [
-            803,
-            1272
-          ],
-          "face": [
-            758,
-            1184,
-            90,
-            110
-          ]
-        }
-      },
-      "protected": [],
-      "intent": {
-        "entry": [
-          620,
-          1000
-        ],
-        "exit": [
-          990,
-          1450
-        ]
-      },
-      "groups": null,
-      "warnings": []
     }
   ],
   "checklist": [

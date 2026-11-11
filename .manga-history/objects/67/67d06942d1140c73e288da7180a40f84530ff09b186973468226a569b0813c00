@@ -1,0 +1,336 @@
+{
+  "version": 3,
+  "page": "03",
+  "status": "planning-guide-not-reviewed",
+  "direction": "left-to-right, top-to-bottom",
+  "panels": [
+    {
+      "id": "03-1",
+      "rect": [
+        24,
+        24,
+        488,
+        440
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "narration",
+          "text": "The front desk is always an option.",
+          "rect": [
+            40,
+            40,
+            267,
+            106
+          ],
+          "center": [
+            173.5,
+            93
+          ],
+          "mouth": null
+        }
+      ],
+      "faces": {
+        "meera": {
+          "anchor": [
+            364,
+            250
+          ],
+          "face": [
+            324,
+            174,
+            80,
+            95
+          ]
+        },
+        "raman": {
+          "anchor": [
+            174,
+            270
+          ],
+          "face": [
+            134,
+            194,
+            80,
+            95
+          ]
+        }
+      },
+      "protected": [],
+      "intent": {
+        "entry": [
+          40,
+          40
+        ],
+        "exit": [
+          508,
+          460
+        ]
+      },
+      "groups": null,
+      "warnings": []
+    },
+    {
+      "id": "03-2",
+      "rect": [
+        536,
+        24,
+        464,
+        440
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "narration",
+          "text": "Some check in ahead on the Welbuk Health app.",
+          "rect": [
+            552,
+            40,
+            354,
+            106
+          ],
+          "center": [
+            729,
+            93
+          ],
+          "mouth": null
+        }
+      ],
+      "faces": {
+        "priya": {
+          "anchor": [
+            806,
+            230
+          ],
+          "face": [
+            766,
+            154,
+            80,
+            95
+          ]
+        }
+      },
+      "protected": [],
+      "intent": {
+        "entry": [
+          552,
+          40
+        ],
+        "exit": [
+          996,
+          460
+        ]
+      },
+      "groups": null,
+      "warnings": []
+    },
+    {
+      "id": "03-3",
+      "rect": [
+        24,
+        488,
+        464,
+        440
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "narration",
+          "text": "Ravi scans the QR code at the door.",
+          "rect": [
+            40,
+            504,
+            273,
+            106
+          ],
+          "center": [
+            176.5,
+            557
+          ],
+          "mouth": null
+        }
+      ],
+      "faces": {
+        "ravi": {
+          "anchor": [
+            287,
+            742
+          ],
+          "face": [
+            244,
+            658,
+            85,
+            105
+          ]
+        }
+      },
+      "protected": [],
+      "intent": {
+        "entry": [
+          40,
+          504
+        ],
+        "exit": [
+          484,
+          924
+        ]
+      },
+      "groups": null,
+      "warnings": []
+    },
+    {
+      "id": "03-4",
+      "rect": [
+        512,
+        488,
+        488,
+        440
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "narration",
+          "text": "A short form on his own phone, shared with consent.",
+          "rect": [
+            528,
+            504,
+            388,
+            106
+          ],
+          "center": [
+            722,
+            557
+          ],
+          "mouth": null
+        }
+      ],
+      "faces": {},
+      "protected": [],
+      "intent": {
+        "entry": [
+          528,
+          504
+        ],
+        "exit": [
+          996,
+          924
+        ]
+      },
+      "groups": null,
+      "warnings": []
+    },
+    {
+      "id": "03-5",
+      "rect": [
+        24,
+        952,
+        976,
+        512
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "narration",
+          "text": "Every check-in gets a slot on the screen.",
+          "rect": [
+            40,
+            968,
+            304,
+            106
+          ],
+          "center": [
+            192,
+            1021
+          ],
+          "mouth": null
+        },
+        {
+          "number": 2,
+          "speaker": "label",
+          "text": "A-10 · A-11 · A-12",
+          "rect": [
+            664,
+            1012,
+            305,
+            74
+          ],
+          "center": [
+            816.5,
+            1049
+          ],
+          "mouth": null
+        }
+      ],
+      "faces": {
+        "raman": {
+          "anchor": [
+            389,
+            1320
+          ],
+          "face": [
+            354,
+            1252,
+            70,
+            85
+          ]
+        },
+        "priya": {
+          "anchor": [
+            519,
+            1310
+          ],
+          "face": [
+            484,
+            1242,
+            70,
+            85
+          ]
+        },
+        "ravi": {
+          "anchor": [
+            649,
+            1310
+          ],
+          "face": [
+            614,
+            1242,
+            70,
+            85
+          ]
+        }
+      },
+      "protected": [],
+      "intent": {
+        "entry": [
+          40,
+          968
+        ],
+        "exit": [
+          996,
+          1456
+        ]
+      },
+      "groups": null,
+      "warnings": [
+        {
+          "from": 1,
+          "to": 2,
+          "reason": "左から右へ戻る移動と縦方向の範囲が重なる。段差・余白・人物の配置を目視で検討する。"
+        }
+      ]
+    }
+  ],
+  "checklist": [
+    "番号と誘導線を隠した画像を先に読み、予測した発話順を記録する",
+    "最初のセリフへ上・左から入れるか",
+    "近い非連続の吹き出しを一組と誤認して返答を飛ばさないか",
+    "前の会話のまとまりを読み終えてから次のまとまりへ進めるか",
+    "返答へ自然に移り、視線が大きく逆戻りしないか",
+    "顔の向き・視線・手や小道具の動作と読順がつながるか",
+    "話者への尾が別人物や重要物を横切らないか",
+    "場所・時間・回想の切替と物の移動を直前直後から理解できるか",
+    "最後のセリフ・反応から次のコマへ移れるか",
+    "大きなコマ・余白・情報公開の順がページの感情の狙いに合うか",
+    "話題の境界と段・ページ境界が一致し、不要な読み戻りを誘わないか"
+  ]
+}

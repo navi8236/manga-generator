@@ -9,50 +9,72 @@
       "rect": [
         24,
         24,
-        470,
-        440
+        976,
+        500
       ],
       "steps": [
         {
           "number": 1,
-          "speaker": "narration",
-          "text": "Tomorrow, care may take us beyond our hometown.",
+          "speaker": "meera",
+          "text": "Welbuk Health is designed to help patients stay connected with their care.",
           "rect": [
-            40,
-            40,
-            259,
-            170
+            48,
+            44,
+            249,
+            202
           ],
           "center": [
-            169.5,
-            125
+            172.5,
+            145
           ],
-          "mouth": null
+          "mouth": [
+            428,
+            232
+          ]
         }
       ],
       "faces": {
-        "ravi": {
+        "meera": {
           "face": [
-            313,
-            105,
-            94,
-            108
+            367,
+            128,
+            96,
+            111
           ],
           "anchor": [
-            349,
-            195
+            428,
+            232
+          ]
+        },
+        "ravi": {
+          "face": [
+            572,
+            114,
+            131,
+            118
+          ],
+          "anchor": [
+            641,
+            191
           ]
         }
       },
-      "protected": [],
+      "protected": [
+        [
+          528,
+          277,
+          66,
+          94
+        ]
+      ],
       "intent": {
         "entry": [
           40,
           40
         ],
         "exit": [
-          490,
-          460
+          990,
+          520
         ]
       },
       "groups": null,
@@ -61,75 +83,78 @@
     {
       "id": "06-2",
       "rect": [
-        518,
         24,
-        482,
-        440
+        548,
+        560,
+        560
       ],
       "steps": [
         {
           "number": 1,
-          "speaker": "label",
-          "text": "WELBUK VISION",
+          "speaker": "ravi",
+          "text": "So I can keep useful information in one place?",
           "rect": [
-            518,
-            24,
-            240,
-            74
-          ],
-          "center": [
-            638,
-            61
-          ],
-          "mouth": null
-        },
-        {
-          "number": 2,
-          "speaker": "narration",
-          "text": "The vision: trusted connections between clinics, specialists, and patients across locations.",
-          "rect": [
-            522,
-            322,
-            442,
+            44,
+            568,
+            305,
             138
           ],
           "center": [
-            743,
-            391
+            196.5,
+            637
+          ],
+          "mouth": [
+            423,
+            739
+          ]
+        },
+        {
+          "number": 2,
+          "speaker": "label",
+          "text": "WELBUK HEALTH for patients",
+          "rect": [
+            24,
+            988,
+            268,
+            106
+          ],
+          "center": [
+            158,
+            1041
           ],
           "mouth": null
         }
       ],
       "faces": {
-        "specialist": {
+        "ravi": {
           "face": [
-            819,
-            132,
-            73,
-            81
+            369,
+            614,
+            147,
+            169
           ],
           "anchor": [
-            865,
-            195
+            423,
+            739
           ]
         }
       },
       "protected": [
         [
-          672,
-          262,
-          74,
-          54
+          297,
+          805,
+          115,
+          208
         ]
       ],
       "intent": {
         "entry": [
-          534,
-          40
+          44,
+          570
         ],
         "exit": [
-          990,
-          460
+          580,
+          1100
         ]
       },
       "groups": null,
@@ -138,99 +163,69 @@
     {
       "id": "06-3",
       "rect": [
-        24,
-        488,
-        976,
-        340
+        608,
+        548,
+        392,
+        560
       ],
       "steps": [
         {
           "number": 1,
-          "speaker": "label",
-          "text": "WELBUK VISION",
+          "speaker": "meera",
+          "text": "That's the idea. Let's walk through what is available to you.",
           "rect": [
-            40,
-            504,
-            240,
-            74
-          ],
-          "center": [
-            160,
-            541
-          ],
-          "mouth": null
-        },
-        {
-          "number": 2,
-          "speaker": "narration",
-          "text": "One connected ecosystem for care and family wellness.",
-          "rect": [
-            40,
-            588,
-            367,
+            616,
+            556,
+            342,
             138
           ],
           "center": [
-            223.5,
-            657
+            787,
+            625
           ],
-          "mouth": null
+          "mouth": [
+            761,
+            838
+          ]
         }
       ],
       "faces": {
+        "meera": {
+          "face": [
+            691,
+            741,
+            111,
+            125
+          ],
+          "anchor": [
+            761,
+            838
+          ]
+        },
         "ravi": {
-          "face": [
-            462,
-            501,
-            115,
-            129
-          ],
+          "kind": "head",
           "anchor": [
-            526,
-            610
-          ]
-        },
-        "partner": {
-          "face": [
-            609,
-            514,
-            108,
-            122
-          ],
-          "anchor": [
-            666,
-            617
-          ]
-        },
-        "child": {
-          "face": [
-            742,
-            585,
-            89,
-            96
-          ],
-          "anchor": [
-            786,
-            662
+            970,
+            760
           ]
         }
       },
       "protected": [
         [
-          583,
-          681,
-          159,
-          103
+          890,
+          898,
+          79,
+          120
         ]
       ],
       "intent": {
         "entry": [
-          40,
-          505
+          624,
+          570
         ],
         "exit": [
           990,
-          820
+          1100
         ]
       },
       "groups": null,
@@ -240,79 +235,63 @@
       "id": "06-4",
       "rect": [
         24,
-        852,
+        1132,
         976,
-        612
+        332
       ],
       "steps": [
         {
           "number": 1,
-          "speaker": "label",
-          "text": "Welbuk Practice • Welbuk Care • Welbuk Health",
-          "rect": [
-            704,
-            872,
-            281,
-            138
-          ],
-          "center": [
-            844.5,
-            941
-          ],
-          "mouth": null
-        },
-        {
-          "number": 2,
           "speaker": "narration",
-          "text": "Welbuk — Building a connected healthcare ecosystem.",
+          "text": "A smoother visit. A more connected experience.",
           "rect": [
             48,
-            1342,
-            433,
-            106
+            1142,
+            640,
+            74
           ],
           "center": [
-            264.5,
-            1395
+            368,
+            1179
           ],
           "mouth": null
         }
       ],
       "faces": {
-        "meera": {
+        "ravi": {
           "face": [
-            344,
-            925,
-            54,
-            68
+            755,
+            1164,
+            70,
+            85
           ],
           "anchor": [
-            371,
-            980
+            786,
+            1229
           ]
         },
         "ananya": {
           "face": [
-            481,
-            906,
-            62,
-            76
+            291,
+            1239,
+            51,
+            52
           ],
           "anchor": [
-            512,
-            968
+            316,
+            1282
           ]
         },
-        "ravi": {
+        "meera": {
           "face": [
-            638,
-            894,
-            61,
-            73
+            370,
+            1255,
+            45,
+            49
           ],
           "anchor": [
-            668,
-            955
+            392,
+            1296
           ]
         }
       },
@@ -320,7 +299,7 @@
       "intent": {
         "entry": [
           40,
-          870
+          1150
         ],
         "exit": [
           990,

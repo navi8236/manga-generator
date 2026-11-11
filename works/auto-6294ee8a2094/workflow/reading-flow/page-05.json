@@ -15,58 +15,51 @@
       "steps": [
         {
           "number": 1,
-          "speaker": "meera",
-          "text": "Welbuk Health is designed to help patients stay connected with their care.",
+          "speaker": "ananya",
+          "text": "Hello, Ravi. Tell me what brings you in.",
           "rect": [
-            48,
-            44,
-            249,
-            202
+            354,
+            40,
+            211,
+            138
           ],
           "center": [
-            172.5,
-            145
+            459.5,
+            109
           ],
           "mouth": [
-            428,
-            232
+            283,
+            140
           ]
         }
       ],
       "faces": {
-        "meera": {
+        "ananya": {
           "face": [
-            367,
-            128,
-            96,
-            111
+            252,
+            62,
+            70,
+            90
           ],
           "anchor": [
-            428,
-            232
+            283,
+            140
           ]
         },
         "ravi": {
           "face": [
-            572,
-            114,
-            131,
-            118
+            733,
+            55,
+            75,
+            92
           ],
           "anchor": [
-            641,
-            191
+            770,
+            130
           ]
         }
       },
-      "protected": [
-        [
-          528,
-          277,
-          66,
-          94
-        ]
-      ],
+      "protected": [],
       "intent": {
         "entry": [
           40,
@@ -85,76 +78,60 @@
       "rect": [
         24,
         548,
-        560,
-        560
+        480,
+        520
       ],
       "steps": [
         {
           "number": 1,
           "speaker": "ravi",
-          "text": "So I can keep useful information in one place?",
+          "text": "I've been feeling tired lately.",
           "rect": [
             44,
             568,
-            305,
-            138
-          ],
-          "center": [
-            196.5,
-            637
-          ],
-          "mouth": [
-            423,
-            739
-          ]
-        },
-        {
-          "number": 2,
-          "speaker": "label",
-          "text": "WELBUK HEALTH for patients",
-          "rect": [
-            24,
-            988,
-            268,
+            257,
             106
           ],
           "center": [
-            158,
-            1041
+            172.5,
+            621
           ],
-          "mouth": null
+          "mouth": [
+            380,
+            735
+          ]
         }
       ],
       "faces": {
         "ravi": {
           "face": [
-            369,
-            614,
-            147,
-            169
+            330,
+            628,
+            95,
+            135
           ],
           "anchor": [
-            423,
-            739
+            380,
+            735
+          ]
+        },
+        "ananya": {
+          "kind": "head",
+          "anchor": [
+            60,
+            720
           ]
         }
       },
-      "protected": [
-        [
-          297,
-          805,
-          115,
-          208
-        ]
-      ],
+      "protected": [],
       "intent": {
         "entry": [
           44,
           570
         ],
         "exit": [
-          580,
-          1100
+          500,
+          1060
         ]
       },
       "groups": null,
@@ -163,69 +140,59 @@
     {
       "id": "05-3",
       "rect": [
-        608,
+        528,
         548,
-        392,
-        560
+        472,
+        520
       ],
       "steps": [
         {
           "number": 1,
-          "speaker": "meera",
-          "text": "That's the idea. Let's walk through what is available to you.",
+          "speaker": "narration",
+          "text": "Technology supports the workflow. The conversation stays human.",
           "rect": [
-            616,
-            556,
-            342,
+            532,
+            552,
+            401,
             138
           ],
           "center": [
-            787,
-            625
+            732.5,
+            621
           ],
-          "mouth": [
-            761,
-            838
-          ]
+          "mouth": null
         }
       ],
       "faces": {
-        "meera": {
+        "ananya": {
           "face": [
-            691,
-            741,
-            111,
-            125
+            645,
+            738,
+            115,
+            100
           ],
           "anchor": [
-            761,
-            838
+            705,
+            820
           ]
         },
         "ravi": {
           "kind": "head",
           "anchor": [
-            970,
-            760
+            950,
+            720
           ]
         }
       },
-      "protected": [
-        [
-          890,
-          898,
-          79,
-          120
-        ]
-      ],
+      "protected": [],
       "intent": {
         "entry": [
-          624,
+          544,
           570
         ],
         "exit": [
           990,
-          1100
+          1060
         ]
       },
       "groups": null,
@@ -235,63 +202,54 @@
       "id": "05-4",
       "rect": [
         24,
-        1132,
+        1092,
         976,
-        332
+        372
       ],
       "steps": [
         {
           "number": 1,
-          "speaker": "narration",
-          "text": "A smoother visit. A more connected experience.",
+          "speaker": "ananya",
+          "text": "We'll go through your concerns and decide the right next steps together.",
           "rect": [
-            48,
-            1142,
-            640,
-            74
+            404,
+            1100,
+            287,
+            170
           ],
           "center": [
-            368,
-            1179
+            547.5,
+            1185
           ],
-          "mouth": null
+          "mouth": [
+            327,
+            1212
+          ]
         }
       ],
       "faces": {
-        "ravi": {
-          "face": [
-            755,
-            1164,
-            70,
-            85
-          ],
-          "anchor": [
-            786,
-            1229
-          ]
-        },
         "ananya": {
           "face": [
-            291,
-            1239,
-            51,
-            52
+            297,
+            1140,
+            62,
+            90
           ],
           "anchor": [
-            316,
-            1282
+            327,
+            1212
           ]
         },
-        "meera": {
+        "ravi": {
           "face": [
-            370,
-            1255,
-            45,
-            49
+            723,
+            1132,
+            66,
+            90
           ],
           "anchor": [
-            392,
-            1296
+            757,
+            1205
           ]
         }
       },
@@ -299,7 +257,7 @@
       "intent": {
         "entry": [
           40,
-          1150
+          1110
         ],
         "exit": [
           990,

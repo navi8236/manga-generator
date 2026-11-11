@@ -10,52 +10,53 @@
         24,
         24,
         976,
-        500
+        420
       ],
       "steps": [
         {
           "number": 1,
-          "speaker": "ananya",
-          "text": "Hello, Ravi. Tell me what brings you in.",
+          "speaker": "narration",
+          "text": "Soon, his slot comes up.",
           "rect": [
-            354,
             40,
-            211,
-            138
+            40,
+            215,
+            106
           ],
           "center": [
-            459.5,
-            109
+            147.5,
+            93
           ],
-          "mouth": [
-            283,
-            140
-          ]
+          "mouth": null
+        },
+        {
+          "number": 2,
+          "speaker": "label",
+          "text": "NOW · A-12",
+          "rect": [
+            744,
+            84,
+            190,
+            74
+          ],
+          "center": [
+            839,
+            121
+          ],
+          "mouth": null
         }
       ],
       "faces": {
-        "ananya": {
-          "face": [
-            252,
-            62,
-            70,
-            90
-          ],
-          "anchor": [
-            283,
-            140
-          ]
-        },
         "ravi": {
-          "face": [
-            733,
-            55,
-            75,
-            92
-          ],
           "anchor": [
-            770,
-            130
+            392,
+            206
+          ],
+          "face": [
+            354,
+            134,
+            75,
+            90
           ]
         }
       },
@@ -66,72 +67,99 @@
           40
         ],
         "exit": [
-          990,
-          520
+          996,
+          440
         ]
       },
       "groups": null,
-      "warnings": []
+      "warnings": [
+        {
+          "from": 1,
+          "to": 2,
+          "reason": "左から右へ戻る移動と縦方向の範囲が重なる。段差・余白・人物の配置を目視で検討する。"
+        }
+      ]
     },
     {
       "id": "04-2",
       "rect": [
         24,
-        548,
-        480,
-        520
+        468,
+        560,
+        996
       ],
       "steps": [
         {
           "number": 1,
-          "speaker": "ravi",
-          "text": "I've been feeling tired lately.",
+          "speaker": "narration",
+          "text": "A quick vitals check first.",
           "rect": [
-            44,
-            568,
-            257,
+            40,
+            484,
+            215,
             106
           ],
           "center": [
-            172.5,
-            621
+            147.5,
+            537
+          ],
+          "mouth": null
+        },
+        {
+          "number": 2,
+          "speaker": "nurse",
+          "text": "Let's check your vitals, Ravi.",
+          "rect": [
+            274,
+            618,
+            259,
+            106
+          ],
+          "center": [
+            403.5,
+            671
           ],
           "mouth": [
-            380,
-            735
+            429,
+            1022
           ]
         }
       ],
       "faces": {
         "ravi": {
-          "face": [
-            330,
-            628,
-            95,
-            135
-          ],
           "anchor": [
-            380,
-            735
+            179,
+            1112
+          ],
+          "face": [
+            134,
+            1028,
+            90,
+            105
           ]
         },
-        "ananya": {
-          "kind": "head",
+        "nurse": {
           "anchor": [
-            60,
-            720
+            429,
+            1022
+          ],
+          "face": [
+            384,
+            938,
+            90,
+            105
           ]
         }
       },
       "protected": [],
       "intent": {
         "entry": [
-          44,
-          570
+          40,
+          484
         ],
         "exit": [
-          500,
-          1060
+          580,
+          1456
         ]
       },
       "groups": null,
@@ -140,128 +168,68 @@
     {
       "id": "04-3",
       "rect": [
-        528,
-        548,
-        472,
-        520
+        608,
+        468,
+        392,
+        996
       ],
       "steps": [
         {
           "number": 1,
           "speaker": "narration",
-          "text": "Technology supports the workflow. The conversation stays human.",
+          "text": "Dr. Ananya is notified when he's ready.",
           "rect": [
-            532,
-            552,
-            401,
+            624,
+            484,
+            217,
             138
           ],
           "center": [
             732.5,
-            621
+            553
+          ],
+          "mouth": null
+        },
+        {
+          "number": 2,
+          "speaker": "label",
+          "text": "RAVI · READY",
+          "rect": [
+            698,
+            1188,
+            219,
+            74
+          ],
+          "center": [
+            807.5,
+            1225
           ],
           "mouth": null
         }
       ],
       "faces": {
         "ananya": {
-          "face": [
-            645,
-            738,
-            115,
-            100
+          "anchor": [
+            803,
+            1026
           ],
-          "anchor": [
-            705,
-            820
-          ]
-        },
-        "ravi": {
-          "kind": "head",
-          "anchor": [
-            950,
-            720
+          "face": [
+            758,
+            938,
+            90,
+            110
           ]
         }
       },
       "protected": [],
       "intent": {
         "entry": [
-          544,
-          570
+          624,
+          484
         ],
         "exit": [
-          990,
-          1060
-        ]
-      },
-      "groups": null,
-      "warnings": []
-    },
-    {
-      "id": "04-4",
-      "rect": [
-        24,
-        1092,
-        976,
-        372
-      ],
-      "steps": [
-        {
-          "number": 1,
-          "speaker": "ananya",
-          "text": "We'll go through your concerns and decide the right next steps together.",
-          "rect": [
-            404,
-            1100,
-            287,
-            170
-          ],
-          "center": [
-            547.5,
-            1185
-          ],
-          "mouth": [
-            327,
-            1212
-          ]
-        }
-      ],
-      "faces": {
-        "ananya": {
-          "face": [
-            297,
-            1140,
-            62,
-            90
-          ],
-          "anchor": [
-            327,
-            1212
-          ]
-        },
-        "ravi": {
-          "face": [
-            723,
-            1132,
-            66,
-            90
-          ],
-          "anchor": [
-            757,
-            1205
-          ]
-        }
-      },
-      "protected": [],
-      "intent": {
-        "entry": [
-          40,
-          1110
-        ],
-        "exit": [
-          990,
-          1505
+          996,
+          1456
         ]
       },
       "groups": null,
