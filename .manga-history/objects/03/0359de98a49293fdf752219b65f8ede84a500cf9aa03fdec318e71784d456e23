@@ -1,0 +1,23 @@
+{
+  "promptVersion": 2,
+  "panel": "04-1",
+  "project": "works/auto-6294ee8a2094/workflow.json",
+  "fingerprint": "76aa9d7def05e2f83bb7af1ae8df8d931aa9f240d71951e814c7737b2dfef936",
+  "operation": "edit",
+  "sourceHash": "78b77a0f8272fd38c6bc6f4b8cf2ef3bb3c7d7d97112ea3f540dcd482913144a",
+  "prompt": "TASK: Edit image 1. This is a local revision of the supplied artwork.\nINPUT IMAGES (in supplied order):\nImage 1: edit-target. Base image to edit; requested changes take precedence over preservation.\nCHANGE REQUEST:\nReplace only the small QR check-in stand by the glass window at the far left with the clinic's standard check-in kiosk: a grey rounded kiosk housing with a teal frame around an abstract square block pattern (not a real code, no text) and a thin teal bar beneath it, on a slim grey column with a round grey base, the same height as now and in the same spot. Keep everything else exactly as it is: Ravi standing in the same pose, position and size with his bag, hands and upward gaze; the two empty blue chairs; the two background patients in grey and brown seen from behind; the wall TV with its empty white strip; Meera typing at the desk; the vitals cart, plants, window, lighting and the plain white area at the top-left. No text, numbers or logos anywhere.\nPRESERVE: retain all areas, identity traits, acting, clothing, composition and lettering space outside the requested change. The change request overrides preservation where necessary; repair connected anatomy, contact objects and occlusion together. Supporting images supply only their stated roles. Do not copy their entire scene or pose.\nOUTPUT: one edited image matching the target aspect. Do not add text, guide marks or a global style filter. Re-measure faces and mouths and inspect lettering space after adoption.",
+  "promptHash": "d827f5334725d248f40be7689fc329b233ab30cc530b4c42cb5fe8fc05b2fb84",
+  "references": [
+    {
+      "file": "works/auto-6294ee8a2094/workflow/generation-inputs/04-1-70a3951ffa7e263c/reference-0.png",
+      "hash": "3104f55bc1a978516fdce33aee85fe6655c35a5e541c40059ad89a4e89b5dfe1",
+      "original": "works/auto-6294ee8a2094/assets/panels/04-1.png",
+      "index": 1,
+      "kind": "edit-target",
+      "role": "Base image to edit; requested changes take precedence over preservation."
+    }
+  ],
+  "renderer": "Higgsfield gpt_image_2_6",
+  "model": "gpt_image_2_6",
+  "seed": null
+}
