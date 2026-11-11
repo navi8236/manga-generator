@@ -41,7 +41,7 @@ P = {
            'background': 'Teal awning over a glass entrance (edit1, matching 05-4/06-4), plants and street give place; detail density appropriate for an establishing shot.',
            'continuity': 'Costume matches the sheet; stethoscope worn as recorded.',
            'lettering': 'Caption sits in the white top-left area without covering the doorway or faces.'},
-          {'ananya': 'Warm open-mouthed welcoming smile' + SMALL}, [{'category': 'continuity', 'description': 'Final first reading: page 1 exterior (blue tin awning, wooden door) differed from the clinic entrance in 05-4/06-4; changed to the teal-awning glass entrance by edit1.', 'status': 'resolved'}]),
+          {'ananya': 'Warm open-mouthed welcoming smile' + SMALL}, [{'category': 'continuity', 'description': 'Final first reading: page 1 exterior (blue tin awning, wooden door) differed from the clinic entrance in 05-4/06-4; changed to the teal-awning glass entrance by edit1.', 'status': 'resolved'}, {'category': 'contact', 'description': 'Artwork review r6: after edit1 Ananya stood behind a closed glass door while her hand and feet overlapped the frame; edit2 opened the left leaf so she stands in the open doorway.', 'status': 'resolved'}]),
  '01-2': ('Meera at reception juggling the phone and the register with a queue seen from behind.',
           {'anatomy': 'Left hand holds the receiver at the left ear; right hand grips the pen naturally.',
            'contact': 'Pen tip on the register page; cord connects receiver to the base.',
