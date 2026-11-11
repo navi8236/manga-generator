@@ -14,7 +14,7 @@ const at = (needle, from = 0) => {
 const notes = {
   intro: [
     ['01-1', '03-1', '06-2', '06-3', '06-4'],
-    'Title, disclaimer and cast list. The cast descriptions became cast.description/faceDesign for Dr. Ananya (teal kurta under white coat), Meera (blue kurta) and Ravi (light green shirt); unstated details are recorded as manga supplements. The disclaimer that future referral-network experiences are vision drives the "WELBUK VISION" labels and vignette styling on 06-2 and 06-3.',
+    'Title, disclaimer and cast list. The cast descriptions became cast.description/faceDesign for Dr. Ananya (teal kurta under white coat), Meera (blue kurta), Ravi (light green shirt) and the Nurse added in the 2026-11-11 revision (lavender scrubs); unstated details are recorded as manga supplements. The disclaimer that future referral-network experiences are vision drives the "WELBUK VISION" labels and vignette styling on 06-2 and 06-3.',
   ],
   '01-1': [['01-1'], 'Wide morning establishing shot of a neighbourhood Tamil Nadu clinic with Dr. Ananya welcoming patients; the source caption is lettered verbatim.'],
   '01-2': [['01-2'], 'Paper registers, ringing phone and queue are drawn as props and background; Meera\'s line is kept verbatim but split into two balloons at the ellipsis so the list and the wish read as two breaths.'],
@@ -23,10 +23,12 @@ const notes = {
   '02-2': [['02-2'], 'Ananya at the laptop considering team roles; line verbatim.'],
   '02-3': [['02-3'], 'Meera with a staff phone showing an abstract screen; line verbatim plus a "WELBUK CARE / for clinic staff" label naming the source\'s staff app.'],
   '02-4': [['02-4'], 'Friendly two-shot; Ananya\'s line verbatim, Meera answers with a nod.'],
-  '03-1': [['03-1'], 'Ravi arrives at reception, waving; line verbatim.'],
-  '03-2': [['03-2'], 'Meera asks for consent with an open-palm gesture; line verbatim, establishing consent before data entry.'],
-  '03-3': [['03-3'], 'Ravi agrees while Meera types; the monitor shows only blank fields so no identifying data appears. Line verbatim.'],
-  '03-4': [['03-4'], 'Meera confirms and gestures to the waiting chairs; line verbatim.'],
+  '03-1': [['03-1'], 'Revised page 3 (2026-11-11, user request). Ravi walks in through the glass entrance holding his phone and notices the abstract QR check-in stand; caption verbatim.'],
+  '03-2': [['03-2'], 'Ravi scans the abstract QR pattern with his phone (no real code, no text); caption verbatim.'],
+  '03-3': [['03-3'], 'Over-the-shoulder phone close-up: blank form fields and a consent tick-box tapped by his thumb, so no identifying data is shown; caption verbatim.'],
+  '03-4': [['03-4'], 'Waiting area: Ravi looks up at the wall TV; the TV screen is drawn blank and the token "TOKEN A-12" is lettered as a label over it; caption verbatim.'],
+  '03-5': [['03-5'], 'The new nurse character (cast + nurse sheet) takes Ravi\'s vitals with a cuff and oximeter; the monitor shows no readings; her line is verbatim.'],
+  '03-6': [['03-6'], 'Cut to the consultation room: Dr. Ananya reads a notification on her tablet; the screen is drawn blank and "RAVI · READY" is lettered as a label over it; caption verbatim.'],
   '04-1': [['04-1'], 'Consultation-room greeting, laptop closed aside; line verbatim.'],
   '04-2': [['04-2'], 'Ravi states a routine concern; no diagnosis or medical advice is drawn or written. Line verbatim.'],
   '04-3': [['04-3'], 'Ananya listens attentively with the laptop closed aside; the caption is verbatim and the closed laptop shows technology staying in the background.'],
@@ -48,7 +50,7 @@ const notes = {
 const cuts = [{ start: 0, key: 'intro' }];
 for (let page = 1; page <= 6; page++) {
   const pageAt = at(`PAGE ${page} —`);
-  const panelCount = page === 1 ? 3 : 4;
+  const panelCount = page === 1 ? 3 : page === 3 ? 6 : 4;
   for (let n = 1; n <= panelCount; n++) {
     const start = n === 1 ? pageAt : at(`Panel ${n}`, pageAt);
     cuts.push({ start, key: `0${page}-${n}` });

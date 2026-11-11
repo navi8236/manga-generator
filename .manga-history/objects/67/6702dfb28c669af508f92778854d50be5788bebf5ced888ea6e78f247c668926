@@ -1,0 +1,385 @@
+{
+  "version": 3,
+  "page": "03",
+  "status": "planning-guide-not-reviewed",
+  "direction": "left-to-right, top-to-bottom",
+  "panels": [
+    {
+      "id": "03-1",
+      "rect": [
+        24,
+        24,
+        560,
+        456
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "narration",
+          "text": "Ravi arrives for his visit.",
+          "rect": [
+            40,
+            40,
+            206,
+            106
+          ],
+          "center": [
+            143,
+            93
+          ],
+          "mouth": null
+        }
+      ],
+      "faces": {
+        "ravi": {
+          "anchor": [
+            359,
+            212
+          ],
+          "face": [
+            324,
+            144,
+            70,
+            85
+          ]
+        }
+      },
+      "protected": [],
+      "intent": {
+        "entry": [
+          40,
+          40
+        ],
+        "exit": [
+          580,
+          470
+        ]
+      },
+      "groups": null,
+      "warnings": []
+    },
+    {
+      "id": "03-2",
+      "rect": [
+        608,
+        24,
+        392,
+        456
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "narration",
+          "text": "Scan to check in.",
+          "rect": [
+            624,
+            40,
+            252,
+            74
+          ],
+          "center": [
+            750,
+            77
+          ],
+          "mouth": null
+        }
+      ],
+      "faces": {
+        "ravi": {
+          "anchor": [
+            823,
+            292
+          ],
+          "face": [
+            778,
+            204,
+            90,
+            110
+          ]
+        }
+      },
+      "protected": [],
+      "intent": {
+        "entry": [
+          620,
+          40
+        ],
+        "exit": [
+          990,
+          470
+        ]
+      },
+      "groups": null,
+      "warnings": []
+    },
+    {
+      "id": "03-3",
+      "rect": [
+        24,
+        504,
+        392,
+        456
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "narration",
+          "text": "A short form on his own phone, shared with consent.",
+          "rect": [
+            40,
+            520,
+            293,
+            138
+          ],
+          "center": [
+            186.5,
+            589
+          ],
+          "mouth": null
+        }
+      ],
+      "faces": {},
+      "protected": [],
+      "intent": {
+        "entry": [
+          40,
+          520
+        ],
+        "exit": [
+          410,
+          950
+        ]
+      },
+      "groups": null,
+      "warnings": []
+    },
+    {
+      "id": "03-4",
+      "rect": [
+        440,
+        504,
+        560,
+        456
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "narration",
+          "text": "His token appears on the screen.",
+          "rect": [
+            456,
+            520,
+            274,
+            106
+          ],
+          "center": [
+            593,
+            573
+          ],
+          "mouth": null
+        },
+        {
+          "number": 2,
+          "speaker": "label",
+          "text": "TOKEN A-12",
+          "rect": [
+            770,
+            624,
+            203,
+            74
+          ],
+          "center": [
+            871.5,
+            661
+          ],
+          "mouth": null
+        }
+      ],
+      "faces": {
+        "ravi": {
+          "anchor": [
+            588,
+            826
+          ],
+          "face": [
+            550,
+            754,
+            75,
+            90
+          ]
+        }
+      },
+      "protected": [],
+      "intent": {
+        "entry": [
+          456,
+          520
+        ],
+        "exit": [
+          990,
+          950
+        ]
+      },
+      "groups": null,
+      "warnings": [
+        {
+          "from": 1,
+          "to": 2,
+          "reason": "左から右へ戻る移動と縦方向の範囲が重なる。段差・余白・人物の配置を目視で検討する。"
+        }
+      ]
+    },
+    {
+      "id": "03-5",
+      "rect": [
+        24,
+        984,
+        560,
+        480
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "nurse",
+          "text": "Let's check your vitals, Ravi.",
+          "rect": [
+            324,
+            1000,
+            259,
+            106
+          ],
+          "center": [
+            453.5,
+            1053
+          ],
+          "mouth": [
+            437,
+            1234
+          ]
+        }
+      ],
+      "faces": {
+        "ravi": {
+          "anchor": [
+            157,
+            1264
+          ],
+          "face": [
+            114,
+            1184,
+            85,
+            100
+          ]
+        },
+        "nurse": {
+          "anchor": [
+            437,
+            1234
+          ],
+          "face": [
+            394,
+            1154,
+            85,
+            100
+          ]
+        }
+      },
+      "protected": [],
+      "intent": {
+        "entry": [
+          40,
+          1000
+        ],
+        "exit": [
+          580,
+          1450
+        ]
+      },
+      "groups": null,
+      "warnings": []
+    },
+    {
+      "id": "03-6",
+      "rect": [
+        608,
+        984,
+        392,
+        480
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "narration",
+          "text": "Dr. Ananya is notified when he's ready.",
+          "rect": [
+            624,
+            1000,
+            324,
+            106
+          ],
+          "center": [
+            786,
+            1053
+          ],
+          "mouth": null
+        },
+        {
+          "number": 2,
+          "speaker": "label",
+          "text": "RAVI · READY",
+          "rect": [
+            718,
+            1324,
+            219,
+            74
+          ],
+          "center": [
+            827.5,
+            1361
+          ],
+          "mouth": null
+        }
+      ],
+      "faces": {
+        "ananya": {
+          "anchor": [
+            803,
+            1272
+          ],
+          "face": [
+            758,
+            1184,
+            90,
+            110
+          ]
+        }
+      },
+      "protected": [],
+      "intent": {
+        "entry": [
+          620,
+          1000
+        ],
+        "exit": [
+          990,
+          1450
+        ]
+      },
+      "groups": null,
+      "warnings": []
+    }
+  ],
+  "checklist": [
+    "番号と誘導線を隠した画像を先に読み、予測した発話順を記録する",
+    "最初のセリフへ上・左から入れるか",
+    "近い非連続の吹き出しを一組と誤認して返答を飛ばさないか",
+    "前の会話のまとまりを読み終えてから次のまとまりへ進めるか",
+    "返答へ自然に移り、視線が大きく逆戻りしないか",
+    "顔の向き・視線・手や小道具の動作と読順がつながるか",
+    "話者への尾が別人物や重要物を横切らないか",
+    "場所・時間・回想の切替と物の移動を直前直後から理解できるか",
+    "最後のセリフ・反応から次のコマへ移れるか",
+    "大きなコマ・余白・情報公開の順がページの感情の狙いに合うか",
+    "話題の境界と段・ページ境界が一致し、不要な読み戻りを誘わないか"
+  ]
+}

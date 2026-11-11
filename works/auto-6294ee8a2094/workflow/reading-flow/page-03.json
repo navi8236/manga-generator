@@ -9,53 +9,38 @@
       "rect": [
         24,
         24,
-        580,
-        560
+        560,
+        456
       ],
       "steps": [
         {
           "number": 1,
-          "speaker": "ravi",
-          "text": "Good morning! I'd like to see the doctor.",
+          "speaker": "narration",
+          "text": "Ravi arrives for his visit.",
           "rect": [
-            28,
-            28,
-            317,
+            40,
+            40,
+            206,
             106
           ],
           "center": [
-            186.5,
-            81
+            143,
+            93
           ],
-          "mouth": [
-            445,
-            118
-          ]
+          "mouth": null
         }
       ],
       "faces": {
         "ravi": {
-          "face": [
-            405,
-            62,
-            78,
-            90
-          ],
           "anchor": [
-            445,
-            118
-          ]
-        },
-        "meera": {
-          "face": [
-            92,
-            222,
-            68,
-            100
+            359,
+            212
           ],
-          "anchor": [
-            148,
-            300
+          "face": [
+            324,
+            144,
+            70,
+            85
           ]
         }
       },
@@ -66,8 +51,8 @@
           40
         ],
         "exit": [
-          600,
-          560
+          580,
+          470
         ]
       },
       "groups": null,
@@ -76,67 +61,52 @@
     {
       "id": "03-2",
       "rect": [
-        628,
+        608,
         24,
-        372,
-        560
+        392,
+        456
       ],
       "steps": [
         {
           "number": 1,
-          "speaker": "meera",
-          "text": "Of course. May I register your details for today's appointment?",
+          "speaker": "narration",
+          "text": "Scan to check in.",
           "rect": [
-            644,
-            36,
-            310,
-            170
+            624,
+            40,
+            252,
+            74
           ],
           "center": [
-            799,
-            121
+            750,
+            77
           ],
-          "mouth": [
-            809,
-            287
-          ]
+          "mouth": null
         }
       ],
       "faces": {
-        "meera": {
-          "face": [
-            782,
-            230,
-            67,
-            76
-          ],
-          "anchor": [
-            809,
-            287
-          ]
-        },
         "ravi": {
-          "face": [
-            645,
-            217,
-            49,
-            81
-          ],
           "anchor": [
-            683,
-            291
+            823,
+            292
+          ],
+          "face": [
+            778,
+            204,
+            90,
+            110
           ]
         }
       },
       "protected": [],
       "intent": {
         "entry": [
-          644,
+          620,
           40
         ],
         "exit": [
           990,
-          570
+          470
         ]
       },
       "groups": null,
@@ -146,66 +116,38 @@
       "id": "03-3",
       "rect": [
         24,
-        608,
-        976,
-        460
+        504,
+        392,
+        456
       ],
       "steps": [
         {
           "number": 1,
-          "speaker": "ravi",
-          "text": "Yes, please.",
+          "speaker": "narration",
+          "text": "A short form on his own phone, shared with consent.",
           "rect": [
-            32,
-            624,
-            191,
-            74
+            40,
+            520,
+            293,
+            138
           ],
           "center": [
-            127.5,
-            661
+            186.5,
+            589
           ],
-          "mouth": [
-            285,
-            770
-          ]
+          "mouth": null
         }
       ],
-      "faces": {
-        "ravi": {
-          "face": [
-            238,
-            668,
-            95,
-            120
-          ],
-          "anchor": [
-            285,
-            770
-          ]
-        },
-        "meera": {
-          "face": [
-            752,
-            688,
-            85,
-            100
-          ],
-          "anchor": [
-            790,
-            770
-          ]
-        }
-      },
+      "faces": {},
       "protected": [],
       "intent": {
         "entry": [
           40,
-          625
+          520
         ],
         "exit": [
-          990,
-          1060
+          410,
+          950
         ]
       },
       "groups": null,
@@ -214,55 +156,131 @@
     {
       "id": "03-4",
       "rect": [
-        24,
-        1092,
-        976,
-        372
+        440,
+        504,
+        560,
+        456
       ],
       "steps": [
         {
           "number": 1,
-          "speaker": "meera",
-          "text": "You're all set, Ravi. Please have a seat.",
+          "speaker": "narration",
+          "text": "His token appears on the screen.",
           "rect": [
-            464,
-            1100,
-            295,
+            456,
+            520,
+            274,
             106
           ],
           "center": [
-            611.5,
-            1153
+            593,
+            573
+          ],
+          "mouth": null
+        },
+        {
+          "number": 2,
+          "speaker": "label",
+          "text": "TOKEN A-12",
+          "rect": [
+            770,
+            624,
+            203,
+            74
+          ],
+          "center": [
+            871.5,
+            661
+          ],
+          "mouth": null
+        }
+      ],
+      "faces": {
+        "ravi": {
+          "anchor": [
+            588,
+            826
+          ],
+          "face": [
+            550,
+            754,
+            75,
+            90
+          ]
+        }
+      },
+      "protected": [],
+      "intent": {
+        "entry": [
+          456,
+          520
+        ],
+        "exit": [
+          990,
+          950
+        ]
+      },
+      "groups": null,
+      "warnings": [
+        {
+          "from": 1,
+          "to": 2,
+          "reason": "左から右へ戻る移動と縦方向の範囲が重なる。段差・余白・人物の配置を目視で検討する。"
+        }
+      ]
+    },
+    {
+      "id": "03-5",
+      "rect": [
+        24,
+        984,
+        560,
+        480
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "nurse",
+          "text": "Let's check your vitals, Ravi.",
+          "rect": [
+            294,
+            1000,
+            259,
+            106
+          ],
+          "center": [
+            423.5,
+            1053
           ],
           "mouth": [
-            795,
-            1280
+            437,
+            1234
           ]
         }
       ],
       "faces": {
         "ravi": {
-          "face": [
-            255,
-            1108,
-            92,
-            112
-          ],
           "anchor": [
-            300,
-            1200
+            157,
+            1264
+          ],
+          "face": [
+            114,
+            1184,
+            85,
+            100
           ]
         },
-        "meera": {
-          "face": [
-            762,
-            1212,
-            75,
-            82
-          ],
+        "nurse": {
           "anchor": [
-            795,
-            1280
+            437,
+            1234
+          ],
+          "face": [
+            394,
+            1154,
+            85,
+            100
           ]
         }
       },
@@ -270,11 +288,81 @@
       "intent": {
         "entry": [
           40,
-          1110
+          1000
+        ],
+        "exit": [
+          580,
+          1450
+        ]
+      },
+      "groups": null,
+      "warnings": []
+    },
+    {
+      "id": "03-6",
+      "rect": [
+        608,
+        984,
+        392,
+        480
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "narration",
+          "text": "Dr. Ananya is notified when he's ready.",
+          "rect": [
+            624,
+            1000,
+            324,
+            106
+          ],
+          "center": [
+            786,
+            1053
+          ],
+          "mouth": null
+        },
+        {
+          "number": 2,
+          "speaker": "label",
+          "text": "RAVI · READY",
+          "rect": [
+            718,
+            1324,
+            219,
+            74
+          ],
+          "center": [
+            827.5,
+            1361
+          ],
+          "mouth": null
+        }
+      ],
+      "faces": {
+        "ananya": {
+          "anchor": [
+            803,
+            1272
+          ],
+          "face": [
+            758,
+            1184,
+            90,
+            110
+          ]
+        }
+      },
+      "protected": [],
+      "intent": {
+        "entry": [
+          620,
+          1000
         ],
         "exit": [
           990,
-          1505
+          1450
         ]
       },
       "groups": null,

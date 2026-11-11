@@ -145,10 +145,10 @@
     },
     {
       "page": "03",
-      "feeling": "Introduce Ravi and show respectful, consent-based registration at reception.",
+      "feeling": "Show Ravi’s self check-in: QR scan and phone form with consent, a token on the waiting-room TV, the nurse’s vitals check, and Dr. Ananya notified on her tablet.",
       "questionForNextPage": "What happens in Ravi’s consultation?",
       "intent": {
-        "emotion": "Introduce Ravi and show respectful, consent-based registration at reception.",
+        "emotion": "Show Ravi’s self check-in: QR scan and phone form with consent, a token on the waiting-room TV, the nurse’s vitals check, and Dr. Ananya notified on her tablet.",
         "revealOrder": null,
         "peakPanel": null,
         "turnQuestion": "What happens in Ravi’s consultation?",
@@ -158,56 +158,80 @@
       "diagnostics": {
         "showcaseExists": true,
         "areaRange": [
-          208320,
-          448960
+          178752,
+          268800
         ],
         "strengthsEqual": false
       },
       "panels": [
         {
           "id": "03-1",
-          "beat": "Ravi arrives",
-          "camera": "Medium-full shot from the reception side, slight low angle.",
-          "area": 324800,
-          "strength": 0.72,
+          "beat": "Ravi walks into the clinic",
+          "camera": "Medium-full shot from inside the reception, eye level.",
+          "area": 255360,
+          "strength": 0.95,
           "showcase": false,
-          "information": "New character: Ravi, a patient, on a later morning.",
+          "information": "New character: Ravi, a patient, on a later morning; the self check-in stand.",
           "pause": null,
           "readingGroups": null,
           "layoutRow": null
         },
         {
           "id": "03-2",
-          "beat": "Meera asks for consent to register",
-          "camera": "Tall medium shot, slightly from the left.",
-          "area": 208320,
-          "strength": 0.46,
+          "beat": "Ravi scans the check-in QR code",
+          "camera": "Medium close-up from the side of the stand.",
+          "area": 178752,
+          "strength": 0.67,
           "showcase": false,
-          "information": "Registration starts with Ravi’s permission.",
+          "information": "Check-in starts from the patient’s own phone.",
           "pause": null,
           "readingGroups": null,
           "layoutRow": null
         },
         {
           "id": "03-3",
-          "beat": "Ravi agrees; Meera enters essential details",
-          "camera": "Medium-wide two-shot, eye level, desk across the lower third.",
-          "area": 448960,
-          "strength": 1,
+          "beat": "He fills a short form on his phone",
+          "camera": "Over-the-shoulder close-up of the phone.",
+          "area": 178752,
+          "strength": 0.67,
           "showcase": false,
-          "information": "Only essential sample details are entered, with consent.",
+          "information": "He shares only what the visit needs, with consent.",
           "pause": null,
           "readingGroups": null,
           "layoutRow": null
         },
         {
           "id": "03-4",
-          "beat": "Appointment confirmed",
-          "camera": "Medium two-shot, eye level.",
-          "area": 363072,
-          "strength": 0.81,
+          "beat": "His token pops up on the waiting-room TV",
+          "camera": "Medium-wide shot of the waiting area, slight low angle toward the TV.",
+          "area": 255360,
+          "strength": 0.95,
           "showcase": false,
-          "information": "Registration is done quickly; Ravi waits to see the doctor.",
+          "information": "The queue is shown on the TV; no one has to call out names.",
+          "pause": null,
+          "readingGroups": null,
+          "layoutRow": null
+        },
+        {
+          "id": "03-5",
+          "beat": "A nurse takes his vitals",
+          "camera": "Medium two-shot, eye level.",
+          "area": 268800,
+          "strength": 1,
+          "showcase": false,
+          "information": "Routine vitals before the consultation; no readings shown.",
+          "pause": null,
+          "readingGroups": null,
+          "layoutRow": null
+        },
+        {
+          "id": "03-6",
+          "beat": "Dr. Ananya is notified on her tablet",
+          "camera": "Medium shot, slightly from above the tablet.",
+          "area": 188160,
+          "strength": 0.7,
+          "showcase": false,
+          "information": "The doctor knows the patient is ready without anyone walking over.",
           "pause": null,
           "readingGroups": null,
           "layoutRow": null
@@ -847,27 +871,30 @@
       "after": {
         "section": "reception",
         "setting": {
-          "summary": "A later morning: the clinic now runs with Welbuk. Ravi visits as a patient and registers at reception with consent.",
-          "location": "The same reception desk, now tidy with a desktop monitor angled toward Meera; waiting chairs with a few seated figures seen from behind.",
+          "summary": "A later morning: the clinic now runs with Welbuk. Ravi checks himself in with a QR code and his phone, waits for his token on the waiting-room TV, and the nurse takes his vitals.",
+          "location": "The same clinic reception, now tidy: a QR check-in stand just inside the glass entrance, a wall-mounted waiting-room TV, waiting chairs with a few seated figures seen from behind, the reception desk with a desktop monitor angled toward Meera, and a small vitals corner beside reception.",
           "costumes": {
             "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
             "meera": "Blue kurta with white churidar, silver bangle on right wrist.",
-            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
+            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist.",
+            "nurse": "Plain lavender scrubs, white clinic shoes, blank lavender lanyard card, wristwatch on left wrist."
           },
           "objects": {
             "monitor": "Reception desktop monitor and keyboard; screen faces Meera, only blank fields visible if seen.",
-            "reception-mobile": "A navy smartphone lying on the reception desk beside Meera’s keyboard in 03-1 (the reception’s own phone). Supplement recorded from the generated art; it is not Ravi’s phone.",
+            "qr-stand": "Small check-in stand just inside the entrance with a square abstract QR-like pattern (not a real code, no text).",
+            "waiting-tv": "Wall-mounted waiting-room TV; teal screen with an empty white token area; the token number is lettered, never drawn.",
+            "vitals-kit": "Blood-pressure cuff with a hand bulb, fingertip pulse oximeter and a small monitor showing abstract shapes only (no readings).",
             "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 5 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
           }
         },
-        "scene": "Ravi walks in through the clinic door toward reception, smiling and raising his right hand in a friendly wave; left hand holds the strap of a small shoulder bag. Morning light from the doorway behind him. Camera from behind the reception desk: Meera sits in the left foreground, seen over her shoulder, typing on the keyboard and looking up at him; the monitor faces the reader showing only abstract icons and blank blocks; a navy reception mobile phone lies on the desk beside her keyboard. Background: waiting chairs with patients seen from behind.",
-        "action": "Ravi waves as he approaches the desk."
+        "scene": "Ravi walks in through the clinic’s glass entrance door into the bright reception area, smiling, his phone in his right hand and his left hand on the strap of his shoulder bag. Morning light behind him. Just inside the door stands a small check-in stand with a square QR-like pattern on its face (abstract, not a real code, no text). Waiting chairs and the reception desk in the background. Plain white upper-left area for a caption.",
+        "action": "Ravi steps in and notices the check-in stand."
       },
       "ledger": {
         "timeBefore": null,
         "timeAfter": null,
         "locationBefore": "Dr. Ananya’s small office beside reception, desk with a laptop, window with evening light (manga supplement).",
-        "locationAfter": "The same reception desk, now tidy with a desktop monitor angled toward Meera; waiting chairs with a few seated figures seen from behind.",
+        "locationAfter": "The same clinic reception, now tidy: a QR check-in stand just inside the glass entrance, a wall-mounted waiting-room TV, waiting chairs with a few seated figures seen from behind, the reception desk with a desktop monitor angled toward Meera, and a small vitals corner beside reception.",
         "readerMustKnow": null,
         "anchor": "visual-or-caption",
         "anchorEvidencePanel": "03-1",
@@ -879,16 +906,18 @@
           "laptop",
           "staff-phone",
           "monitor",
-          "reception-mobile",
+          "qr-stand",
+          "waiting-tv",
+          "vitals-kit",
           "ravi-phone"
         ],
         "actionBefore": "Ananya says the line; Meera nods.",
-        "actionAfter": "Ravi waves as he approaches the desk.",
+        "actionAfter": "Ravi steps in and notices the check-in stand.",
         "sourceBasis": null,
-        "supplementBasis": "Source: \"Ravi arrives at reception.\" Later-morning timing is a manga supplement."
+        "supplementBasis": "Revised source: \"Ravi walks into the clinic.\" Later-morning timing is a manga supplement."
       },
-      "bridge": "Morning light and a new arrival at the now-tidy reception desk.",
-      "settingBasis": "Source: \"Ravi arrives at reception.\" Later-morning timing is a manga supplement.",
+      "bridge": "Morning light and a new arrival at the clinic entrance after the evening onboarding.",
+      "settingBasis": "Revised source: \"Ravi walks into the clinic.\" Later-morning timing is a manga supplement.",
       "warnings": []
     },
     {
@@ -896,72 +925,78 @@
       "to": "03-2",
       "pageBoundary": false,
       "layoutBoundary": false,
-      "kind": "reverse-angle",
+      "kind": "continuation",
       "before": {
         "section": "reception",
         "setting": {
-          "summary": "A later morning: the clinic now runs with Welbuk. Ravi visits as a patient and registers at reception with consent.",
-          "location": "The same reception desk, now tidy with a desktop monitor angled toward Meera; waiting chairs with a few seated figures seen from behind.",
+          "summary": "A later morning: the clinic now runs with Welbuk. Ravi checks himself in with a QR code and his phone, waits for his token on the waiting-room TV, and the nurse takes his vitals.",
+          "location": "The same clinic reception, now tidy: a QR check-in stand just inside the glass entrance, a wall-mounted waiting-room TV, waiting chairs with a few seated figures seen from behind, the reception desk with a desktop monitor angled toward Meera, and a small vitals corner beside reception.",
           "costumes": {
             "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
             "meera": "Blue kurta with white churidar, silver bangle on right wrist.",
-            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
+            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist.",
+            "nurse": "Plain lavender scrubs, white clinic shoes, blank lavender lanyard card, wristwatch on left wrist."
           },
           "objects": {
             "monitor": "Reception desktop monitor and keyboard; screen faces Meera, only blank fields visible if seen.",
-            "reception-mobile": "A navy smartphone lying on the reception desk beside Meera’s keyboard in 03-1 (the reception’s own phone). Supplement recorded from the generated art; it is not Ravi’s phone.",
+            "qr-stand": "Small check-in stand just inside the entrance with a square abstract QR-like pattern (not a real code, no text).",
+            "waiting-tv": "Wall-mounted waiting-room TV; teal screen with an empty white token area; the token number is lettered, never drawn.",
+            "vitals-kit": "Blood-pressure cuff with a hand bulb, fingertip pulse oximeter and a small monitor showing abstract shapes only (no readings).",
             "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 5 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
           }
         },
-        "scene": "Ravi walks in through the clinic door toward reception, smiling and raising his right hand in a friendly wave; left hand holds the strap of a small shoulder bag. Morning light from the doorway behind him. Camera from behind the reception desk: Meera sits in the left foreground, seen over her shoulder, typing on the keyboard and looking up at him; the monitor faces the reader showing only abstract icons and blank blocks; a navy reception mobile phone lies on the desk beside her keyboard. Background: waiting chairs with patients seen from behind.",
-        "action": "Ravi waves as he approaches the desk."
+        "scene": "Ravi walks in through the clinic’s glass entrance door into the bright reception area, smiling, his phone in his right hand and his left hand on the strap of his shoulder bag. Morning light behind him. Just inside the door stands a small check-in stand with a square QR-like pattern on its face (abstract, not a real code, no text). Waiting chairs and the reception desk in the background. Plain white upper-left area for a caption.",
+        "action": "Ravi steps in and notices the check-in stand."
       },
       "after": {
         "section": "reception",
         "setting": {
-          "summary": "A later morning: the clinic now runs with Welbuk. Ravi visits as a patient and registers at reception with consent.",
-          "location": "The same reception desk, now tidy with a desktop monitor angled toward Meera; waiting chairs with a few seated figures seen from behind.",
+          "summary": "A later morning: the clinic now runs with Welbuk. Ravi checks himself in with a QR code and his phone, waits for his token on the waiting-room TV, and the nurse takes his vitals.",
+          "location": "The same clinic reception, now tidy: a QR check-in stand just inside the glass entrance, a wall-mounted waiting-room TV, waiting chairs with a few seated figures seen from behind, the reception desk with a desktop monitor angled toward Meera, and a small vitals corner beside reception.",
           "costumes": {
             "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
             "meera": "Blue kurta with white churidar, silver bangle on right wrist.",
-            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
+            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist.",
+            "nurse": "Plain lavender scrubs, white clinic shoes, blank lavender lanyard card, wristwatch on left wrist."
           },
           "objects": {
             "monitor": "Reception desktop monitor and keyboard; screen faces Meera, only blank fields visible if seen.",
-            "reception-mobile": "A navy smartphone lying on the reception desk beside Meera’s keyboard in 03-1 (the reception’s own phone). Supplement recorded from the generated art; it is not Ravi’s phone.",
+            "qr-stand": "Small check-in stand just inside the entrance with a square abstract QR-like pattern (not a real code, no text).",
+            "waiting-tv": "Wall-mounted waiting-room TV; teal screen with an empty white token area; the token number is lettered, never drawn.",
+            "vitals-kit": "Blood-pressure cuff with a hand bulb, fingertip pulse oximeter and a small monitor showing abstract shapes only (no readings).",
             "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 5 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
           }
         },
-        "scene": "Meera behind the tidy reception desk (desktop monitor at her side, screen angled away), gentle smile, left palm open in an explanatory gesture to screen-right as she asks; right hand resting on the desk. Ravi in the left foreground, seen over his shoulder (beard edge, green shirt; his bag hangs at his hip from the far shoulder), his right hand holding his dark-blue phone low at the desk edge.",
-        "action": "Meera asks politely, leaning slightly forward."
+        "scene": "Closer shot: Ravi holds his phone up to the check-in stand and scans the square QR-like pattern (abstract, no text); a simple scan frame glows on his phone screen. His face is in three-quarter view, focused and pleased. Plain light wall above for a caption.",
+        "action": "Ravi scans the code."
       },
       "ledger": {
         "timeBefore": null,
         "timeAfter": null,
-        "locationBefore": "The same reception desk, now tidy with a desktop monitor angled toward Meera; waiting chairs with a few seated figures seen from behind.",
-        "locationAfter": "The same reception desk, now tidy with a desktop monitor angled toward Meera; waiting chairs with a few seated figures seen from behind.",
+        "locationBefore": "The same clinic reception, now tidy: a QR check-in stand just inside the glass entrance, a wall-mounted waiting-room TV, waiting chairs with a few seated figures seen from behind, the reception desk with a desktop monitor angled toward Meera, and a small vitals corner beside reception.",
+        "locationAfter": "The same clinic reception, now tidy: a QR check-in stand just inside the glass entrance, a wall-mounted waiting-room TV, waiting chairs with a few seated figures seen from behind, the reception desk with a desktop monitor angled toward Meera, and a small vitals corner beside reception.",
         "readerMustKnow": null,
-        "anchor": "visual-or-caption",
+        "anchor": null,
         "anchorEvidencePanel": "03-2",
         "axisBefore": null,
         "axisAfter": null,
         "resetCue": null,
         "retainedObjects": [
           "monitor",
-          "reception-mobile",
+          "qr-stand",
+          "waiting-tv",
+          "vitals-kit",
           "ravi-phone"
         ],
         "changedObjects": [],
-        "actionBefore": "Ravi waves as he approaches the desk.",
-        "actionAfter": "Meera asks politely, leaning slightly forward.",
+        "actionBefore": "Ravi steps in and notices the check-in stand.",
+        "actionAfter": "Ravi scans the code.",
         "sourceBasis": null,
-        "supplementBasis": "Staging decision recorded after script review r12. The same desk, monitor, costumes and the over-shoulder framing carry the space across the flip; storyboard readingReview must confirm it reads clearly."
+        "supplementBasis": null
       },
-      "bridge": "Deliberate reverse over-the-shoulder cut from 03-1: 03-1 looks past Meera (left foreground) toward Ravi at the door; 03-2 looks past Ravi (left foreground: green shirt, bag strap, phone) toward Meera behind the same desk and monitor. From 03-2 onward Ravi stays left and Meera right (03-3, 03-4).",
-      "settingBasis": "Staging decision recorded after script review r12. The same desk, monitor, costumes and the over-shoulder framing carry the space across the flip; storyboard readingReview must confirm it reads clearly.",
-      "warnings": [
-        "人物の画面上の左右が入れ替わる。逆角度・移動・持ち物の接続を絵から理解できるか確認する。"
-      ]
+      "bridge": null,
+      "settingBasis": null,
+      "warnings": []
     },
     {
       "from": "03-2",
@@ -972,46 +1007,52 @@
       "before": {
         "section": "reception",
         "setting": {
-          "summary": "A later morning: the clinic now runs with Welbuk. Ravi visits as a patient and registers at reception with consent.",
-          "location": "The same reception desk, now tidy with a desktop monitor angled toward Meera; waiting chairs with a few seated figures seen from behind.",
+          "summary": "A later morning: the clinic now runs with Welbuk. Ravi checks himself in with a QR code and his phone, waits for his token on the waiting-room TV, and the nurse takes his vitals.",
+          "location": "The same clinic reception, now tidy: a QR check-in stand just inside the glass entrance, a wall-mounted waiting-room TV, waiting chairs with a few seated figures seen from behind, the reception desk with a desktop monitor angled toward Meera, and a small vitals corner beside reception.",
           "costumes": {
             "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
             "meera": "Blue kurta with white churidar, silver bangle on right wrist.",
-            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
+            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist.",
+            "nurse": "Plain lavender scrubs, white clinic shoes, blank lavender lanyard card, wristwatch on left wrist."
           },
           "objects": {
             "monitor": "Reception desktop monitor and keyboard; screen faces Meera, only blank fields visible if seen.",
-            "reception-mobile": "A navy smartphone lying on the reception desk beside Meera’s keyboard in 03-1 (the reception’s own phone). Supplement recorded from the generated art; it is not Ravi’s phone.",
+            "qr-stand": "Small check-in stand just inside the entrance with a square abstract QR-like pattern (not a real code, no text).",
+            "waiting-tv": "Wall-mounted waiting-room TV; teal screen with an empty white token area; the token number is lettered, never drawn.",
+            "vitals-kit": "Blood-pressure cuff with a hand bulb, fingertip pulse oximeter and a small monitor showing abstract shapes only (no readings).",
             "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 5 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
           }
         },
-        "scene": "Meera behind the tidy reception desk (desktop monitor at her side, screen angled away), gentle smile, left palm open in an explanatory gesture to screen-right as she asks; right hand resting on the desk. Ravi in the left foreground, seen over his shoulder (beard edge, green shirt; his bag hangs at his hip from the far shoulder), his right hand holding his dark-blue phone low at the desk edge.",
-        "action": "Meera asks politely, leaning slightly forward."
+        "scene": "Closer shot: Ravi holds his phone up to the check-in stand and scans the square QR-like pattern (abstract, no text); a simple scan frame glows on his phone screen. His face is in three-quarter view, focused and pleased. Plain light wall above for a caption.",
+        "action": "Ravi scans the code."
       },
       "after": {
         "section": "reception",
         "setting": {
-          "summary": "A later morning: the clinic now runs with Welbuk. Ravi visits as a patient and registers at reception with consent.",
-          "location": "The same reception desk, now tidy with a desktop monitor angled toward Meera; waiting chairs with a few seated figures seen from behind.",
+          "summary": "A later morning: the clinic now runs with Welbuk. Ravi checks himself in with a QR code and his phone, waits for his token on the waiting-room TV, and the nurse takes his vitals.",
+          "location": "The same clinic reception, now tidy: a QR check-in stand just inside the glass entrance, a wall-mounted waiting-room TV, waiting chairs with a few seated figures seen from behind, the reception desk with a desktop monitor angled toward Meera, and a small vitals corner beside reception.",
           "costumes": {
             "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
             "meera": "Blue kurta with white churidar, silver bangle on right wrist.",
-            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
+            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist.",
+            "nurse": "Plain lavender scrubs, white clinic shoes, blank lavender lanyard card, wristwatch on left wrist."
           },
           "objects": {
             "monitor": "Reception desktop monitor and keyboard; screen faces Meera, only blank fields visible if seen.",
-            "reception-mobile": "A navy smartphone lying on the reception desk beside Meera’s keyboard in 03-1 (the reception’s own phone). Supplement recorded from the generated art; it is not Ravi’s phone.",
+            "qr-stand": "Small check-in stand just inside the entrance with a square abstract QR-like pattern (not a real code, no text).",
+            "waiting-tv": "Wall-mounted waiting-room TV; teal screen with an empty white token area; the token number is lettered, never drawn.",
+            "vitals-kit": "Blood-pressure cuff with a hand bulb, fingertip pulse oximeter and a small monitor showing abstract shapes only (no readings).",
             "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 5 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
           }
         },
-        "scene": "Wide two-shot across the reception desk: Ravi (left), bag strap over his far left shoulder, nods with a smile, both hands on the desk edge and his dark-blue phone lying on the desk in front of him; Meera (right) types on the keyboard, Meera has turned the monitor toward the front of the desk so Ravi can see that only blank fields are being filled in; she glances at it from the side as she types. No papers with writing, no ID cards.",
-        "action": "Ravi nods; Meera begins typing."
+        "scene": "Close-up over Ravi’s shoulder of his phone held in both hands: a simple check-in form of blank rounded fields, a large tick-box being tapped by his right thumb for consent, and a teal submit button (abstract, no letters or numbers, no personal data). His green shirt sleeve and wristwatch on his left wrist are visible. Plain light background above for a caption.",
+        "action": "Ravi taps the consent tick-box."
       },
       "ledger": {
         "timeBefore": null,
         "timeAfter": null,
-        "locationBefore": "The same reception desk, now tidy with a desktop monitor angled toward Meera; waiting chairs with a few seated figures seen from behind.",
-        "locationAfter": "The same reception desk, now tidy with a desktop monitor angled toward Meera; waiting chairs with a few seated figures seen from behind.",
+        "locationBefore": "The same clinic reception, now tidy: a QR check-in stand just inside the glass entrance, a wall-mounted waiting-room TV, waiting chairs with a few seated figures seen from behind, the reception desk with a desktop monitor angled toward Meera, and a small vitals corner beside reception.",
+        "locationAfter": "The same clinic reception, now tidy: a QR check-in stand just inside the glass entrance, a wall-mounted waiting-room TV, waiting chairs with a few seated figures seen from behind, the reception desk with a desktop monitor angled toward Meera, and a small vitals corner beside reception.",
         "readerMustKnow": null,
         "anchor": null,
         "anchorEvidencePanel": "03-3",
@@ -1020,12 +1061,14 @@
         "resetCue": null,
         "retainedObjects": [
           "monitor",
-          "reception-mobile",
+          "qr-stand",
+          "waiting-tv",
+          "vitals-kit",
           "ravi-phone"
         ],
         "changedObjects": [],
-        "actionBefore": "Meera asks politely, leaning slightly forward.",
-        "actionAfter": "Ravi nods; Meera begins typing.",
+        "actionBefore": "Ravi scans the code.",
+        "actionAfter": "Ravi taps the consent tick-box.",
         "sourceBasis": null,
         "supplementBasis": null
       },
@@ -1042,46 +1085,52 @@
       "before": {
         "section": "reception",
         "setting": {
-          "summary": "A later morning: the clinic now runs with Welbuk. Ravi visits as a patient and registers at reception with consent.",
-          "location": "The same reception desk, now tidy with a desktop monitor angled toward Meera; waiting chairs with a few seated figures seen from behind.",
+          "summary": "A later morning: the clinic now runs with Welbuk. Ravi checks himself in with a QR code and his phone, waits for his token on the waiting-room TV, and the nurse takes his vitals.",
+          "location": "The same clinic reception, now tidy: a QR check-in stand just inside the glass entrance, a wall-mounted waiting-room TV, waiting chairs with a few seated figures seen from behind, the reception desk with a desktop monitor angled toward Meera, and a small vitals corner beside reception.",
           "costumes": {
             "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
             "meera": "Blue kurta with white churidar, silver bangle on right wrist.",
-            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
+            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist.",
+            "nurse": "Plain lavender scrubs, white clinic shoes, blank lavender lanyard card, wristwatch on left wrist."
           },
           "objects": {
             "monitor": "Reception desktop monitor and keyboard; screen faces Meera, only blank fields visible if seen.",
-            "reception-mobile": "A navy smartphone lying on the reception desk beside Meera’s keyboard in 03-1 (the reception’s own phone). Supplement recorded from the generated art; it is not Ravi’s phone.",
+            "qr-stand": "Small check-in stand just inside the entrance with a square abstract QR-like pattern (not a real code, no text).",
+            "waiting-tv": "Wall-mounted waiting-room TV; teal screen with an empty white token area; the token number is lettered, never drawn.",
+            "vitals-kit": "Blood-pressure cuff with a hand bulb, fingertip pulse oximeter and a small monitor showing abstract shapes only (no readings).",
             "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 5 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
           }
         },
-        "scene": "Wide two-shot across the reception desk: Ravi (left), bag strap over his far left shoulder, nods with a smile, both hands on the desk edge and his dark-blue phone lying on the desk in front of him; Meera (right) types on the keyboard, Meera has turned the monitor toward the front of the desk so Ravi can see that only blank fields are being filled in; she glances at it from the side as she types. No papers with writing, no ID cards.",
-        "action": "Ravi nods; Meera begins typing."
+        "scene": "Close-up over Ravi’s shoulder of his phone held in both hands: a simple check-in form of blank rounded fields, a large tick-box being tapped by his right thumb for consent, and a teal submit button (abstract, no letters or numbers, no personal data). His green shirt sleeve and wristwatch on his left wrist are visible. Plain light background above for a caption.",
+        "action": "Ravi taps the consent tick-box."
       },
       "after": {
         "section": "reception",
         "setting": {
-          "summary": "A later morning: the clinic now runs with Welbuk. Ravi visits as a patient and registers at reception with consent.",
-          "location": "The same reception desk, now tidy with a desktop monitor angled toward Meera; waiting chairs with a few seated figures seen from behind.",
+          "summary": "A later morning: the clinic now runs with Welbuk. Ravi checks himself in with a QR code and his phone, waits for his token on the waiting-room TV, and the nurse takes his vitals.",
+          "location": "The same clinic reception, now tidy: a QR check-in stand just inside the glass entrance, a wall-mounted waiting-room TV, waiting chairs with a few seated figures seen from behind, the reception desk with a desktop monitor angled toward Meera, and a small vitals corner beside reception.",
           "costumes": {
             "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
             "meera": "Blue kurta with white churidar, silver bangle on right wrist.",
-            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
+            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist.",
+            "nurse": "Plain lavender scrubs, white clinic shoes, blank lavender lanyard card, wristwatch on left wrist."
           },
           "objects": {
             "monitor": "Reception desktop monitor and keyboard; screen faces Meera, only blank fields visible if seen.",
-            "reception-mobile": "A navy smartphone lying on the reception desk beside Meera’s keyboard in 03-1 (the reception’s own phone). Supplement recorded from the generated art; it is not Ravi’s phone.",
+            "qr-stand": "Small check-in stand just inside the entrance with a square abstract QR-like pattern (not a real code, no text).",
+            "waiting-tv": "Wall-mounted waiting-room TV; teal screen with an empty white token area; the token number is lettered, never drawn.",
+            "vitals-kit": "Blood-pressure cuff with a hand bulb, fingertip pulse oximeter and a small monitor showing abstract shapes only (no readings).",
             "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 5 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
           }
         },
-        "scene": "Same staging as 03-3: Ravi (left) on the patient side of the desk turns toward the waiting chairs behind him (far left), smiling, a hand on his bag strap; Meera (right) behind the desk smiles and gestures with her right hand toward the chairs.",
-        "action": "Meera indicates the seats; Ravi heads there."
+        "scene": "Waiting area: Ravi sits on a waiting chair at lower left holding his phone, looking up with a small pleased smile at a wall-mounted TV at upper right. The TV screen is plain light teal with a clean, empty white rectangle in its centre where the token number will be lettered (draw NO text or numbers on the screen). Other waiting patients seen from behind. Plain wall at upper left for a caption.",
+        "action": "Ravi sees his token appear."
       },
       "ledger": {
         "timeBefore": null,
         "timeAfter": null,
-        "locationBefore": "The same reception desk, now tidy with a desktop monitor angled toward Meera; waiting chairs with a few seated figures seen from behind.",
-        "locationAfter": "The same reception desk, now tidy with a desktop monitor angled toward Meera; waiting chairs with a few seated figures seen from behind.",
+        "locationBefore": "The same clinic reception, now tidy: a QR check-in stand just inside the glass entrance, a wall-mounted waiting-room TV, waiting chairs with a few seated figures seen from behind, the reception desk with a desktop monitor angled toward Meera, and a small vitals corner beside reception.",
+        "locationAfter": "The same clinic reception, now tidy: a QR check-in stand just inside the glass entrance, a wall-mounted waiting-room TV, waiting chairs with a few seated figures seen from behind, the reception desk with a desktop monitor angled toward Meera, and a small vitals corner beside reception.",
         "readerMustKnow": null,
         "anchor": null,
         "anchorEvidencePanel": "03-4",
@@ -1090,12 +1139,14 @@
         "resetCue": null,
         "retainedObjects": [
           "monitor",
-          "reception-mobile",
+          "qr-stand",
+          "waiting-tv",
+          "vitals-kit",
           "ravi-phone"
         ],
         "changedObjects": [],
-        "actionBefore": "Ravi nods; Meera begins typing.",
-        "actionAfter": "Meera indicates the seats; Ravi heads there.",
+        "actionBefore": "Ravi taps the consent tick-box.",
+        "actionAfter": "Ravi sees his token appear.",
         "sourceBasis": null,
         "supplementBasis": null
       },
@@ -1105,28 +1156,109 @@
     },
     {
       "from": "03-4",
-      "to": "04-1",
-      "pageBoundary": true,
-      "layoutBoundary": true,
+      "to": "03-5",
+      "pageBoundary": false,
+      "layoutBoundary": false,
+      "kind": "time-change",
+      "before": {
+        "section": "reception",
+        "setting": {
+          "summary": "A later morning: the clinic now runs with Welbuk. Ravi checks himself in with a QR code and his phone, waits for his token on the waiting-room TV, and the nurse takes his vitals.",
+          "location": "The same clinic reception, now tidy: a QR check-in stand just inside the glass entrance, a wall-mounted waiting-room TV, waiting chairs with a few seated figures seen from behind, the reception desk with a desktop monitor angled toward Meera, and a small vitals corner beside reception.",
+          "costumes": {
+            "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
+            "meera": "Blue kurta with white churidar, silver bangle on right wrist.",
+            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist.",
+            "nurse": "Plain lavender scrubs, white clinic shoes, blank lavender lanyard card, wristwatch on left wrist."
+          },
+          "objects": {
+            "monitor": "Reception desktop monitor and keyboard; screen faces Meera, only blank fields visible if seen.",
+            "qr-stand": "Small check-in stand just inside the entrance with a square abstract QR-like pattern (not a real code, no text).",
+            "waiting-tv": "Wall-mounted waiting-room TV; teal screen with an empty white token area; the token number is lettered, never drawn.",
+            "vitals-kit": "Blood-pressure cuff with a hand bulb, fingertip pulse oximeter and a small monitor showing abstract shapes only (no readings).",
+            "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 5 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
+          }
+        },
+        "scene": "Waiting area: Ravi sits on a waiting chair at lower left holding his phone, looking up with a small pleased smile at a wall-mounted TV at upper right. The TV screen is plain light teal with a clean, empty white rectangle in its centre where the token number will be lettered (draw NO text or numbers on the screen). Other waiting patients seen from behind. Plain wall at upper left for a caption.",
+        "action": "Ravi sees his token appear."
+      },
+      "after": {
+        "section": "reception",
+        "setting": {
+          "summary": "A later morning: the clinic now runs with Welbuk. Ravi checks himself in with a QR code and his phone, waits for his token on the waiting-room TV, and the nurse takes his vitals.",
+          "location": "The same clinic reception, now tidy: a QR check-in stand just inside the glass entrance, a wall-mounted waiting-room TV, waiting chairs with a few seated figures seen from behind, the reception desk with a desktop monitor angled toward Meera, and a small vitals corner beside reception.",
+          "costumes": {
+            "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
+            "meera": "Blue kurta with white churidar, silver bangle on right wrist.",
+            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist.",
+            "nurse": "Plain lavender scrubs, white clinic shoes, blank lavender lanyard card, wristwatch on left wrist."
+          },
+          "objects": {
+            "monitor": "Reception desktop monitor and keyboard; screen faces Meera, only blank fields visible if seen.",
+            "qr-stand": "Small check-in stand just inside the entrance with a square abstract QR-like pattern (not a real code, no text).",
+            "waiting-tv": "Wall-mounted waiting-room TV; teal screen with an empty white token area; the token number is lettered, never drawn.",
+            "vitals-kit": "Blood-pressure cuff with a hand bulb, fingertip pulse oximeter and a small monitor showing abstract shapes only (no readings).",
+            "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 5 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
+          }
+        },
+        "scene": "Small vitals corner beside reception: Ravi sits at left in a chair, relaxed, his left arm resting on a little side table with a blood-pressure cuff on his upper arm and a fingertip pulse oximeter on his left index finger. The nurse (from the nurse reference sheet: chin-length wavy bob, lavender scrubs, blank lanyard card) stands at right holding the cuff’s hand bulb in her right hand and speaking kindly to him. A small monitor on the table shows only abstract shapes, no numbers. Plain wall at upper right for a balloon.",
+        "action": "The nurse begins the vitals check."
+      },
+      "ledger": {
+        "timeBefore": null,
+        "timeAfter": null,
+        "locationBefore": "The same clinic reception, now tidy: a QR check-in stand just inside the glass entrance, a wall-mounted waiting-room TV, waiting chairs with a few seated figures seen from behind, the reception desk with a desktop monitor angled toward Meera, and a small vitals corner beside reception.",
+        "locationAfter": "The same clinic reception, now tidy: a QR check-in stand just inside the glass entrance, a wall-mounted waiting-room TV, waiting chairs with a few seated figures seen from behind, the reception desk with a desktop monitor angled toward Meera, and a small vitals corner beside reception.",
+        "readerMustKnow": null,
+        "anchor": "visual-or-caption",
+        "anchorEvidencePanel": "03-5",
+        "axisBefore": null,
+        "axisAfter": null,
+        "resetCue": null,
+        "retainedObjects": [
+          "monitor",
+          "qr-stand",
+          "waiting-tv",
+          "vitals-kit",
+          "ravi-phone"
+        ],
+        "changedObjects": [],
+        "actionBefore": "Ravi sees his token appear.",
+        "actionAfter": "The nurse begins the vitals check.",
+        "sourceBasis": null,
+        "supplementBasis": "Revised source: \"A nurse takes his vitals (no readings shown).\""
+      },
+      "bridge": "A short wait later: his token is called and the nurse takes him to the vitals corner beside the same reception.",
+      "settingBasis": "Revised source: \"A nurse takes his vitals (no readings shown).\"",
+      "warnings": []
+    },
+    {
+      "from": "03-5",
+      "to": "03-6",
+      "pageBoundary": false,
+      "layoutBoundary": false,
       "kind": "place-change",
       "before": {
         "section": "reception",
         "setting": {
-          "summary": "A later morning: the clinic now runs with Welbuk. Ravi visits as a patient and registers at reception with consent.",
-          "location": "The same reception desk, now tidy with a desktop monitor angled toward Meera; waiting chairs with a few seated figures seen from behind.",
+          "summary": "A later morning: the clinic now runs with Welbuk. Ravi checks himself in with a QR code and his phone, waits for his token on the waiting-room TV, and the nurse takes his vitals.",
+          "location": "The same clinic reception, now tidy: a QR check-in stand just inside the glass entrance, a wall-mounted waiting-room TV, waiting chairs with a few seated figures seen from behind, the reception desk with a desktop monitor angled toward Meera, and a small vitals corner beside reception.",
           "costumes": {
             "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
             "meera": "Blue kurta with white churidar, silver bangle on right wrist.",
-            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
+            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist.",
+            "nurse": "Plain lavender scrubs, white clinic shoes, blank lavender lanyard card, wristwatch on left wrist."
           },
           "objects": {
             "monitor": "Reception desktop monitor and keyboard; screen faces Meera, only blank fields visible if seen.",
-            "reception-mobile": "A navy smartphone lying on the reception desk beside Meera’s keyboard in 03-1 (the reception’s own phone). Supplement recorded from the generated art; it is not Ravi’s phone.",
+            "qr-stand": "Small check-in stand just inside the entrance with a square abstract QR-like pattern (not a real code, no text).",
+            "waiting-tv": "Wall-mounted waiting-room TV; teal screen with an empty white token area; the token number is lettered, never drawn.",
+            "vitals-kit": "Blood-pressure cuff with a hand bulb, fingertip pulse oximeter and a small monitor showing abstract shapes only (no readings).",
             "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 5 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
           }
         },
-        "scene": "Same staging as 03-3: Ravi (left) on the patient side of the desk turns toward the waiting chairs behind him (far left), smiling, a hand on his bag strap; Meera (right) behind the desk smiles and gestures with her right hand toward the chairs.",
-        "action": "Meera indicates the seats; Ravi heads there."
+        "scene": "Small vitals corner beside reception: Ravi sits at left in a chair, relaxed, his left arm resting on a little side table with a blood-pressure cuff on his upper arm and a fingertip pulse oximeter on his left index finger. The nurse (from the nurse reference sheet: chin-length wavy bob, lavender scrubs, blank lanyard card) stands at right holding the cuff’s hand bulb in her right hand and speaking kindly to him. A small monitor on the table shows only abstract shapes, no numbers. Plain wall at upper right for a balloon.",
+        "action": "The nurse begins the vitals check."
       },
       "after": {
         "section": "consultation",
@@ -1138,7 +1270,78 @@
             "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
           },
           "objects": {
-            "closed-laptop": "Laptop closed and pushed to the side of the desk."
+            "closed-laptop": "Laptop closed and pushed to the side of the desk.",
+            "doctor-tablet": "Dr. Ananya’s tablet; screen shows a simple notification card with a blank strip; the alert text is lettered, never drawn."
+          }
+        },
+        "scene": "Dr. Ananya at her desk in the consultation room (window with a plant behind, closed laptop pushed aside) looks down at a tablet in her hands with a small smile; the tablet screen shows a simple notification card with a blank white strip in its centre (draw NO text or numbers). Plain wall at upper left for a caption.",
+        "action": "Ananya reads the notification."
+      },
+      "ledger": {
+        "timeBefore": null,
+        "timeAfter": null,
+        "locationBefore": "The same clinic reception, now tidy: a QR check-in stand just inside the glass entrance, a wall-mounted waiting-room TV, waiting chairs with a few seated figures seen from behind, the reception desk with a desktop monitor angled toward Meera, and a small vitals corner beside reception.",
+        "locationAfter": "Bright, simple consultation room: desk, two chairs, a closed laptop pushed aside, window with plant. No medical charts with text.",
+        "readerMustKnow": null,
+        "anchor": "visual-or-caption",
+        "anchorEvidencePanel": "03-6",
+        "axisBefore": null,
+        "axisAfter": null,
+        "resetCue": null,
+        "retainedObjects": [],
+        "changedObjects": [
+          "monitor",
+          "qr-stand",
+          "waiting-tv",
+          "vitals-kit",
+          "ravi-phone",
+          "closed-laptop",
+          "doctor-tablet"
+        ],
+        "actionBefore": "The nurse begins the vitals check.",
+        "actionAfter": "Ananya reads the notification.",
+        "sourceBasis": null,
+        "supplementBasis": "Revised source: \"Dr. Ananya is notified on her tablet.\""
+      },
+      "bridge": "Cut from the vitals corner to the consultation room, where the alert arrives on Ananya’s tablet.",
+      "settingBasis": "Revised source: \"Dr. Ananya is notified on her tablet.\"",
+      "warnings": []
+    },
+    {
+      "from": "03-6",
+      "to": "04-1",
+      "pageBoundary": true,
+      "layoutBoundary": true,
+      "kind": "place-change",
+      "before": {
+        "section": "consultation",
+        "setting": {
+          "summary": "The same visit: Ravi talks with Dr. Ananya in the consultation room.",
+          "location": "Bright, simple consultation room: desk, two chairs, a closed laptop pushed aside, window with plant. No medical charts with text.",
+          "costumes": {
+            "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
+            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
+          },
+          "objects": {
+            "closed-laptop": "Laptop closed and pushed to the side of the desk.",
+            "doctor-tablet": "Dr. Ananya’s tablet; screen shows a simple notification card with a blank strip; the alert text is lettered, never drawn."
+          }
+        },
+        "scene": "Dr. Ananya at her desk in the consultation room (window with a plant behind, closed laptop pushed aside) looks down at a tablet in her hands with a small smile; the tablet screen shows a simple notification card with a blank white strip in its centre (draw NO text or numbers). Plain wall at upper left for a caption.",
+        "action": "Ananya reads the notification."
+      },
+      "after": {
+        "section": "consultation",
+        "setting": {
+          "summary": "The same visit: Ravi talks with Dr. Ananya in the consultation room.",
+          "location": "Bright, simple consultation room: desk, two chairs, a closed laptop pushed aside, window with plant. No medical charts with text.",
+          "costumes": {
+            "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
+            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
+          },
+          "objects": {
+            "closed-laptop": "Laptop closed and pushed to the side of the desk.",
+            "doctor-tablet": "Dr. Ananya’s tablet; screen shows a simple notification card with a blank strip; the alert text is lettered, never drawn."
           }
         },
         "scene": "Bright simple consultation room. Dr. Ananya (left) seated at her desk, turned toward Ravi with an open-hand welcoming gesture; Ravi (right) sitting down in the patient chair, smiling, his shoulder bag set on the floor beside the chair. Laptop closed and pushed aside on the desk. Window with a plant behind.",
@@ -1147,7 +1350,7 @@
       "ledger": {
         "timeBefore": null,
         "timeAfter": null,
-        "locationBefore": "The same reception desk, now tidy with a desktop monitor angled toward Meera; waiting chairs with a few seated figures seen from behind.",
+        "locationBefore": "Bright, simple consultation room: desk, two chairs, a closed laptop pushed aside, window with plant. No medical charts with text.",
         "locationAfter": "Bright, simple consultation room: desk, two chairs, a closed laptop pushed aside, window with plant. No medical charts with text.",
         "readerMustKnow": null,
         "anchor": "visual-or-caption",
@@ -1155,19 +1358,17 @@
         "axisBefore": null,
         "axisAfter": null,
         "resetCue": null,
-        "retainedObjects": [],
-        "changedObjects": [
-          "monitor",
-          "reception-mobile",
-          "ravi-phone",
-          "closed-laptop"
+        "retainedObjects": [
+          "closed-laptop",
+          "doctor-tablet"
         ],
-        "actionBefore": "Meera indicates the seats; Ravi heads there.",
+        "changedObjects": [],
+        "actionBefore": "Ananya reads the notification.",
         "actionAfter": "Ananya welcomes Ravi as he sits.",
         "sourceBasis": null,
         "supplementBasis": "Source: \"Dr. Ananya greets Ravi in a consultation room.\""
       },
-      "bridge": "Doctor’s desk and window replace the reception area; same costumes show it is the same visit.",
+      "bridge": "After the tablet alert in the same consultation room (03-6), Ravi comes in and sits down; same costumes show it is the same visit.",
       "settingBasis": "Source: \"Dr. Ananya greets Ravi in a consultation room.\"",
       "warnings": []
     },
@@ -1187,7 +1388,8 @@
             "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
           },
           "objects": {
-            "closed-laptop": "Laptop closed and pushed to the side of the desk."
+            "closed-laptop": "Laptop closed and pushed to the side of the desk.",
+            "doctor-tablet": "Dr. Ananya’s tablet; screen shows a simple notification card with a blank strip; the alert text is lettered, never drawn."
           }
         },
         "scene": "Bright simple consultation room. Dr. Ananya (left) seated at her desk, turned toward Ravi with an open-hand welcoming gesture; Ravi (right) sitting down in the patient chair, smiling, his shoulder bag set on the floor beside the chair. Laptop closed and pushed aside on the desk. Window with a plant behind.",
@@ -1203,7 +1405,8 @@
             "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
           },
           "objects": {
-            "closed-laptop": "Laptop closed and pushed to the side of the desk."
+            "closed-laptop": "Laptop closed and pushed to the side of the desk.",
+            "doctor-tablet": "Dr. Ananya’s tablet; screen shows a simple notification card with a blank strip; the alert text is lettered, never drawn."
           }
         },
         "scene": "Medium shot of Ravi in the patient chair, turned toward the doctor, whose back of head (low bun, gold stud, white-coat shoulder) is in the left foreground, rubbing the back of his neck with his right hand, a slightly tired but candid expression; left hand resting on his knee. Plain wall behind.",
@@ -1221,7 +1424,8 @@
         "axisAfter": null,
         "resetCue": null,
         "retainedObjects": [
-          "closed-laptop"
+          "closed-laptop",
+          "doctor-tablet"
         ],
         "changedObjects": [],
         "actionBefore": "Ananya welcomes Ravi as he sits.",
@@ -1249,7 +1453,8 @@
             "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
           },
           "objects": {
-            "closed-laptop": "Laptop closed and pushed to the side of the desk."
+            "closed-laptop": "Laptop closed and pushed to the side of the desk.",
+            "doctor-tablet": "Dr. Ananya’s tablet; screen shows a simple notification card with a blank strip; the alert text is lettered, never drawn."
           }
         },
         "scene": "Medium shot of Ravi in the patient chair, turned toward the doctor, whose back of head (low bun, gold stud, white-coat shoulder) is in the left foreground, rubbing the back of his neck with his right hand, a slightly tired but candid expression; left hand resting on his knee. Plain wall behind.",
@@ -1265,7 +1470,8 @@
             "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
           },
           "objects": {
-            "closed-laptop": "Laptop closed and pushed to the side of the desk."
+            "closed-laptop": "Laptop closed and pushed to the side of the desk.",
+            "doctor-tablet": "Dr. Ananya’s tablet; screen shows a simple notification card with a blank strip; the alert text is lettered, never drawn."
           }
         },
         "scene": "Dr. Ananya leans slightly forward at her desk, hands folded, listening with full attention and gentle eye contact toward Ravi, whose back of head and green-shirted shoulder are in the right foreground, keeping Ananya-left / Ravi-right screen direction from 04-1. The closed laptop sits pushed aside at the edge of the desk.",
@@ -1283,7 +1489,8 @@
         "axisAfter": null,
         "resetCue": null,
         "retainedObjects": [
-          "closed-laptop"
+          "closed-laptop",
+          "doctor-tablet"
         ],
         "changedObjects": [],
         "actionBefore": "Ravi explains, a little sheepish.",
@@ -1311,7 +1518,8 @@
             "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
           },
           "objects": {
-            "closed-laptop": "Laptop closed and pushed to the side of the desk."
+            "closed-laptop": "Laptop closed and pushed to the side of the desk.",
+            "doctor-tablet": "Dr. Ananya’s tablet; screen shows a simple notification card with a blank strip; the alert text is lettered, never drawn."
           }
         },
         "scene": "Dr. Ananya leans slightly forward at her desk, hands folded, listening with full attention and gentle eye contact toward Ravi, whose back of head and green-shirted shoulder are in the right foreground, keeping Ananya-left / Ravi-right screen direction from 04-1. The closed laptop sits pushed aside at the edge of the desk.",
@@ -1327,7 +1535,8 @@
             "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
           },
           "objects": {
-            "closed-laptop": "Laptop closed and pushed to the side of the desk."
+            "closed-laptop": "Laptop closed and pushed to the side of the desk.",
+            "doctor-tablet": "Dr. Ananya’s tablet; screen shows a simple notification card with a blank strip; the alert text is lettered, never drawn."
           }
         },
         "scene": "Two-shot: Dr. Ananya (left) speaks warmly with a reassuring open hand; Ravi (right) nods, relaxed, both hands resting on his knees, his bag on the floor beside the chair. No prescriptions and no instruments in use (Ananya’s stethoscope stays around her neck).",
@@ -1345,7 +1554,8 @@
         "axisAfter": null,
         "resetCue": null,
         "retainedObjects": [
-          "closed-laptop"
+          "closed-laptop",
+          "doctor-tablet"
         ],
         "changedObjects": [],
         "actionBefore": "Ananya nods slowly while listening.",
@@ -1373,7 +1583,8 @@
             "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
           },
           "objects": {
-            "closed-laptop": "Laptop closed and pushed to the side of the desk."
+            "closed-laptop": "Laptop closed and pushed to the side of the desk.",
+            "doctor-tablet": "Dr. Ananya’s tablet; screen shows a simple notification card with a blank strip; the alert text is lettered, never drawn."
           }
         },
         "scene": "Two-shot: Dr. Ananya (left) speaks warmly with a reassuring open hand; Ravi (right) nods, relaxed, both hands resting on his knees, his bag on the floor beside the chair. No prescriptions and no instruments in use (Ananya’s stethoscope stays around her neck).",
@@ -1382,16 +1593,19 @@
       "after": {
         "section": "reception",
         "setting": {
-          "summary": "A later morning: the clinic now runs with Welbuk. Ravi visits as a patient and registers at reception with consent.",
-          "location": "The same reception desk, now tidy with a desktop monitor angled toward Meera; waiting chairs with a few seated figures seen from behind.",
+          "summary": "A later morning: the clinic now runs with Welbuk. Ravi checks himself in with a QR code and his phone, waits for his token on the waiting-room TV, and the nurse takes his vitals.",
+          "location": "The same clinic reception, now tidy: a QR check-in stand just inside the glass entrance, a wall-mounted waiting-room TV, waiting chairs with a few seated figures seen from behind, the reception desk with a desktop monitor angled toward Meera, and a small vitals corner beside reception.",
           "costumes": {
             "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
             "meera": "Blue kurta with white churidar, silver bangle on right wrist.",
-            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
+            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist.",
+            "nurse": "Plain lavender scrubs, white clinic shoes, blank lavender lanyard card, wristwatch on left wrist."
           },
           "objects": {
             "monitor": "Reception desktop monitor and keyboard; screen faces Meera, only blank fields visible if seen.",
-            "reception-mobile": "A navy smartphone lying on the reception desk beside Meera’s keyboard in 03-1 (the reception’s own phone). Supplement recorded from the generated art; it is not Ravi’s phone.",
+            "qr-stand": "Small check-in stand just inside the entrance with a square abstract QR-like pattern (not a real code, no text).",
+            "waiting-tv": "Wall-mounted waiting-room TV; teal screen with an empty white token area; the token number is lettered, never drawn.",
+            "vitals-kit": "Blood-pressure cuff with a hand bulb, fingertip pulse oximeter and a small monitor showing abstract shapes only (no readings).",
             "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 5 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
           }
         },
@@ -1402,7 +1616,7 @@
         "timeBefore": null,
         "timeAfter": null,
         "locationBefore": "Bright, simple consultation room: desk, two chairs, a closed laptop pushed aside, window with plant. No medical charts with text.",
-        "locationAfter": "The same reception desk, now tidy with a desktop monitor angled toward Meera; waiting chairs with a few seated figures seen from behind.",
+        "locationAfter": "The same clinic reception, now tidy: a QR check-in stand just inside the glass entrance, a wall-mounted waiting-room TV, waiting chairs with a few seated figures seen from behind, the reception desk with a desktop monitor angled toward Meera, and a small vitals corner beside reception.",
         "readerMustKnow": null,
         "anchor": "visual-or-caption",
         "anchorEvidencePanel": "05-1",
@@ -1412,8 +1626,11 @@
         "retainedObjects": [],
         "changedObjects": [
           "closed-laptop",
+          "doctor-tablet",
           "monitor",
-          "reception-mobile",
+          "qr-stand",
+          "waiting-tv",
+          "vitals-kit",
           "ravi-phone"
         ],
         "actionBefore": "Ananya reassures; Ravi relaxes.",
@@ -1434,16 +1651,19 @@
       "before": {
         "section": "reception",
         "setting": {
-          "summary": "A later morning: the clinic now runs with Welbuk. Ravi visits as a patient and registers at reception with consent.",
-          "location": "The same reception desk, now tidy with a desktop monitor angled toward Meera; waiting chairs with a few seated figures seen from behind.",
+          "summary": "A later morning: the clinic now runs with Welbuk. Ravi checks himself in with a QR code and his phone, waits for his token on the waiting-room TV, and the nurse takes his vitals.",
+          "location": "The same clinic reception, now tidy: a QR check-in stand just inside the glass entrance, a wall-mounted waiting-room TV, waiting chairs with a few seated figures seen from behind, the reception desk with a desktop monitor angled toward Meera, and a small vitals corner beside reception.",
           "costumes": {
             "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
             "meera": "Blue kurta with white churidar, silver bangle on right wrist.",
-            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
+            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist.",
+            "nurse": "Plain lavender scrubs, white clinic shoes, blank lavender lanyard card, wristwatch on left wrist."
           },
           "objects": {
             "monitor": "Reception desktop monitor and keyboard; screen faces Meera, only blank fields visible if seen.",
-            "reception-mobile": "A navy smartphone lying on the reception desk beside Meera’s keyboard in 03-1 (the reception’s own phone). Supplement recorded from the generated art; it is not Ravi’s phone.",
+            "qr-stand": "Small check-in stand just inside the entrance with a square abstract QR-like pattern (not a real code, no text).",
+            "waiting-tv": "Wall-mounted waiting-room TV; teal screen with an empty white token area; the token number is lettered, never drawn.",
+            "vitals-kit": "Blood-pressure cuff with a hand bulb, fingertip pulse oximeter and a small monitor showing abstract shapes only (no readings).",
             "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 5 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
           }
         },
@@ -1453,16 +1673,19 @@
       "after": {
         "section": "reception",
         "setting": {
-          "summary": "A later morning: the clinic now runs with Welbuk. Ravi visits as a patient and registers at reception with consent.",
-          "location": "The same reception desk, now tidy with a desktop monitor angled toward Meera; waiting chairs with a few seated figures seen from behind.",
+          "summary": "A later morning: the clinic now runs with Welbuk. Ravi checks himself in with a QR code and his phone, waits for his token on the waiting-room TV, and the nurse takes his vitals.",
+          "location": "The same clinic reception, now tidy: a QR check-in stand just inside the glass entrance, a wall-mounted waiting-room TV, waiting chairs with a few seated figures seen from behind, the reception desk with a desktop monitor angled toward Meera, and a small vitals corner beside reception.",
           "costumes": {
             "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
             "meera": "Blue kurta with white churidar, silver bangle on right wrist.",
-            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
+            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist.",
+            "nurse": "Plain lavender scrubs, white clinic shoes, blank lavender lanyard card, wristwatch on left wrist."
           },
           "objects": {
             "monitor": "Reception desktop monitor and keyboard; screen faces Meera, only blank fields visible if seen.",
-            "reception-mobile": "A navy smartphone lying on the reception desk beside Meera’s keyboard in 03-1 (the reception’s own phone). Supplement recorded from the generated art; it is not Ravi’s phone.",
+            "qr-stand": "Small check-in stand just inside the entrance with a square abstract QR-like pattern (not a real code, no text).",
+            "waiting-tv": "Wall-mounted waiting-room TV; teal screen with an empty white token area; the token number is lettered, never drawn.",
+            "vitals-kit": "Blood-pressure cuff with a hand bulb, fingertip pulse oximeter and a small monitor showing abstract shapes only (no readings).",
             "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 5 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
           }
         },
@@ -1472,8 +1695,8 @@
       "ledger": {
         "timeBefore": null,
         "timeAfter": null,
-        "locationBefore": "The same reception desk, now tidy with a desktop monitor angled toward Meera; waiting chairs with a few seated figures seen from behind.",
-        "locationAfter": "The same reception desk, now tidy with a desktop monitor angled toward Meera; waiting chairs with a few seated figures seen from behind.",
+        "locationBefore": "The same clinic reception, now tidy: a QR check-in stand just inside the glass entrance, a wall-mounted waiting-room TV, waiting chairs with a few seated figures seen from behind, the reception desk with a desktop monitor angled toward Meera, and a small vitals corner beside reception.",
+        "locationAfter": "The same clinic reception, now tidy: a QR check-in stand just inside the glass entrance, a wall-mounted waiting-room TV, waiting chairs with a few seated figures seen from behind, the reception desk with a desktop monitor angled toward Meera, and a small vitals corner beside reception.",
         "readerMustKnow": null,
         "anchor": null,
         "anchorEvidencePanel": "05-2",
@@ -1482,7 +1705,9 @@
         "resetCue": null,
         "retainedObjects": [
           "monitor",
-          "reception-mobile",
+          "qr-stand",
+          "waiting-tv",
+          "vitals-kit",
           "ravi-phone"
         ],
         "changedObjects": [],
@@ -1504,16 +1729,19 @@
       "before": {
         "section": "reception",
         "setting": {
-          "summary": "A later morning: the clinic now runs with Welbuk. Ravi visits as a patient and registers at reception with consent.",
-          "location": "The same reception desk, now tidy with a desktop monitor angled toward Meera; waiting chairs with a few seated figures seen from behind.",
+          "summary": "A later morning: the clinic now runs with Welbuk. Ravi checks himself in with a QR code and his phone, waits for his token on the waiting-room TV, and the nurse takes his vitals.",
+          "location": "The same clinic reception, now tidy: a QR check-in stand just inside the glass entrance, a wall-mounted waiting-room TV, waiting chairs with a few seated figures seen from behind, the reception desk with a desktop monitor angled toward Meera, and a small vitals corner beside reception.",
           "costumes": {
             "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
             "meera": "Blue kurta with white churidar, silver bangle on right wrist.",
-            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
+            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist.",
+            "nurse": "Plain lavender scrubs, white clinic shoes, blank lavender lanyard card, wristwatch on left wrist."
           },
           "objects": {
             "monitor": "Reception desktop monitor and keyboard; screen faces Meera, only blank fields visible if seen.",
-            "reception-mobile": "A navy smartphone lying on the reception desk beside Meera’s keyboard in 03-1 (the reception’s own phone). Supplement recorded from the generated art; it is not Ravi’s phone.",
+            "qr-stand": "Small check-in stand just inside the entrance with a square abstract QR-like pattern (not a real code, no text).",
+            "waiting-tv": "Wall-mounted waiting-room TV; teal screen with an empty white token area; the token number is lettered, never drawn.",
+            "vitals-kit": "Blood-pressure cuff with a hand bulb, fingertip pulse oximeter and a small monitor showing abstract shapes only (no readings).",
             "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 5 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
           }
         },
@@ -1523,16 +1751,19 @@
       "after": {
         "section": "reception",
         "setting": {
-          "summary": "A later morning: the clinic now runs with Welbuk. Ravi visits as a patient and registers at reception with consent.",
-          "location": "The same reception desk, now tidy with a desktop monitor angled toward Meera; waiting chairs with a few seated figures seen from behind.",
+          "summary": "A later morning: the clinic now runs with Welbuk. Ravi checks himself in with a QR code and his phone, waits for his token on the waiting-room TV, and the nurse takes his vitals.",
+          "location": "The same clinic reception, now tidy: a QR check-in stand just inside the glass entrance, a wall-mounted waiting-room TV, waiting chairs with a few seated figures seen from behind, the reception desk with a desktop monitor angled toward Meera, and a small vitals corner beside reception.",
           "costumes": {
             "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
             "meera": "Blue kurta with white churidar, silver bangle on right wrist.",
-            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
+            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist.",
+            "nurse": "Plain lavender scrubs, white clinic shoes, blank lavender lanyard card, wristwatch on left wrist."
           },
           "objects": {
             "monitor": "Reception desktop monitor and keyboard; screen faces Meera, only blank fields visible if seen.",
-            "reception-mobile": "A navy smartphone lying on the reception desk beside Meera’s keyboard in 03-1 (the reception’s own phone). Supplement recorded from the generated art; it is not Ravi’s phone.",
+            "qr-stand": "Small check-in stand just inside the entrance with a square abstract QR-like pattern (not a real code, no text).",
+            "waiting-tv": "Wall-mounted waiting-room TV; teal screen with an empty white token area; the token number is lettered, never drawn.",
+            "vitals-kit": "Blood-pressure cuff with a hand bulb, fingertip pulse oximeter and a small monitor showing abstract shapes only (no readings).",
             "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 5 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
           }
         },
@@ -1542,8 +1773,8 @@
       "ledger": {
         "timeBefore": null,
         "timeAfter": null,
-        "locationBefore": "The same reception desk, now tidy with a desktop monitor angled toward Meera; waiting chairs with a few seated figures seen from behind.",
-        "locationAfter": "The same reception desk, now tidy with a desktop monitor angled toward Meera; waiting chairs with a few seated figures seen from behind.",
+        "locationBefore": "The same clinic reception, now tidy: a QR check-in stand just inside the glass entrance, a wall-mounted waiting-room TV, waiting chairs with a few seated figures seen from behind, the reception desk with a desktop monitor angled toward Meera, and a small vitals corner beside reception.",
+        "locationAfter": "The same clinic reception, now tidy: a QR check-in stand just inside the glass entrance, a wall-mounted waiting-room TV, waiting chairs with a few seated figures seen from behind, the reception desk with a desktop monitor angled toward Meera, and a small vitals corner beside reception.",
         "readerMustKnow": null,
         "anchor": null,
         "anchorEvidencePanel": "05-3",
@@ -1552,7 +1783,9 @@
         "resetCue": null,
         "retainedObjects": [
           "monitor",
-          "reception-mobile",
+          "qr-stand",
+          "waiting-tv",
+          "vitals-kit",
           "ravi-phone"
         ],
         "changedObjects": [],
@@ -1574,16 +1807,19 @@
       "before": {
         "section": "reception",
         "setting": {
-          "summary": "A later morning: the clinic now runs with Welbuk. Ravi visits as a patient and registers at reception with consent.",
-          "location": "The same reception desk, now tidy with a desktop monitor angled toward Meera; waiting chairs with a few seated figures seen from behind.",
+          "summary": "A later morning: the clinic now runs with Welbuk. Ravi checks himself in with a QR code and his phone, waits for his token on the waiting-room TV, and the nurse takes his vitals.",
+          "location": "The same clinic reception, now tidy: a QR check-in stand just inside the glass entrance, a wall-mounted waiting-room TV, waiting chairs with a few seated figures seen from behind, the reception desk with a desktop monitor angled toward Meera, and a small vitals corner beside reception.",
           "costumes": {
             "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
             "meera": "Blue kurta with white churidar, silver bangle on right wrist.",
-            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
+            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist.",
+            "nurse": "Plain lavender scrubs, white clinic shoes, blank lavender lanyard card, wristwatch on left wrist."
           },
           "objects": {
             "monitor": "Reception desktop monitor and keyboard; screen faces Meera, only blank fields visible if seen.",
-            "reception-mobile": "A navy smartphone lying on the reception desk beside Meera’s keyboard in 03-1 (the reception’s own phone). Supplement recorded from the generated art; it is not Ravi’s phone.",
+            "qr-stand": "Small check-in stand just inside the entrance with a square abstract QR-like pattern (not a real code, no text).",
+            "waiting-tv": "Wall-mounted waiting-room TV; teal screen with an empty white token area; the token number is lettered, never drawn.",
+            "vitals-kit": "Blood-pressure cuff with a hand bulb, fingertip pulse oximeter and a small monitor showing abstract shapes only (no readings).",
             "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 5 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
           }
         },
@@ -1598,7 +1834,8 @@
           "costumes": {
             "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
             "meera": "Blue kurta with white churidar, silver bangle on right wrist.",
-            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
+            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist.",
+            "nurse": "Plain lavender scrubs, white clinic shoes, blank lavender lanyard card, wristwatch on left wrist."
           },
           "objects": {}
         },
@@ -1608,7 +1845,7 @@
       "ledger": {
         "timeBefore": null,
         "timeAfter": null,
-        "locationBefore": "The same reception desk, now tidy with a desktop monitor angled toward Meera; waiting chairs with a few seated figures seen from behind.",
+        "locationBefore": "The same clinic reception, now tidy: a QR check-in stand just inside the glass entrance, a wall-mounted waiting-room TV, waiting chairs with a few seated figures seen from behind, the reception desk with a desktop monitor angled toward Meera, and a small vitals corner beside reception.",
         "locationAfter": "Clinic entrance from the street side, morning sun.",
         "readerMustKnow": null,
         "anchor": null,
@@ -1619,7 +1856,9 @@
         "retainedObjects": [],
         "changedObjects": [
           "monitor",
-          "reception-mobile",
+          "qr-stand",
+          "waiting-tv",
+          "vitals-kit",
           "ravi-phone"
         ],
         "actionBefore": "Meera answers and offers to walk him through.",
@@ -1647,7 +1886,8 @@
           "costumes": {
             "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
             "meera": "Blue kurta with white churidar, silver bangle on right wrist.",
-            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
+            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist.",
+            "nurse": "Plain lavender scrubs, white clinic shoes, blank lavender lanyard card, wristwatch on left wrist."
           },
           "objects": {}
         },
@@ -1850,7 +2090,8 @@
           "costumes": {
             "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
             "meera": "Blue kurta with white churidar, silver bangle on right wrist.",
-            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
+            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist.",
+            "nurse": "Plain lavender scrubs, white clinic shoes, blank lavender lanyard card, wristwatch on left wrist."
           },
           "objects": {}
         },
