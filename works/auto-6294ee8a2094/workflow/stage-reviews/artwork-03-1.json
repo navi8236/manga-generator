@@ -1,21 +1,31 @@
 {
-  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-03-1-aa8faefa24b1b51d2ebfedbc6bb8556200f0a4410c5ab5d981e2b755a547b3f9.json",
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-03-1-b5eafa35873516820664ae3965000553aa06eb58428ce77643ed5f300e911f9e.json",
   "reviewer": {
     "role": "subagent",
-    "task": "claude-code-agent:manga-reviewer:a984c7cf3f5cb794c",
+    "task": "claude-code-agent:manga-reviewer:abc87e6af3d3dcfe1",
     "reportedTask": null,
     "taskSource": "Agent ID returned by the Claude Code Agent tool to the parent."
   },
-  "status": "pass",
+  "status": "changes-requested",
   "observations": [
-    "I read in full the request JSON, works/auto-6294ee8a2094/source/original.txt, and docs/REVISION-AND-REVIEWS.md, docs/PROMPTS.md and docs/ART-QUALITY.md. I opened and looked at assets/panels/03-1.png, main-cast.png, vision-cast.png and workflow/review/page-03.png. I did not open the storyboard SVG page-03.svg itself; I used the composed review PNG for page context.",
-    "Ravi matches the sheet: narrow eyes creasing in a smile, thick straight brows, square jaw with a trimmed beard, side-parted short hair, light green shirt with rolled sleeves, dark trousers and a brown shoulder bag. His smile and open wave fit the 'Ravi arrives' beat and the source line 'Ravi arrives at reception.'",
-    "The hands match the production record. The raised waving hand on the viewer's left is his right and has five readable fingers. His left hand grips the bag strap on his left shoulder and wears the watch, so the watch is on the left wrist as specified.",
-    "Meera is seen over the shoulder in her blue block-print kurta, with the side braid, silver bangle and large round eyes. Only one typing hand is visible, and her left hand is hidden, so 'both hands typing' is only partly shown. This is acceptable for an over-the-shoulder shot.",
-    "The monitor faces the viewer and shows only abstract icons (calendar, person, check) and blank blocks. I found no readable text, logo or personal data. The glass door behind Ravi, the morning light and the waiting chairs with two figures seen from behind fit the scene text.",
-    "A dark-blue phone already lies on the reception desk before Ravi's hands are free. In 03-2 Ravi holds a phone that looks the same, so a reader may take this one for Meera's phone or be briefly unsure. This is minor and does not break the beat."
+    "Read AGENTS.md (via project instructions), docs/REVISION-AND-REVIEWS.md, docs/PROMPTS.md, docs/ART-QUALITY.md, source/original.txt, and the full request JSON (page 03 script). I opened these with Read and looked at them: assets/panels/03-1.png, main-cast.png, vision-cast.png and workflow/review/page-03.png.",
+    "Ravi matches main-cast.png: side-parted short black hair, trimmed beard, square jaw, light green shirt with rolled sleeves, dark trousers, brown shoulder bag. His raised waving hand is on screen-left, which is his right hand. His left hand grips the bag strap at his chest, and the wristwatch is on that left wrist. The bag hangs from his left shoulder to his left hip. This matches production.hands.ravi and the shoulder-bag heldBy ravi.left.",
+    "Meera is seen over her shoulder from behind-left. Her face is in profile looking up at Ravi with an open-mouth smile, and she wears the blue printed kurta and a silver hoop earring. One hand is on the keyboard, the near-side hand, which is her right, and it wears the silver bangle, which is correct for the right wrist.",
+    "The monitor faces the reader. It shows only a calendar icon, a person icon, a check-mark circle and blank blocks, with no readable text. A navy phone lies flat beside the keyboard, as reception-mobile is described. The background has waiting chairs with two seated patients seen from behind, a plant, a glass door and morning light. The scene and the source line 'Ravi arrives at reception' are both satisfied.",
+    "Lettering on page-03.png: the bubble 'Good morning! I'd like to see the doctor.' is at top left over blank wall, and its tail points to Ravi's mouth. It does not cover either face."
   ],
-  "issues": [],
-  "fingerprint": "aa8faefa24b1b51d2ebfedbc6bb8556200f0a4410c5ab5d981e2b755a547b3f9",
-  "recordedAt": "2026-11-11T08:10:10.530Z"
+  "issues": [
+    {
+      "problem": "production.hands.meera.left says 'typing on the keyboard', but Meera's left hand is not visible anywhere in the panel. Only her right hand, with the bangle, is on the keyboard. The record describes something the art does not show and should say the hand is hidden or out of view.",
+      "location": "03-1 Meera, lower left foreground / production.hands.meera.left",
+      "resolved": false
+    },
+    {
+      "problem": "Meera faces screen-right, so her right side is toward the camera, and her braid falls over that near (right) shoulder. The cast description and the sheet have the braid over her left shoulder, and so do 03-2, 03-3 and 03-4. The braid side changes within the page.",
+      "location": "03-1 Meera braid, left foreground",
+      "resolved": false
+    }
+  ],
+  "fingerprint": "b5eafa35873516820664ae3965000553aa06eb58428ce77643ed5f300e911f9e",
+  "recordedAt": "2026-11-11T08:34:40.494Z"
 }

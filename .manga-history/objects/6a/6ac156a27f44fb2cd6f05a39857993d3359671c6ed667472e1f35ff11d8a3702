@@ -1,0 +1,36 @@
+{
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-03-3-34af2d7857ca04af0809580338e8be5ae702213cfd119131725b9880c4e7eca6.json",
+  "reviewer": {
+    "role": "subagent",
+    "task": "claude-code-agent:manga-reviewer:abc87e6af3d3dcfe1",
+    "reportedTask": null,
+    "taskSource": "Agent ID returned by the Claude Code Agent tool to the parent."
+  },
+  "status": "changes-requested",
+  "observations": [
+    "Opened with Read and looked at assets/panels/03-3.png, main-cast.png and page-03.png. Checked the request's page 03 script and production record.",
+    "Ravi is on the left. His eyes are closed in a smiling nod with motion marks beside his head, which suits 'Yes, please.' Both forearms and hands rest on the desk edge. The watch is on the screen-right wrist, which is his left, and that is correct. The dark-blue phone lies flat on the desk in front of him, matching ravi-phone 'lying on the desk' with heldBy none. The bag strap is over his near (right) shoulder and the bag sits behind him at his right hip.",
+    "Meera is on the right in a mesh chair, typing with both hands. Her eyes look screen-left toward the monitor with a gentle smile, and the braid is over her left shoulder. A pen cup sits on the desk. The desk is plain light wood, unlike the curved counter in 03-1, the white top in 03-2 and the white curved counter with teal front in 03-4.",
+    "The monitor shows only two blank pale rounded fields and a tiny unreadable bezel mark. There is no readable text and no ID cards or papers.",
+    "Lettering on page-03.png: 'Yes, please.' is at top left over the window area. The tail points to Ravi's ear and cheek region rather than his mouth, which is acceptable. It does not cover a face."
+  ],
+  "issues": [
+    {
+      "problem": "Meera's silver bangle is on her screen-right typing hand. She faces the viewer, turned slightly left, so that is her LEFT wrist. The cast and section costume specify the right wrist, and 03-1, 03-2 and 03-4 show it on the right.",
+      "location": "03-3 Meera hands on keyboard, right side",
+      "resolved": false
+    },
+    {
+      "problem": "The monitor screen faces screen-left, toward Ravi and the reader, and Meera, at screen right, would be seeing its side or back. production.props monitor says 'facing Meera, blank fields', and the scene says 'screen faces her (only blank fields visible from the side)'. In 03-4 the screen faces Meera. Neither the record nor the continuity matches the art.",
+      "location": "03-3 monitor, centre / production.props[monitor].during",
+      "resolved": false
+    },
+    {
+      "problem": "Ravi's bag is on his right shoulder here, while 03-1 and 03-4 show it on his left. The reception desk design also changes in each panel of page 03, from a curved light-wood counter to a white top with wood front, a plain wood desk and a white curved counter with teal front. That weakens the 'same desk' bridge the transition note relies on.",
+      "location": "03-3 Ravi strap; desk across the lower third",
+      "resolved": false
+    }
+  ],
+  "fingerprint": "34af2d7857ca04af0809580338e8be5ae702213cfd119131725b9880c4e7eca6",
+  "recordedAt": "2026-11-11T08:34:40.809Z"
+}

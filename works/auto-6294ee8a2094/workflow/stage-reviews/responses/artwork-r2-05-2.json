@@ -1,0 +1,30 @@
+{
+ "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-05-2-e2f50db4620136d24a45c5e74bbdbe05985740258df9f4715ab781475253a29f.json",
+ "reviewer": {
+  "role": "subagent",
+  "task": "claude-code-agent:manga-reviewer:a6455e7d4cf6b3b5b",
+  "reportedTask": null,
+  "taskSource": "Agent ID returned by the Claude Code Agent tool to the parent."
+ },
+ "status": "changes-requested",
+ "observations": [
+  "Opened assets/panels/05-2.png. Ravi (face matches the sheet: beard, thick brows, side part, green shirt, bag strap) holds his navy phone at chest height in both hands with the screen toward the reader.",
+  "The screen shows two rounded cards, one with a calendar icon and one with a heart icon, plus blank colour blocks. There is no readable text or data.",
+  "The wristwatch is on the hand at viewer-right, which is his left hand since he faces the reader, consistent with the sheet. His left thumb is on the lower right of the screen face.",
+  "The camera is at eye level, not the slight high angle the scene asks for. This is minor.",
+  "The monitor, keyboard and plant in the left foreground put the camera on Meera's side of the desk, the same set-up as 05-1.",
+  "On page-05.png the speech bubble is top-left with its tail to Ravi's mouth. The WELBUK HEALTH label box sits bottom-left and ends just below the fingers of his right hand."
+ ],
+ "issues": [
+  {
+   "problem": "Eyeline does not match the scene. In 05-1 and 05-3 Meera is screen-left of Ravi and he looks left toward her. In 05-2 the foreground monitor places Meera at the camera or left side, yet Ravi looks up and off to screen-right, away from her and away from his own bubble. The question 'So I can keep useful information in one place?' therefore reads as aimed at someone off-panel right. The fix is to turn his gaze up toward the left or toward the camera, or to record an explicit decision accepting this eyeline.",
+   "location": "05-2: Ravi's eyes and head turn (panel around x 640-880, y 150-300)",
+   "resolved": false
+  },
+  {
+   "problem": "Possible grip error in Ravi's right hand (viewer-left). The thumb tip at the top-left corner of the phone and the curled fingers with visible nails along the left bezel both seem to be on the screen side, so the whole hand may sit in front of the phone instead of wrapping behind it. Check this at 200% in quality-review and fix it if confirmed. Also, production.hands says 'thumb near the screen' for the right hand, but the clearest thumb on the screen face is on the left hand (viewer-right, lower right of the phone). The record should say which hand is on which edge in Ravi's own left/right terms.",
+   "location": "05-2: phone grip, panel around x 440-530, y 600-850, and production.hands.ravi",
+   "resolved": false
+  }
+ ]
+}
