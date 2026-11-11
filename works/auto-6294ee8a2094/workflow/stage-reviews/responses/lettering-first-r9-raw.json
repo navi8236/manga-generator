@@ -1,6 +1,7 @@
 {
+ "_note_to_parent": "The runtime did not give me a subagent or task identity, so reviewer.task is null in every entry. I did not make one up. I opened each request JSON first, then the page PNG it names. All six PNGs loaded and I looked at each one. I did not read the source, the script, workflow.json or any repository docs; I stayed inside the image-only scope you set. Page 04 was not in this set, so I could not judge the jump from page 03 to page 05. Recommendation: changes required on pages 02, 06 and 07 because product labels sit away from the screens they name, and on page 07 because of unclear time/place jumps and new people who are never introduced.",
  "01": {
-  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/first-reading-2467978c458a57e5dd4f991c8feacad54787af8bd5d9bc5dbb70887434c9857b.json",
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/first-reading-86c79b5f22413313f17b0026f16e0169c86245add4b91a3358fc9312ef9dbcb1.json",
   "reviewer": {
    "role": "subagent",
    "task": null
@@ -8,8 +9,78 @@
   "pages": [
    {
     "page": "01",
-    "scan": "Before reading any other document, I read the request JSON and then opened works/auto-6294ee8a2094/workflow/review/page-01.png with Read and looked at it. The image was readable. I did not read the source, script, workflow.json, storyboard or reading-flow files. Afterwards I read only docs/PROMPTS.md line 28 for the response format. Reading left-to-right and top-to-bottom, I read it in this order. (1) Top panel, full width: a caption box at top left reads 'A busy day at Dr. Ananya's clinic.' Below it is a clinic exterior with a teal awning. A woman doctor in a white coat with a stethoscope, wearing her hair down or loosely tied back, stands in the doorway and waves an elderly woman in a lilac sari inside. Two patients sit on metal chairs at right, seen from behind. This panel has no dialogue; it is a wordless welcome. (2) Lower-left panel: a receptionist in a blue kurta with a long braid sits at a desk. She holds a phone in her left hand, writes in a ledger with her right hand, and has a sweat drop. The upper-left balloon reads 'Appointments, patient details, follow-ups...'. The lower-right balloon reads 'I wish everything were easier to manage!'. Waiting patients are seen from behind in the foreground. (3) Lower-right panel: the doctor stands thinking with her hand on her chin, her hair in a bun, and the receptionist small in the background. Her balloon reads 'Our time belongs with patients. Let's make the rest simpler.'",
-    "observation": "Reading order is natural. The caption comes first. In panel 2 the left balloon sits higher than the right one, so it reads before it with no ambiguity. The tall right panel's balloon comes last. There are no near, non-consecutive balloons that tempt a skip. Tails: the panel 2 first tail is long and ends at the top-left of the receptionist's head. The second tail is short and points down to the top of her head. Both clearly belong to her. The panel 3 tail ends just above the doctor's head and clearly belongs to her. No balloon, caption or tail covers a face, hand or key prop. The panel 1 caption covers only foliage and the wall. In panel 2 the phone, pen, ledger and desk phone are clear of text. Points that confuse a first reader: (a) The doctor's identity is unclear. In panel 1 her hair looks down or loosely tied, while in panel 3 it is up in a bun and her face is rendered differently. A first reader may briefly wonder whether panel 3 shows the same doctor, Dr. Ananya. Hair and continuity between panels 1 and 3 should be checked. (b) In panel 2 the receptionist is on the phone. It is unclear whether she says these lines to the caller or to herself, and whether the doctor in panel 3 overheard her. Panel 3 gives no visible link, such as a gaze toward the receptionist; the doctor looks off-panel left and the receptionist is only small in the background. The thinking pose also makes her line read partly like a monologue rather than a reply. The cause-and-effect between panels 2 and 3 is therefore weak. (c) 'Our time belongs with patients' is slightly awkward English; 'should be spent with patients' or 'belongs to our patients' would read more naturally. (d) The cut from exterior to interior between panels 1 and 2 is understandable from the matching clinic decor. Unresolved for the parent: (a) and (b) should be checked against the approved script. My runtime task identity was not supplied, so task is null and must not be filled in with an invented value."
+    "scan": "Opened works/auto-6294ee8a2094/workflow/review/page-01.png with Read. It loaded and I looked at it.",
+    "observation": "Reading order: (1) top-left caption 'A busy day at Dr. Ananya's clinic.' over a wide shot of the clinic entrance (doctor in white coat welcoming an older woman in a lilac sari, two patients waiting on chairs); (2) bottom-left panel, left balloon 'Appointments, patient details, follow-ups...'; (3) then 'I wish everything were easier to manage!'. Both balloons have tails to the receptionist (blue kurta, braid), who is on the phone and writing in a ledger. (4) Bottom-right panel: 'Our time belongs with patients. Let's make the rest simpler.' Its tail goes to the doctor, who stands with her hand at her chin, with the receptionist small in the background. Speakers are clear and tails point to the right people. No lettering covers a face, hand or prop. Small issues: 'Our time belongs with patients' reads a little unnatural in English ('belongs with our patients' or 'should go to patients' would be clearer). The doctor's last line answers the receptionist, but she is looking off to the side, not at the receptionist, so the reply is only implied by position. No problem with time or place."
+   }
+  ]
+ },
+ "02": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/first-reading-5fa5b99153795ceb4875c2b5a5dc6afc989fe60a52e9c67ec173358e5da3094c.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "pages": [
+   {
+    "page": "02",
+    "scan": "Opened works/auto-6294ee8a2094/workflow/review/page-02.png with Read. It loaded and I looked at it.",
+    "observation": "Reading order: (1) top-left caption 'The clinic begins its Welbuk onboarding.'; (2) top-right teal label 'WELBUK PRACTICE for the clinic' (the doctor is typing at a laptop with a setup screen showing); (3) middle-left balloon 'We can organise our clinic workflow here.', tail to the doctor; (4) middle-right balloon 'And our team can use tools suited to each staff role.', tail to the receptionist, who holds up a phone with a calendar icon; (5) label 'WELBUK CARE for clinic staff' at the lower left of that panel; (6) bottom panel 'One team. Better coordination.', tail to the doctor, with the receptionist standing beside her holding a phone. Speakers read correctly. Issues: (a) The label 'WELBUK PRACTICE for the clinic' sits in the top-right corner over the window and wall, not on or next to the laptop screen it describes, so it floats loose. (b) The label 'WELBUK CARE for clinic staff' sits at the bottom left over the desk and laptop in the background, not on the receptionist's phone. A reader may tie it to the background laptop instead of the phone. (c) Page 01 is in bright daytime; this page is lit by sunset through the window with no caption explaining the time change (same day after hours, or another day?). The caption only says 'begins its onboarding'. (d) In panel 3 the receptionist suddenly appears in the doctor's office; it is not shown how she got there or that this is the same moment. (e) Small: the doctor's hairstyle looks looser in the bottom panel than the bun in panel 1. No lettering covers a face or an important hand or prop."
+   }
+  ]
+ },
+ "03": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/first-reading-6c1a710d3102b824153591fcea62a8bf3f18bf5803b0dda221decf2ff8932adf.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "pages": [
+   {
+    "page": "03",
+    "scan": "Opened works/auto-6294ee8a2094/workflow/review/page-03.png with Read. It loaded and I looked at it.",
+    "observation": "This page has captions only, no balloons. Reading order: (1) top-left 'A later morning: patients can always check in at the front desk.' (an older man with a cane at the desk, the receptionist smiling); (2) top-right 'Some check in ahead on the Welbuk Health app.' (a young woman in a coral kurta tapping her phone outside the clinic); (3) middle-left 'Ravi scans the QR code at the door.' (a bearded man in a green shirt scanning a QR stand); (4) middle-right 'A short form on his own phone, shared with consent.' (close-up of the phone form with a check mark); (5) bottom-left 'Every check-in gets a slot on the screen.'; (6) the on-screen label 'A-10 · A-11 · A-12' sits on the wall TV, which is correct. The time jump is clearly marked by 'A later morning'. Issues: (a) The panel 1 caption covers most of a teal wall screen behind the receptionist. It is background only, but a screen is cut off. (b) The panel 2 caption sits right on top of the woman's hair; it does not reach her face, but it is cramped. (c) The coral-kurta woman wears her hair loose in panel 2 and a ponytail in panel 5, which is a continuity question. (d) Ravi is named in a caption, but the coral-kurta woman and the older man are never named. That is fine if they are intentionally anonymous. No faces or important hands or props are covered; the phone and QR stand are clear."
+   }
+  ]
+ },
+ "05": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/first-reading-81d3ed842113e74a17185bc5744ce7c954259dc208f8b8644adc1c84a9e0e78e.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "pages": [
+   {
+    "page": "05",
+    "scan": "Opened works/auto-6294ee8a2094/workflow/review/page-05.png with Read. It loaded and I looked at it.",
+    "observation": "Reading order: (1) top panel 'Hello, Ravi. Tell me what brings you in.', tail to the doctor at her desk, gesturing to Ravi, who sits in a chair with his bag beside it; (2) middle-left 'I've been feeling tired lately.', tail to Ravi, whose hand is on his neck, with the back of the doctor's head at left; (3) middle-right caption 'Technology supports the workflow. The conversation stays human.' over the doctor listening, with the back of Ravi's head at right; (4) bottom 'We'll go through your concerns and decide the right next steps together.', tail to the doctor. Speakers are clear and the order is natural. Issues: (a) The panel 3 caption's lower-right corner comes very close to, and slightly clips, the top of Ravi's head on the right edge. (b) Ravi says he has been feeling tired while smiling broadly, which weakens the line; the face does not match. (c) The panel 2 tail lands near Ravi's ear and cheek rather than his mouth, but the speaker is still obvious. (d) Page 04 was not in this set, so I could not judge the jump from the page 03 waiting room to this consultation room. On this page alone the move into the consultation room is clear enough. No important hand or prop is covered."
+   }
+  ]
+ },
+ "06": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/first-reading-8b8190ac1d1c6d152ab6c13b7fdff32bb6841b6956a847461de0f839fb8bc46f.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "pages": [
+   {
+    "page": "06",
+    "scan": "Opened works/auto-6294ee8a2094/workflow/review/page-06.png with Read. It loaded and I looked at it.",
+    "observation": "Reading order: (1) top 'Welbuk Health is designed to help patients stay connected with their care.', tail to the receptionist, who points at Ravi's phone across the front desk; (2) middle-left 'So I can keep useful information in one place?', tail to Ravi, who holds up a phone with calendar and heart icons; (3) label 'WELBUK HEALTH for patients' at the lower left of that panel; (4) middle-right 'That's the idea. Let's walk through what is available to you.', tail to the receptionist; (5) bottom caption 'A smoother visit. A more connected experience.' over Ravi waving as he leaves while the doctor and receptionist wave from the door. The question and its answer are in order and the speakers are correct. Issues: (a) The label 'WELBUK HEALTH for patients' sits in the lower-left corner over the desk monitor and plant, not on the phone screen. Its right edge comes close to Ravi's thumb and lower hand holding the phone, so the label is apart from the device it names and crowds an important hand. (b) The page moves from the consultation (page 05) back to the reception desk with no caption. That is readable as 'after the visit', but it is implied, not shown. (c) The bottom caption crosses the top of the doorway and awning but no faces. Otherwise the tails are correct and no face is covered."
+   }
+  ]
+ },
+ "07": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/first-reading-7d2591e6c508fad31584c3c1af7e81c8deeea1bb6b6df0df521c82b7bef915bc.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "pages": [
+   {
+    "page": "07",
+    "scan": "Opened works/auto-6294ee8a2094/workflow/review/page-07.png with Read. It loaded and I looked at it.",
+    "observation": "This page has captions and labels only, no balloons. Reading order: (1) top-left caption 'Tomorrow, care may take us beyond our hometown.' (Ravi on a train, thinking, holding his phone); (2) top-right label 'WELBUK VISION' (an older, previously unseen doctor in front of a clinic building, with linked clinic icons in the sky); (3) caption 'The vision: trusted connections between clinics, specialists, and patients across locations.'; (4) middle panel, second label 'WELBUK VISION', then caption 'One connected ecosystem for care and family wellness.' (Ravi with a woman in a yellow kurta and a boy looking at a tablet); (5) bottom panel, top-right label 'Welbuk Practice • Welbuk Care • Welbuk Health' (the receptionist, the doctor and Ravi in front of the clinic); (6) bottom-left caption 'Welbuk — Building a connected healthcare ecosystem.' Issues: (a) The time and place jump is unclear. Page 06 ends with Ravi leaving the clinic, and now he is on a train under 'Tomorrow'. It is not clear whether this is literally the next day, a future trip, or imagined. 'us' and 'our hometown' have no clear speaker, since there is no balloon, the caption is not marked as Ravi's thought, and no narrator has been set up. (b) The older doctor in panel 2 and the woman and boy in panel 3 are never introduced. A first reader cannot tell whether the woman and boy are Ravi's family or whether the older man is a specialist. (c) The 'WELBUK VISION' label appears twice in a row (panels 2 and 3), which is repetitive. Neither label sits on a specific screen or object. (d) In panel 4 the top-right label box butts against the right side of Ravi's head and covers part of his raised arm and shoulder, crowding his face. (e) The bottom-left caption's right edge touches the doctor's lower legs. That is minor, but the box sits on the figures' feet area. (f) Panel 2: the caption box starts just under the older doctor's gesturing hand and covers his torso and part of the building; the hand stays visible. (g) Continuity: in panel 4 the receptionist holds a phone at her side and Ravi carries his bag on his shoulder, which is consistent with page 06. Panel 4 shows Ravi back at the clinic after the train, which adds to the confusion about time."
    }
   ]
  }
