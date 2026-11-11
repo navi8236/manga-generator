@@ -43,7 +43,7 @@ config.cast = {
   ananya: {
     name: 'Dr. Ananya',
     description:
-      'Indian woman in her late 30s, clinic owner and doctor. Calm, confident and caring. Teal kurta beneath an open white coat (source). Shoulder-length black hair tied in a low bun with a few loose strands, slim build, small gold stud earrings, a stethoscope around her neck in clinic scenes (manga supplement, from the accepted reference sheet).',
+      'Indian woman in her late 30s, clinic owner and doctor. Calm, confident and caring. Teal kurta beneath an open white coat (source). Shoulder-length black hair tied in a low bun with a few loose strands, slim build, small gold stud earrings, a stethoscope worn around her neck (never in use) in every scene where she wears the white coat (manga supplement, from the accepted reference sheet).',
     faceDesign: {
       traits: [
         'Calm almond-shaped eyes with slightly heavy upper lids and a gentle downward outer corner',
@@ -143,7 +143,7 @@ config.referenceRoles = {
 };
 
 const costumes = {
-  ananya: 'Teal kurta beneath an open white coat, dark leggings, flat sandals.',
+  ananya: 'Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.',
   meera: 'Blue kurta with white churidar, silver bangle on right wrist.',
   ravi: 'Light green shirt, dark trousers, wristwatch on left wrist.',
 };
@@ -214,7 +214,7 @@ config.sections = {
       'Idealised, airy spaces: a modern clinic in another city linked by faint dotted lines to small clinic silhouettes; a family living room. Lighter palette and rounded vignette border.',
     costumes: {
       ravi: costumes.ravi,
-      specialist: 'Light grey blazer over a pale blue shirt, rimless glasses.',
+      specialist: 'Light grey blazer over a pale blue shirt, rimless glasses, stethoscope worn around his neck (not in use).',
       partner: 'Mustard-yellow kurta.',
       child: 'Orange T-shirt and shorts.',
     },
@@ -722,7 +722,7 @@ const pages = [];
         beat: 'They will decide next steps together',
         rect: r4,
         scene:
-          'Two-shot: Dr. Ananya (left) speaks warmly with a reassuring open hand; Ravi (right) nods, relaxed, both hands resting on his knees. No prescriptions, no instruments.',
+          'Two-shot: Dr. Ananya (left) speaks warmly with a reassuring open hand; Ravi (right) nods, relaxed, both hands resting on his knees. No prescriptions and no instruments in use (Ananya’s stethoscope stays around her neck).',
         action: 'Ananya reassures; Ravi relaxes.',
         emotion: 'Reassured, collaborative.',
         camera: 'Medium two-shot, eye level.',

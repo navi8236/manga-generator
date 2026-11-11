@@ -67,6 +67,8 @@ if '--split' in sys.argv:
     i = sys.argv.index('--split')
     folder, prefix = sys.argv[i + 1], sys.argv[i + 2]
     for page, resp in data.items():
+        if not page.isdigit():
+            continue
         target = f'{folder}/{prefix}-{page}.json'
         json.dump(fix(resp, agent), open(target, 'w', encoding='utf-8'), indent=1, ensure_ascii=False)
         print(target, resp.get('status', 'first-reading'))
