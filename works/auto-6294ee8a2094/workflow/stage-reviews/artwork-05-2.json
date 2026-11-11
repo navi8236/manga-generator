@@ -1,32 +1,35 @@
 {
-  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-05-2-e2f50db4620136d24a45c5e74bbdbe05985740258df9f4715ab781475253a29f.json",
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-05-2-b3824bb2346c39d167d73b98fbacbc0de467f99b0d8352ae06bac3861b36e6bd.json",
   "reviewer": {
     "role": "subagent",
-    "task": "claude-code-agent:manga-reviewer:a6455e7d4cf6b3b5b",
+    "task": "claude-code-agent:manga-reviewer:a880972f7773fe5a7",
     "reportedTask": null,
     "taskSource": "Agent ID returned by the Claude Code Agent tool to the parent."
   },
-  "status": "changes-requested",
+  "status": "pass",
   "observations": [
-    "Opened assets/panels/05-2.png. Ravi (face matches the sheet: beard, thick brows, side part, green shirt, bag strap) holds his navy phone at chest height in both hands with the screen toward the reader.",
-    "The screen shows two rounded cards, one with a calendar icon and one with a heart icon, plus blank colour blocks. There is no readable text or data.",
-    "The wristwatch is on the hand at viewer-right, which is his left hand since he faces the reader, consistent with the sheet. His left thumb is on the lower right of the screen face.",
-    "The camera is at eye level, not the slight high angle the scene asks for. This is minor.",
-    "The monitor, keyboard and plant in the left foreground put the camera on Meera's side of the desk, the same set-up as 05-1.",
-    "On page-05.png the speech bubble is top-left with its tail to Ravi's mouth. The WELBUK HEALTH label box sits bottom-left and ends just below the fingers of his right hand."
+    "I opened assets/panels/05-2.png, main-cast.png and page-05.png with Read, and read responses/artwork-r2-05-2.json.",
+    "Ravi's identity matches the sheet: beard, thick brows, side part, green shirt and bag strap. His expression is curious and hopeful, with an open-mouth smile.",
+    "The phone is held at chest height with the screen toward the reader. The screen shows a calendar icon card, a heart icon card and blank colour blocks. There is no readable text or data.",
+    "Grip at panel scale: on the viewer-left edge, four fingertips with nails showing curl around the left edge onto the front. That is consistent with his right hand wrapping from behind, which is what the updated record says ('fingers wrapped around the left edge'). The viewer-right hand wears the wristwatch, so it is his left. It supports the lower right corner with the thumb on the screen edge, matching the record. I did not view the image at 200%.",
+    "The scene now records the camera as eye level, which matches the art. The monitor and plant are in the left foreground.",
+    "Earlier issue 1 (r2 eyeline): the image is unchanged and Ravi still glances up to screen-right. It is now recorded as a deliberate thinking glance, with Meera off-panel left. I find this acceptable for readers. His raised eyes and half-smile read as musing aloud rather than addressing someone on the right. The bubble's tail goes to his mouth, so the speaker is clear. On the page the glance also leads toward 05-3, where Meera answers, so the exchange still reads as one conversation. The screen direction is slightly off from 05-3, where he faces left, but it does not cause misreading.",
+    "Earlier issue 2 (r2 grip and record): resolved. The record now names the hand on each edge in Ravi's own left and right, and what I can see is consistent with the fingers wrapping from behind rather than a hand sitting flat in front of the phone.",
+    "Non-blocking record note: the prop's heldBy is 'ravi.right' while 'during' says both hands. If the field allows only one value this is tolerable, but it slightly understates the two-handed hold.",
+    "Lettering on page-05.png: the bubble at top-left has its tail to Ravi's mouth and clears his face. The WELBUK HEALTH label sits at bottom-left over the desk and ends just short of his right fingers. The phone screen stays clear."
   ],
   "issues": [
     {
-      "problem": "Eyeline does not match the scene. In 05-1 and 05-3 Meera is screen-left of Ravi and he looks left toward her. In 05-2 the foreground monitor places Meera at the camera or left side, yet Ravi looks up and off to screen-right, away from her and away from his own bubble. The question 'So I can keep useful information in one place?' therefore reads as aimed at someone off-panel right. The fix is to turn his gaze up toward the left or toward the camera, or to record an explicit decision accepting this eyeline.",
-      "location": "05-2: Ravi's eyes and head turn (panel around x 640-880, y 150-300)",
-      "resolved": false
+      "problem": "(r2) Ravi's eyeline to screen-right did not match the scene, since Meera is screen-left.",
+      "location": "05-2: Ravi's eyes and head turn",
+      "resolved": true
     },
     {
-      "problem": "Possible grip error in Ravi's right hand (viewer-left). The thumb tip at the top-left corner of the phone and the curled fingers with visible nails along the left bezel both seem to be on the screen side, so the whole hand may sit in front of the phone instead of wrapping behind it. Check this at 200% in quality-review and fix it if confirmed. Also, production.hands says 'thumb near the screen' for the right hand, but the clearest thumb on the screen face is on the left hand (viewer-right, lower right of the phone). The record should say which hand is on which edge in Ravi's own left/right terms.",
-      "location": "05-2: phone grip, panel around x 440-530, y 600-850, and production.hands.ravi",
-      "resolved": false
+      "problem": "(r2) Possible grip error in the right hand, and the hands record was not stated in Ravi's own left and right.",
+      "location": "05-2: phone grip / production.hands.ravi",
+      "resolved": true
     }
   ],
-  "fingerprint": "e2f50db4620136d24a45c5e74bbdbe05985740258df9f4715ab781475253a29f",
-  "recordedAt": "2026-11-11T08:35:39.579Z"
+  "fingerprint": "b3824bb2346c39d167d73b98fbacbc0de467f99b0d8352ae06bac3861b36e6bd",
+  "recordedAt": "2026-11-11T08:58:48.208Z"
 }
