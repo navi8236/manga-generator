@@ -670,7 +670,7 @@ const pages = [];
         beat: 'All three get slots on the screen',
         rect: r5,
         scene:
-          'Wide view of the waiting area: a wall-mounted TV at the upper right shows a plain light-teal screen with three clean, empty white rows where the slot numbers will be lettered (draw NO text or numbers on the screen). Below it, Mr. Raman (glasses, walking stick), Priya (ponytail, coral kurti) and Ravi (green shirt, shoulder bag on his lap, phone in his right hand) sit side by side on waiting chairs, all looking up at the screen with small satisfied smiles. Plain wall at the upper left for a caption.',
+          'Wide view of the waiting area: a wall-mounted TV in the upper-right corner of the panel (its screen filling roughly the right third of the width and the top quarter of the height) shows a plain light-teal screen with ONE wide, clean, empty white strip across it where the slot list will be lettered in a single line (draw NO text or numbers on the screen). Below it, Mr. Raman (glasses, walking stick), Priya (ponytail, coral kurti) and Ravi (green shirt, shoulder bag on his lap, phone in his right hand) sit side by side on waiting chairs, all looking up at the screen with small satisfied smiles. Plain wall at the upper left for a caption.',
         action: 'The three patients see their slots appear.',
         emotion: 'Calm, reassured.',
         camera: 'Wide shot of the waiting area, slight low angle toward the TV.',
@@ -686,7 +686,7 @@ const pages = [];
             ravi: hands('resting on the shoulder-bag on his lap', 'holding ravi-phone'),
           },
           props: [
-            prop('waiting-tv', 'on the wall', 'teal screen with three empty white rows', 'on the wall', 'none'),
+            prop('waiting-tv', 'on the wall', 'teal screen with one wide empty white strip for the lettered slot list', 'on the wall', 'none'),
             prop('ravi-phone', 'in his hand', 'held in his right hand', 'put away in his pocket (04-1)', 'ravi.right'),
             prop('shoulder-bag', 'on his left shoulder', 'resting on his lap', 'back on his shoulder as he stands (04-1)', 'none'),
             prop('walking-stick', 'in his hand', 'held upright beside his knee', 'in his hand', 'raman.right'),
@@ -725,7 +725,7 @@ const pages = [];
         beat: 'Ravi’s slot comes up',
         rect: r1,
         scene:
-          'Waiting area, wide: Ravi rises from his chair with the shoulder bag back on his left shoulder, looking up at the wall-mounted TV at the right, whose light-teal screen shows one clean, empty white highlighted row where his slot will be lettered (draw NO text or numbers). Mr. Raman and Priya still seated nearby. Plain wall at the upper left for a caption.',
+          'Waiting area, wide: Ravi rises from his chair with the shoulder bag back on his left shoulder, looking up at the wall-mounted TV in the upper-right part of the panel, whose light-teal screen shows one clean, empty white highlighted strip where his slot will be lettered (draw NO text or numbers). Mr. Raman and Priya still seated nearby. Plain wall at the upper left for a caption.',
         action: 'Ravi stands as his slot comes up.',
         emotion: 'Ready, pleased.',
         camera: 'Wide shot of the waiting area, eye level.',
@@ -742,7 +742,7 @@ const pages = [];
           after: 'The nurse takes his vitals (04-2).',
           hands: { ravi: hands('holding the shoulder-bag strap', 'tucking ravi-phone into his trouser pocket') },
           props: [
-            prop('waiting-tv', 'three rows', 'one highlighted empty row', 'on the wall', 'none'),
+            prop('waiting-tv', 'one strip listing the three slots (03-5)', 'one highlighted empty strip for the called slot', 'on the wall', 'none'),
             prop('ravi-phone', 'in his hand', 'being tucked into his trouser pocket', 'in his pocket', 'ravi.right'),
             prop('shoulder-bag', 'on his lap', 'back on his left shoulder', 'on his shoulder', 'ravi.left'),
           ],
