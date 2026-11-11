@@ -381,10 +381,10 @@ const pages = [];
         beat: 'Onboarding begins on a laptop',
         rect: r1,
         scene:
-          'Over-the-shoulder shot from behind Dr. Ananya’s left shoulder (her bun, gold stud and calm profile visible) at a desk: a clean silver laptop with a generic setup form of blank rounded fields and simple blocks (no text, no logos). Both her hands (teal sleeves under white coat cuffs) type on the keyboard. A mug on a coaster. Evening window light. Clear empty areas at top-left and top-right for labels.',
+          'Over-the-shoulder shot from behind Dr. Ananya’s right shoulder (she faces screen-right; her bun, gold stud and calm profile visible) at a desk: a clean silver laptop with a generic setup form of blank rounded fields and simple blocks (no text, no logos). Both her hands (teal sleeves under white coat cuffs) type on the keyboard. A mug on a coaster. Evening window light. Clear empty areas at top-left and top-right for labels.',
         action: 'Fingers typing into the blank setup fields.',
         emotion: 'Calm, fresh start.',
-        camera: 'Over-the-shoulder shot from behind Ananya’s left shoulder, laptop at three-quarter view.',
+        camera: 'Over-the-shoulder shot from behind Ananya’s right shoulder, laptop at three-quarter view.',
         information: 'Time and place change: the clinic is now onboarding to Welbuk Practice.',
         transition: {
           kind: 'time-change',
@@ -435,7 +435,7 @@ const pages = [];
         beat: 'Meera discovers Welbuk Care for staff',
         rect: r3,
         scene:
-          'Meera stands beside the desk holding a staff smartphone in her right hand at upper-chest height, screen toward the reader showing only abstract blocks and a simple calendar icon (no text). Left hand relaxed at her side. She looks up from the phone with a bright smile.',
+          'Tall medium shot in the same evening office: Meera stands beside the wooden desk (open laptop with blank abstract form, pen cup, plant; a black office chair beside her; window with a roller blind and evening sky at right), holding a staff smartphone in her right hand at upper-chest height, screen toward the reader showing only abstract blocks and a simple calendar icon (no text). Left hand relaxed at her side. She looks up from the phone with a bright smile.',
         action: 'Meera looks up from the phone with a bright smile.',
         emotion: 'Relieved, excited.',
         camera: 'Tall medium shot, slightly from her right.',
@@ -461,7 +461,7 @@ const pages = [];
         beat: 'One team, better coordination',
         rect: r4,
         scene:
-          'Friendly two-shot in the office: Dr. Ananya (left) seated, turning to Meera (right) who stands holding the staff phone at her side; they share a warm, confident smile. Laptop open on the desk between them, screen not visible.',
+          'Friendly two-shot in the office: Dr. Ananya (left) seated, turning to Meera (right) who stands holding the staff phone at her side; they share a warm, confident smile. Laptop open on the desk between them, its screen turned toward the reader showing only blank abstract fields (no text).',
         action: 'Ananya says the line; Meera nods.',
         emotion: 'Confident teamwork.',
         camera: 'Medium two-shot, eye level, wide horizontal framing.',
@@ -537,7 +537,7 @@ const pages = [];
         beat: 'Meera asks for consent to register',
         rect: r2,
         scene:
-          'Meera behind the tidy reception desk (desktop monitor at her side, screen angled away), gentle smile, left palm open in an inviting, asking gesture; right hand resting on the desk. Ravi in the left foreground, seen over his shoulder (beard edge, green shirt, shoulder-bag strap), his right hand holding his dark-blue phone low at the desk edge.',
+          'Meera behind the tidy reception desk (desktop monitor at her side, screen angled away), gentle smile, left palm open gesturing toward the waiting area at screen-right as she asks; right hand resting on the desk. Ravi in the left foreground, seen over his shoulder (beard edge, green shirt; his bag hangs at his hip from the far shoulder), his right hand holding his dark-blue phone low at the desk edge.',
         action: 'Meera asks politely, leaning slightly forward.',
         emotion: 'Friendly, respectful.',
         camera: 'Tall medium shot, slightly from the left.',
@@ -552,7 +552,7 @@ const pages = [];
           moment: 'Meera asks for permission to register Ravi’s details.',
           before: 'Ravi greeted her and asked to see the doctor.',
           after: 'Ravi agrees (03-3).',
-          hands: { meera: hands('open palm gesturing toward Ravi', 'resting flat on the desk') },
+          hands: { meera: hands('open palm gesturing toward the waiting area at screen-right', 'resting flat on the desk') },
           props: [prop('monitor', 'on the desk', 'on the desk, screen angled away', 'on the desk', 'none')],
         },
         speakers: { meera: speaker(r2, [180, 280, 125, 160]) },
@@ -567,7 +567,7 @@ const pages = [];
         beat: 'Ravi agrees; Meera enters essential details',
         rect: r3,
         scene:
-          'Wide two-shot across the reception desk: Ravi (left), bag strap on his shoulder, nods with a smile, both hands on the desk edge and his dark-blue phone lying on the desk in front of him; Meera (right) types on the keyboard, eyes on the monitor whose screen faces her (only blank fields visible from the side). No papers with writing, no ID cards.',
+          'Wide two-shot across the reception desk: Ravi (left), bag strap over his far left shoulder, nods with a smile, both hands on the desk edge and his dark-blue phone lying on the desk in front of him; Meera (right) types on the keyboard, the monitor between them is angled toward the front of the desk so its blank fields face the reader and Ravi; she glances at it from the side. No papers with writing, no ID cards.',
         action: 'Ravi nods; Meera begins typing.',
         emotion: 'Trusting, easy.',
         camera: 'Medium-wide two-shot, eye level, desk across the lower third.',
@@ -583,7 +583,7 @@ const pages = [];
           },
           props: [
             prop('shoulder-bag', 'on Ravi’s shoulder', 'on his shoulder', 'on his shoulder', 'none'),
-            prop('monitor', 'on the desk', 'facing Meera, blank fields', 'on the desk', 'none'),
+            prop('monitor', 'on the desk', 'angled toward the desk front, blank fields toward the reader', 'on the desk', 'none'),
           ],
         },
         speakers: {
@@ -714,7 +714,7 @@ const pages = [];
           moment: 'Ananya listening, mid-nod.',
           before: 'Ravi described his tiredness.',
           after: 'She suggests going through his concerns together (04-4).',
-          hands: { ananya: hands('folded with the right hand on the desk', 'folded over the left hand on the desk') },
+          hands: { ananya: hands('folded over the right hand on the desk', 'folded under the left hand on the desk') },
           props: [prop('closed-laptop', 'closed on the desk', 'closed at the desk edge', 'closed', 'none')],
         },
         speakers: { ananya: speaker(r3, [190, 220, 150, 190]) },
@@ -815,10 +815,10 @@ const pages = [];
         beat: 'Ravi sees a conceptual app screen',
         rect: r2,
         scene:
-          'Ravi holds his own phone (dark blue case) in both hands at chest height, screen toward the reader: a friendly conceptual app screen with simple rounded cards, a calendar icon and a heart icon, no text and no personal data. Ravi’s curious, hopeful face above it, glancing up as he asks.',
+          'Ravi holds his own phone (dark blue case) in both hands at chest height, screen toward the reader: a friendly conceptual app screen with simple rounded cards, a calendar icon and a heart icon, no text and no personal data. Ravi’s curious, hopeful face above it, glancing up and away to screen-right as he thinks the question aloud (deliberate thinking glance; Meera is off-panel left).',
         action: 'Ravi studies the screen and looks up with a question.',
         emotion: 'Curious, hopeful.',
-        camera: 'Medium close-up, slight high angle over the phone.',
+        camera: 'Medium close-up at eye level, the reception monitor and plant in the left foreground.',
         information: 'Conceptual view: appointments and health information in one place.',
         readingFlow: { entry: [44, 570], exit: [580, 1100] },
         production: {
@@ -826,7 +826,7 @@ const pages = [];
           before: 'Meera pointed at the app on his phone.',
           after: 'Meera answers and offers a walkthrough (05-3); Ravi keeps his phone.',
           hands: {
-            ravi: hands('holding ravi-phone, left side', 'holding ravi-phone, right side; thumb near the screen'),
+            ravi: hands('supporting the lower right corner of ravi-phone, thumb on the screen edge (wristwatch on this wrist)', 'fingers wrapped around the left edge of ravi-phone'),
           },
           props: [prop('ravi-phone', 'in Ravi’s right hand', 'held in both of Ravi’s hands, conceptual screen', 'held by Ravi', 'ravi.right')],
         },
@@ -956,8 +956,8 @@ const pages = [];
         },
         speakers: { specialist: speaker(r2, [324, 250, 105, 135]) },
         dialogue: [
-          line('label', ['WELBUK VISION'], 16, 12),
-          line('narration', ['The vision:', 'trusted', 'connections', 'between clinics,', 'specialists, and', 'patients across', 'locations.'], 16, 98),
+          line('label', ['WELBUK VISION'], 0, 0),
+          line('narration', ['The vision: trusted connections', 'between clinics, specialists,', 'and patients across locations.'], 4, 298),
         ],
       },
       {
@@ -978,7 +978,7 @@ const pages = [];
           before: 'Vision of connected clinics.',
           after: 'Return to the present-day closing (06-4).',
           hands: {
-            ravi: hands('arm around the back of the sofa behind his partner', 'pointing gently at the tablet'),
+            ravi: hands('arm along the back of the sofa behind his partner, hand resting on the sofa back behind the child', 'pointing gently at the tablet'),
             partner: hands('holding family-tablet, left edge', 'holding family-tablet, right edge'),
             child: hands('resting on the partner’s arm', 'resting on the sofa cushion'),
           },
@@ -1055,18 +1055,18 @@ const MEASURED = {
     speakers: { ananya: F(365, 655, 105, 115, 425, 752) },
     hands: { ananya: hands('index finger resting at her chin', 'resting on the laptop trackpad') },
   },
-  '02-3': { speakers: { meera: F(855, 802, 46, 56, 874, 847) }, protected: [[821, 844, 27, 40]] },
+  '02-3': { speakers: { meera: F(851, 739, 51, 66, 873, 788) }, protected: [[794, 794, 40, 61]] },
   '02-4': {
     speakers: { ananya: F(325, 1170, 72, 90, 367, 1245), meera: F(700, 1130, 70, 88, 737, 1200) },
     protected: [[668, 1365, 62, 80]],
   },
   '03-1': {
     speakers: { ravi: F(405, 62, 78, 90, 445, 118), meera: F(92, 222, 68, 100, 148, 300) },
-    hands: { meera: hands('typing on the keyboard', 'typing on the keyboard') },
+    hands: { meera: hands('hidden behind her body, not visible', 'typing on the keyboard') },
     addProps: [prop('reception-mobile', 'on the reception desk', 'lying on the desk beside Meera’s keyboard', 'on the desk', 'none')],
   },
   '03-2': {
-    speakers: { meera: F(772, 238, 92, 95, 815, 315), ravi: F(628, 225, 62, 80, 668, 290) },
+    speakers: { meera: F(782, 230, 67, 76, 809, 287), ravi: F(645, 217, 49, 81, 683, 291) },
     hands: { ravi: hands('out of frame', 'holding ravi-phone low at the desk (foreground)') },
     addProps: [prop('ravi-phone', 'in Ravi’s pocket as he arrives (not visible in 03-1)', 'held low at the desk in the foreground', 'set down on the desk', 'ravi.right')],
   },
@@ -1111,7 +1111,7 @@ const MEASURED = {
     },
   },
   '06-1': { speakers: { ravi: F(313, 105, 94, 108, 349, 195) } },
-  '06-2': { speakers: { specialist: F(819, 132, 73, 81, 865, 195) } },
+  '06-2': { speakers: { specialist: F(819, 132, 73, 81, 865, 195) }, protected: [[672, 262, 74, 54]] },
   '06-3': {
     speakers: {
       ravi: F(462, 501, 115, 129, 526, 610),
