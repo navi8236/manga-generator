@@ -197,7 +197,7 @@ config.sections = {
   departure: {
     summary: 'The end of the same visit: Ravi leaves the clinic reassured.',
     location: 'Clinic entrance from the street side, morning sun.',
-    costumes: { ravi: costumes.ravi },
+    costumes: { ...costumes },
     objects: {},
   },
   travel: {
@@ -782,14 +782,14 @@ const pages = [];
         readingFlow: { entry: [40, 40], exit: [990, 520] },
         production: {
           moment: 'Meera points at Ravi’s phone and explains.',
-          before: 'Ravi came back to reception after the consultation and took out his own phone.',
+          before: 'Ravi came back to reception after the consultation and took his phone out again.',
           after: 'Ravi brings the phone closer to look at the app (05-2).',
           hands: {
             meera: hands('resting on the desk', 'index finger pointing at ravi-phone'),
             ravi: hands('resting on the desk edge', 'holding ravi-phone'),
           },
           props: [
-            prop('ravi-phone', 'in Ravi’s pocket', 'in Ravi’s right hand, Meera pointing at it', 'held by Ravi', 'ravi.right'),
+            prop('ravi-phone', 'carried by Ravi since registration (put away during the consultation)', 'in Ravi’s right hand, Meera pointing at it', 'held by Ravi', 'ravi.right'),
             prop('shoulder-bag', 'on Ravi’s shoulder', 'on his shoulder', 'on his shoulder', 'none'),
           ],
         },
@@ -1056,9 +1056,13 @@ const MEASURED = {
   },
   '03-2': {
     speakers: { meera: F(772, 238, 92, 95, 815, 315), ravi: F(628, 225, 62, 80, 668, 290) },
-    hands: { ravi: hands('out of frame', 'holding his phone low at the desk (foreground)') },
+    hands: { ravi: hands('out of frame', 'holding ravi-phone low at the desk (foreground)') },
+    addProps: [prop('ravi-phone', 'in Ravi’s hand as he arrives', 'held low at the desk in the foreground', 'set down on the desk', 'ravi.right')],
   },
-  '03-3': { speakers: { ravi: F(238, 668, 95, 120, 285, 770), meera: F(752, 688, 85, 100, 790, 770) } },
+  '03-3': {
+    speakers: { ravi: F(238, 668, 95, 120, 285, 770), meera: F(752, 688, 85, 100, 790, 770) },
+    addProps: [prop('ravi-phone', 'held low at the desk', 'lying on the desk in front of Ravi', 'picked up again after registration', 'none')],
+  },
   '03-4': { speakers: { ravi: F(255, 1108, 92, 112, 300, 1200), meera: F(762, 1212, 75, 82, 795, 1280) } },
   '04-1': { speakers: { ananya: F(252, 62, 70, 90, 283, 140), ravi: F(733, 55, 75, 92, 770, 130) } },
   '04-2': {
@@ -1078,7 +1082,8 @@ const MEASURED = {
   '05-3': {
     speakers: { meera: F(691, 741, 111, 125, 761, 838), ravi: HEAD(970, 760) },
     protected: [[890, 898, 79, 120]],
-    hands: { ravi: hands('holding his phone (foreground right)', 'out of frame') },
+    hands: { ravi: hands('holding ravi-phone (foreground right)', 'out of frame') },
+    props: [prop('ravi-phone', 'held by Ravi', 'held in Ravi’s left hand in the foreground, screen toward Meera', 'held by Ravi', 'ravi.left')],
   },
   '05-4': {
     speakers: {
@@ -1116,6 +1121,8 @@ for (const page of pages)
     panel.speakers = m.speakers;
     if (m.protected) panel.protected = m.protected;
     if (m.hands) Object.assign(panel.production.hands, m.hands);
+    if (m.props) panel.production.props = m.props;
+    if (m.addProps) panel.production.props.push(...m.addProps);
   }
 
 config.pages = pages;
