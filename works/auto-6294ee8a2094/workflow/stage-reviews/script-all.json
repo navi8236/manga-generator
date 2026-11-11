@@ -1,46 +1,39 @@
 {
-  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/script-all-2d98e4fbfa282ed3e2aa1b8147eae29371667ad5cf6b427d1a064711b16cdef0.json",
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/script-all-6ba4c112c365c6459c2688b9cb8acad3a5a197d4e04cbf34b680fb9dc9c183ee.json",
   "reviewer": {
     "role": "subagent",
-    "task": "claude-code-agent:manga-reviewer:abbd8ec4bdf850a71",
+    "task": "claude-code-agent:manga-reviewer:a78c91e7316845409",
     "reportedTask": null,
     "taskSource": "Agent ID returned by the Claude Code Agent tool to the parent."
   },
-  "status": "pass",
+  "status": "changes-requested",
   "observations": [
     "Identity: the runtime gave me no subagent or task identity, so reviewer.task is null. The parent must record the real Agent ID returned by its Agent tool and must not invent one.",
-    "What I read: AGENTS.md and CLAUDE.md (supplied in context); docs/REVISION-AND-REVIEWS.md, docs/NARRATIVE-FLOW.md and docs/PROMPTS.md in full; the whole request JSON (fingerprint 2d98e4fb...def0, 1420 lines); works/auto-6294ee8a2094/source/original.txt (48 lines); works/auto-6294ee8a2094/workflow/source-coverage.json (26 spans, sourceHash 6294ee8a... matches the request entry); and the previous response script-all-r12.json. In works/auto-6294ee8a2094/workflow.json I read only grep output: every panel's speakers block (face, head and anchor values), every panel rect, and the dialogue x values. I also grepped the repo's .mjs files for transition-kind values and found no enum, so 'reverse-angle' is a free-text kind. All files listed in the request were readable. This is a text-stage review: I opened no images and make no visual claims.",
-    "Reading order: I read the source first, then the script. To avoid filling gaps from the source, I then re-read only the lettered strings in panel order. Each question or request is answered in the next panel: 03-1 request -> 03-2 'Of course'; 03-2 consent question -> 03-3 'Yes, please'; 04-1 'Tell me what brings you in' -> 04-2; 05-2 question -> 05-3 'That's the idea'. Referents come before they are used: 'the rest' (01-3) points to Meera's list in 01-2; 'here' (02-2) points to the laptop and the PRACTICE label in 02-1; 'your concerns' (04-4) points to 04-2; 'Ravi' is first said in 03-4, after registration. The arc runs motive (01-2, 01-3) -> onboarding (page 2) -> a smoother visit (pages 3-5) -> vision, marked as such (06-2, 06-3) -> closing (06-4).",
-    "Wording: every dialogue, caption and source-required label matches the source word for word, with the same speaker. The only structural change is 01-2, where one Meera utterance is split at the ellipsis into two balloons, both hers, with no other turn between them. In all 23 panels the textColumns join back to the text exactly. The PRACTICE, CARE and HEALTH labels and the repeated VISION label in 06-3 are manga additions, and source-coverage records them as such.",
-    "r12 issue 02-1, verified fixed. The camera now reads 'Over-the-shoulder shot from behind Ananya's left shoulder, laptop at three-quarter view', which matches the scene ('from behind Dr. Ananya's left shoulder (her bun, gold stud and calm profile visible)'). speakers gives Ananya a face entry, which suits the visible profile. hands (both typing) and the laptop prop agree with the scene.",
-    "r12 issue 05-3, verified fixed. The scene now reads 'Meera's right hand gestures toward his phone; her left hand rests on the desk.' This matches production.hands.meera (left resting on the desk, right open toward Ravi's phone). Ravi is seen from behind holding the phone in his left hand, which matches hands.ravi (left holding ravi-phone, right out of frame), the prop's heldBy ravi.left, and Ravi's head kind in speakers (anchor x 970, right foreground; Meera's face is at x 691).",
-    "r12 issue 03-3, verified fixed. The scene now names 'bag strap on his shoulder' and 'his dark-blue phone lying on the desk in front of him', and 'both hands on the desk edge'. These match production.props (shoulder-bag on his shoulder; ravi-phone lying on the desk, heldBy none) and hands.ravi (both resting on the desk edge). The phone chain now holds in the text: pocket (03-1) -> held low (03-2) -> on the desk (03-3) -> pocketed (03-4) -> right hand (05-1) -> both hands (05-2) -> left hand (05-3, 05-4, 06-1).",
-    "r12 issue 03-1 -> 03-2 flip, verified recorded adequately for the text stage. 03-2 now has transition {kind:'reverse-angle'}. Its bridge names both framings: 03-1 looks past Meera in the left foreground toward Ravi; 03-2 looks past Ravi in the left foreground (green shirt, bag strap, phone) toward Meera behind the same desk and monitor. It also states that Ravi stays left and Meera right from 03-2 onward. Its settingBasis gives the reasons (same desk, monitor, costumes, over-shoulder framing carry the space) and explicitly defers confirmation to the storyboard readingReview. The data agrees with this record. speakers: 03-1 Meera x 92 / Ravi x 405; 03-2 Ravi x 628 (at the left edge of rect x 628-1000) / Meera x 772; 03-3 Ravi x 238 / Meera x 752; 03-4 Ravi x 255 / Meera x 762. The monitor is consistent across the cut: it faces Meera and the camera in 03-1, is angled away in 03-2, and is seen from the side facing her in 03-3. 03-1 is itself a medium-full view of the door, desk and waiting chairs, which serves as the spatial introduction NARRATIVE-FLOW asks for. Whether the crossed line reads clearly can only be judged at storyboard and lettering. The storyboard reviewer of page 03 must check it on the unnumbered layout and must not treat this record as visual confirmation.",
-    "r12 non-blocking notes, checked. (a) 02-3: the scene now says 'She looks up from the phone with a bright smile', the same as the action. Resolved. (b) 04-2: the scene says 'Medium shot of Ravi' and the camera says 'Medium shot ... his knees in frame', which agree with hands.ravi.left 'resting on his knee'. Resolved. (c) Bags: now named in the scene text of 03-2 (strap), 04-1 (on the floor beside the chair), 04-4 (on the floor beside the chair) and 05-4 (on his shoulder); 03-1 now names the monitor. Resolved. (d) 06-3 cross-body reaches (Ravi's right hand pointing at the tablet, the child's left hand on the partner's arm) are still deferred to the artwork check, as r12 noted.",
-    "Full panel-by-panel consistency pass (scene / camera / action / speakers / hands / props). 01-1: Ananya face only; patients seen from behind; left palm gesturing, which agrees. 01-2: receiver in left hand, pen in right; props heldBy agree. 01-3: Meera in the background at frame left (x 680) and Ananya at right (x 855) within rect x 608-1000; both sets of hands agree with the scene. 02-1 to 02-4: laptop open throughout; staff-phone in Meera's right hand in 02-3, 02-4 and 06-4. In 02-4 Ananya is left (x 325) and Meera right (x 700), as the scene says. 03-1 to 03-4: see above. In 03-4 Meera's right hand gestures screen-left toward the chairs and Ravi's left hand holds the strap, which agree. 04-1 to 04-4: Ananya-left / Ravi-right holds throughout. Ananya has a head kind in 04-2 (anchor x 60, left foreground of rect x 24-504) and Ravi a head kind in 04-3 (anchor x 950, right foreground of rect x 528-1000), matching the scene text and the out-of-frame hands. The bag is on the floor in 04-1 and 04-4. 05-1 to 05-3: Meera-left / Ravi-right (05-1 x 367 / 572; 05-3 x 691 / head 970). 05-4: Ravi x 755, Ananya x 291 and Meera x 370 in the doorway at left; hands agree. 06-1: phone in left hand in his lap; right elbow on the ledge. 06-2: the specialist's face and open right palm agree. 06-3: three faces left to right as the scene says. 06-4: Meera x 344, Ananya x 481, Ravi x 638, matching 'Meera (left), Dr. Ananya (centre) and Ravi (right)'. Transitions are recorded at 02-1 (time), 03-1 (time), 03-2 (reverse-angle), 04-1 (place), 05-1 (place), 06-1 (time) and 06-4 (return).",
-    "Cosmetic notes, not blocking. (1) 03-2: the scene names the bag strap, but production.props does not list shoulder-bag for that panel. Adding it (on his shoulder, heldBy none) would close the bag chain between 03-1 and 03-3. (2) 05-1: production.props lists the shoulder-bag, but the scene text does not mention it. (3) 03-2 camera, 'Tall medium shot, slightly from the left', does not repeat the over-the-shoulder wording in the scene. It does not contradict the scene, but repeating it would help prompts. (4) 05-2: ravi-phone heldBy is 'ravi.right' while the prop's during and the hands describe a two-hand hold. (5) 02-4: Ananya's raised encouraging fist is recorded only in production.hands, not in the scene. (6) 06-2 has no transition object for the move from the 06-1 train into the vision vignette. The vignette, the VISION label and the conditional 06-1 caption carry it, but the storyboard check should confirm the entry into the vision reads clearly.",
-    "Image-dependent items that cannot be certified from the script: whether the 03-1 -> 03-2 reverse reads clearly (storyboard and lettering readingReview), the 06-3 cross-body hands (artwork), and every claim that the scene text matches the accepted art (artwork)."
+    "What I read: AGENTS.md and CLAUDE.md (supplied in context); docs/REVISION-AND-REVIEWS.md, docs/NARRATIVE-FLOW.md and docs/PROMPTS.md in full; the whole request JSON (fingerprint 6ba4c112...183ee, 1416 lines); works/auto-6294ee8a2094/source/original.txt (48 lines); works/auto-6294ee8a2094/workflow/source-coverage.json (26 spans, sourceHash 6294ee8a... matches the request entry); the previous response script-all-r13.json; and works/auto-6294ee8a2094/workflow.json lines 988-1307 (panels 03-2, 03-3 and 03-4, including rects, speakers and dialogue placement). Every listed file was readable. This is a text-stage review: I opened no images and make no visual claims.",
+    "Reading order: I read the source first, then the script. I then re-read only the lettered strings in panel order. Every question or request is answered in the next panel: 03-1 -> 03-2 'Of course'; 03-2 -> 03-3 'Yes, please'; 04-1 -> 04-2; 05-2 -> 05-3 'That's the idea'. Every referent comes before it is used: 'the rest' (01-3) -> Meera's list in 01-2; 'here' (02-2) -> the laptop and the PRACTICE label in 02-1; 'And' (02-3) -> Ananya's 02-2 line; 'your concerns' (04-4) -> 04-2. No exchange is merged across another speaker.",
+    "Wording: every dialogue line, caption and source-required label matches the source word for word with the same speaker. In all 23 panels the textColumns join back to the text exactly; I checked each join by hand. The only structural change is still 01-2, where one Meera utterance is split into two consecutive balloons, both hers.",
+    "06-2 caption, checked word for word against source line 42: 'The vision: trusted connections between clinics, specialists, and patients across locations.' The new three columns, 'The vision: trusted connections ' + 'between clinics, specialists, ' + 'and patients across locations.', join back to exactly that string. Punctuation (colon, both commas, final period) and capitalisation are unchanged. The 'WELBUK VISION' label is still the first dialogue entry, so it is read before the caption. The script has no position fields for the bottom band or the top-left corner, so those moves can only be confirmed at lettering.",
+    "02-1 (now RIGHT shoulder) is consistent. Scene and camera both say behind her right shoulder. If she faces screen-right, her right side is toward the camera, so an over-the-right-shoulder view with her profile, bun and stud visible and the laptop at three-quarter view holds together. Both hands typing matches production.hands and the open laptop prop. 02-2 (three-quarter front, screen angled away) follows plausibly. This replaces the r13 'left shoulder' wording, and the scene and camera fields agree with each other.",
+    "02-3 (wood-desk evening office) is consistent with the onboarding section (desk, laptop, evening window), with 02-2's open laptop, and with the staff phone in Meera's right hand (02-3 -> 02-4 -> 06-4). Non-blocking: the scene mentions 'a black office chair beside her' but no Ananya, although 02-2 and 02-4 have her seated at this desk. Read alone, the chair could suggest the room is empty. If the chair is a second chair, saying so would avoid confusion. Also, the open laptop named in the scene is not listed in 02-3 production.props.",
+    "02-4 (laptop screen toward the reader, blank fields): no text is shown and the section object rule is kept. Non-blocking continuity note: in 02-1 and 02-2 the screen faces Ananya (in 02-2 it is angled away from a three-quarter front camera). In 02-4 it faces the reader while sitting 'between them'. The laptop prop's before/during ('open on the desk') does not record any turning. Consider adding 'screen turned toward the reader' to props.during. The artwork check should confirm the spatial reading.",
+    "03-1 (Meera's left hand hidden) is consistent. The scene keeps her typing; hands.meera is left hidden, right typing; she is seen over her shoulder in the left foreground. The monitor faces the reader, who is on the staff side, which fits section.objects.monitor 'screen faces Meera'.",
+    "03-2 bag: 'hangs at his hip from the far shoulder' agrees with 03-1 (left hand on the strap), 03-3 ('far left shoulder') and 03-4 (left hand on the strap). Non-blocking: 03-2 does not name the shoulder as left, and production.props still omits shoulder-bag for this panel (carried over from r13 cosmetic note 1).",
+    "03-3 bag: Ravi is on the left facing Meera at screen-right, so his left shoulder is the far one. 'far left shoulder' is anatomically consistent.",
+    "04-3 (left hand over right) is consistent: the scene says 'hands folded'; hands.ananya.left reads 'folded over the right hand' and right reads 'folded under the left hand'; the closed-laptop prop agrees.",
+    "05-2 is consistent. The camera is now 'Medium close-up at eye level'. The hands are in Ravi's own terms, and with the screen toward the reader they fall correctly: his left hand at the phone's lower-right corner from the reader's side (screen-right) with the wristwatch, which matches the cast; his right hand on the phone's screen-left edge. The thinking glance to screen-right is recorded as deliberate, with Meera off-panel left. That matches 05-1 (Meera left / Ravi right), the monitor and plant in the left foreground (her side of the desk), and 05-3 (Meera left / Ravi right foreground). Phone chain: right hand (05-1) -> both hands (05-2) -> left hand (05-3, 05-4, 06-1). heldBy 'ravi.right' for a two-hand hold remains a cosmetic mismatch (r13 note 4).",
+    "06-3 is consistent. Ravi sits at left facing the reader, so his left hand is on the screen-right side. An arm along the sofa back behind his partner (centre), with the hand resting behind the child (right), is therefore anatomically plausible and matches hands.ravi.left. The right hand pointing at the tablet is a cross-body reach to the centre and stays deferred to artwork, as r13 noted.",
+    "Image-dependent items not certifiable from the script: whether the accepted art matches every revised scene description; the 03-1 -> 03-2 reverse-angle reading (storyboard and lettering readingReview); the 06-2 label and caption positions (lettering); the 06-3 cross-body hands (artwork)."
   ],
   "issues": [
     {
-      "problem": "r12: the 02-1 camera field said 'right shoulder' while the scene said left-shoulder over-the-shoulder framing.",
-      "location": "pages[02].panels[02-1].camera vs scene",
-      "resolved": true
+      "problem": "Screen direction of the waiting area contradicts itself within the same reverse-angle sequence. 03-2 now says Meera's left palm gestures 'toward the waiting area at screen-right'. 03-2's own transition.bridge fixes Ravi-left / Meera-right from 03-2 onward, with the camera on the patient side. Under that axis, 03-4 places 'the waiting chairs behind him (far left)', and Meera's right hand gestures that way. 03-1 also places the waiting chairs on the patient side, behind Ravi. Within one axis the waiting area cannot be screen-right in 03-2 and far-left in 03-4. A gesture toward the seats while asking for consent also anticipates the 03-4 beat ('Please have a seat') before Ravi has agreed (NARRATIVE-FLOW: do not pull a later action forward). Fix: re-describe the 03-2 gesture to match the accepted art without naming the waiting area, e.g. 'an open-palm explanatory gesture to screen-right'. Otherwise, if the art really shows seating at screen-right, reconcile 03-4 and 03-1 and record the reason.",
+      "location": "pages[03].panels[03-2].scene and production.hands.meera.left vs 03-4.scene / production.hands.meera.right and 03-2.transition.bridge",
+      "resolved": false
     },
     {
-      "problem": "r12: the 05-3 scene's grammar gave Ravi the gesturing and resting hands, which belong to Meera in production.hands.",
-      "location": "pages[05].panels[05-3].scene vs production.hands.meera / ravi",
-      "resolved": true
-    },
-    {
-      "problem": "r12: the 03-3 scene did not name ravi-phone lying on the desk or the bag recorded in production.props.",
-      "location": "pages[03].panels[03-3].scene vs production.props",
-      "resolved": true
-    },
-    {
-      "problem": "r12: the Meera/Ravi left-right flip between 03-1 and 03-2 was unexamined. It is now recorded as a deliberate reverse-angle with bridge and settingBasis, and visual confirmation is deferred to the storyboard readingReview of page 03. That stage must not treat this text record as visual proof.",
-      "location": "pages[03].panels[03-2].transition (03-1 -> 03-2)",
-      "resolved": true
+      "problem": "Monitor orientation is inconsistent and the change is not recorded. section reception.location says 'desktop monitor angled toward Meera', and section.objects.monitor says 'screen faces Meera'. 03-1 has it facing the staff-side camera, and 03-2 (the immediately preceding beat of the same exchange) has it 'angled away' from the patient-side camera. 03-3 now says it is 'angled toward the front of the desk so its blank fields face the reader and Ravi'. Its prop before/during give no turning action, and 03-4 gives no orientation. The sequence 03-2 -> 03-3 is continuous, yet the record contradicts its own section object. Fix: record the turn as part of the beat (e.g. Meera angles the screen toward Ravi so he can see only blank fields as she types, in prop before/during and the scene), or treat the 03-3 orientation as an art continuity defect for the artwork check. Do not leave the section text and the panel text in direct contradiction.",
+      "location": "pages[03].panels[03-3].scene and production.props[monitor] vs sections.reception.location / objects.monitor and 03-2 monitor prop",
+      "resolved": false
     }
   ],
   "dialogueReview": {
@@ -48,98 +41,98 @@
     "panels": [
       {
         "panel": "01-1",
-        "observation": "The source P1P1 caption 'A busy day at Dr. Ananya's clinic.' is used word for word as narration, and the columns rebuild it exactly. It names Dr. Ananya before her first line in 01-3. Nothing earlier depends on it."
+        "observation": "Source P1P1 caption 'A busy day at Dr. Ananya's clinic.' appears word for word as narration, and its two columns rebuild it exactly. It names Dr. Ananya before her first line in 01-3. Nothing earlier depends on it."
       },
       {
         "panel": "01-2",
-        "observation": "Source P1P2 is one Meera utterance, split at the ellipsis into two balloons, both hers. No other turn falls between them, the wording is unchanged and nothing is merged across speakers. The list sets up 'the rest' in 01-3."
+        "observation": "Source P1P2 is one Meera utterance, split at the ellipsis into two consecutive balloons, both hers, with no other turn between them. The wording is unchanged. The list ('Appointments, patient details, follow-ups...') sets up 'the rest' in 01-3."
       },
       {
         "panel": "01-3",
-        "observation": "The source P1P3 Ananya line is word for word. 'Let's make the rest simpler' answers Meera's wish in 01-2 (Meera is visible in the background), and 'the rest' refers to her list. This is the motive that page 2 pays off."
+        "observation": "Source P1P3 Ananya line is word for word. 'Let's make the rest simpler' answers Meera's 01-2 wish (Meera is in the background), and 'the rest' refers to her list. This is the motive that page 2 pays off."
       },
       {
         "panel": "02-1",
-        "observation": "The source P2P1 caption is word for word. 'WELBUK PRACTICE for the clinic' is a recorded manga label naming the product the source panel shows. It gives 'here' in 02-2 its referent. The camera and scene now agree."
+        "observation": "Source P2P1 caption is word for word, and its columns rebuild it. 'WELBUK PRACTICE for the clinic' is a recorded manga label naming the product in the source panel, and it gives 'here' in 02-2 its referent. The camera and scene now both say right shoulder; the revision changes no dialogue."
       },
       {
         "panel": "02-2",
-        "observation": "The source P2P2 Ananya line is word for word. 'here' refers to the laptop and the Practice label in 02-1. Nothing is omitted between 02-1 and 02-2."
+        "observation": "Source P2P2 Ananya line is word for word. 'here' refers to the laptop and the Practice label in 02-1. Nothing is omitted between 02-1 and 02-2."
       },
       {
         "panel": "02-3",
-        "observation": "The source P2P3 Meera line is word for word. 'And our team...' follows Ananya's 02-2 line across a real speaker change, exactly as in the source. The 'WELBUK CARE for clinic staff' label names the staff app the source describes."
+        "observation": "Source P2P3 Meera line is word for word. 'And our team...' follows Ananya's 02-2 line across a real speaker change, as in the source. The 'WELBUK CARE for clinic staff' label names the staff app. The office rewrite changes no text."
       },
       {
         "panel": "02-4",
-        "observation": "The source P2P4 Ananya line is word for word. It sums up 02-2 (the clinic) and 02-3 (the staff). Meera's nod is action only; no dialogue was added."
+        "observation": "Source P2P4 Ananya line is word for word. It sums up 02-2 (clinic) and 02-3 (staff). Meera's nod is action only; no dialogue was added."
       },
       {
         "panel": "03-1",
-        "observation": "The source P3P1 Ravi line is word for word. It is a request answered by 'Of course' in 03-2. Ravi does not give his name here; Meera first uses it in 03-4, after registration."
+        "observation": "Source P3P1 Ravi line is word for word. It is a request answered by 'Of course' in 03-2. Ravi is not named until Meera says his name in 03-4, after registration."
       },
       {
         "panel": "03-2",
-        "observation": "The source P3P2 Meera line is word for word. 'Of course' answers Ravi's 03-1 request, and the consent question comes before any data entry, as the source requires. The reverse-angle staging is recorded and does not change the dialogue."
+        "observation": "Source P3P2 Meera line is word for word. 'Of course' answers 03-1, and the consent question comes before any data entry. The dialogue is fine, but the staging text now points the gesture toward the waiting area, which conflicts with 03-4 and anticipates its 'have a seat' (see issues)."
       },
       {
         "panel": "03-3",
-        "observation": "The source P3P3 'Yes, please.' is word for word and answers the 03-2 consent question in the very next panel. No identifying data is written or shown; the monitor shows only blank fields."
+        "observation": "Source P3P3 'Yes, please.' is word for word and answers the 03-2 consent question in the very next panel. Only blank fields are named. The monitor orientation conflicts with the section record (see issues), but no dialogue depends on it."
       },
       {
         "panel": "03-4",
-        "observation": "The source P3P4 Meera line is word for word. She can use 'Ravi' because she has just registered his details. 'Please have a seat' leads to him being called in at 04-1."
+        "observation": "Source P3P4 Meera line is word for word. She can use 'Ravi' because she has just registered his details. 'Please have a seat' leads to him being called in at 04-1."
       },
       {
         "panel": "04-1",
-        "observation": "The source P4P1 Ananya line is word for word. 'Hello, Ravi' reuses the name from 03-4. The open question is answered in 04-2."
+        "observation": "Source P4P1 Ananya line is word for word. 'Hello, Ravi' reuses the name from 03-4, and the open question is answered in 04-2."
       },
       {
         "panel": "04-2",
-        "observation": "The source P4P2 'I've been feeling tired lately.' is word for word and answers 04-1 directly. There is no diagnosis or advice."
+        "observation": "Source P4P2 'I've been feeling tired lately.' is word for word and answers 04-1 directly. There is no diagnosis or advice."
       },
       {
         "panel": "04-3",
-        "observation": "The source P4P3 caption is word for word. It is a silent listening beat between Ravi's concern and Ananya's reply, and it splits no exchange."
+        "observation": "Source P4P3 caption is word for word, and its columns rebuild it. It is a silent listening beat between Ravi's concern and Ananya's reply and splits no exchange. The folded-hands revision changes no text."
       },
       {
         "panel": "04-4",
-        "observation": "The source P4P4 Ananya line is word for word. 'your concerns' refers back to 04-2. 'decide ... together' keeps the shared decision-making and gives no treatment details."
+        "observation": "Source P4P4 Ananya line is word for word. 'your concerns' refers back to 04-2. 'decide ... together' keeps the shared decision-making and gives no treatment detail."
       },
       {
         "panel": "05-1",
-        "observation": "The source P5P1 Meera line is word for word and names Welbuk Health before Ravi's question in 05-2. The return to reception is carried by the setting and the transition; the source also leaves it implicit."
+        "observation": "Source P5P1 Meera line is word for word, and its five columns rebuild it. It names Welbuk Health before Ravi's question in 05-2."
       },
       {
         "panel": "05-2",
-        "observation": "The source P5P2 question is word for word. 'So' follows from Meera's explanation in 05-1. The 'WELBUK HEALTH for patients' label completes the third product role."
+        "observation": "Source P5P2 question is word for word. 'So' follows from Meera's 05-1 explanation. The recorded thinking glance away from Meera does not change who is asked, because Meera answers it in 05-3. The 'WELBUK HEALTH for patients' label completes the third product role."
       },
       {
         "panel": "05-3",
-        "observation": "The source P5P3 Meera line is word for word. 'That's the idea' answers 05-2. 'what is available to you' is kept, so no unlaunched feature is implied."
+        "observation": "Source P5P3 Meera line is word for word. 'That's the idea' answers 05-2, and 'what is available to you' is kept, so no unlaunched feature is implied."
       },
       {
         "panel": "05-4",
-        "observation": "The source P5P4 caption is word for word. It closes a silent goodbye in which Ananya and Meera wave from the doorway. No reply is expected."
+        "observation": "Source P5P4 caption is word for word. It closes a silent goodbye with waves from the doorway. No reply is expected."
       },
       {
         "panel": "06-1",
-        "observation": "The source P6P1 caption is word for word and keeps the conditional 'may' that frames the hypothetical tomorrow."
+        "observation": "Source P6P1 caption is word for word and keeps the conditional 'may' that frames the hypothetical tomorrow."
       },
       {
         "panel": "06-2",
-        "observation": "The source-required 'WELBUK VISION' label comes before the word-for-word P6P2 caption, so the vision framing is read before the claim."
+        "observation": "The 'WELBUK VISION' label (source-required) comes first. The P6P2 caption is word for word after the rewrap: the three new columns join back exactly to 'The vision: trusted connections between clinics, specialists, and patients across locations.' No word, comma or colon changed."
       },
       {
         "panel": "06-3",
-        "observation": "The source P6P3 caption is word for word. The repeated 'WELBUK VISION' label is a recorded manga addition that keeps the family scene marked as vision, as the source disclaimer requires."
+        "observation": "Source P6P3 caption is word for word. The repeated 'WELBUK VISION' label is a recorded manga addition that keeps the family scene marked as vision, as the source disclaimer requires. The hand revision changes no text."
       },
       {
         "panel": "06-4",
-        "observation": "The source P6P4 product labels and final caption are word for word. They pick up the product introductions in 02-1, 02-3 and 05-2. No reader-thanks text is added."
+        "observation": "Source P6P4 product labels and final caption are word for word, and their columns rebuild them. They pick up the product introductions in 02-1, 02-3 and 05-2. No reader-thanks text is added."
       }
     ]
   },
-  "fingerprint": "2d98e4fbfa282ed3e2aa1b8147eae29371667ad5cf6b427d1a064711b16cdef0",
-  "recordedAt": "2026-11-11T08:30:36.079Z"
+  "fingerprint": "6ba4c112c365c6459c2688b9cb8acad3a5a197d4e04cbf34b680fb9dc9c183ee",
+  "recordedAt": "2026-11-11T08:51:56.062Z"
 }

@@ -435,7 +435,7 @@ const pages = [];
         beat: 'Meera discovers Welbuk Care for staff',
         rect: r3,
         scene:
-          'Tall medium shot in the same evening office: Meera stands beside the wooden desk (open laptop with blank abstract form, pen cup, plant; a black office chair beside her; window with a roller blind and evening sky at right), holding a staff smartphone in her right hand at upper-chest height, screen toward the reader showing only abstract blocks and a simple calendar icon (no text). Left hand relaxed at her side. She looks up from the phone with a bright smile.',
+          'Tall medium shot in the same evening office: Meera stands beside the wooden desk (open laptop with blank abstract form, pen cup, plant; an empty second office chair beside her (Dr. Ananya sits at the desk off-panel left); window with a roller blind and evening sky at right), holding a staff smartphone in her right hand at upper-chest height, screen toward the reader showing only abstract blocks and a simple calendar icon (no text). Left hand relaxed at her side. She looks up from the phone with a bright smile.',
         action: 'Meera looks up from the phone with a bright smile.',
         emotion: 'Relieved, excited.',
         camera: 'Tall medium shot, slightly from her right.',
@@ -446,7 +446,7 @@ const pages = [];
           before: 'Meera picked up the staff phone from the desk to try the staff app.',
           after: 'Both share a confident look (02-4).',
           hands: { meera: hands('relaxed at her side, empty', 'holding staff-phone at upper chest') },
-          props: [prop('staff-phone', 'on the desk', 'in Meera’s right hand, abstract staff screen', 'in Meera’s hand', 'meera.right')],
+          props: [prop('staff-phone', 'on the desk', 'in Meera’s right hand, abstract staff screen', 'in Meera’s hand', 'meera.right'), prop('laptop', 'open on the desk', 'open on the desk beside Meera, blank abstract form', 'open', 'none')],
         },
         speakers: { meera: speaker(r3, [190, 190, 120, 150]) },
         dialogue: [
@@ -476,7 +476,7 @@ const pages = [];
             meera: hands('relaxed at her side, empty', 'holding staff-phone at her side'),
           },
           props: [
-            prop('laptop', 'open on the desk', 'open on the desk', 'open', 'none'),
+            prop('laptop', 'open on the desk', 'open on the desk, Ananya has turned its screen toward Meera and the reader (blank fields only)', 'open', 'none'),
             prop('staff-phone', 'in Meera’s right hand', 'held at her side', 'in Meera’s hand', 'meera.right'),
           ],
         },
@@ -537,7 +537,7 @@ const pages = [];
         beat: 'Meera asks for consent to register',
         rect: r2,
         scene:
-          'Meera behind the tidy reception desk (desktop monitor at her side, screen angled away), gentle smile, left palm open gesturing toward the waiting area at screen-right as she asks; right hand resting on the desk. Ravi in the left foreground, seen over his shoulder (beard edge, green shirt; his bag hangs at his hip from the far shoulder), his right hand holding his dark-blue phone low at the desk edge.',
+          'Meera behind the tidy reception desk (desktop monitor at her side, screen angled away), gentle smile, left palm open in an explanatory gesture to screen-right as she asks; right hand resting on the desk. Ravi in the left foreground, seen over his shoulder (beard edge, green shirt; his bag hangs at his hip from the far shoulder), his right hand holding his dark-blue phone low at the desk edge.',
         action: 'Meera asks politely, leaning slightly forward.',
         emotion: 'Friendly, respectful.',
         camera: 'Tall medium shot, slightly from the left.',
@@ -552,7 +552,7 @@ const pages = [];
           moment: 'Meera asks for permission to register Ravi’s details.',
           before: 'Ravi greeted her and asked to see the doctor.',
           after: 'Ravi agrees (03-3).',
-          hands: { meera: hands('open palm gesturing toward the waiting area at screen-right', 'resting flat on the desk') },
+          hands: { meera: hands('open palm in an explanatory gesture to screen-right', 'resting flat on the desk') },
           props: [prop('monitor', 'on the desk', 'on the desk, screen angled away', 'on the desk', 'none')],
         },
         speakers: { meera: speaker(r2, [180, 280, 125, 160]) },
@@ -567,7 +567,7 @@ const pages = [];
         beat: 'Ravi agrees; Meera enters essential details',
         rect: r3,
         scene:
-          'Wide two-shot across the reception desk: Ravi (left), bag strap over his far left shoulder, nods with a smile, both hands on the desk edge and his dark-blue phone lying on the desk in front of him; Meera (right) types on the keyboard, the monitor between them is angled toward the front of the desk so its blank fields face the reader and Ravi; she glances at it from the side. No papers with writing, no ID cards.',
+          'Wide two-shot across the reception desk: Ravi (left), bag strap over his far left shoulder, nods with a smile, both hands on the desk edge and his dark-blue phone lying on the desk in front of him; Meera (right) types on the keyboard, Meera has turned the monitor toward the front of the desk so Ravi can see that only blank fields are being filled in; she glances at it from the side as she types. No papers with writing, no ID cards.',
         action: 'Ravi nods; Meera begins typing.',
         emotion: 'Trusting, easy.',
         camera: 'Medium-wide two-shot, eye level, desk across the lower third.',
@@ -583,7 +583,7 @@ const pages = [];
           },
           props: [
             prop('shoulder-bag', 'on Ravi’s shoulder', 'on his shoulder', 'on his shoulder', 'none'),
-            prop('monitor', 'on the desk', 'angled toward the desk front, blank fields toward the reader', 'on the desk', 'none'),
+            prop('monitor', 'facing Meera on the desk', 'turned by Meera toward the desk front so Ravi sees only blank fields', 'turned back toward Meera (03-4)', 'none'),
           ],
         },
         speakers: {
@@ -1068,7 +1068,10 @@ const MEASURED = {
   '03-2': {
     speakers: { meera: F(782, 230, 67, 76, 809, 287), ravi: F(645, 217, 49, 81, 683, 291) },
     hands: { ravi: hands('out of frame', 'holding ravi-phone low at the desk (foreground)') },
-    addProps: [prop('ravi-phone', 'in Ravi’s pocket as he arrives (not visible in 03-1)', 'held low at the desk in the foreground', 'set down on the desk', 'ravi.right')],
+    addProps: [
+      prop('ravi-phone', 'in Ravi’s pocket as he arrives (not visible in 03-1)', 'held low at the desk in the foreground', 'set down on the desk', 'ravi.right'),
+      prop('shoulder-bag', 'on Ravi’s left shoulder', 'hanging at his hip from his far left shoulder', 'on his left shoulder', 'none'),
+    ],
   },
   '03-3': {
     speakers: { ravi: F(238, 668, 95, 120, 285, 770), meera: F(752, 688, 85, 100, 790, 770) },
