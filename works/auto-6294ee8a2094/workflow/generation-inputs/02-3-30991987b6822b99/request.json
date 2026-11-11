@@ -1,0 +1,23 @@
+{
+  "promptVersion": 2,
+  "panel": "02-3",
+  "project": "works/auto-6294ee8a2094/workflow.json",
+  "fingerprint": "2aa6305e06c8a0ab150cfabc9048eb857583a49b0f2334726d81e4805fd1f623",
+  "operation": "edit",
+  "sourceHash": "6294ee8a20944646ae8401695eeb8ea6cab68725127d488e11e4dae584d40adb",
+  "prompt": "TASK: Edit image 1. This is a local revision of the supplied artwork.\nINPUT IMAGES (in supplied order):\nImage 1: edit-target. Base image to edit; requested changes take precedence over preservation.\nCHANGE REQUEST:\nZoom out and lower the framing so Meera appears smaller and sits lower in the image: leave the top 45% of the image as plain, empty light wall with nothing in it (space for a speech balloon). Keep Meera's identity, pose, bright smile, braid over her left shoulder, silver bangle on her right wrist, blue kurta, the staff phone held in her right hand at upper-chest height with its abstract calendar screen, the laptop on the desk and the evening window. Keep the image aspect. No text.\nPRESERVE: retain all areas, identity traits, acting, clothing, composition and lettering space outside the requested change. The change request overrides preservation where necessary; repair connected anatomy, contact objects and occlusion together. Supporting images supply only their stated roles. Do not copy their entire scene or pose.\nOUTPUT: one edited image matching the target aspect. Do not add text, guide marks or a global style filter. Re-measure faces and mouths and inspect lettering space after adoption.",
+  "promptHash": "4f53fce3f55ebb961621972f765984b4b7068c924828cdcf8a0aaf45f52e2a40",
+  "references": [
+    {
+      "file": "works/auto-6294ee8a2094/workflow/generation-inputs/02-3-30991987b6822b99/reference-0.png",
+      "hash": "d91b18e0086b1493c551c4e995d5ee659932de025084301246118d91153d94cb",
+      "original": "works/auto-6294ee8a2094/assets/generated/02-3-d91b18e0086b1493.png",
+      "index": 1,
+      "kind": "edit-target",
+      "role": "Base image to edit; requested changes take precedence over preservation."
+    }
+  ],
+  "renderer": "Higgsfield gpt_image_2_6",
+  "model": "gpt_image_2_6",
+  "seed": null
+}

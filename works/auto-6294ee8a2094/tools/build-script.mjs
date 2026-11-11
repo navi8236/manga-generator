@@ -352,7 +352,7 @@ const pages = [];
         },
         speakers: { ananya: speaker(r3, [130, 390, 140, 175]) },
         dialogue: [
-          line('ananya', ['Our time belongs', 'with patients.', "Let's make the", 'rest simpler.'], 18, 180),
+          line('ananya', ['Our time belongs', 'with patients.', "Let's make the", 'rest simpler.'], 18, 24),
         ],
       },
     ],
@@ -482,7 +482,7 @@ const pages = [];
           ananya: speaker(r4, [300, 175, 120, 150]),
           meera: speaker(r4, [600, 160, 115, 145]),
         },
-        dialogue: [line('ananya', ['One team.', 'Better coordination.'], 40, 20)],
+        dialogue: [line('ananya', ['One team.', 'Better', 'coordination.'], 400, 20)],
       },
     ],
   });
@@ -550,7 +550,7 @@ const pages = [];
         },
         speakers: { meera: speaker(r2, [180, 280, 125, 160]) },
         dialogue: [
-          line('meera', ['Of course.', 'May I register', 'your details for', "today's", 'appointment?'], 16, 16),
+          line('meera', ['Of course. May I', 'register your details', "for today's", 'appointment?'], 16, 12),
         ],
       },
       {
@@ -583,7 +583,7 @@ const pages = [];
           ravi: speaker(r3, [220, 170, 120, 150]),
           meera: speaker(r3, [640, 180, 115, 145]),
         },
-        dialogue: [line('ravi', ['Yes, please.'], 30, 24)],
+        dialogue: [line('ravi', ['Yes, please.'], 8, 16)],
       },
       {
         id: '03-4',
@@ -612,7 +612,7 @@ const pages = [];
           ravi: speaker(r4, [220, 175, 110, 140]),
           meera: speaker(r4, [640, 165, 120, 150]),
         },
-        dialogue: [line('meera', ["You're all set, Ravi.", 'Please have a seat.'], 600, 16)],
+        dialogue: [line('meera', ["You're all set, Ravi.", 'Please have a seat.'], 600, 8)],
       },
     ],
   });
@@ -665,7 +665,7 @@ const pages = [];
           ananya: speaker(r1, [260, 190, 125, 160]),
           ravi: speaker(r1, [650, 205, 115, 150]),
         },
-        dialogue: [line('ananya', ['Hello, Ravi.', 'Tell me what', 'brings you in.'], 30, 20)],
+        dialogue: [line('ananya', ['Hello, Ravi.', 'Tell me what', 'brings you in.'], 330, 16)],
       },
       {
         id: '04-2',
@@ -743,7 +743,7 @@ const pages = [];
           ravi: speaker(r4, [660, 190, 115, 145]),
         },
         dialogue: [
-          line('ananya', ["We'll go through your concerns", 'and decide the right', 'next steps together.'], 30, 16),
+          line('ananya', ["We'll go through", 'your concerns and', 'decide the right', 'next steps together.'], 380, 8),
         ],
       },
     ],
@@ -798,7 +798,7 @@ const pages = [];
           ravi: speaker(r1, [620, 210, 120, 150]),
         },
         dialogue: [
-          line('meera', ['Welbuk Health is designed', 'to help patients stay', 'connected with their care.'], 30, 20),
+          line('meera', ['Welbuk Health is', 'designed to help', 'patients stay', 'connected with', 'their care.'], 24, 20),
         ],
       },
       {
@@ -826,7 +826,7 @@ const pages = [];
         speakers: { ravi: speaker(r2, [340, 200, 140, 175]) },
         dialogue: [
           line('ravi', ['So I can keep useful', 'information in', 'one place?'], 20, 20),
-          line('label', ['WELBUK HEALTH', 'for patients'], 20, 440),
+          line('label', ['WELBUK HEALTH', 'for patients'], 0, 440),
         ],
       },
       {
@@ -879,7 +879,7 @@ const pages = [];
           ],
         },
         speakers: { ravi: speaker(r4, [560, 130, 100, 130]) },
-        dialogue: [line('narration', ['A smoother visit.', 'A more connected experience.'], 24, 18)],
+        dialogue: [line('narration', ['A smoother visit. A more connected experience.'], 24, 10)],
       },
     ],
   });
@@ -925,7 +925,7 @@ const pages = [];
           props: [prop('ravi-phone', 'in his hand', 'in his lap', 'in his lap', 'ravi.left')],
         },
         speakers: { ravi: speaker(r1, [250, 180, 120, 150]) },
-        dialogue: [line('narration', ['Tomorrow, care may', 'take us beyond', 'our hometown.'], 16, 16)],
+        dialogue: [line('narration', ['Tomorrow,', 'care may take us', 'beyond our', 'hometown.'], 16, 16)],
       },
       {
         id: '06-2',
@@ -950,7 +950,7 @@ const pages = [];
         speakers: { specialist: speaker(r2, [324, 250, 105, 135]) },
         dialogue: [
           line('label', ['WELBUK VISION'], 16, 12),
-          line('narration', ['The vision: trusted', 'connections between', 'clinics, specialists,', 'and patients', 'across locations.'], 16, 98),
+          line('narration', ['The vision:', 'trusted', 'connections', 'between clinics,', 'specialists, and', 'patients across', 'locations.'], 16, 98),
         ],
       },
       {
@@ -1023,13 +1023,100 @@ const pages = [];
           ravi: speaker(r4, [610, 255, 120, 150]),
         },
         dialogue: [
-          line('label', ['Welbuk Practice • Welbuk Care • Welbuk Health'], 24, 24),
+          line('label', ['Welbuk Practice •', 'Welbuk Care •', 'Welbuk Health'], 680, 20),
           line('narration', ['Welbuk — Building a connected', 'healthcare ecosystem.'], 24, 490),
         ],
       },
     ],
   });
 }
+
+
+// Re-measured on the accepted artwork (page coordinates). Faces include every
+// visible cast member; "head" marks a visible back of head without a face.
+const F = (x, y, w, h, ax, ay) => ({ face: [x, y, w, h], anchor: [ax, ay] });
+const HEAD = (ax, ay) => ({ kind: 'head', anchor: [ax, ay] });
+const MEASURED = {
+  '01-1': { speakers: { ananya: F(398, 170, 52, 64, 423, 222) } },
+  '01-2': { speakers: { meera: F(318, 945, 85, 100, 358, 1028) } },
+  '01-3': {
+    speakers: { ananya: F(855, 945, 72, 90, 882, 1022), meera: F(680, 1080, 45, 55, 703, 1125) },
+    hands: { meera: hands('holding the desk-phone receiver to her ear (background)', 'writing in the register (background)') },
+  },
+  '02-1': { speakers: { ananya: F(300, 165, 110, 145, 372, 290) } },
+  '02-2': { speakers: { ananya: F(365, 655, 105, 115, 425, 752) } },
+  '02-3': { speakers: { meera: F(855, 802, 46, 56, 874, 847) }, protected: [[821, 844, 27, 40]] },
+  '02-4': {
+    speakers: { ananya: F(325, 1170, 72, 90, 367, 1245), meera: F(700, 1130, 70, 88, 737, 1200) },
+    protected: [[668, 1365, 62, 80]],
+  },
+  '03-1': {
+    speakers: { ravi: F(405, 62, 78, 90, 450, 135), meera: F(92, 222, 68, 100, 148, 300) },
+    hands: { meera: hands('typing on the keyboard', 'typing on the keyboard') },
+  },
+  '03-2': {
+    speakers: { meera: F(772, 238, 92, 95, 815, 315), ravi: F(628, 225, 62, 80, 668, 290) },
+    hands: { ravi: hands('out of frame', 'holding his phone low at the desk (foreground)') },
+  },
+  '03-3': { speakers: { ravi: F(238, 668, 95, 120, 285, 770), meera: F(752, 688, 85, 100, 790, 770) } },
+  '03-4': { speakers: { ravi: F(255, 1108, 92, 112, 300, 1200), meera: F(762, 1212, 75, 82, 795, 1280) } },
+  '04-1': { speakers: { ananya: F(252, 62, 70, 90, 283, 140), ravi: F(733, 55, 75, 92, 770, 130) } },
+  '04-2': {
+    speakers: { ravi: F(330, 628, 95, 135, 380, 735), ananya: HEAD(60, 720) },
+    hands: { ananya: hands('out of frame', 'out of frame') },
+  },
+  '04-3': {
+    speakers: { ananya: F(645, 738, 115, 100, 705, 820), ravi: HEAD(950, 720) },
+    hands: { ravi: hands('out of frame', 'out of frame') },
+  },
+  '04-4': { speakers: { ananya: F(297, 1140, 62, 90, 327, 1212), ravi: F(723, 1132, 66, 90, 757, 1205) } },
+  '05-1': {
+    speakers: { meera: F(367, 128, 96, 111, 428, 232), ravi: F(572, 114, 131, 118, 641, 191) },
+    protected: [[528, 277, 66, 94]],
+  },
+  '05-2': { speakers: { ravi: F(369, 614, 147, 169, 423, 739) }, protected: [[297, 805, 115, 208]] },
+  '05-3': {
+    speakers: { meera: F(691, 741, 111, 125, 761, 838), ravi: HEAD(970, 760) },
+    protected: [[890, 898, 79, 120]],
+    hands: { ravi: hands('holding his phone (foreground right)', 'out of frame') },
+  },
+  '05-4': {
+    speakers: {
+      ravi: F(755, 1164, 70, 85, 786, 1229),
+      ananya: F(291, 1239, 51, 52, 316, 1282),
+      meera: F(370, 1255, 45, 49, 392, 1296),
+    },
+    hands: {
+      ananya: hands('relaxed at her side', 'raised, waving from the doorway'),
+      meera: hands('raised, waving from the doorway', 'relaxed at her side'),
+    },
+  },
+  '06-1': { speakers: { ravi: F(313, 105, 94, 108, 349, 195) } },
+  '06-2': { speakers: { specialist: F(819, 132, 73, 81, 865, 195) } },
+  '06-3': {
+    speakers: {
+      ravi: F(462, 501, 115, 129, 526, 610),
+      partner: F(609, 514, 108, 122, 666, 617),
+      child: F(742, 585, 89, 96, 786, 662),
+    },
+    protected: [[583, 681, 159, 103]],
+  },
+  '06-4': {
+    speakers: {
+      meera: F(344, 925, 54, 68, 371, 980),
+      ananya: F(481, 906, 62, 76, 512, 968),
+      ravi: F(638, 894, 61, 73, 668, 955),
+    },
+  },
+};
+for (const page of pages)
+  for (const panel of page.panels) {
+    const m = MEASURED[panel.id];
+    if (!m) continue;
+    panel.speakers = m.speakers;
+    if (m.protected) panel.protected = m.protected;
+    if (m.hands) Object.assign(panel.production.hands, m.hands);
+  }
 
 config.pages = pages;
 fs.writeFileSync(file, JSON.stringify(config, null, 2) + '\n');
