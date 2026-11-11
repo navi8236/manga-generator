@@ -1,0 +1,179 @@
+{
+ "_reviewerNote": "I don't have a runtime subagent/task identity, so every reviewer.task is null. You need to supply the real task identity before running stage-review record, because the CLI rejects records without one. No request file had an 'instructions' field. I used the response format that cli/stage-review.mjs prepare emits and record validates: request, reviewer, status, observations (2 or more), issues. What I actually read: the full 05-1 request JSON; grep extracts of the scene and production fields from the 06-1 and 07-1 requests, which carry the page 6 and page 7 script blocks; the file lists of all twelve requests, each of which lists its own panel PNG plus page-0N.svg. I opened these images with Read and looked at them: assets/characters/main-cast.png, assets/characters/vision-cast.png, assets/panels/04-2.png, 04-3.png, 05-1 to 05-4, 06-1 to 06-4 and 07-1 to 07-4. I did not open source/original.txt, nurse.png, checkin-patients.png or the storyboard SVGs (page-05/06/07.svg). The Nurse, Mr. Raman and Priya do not appear in these panels. I inspected each PNG at the size Read displayed it and did not zoom in further.",
+ "05-1": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-05-1-6649ee5d9353cb632b150b0c6601c01f757aaa7cd0fb80eaba4454bae8f42580.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Ananya, seated at left, matches main-cast.png: low bun with loose strands, gold stud, almond eyes with heavy lids, level brows, oval face. She wears a teal kurta under an open white coat with the stethoscope around her neck and not in use.",
+   "Hands match the production plan. Ananya's left hand (the far arm, screen-right of her torso) is an open palm toward Ravi, and her right hand rests flat on the desk. Ravi's left hand, wearing the wristwatch, grips the armrest on screen right, and his right hand rests on his knee.",
+   "Ravi at right matches the sheet: side-parted short hair, thick straight brows, trimmed beard, light green shirt with rolled sleeves, dark trousers. His dark-brown shoulder bag is on the floor beside the chair at bottom right, consistent with 04-2, where it sat on the floor of the vitals corner.",
+   "Tablet boundary: there is no tablet anywhere in the frame or on the desk. The closed silver laptop is pushed to the left edge of the desk. The handoff from 04-3 (Ananya holding the tablet) to the tablet being put away works.",
+   "The room carries over from 04-3: bright wall, window with greenery, a potted plant on the sill. The details differ. In 04-3 Ananya's chair is dark grey, here it is blue, and the striped plant pot becomes a white pot with trailing pothos. This is a minor background variance and does not break the reading of the same room on the same visit. There is no text in the frame."
+  ],
+  "issues": []
+ },
+ "05-2": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-05-2-0e44ab59629e38f01bdfe8081f89208383a853acdcb6f819075d7a2abe4c6cbf.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "In the left foreground, the back of Ananya's head shows the low bun, gold stud and white-coat shoulder, with a dark line that reads as the stethoscope tube. This matches the 'head' speaker setup.",
+   "Ravi faces screen-left toward the doctor. His right hand, on the screen-left arm, rubs the back of his neck. His left hand, with the watch, rests on his knee. Both match the production plan. His face traits (creased eyes, thick brows, square bearded jaw) match the sheet.",
+   "His expression is a sheepish open-mouthed smile. That leans more cheerful than 'slightly tired', but it fits the 'a little sheepish' direction and shows no diagnosis or medical claim.",
+   "The closed laptop sits on the desk behind. There is no tablet. The window and plant use a blue-striped pot like 04-3. No text.",
+   "Minor non-blocking variance: the patient chair here is a blue office chair with black plastic armrests, while 05-1 shows a wooden-armed armchair with a blue cushion. The bag is out of frame, which is acceptable for this framing."
+  ],
+  "issues": []
+ },
+ "05-3": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-05-3-e8fdf77a46d1988396a724a11dde0f931e7e5624737b80948c424e3d5b7049dd.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Ananya leans slightly forward at the desk with her hands folded on the desktop and a gentle closed-mouth smile. Small nod marks beside her head show the mid-nod moment. Her face traits, low bun, gold stud, teal kurta, white coat and stethoscope around her neck all match the sheet.",
+   "The back of Ravi's head (short dark hair, beard edge visible) and his green-shirted shoulder fill the right foreground. This keeps the Ananya-left / Ravi-right screen direction from 05-1.",
+   "The hands are folded and stacked with no extra or fused fingers visible. At this display size I could not confirm which hand is on top (the plan has right over left). That is acceptable for a folded-hands pose.",
+   "The closed laptop edge is visible at bottom left, and there is no tablet. A pen cup and a blank blue folder sit at left with no text. Ananya's chair is dark grey here, as in 04-3, against blue in 05-1 and 05-4. This is a minor background variance."
+  ],
+  "issues": []
+ },
+ "05-4": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-05-4-c2efa4fa8c5e4c74d5980523bb602679f06a45fd626c1be0f0174358c7b18acb.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Two-shot that mirrors 05-1. Ananya at left makes an open reassuring gesture with her left hand, and her right hand rests on the desk. Ravi at right nods (nod marks beside his head) with both hands on his knees and the watch on his left wrist.",
+   "The bag sits on the floor beside Ravi's chair at bottom right, consistent with 05-1 and set up for being back on his shoulder in 06-1. The closed laptop is on the desk. There is no tablet, no prescription and no instrument in use. The stethoscope stays around her neck.",
+   "Identities match the sheets for both characters. The window and plant are present. No text.",
+   "Minor non-blocking variance: the patient chair is again drawn differently, a blue-framed chair with wooden legs and different from both 05-1 and 05-2. The reading flow is unaffected."
+  ],
+  "issues": []
+ },
+ "06-1": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-06-1-fa92579458052492c7b838b72ee6392e327fba44ad9ba2b5f3b2bd5f974013b8.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Back at reception: desk, a monitor seen at an angle (dark, no content), keyboard, teal waiting chairs with figures seen from behind. This works as the place change out of the consultation room.",
+   "Meera at left matches the sheet: round face, large eyes, side braid, small hoop earring, patterned blue kurta. She points with her right index finger (the wrist with the silver bangle) at Ravi's phone, and her left hand rests on the desk, as planned.",
+   "Ravi holds the dark-blue-cased phone in his right hand, screen facing away, so no content is visible. His left hand, with the watch, rests on the desk edge. The bag is back on his shoulder, which continues from the 05-4 plan.",
+   "No tablet appears and no doctor-room props carry over. The top-left white area is blank, presumably reserved for lettering. No drawn text."
+  ],
+  "issues": []
+ },
+ "06-2": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-06-2-41abcfc1b7a2dc2c4461691e017425c0348483b70dc8ee1ec2cbce445ec90bed.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Ravi holds the phone in both hands at chest height with the screen toward the reader. The screen shows two rounded cards with a calendar icon, a heart icon and blank blocks. There is no text and no personal data.",
+   "His left hand, with the watch, supports the lower right corner, and his right hand wraps the left edge, matching the plan. He glances up and to screen-right with a hopeful smile, the deliberate thinking glance the plan asks for.",
+   "Identity matches the sheet, and the bag strap is on the same shoulder as in 06-1. The background shows the reception monitor, a plant and waiting patients from behind. These chairs are blue rather than the teal of 06-1 and 06-3, a minor variance."
+  ],
+  "issues": []
+ },
+ "06-3": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-06-3-faca03b88b332a5f5bab3073f0e401fa789d63dc142f302771b7c0f2646b9000.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Meera faces screen-right with a warm open-mouthed smile. Her right hand, with the bangle, makes an open gesture toward the phone, and her left hand rests on the desk. Braid, hoop earring and kurta all match the sheet.",
+   "In the right foreground, Ravi is seen from behind (hair, beard edge, green shoulder) and holds the phone in his left hand, which wears the watch. This keeps the Meera-left / Ravi-right direction from 06-1.",
+   "The phone screen shows a calendar-icon card and a person-icon card with abstract stroke lines. There are no readable characters. Reception background with teal chairs and seated figures from behind."
+  ],
+  "issues": []
+ },
+ "06-4": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-06-4-252b55e469c29f582ad644294d7b32362b4dbc71a2c38a33edf57fa03a8b0387.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Street-side clinic entrance in sun, with a teal awning, planters and tree shadows. Ravi walks right while looking back. He waves with his raised right hand and holds the dark-blue phone low in his left hand, which wears the watch. The bag is on his shoulder. All of this matches the plan.",
+   "Ananya and Meera wave from the glass doorway at left. Ananya waves with her right hand and Meera with her left. Ananya wears the white coat, teal kurta and stethoscope. Meera has her braid over her left shoulder. Both are recognisable at small scale.",
+   "No tablet appears. A blank top-left area is left for lettering, and there is no signage or text on the building."
+  ],
+  "issues": []
+ },
+ "07-1": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-07-1-25153db0b417e6b30f2a91c8dd87c715ce5a356cfae8a4563494e640d38700fe.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Ravi sits on a blue train seat by a barred window and looks out calmly. His right elbow rests on the window ledge with his hand at his chin, and his left hand, with the watch, holds the phone in his lap. Both match the plan.",
+   "Outside, a softly blurred Indian city skyline with a domed building passes by. There are no signs or text. Costume and bag match 06-4. A luggage rack with a bag is overhead.",
+   "This panel is in the normal palette with no vignette, which keeps it separate from the vision panels 07-2 and 07-3. A blank top-left area is reserved for the caption."
+  ],
+  "issues": []
+ },
+ "07-2": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-07-2-2b5ef248bd1c9257b373bfd8e18ab14b06c5c8abf08a83772a030f5dcc5731e5.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "The specialist matches vision-cast.png: grey temples, rimless rectangular glasses, bushy salt-and-pepper brows, long face with smile lines, grey moustache, light grey blazer over a pale blue shirt, stethoscope around his neck and not in use.",
+   "His right hand is an open welcoming palm and his left hangs empty at his side, matching the plan. Hands and fingers are formed correctly.",
+   "There is a soft pale-blue rounded vignette border. Dotted lines link three small clinic silhouettes in the sky, and a modern glass clinic stands behind him in an airy, light palette. There are no logos and no text on the fascia."
+  ],
+  "issues": []
+ },
+ "07-3": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-07-3-428a7452fa0c936d1022a692dc255f33ff152e6277f1427827e3933931c52971.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Ravi is at left, the partner in the centre and the child at right on a sofa, all smiling. The partner matches the sheet: wavy shoulder-length hair, hoop earrings, a mole under her right eye, mustard kurta. The child has an orange T-shirt and khaki shorts.",
+   "The partner holds the tablet in both hands. It shows three profile circles and a heart icon, with no text. Ravi's right hand points gently at it. His left arm, with the watch, runs along the sofa back behind the partner, and the hand rests behind the child. The arm is long but reads plausibly.",
+   "The child leans in with one hand on the partner's arm and one low near the cushion. Both of the child's hands appear on screen-left of his body, so the left/right assignment is ambiguous at this angle. This is not a visible anatomical defect.",
+   "Like 07-2, the panel uses a soft pale-blue vignette fade on the left and top, a lighter palette, and dotted lines to clinic silhouettes, so it reads as part of the vision and not a current feature."
+  ],
+  "issues": []
+ },
+ "07-4": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-07-4-afba89fcd7cc0cfb36d3f1b659c2a128a31e2760bdba01b14f22565fc4714682.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Present-day group portrait in front of the clinic with a teal awning, planters and a glass entrance, in the normal palette with no vignette. There is a sky band at the top and an empty pavement band at the bottom for captions.",
+   "Meera, at left, holds the staff phone at her side in her right hand (bangle visible), and her left hand hangs empty. Ananya, in the centre, has her hands clasped in front. Ravi, at right, gives a small wave with his right hand, and his left hand, with the watch, hangs at his side. The bag is on his shoulder. All of this matches the plan.",
+   "All three match main-cast.png in face, hair and costume, including Ananya's stethoscope and sandals and Meera's braid and churidar. There is no text or signage. A framed picture inside the clinic is blank."
+  ],
+  "issues": []
+ }
+}
