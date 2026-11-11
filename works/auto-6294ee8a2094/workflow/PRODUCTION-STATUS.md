@@ -1,35 +1,45 @@
-# A Better Way to Care — Welbuk: production status (2026-11-05)
+# A Better Way to Care — Welbuk: production status (2026-11-11)
 
 Work: `works/auto-6294ee8a2094` (MANGA_PROJECT=works/auto-6294ee8a2094/workflow.json)
-Renderer declared: `ComfyUI+Qwen-Image-Edit-2511-FP8`. Status: **incomplete, blocked at image generation.**
+Status: **complete** (`node cli/auto.mjs finish` passed; see `automation.json`).
 
-## Done
-- Source registered (`auto start`), full six-page English, left-to-right, full-colour script:
-  23 panels, cast with three face traits each, sections, production moment/hands/props,
-  readingFlow, transitions. Generator: `tools/build-script.mjs` (run via `history run`).
-- Source coverage: `workflow/source-coverage.json` (25 contiguous UTF-16 spans).
-- `workflow check` OK; `production-audit work` 0 preflight warnings.
-- Storyboards, unnumbered storyboards and panel layout PNGs exported (`workflow plan`).
-- Independent manga-reviewer subagent reviews (responses in `workflow/stage-reviews/responses/`):
-  - source/all: pass.
-  - script/all: r1 changes-requested (phone props) -> fixed; r2 pass (staled by storyboard edits);
-    r3 changes-requested (screen direction pages 4-5, bag continuity) -> fixed; r4 pass (current).
-  - storyboard first (image-only) readings: r1 all pages, r2 all pages, r3 pages 01/04/05 recorded.
-    Fixes made from them: Meera tail/order on 01-2, label border on 02-1, Ravi/Meera sides on 03-4,
-    distinct product/vision label style.
-  - Reviewer task IDs are the Agent IDs returned to the parent; subagents reported their own as UNAVAILABLE.
+## Deliverables
+- Six page PNGs: `output/page-01.png` … `output/page-06.png` (SVG alongside).
+- HTML reader: `output/reader.html` (left-to-right English reader; `output/index.html`).
+- PDF: `output/pdf/manga.pdf` (6 A5 pages; `pdf.mjs verify`: embedded pixels match the PNGs).
+- Layers for external editing: `output/layers/`.
+- Reproducibility lock: `workflow.lock.json` (sha256 a10bf06b…).
+- Release package: `releases/auto-6294ee8a2094-v8-a10bf06b.tar.gz`
+  (sha256 a33c6098d8277b504f2a70c65bc0e9e9ca786a54db7f5d493e6c475540c5e6fd, 314 MB).
+  It is not in git: `releases/` is gitignored and the file exceeds GitHub's 100 MB limit.
+  All its inputs are committed; rebuild it with `node cli/reproduce.mjs bundle --compressed`
+  (the lock makes the archive contents verifiable by hash).
 
-## Blocked
-- `stage-review prepare storyboard NN` requires the canonical character sheets
-  (`assets/characters/main-cast.png`, `assets/characters/vision-cast.png`), which must be generated.
-- Image generation is unavailable in this session: see `workflow/blockers/image-generation.md`.
-- Not done: character sheets, storyboard comparison reviews + seal, 23 panel generations and
-  artwork reviews, layout remeasure, lettering reviews, quality review, build/export, PDF and PDF
-  inspection, final review, `auto finish`, freeze/bundle reproducibility package.
+## How it was made
+- Renderer: Higgsfield `gpt_image_2_6` (ComfyUI was impossible here: no GPU, huggingface.co blocked;
+  the user approved Higgsfield). Every generation/edit is saved with its exact request, job ID,
+  reference IDs and image hash (`assets/candidates/*/*.run.json`, `workflow/higgsfield-jobs.json`,
+  `workflow/generation-log.json`). 23 panels, plus targeted edits recorded in `workflow/edits/`.
+- English dialogue is composed by the shared lettering code, never painted into the art.
+- Independent manga-reviewer subagent reviews for every stage (`workflow/stage-reviews/responses/`):
+  source, script (r16 pass), storyboard first readings + comparisons, artwork for all 23 panels,
+  lettering first readings + comparisons, final first reading + final comparison (pass).
+  Reviewer task IDs are the Agent IDs returned to the parent; subagents reported none.
+- Image-only first readings were recorded before every comparison (two-phase reading protocol).
+- Quality review (eight checks + face identity) for every panel: `workflow/quality/*.review.json`.
+- PDF inspected page by page after Poppler rendering: `workflow/pdf-inspection.json`.
 
-## Notes for the storyboard comparison (open first-reading points)
-- 04-2/04-3 face boxes: Ravi's single shot is in the left panel and Ananya's in the right; scene text
-  fixes facing (Ravi screen-left, Ananya screen-right). Consider moving the face boxes so the two
-  look at each other across the gutter if the comparison reviewer agrees.
-- Transitions without source captions (02-4->03-1, 03-4->04-1, 04-4->05-1, 06-3->06-4) depend on art.
-- 05-2: add "bag strap on his shoulder" (non-blocking script note).
+## Fixes made from reviews (summary)
+- Lettering: 03-1 tail rerouted off Ravi's hand; 03-4/05-3 tails made visible; 04-3 caption off
+  Ananya's head; 02-1 label/caption cover blank art; 06-2 caption moved so the welcoming hand shows.
+- Art edits: 02-3 reframed in the evening office; 02-4 blank corner filled and relit to evening;
+  03-1 braid side; 03-2/03-3 bag shoulder and bangle wrist; 03-3 cream counter;
+  01-1 clinic exterior matched to the later teal-awning entrance (door opened);
+  01-2/01-3 window awning made teal. 05-2 eyeline edit was rejected; the glance is recorded as deliberate.
+- Records (scene/hands/props) repeatedly corrected to match the accepted art.
+
+## Known minor, accepted points (reviewers judged non-blocking)
+- Waiting-chair style varies on page 1 and page 4; Ananya's bun reads looser in some front views.
+- The navy reception phone in 03-1 resembles Ravi's phone.
+- Source wording kept verbatim (e.g. "Our time belongs with patients").
+- AI image generation is non-deterministic; the reproducible part is composition from the adopted art.
