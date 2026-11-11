@@ -35,7 +35,7 @@ config.narrativeDesign = {
 config.style =
   'Full-colour, approachable Indian slice-of-life manga. Clean confident line art with varied line weight, soft flat cel shading, warm natural daylight, restrained blue and teal accents, simple readable backgrounds. Expressive but natural faces, precise hands. No photorealism, no glossy gradients, no surface microtexture. Absolutely no text, letters, logos, numbers, speech bubbles or captions inside the artwork; device screens show only abstract blank blocks and simple icons.';
 config.continuity =
-  'Keep Dr. Ananya, Meera and Ravi identical to their canonical reference sheets in face traits, hair, build, skin tone and clothing for the whole comic. Device screens never show readable text or real personal data. Pages 6 panels 2-3 are a future vision: soft pale-blue vignette border and lighter, airy palette so they never read as current features.';
+  'Keep Dr. Ananya, Meera, Ravi, the Nurse, Mr. Raman and Priya identical to their canonical reference sheets in face traits, hair, build, skin tone and clothing for the whole comic. Device screens never show readable text or real personal data. Page 7 panels 2-3 (07-2, 07-3) are a future vision: soft pale-blue vignette border and lighter, airy palette so they never read as current features.';
 config.quality.avoid = [
   'Uniform microdetail, glossy gradients, dense decorative hatching, random grain and redundant highlights.',
   'Any readable text, logos, fake UI copy, real patient names or numbers on screens, papers or signs.',
@@ -235,7 +235,7 @@ config.sections = {
       'vitals-kit':
         'Blood-pressure cuff with a hand bulb, fingertip pulse oximeter and a small monitor showing abstract shapes only (no readings).',
       'ravi-phone':
-        'Ravi’s own smartphone (dark blue case). On page 5 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text.',
+        'Ravi’s own smartphone (dark blue case). On page 6 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text.',
     },
   },
   consultation: {
@@ -246,7 +246,7 @@ config.sections = {
     objects: {
       'closed-laptop': 'Laptop closed and pushed to the side of the desk.',
       'doctor-tablet':
-        'Dr. Ananya’s tablet; screen shows a simple notification card with a blank strip; the alert text is lettered, never drawn.',
+        'Dr. Ananya’s tablet. Shown only in 04-3 (a simple notification card with a blank strip; the alert text is lettered, never drawn); from 05-1 on it is put away in the desk drawer and must not appear.',
     },
   },
   departure: {
@@ -942,7 +942,7 @@ const pages = [];
         production: {
           moment: 'Ananya finishes her sentence; Ravi nods.',
           before: 'She listened to Ravi’s concern.',
-          after: 'Ravi picks up his bag and returns to reception (page 5).',
+          after: 'Ravi picks up his bag and returns to reception (page 6).',
           hands: {
             ananya: hands('open reassuring gesture toward Ravi', 'resting on the desk'),
             ravi: hands('resting on his knee', 'resting on his knee'),
@@ -1082,7 +1082,7 @@ const pages = [];
         production: {
           moment: 'Ravi mid-step, waving back.',
           before: 'Meera walked him through what is available.',
-          after: 'He heads home; the story looks toward tomorrow (page 6).',
+          after: 'He heads home; the story looks toward tomorrow (page 7).',
           hands: { ravi: hands('holding his own ravi-phone at his side', 'raised, waving back') },
           props: [
             prop('ravi-phone', 'in his hand after the walkthrough', 'in his left hand at his side', 'in his hand', 'ravi.left'),
