@@ -43,3 +43,15 @@ Status: **complete** (`node cli/auto.mjs finish` passed; see `automation.json`).
 - The navy reception phone in 03-1 resembles Ravi's phone.
 - Source wording kept verbatim (e.g. "Our time belongs with patients").
 - AI image generation is non-deterministic; the reproducible part is composition from the adopted art.
+
+## 2026-11-11 revision in progress (seven pages)
+- User requests: self check-in flow, and a page with three check-in routes (front desk always an
+  option, Welbuk Health app, QR) all getting slots on the screen. See `source/REVISION-2026-11-11.md`.
+- New pages 3 (5 panels) and 4 (3 panels); old pages 4-6 renumbered to 5-7 with the same accepted
+  images (`workflow/renumber-2026-11-11.json`). New reference sheets: `assets/characters/nurse.png`,
+  `assets/characters/checkin-patients.png`.
+- NOTE: `assets/panels/03-*.png` and `04-*.png` currently still hold the OLD page 3/4 art (re-accepted
+  by a helper-script mistake while the new panels were not yet generated). They are placeholders and
+  will be replaced by the new generations; no review has been or will be recorded against them.
+- The previous release (`releases/auto-6294ee8a2094-v8-a10bf06b.tar.gz`) and `automation.json` describe
+  the six-page version and are superseded once this revision finishes.
