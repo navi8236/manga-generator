@@ -714,7 +714,7 @@ const pages = [];
           moment: 'Ananya listening, mid-nod.',
           before: 'Ravi described his tiredness.',
           after: 'She suggests going through his concerns together (04-4).',
-          hands: { ananya: hands('folded over the right hand on the desk', 'folded under the left hand on the desk') },
+          hands: { ananya: hands('folded under the right hand on the desk (her left forearm enters from screen-right)', 'folded over the left hand on the desk (her right forearm enters from screen-left)') },
           props: [prop('closed-laptop', 'closed on the desk', 'closed at the desk edge', 'closed', 'none')],
         },
         speakers: { ananya: speaker(r3, [190, 220, 150, 190]) },
