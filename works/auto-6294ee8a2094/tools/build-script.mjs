@@ -563,7 +563,7 @@ const pages = [];
         beat: 'Front-desk check-in with Meera',
         rect: r1,
         scene:
-          'The tidy reception desk on a bright morning: Mr. Raman (elderly patient from the check-in patients sheet: round reading glasses, cream shirt, wooden walking stick in his right hand) stands at the counter, smiling; Meera behind the desk greets him warmly and types on the keyboard, the desktop monitor angled toward her (screen not visible). Plain wall at the upper left for a caption.',
+          'The tidy reception desk on a bright morning: Mr. Raman (elderly patient from the check-in patients sheet: round reading glasses, cream shirt, wooden walking stick in his right hand) stands at the counter, smiling; Meera behind the desk greets him warmly and types on the keyboard, the desktop monitor angled toward her (screen not visible). Two other waiting patients seen from behind in muted grey and lilac clothes. Plain wall at the upper left for a caption.',
         action: 'Meera checks Mr. Raman in at the desk.',
         emotion: 'Warm, unhurried.',
         camera: 'Medium two-shot across the counter, eye level.',
@@ -725,7 +725,7 @@ const pages = [];
         beat: 'Ravi’s slot comes up',
         rect: r1,
         scene:
-          'Waiting area, wide: Ravi rises from his chair with the shoulder bag back on his left shoulder, looking up at the wall-mounted TV in the upper-right part of the panel, whose light-teal screen shows one clean, empty white highlighted strip where his slot will be lettered (draw NO text or numbers). Mr. Raman (glasses, walking stick upright in his right hand) and Priya (ponytail, coral kurti, phone in her lap) still seated in the same order nearby, watching him go. Plain wall at the upper left for a caption.',
+          'Waiting area, wide: Ravi rises from his chair with the shoulder bag back on his left shoulder, looking up at the wall-mounted TV in the upper-right part of the panel, whose light-teal screen shows one clean, empty white highlighted strip where his slot will be lettered (draw NO text or numbers). The two waiting chairs to his left where Mr. Raman and Priya sat in 03-5 are now empty: their slots (A-10, A-11) were called before his. Meera types at the reception desk in the background at the right. Plain wall at the upper left for a caption.',
         action: 'Ravi stands as his slot comes up.',
         emotion: 'Ready, pleased.',
         camera: 'Wide shot of the waiting area, eye level.',
@@ -738,19 +738,15 @@ const pages = [];
         readingFlow: { entry: [40, 40], exit: [996, 440] },
         production: {
           moment: 'Ravi stands as the screen highlights his slot.',
-          before: 'He waited after his slot appeared (03-5).',
+          before: 'He waited after his slot appeared (03-5); Mr. Raman (A-10) and Priya (A-11) were called in before him.',
           after: 'The nurse takes his vitals (04-2).',
           hands: {
             ravi: hands('holding the shoulder-bag strap', 'tucking ravi-phone into his trouser pocket'),
-            raman: hands('resting on his knee', 'holding the walking-stick'),
-            priya: hands('holding priya-phone in her lap', 'resting on the armrest'),
           },
           props: [
             prop('waiting-tv', 'one strip listing the three slots (03-5)', 'one highlighted empty strip for the called slot', 'on the wall', 'none'),
             prop('ravi-phone', 'in his hand', 'being tucked into his trouser pocket', 'in his pocket', 'ravi.right'),
             prop('shoulder-bag', 'on his lap', 'back on his left shoulder', 'on his shoulder', 'ravi.left'),
-            prop('walking-stick', 'in Mr. Raman’s hand (03-5)', 'held upright beside his knee as he waits', 'in his hand', 'raman.right'),
-            prop('priya-phone', 'in Priya’s lap (03-5)', 'held in her lap', 'in her lap', 'priya.left'),
           ],
         },
         speakers: { ravi: speaker(r1, [330, 110, 75, 90]) },
@@ -1278,8 +1274,6 @@ const MEASURED = {
   '04-1': {
     speakers: {
       ravi: F(577, 71, 72, 72, 631, 130),
-      raman: F(159, 199, 66, 63, 206, 246),
-      priya: F(342, 212, 63, 65, 389, 258),
       meera: F(908, 205, 44, 50, 935, 246),
     },
     hands: { meera: hands('typing at the reception keyboard (background)', 'typing at the reception keyboard (background)') },
