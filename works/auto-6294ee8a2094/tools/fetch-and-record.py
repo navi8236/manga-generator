@@ -14,6 +14,13 @@ import sys
 
 panel, job, url, request, size, layout_media = sys.argv[1:7]
 work = 'works/auto-6294ee8a2094'
+# Higgsfield media/job IDs of the saved reference sheets; any other reference is the layout.
+SHEETS = {
+    'main-cast.png': '714e986f-e02b-4e8e-bc00-30f1076b5736',
+    'vision-cast.png': '99375824-3f6f-4cb8-9865-3b7f624d96cb',
+    'nurse.png': '7b4306e3-3fbf-49b0-8a29-23572e730b4d',
+    'checkin-patients.png': '75cd559e-e649-4e9d-ad5d-6e1db8630556',
+}
 folder = f'{work}/assets/candidates/{panel}'
 os.makedirs(folder, exist_ok=True)
 png = f'{folder}/{job}.png'
@@ -30,9 +37,8 @@ run = {
     'request': request,
     'params': {'quality': 'high', 'resolution': '1k', 'size': size},
     'referencesInOrder': [
-        {'index': 1, 'higgsfield': '714e986f-e02b-4e8e-bc00-30f1076b5736', 'file': f'{work}/assets/characters/main-cast.png'},
-        {'index': 2, 'higgsfield': '99375824-3f6f-4cb8-9865-3b7f624d96cb', 'file': f'{work}/assets/characters/vision-cast.png'},
-        {'index': 3, 'higgsfield': layout_media, 'file': json.load(open(request))['references'][2]['file']},
+        {'index': i + 1, 'higgsfield': SHEETS.get(os.path.basename(r['original']), layout_media), 'file': r['original']}
+        for i, r in enumerate(json.load(open(request))['references'])
     ],
     'promptSubmitted': 'exact request.json prompt',
     'imageHash': hashlib.sha256(data).hexdigest(),
