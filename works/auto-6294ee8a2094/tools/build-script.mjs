@@ -384,7 +384,7 @@ const pages = [];
           'Over-the-shoulder shot from behind Dr. Ananya’s left shoulder (her bun, gold stud and calm profile visible) at a desk: a clean silver laptop with a generic setup form of blank rounded fields and simple blocks (no text, no logos). Both her hands (teal sleeves under white coat cuffs) type on the keyboard. A mug on a coaster. Evening window light. Clear empty areas at top-left and top-right for labels.',
         action: 'Fingers typing into the blank setup fields.',
         emotion: 'Calm, fresh start.',
-        camera: 'Close-up, three-quarter view of the laptop from behind Ananya’s right shoulder.',
+        camera: 'Over-the-shoulder shot from behind Ananya’s left shoulder, laptop at three-quarter view.',
         information: 'Time and place change: the clinic is now onboarding to Welbuk Practice.',
         transition: {
           kind: 'time-change',
@@ -435,7 +435,7 @@ const pages = [];
         beat: 'Meera discovers Welbuk Care for staff',
         rect: r3,
         scene:
-          'Meera stands beside the desk holding a staff smartphone in her right hand at upper-chest height, screen toward the reader showing only abstract blocks and a simple calendar icon (no text). Left hand relaxed at her side. She smiles at the phone.',
+          'Meera stands beside the desk holding a staff smartphone in her right hand at upper-chest height, screen toward the reader showing only abstract blocks and a simple calendar icon (no text). Left hand relaxed at her side. She looks up from the phone with a bright smile.',
         action: 'Meera looks up from the phone with a bright smile.',
         emotion: 'Relieved, excited.',
         camera: 'Tall medium shot, slightly from her right.',
@@ -537,10 +537,15 @@ const pages = [];
         beat: 'Meera asks for consent to register',
         rect: r2,
         scene:
-          'Meera behind the tidy reception desk (desktop monitor at her side, screen angled away), gentle smile, left palm open in an inviting, asking gesture; right hand resting on the desk. Ravi in the left foreground, seen over his shoulder (beard edge, green shirt, bag strap), his right hand holding his dark-blue phone low at the desk edge.',
+          'Meera behind the tidy reception desk (desktop monitor at her side, screen angled away), gentle smile, left palm open in an inviting, asking gesture; right hand resting on the desk. Ravi in the left foreground, seen over his shoulder (beard edge, green shirt, shoulder-bag strap), his right hand holding his dark-blue phone low at the desk edge.',
         action: 'Meera asks politely, leaning slightly forward.',
         emotion: 'Friendly, respectful.',
         camera: 'Tall medium shot, slightly from the left.',
+        transition: {
+          kind: 'reverse-angle',
+          bridge: 'Deliberate reverse over-the-shoulder cut from 03-1: 03-1 looks past Meera (left foreground) toward Ravi at the door; 03-2 looks past Ravi (left foreground: green shirt, bag strap, phone) toward Meera behind the same desk and monitor. From 03-2 onward Ravi stays left and Meera right (03-3, 03-4).',
+          settingBasis: 'Staging decision recorded after script review r12. The same desk, monitor, costumes and the over-shoulder framing carry the space across the flip; storyboard readingReview must confirm it reads clearly.',
+        },
         information: 'Registration starts with Ravi’s permission.',
         readingFlow: { entry: [644, 40], exit: [990, 570] },
         production: {
@@ -562,7 +567,7 @@ const pages = [];
         beat: 'Ravi agrees; Meera enters essential details',
         rect: r3,
         scene:
-          'Wide two-shot across the reception desk: Ravi (left) nods with a smile; Meera (right) types on the keyboard, eyes on the monitor whose screen faces her (only blank fields visible from the side). No papers with writing, no ID cards.',
+          'Wide two-shot across the reception desk: Ravi (left), bag strap on his shoulder, nods with a smile, both hands on the desk edge and his dark-blue phone lying on the desk in front of him; Meera (right) types on the keyboard, eyes on the monitor whose screen faces her (only blank fields visible from the side). No papers with writing, no ID cards.',
         action: 'Ravi nods; Meera begins typing.',
         emotion: 'Trusting, easy.',
         camera: 'Medium-wide two-shot, eye level, desk across the lower third.',
@@ -639,7 +644,7 @@ const pages = [];
         beat: 'Ananya greets Ravi in the consultation room',
         rect: r1,
         scene:
-          'Bright simple consultation room. Dr. Ananya (left) seated at her desk, turned toward Ravi with an open-hand welcoming gesture; Ravi (right) sitting down in the patient chair, smiling. Laptop closed and pushed aside on the desk. Window with a plant behind.',
+          'Bright simple consultation room. Dr. Ananya (left) seated at her desk, turned toward Ravi with an open-hand welcoming gesture; Ravi (right) sitting down in the patient chair, smiling, his shoulder bag set on the floor beside the chair. Laptop closed and pushed aside on the desk. Window with a plant behind.',
         action: 'Ananya welcomes Ravi as he sits.',
         emotion: 'Warm and attentive.',
         camera: 'Medium-wide two-shot, eye level.',
@@ -676,10 +681,10 @@ const pages = [];
         beat: 'Ravi shares a routine concern',
         rect: r2,
         scene:
-          'Close-up of Ravi in the patient chair, turned toward the doctor, whose back of head (low bun, gold stud, white-coat shoulder) is in the left foreground, rubbing the back of his neck with his right hand, a slightly tired but candid expression; left hand resting on his knee. Plain wall behind.',
+          'Medium shot of Ravi in the patient chair, turned toward the doctor, whose back of head (low bun, gold stud, white-coat shoulder) is in the left foreground, rubbing the back of his neck with his right hand, a slightly tired but candid expression; left hand resting on his knee. Plain wall behind.',
         action: 'Ravi explains, a little sheepish.',
         emotion: 'Mildly tired, honest.',
-        camera: 'Medium close-up from the doctor’s side, Ravi facing screen-left.',
+        camera: 'Medium shot from the doctor’s side, Ravi facing screen-left, his knees in frame.',
         information: 'A routine concern only; no diagnosis is shown.',
         readingFlow: { entry: [44, 570], exit: [500, 1060] },
         production: {
@@ -724,7 +729,7 @@ const pages = [];
         beat: 'They will decide next steps together',
         rect: r4,
         scene:
-          'Two-shot: Dr. Ananya (left) speaks warmly with a reassuring open hand; Ravi (right) nods, relaxed, both hands resting on his knees. No prescriptions and no instruments in use (Ananya’s stethoscope stays around her neck).',
+          'Two-shot: Dr. Ananya (left) speaks warmly with a reassuring open hand; Ravi (right) nods, relaxed, both hands resting on his knees, his bag on the floor beside the chair. No prescriptions and no instruments in use (Ananya’s stethoscope stays around her neck).',
         action: 'Ananya reassures; Ravi relaxes.',
         emotion: 'Reassured, collaborative.',
         camera: 'Medium two-shot, eye level.',
@@ -838,7 +843,7 @@ const pages = [];
         beat: 'Meera offers a walkthrough of what is available',
         rect: r3,
         scene:
-          'Meera smiles warmly, facing screen-right toward Ravi, who is seen from behind in the right foreground holding his phone in his left hand (keeping Meera-left / Ravi-right from 05-1), right hand gesturing toward his phone, left hand resting on the desk. Tidy reception background.',
+          'Meera smiles warmly, facing screen-right toward Ravi, who is seen from behind in the right foreground holding his phone in his left hand (keeping Meera-left / Ravi-right from 05-1). Meera’s right hand gestures toward his phone; her left hand rests on the desk. Tidy reception background.',
         action: 'Meera answers and offers to walk him through.',
         emotion: 'Warm, honest, helpful.',
         camera: 'Tall medium shot.',
@@ -864,7 +869,7 @@ const pages = [];
         beat: 'Ravi leaves, reassured',
         rect: r4,
         scene:
-          'Outside the clinic entrance in morning sun: Ravi steps out onto the street, smiling and waving back toward the door with his right hand; his phone is in his left hand at his side. Dr. Ananya and Meera wave back from the glass doorway at left. Simple street and teal awning.',
+          'Outside the clinic entrance in morning sun: Ravi steps out onto the street, smiling and waving back toward the door with his right hand; his phone is in his left hand at his side and his bag on his shoulder. Dr. Ananya and Meera wave back from the glass doorway at left. Simple street and teal awning.',
         action: 'Ravi waves goodbye while walking.',
         emotion: 'Reassured, light.',
         camera: 'Wide shot from the street, eye level.',
