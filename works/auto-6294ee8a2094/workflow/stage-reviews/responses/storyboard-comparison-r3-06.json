@@ -1,0 +1,80 @@
+{
+ "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-06-86fca71ff6f86dd37aeb49e681504ee18e7d9092d773a4ee55e461ee69af9e82.json",
+ "reviewer": {
+  "role": "subagent",
+  "task": "claude-code-agent:manga-reviewer:ab63cd29d71cbd2f8",
+  "reportedTask": "UNAVAILABLE: runtime supplied no task identity",
+  "taskSource": "Agent ID returned by the Claude Code Agent tool to the parent."
+ },
+ "status": "pass",
+ "observations": [
+  "Source page 6 is kept: all four captions and the three product names match. The source requires the vision to be visibly labelled, and 06-2 and 06-3 each carry 'WELBUK VISION' inside a pale-blue rounded vignette.",
+  "The 'WELBUK VISION' label repeats in consecutive panels on purpose: each vision panel is marked so it cannot be read as a current feature. On the composed page the vignette border and lighter palette back this up.",
+  "The 'Tomorrow' jump the first reading questioned has a visual cue in 06-1: Ravi on a train by a window with a different city skyline. 'us' reads as the brand narrator's inclusive voice, which the source text supports.",
+  "The partner and child appear inside the labelled vision vignette sitting next to a recognisable Ravi, so they read as a symbolic family, as the source specifies.",
+  "06-4 returns to the present at the clinic entrance with Meera, Ananya and Ravi in their usual costumes. The closing caption covers Meera's feet and touches Ananya's legs, which is acceptable for a closing panel but worth watching at lettering.",
+  "Note for artwork, not a reading defect: in 06-3 a hand with a wristwatch rests on the sofa back beyond the child. If it is Ravi's left arm, the reach behind two people looks overlong."
+ ],
+ "issues": [],
+ "readingReview": {
+  "withoutGuides": true,
+  "firstReadingHash": "ac33871f8155be7e812f4bedda8422fa2ba0afb93e5e12cfb45f12d3c722c7d0",
+  "predictedOrder": [
+   {
+    "panel": "06-1",
+    "dialogue": [
+     1
+    ]
+   },
+   {
+    "panel": "06-2",
+    "dialogue": [
+     1,
+     2
+    ]
+   },
+   {
+    "panel": "06-3",
+    "dialogue": [
+     1,
+     2
+    ]
+   },
+   {
+    "panel": "06-4",
+    "dialogue": [
+     1,
+     2
+    ]
+   }
+  ],
+  "observations": [
+   "Unnumbered scan: the top-left caption, then in the top-right panel the stacked teal label before the caption below it, then the same label-over-caption stack in the middle panel.",
+   "In 06-4 the teal product label at top-right is read before the closing caption at bottom-left. With no balloons on the page there is no speaker ambiguity.",
+   "Composed page used: in 06-4 the product label sits beside Ravi's head without covering his face or waving hand, and the three figures lead the eye down to the closing caption."
+  ],
+  "transitions": [
+   {
+    "from": "05-4",
+    "to": "06-1",
+    "observation": "From Ravi leaving the clinic to Ravi on a train with the same shirt, bag and phone in his left hand. The conditional caption plus the new skyline mark a hypothetical tomorrow."
+   },
+   {
+    "from": "06-1",
+    "to": "06-2",
+    "observation": "Ravi's gaze out of the window leads into the pale-blue vignette with the specialist and dotted links between clinics. The label and the airy palette mark the move from travel to vision."
+   },
+   {
+    "from": "06-2",
+    "to": "06-3",
+    "observation": "The same vignette style and label continue into a family on a sofa with Ravi; the tablet with profile circles and a heart extends the connected-care idea to family wellness."
+   },
+   {
+    "from": "06-3",
+    "to": "06-4",
+    "observation": "The vignette disappears and the full-colour clinic entrance returns with all three main characters in present-day costume. It reads as the return to reality and the closing."
+   }
+  ],
+  "comparison": "The first reading's order matches the intended arrays and the source. Its concerns (who 'us' is, the time jump, the uncued family, the repeated label, the label over Ravi's box, the empty area under the closing caption) are carried by the art or required by the source's vision-labelling rule. The face-box clipping is a storyboard artefact."
+ }
+}

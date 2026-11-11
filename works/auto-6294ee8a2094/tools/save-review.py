@@ -36,7 +36,7 @@ def last_json(path):
         while start >= 0:
             try:
                 obj, _ = json.JSONDecoder().raw_decode(t[start:])
-                if isinstance(obj, dict) and ('request' in obj or '01' in obj):
+                if isinstance(obj, dict) and ('request' in obj or any(isinstance(v, dict) and 'request' in v for v in obj.values())):
                     found = obj
                 break
             except ValueError:
@@ -67,7 +67,7 @@ if '--split' in sys.argv:
     i = sys.argv.index('--split')
     folder, prefix = sys.argv[i + 1], sys.argv[i + 2]
     for page, resp in data.items():
-        if not page.isdigit():
+        if page.startswith('_') or not isinstance(resp, dict):
             continue
         target = f'{folder}/{prefix}-{page}.json'
         json.dump(fix(resp, agent), open(target, 'w', encoding='utf-8'), indent=1, ensure_ascii=False)

@@ -1,22 +1,30 @@
 {
-  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-03-f741dbf4b1e5d383bfa6d30e9d187f7fa216dd77b192fa089030d190075df3e0.json",
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-03-f4f6351ca51659a940904644a6ce0a3643670bd3dfeeb823bdaa209b02339d11.json",
   "reviewer": {
     "role": "subagent",
-    "task": "claude-code-agent:manga-reviewer:af8111c4370e465d7",
-    "reportedTask": "UNAVAILABLE - runtime supplied no subagent task identity to this reviewer; parent must substitute the Agent ID returned by its Agent tool and must not invent one",
+    "task": "claude-code-agent:manga-reviewer:ab63cd29d71cbd2f8",
+    "reportedTask": "UNAVAILABLE: runtime supplied no task identity",
     "taskSource": "Agent ID returned by the Claude Code Agent tool to the parent."
   },
-  "status": "pass",
+  "status": "changes-requested",
   "observations": [
-    "What I read: the full request JSON and source. I opened storyboards-unnumbered/page-03.png and both cast sheets with Read and looked at them. For the numbered order I read reading-flow/page-03.json as text.",
-    "All four lines match the source page 3. The question 'May I register...' is answered by 'Yes, please.' in the next panel, so consent is shown before registration.",
-    "Meera knowing Ravi's name in 03-4 is supported by 03-3, where she is planned typing his essential details. The off-panel registration is an acceptable gap.",
-    "Ravi is on the left and Meera on the right in 03-1/03-2 and both two-shots (03-3, 03-4), so screen direction is kept. The wide, mostly empty 03-3 is a deliberate breather and is filled by the two-shot across the desk."
+    "Source page 3 is kept: all four lines match, and the consent question comes before 'Yes, please.'",
+    "On the composed page, Ravi's 03-1 balloon sits directly above Meera's head, and her mouth is open in a smile. A reader who goes down from the balloon lands on her first. Only a long horizontal tail sends attribution to Ravi.",
+    "That 03-1 tail runs from the balloon's right edge to just left of Ravi's face. On its way it seems to pass through the raised fingers of his waving right hand, so the tail line merges with the hand outline.",
+    "The side swap the first reading noticed is a deliberate reverse angle. 03-1 is shot from behind Meera toward the door; 03-2 over Ravi's shoulder (green shirt, bag strap, phone). The desk, monitor and costumes hold the space together, and 03-3/03-4 keep Ravi left and Meera right.",
+    "The 'registration skipped' and 'how does she know his name' concerns are carried by 03-3. Meera types at the monitor right after his consent, so 'You're all set, Ravi' follows naturally.",
+    "Prop note: a navy phone lies on Meera's side of the desk in 03-1 before Ravi reaches it, while the ledger says Ravi carries his phone in hand. It reads as Meera's staff phone, but the ravi-phone ledger entry for 03-1 should be corrected to match the art."
   ],
-  "issues": [],
+  "issues": [
+    {
+      "problem": "Ravi's balloon is placed directly above Meera's head, whose mouth is open, and its tail appears to cross Ravi's raised waving fingers before reaching his face. Speaker attribution rests on a tail drawn through the hand. Move the balloon closer to Ravi, for example below or right of the hand, or reroute it so the tail reaches his mouth without crossing the hand. Then check at 100%.",
+      "location": "03-1 (composed review/page-03.png, upper-left panel)",
+      "resolved": false
+    }
+  ],
   "readingReview": {
     "withoutGuides": true,
-    "firstReadingHash": "a6fd01e6a6f57885fa4fc39c199949127e845f27ab272b1cb83f8e78c4059040",
+    "firstReadingHash": "dad8260f5459fdade45264e9cd8bedfab7047bb71de6aad327a8fbc12ebfe873",
     "predictedOrder": [
       {
         "panel": "03-1",
@@ -44,38 +52,39 @@
       }
     ],
     "observations": [
-      "Each panel has one balloon placed over its speaker's face box. Ravi's top-left balloon leads to Meera's top-right one, then the reader drops to Ravi's 'Yes, please.' at the left of the middle row.",
-      "03-4: Meera's balloon is at upper right over her face box. Ravi's box at left is silent, consistent with him turning toward the seats, so there are no competing balloons."
+      "Unnumbered scan: one balloon per panel, read top-left, top-right, middle, bottom. There are no competing balloons, so the order itself is unambiguous.",
+      "The proximity risk is about who speaks, not the order: in 03-1 the balloon is nearer Meera's face box than Ravi's, as the first reading also noted.",
+      "In 03-4 the balloon sits right on top of Meera's head with almost no tail. Being that close attributes it correctly, and her gesture toward the chairs matches 'Please have a seat'."
     ],
     "transitions": [
       {
         "from": "02-4",
         "to": "03-1",
-        "observation": "Evening office (page 2) to a later morning at reception. This rests on morning door light, the tidied desk with a monitor, and Ravi's 'Good morning!'; there is no caption. Checked on the page-02 storyboard and plan only because no art exists yet."
+        "observation": "From the evening office to bright daylight at reception, now with a monitor instead of paper registers. Ravi waving in at the glass door shows a new visit on a later day."
       },
       {
         "from": "03-1",
         "to": "03-2",
-        "observation": "Ravi waves toward the desk from the left panel and Meera answers from the right panel with her palm open toward him (off-panel left). The axis is consistent."
+        "observation": "A reverse angle over Ravi's shoulder (green shirt, bag strap, phone in hand) to Meera at the same desk and monitor. She answers his greeting with an open-palm gesture."
       },
       {
         "from": "03-2",
         "to": "03-3",
-        "observation": "The wide two-shot across the desk keeps Ravi on the left and Meera on the right. Her open palm becomes typing as he consents."
+        "observation": "A wide two-shot on the same axis: Ravi nods on the left with his phone now on the desk, while Meera types on the monitor at right. This shows the consented registration happening."
       },
       {
         "from": "03-3",
         "to": "03-4",
-        "observation": "Same staging. Ravi's hand moves from the desk edge to his bag strap as he turns toward the waiting chairs on the far left, and Meera gestures there."
+        "observation": "Same staging. Ravi stands, bag strap in his left hand, and Meera's right hand gestures left toward the waiting chairs behind him, so registration is finished."
       },
       {
         "from": "03-4",
         "to": "04-1",
-        "observation": "Place change across the page turn: 'Please have a seat' leads to the consultation room (desk, window, plant). The same green shirt and bag, now set down beside the chair, show it is the same visit. Checked on the page-04 storyboard and plan only."
+        "observation": "From reception to the consultation room: Ananya at a desk with a closed laptop, Ravi now seated in the patient chair with his bag on the floor. 'Hello, Ravi' marks him being called in from the chairs."
       }
     ],
-    "comparison": "The natural order matches the intended order and numbered JSON exactly. The first reading's concerns are a missing time cue (carried by morning light, the tidy desk and 'Good morning!'), registration happening off-panel (supported by the typing in 03-3) and the sparse middle panel (filled by the two-shot). None is a reading defect."
+    "comparison": "The first reading's order matches the intended arrays and the source. Its side-reversal, skipped-registration, name and sparse-middle-panel concerns are carried by the art. Its misattribution concern for 03-1 is confirmed on the composed page and made worse by the tail crossing Ravi's hand, so it stays an unresolved issue."
   },
-  "fingerprint": "f741dbf4b1e5d383bfa6d30e9d187f7fa216dd77b192fa089030d190075df3e0",
-  "recordedAt": "2026-11-11T07:25:27.809Z"
+  "fingerprint": "f4f6351ca51659a940904644a6ce0a3643670bd3dfeeb823bdaa209b02339d11",
+  "recordedAt": "2026-11-11T08:11:03.292Z"
 }
