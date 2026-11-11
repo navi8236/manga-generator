@@ -1547,7 +1547,7 @@
       "to": "05-4",
       "pageBoundary": false,
       "layoutBoundary": false,
-      "kind": "continuation",
+      "kind": "scene-change",
       "before": {
         "section": "reception",
         "setting": {
@@ -1567,19 +1567,14 @@
         "action": "Meera answers and offers to walk him through."
       },
       "after": {
-        "section": "reception",
+        "section": "departure",
         "setting": {
-          "summary": "A later morning: the clinic now runs with Welbuk. Ravi visits as a patient and registers at reception with consent.",
-          "location": "The same reception desk, now tidy with a desktop monitor angled toward Meera; waiting chairs with a few seated figures seen from behind.",
+          "summary": "The end of the same visit: Ravi leaves the clinic reassured.",
+          "location": "Clinic entrance from the street side, morning sun.",
           "costumes": {
-            "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
-            "meera": "Blue kurta with white churidar, silver bangle on right wrist.",
             "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
           },
-          "objects": {
-            "monitor": "Reception desktop monitor and keyboard; screen faces Meera, only blank fields visible if seen.",
-            "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 5 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
-          }
+          "objects": {}
         },
         "scene": "Outside the clinic entrance in morning sun: Ravi steps out onto the street, smiling and waving back toward the door with his right hand; his phone is in his left hand at his side. Simple street and awning.",
         "action": "Ravi waves goodbye while walking."
@@ -1588,18 +1583,18 @@
         "timeBefore": null,
         "timeAfter": null,
         "locationBefore": "The same reception desk, now tidy with a desktop monitor angled toward Meera; waiting chairs with a few seated figures seen from behind.",
-        "locationAfter": "The same reception desk, now tidy with a desktop monitor angled toward Meera; waiting chairs with a few seated figures seen from behind.",
+        "locationAfter": "Clinic entrance from the street side, morning sun.",
         "readerMustKnow": null,
         "anchor": null,
         "anchorEvidencePanel": "05-4",
         "axisBefore": null,
         "axisAfter": null,
         "resetCue": null,
-        "retainedObjects": [
+        "retainedObjects": [],
+        "changedObjects": [
           "monitor",
           "ravi-phone"
         ],
-        "changedObjects": [],
         "actionBefore": "Meera answers and offers to walk him through.",
         "actionAfter": "Ravi waves goodbye while walking.",
         "sourceBasis": null,
@@ -1607,7 +1602,9 @@
       },
       "bridge": null,
       "settingBasis": null,
-      "warnings": []
+      "warnings": [
+        "場面設定が変わる。読者が時間・場所・回想への出入りを識別できる導入を記録し、実画像で確認する。"
+      ]
     },
     {
       "from": "05-4",
@@ -1616,19 +1613,14 @@
       "layoutBoundary": true,
       "kind": "time-change",
       "before": {
-        "section": "reception",
+        "section": "departure",
         "setting": {
-          "summary": "A later morning: the clinic now runs with Welbuk. Ravi visits as a patient and registers at reception with consent.",
-          "location": "The same reception desk, now tidy with a desktop monitor angled toward Meera; waiting chairs with a few seated figures seen from behind.",
+          "summary": "The end of the same visit: Ravi leaves the clinic reassured.",
+          "location": "Clinic entrance from the street side, morning sun.",
           "costumes": {
-            "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
-            "meera": "Blue kurta with white churidar, silver bangle on right wrist.",
             "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
           },
-          "objects": {
-            "monitor": "Reception desktop monitor and keyboard; screen faces Meera, only blank fields visible if seen.",
-            "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 5 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
-          }
+          "objects": {}
         },
         "scene": "Outside the clinic entrance in morning sun: Ravi steps out onto the street, smiling and waving back toward the door with his right hand; his phone is in his left hand at his side. Simple street and awning.",
         "action": "Ravi waves goodbye while walking."
@@ -1649,7 +1641,7 @@
       "ledger": {
         "timeBefore": null,
         "timeAfter": null,
-        "locationBefore": "The same reception desk, now tidy with a desktop monitor angled toward Meera; waiting chairs with a few seated figures seen from behind.",
+        "locationBefore": "Clinic entrance from the street side, morning sun.",
         "locationAfter": "Indian Railways-style train seat by a window, passing city skyline (no signage).",
         "readerMustKnow": null,
         "anchor": "visual-or-caption",
@@ -1658,10 +1650,7 @@
         "axisAfter": null,
         "resetCue": null,
         "retainedObjects": [],
-        "changedObjects": [
-          "monitor",
-          "ravi-phone"
-        ],
+        "changedObjects": [],
         "actionBefore": "Ravi waves goodbye while walking.",
         "actionAfter": "Ravi gazes out of the window.",
         "sourceBasis": null,

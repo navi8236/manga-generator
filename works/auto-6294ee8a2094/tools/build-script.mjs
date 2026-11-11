@@ -857,6 +857,7 @@ const pages = [];
       {
         id: '05-4',
         order: 4,
+        section: 'departure',
         role: '余韻',
         beat: 'Ravi leaves, reassured',
         rect: r4,
