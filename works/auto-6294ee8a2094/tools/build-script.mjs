@@ -587,8 +587,8 @@ const pages = [];
             prop('walking-stick', 'in Mr. Raman’s hand', 'held in his right hand', 'in his hand', 'raman.right'),
           ],
         },
-        speakers: { meera: speaker(r1, [300, 150, 80, 95]), raman: speaker(r1, [110, 170, 80, 95]) },
-        dialogue: [line('narration', ['The front desk is', 'always an option.'], 16, 16)],
+        speakers: { meera: speaker(r1, [300, 190, 80, 95]), raman: speaker(r1, [110, 210, 80, 95]) },
+        dialogue: [line('narration', ['A later morning:', 'patients can always check', 'in at the front desk.'], 16, 16)],
       },
       {
         id: '03-2',
@@ -786,7 +786,7 @@ const pages = [];
         },
         dialogue: [
           line('narration', ['A quick vitals', 'check first.'], 16, 16),
-          line('nurse', ["Let's check your", 'vitals, Ravi.'], 250, 150),
+          line('nurse', ['Hi, Ravi! Just relax', 'your arm for me.'], 250, 150),
         ],
       },
       {

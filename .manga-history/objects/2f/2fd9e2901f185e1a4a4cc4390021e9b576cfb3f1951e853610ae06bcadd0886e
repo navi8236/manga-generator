@@ -1,0 +1,30 @@
+# Source revision 2026-11-11
+
+## Request 1
+The user reviewed the finished comic and asked for a different scene flow on one page:
+"Lets do one page patient walks in, scans a qr in mobile. fills form in mobile. token pops up in tv
+screen, then nurse comes takes vitals, doctor notified in his tablet."
+Confirmed decisions: replace the old page 3 (Meera's desk registration); keep Dr. Ananya as the doctor
+(the request said "his tablet"; the user chose to keep the existing female doctor, so the source says
+"her tablet"); short captions for each step.
+
+## Request 2
+"patient can always checkin with front dest as an option, if we can convey that it would be good.
+we can add a page wer 3 diff patients chrck in one via health app, on using qr and another front desk
+all 3 gets slot alloted in screen"
+Confirmed decisions: the three-channel page comes before Ravi's journey; Ravi is the QR patient, so
+his own page continues with his slot, the nurse's vitals check and the doctor's tablet.
+
+## Resulting changes to `original.txt`
+- Header: the comic is now seven pages.
+- Cast: a Nurse and two other patients (an elderly man at the front desk, a young woman using the app).
+- PAGE 3 is now "Three ways to check in" (5 panels); new PAGE 4 "Ravi's turn" (3 panels).
+- The old pages 4, 5 and 6 are unchanged in content and renumbered 5, 6 and 7.
+- Every step has a short caption; 04-2 also carries the nurse's line, which names Ravi before the
+  consultation.
+- The captions, labels and the nurse's line on pages 3 and 4 were drafted by the production agent from
+  the user's descriptions. The pre-revision text is kept in `original-v1.txt`.
+
+## Wording change after the storyboard first reading (r13)
+- 03-1 caption "The front desk is always an option." became "A later morning: patients can always check in at the front desk." The first reader found the old caption out of context, because "check in" first appeared in 03-2. The new caption also gives the time cue after the evening onboarding on page 2.
+- 04-2 nurse line "Let's check your vitals, Ravi." became "Hi, Ravi! Just relax your arm for me." The reader found that it repeated the caption "A quick vitals check first."
