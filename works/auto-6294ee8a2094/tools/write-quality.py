@@ -165,7 +165,7 @@ P = {
            'continuity': 'Edit (empty-chairs) removed Raman and Priya so A-10 and A-11 read as already called.',
            'lettering': 'Caption top-left; NOW label on the TV strip.'},
           {'ravi': 'Ready, pleased smile', 'meera': 'Calm smile at the desk' + SMALL},
-          [{'category': 'continuity', 'description': 'Storyboard first reading r18: A-12 called while A-10/A-11 still waited; records changed and edit (empty-chairs) applied.', 'status': 'resolved'}]),
+          [{'category': 'continuity', 'description': 'Storyboard first reading r18: A-12 called while A-10/A-11 still waited; records changed and edit (empty-chairs) applied.', 'status': 'resolved'}, {'category': 'objects', 'description': 'Artwork review r10: the QR stand was a flat black-framed sign unlike the grey/teal kiosk in 03-1/03-3; replaced by edit (qr-stand).', 'status': 'resolved'}]),
  '04-2': ('The nurse starts the vitals check; cuff, oximeter and watch on Ravi\'s left arm.',
           {'anatomy': 'Ravi\'s left arm rests on the table, right hand on knee; the nurse holds the bulb in her right hand and steadies the tube with her left.',
            'contact': 'Cuff around the upper arm; oximeter on the index finger; tube from cuff to bulb continuous.',
