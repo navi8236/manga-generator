@@ -339,7 +339,7 @@ const pages = [];
         beat: 'Ananya resolves to simplify the clinic’s work',
         rect: r3,
         scene:
-          'Dr. Ananya stands at the side of the reception area, looking thoughtfully toward the busy desk (off-panel left). Right hand lightly at her chin, left hand holding the edge of her white coat. Simple background: wall, doorway.',
+          'Dr. Ananya stands at the side of the reception area, looking thoughtfully toward the busy desk in the background at frame left, where Meera is still on the phone writing in the register. Right hand lightly at her chin, left hand loosely at the front of her white coat. Simple background: wall, doorway, waiting chairs.',
         action: 'Ananya watches Meera, then speaks with quiet determination.',
         emotion: 'Thoughtful, then resolved and kind.',
         camera: 'Tall medium-full shot, slight low angle, empty wall above her for the balloon.',
@@ -349,7 +349,7 @@ const pages = [];
           moment: 'Ananya decides, eyes on the reception desk.',
           before: 'She has just seen Meera juggling the call and the registers.',
           after: 'She will look for a better system (page 2).',
-          hands: { ananya: hands('holding the edge of her white coat', 'fingers lightly at her chin') },
+          hands: { ananya: hands('loosely closed at the front of her white coat', 'fingers lightly at her chin') },
           props: [],
         },
         speakers: { ananya: speaker(r3, [130, 390, 140, 175]) },
@@ -412,7 +412,7 @@ const pages = [];
         beat: 'Ananya organises clinic information and roles',
         rect: r2,
         scene:
-          'Dr. Ananya seated at the desk in front of the laptop (screen angled away from the reader), left hand on the trackpad, right index finger tapping her lip as she considers team roles. Window behind her with soft evening light.',
+          'Dr. Ananya seated at the desk in front of the laptop (screen angled away from the reader), right hand on the trackpad, left index finger resting at her chin as she considers team roles. Window behind her with soft evening light.',
         action: 'Ananya looks from the screen up and to the right, planning.',
         emotion: 'Focused, quietly pleased.',
         camera: 'Medium shot, three-quarter front view, empty wall at upper left for the balloon.',
@@ -1069,7 +1069,10 @@ const MEASURED = {
     speakers: { ravi: F(238, 668, 95, 120, 285, 770), meera: F(752, 688, 85, 100, 790, 770) },
     addProps: [prop('ravi-phone', 'held low at the desk', 'lying on the desk in front of Ravi', 'picked up again after registration', 'none')],
   },
-  '03-4': { speakers: { ravi: F(255, 1108, 92, 112, 300, 1200), meera: F(762, 1212, 75, 82, 795, 1280) } },
+  '03-4': {
+    speakers: { ravi: F(255, 1108, 92, 112, 300, 1200), meera: F(762, 1212, 75, 82, 795, 1280) },
+    addProps: [prop('ravi-phone', 'picked up from the desk after registration', 'put away in Ravi’s pocket, not visible', 'in his pocket', 'none')],
+  },
   '04-1': { speakers: { ananya: F(252, 62, 70, 90, 283, 140), ravi: F(733, 55, 75, 92, 770, 130) } },
   '04-2': {
     speakers: { ravi: F(330, 628, 95, 135, 380, 735), ananya: HEAD(60, 720) },
