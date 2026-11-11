@@ -661,7 +661,7 @@ const pages = [];
           props: [prop('ravi-phone', 'showing the check-in form', 'held in both hands, blank fields and tick-box on screen', 'in his hand as he sits to wait (03-5)', 'ravi.left')],
         },
         speakers: {},
-        dialogue: [line('narration', ['A short form on his own', 'phone, shared with consent.'], 16, 16)],
+        dialogue: [line('narration', ['A short form on', 'his own phone,', 'shared with consent.'], 16, 16)],
       },
       {
         id: '03-5',
@@ -756,7 +756,7 @@ const pages = [];
         speakers: { ravi: speaker(r1, [330, 110, 75, 90]) },
         dialogue: [
           line('narration', ['Soon, his slot', 'comes up.'], 16, 16),
-          line('label', ['NOW · A-12'], 720, 60),
+          line('label', ['NOW · A-12'], 762, 40),
         ],
       },
       {
@@ -832,7 +832,7 @@ const pages = [];
         speakers: { ananya: speaker(r3, [150, 470, 90, 110]) },
         dialogue: [
           line('narration', ['Dr. Ananya is', "notified when", "he's ready."], 16, 16),
-          line('label', ['RAVI · READY'], 90, 720),
+          line('label', ['RAVI · READY'], 140, 729),
         ],
       },
     ],
@@ -1259,6 +1259,36 @@ const pages = [];
 const F = (x, y, w, h, ax, ay) => ({ face: [x, y, w, h], anchor: [ax, ay] });
 const HEAD = (ax, ay) => ({ kind: 'head', anchor: [ax, ay] });
 const MEASURED = {
+  // 2026-11-11 revision: measured from the accepted new art (panel px scaled into the rect).
+  '03-1': { speakers: { raman: F(156, 189, 50, 64, 183, 246), meera: F(333, 207, 50, 66, 354, 262) } },
+  '03-2': {
+    speakers: { priya: F(728, 153, 76, 80, 766, 219) },
+    protected: [[801, 215, 49, 77]],
+    hands: { priya: hands('holding priya-phone', 'index finger tapping the check-in card on priya-phone') },
+  },
+  '03-3': { speakers: { ravi: F(287, 612, 94, 100, 327, 685) }, protected: [[127, 747, 71, 111]] },
+  '03-4': { speakers: { ravi: F(844, 580, 91, 180, 876, 692) }, protected: [[635, 648, 145, 206]] },
+  '03-5': {
+    speakers: {
+      raman: F(166, 1129, 97, 97, 235, 1206),
+      priya: F(384, 1150, 90, 90, 447, 1220),
+      ravi: F(561, 1129, 94, 97, 634, 1199),
+    },
+  },
+  '04-1': {
+    speakers: {
+      ravi: F(577, 71, 72, 72, 631, 130),
+      raman: F(159, 199, 66, 63, 206, 246),
+      priya: F(342, 212, 63, 65, 389, 258),
+      meera: F(908, 205, 44, 50, 935, 246),
+    },
+    hands: { meera: hands('typing at the reception keyboard (background)', 'typing at the reception keyboard (background)') },
+  },
+  '04-2': {
+    speakers: { ravi: F(93, 842, 95, 110, 163, 937), nurse: F(389, 739, 102, 110, 440, 827) },
+    protected: [[199, 1047, 204, 109], [327, 955, 105, 99]],
+  },
+  '04-3': { speakers: { ananya: F(730, 834, 116, 150, 786, 975) } },
   '01-1': { speakers: { ananya: F(398, 170, 52, 64, 423, 222) } },
   '01-2': { speakers: { meera: F(318, 945, 85, 100, 358, 1028) } },
   '01-3': {
