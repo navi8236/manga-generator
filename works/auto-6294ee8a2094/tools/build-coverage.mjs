@@ -13,8 +13,8 @@ const at = (needle, from = 0) => {
 
 const notes = {
   intro: [
-    ['01-1', '01-2', '03-1', '03-2', '04-2', '07-2', '07-3', '07-4'],
-    'Title, disclaimer and cast list. The cast descriptions became cast.description/faceDesign for Dr. Ananya (teal kurta under white coat), Meera (blue kurta), Ravi (light green shirt), and the Nurse, Mr. Raman and Priya added in the 2026-11-11 revision; unstated details are recorded as manga supplements. The disclaimer that future referral-network experiences are vision drives the "WELBUK VISION" labels and vignette styling on 06-2 and 06-3.',
+    ['01-1', '01-2', '03-1', '03-2', '03-3', '04-2', '07-2', '07-3', '07-4'],
+    'Title, disclaimer and cast list. The cast descriptions became cast.description/faceDesign for Dr. Ananya (teal kurta under white coat), Meera (blue kurta), Ravi (light green shirt), and the Nurse, Mr. Raman and Priya added in the 2026-11-11 revision; unstated details are recorded as manga supplements. The disclaimer that future referral-network experiences are vision drives the "WELBUK VISION" labels and vignette styling on 07-2 and 07-3.',
   ],
   '01-1': [['01-1'], 'Wide morning establishing shot of a neighbourhood Tamil Nadu clinic with Dr. Ananya welcoming patients; the source caption is lettered verbatim.'],
   '01-2': [['01-2'], 'Paper registers, ringing phone and queue are drawn as props and background; Meera\'s line is kept verbatim but split into two balloons at the ellipsis so the list and the wish read as two breaths.'],
