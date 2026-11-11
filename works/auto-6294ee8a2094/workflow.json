@@ -19,7 +19,9 @@
     ]
   },
   "generation": {
-    "renderer": "ComfyUI+Qwen-Image-Edit-2511-FP8"
+    "renderer": "Higgsfield gpt_image_2_6",
+    "previousRenderer": "ComfyUI+Qwen-Image-Edit-2511-FP8",
+    "switchReason": "User approved on 2026-11-10 after ComfyUI was unreachable in this session (no GPU, huggingface.co blocked). See workflow/blockers/image-generation.md."
   },
   "renderMode": "panels",
   "productionPreflight": {
@@ -133,7 +135,7 @@
   "cast": {
     "ananya": {
       "name": "Dr. Ananya",
-      "description": "Indian woman in her late 30s, clinic owner and doctor. Calm, confident and caring. Teal kurta beneath an open white coat (source). Shoulder-length black hair tied in a low bun with a few loose strands, slim build, small gold stud earrings (manga supplement).",
+      "description": "Indian woman in her late 30s, clinic owner and doctor. Calm, confident and caring. Teal kurta beneath an open white coat (source). Shoulder-length black hair tied in a low bun with a few loose strands, slim build, small gold stud earrings, a stethoscope around her neck in clinic scenes (manga supplement, from the accepted reference sheet).",
       "faceDesign": {
         "traits": [
           "Calm almond-shaped eyes with slightly heavy upper lids and a gentle downward outer corner",
@@ -159,7 +161,7 @@
     },
     "ravi": {
       "name": "Ravi",
-      "description": "Indian man in his mid-30s, patient. Warm and approachable. Light green shirt (source). Short neat black hair with a side part, trimmed short beard, medium build, dark trousers, a simple wristwatch on the left wrist (manga supplement).",
+      "description": "Indian man in his mid-30s, patient. Warm and approachable. Light green shirt (source). Short neat black hair with a side part, trimmed short beard, medium build, dark trousers, a simple wristwatch on the left wrist, small dark-brown shoulder bag (manga supplement).",
       "faceDesign": {
         "traits": [
           "Warm, slightly narrow eyes that crease at the outer corners when he smiles",
@@ -172,7 +174,7 @@
     },
     "specialist": {
       "name": "Specialist (vision)",
-      "description": "Symbolic specialist doctor in a future-vision clinic in another city. Indian man in his 50s with greying temples, rimless glasses, light grey blazer over a pale shirt (manga supplement; the source only says \"specialist\").",
+      "description": "Symbolic specialist doctor in a future-vision clinic in another city. Indian man in his 50s with greying temples, rimless glasses, light grey blazer over a pale blue shirt, stethoscope around his neck (manga supplement; the source only says \"specialist\").",
       "faceDesign": {
         "traits": [
           "Kind eyes behind thin rimless rectangular glasses",
@@ -2323,5 +2325,13 @@
   "colorMode": "color",
   "readingDirection": "left-to-right",
   "language": "en",
-  "continuity": "Keep Dr. Ananya, Meera and Ravi identical to their canonical reference sheets in face traits, hair, build, skin tone and clothing for the whole comic. Device screens never show readable text or real personal data. Pages 6 panels 2-3 are a future vision: soft pale-blue vignette border and lighter, airy palette so they never read as current features."
+  "continuity": "Keep Dr. Ananya, Meera and Ravi identical to their canonical reference sheets in face traits, hair, build, skin tone and clothing for the whole comic. Device screens never show readable text or real personal data. Pages 6 panels 2-3 are a future vision: soft pale-blue vignette border and lighter, airy palette so they never read as current features.",
+  "productionDecisions": [
+    {
+      "id": "renderer-higgsfield",
+      "kind": "preference",
+      "text": "Generate all images with Higgsfield model gpt_image_2_6 (quality high, PNG). Character sheets and panels are text-free; lettering is composited by the shared CLI.",
+      "reason": "User instruction on 2026-11-10 ('sure') approving Higgsfield after the declared ComfyUI renderer was unreachable in this session."
+    }
+  ]
 }
