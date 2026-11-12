@@ -1,7 +1,7 @@
 {
   "panel": "09-1",
-  "fingerprint": "51a41591a2fb59d49991eb13eeac34ea491f4d2d755f2eb54b5eb7e332e3749d",
-  "observation": "Ravi on a train by the window, phone in lap, skyline outside. Inspected at 25% (contact sheet), 100% (full panel) and 200% (face crops), and on the composed page.",
+  "fingerprint": "05bc2204b01062a773d9d45bebad282dfb6e6cf6b19fb18e5319c645b763c862",
+  "observation": "Ravi at home in daylight reads the follow-up reminder: generic green chat card with a calendar icon on his phone. Inspected at 25% (contact sheet), 100% (full panel) and 200% (face crops), and on the composed page.",
   "views": {
     "thumbnail": true,
     "native": true,
@@ -10,15 +10,15 @@
   "checks": {
     "anatomy": {
       "result": "pass",
-      "note": "Hand at chin and phone hand correct."
+      "note": "Right hand holds the phone upright with fingers around the case; left hand rests by the tea cup."
     },
     "contact": {
       "result": "pass",
-      "note": "Elbow on the ledge; phone held in lap."
+      "note": "Seated at a round table; cup on a coaster; phone gripped in the right hand."
     },
     "objects": {
       "result": "pass",
-      "note": "No signs on buildings; phone screen not shown."
+      "note": "Phone shows only a chat bubble with a calendar icon; no logo or text."
     },
     "faces": {
       "result": "pass",
@@ -26,22 +26,28 @@
     },
     "linework": {
       "result": "pass",
-      "note": "Consistent."
+      "note": "Clean contours and flat cel shading close to the earlier pages (new renderer: Marketing Studio Image 2.5 Flare)."
     },
     "background": {
       "result": "pass",
-      "note": "City skyline with a domed building, no text."
+      "note": "Plain wall; the upper part was extended with flat wall colour (tools/pad-canvas.py) for lettering."
     },
     "continuity": {
       "result": "pass",
-      "note": "Phone continues from 07-4."
+      "note": "Green shirt, beard and wristwatch on the left wrist match; no shoulder bag at home; dark-blue phone."
     },
     "lettering": {
       "result": "pass",
-      "note": "Narrow caption at top-left; clear of his face."
+      "note": "Three-line caption and the FOLLOW-UP REMINDER label on the empty wall above; the label ends above the phone and left of his head."
     }
   },
-  "issues": [],
+  "issues": [
+    {
+      "category": "lettering",
+      "description": "First take filled the frame and showed his shoulder bag at home; retake 2 lowered the figure, and the canvas was extended with plain wall for the caption.",
+      "status": "resolved"
+    }
+  ],
   "faceIdentity": {
     "ravi": {
       "reference": "works/auto-6294ee8a2094/assets/characters/main-cast.png",
@@ -50,8 +56,8 @@
         "thick straight dark brows close to the eyes",
         "square jaw with short trimmed beard and broad nose"
       ],
-      "expression": "Calm thoughtful smile looking out"
+      "expression": "Pleased, relaxed smile"
     }
   },
-  "reviewedAt": "2026-11-12T13:56:50.671Z"
+  "reviewedAt": "2026-11-12T15:11:19.059Z"
 }

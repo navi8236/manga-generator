@@ -1506,8 +1506,8 @@ const SCREEN = 'The laptop stands at about a three-quarter angle toward the read
         },
         speakers: { ravi: speaker(r1, [250, 200, 100, 120]) },
         dialogue: [
-          line('narration', ['Welbuk Practice sends', "Ravi's follow-up", 'reminder on WhatsApp. No', 'calls from the front desk.'], 8, 4),
-          line('label', ['FOLLOW-UP', 'REMINDER'], 8, 182),
+          line('narration', ["Welbuk Practice sends Ravi's", 'follow-up reminder on WhatsApp.', 'No calls from the front desk.'], 8, 2),
+          line('label', ['FOLLOW-UP', 'REMINDER'], 8, 144),
         ],
       },
       {
@@ -1598,7 +1598,7 @@ const SCREEN = 'The laptop stands at about a three-quarter angle toward the read
         speakers: { ravi: speaker(r4, [180, 250, 70, 85]) },
         dialogue: [
           line('narration', ['As usual, his slot', 'comes up on the screen.'], 8, 4),
-          line('label', ['NOW · A-31'], 270, 120),
+          line('label', ['NOW · A-31'], 270, 146),
         ],
       },
       {
@@ -1629,8 +1629,8 @@ const SCREEN = 'The laptop stands at about a three-quarter angle toward the read
           ravi: speaker(r5, [660, 200, 100, 120]),
         },
         dialogue: [
-          line('ananya', ['Welcome back, Ravi.', 'Your results are already here.'], 120, 16),
-          line('narration', ['Fewer missed follow-ups, shorter visits, less paperwork.', "The clinic's time goes to patients."], 16, 400),
+          line('ananya', ['Welcome back, Ravi.', 'Your results are', 'already here.'], 361, 10),
+          line('narration', ['Fewer missed follow-ups, shorter visits, less paperwork.', "The clinic's time goes to patients."], 16, 404),
         ],
       },
     ],
@@ -1882,6 +1882,17 @@ const MEASURED = {
   '08-4': { speakers: { ravi: F(209, 1139, 98, 103, 264, 1220) }, protected: [[137, 1220, 72, 110], [230, 1392, 62, 57]] },
   '08-5': { speakers: { ananya: F(754, 892, 76, 92, 788, 972) }, protected: [[631, 1075, 40, 56], [774, 1079, 36, 52]] },
   '08-6': { speakers: { meera: F(710, 1206, 80, 88, 762, 1278) } },
+  '09-1': { speakers: { ravi: F(238, 232, 78, 78, 274, 286) }, protected: [[140, 279, 56, 80]] },
+  '09-2': { speakers: { ravi: F(738, 254, 32, 38, 754, 282) }, protected: [[712, 368, 14, 24], [780, 366, 14, 26]] },
+  '09-3': {
+    speakers: { ravi: F(289, 701, 50, 66, 323, 751), meera: F(108, 767, 38, 36, 125, 795) },
+    protected: [[399, 817, 42, 53]],
+  },
+  '09-4': { speakers: { ravi: F(684, 789, 48, 54, 714, 832) } },
+  '09-5': {
+    speakers: { ananya: F(279, 1017, 85, 105, 324, 1100), ravi: F(704, 1012, 95, 110, 736, 1092) },
+    protected: [[309, 1182, 175, 140], [674, 1292, 150, 50]],
+  },
   '10-1': { speakers: { ravi: F(313, 105, 94, 108, 349, 195) } },
   '10-2': { speakers: { specialist: F(819, 132, 73, 81, 865, 195) }, protected: [[672, 262, 74, 54]] },
   '10-3': {

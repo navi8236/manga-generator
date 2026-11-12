@@ -1,7 +1,7 @@
 {
  "panel": "09-3",
- "fingerprint": "01d90355444030f169dc6110a838c6bbdebcd66e2e6250b02e733348b902fa8f",
- "observation": "Vision vignette family scene around a wellness tablet. Inspected at 25% (contact sheet), 100% (full panel) and 200% (face crops), and on the composed page.",
+ "fingerprint": "f4938845e80c5665ada76e763963a823e69423a2f02ca2b9dca567bc13743da4",
+ "observation": "Ravi scans the QR stand with his phone; Meera works calmly at an empty reception desk behind him. Inspected at 25% (contact sheet), 100% (full panel) and 200% (face crops), and on the composed page.",
  "views": {
   "thumbnail": true,
   "native": true,
@@ -10,15 +10,15 @@
  "checks": {
   "anatomy": {
    "result": "pass",
-   "note": "Pointing hand, tablet grip and child hands correct."
+   "note": "Right arm extended with the phone to the stand; left hand relaxed with the watch."
   },
   "contact": {
    "result": "pass",
-   "note": "Partner holds the tablet with both hands; child leans on her arm."
+   "note": "Phone held near the stand; Meera's hands on the keyboard."
   },
   "objects": {
    "result": "pass",
-   "note": "Tablet shows three profile circles and a heart only."
+   "note": "QR stand shows an abstract pattern; phone shows a scan frame and a check mark; no text."
   },
   "faces": {
    "result": "pass",
@@ -26,22 +26,28 @@
   },
   "linework": {
    "result": "pass",
-   "note": "Consistent with 09-2 vision styling."
+   "note": "Consistent."
   },
   "background": {
    "result": "pass",
-   "note": "Living room merges into the vision sky with dotted clinic links."
+   "note": "Reception desk with monitor, glass doors; wall extended above for lettering and the bottom (legs) trimmed (tools/pad-canvas.py crop-bottom)."
   },
   "continuity": {
    "result": "pass",
-   "note": "Ravi's costume and watch consistent."
+   "note": "Meera matches (braid, blue kurta, bangle); no queue at the desk; Ravi without bag."
   },
   "lettering": {
    "result": "pass",
-   "note": "Label and caption at left over the sky; clear of all faces and the tablet."
+   "note": "Two-line caption on the wall at top-left, above both heads."
   }
  },
- "issues": [],
+ "issues": [
+  {
+   "category": "faces",
+   "description": "First take drew the receptionist as a nurse and gave Ravi his bag with phone and watch on the wrong hands; retake fixed all three.",
+   "status": "resolved"
+  }
+ ],
  "faceIdentity": {
   "ravi": {
    "reference": "works/auto-6294ee8a2094/assets/characters/main-cast.png",
@@ -50,25 +56,16 @@
     "thick straight dark brows close to the eyes",
     "square jaw with short trimmed beard and broad nose"
    ],
-   "expression": "Warm proud smile"
+   "expression": "Easy, pleased smile"
   },
-  "partner": {
-   "reference": "works/auto-6294ee8a2094/assets/characters/vision-cast.png",
+  "meera": {
+   "reference": "works/auto-6294ee8a2094/assets/characters/main-cast.png",
    "traits": [
-    "wide-set lively eyes",
-    "medium brows with high gentle arch",
-    "heart-shaped face with narrow chin and small mole by the eye"
+    "large round bright eyes with visible lower lashes",
+    "thin high arched brows",
+    "round face with full cheeks and short chin; braid over her left shoulder"
    ],
-   "expression": "Delighted open smile"
-  },
-  "child": {
-   "reference": "works/auto-6294ee8a2094/assets/characters/vision-cast.png",
-   "traits": [
-    "big round curious eyes",
-    "short light brows",
-    "round cheeks and small upturned nose"
-   ],
-   "expression": "Excited curious grin"
+   "expression": "Calm smile while typing (small in frame; traits checked at 200%)"
   }
  }
 }
