@@ -31,10 +31,11 @@ const notes = {
   '04-1': [['04-1'], 'New page 4 (2026-11-11). Ravi stands as the TV highlights his slot; "NOW · A-12" is lettered over the blank screen; caption verbatim.'],
   '04-2': [['04-2'], 'The nurse (cast + nurse sheet) takes Ravi\'s vitals with a cuff and oximeter; the monitor shows no readings; caption and line verbatim.'],
   '04-3': [['04-3'], 'Cut to the consultation room: Dr. Ananya reads a notification on her tablet; the screen is drawn blank and "RAVI · READY" is lettered over it; caption verbatim.'],
-  '05-1': [['05-1'], 'Consultation-room greeting, laptop closed aside; line verbatim.'],
-  '05-2': [['05-2'], 'Ravi states a routine concern; no diagnosis or medical advice is drawn or written. Line verbatim.'],
-  '05-3': [['05-3'], 'Ananya listens attentively with the laptop closed aside; the caption is verbatim and the closed laptop shows technology staying in the background.'],
-  '05-4': [['05-4'], 'Ananya discusses next steps with a reassuring gesture and no treatment details; line verbatim.'],
+  '05-1': [['05-1'], 'Reworked page 5 (2026-11-12, user request). Consultation-room greeting with the laptop opened on the patient details section; the screen is drawn with abstract cards and the label is lettered over it; line verbatim.'],
+  '05-2': [['05-2'], 'Ravi states a routine concern (no diagnosis drawn or written) while the laptop shows SOAP notes with the AI mic listening; line and label verbatim.'],
+  '05-3': [['05-3'], 'Ananya listens, eyes on Ravi, with the laptop beside her; the caption is verbatim.'],
+  '05-4': [['05-4'], 'Close-up of the speciality treatment planner: three text-free example tiles (tooth chart, eye diagram, growth chart and vaccine card) with the heading and three tile labels lettered verbatim.'],
+  '05-5': [['05-5'], 'Ananya discusses next steps with a reassuring gesture and no treatment details; the laptop shows the plan of care section with abstract cards; line and label verbatim.'],
   '06-1': [['06-1'], 'Meera introduces the Welbuk Health patient app on a phone; line verbatim.'],
   '06-2': [['06-2'], 'Ravi holds a conceptual, text-free app screen with appointment and health icons; line verbatim plus a "WELBUK HEALTH / for patients" label naming the third product role.'],
   '06-3': [['06-3'], 'Meera\'s line verbatim; the wording "what is available to you" is kept so no unlaunched features are implied.'],
@@ -52,7 +53,7 @@ const notes = {
 const cuts = [{ start: 0, key: 'intro' }];
 for (let page = 1; page <= 7; page++) {
   const pageAt = at(`PAGE ${page} —`);
-  const panelCount = page === 1 ? 3 : page === 3 ? 5 : page === 4 ? 3 : 4;
+  const panelCount = page === 1 ? 3 : page === 3 ? 5 : page === 4 ? 3 : page === 5 ? 5 : 4;
   for (let n = 1; n <= panelCount; n++) {
     const start = n === 1 ? pageAt : at(`Panel ${n}`, pageAt);
     cuts.push({ start, key: `0${page}-${n}` });

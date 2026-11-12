@@ -241,10 +241,10 @@ config.sections = {
   consultation: {
     summary: 'The same visit: Ravi talks with Dr. Ananya in the consultation room.',
     location:
-      'Bright, simple consultation room: desk, two chairs, a closed laptop pushed aside, window with plant. No medical charts with text.',
+      'Bright, simple consultation room: desk, two chairs, Dr. Ananya’s laptop (closed in 04-3, open on page 5), window with plant. No medical charts with text.',
     costumes: { ananya: costumes.ananya, ravi: costumes.ravi },
     objects: {
-      'closed-laptop': 'Laptop closed and pushed to the side of the desk.',
+      'consult-laptop': 'Dr. Ananya’s laptop on the consultation desk: closed and pushed aside in 04-3, opened on page 5 with the screen turned toward the reader. The screen shows only abstract cards and icons; section names are lettered over it, never drawn.',
       'doctor-tablet':
         'Dr. Ananya’s tablet. Shown only in 04-3 (a simple notification card with a blank strip; the alert text is lettered, never drawn); from 05-1 on it is put away in the desk drawer and must not appear.',
     },
@@ -822,7 +822,7 @@ const pages = [];
           hands: { ananya: hands('holding the doctor-tablet left edge', 'holding the doctor-tablet right edge') },
           props: [
             prop('doctor-tablet', 'on the desk', 'held in both hands, blank notification card on screen', 'put away in the desk drawer before Ravi comes in (05-1)', 'ananya.left'),
-            prop('closed-laptop', 'on the desk', 'closed and pushed aside', 'closed', 'none'),
+            prop('consult-laptop', 'on the desk', 'closed and pushed aside', 'opened on patient details as Ravi comes in (05-1)', 'none'),
           ],
         },
         speakers: { ananya: speaker(r3, [150, 470, 90, 110]) },
@@ -835,78 +835,86 @@ const pages = [];
   });
 }
 
-// PAGE 5 — MORE TIME FOR CARE (page 4 before the 2026-11-11 revision)
+// PAGE 5 — MORE TIME FOR CARE (reworked 2026-11-12 at the user's request: the doctor's screen)
 {
-  const r1 = panelRect(24, 24, 976, 500);
-  const r2 = panelRect(24, 548, 480, 520);
-  const r3 = panelRect(528, 548, 472, 520);
-  const r4 = panelRect(24, 1092, 976, 372);
+  const r1 = panelRect(24, 24, 976, 360);
+  const r2 = panelRect(24, 408, 560, 380);
+  const r3 = panelRect(608, 408, 392, 380);
+  const r4 = panelRect(24, 812, 976, 300);
+  const r5 = panelRect(24, 1136, 976, 328);
+  const SCREEN = 'The laptop screen shows only abstract light cards, simple icons and blank bars (draw NO text, letters or numbers; no real data); the section name and contents are lettered over it later.';
   pages.push({
     id: '05',
     section: 'consultation',
-    purpose: 'Show that the consultation stays human and unhurried; no diagnosis or medical claim.',
+    purpose: 'The consultation stays human while the doctor’s screen supports it, section by section in the user’s order: patient details, SOAP notes (with AI listening), the speciality treatment planner and the plan of care. No diagnosis or medical claim.',
     expectation: 'How does care continue after the visit?',
     panels: [
       {
         id: '05-1',
         order: 1,
         role: '転換',
-        beat: 'Ananya greets Ravi in the consultation room',
+        beat: 'Ananya greets Ravi; the laptop opens on patient details',
         rect: r1,
         scene:
-          'Bright simple consultation room. Dr. Ananya (left) seated at her desk, turned toward Ravi with an open-hand welcoming gesture; Ravi (right) sitting down in the patient chair, smiling, his shoulder bag set on the floor beside the chair. Laptop closed and pushed aside on the desk. Window with a plant behind.',
-        action: 'Ananya welcomes Ravi as he sits.',
+          'Bright simple consultation room, the same room as 04-3 (window with a plant behind). In the LEFT foreground, filling roughly the left 40% of the panel, Dr. Ananya’s open laptop on the desk, its screen turned toward the reader: a patient-details layout of several light rounded cards (a small heart icon card, a small history card, an allergy card with a warning-triangle icon, a microphone icon toggle, a document icon, a test-tube icon). ' + SCREEN + ' Behind it, at centre, Dr. Ananya seated at her desk turns toward Ravi with an open-hand welcoming gesture; at right, Ravi sits down in the patient chair, smiling, his shoulder bag set on the floor beside the chair. Plain wall across the top for a balloon.',
+        action: 'Ananya welcomes Ravi as he sits; his details are already on her screen.',
         emotion: 'Warm and attentive.',
-        camera: 'Medium-wide two-shot, eye level.',
-        information: 'Ravi enters the consultation room introduced in 04-3; same visit.',
+        camera: 'Medium-wide two-shot past the laptop in the foreground, eye level.',
+        information: 'The vitals taken in 04-2 and Ravi’s records are ready on the doctor’s screen before the conversation starts.',
         transition: {
           kind: 'place-change',
-          bridge: 'Ravi walks into the consultation room the reader saw in 04-3 and sits down; Ananya has put her tablet away after the alert; same costumes show it is the same visit.',
-          settingBasis: 'Source: "Dr. Ananya greets Ravi in a consultation room."',
+          bridge: 'Ravi walks into the consultation room the reader saw in 04-3 and sits down; Ananya has put her tablet away and opened the laptop that was closed in 04-3; same costumes show it is the same visit.',
+          settingBasis: 'Source (reworked 2026-11-12): "She has opened her laptop, angled so the reader can see it, on the first screen section, patient details."',
         },
-        readingFlow: { entry: [40, 40], exit: [990, 520] },
+        readingFlow: { entry: [40, 40], exit: [990, 380] },
         production: {
           moment: 'Ananya greets Ravi as he settles into the chair.',
           before: 'Ananya was notified that Ravi was ready (04-3).',
-          after: 'Ravi explains why he came (05-2).',
+          after: 'Ravi explains why he came while SOAP notes open (05-2).',
           hands: {
-            ananya: hands('open palm welcoming Ravi', 'resting on the desk'),
+            ananya: hands('open palm welcoming Ravi', 'resting on the desk beside the consult-laptop'),
             ravi: hands('on the chair armrest as he sits', 'resting on his knee'),
           },
           props: [
-            prop('closed-laptop', 'closed on the desk', 'closed, pushed aside', 'closed', 'none'),
+            prop('consult-laptop', 'closed on the desk (04-3)', 'open, screen toward the reader, patient-details cards', 'open on SOAP notes (05-2)', 'none'),
             prop('doctor-tablet', 'read after the alert (04-3)', 'put away in the desk drawer, not visible', 'put away', 'none'),
             prop('shoulder-bag', 'on Ravi’s shoulder', 'set down on the floor beside his chair', 'beside his chair', 'none'),
           ],
         },
         speakers: {
-          ananya: speaker(r1, [260, 190, 125, 160]),
-          ravi: speaker(r1, [650, 205, 115, 150]),
+          ananya: speaker(r1, [540, 170, 80, 95]),
+          ravi: speaker(r1, [800, 180, 80, 95]),
         },
-        dialogue: [line('ananya', ['Hello, Ravi.', 'Tell me what', 'brings you in.'], 330, 16)],
+        dialogue: [
+          line('ananya', ['Hello, Ravi.', 'Tell me what', 'brings you in.'], 620, 8),
+          line('label', ['PATIENT DETAILS:', 'vitals · history ·', 'allergies · AI mic ·', 'docs · lab reports'], 16, 130),
+        ],
       },
       {
         id: '05-2',
         order: 2,
         role: '始動',
-        beat: 'Ravi shares a routine concern',
+        beat: 'Ravi shares a routine concern; SOAP notes listen',
         rect: r2,
         scene:
-          'Medium shot of Ravi in the patient chair, turned toward the doctor, whose back of head (low bun, gold stud, white-coat shoulder) is in the left foreground, rubbing the back of his neck with his right hand, a slightly tired but candid expression; left hand resting on his knee. Plain wall behind.',
-        action: 'Ravi explains, a little sheepish.',
+          'In the LEFT foreground, the laptop screen seen at an angle from the doctor’s side, filling the lower-left half of the panel: a notes layout with four stacked light blocks and a glowing teal microphone icon with small sound-wave arcs (AI listening), plus a small row of tag chips. ' + SCREEN + ' At right, Ravi in the patient chair faces screen-left toward the doctor (off-panel left), rubbing the back of his neck with his right hand, a slightly tired but candid expression; his left hand (wristwatch) rests on his knee. Plain wall at the top-left for a balloon.',
+        action: 'Ravi explains, a little sheepish, while the notes listen.',
         emotion: 'Mildly tired, honest.',
-        camera: 'Medium shot from the doctor’s side, Ravi facing screen-left, his knees in frame.',
-        information: 'A routine concern only; no diagnosis is shown.',
-        readingFlow: { entry: [44, 570], exit: [500, 1060] },
+        camera: 'Medium shot from the doctor’s side, past the laptop, Ravi facing screen-left.',
+        information: 'A routine concern only; no diagnosis is shown. The AI mic is on in SOAP notes.',
+        readingFlow: { entry: [40, 424], exit: [580, 784] },
         production: {
-          moment: 'Ravi describes feeling tired.',
-          before: 'The doctor asked what brings him in.',
-          after: 'The doctor listens (05-3).',
+          moment: 'Ravi describes feeling tired; the microphone icon glows.',
+          before: 'The doctor asked what brings him in (05-1).',
+          after: 'The doctor listens, eyes on Ravi (05-3).',
           hands: { ravi: hands('resting on his knee', 'rubbing the back of his neck') },
-          props: [],
+          props: [prop('consult-laptop', 'open on patient details (05-1)', 'open on SOAP notes, microphone icon glowing', 'open beside Ananya (05-3)', 'none')],
         },
-        speakers: { ravi: speaker(r2, [160, 200, 160, 200]) },
-        dialogue: [line('ravi', ["I've been feeling", 'tired lately.'], 20, 20)],
+        speakers: { ravi: speaker(r2, [420, 110, 90, 105]) },
+        dialogue: [
+          line('ravi', ["I've been feeling", 'tired lately.'], 16, 16),
+          line('label', ['SOAP NOTES:', 'type, or AI listens', 'and summarises ·', 'ICD / SNOMED codes'], 16, 190),
+        ],
       },
       {
         id: '05-3',
@@ -915,53 +923,85 @@ const pages = [];
         beat: 'The doctor listens; technology stays in the background',
         rect: r3,
         scene:
-          'Dr. Ananya leans slightly forward at her desk, hands folded, listening with full attention and gentle eye contact toward Ravi, whose back of head and green-shirted shoulder are in the right foreground, keeping Ananya-left / Ravi-right screen direction from 05-1. The closed laptop sits pushed aside at the edge of the desk.',
+          'Dr. Ananya leans slightly forward at her desk, hands folded, listening with full attention and gentle eye contact toward Ravi (off-panel right), NOT looking at the laptop, which stands open at the left edge of the desk showing only soft abstract cards and a small glowing microphone icon. Window with a plant behind. Plain wall in the upper part for a caption.',
         action: 'Ananya nods slowly while listening.',
         emotion: 'Attentive, compassionate.',
-        camera: 'Medium close-up from Ravi’s side, Ananya facing screen-right.',
-        information: 'Technology supports workflow; the conversation is human.',
-        readingFlow: { entry: [544, 570], exit: [990, 1060] },
+        camera: 'Medium close-up, Ananya facing screen-right.',
+        information: 'Technology supports the workflow; the conversation is human.',
+        readingFlow: { entry: [624, 424], exit: [990, 784] },
         production: {
           moment: 'Ananya listening, mid-nod.',
           before: 'Ravi described his tiredness.',
-          after: 'She suggests going through his concerns together (05-4).',
-          hands: { ananya: hands('folded under the right hand on the desk (her left forearm enters from screen-right)', 'folded over the left hand on the desk (her right forearm enters from screen-left)') },
-          props: [prop('closed-laptop', 'closed on the desk', 'closed at the desk edge', 'closed', 'none')],
+          after: 'The screen moves to the speciality planner (05-4).',
+          hands: { ananya: hands('folded under the right hand on the desk', 'folded over the left hand on the desk') },
+          props: [prop('consult-laptop', 'open on SOAP notes (05-2)', 'open at the desk edge, microphone icon still glowing', 'shows the speciality planner (05-4)', 'none')],
         },
-        speakers: { ananya: speaker(r3, [190, 220, 150, 190]) },
+        speakers: { ananya: speaker(r3, [150, 190, 90, 105]) },
         dialogue: [
-          line('narration', ['Technology supports the', 'workflow. The conversation', 'stays human.'], 4, 4),
+          line('narration', ['Technology supports', 'the workflow. The', 'conversation stays human.'], 4, 4),
         ],
       },
       {
         id: '05-4',
         order: 4,
-        role: '決定',
-        beat: 'They will decide next steps together',
+        role: '提示',
+        beat: 'Close-up: the speciality treatment planner',
         rect: r4,
         scene:
-          'Two-shot: Dr. Ananya (left) speaks warmly with a reassuring open hand; Ravi (right) nods, relaxed, both hands resting on his knees, his bag on the floor beside the chair. No prescriptions and no instruments in use (Ananya’s stethoscope stays around her neck).',
-        action: 'Ananya reassures; Ravi relaxes.',
+          'Close-up of the laptop screen filling the panel, light background with a slim teal header bar. Three equal tiles side by side across the middle and lower part: LEFT a simple tooth chart (two arches of small rounded teeth, two teeth tinted teal); CENTRE a simple eye diagram (an iris circle with three small teal marker dots and lines); RIGHT a small growth chart (a rising curve on a light grid) beside a small vaccine card with three tick marks. ' + SCREEN + ' Keep the top-left strip and a band along the bottom of each tile plain for the labels.',
+        action: 'The planner adapts to the speciality.',
+        emotion: 'Clear, informative.',
+        camera: 'Flat close-up of the screen.',
+        information: 'Each speciality gets its own planner: odontogram for dentists, eye markers for eye doctors, growth scales and vaccines for paediatricians.',
+        readingFlow: { entry: [40, 828], exit: [990, 1108] },
+        production: {
+          moment: 'The speciality planner view on the screen.',
+          before: 'Ananya listened to Ravi (05-3).',
+          after: 'The plan of care section opens as she sums up (05-5).',
+          hands: {},
+          props: [prop('consult-laptop', 'open beside Ananya (05-3)', 'screen filling the panel: speciality planner tiles', 'shows the plan of care (05-5)', 'none')],
+        },
+        speakers: {},
+        dialogue: [
+          line('label', ['SPECIALITY PLANNER'], 16, 12),
+          line('label', ['Dentist:', 'odontogram'], 40, 182),
+          line('label', ['Eye doctor:', 'eye markers'], 370, 182),
+          line('label', ['Paediatrics:', 'scales · vaccines'], 690, 182),
+        ],
+      },
+      {
+        id: '05-5',
+        order: 5,
+        role: '決定',
+        beat: 'Next steps together; the plan of care',
+        rect: r5,
+        scene:
+          'Two-shot with the laptop: Dr. Ananya at left speaks warmly with a reassuring open hand; Ravi in the middle, nodding and relaxed, both hands on his knees, his bag on the floor beside the chair; in the RIGHT foreground, filling roughly the right 45% of the panel, the open laptop with its screen toward the reader showing a plan-of-care layout (a list of light cards with a pill icon, a document icon, a two-pill warning icon, a test-tube icon and an arrow-out icon). ' + SCREEN + ' Plain wall across the upper left for a balloon. No prescriptions on paper and no instruments in use (Ananya’s stethoscope stays around her neck).',
+        action: 'Ananya reassures; Ravi relaxes; the plan of care is on screen.',
         emotion: 'Reassured, collaborative.',
-        camera: 'Medium two-shot, eye level.',
-        information: 'Shared decision-making; no specific treatment advice.',
-        readingFlow: { entry: [40, 1110], exit: [990, 1505] },
+        camera: 'Medium two-shot past the laptop, eye level.',
+        information: 'Shared decision-making; no specific treatment advice. The plan-of-care section gathers prescribing, summary, interaction checks, labs and referrals.',
+        readingFlow: { entry: [40, 1152], exit: [990, 1460] },
         production: {
           moment: 'Ananya finishes her sentence; Ravi nods.',
-          before: 'She listened to Ravi’s concern.',
+          before: 'The screen showed the speciality planner (05-4).',
           after: 'Ravi picks up his bag and returns to reception (page 6).',
           hands: {
             ananya: hands('open reassuring gesture toward Ravi', 'resting on the desk'),
             ravi: hands('resting on his knee', 'resting on his knee'),
           },
-          props: [prop('shoulder-bag', 'beside his chair', 'on the floor beside his chair', 'back on his shoulder as he leaves', 'none')],
+          props: [
+            prop('consult-laptop', 'shows the speciality planner (05-4)', 'open, screen toward the reader, plan-of-care cards', 'stays on the desk', 'none'),
+            prop('shoulder-bag', 'beside his chair', 'on the floor beside his chair', 'back on his shoulder as he leaves', 'none'),
+          ],
         },
         speakers: {
-          ananya: speaker(r4, [300, 200, 120, 150]),
-          ravi: speaker(r4, [660, 190, 115, 145]),
+          ananya: speaker(r5, [120, 180, 80, 95]),
+          ravi: speaker(r5, [430, 180, 80, 95]),
         },
         dialogue: [
-          line('ananya', ["We'll go through", 'your concerns and', 'decide the right', 'next steps together.'], 380, 8),
+          line('ananya', ["We'll go through", 'your concerns and', 'decide the right', 'next steps together.'], 230, 4),
+          line('label', ['PLAN OF CARE:', 'intelligent prescribing ·', 'summary · interactions ·', 'labs · referrals'], 590, 150),
         ],
       },
     ],
@@ -1299,16 +1339,6 @@ const MEASURED = {
     speakers: { ananya: F(325, 1170, 72, 90, 367, 1245), meera: F(700, 1130, 70, 88, 737, 1200) },
     protected: [[668, 1365, 62, 80]],
   },
-  '05-1': { speakers: { ananya: F(252, 62, 70, 90, 283, 140), ravi: F(733, 55, 75, 92, 770, 130) } },
-  '05-2': {
-    speakers: { ravi: F(330, 628, 95, 135, 380, 735), ananya: HEAD(60, 720) },
-    hands: { ananya: hands('out of frame', 'out of frame') },
-  },
-  '05-3': {
-    speakers: { ananya: F(645, 738, 115, 100, 705, 820), ravi: HEAD(950, 720) },
-    hands: { ravi: hands('out of frame', 'out of frame') },
-  },
-  '05-4': { speakers: { ananya: F(297, 1140, 62, 90, 327, 1212), ravi: F(723, 1132, 66, 90, 757, 1205) } },
   '06-1': {
     speakers: { meera: F(367, 128, 96, 111, 428, 232), ravi: F(572, 114, 131, 118, 641, 191) },
     protected: [[528, 277, 66, 94]],

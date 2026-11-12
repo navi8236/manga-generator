@@ -10,7 +10,7 @@
         24,
         24,
         976,
-        500
+        360
       ],
       "steps": [
         {
@@ -18,44 +18,60 @@
           "speaker": "ananya",
           "text": "Hello, Ravi. Tell me what brings you in.",
           "rect": [
-            354,
-            40,
+            644,
+            32,
             211,
             138
           ],
           "center": [
-            459.5,
-            109
+            749.5,
+            101
           ],
           "mouth": [
-            283,
-            140
+            604,
+            270
           ]
+        },
+        {
+          "number": 2,
+          "speaker": "label",
+          "text": "PATIENT DETAILS: vitals · history · allergies · AI mic · docs · lab reports",
+          "rect": [
+            40,
+            154,
+            292,
+            170
+          ],
+          "center": [
+            186,
+            239
+          ],
+          "mouth": null
         }
       ],
       "faces": {
         "ananya": {
-          "face": [
-            252,
-            62,
-            70,
-            90
-          ],
           "anchor": [
-            283,
-            140
+            604,
+            270
+          ],
+          "face": [
+            564,
+            194,
+            80,
+            95
           ]
         },
         "ravi": {
-          "face": [
-            733,
-            55,
-            75,
-            92
-          ],
           "anchor": [
-            770,
-            130
+            864,
+            280
+          ],
+          "face": [
+            824,
+            204,
+            80,
+            95
           ]
         }
       },
@@ -67,7 +83,7 @@
         ],
         "exit": [
           990,
-          520
+          380
         ]
       },
       "groups": null,
@@ -77,9 +93,9 @@
       "id": "05-2",
       "rect": [
         24,
-        548,
-        480,
-        520
+        408,
+        560,
+        380
       ],
       "steps": [
         {
@@ -87,51 +103,60 @@
           "speaker": "ravi",
           "text": "I've been feeling tired lately.",
           "rect": [
-            44,
-            568,
+            40,
+            424,
             257,
             106
           ],
           "center": [
-            172.5,
-            621
+            168.5,
+            477
           ],
           "mouth": [
-            380,
-            735
+            489,
+            602
           ]
+        },
+        {
+          "number": 2,
+          "speaker": "label",
+          "text": "SOAP NOTES: type, or AI listens and summarises · ICD / SNOMED codes",
+          "rect": [
+            40,
+            598,
+            302,
+            170
+          ],
+          "center": [
+            191,
+            683
+          ],
+          "mouth": null
         }
       ],
       "faces": {
         "ravi": {
-          "face": [
-            330,
-            628,
-            95,
-            135
+          "anchor": [
+            489,
+            602
           ],
-          "anchor": [
-            380,
-            735
-          ]
-        },
-        "ananya": {
-          "kind": "head",
-          "anchor": [
-            60,
-            720
+          "face": [
+            444,
+            518,
+            90,
+            105
           ]
         }
       },
       "protected": [],
       "intent": {
         "entry": [
-          44,
-          570
+          40,
+          424
         ],
         "exit": [
-          500,
-          1060
+          580,
+          784
         ]
       },
       "groups": null,
@@ -140,10 +165,10 @@
     {
       "id": "05-3",
       "rect": [
-        528,
-        548,
-        472,
-        520
+        608,
+        408,
+        392,
+        380
       ],
       "steps": [
         {
@@ -151,48 +176,41 @@
           "speaker": "narration",
           "text": "Technology supports the workflow. The conversation stays human.",
           "rect": [
-            532,
-            552,
-            401,
+            612,
+            412,
+            372,
             138
           ],
           "center": [
-            732.5,
-            621
+            798,
+            481
           ],
           "mouth": null
         }
       ],
       "faces": {
         "ananya": {
-          "face": [
-            645,
-            738,
-            115,
-            100
+          "anchor": [
+            803,
+            682
           ],
-          "anchor": [
-            705,
-            820
-          ]
-        },
-        "ravi": {
-          "kind": "head",
-          "anchor": [
-            950,
-            720
+          "face": [
+            758,
+            598,
+            90,
+            105
           ]
         }
       },
       "protected": [],
       "intent": {
         "entry": [
-          544,
-          570
+          624,
+          424
         ],
         "exit": [
           990,
-          1060
+          784
         ]
       },
       "groups": null,
@@ -202,9 +220,109 @@
       "id": "05-4",
       "rect": [
         24,
-        1092,
+        812,
         976,
-        372
+        300
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "label",
+          "text": "SPECIALITY PLANNER",
+          "rect": [
+            40,
+            824,
+            330,
+            74
+          ],
+          "center": [
+            205,
+            861
+          ],
+          "mouth": null
+        },
+        {
+          "number": 2,
+          "speaker": "label",
+          "text": "Dentist: odontogram",
+          "rect": [
+            64,
+            994,
+            182,
+            106
+          ],
+          "center": [
+            155,
+            1047
+          ],
+          "mouth": null
+        },
+        {
+          "number": 3,
+          "speaker": "label",
+          "text": "Eye doctor: eye markers",
+          "rect": [
+            394,
+            994,
+            197,
+            106
+          ],
+          "center": [
+            492.5,
+            1047
+          ],
+          "mouth": null
+        },
+        {
+          "number": 4,
+          "speaker": "label",
+          "text": "Paediatrics: scales · vaccines",
+          "rect": [
+            714,
+            994,
+            263,
+            106
+          ],
+          "center": [
+            845.5,
+            1047
+          ],
+          "mouth": null
+        }
+      ],
+      "faces": {},
+      "protected": [],
+      "intent": {
+        "entry": [
+          40,
+          828
+        ],
+        "exit": [
+          990,
+          1108
+        ]
+      },
+      "groups": null,
+      "warnings": [
+        {
+          "from": 2,
+          "to": 3,
+          "reason": "左から右へ戻る移動と縦方向の範囲が重なる。段差・余白・人物の配置を目視で検討する。"
+        },
+        {
+          "from": 3,
+          "to": 4,
+          "reason": "左から右へ戻る移動と縦方向の範囲が重なる。段差・余白・人物の配置を目視で検討する。"
+        }
+      ]
+    },
+    {
+      "id": "05-5",
+      "rect": [
+        24,
+        1136,
+        976,
+        328
       ],
       "steps": [
         {
@@ -212,44 +330,60 @@
           "speaker": "ananya",
           "text": "We'll go through your concerns and decide the right next steps together.",
           "rect": [
-            404,
-            1100,
+            254,
+            1140,
             287,
             170
           ],
           "center": [
-            547.5,
-            1185
+            397.5,
+            1225
           ],
           "mouth": [
-            327,
-            1212
+            184,
+            1392
           ]
+        },
+        {
+          "number": 2,
+          "speaker": "label",
+          "text": "PLAN OF CARE: intelligent prescribing · summary · interactions · labs · referrals",
+          "rect": [
+            614,
+            1286,
+            361,
+            170
+          ],
+          "center": [
+            794.5,
+            1371
+          ],
+          "mouth": null
         }
       ],
       "faces": {
         "ananya": {
-          "face": [
-            297,
-            1140,
-            62,
-            90
-          ],
           "anchor": [
-            327,
-            1212
+            184,
+            1392
+          ],
+          "face": [
+            144,
+            1316,
+            80,
+            95
           ]
         },
         "ravi": {
-          "face": [
-            723,
-            1132,
-            66,
-            90
-          ],
           "anchor": [
-            757,
-            1205
+            494,
+            1392
+          ],
+          "face": [
+            454,
+            1316,
+            80,
+            95
           ]
         }
       },
@@ -257,15 +391,21 @@
       "intent": {
         "entry": [
           40,
-          1110
+          1152
         ],
         "exit": [
           990,
-          1505
+          1460
         ]
       },
       "groups": null,
-      "warnings": []
+      "warnings": [
+        {
+          "from": 1,
+          "to": 2,
+          "reason": "左から右へ戻る移動と縦方向の範囲が重なる。段差・余白・人物の配置を目視で検討する。"
+        }
+      ]
     }
   ],
   "checklist": [
