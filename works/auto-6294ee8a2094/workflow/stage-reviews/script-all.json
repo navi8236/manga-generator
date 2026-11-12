@@ -1,5 +1,5 @@
 {
-  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/script-all-3635fddbe403fa592f8e8e3d2b11374e23f67879e63e4dd0baf29348c6b0dee1.json",
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/script-all-91a93212f6e86f55f7a96511e9a485e9884e78eba864da3ac816cd9e47762522.json",
   "reviewer": {
     "role": "subagent",
     "task": "claude-code-agent:manga-reviewer:af09b790fe5290800",
@@ -9,11 +9,12 @@
   "status": "pass",
   "observations": [
     "Reviewer identity: the runtime gave me no task ID, so reviewer.task is null. The parent must add the real Agent ID and must not invent one.",
-    "What I read for this request: every dialogue text line and every textColumns line in the file (lines 350-2597), the file entries (unchanged: original.txt c0df59c3... and source-coverage.json f04c9d21...) and fingerprint 3635fddb.... I read 09-3 and 09-4 in full (lines 2228-2334). By searching, I confirmed that the decision text (line 10), the continuity rule naming 10-2 and 10-3 (line 173) and the earlier metadata fixes (lines 288, 1776, 2081, 2404, 2454) are still present. Every text and column line sits at the same line number and has the same wording as in the a17a1b90 request, so no dialogue changed. Earlier in this session I read the whole script request and the full source files: original.txt, original-v4.txt, REVISION-2026-11-11.md and source-coverage.json. This request has no images, and I inspected none. The art, the 09-4 regeneration and the lettering positions are not certified here.",
-    "09-3 changes. The scene now describes 'the same stand as page 3: teal frame on a pole, white screen with an abstract grey QR-like grid, not a real code, no text', which agrees with the redrawn art and the 03-3 continuity as the coordinator reports them. 'The plain desk front at the lower left carries the caption.' replaces the stale upper-wall sentence, so the scene now matches the 4-line caption position. The information field 'Self check-in: no queue at the desk, and nobody has to type his details in for him.' no longer clashes with Meera typing calmly in the background. Both of my earlier non-blocking notes on 09-3 are resolved.",
-    "09-4 changes, made before regeneration. The scene's 'phone in his right hand in his lap, left hand with the wristwatch on the chair arm' matches production.hands (right: holding ravi-phone in his lap; left: resting on the chair arm, wristwatch) and the cast's left-wrist watch. The two patients seen from behind are now specified as an elderly grey-haired man and a young man in a blue shirt, 'no bun, no kurta', so neither can be read as Ananya or the vision partner. The scene asks for the whole TV in frame with wall above it, and plain wall in the upper-left half for the two-line caption, which suits the 2-column caption. The 'NOW · A-31' label still needs re-placement on the regenerated art at the lettering stage.",
-    "textColumns check across the whole file. I rejoined every column list in all 40 panels by eye, with trailing spaces, against its text line, and each rejoins exactly. This includes 09-1 (3 columns), 'FOLLOW-UP REMINDER' (2), 09-2 (4), 09-3 (4: 'He checks in ' + 'himself. ' + 'No queue ' + 'at the desk.'), 09-4 (2) and 'NOW · A-31', the 09-5 balloon (3) and caption (2), and all of pages 1-8 and 10. This was a visual check, not a tool comparison.",
-    "Request 5 and the framing still hold. All page 9 and 10 lettering is verbatim from original.txt lines 62-72 and recorded as drafted by the production agent and approved by the user. The savings claims carry no numbers. The network and referral benefit appears only in 10-2, under WELBUK VISION. 10-3 and 10-4 are unchanged. The rejected tagline is absent. No drug names, test names, values or diagnosis appear. The transitions are unchanged and clear: 08-6 hands off to the 09-1 reminder, 09-2 says 'On the day', and 10-1's conditional 'If Ravi travels' leads into the vision panels."
+    "What I read for this request: every dialogue text line and every textColumns line in the file (lines 350-2598), the file entries (unchanged: original.txt c0df59c3... and source-coverage.json f04c9d21...) and fingerprint 91a93212.... I read 09-4 in full (lines 2281-2334). By searching, I confirmed that the decision text (line 10), the continuity rule naming 10-2 and 10-3 (line 173), the earlier metadata fixes (lines 288, 1776, 2081, 2405, 2455), and the 09-3 and 09-5 revisions from earlier rounds (lines 2230, 2233, 2338) are all still present. Earlier in this session I read the whole script request and the full source files: original.txt, original-v4.txt, REVISION-2026-11-11.md and source-coverage.json. This request has no images, and I inspected none. The regenerated 09-4 art, the label placement on the TV, the faces and the protected areas were not shown to me and are not certified here.",
+    "09-4 re-break. ['As usual, his ', 'slot comes up ', 'on the screen.'] rejoins exactly to 'As usual, his slot comes up on the screen.' (line 2320). The words, punctuation and spacing are unchanged, and the text is still verbatim from original.txt line 65. 'NOW · A-31' (1 column) is unchanged and verbatim.",
+    "09-4 pose. The scene ('phone in his right hand in his lap, left forearm along the chair arm with the hand (wristwatch) resting on his thigh') and production.hands (left: 'forearm along the chair arm, hand resting on his thigh (wristwatch on this wrist)'; right: 'holding ravi-phone in his lap') agree with each other. They also agree with the ravi-phone prop (heldBy ravi.right) and with the cast's left-wrist watch. No dialogue depends on the pose.",
+    "textColumns check across the whole file. I rejoined every column list in all 40 panels by eye, with trailing spaces, against its text line, and each rejoins exactly. This includes 09-1 (3 columns), 'FOLLOW-UP REMINDER' (2), 09-2 (4), 09-3 (4), 09-4 (3) and 'NOW · A-31', the 09-5 balloon (3) and caption (2), and all of pages 1-8 and 10. All other text and columns match the previous request. This was a visual check, not a tool comparison.",
+    "Request 5 and the framing still hold. All page 9 and 10 lettering is verbatim from original.txt lines 62-72 and recorded as drafted by the production agent and approved by the user. The savings claims carry no numbers. The network and referral benefit appears only in 10-2, under WELBUK VISION. 10-3 and 10-4 are unchanged. The rejected tagline is absent. No drug names, test names, values or diagnosis appear. The transitions are unchanged: 08-6 hands off to the 09-1 reminder, 09-2 says 'On the day', 09-4's 'As usual' refers back to 03-5 and 04-1, and 10-1's conditional leads into the vision panels.",
+    "Non-blocking wording note. The 09-4 scene still ends 'the upper-left half of the panel is plain wall for a two-line caption', but the caption is now 3 lines in a top-left corner tab. Consider changing 'two-line caption' to 'caption' so future prompts and reviews do not expect two lines. The lettering stage should confirm that the tab and the TV label clear Ravi's face and the TV strip on the regenerated art."
   ],
   "issues": [],
   "dialogueReview": {
@@ -153,11 +154,11 @@
       },
       {
         "panel": "09-3",
-        "observation": "'He checks in himself. No queue at the desk.' is verbatim from line 64, and its 4 columns ['He checks in ', 'himself. ', 'No queue ', 'at the desk.'] rejoin. 'He' refers to Ravi in 09-2. The scene now names the same stand as page 3 and the lower-left desk front as the caption's place. The information field matches Meera's calm background typing. 'No queue' does not contradict 03-1's front-desk option."
+        "observation": "'He checks in himself. No queue at the desk.' is verbatim from line 64, and its 4 columns rejoin. 'He' refers to Ravi in 09-2. The scene names the same stand as page 3 and the lower-left desk front for the caption, and the information field matches Meera's calm background typing."
       },
       {
         "panel": "09-4",
-        "observation": "The caption (2 columns) and 'NOW · A-31' are verbatim from line 65 and rejoin. 'As usual' depends on 03-5 and 04-1, which are present. The new token A-31, not A-12, signals a different day. The revised scene gives plain wall in the upper left for the two-line caption, and the hands match production.hands. The label must be re-placed after regeneration."
+        "observation": "The caption is verbatim from line 65. Its new 3 columns ['As usual, his ', 'slot comes up ', 'on the screen.'] rejoin exactly, with the words unchanged. 'NOW · A-31' is verbatim. 'As usual' depends on 03-5 and 04-1, which are present. The new token A-31, not A-12, signals a different day. The revised pose in the scene matches production.hands."
       },
       {
         "panel": "09-5",
@@ -181,6 +182,6 @@
       }
     ]
   },
-  "fingerprint": "3635fddbe403fa592f8e8e3d2b11374e23f67879e63e4dd0baf29348c6b0dee1",
-  "recordedAt": "2026-11-12T15:29:22.315Z"
+  "fingerprint": "91a93212f6e86f55f7a96511e9a485e9884e78eba864da3ac816cd9e47762522",
+  "recordedAt": "2026-11-12T15:38:24.750Z"
 }

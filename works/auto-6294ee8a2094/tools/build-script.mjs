@@ -1547,7 +1547,7 @@ const SCREEN = 'The laptop stands at about a three-quarter angle toward the read
         beat: 'Self check-in with the QR code',
         rect: r3,
         scene:
-          'Just inside the glass entrance: Ravi holds his phone up to the small QR check-in stand (the same stand as page 3: teal frame on a pole, white screen with an abstract grey QR-like grid, not a real code, no text); his phone shows a scan frame and a check mark. In the background the reception desk has no queue at all: nobody is waiting in front of it, and Meera, free of check-in work, types calmly at her monitor. The plain desk front at the lower left carries the caption.',
+          'Just inside the glass entrance, Ravi in profile facing right: with his far (left) hand, wristwatch on that wrist, he holds his phone up to the small QR check-in stand (the same stand as page 3: teal frame on a pole, white screen with an abstract grey QR-like grid, not a real code, no text), his near (right) arm relaxed and empty at his side; his phone shows a scan frame and a check mark. In the background the reception desk has no queue at all: nobody is waiting in front of it, and Meera, free of check-in work, types calmly at her monitor. The plain desk front at the lower left carries the caption.',
         action: 'Ravi scans the QR code.',
         emotion: 'Easy, focused.',
         camera: 'Medium shot, three-quarter view.',
@@ -1558,11 +1558,11 @@ const SCREEN = 'The laptop stands at about a three-quarter angle toward the read
           before: 'He walked in empty-handed (09-2).',
           after: 'He waits for his slot (09-4).',
           hands: {
-            ravi: hands('relaxed at his side, empty (wristwatch on this wrist)', 'holding ravi-phone to the QR stand'),
+            ravi: hands('holding ravi-phone to the QR stand (wristwatch on this wrist)', 'relaxed at his side, empty'),
             meera: hands('typing at the reception keyboard (background)', 'typing at the reception keyboard (background)'),
           },
           props: [
-            prop('ravi-phone', 'in his shirt pocket', 'held to the QR stand, check mark on screen', 'in his hand', 'ravi.right'),
+            prop('ravi-phone', 'in his shirt pocket', 'held to the QR stand, check mark on screen', 'in his hand', 'ravi.left'),
             prop('qr-stand', 'just inside the entrance', 'being scanned', 'just inside the entrance', 'none'),
           ],
         },
@@ -1579,7 +1579,7 @@ const SCREEN = 'The laptop stands at about a three-quarter angle toward the read
         beat: 'As usual, his token comes up on the screen',
         rect: r4,
         scene:
-          'Waiting area: the wall-mounted waiting-room TV in the upper right shows a teal screen with one empty white token strip (no text or numbers). Ravi sits in a waiting chair, phone in his right hand in his lap, left forearm along the chair arm with the hand (wristwatch) resting on his thigh, looking up at the TV with a small smile; two other patients seen from behind: an elderly grey-haired man at the left and a young man with short hair in a blue shirt at the right (no bun, no kurta). The whole TV is in frame with plain wall above it, and the upper-left half of the panel is plain wall for a two-line caption.',
+          'Waiting area: the wall-mounted waiting-room TV in the upper right shows a teal screen with one empty white token strip (no text or numbers). Ravi sits in a waiting chair, phone in his right hand in his lap, left forearm along the chair arm with the hand (wristwatch) resting on his thigh, looking up at the TV with a small smile; two other patients seen from behind: an elderly grey-haired man at the left and a young man with short hair in a blue shirt at the right (no bun, no kurta). The whole TV is in frame with plain wall above it, and the upper-left half of the panel is plain wall for the caption.',
         action: 'Ravi sees his slot called.',
         emotion: 'Calm.',
         camera: 'Medium-wide shot.',
@@ -1598,7 +1598,7 @@ const SCREEN = 'The laptop stands at about a three-quarter angle toward the read
         speakers: { ravi: speaker(r4, [180, 250, 70, 85]) },
         dialogue: [
           line('narration', ['As usual, his', 'slot comes up', 'on the screen.'], 0, 0),
-          line('label', ['NOW · A-31'], 286, 38),
+          line('label', ['NOW · A-31'], 278, 38),
         ],
       },
       {
