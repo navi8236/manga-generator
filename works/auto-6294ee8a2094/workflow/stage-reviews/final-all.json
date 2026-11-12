@@ -1,33 +1,29 @@
 {
-  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/final-all-9b0fa2c4f3d7b97e5d6bf738240dda091f973ceb1c6c2f7e4e631c306be48cb0.json",
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/final-all-d74a459b0d59aac8da283098f816fcaa3434ce0efa3171568250e21d837907c1.json",
   "reviewer": {
     "role": "subagent",
-    "task": "claude-code-agent:manga-reviewer:a45edda572625cbd8",
+    "task": "claude-code-agent:manga-reviewer:abc6a2c6978c50020",
     "reportedTask": null,
     "taskSource": "Agent ID returned by the Claude Code Agent tool to the parent."
   },
-  "status": "changes-requested",
+  "status": "pass",
   "observations": [
-    "Files I opened with Read and looked at myself: output/page-01.png to page-08.png, each as a full page; output/pdf/manga.pdf, pages 1-8 (Read extracted 8 pages); assets/panels/04-3.png; assets/panels/07-2.png; source/original.txt; source/REVISION-2026-11-11.md; AGENTS.md (supplied in context); docs/REVISION-AND-REVIEWS.md; docs/PROMPTS.md. From the request JSON I read the decisions, the transitions, the first reading, the file list and the script, including the full 04-3 entry and every dialogue text by grep. I used responses/final-all-r7.json only as a format template and background. I grepped output/page-04.svg and output/page-07.svg for box and panel-image coordinates. I did not open reader.html, the character sheets, the storyboard SVGs, the workflow/review PNGs or the other panel PNGs, so I make no visual claim about them. Nothing I tried to read was unreadable.",
-    "PDF: fixed. output/pdf/manga.pdf has 8 pages. Each PDF page matches output/page-01..08.png in layout, art and lettering. That includes the page 5 consent panel, page 6 'The doctor's screen', the raised 03-2 caption, the new position of the 07-2 label and the 07-4 caption.",
-    "03-2 caption (final-all-r6): fixed. On page-03.png the caption box ends at about y134. Priya's high ponytail rises from her crown and falls behind her shoulder, and the blue scrunchie shows below the box. This matches her ponytail in 03-3 (background) and 03-5.",
-    "07-2 label: fixed. page-07.svg puts the label at x24-292, y764-870. The panel art is 1024px drawn at 560px (scale 0.547) from (24,548). In assets/panels/07-2.png, the topmost point of Ravi's screen-left gripping hand (the thumb tip, at about art y600) maps to about page y876, and the phone's left edge to about page x300. The box clears both the hand and the phone by roughly 3-8px. On the page the whole hand is visible below the label. The label now covers only his sleeve, his shoulder and background chairs.",
-    "07-4 caption: clear. The box runs x32-672, y1138-1212. Ravi's raised waving hand starts at about x680, y1205 on page-07.png, so it is not covered. No face is covered.",
-    "04-3 'RAVI · READY': the first reader's note is confirmed. In page-04.svg the label box is at x790-919, y1202-1308, with a 3px dark stroke and a 6px white halo. The 640x1632 art is drawn 'meet' into 392x996 at (608,468), at a scale of about 0.610 with an x offset of about 608.7. In assets/panels/04-3.png, the fingertips of Ananya's screen-right hand rest over the right part of the tablet screen at about art x508-515, y1220-1280. On the page that is about x918-923, y1213-1250. This hand is her left, the script's heldBy 'ananya.left' for doctor-tablet. The box's right border and halo (to about x922) therefore run right along the index and middle fingertips, with no visible gap on page-04.png. Up to about 2px of fingertip may sit under the halo. Her other hand (screen-left) has its fingertips at about page x724-776, about 14px clear of the box's left edge. No face is covered. Both tablet-holding hands are important and not protected. The contact is minor, but it is the same kind of contact that was fixed in 07-2 and is just as easy to fix: the text 'RAVI ·' / 'READY' ends at about x880, so the box can be narrowed or moved.",
-    "Wording: every caption, balloon and label on the eight PNGs matches the script exactly, and the script matches source/original.txt. That includes 'A-10 · A-11 · A-12', 'NOW · A-12', 'RAVI · READY', the full page 5 and 6 labels (with the corrections in REVISION r7: odontogram, growth scales, Paediatrician, summarise; 'AI mic option' in r8), the 05-2 consent exchange and the '•' separators in 08-4.",
-    "Tails and speakers: 01-2 (both) to Meera; 01-3 to Ananya; 02-2 to Ananya; 02-3 to Meera; 02-4 to the seated Ananya; 04-2 to the nurse; 05-1 to Ananya; 05-2 'May the AI...' to Ananya, and 'Yes, I agree.' by a diagonal tail to Ravi, whose open-hand gesture matches; 05-3 to Ravi; 06-2 to Ananya; 07-1 and 07-3 to Meera; 07-2 to Ravi. No balloon, caption or label covers a face.",
-    "Continuity on the PNGs: Ananya keeps her bun (looser in 02-4), gold stud, teal kurta, white coat and stethoscope. Meera keeps her braid, blue print kurta and bangle. Ravi keeps his sage shirt, left-wrist watch and brown bag: on his shoulder in 03-3 and 04-1, on his lap in 03-5, on the floor in 04-2, beside the chair on pages 5 and 6, then on his shoulder on pages 7 and 8. Mr. Raman keeps his glasses, cream shirt and cane. Priya keeps her ponytail and coral kurti. The nurse has lavender scrubs, a lanyard and a bob. In 08-2 and 08-3 the rounded pale vignette and the WELBUK VISION label mark the vision."
+    "What I read: I read AGENTS.md and CLAUDE.md (both supplied in context), docs/REVISION-AND-REVIEWS.md, docs/PROMPTS.md and source/REVISION-2026-11-11.md. In the request JSON I read the decisions, the required transitions, the cast and sections, the 01-1 to 03-5 panels in full, the 04-3 and 08-5 panels in full, the start of 08-6, the first reading (fingerprint 42f596c5..., hash 217940ab...) and the file list. I opened each of output/page-01.png to page-09.png with Read and looked at every full page myself. I opened output/pdf/manga.pdf pages 1-9 with Read: 9 pages were extracted, and I looked at each one. I opened assets/panels/04-3.png and assets/panels/08-5.png. I grepped output/page-04.svg and page-08.svg for the label rect coordinates. I grepped source/original.txt for the captions and labels in question. I used responses/final-all-r9.json as the format template and for the list of previous judgements. I did not open reader.html, the character sheets, the storyboard SVGs, the workflow/review PNGs or any other panel PNG, so I make no visual claim about them. I did not run `node cli/pdf.mjs verify`. I have no shell, so the PASS result is the parent's report, not something I observed. Nothing I tried to read was unreadable.",
+    "PDF: output/pdf/manga.pdf has 9 pages. Each one matches output/page-01..09.png in panel layout, art and lettering. That includes page 8 with the moved 08-5 RESULTS READY label, and the 04-3 RAVI · READY label in the same position as on the PNG.",
+    "08-5 RESULTS READY (the previous issue): fixed. In page-08.svg the label rect is now x448-618, y996-1102 (stroke 3, white halo stroke 6 with rx 34, so the halo reaches about x621). assets/panels/08-5.png is 1408x736, drawn 'meet' into the 560x294 panel at x440 (scale about 0.398). Ananya's leftmost screen-left knuckles are at about art x478, which is about page x630. The script's protected box starts at x631. That leaves about 9-12 px between the halo and the knuckles. On page-08.png and PDF page 8 a band of white wall is visible between the label's right border and her hand. The label covers only plain wall and the left part of the desk, and it no longer touches the tablet bezel or any finger. The 08-5 caption (x448-660, y856-993) sits over plain wall above the label, clear of her face (face box from x754).",
+    "04-3 RAVI · READY against both hands (raised by the first reader): acceptable. The rect is x783-912, y1202-1308, and its halo reaches about x780-915. assets/panels/04-3.png (about 640x1632, meet scale about 0.610, from x about 609) puts the screen-left fingertips, which wrap over the bezel, at about art x275, so about page x776-778. The protected box for that hand ends at x773. The screen-right fingers start at about page x919-922 (protected from x922). The gaps are therefore narrow on both sides: about 2-7 px to the halo on the left and about 4-7 px on the right. On page-04.png the label does not overlap or hide any finger, and both grips stay readable. The thumbs, fingers and tablet edges are all visible outside the box, and I can see a thin light gap on the right. The left side is the tighter of the two and reads as close, but it does not touch. No finger is cut off and the label sits on the screen area the user asked for. I judge this a cosmetic near-tangent, not a defect, and I do not reopen it. If the parent wants the same about-10 px margin used for 08-5, narrowing the box by about 4 px on each side would give it, but I do not require that.",
+    "Welbuk Practice / Welbuk Care mapping on pages 2 and 8: acceptable, judged independently. The page 2 labels themselves read 'WELBUK PRACTICE for the clinic' (02-1, over the clinic's setup laptop) and 'WELBUK CARE for clinic staff' (02-3). Meera's line defines Care as 'tools suited to each staff role', so it covers every role, not only reception. On page 8 'Dr. Ananya is notified on Welbuk Care.' fits, because she is clinic staff. 'The clinic is notified on Welbuk Practice.' fits as well: the caption names the clinic, not Meera, and it shows on the reception desktop, a clinic computer like the 02-1 laptop. The user's Request 4, quoted word for word in REVISION-2026-11-11.md, says 'doctor gets notified on the care app and clinic via practice'. original.txt lines 58-59 have exactly these captions. The first reader matched each product to the person standing beside its label in 02-1 and 02-3, but the label text does not say that. Swapping the products would go against the user's explicit decision.",
+    "'Meanwhile' (08-1) and 'Later that day' (08-3) after Ravi walks away in 07-4: acceptable. 07-4 shows him leaving the clinic door. 'Meanwhile, the pharmacy is notified and fills the prescription.' places the pharmacy beat while he heads off, and the NEW PRESCRIPTION card follows on from the 06-2 plan of care. 08-2 'The lab is notified.' then 08-3 'Later that day, Ravi gives his samples at the clinic lab.' state his return outright. The 08-3 lab matches 08-2 (same blue chair, tube rack and monitor), and Ravi wears the same sage shirt with the same brown bag on his lap and his watch on his left wrist, which supports 'same day'. Request 4's confirmed decision is 'the samples are given at the clinic lab on the same day'. The return trip after the farewell is a small bump, but it is clearly signposted.",
+    "02-1 caption: acceptable. The box sits at top centre, flush with the panel's top border (about x434-620, y24-193). It hides the middle of the sunset window, but the orange sky and window frames show on both sides, so the evening cue survives. Ananya's profile (nose at about x405), bun and stud are clear of it, and so are both hands on the keyboard. The PRACTICE label at top right covers only the wall and window frame.",
+    "03-2 caption: acceptable. The box at top right (about x807-1000, y28-198) is flush with the top and right borders. It covers only the hair strand on the screen-right side of Priya's head. Her eyes, nose, mouth and cheek line (to about x795) are visibly clear, and so are her ponytail with the scrunchie and her raised phone with the tapping finger, which starts below the box. The eye moves from her face and phone to the caption and then down to 03-3.",
+    "09-4 lettering: acceptable. The product label (about x704-985, y872-1010) meets only the screen-right side of Ravi's hair. His face, beard and raised waving hand (about x595-630) are clear. The bottom caption (about x48-481, y1342-1448) covers Meera's lower churidar and feet and touches the outer edge of Ananya's screen-left leg. No face, hand or prop is covered (Meera's phone at about y1215 is above it). The '•' separators and the wording match original.txt.",
+    "The first reader's other concerns. p1: 'Our time belongs with patients' is the source wording (original.txt line 17). The tails end on hair, and no eye or mouth is covered. Whether Meera is speaking to herself or to the caller is a mild ambiguity, but she lists her own tasks, which reads as a sigh. Acceptable. p2: the bottom balloon's tail goes clearly to Ananya's mouth, and the CARE label covers only Meera's kurta at the hip. Acceptable. p3: slot ownership is resolved by 'NOW · A-12' as Ravi stands in 04-1. Acceptable. p4: the NOW label overhangs the TV bezel slightly but is clearly the screen label. 'RAVI ·' with its dot at the end of the line is the source label split over two lines and is legible. Acceptable. p5: the split between question and answer and the closeness of the 'Yes, I agree.' balloon come from the user's first-time AI-consent request. The long tail to Ravi and his open hand make him the speaker. Acceptable. p6: the planner is unrelated to Ravi because the user asked for this product walkthrough (Request 3), and the Paediatrician label overhanging the bezel hides only the keyboard edge. Acceptable. p7: the cut to reception has no caption in the source, but the counter carries the change of place. Acceptable. p8: the repeated 'RESULTS READY' is intentional (one notification, several recipients), and the hanging dot in 'Welbuk Health app ·' is legible. Acceptable. p9: 'us/our' in the source caption, the unintroduced specialist and family, and the repeated VISION label are all source text or the required vision framing. Acceptable.",
+    "Wording and continuity: every caption, balloon and label I read on the nine PNGs matches the original.txt lines I grepped and checked. Ananya (bun, gold stud, teal kurta, white coat, stethoscope), Meera (braid, blue kurta, bangle), Ravi (sage shirt, watch on left wrist, brown bag), the nurse, the pharmacist and the lab technician stay consistent across the pages where they appear. No screen shows a drug name, test name, value or personal data."
   ],
-  "issues": [
-    {
-      "problem": "In 04-3 the 'RAVI · READY' label box (x790-919, y1202-1308, plus a 3px stroke and 6px halo) runs right along the fingertips of Ananya's screen-right hand (her left hand, heldBy for doctor-tablet), at about page x918-923, y1213-1250. There is no visible gap, so it forms a tangent, and up to about 2px of fingertip may be hidden under the halo. Fix: narrow the box to fit the text (it ends at about x880, so the right edge could be about x900), or move it about 8px left (the left hand's fingertips are about 14px clear). Ideally add both tablet-holding hands to the 04-3 protected areas. Then re-render page 4, reader.html and the PDF, and prepare a new final request.",
-      "location": "page 04, panel 04-3 (label on the tablet against Ananya's screen-right fingertips)",
-      "resolved": false
-    }
-  ],
+  "issues": [],
   "readingReview": {
     "withoutGuides": true,
-    "firstReadingHash": "470285798c9e32a105116c7c0062d8da7fbdd50b3791b306df6f548c3691cdf4",
+    "firstReadingHash": "217940ab11198c5329b636b106dbd30692b2d4b331650f71697779088886d114",
     "predictedOrder": [
       {
         "panel": "01-1",
@@ -198,7 +194,8 @@
       {
         "panel": "08-1",
         "dialogue": [
-          1
+          1,
+          2
         ]
       },
       {
@@ -221,45 +218,86 @@
           1,
           2
         ]
+      },
+      {
+        "panel": "08-5",
+        "dialogue": [
+          1,
+          2
+        ]
+      },
+      {
+        "panel": "08-6",
+        "dialogue": [
+          1,
+          2
+        ]
+      },
+      {
+        "panel": "09-1",
+        "dialogue": [
+          1
+        ]
+      },
+      {
+        "panel": "09-2",
+        "dialogue": [
+          1,
+          2
+        ]
+      },
+      {
+        "panel": "09-3",
+        "dialogue": [
+          1,
+          2
+        ]
+      },
+      {
+        "panel": "09-4",
+        "dialogue": [
+          1,
+          2
+        ]
       }
     ],
     "observations": [
-      "01-2: Meera's two balloons step down from left to right. Both tails go to her, and they read as one complaint in script order.",
-      "03-5: the caption (top left, y968) comes before the TV label (top right, y1012). The seating order Raman, Priya, Ravi matches the check-in order on the page.",
-      "04-3: the caption at the top comes before the tablet label. The label touches the fingertips of Ananya's screen-right hand (see issues). The line break 'RAVI ·' / 'READY' is cosmetic and does not affect reading.",
-      "05-1: Ananya's balloon (top, y40) is read before the PATIENT DETAILS label (y225), in script order.",
-      "05-2: question, then 'Yes, I agree.', then the AI VOICE CONSENT label, from left to right. The reply's diagonal tail and Ravi's open-hand gesture keep it from being skipped.",
-      "05-3: Ravi's balloon (top left) comes before the SOAP NOTES label (lower left).",
-      "06-1: the header first, then the three tiles from left to right. The Paediatrician tile hangs over the bezel, which is cosmetic. The doctor's hand on the trackpad is fully visible.",
-      "07-2: the balloon at the top comes before the label. The label now clears Ravi's gripping hand and the phone.",
-      "08-2 / 08-3: the WELBUK VISION label comes before the caption in each panel.",
-      "08-4: the product label at top right (y872) comes before the tagline at bottom left (y1342) in a top-to-bottom scan. The tagline covers Meera's hem and feet and the edge of Ananya's lower leg, but no face, hand or prop."
+      "01-2: the upper-left balloon comes before the lower-right one. Both tails go to Meera.",
+      "02-1: the caption at top centre comes before the PRACTICE label at top right, in left-to-right order.",
+      "02-3: Meera's balloon at the top comes before the CARE label lower down. The label covers only her kurta at the hip.",
+      "03-2: the caption is the only text in the panel. The eye goes from Priya's face and phone to the caption at top right, then down to 03-3.",
+      "04-3: the caption at the top comes before the RAVI · READY label on the tablet. The label sits between her hands with a narrow gap on each side and no overlap.",
+      "05-2: question, then 'Yes, I agree.', then the consent label, from left to right. The long tail and Ravi's open hand tie the reply to him.",
+      "08-1 / 08-2: in each panel the caption comes before the label stacked below it.",
+      "08-3: the caption at top left comes before the technician's balloon at top right. The tail goes to her.",
+      "08-4 to 08-6: the tall left panel is read first, then the right column from top to bottom. In each panel the caption comes before the label. The 08-5 label now has a visible gap from her hand.",
+      "09-2 / 09-3: in each panel the WELBUK VISION label comes before the caption. 09-4: the product label at top right comes before the tagline at bottom left."
     ],
     "transitions": [
       {
         "from": "01-1",
         "to": "01-2",
-        "observation": "From the exterior to the reception desk on the same morning. The desk and phone can be seen through the glass door in 01-1."
+        "observation": "From the exterior to the reception desk on the same morning. The desk and phone are visible through the glass door in 01-1."
       },
       {
         "from": "01-2",
         "to": "01-3",
-        "observation": "Meera is still on the phone in the background while Ananya watches with a hand at her chin, so her line answers the complaint."
+        "observation": "Meera is still on the phone in the background while Ananya watches, so Ananya's resolve answers Meera's complaint."
       },
       {
         "from": "01-3",
         "to": "02-1",
-        "observation": "A time change shown by the sunset window, with the source caption kept word for word."
+        "observation": "The sunset window and the onboarding caption mark the time change."
       },
       {
         "from": "02-1",
         "to": "02-2",
-        "observation": "Same office, window and laptop. Ananya goes from typing to considering."
+        "observation": "Same office and laptop. Ananya goes from typing to thinking."
       },
       {
         "from": "02-2",
         "to": "02-3",
-        "observation": "Meera picks up Ananya's line with 'And our team...'. The open laptop is in both panels."
+        "observation": "'And our team...' continues Ananya's line. The laptop is visible in both panels."
       },
       {
         "from": "02-3",
@@ -269,12 +307,12 @@
       {
         "from": "02-4",
         "to": "03-1",
-        "observation": "'A later morning:' marks the time change. The tidy reception contrasts with page 1."
+        "observation": "'A later morning:' marks the time change to the tidy reception."
       },
       {
         "from": "03-1",
         "to": "03-2",
-        "observation": "The second route: Priya outside, using the app, with the clinic TV seen through the glass."
+        "observation": "The second check-in route: Priya outside on the app, with the clinic TV visible through the glass."
       },
       {
         "from": "03-2",
@@ -284,7 +322,7 @@
       {
         "from": "03-3",
         "to": "03-4",
-        "observation": "The scan leads to a close-up of the form on the same phone, watch on his left wrist."
+        "observation": "The scan leads to a close-up of the form on the same phone. His watch is on his left wrist."
       },
       {
         "from": "03-4",
@@ -294,27 +332,27 @@
       {
         "from": "03-5",
         "to": "04-1",
-        "observation": "'NOW · A-12' and Ravi standing up confirm his slot. The emptier chairs fit A-10 and A-11 having already been called."
+        "observation": "'NOW · A-12' and Ravi standing up identify his slot."
       },
       {
         "from": "04-1",
         "to": "04-2",
-        "observation": "The vitals trolley seen in 04-1 becomes the vitals corner. The nurse names Ravi."
+        "observation": "The vitals trolley seen in 04-1 becomes the vitals corner, and the nurse names Ravi."
       },
       {
         "from": "04-2",
         "to": "04-3",
-        "observation": "The caption cuts to Ananya's tablet. The closed laptop sets up page 5."
+        "observation": "The caption cuts to Ananya's tablet alert. The closed laptop sets up page 5."
       },
       {
         "from": "04-3",
         "to": "05-1",
-        "observation": "Consultation room: the laptop is open and the tablet is gone. The greeting follows the notification."
+        "observation": "Consultation room: the laptop is open and the tablet is put away. Her greeting follows the alert."
       },
       {
         "from": "05-1",
         "to": "05-2",
-        "observation": "'What brings you in' is held while consent comes first, as the user decided (first-time AI voice consent)."
+        "observation": "Consent is asked before Ravi answers, as the user requested."
       },
       {
         "from": "05-2",
@@ -324,61 +362,91 @@
       {
         "from": "05-3",
         "to": "05-4",
-        "observation": "Ananya listens, with Ravi seen from behind, under the summary caption."
+        "observation": "Ananya listens, with Ravi seen from behind. The caption sums up."
       },
       {
         "from": "05-4",
         "to": "06-1",
-        "observation": "A close-up of the same laptop under the doctor's teal-cuffed hand: the screen walkthrough of Request 3 / 'add page if needed'."
+        "observation": "A close-up of the same laptop under her hand: the screen walkthrough."
       },
       {
         "from": "06-1",
         "to": "06-2",
-        "observation": "Back to the two-shot with PLAN OF CARE. 'We'll go through your concerns' picks up Ravi's tiredness without giving medical advice."
+        "observation": "Back to the two-shot. 'We'll go through your concerns' picks up his tiredness."
       },
       {
         "from": "06-2",
         "to": "07-1",
-        "observation": "A cut to the reception counter (the same chairs and monitor as page 3) that reads as checkout. The source has no transition caption."
+        "observation": "A cut to the reception counter that reads as checkout."
       },
       {
         "from": "07-1",
         "to": "07-2",
-        "observation": "Ravi holds up the phone Meera pointed at, and his question follows her line."
+        "observation": "Ravi holds up the phone Meera pointed at and asks his question."
       },
       {
         "from": "07-2",
         "to": "07-3",
-        "observation": "Meera answers, gesturing at his phone in the foreground."
+        "observation": "Meera confirms, gesturing at his phone."
       },
       {
         "from": "07-3",
         "to": "07-4",
-        "observation": "Ravi leaves waving, with Ananya and Meera waving from the door. The caption is the source's, word for word."
+        "observation": "Ravi leaves waving, and Ananya and Meera wave from the door."
       },
       {
         "from": "07-4",
         "to": "08-1",
-        "observation": "Train window. 'Tomorrow, care may take us beyond our hometown.' is the source's, word for word, and his outfit and bag carry over."
+        "observation": "'Meanwhile' moves to the pharmacy while he heads off. NEW PRESCRIPTION ties back to the plan of care."
       },
       {
         "from": "08-1",
         "to": "08-2",
-        "observation": "The WELBUK VISION label, the vignette and the lighter palette mark a vision, as the source requires."
+        "observation": "A parallel notification: the lab is notified, and the technician holds a tube."
       },
       {
         "from": "08-2",
         "to": "08-3",
-        "observation": "The repeated VISION label keeps the symbolic family scene from reading as a launched feature."
+        "observation": "'Later that day' brings Ravi back to the same lab, in the same outfit and with the same bag, as the user decided."
       },
       {
         "from": "08-3",
         "to": "08-4",
-        "observation": "Back to the clinic exterior for the closing portrait with the source's product label."
+        "observation": "'We'll let you know...' leads into 'Results ready: Ravi is notified.' at home in evening light."
+      },
+      {
+        "from": "08-4",
+        "to": "08-5",
+        "observation": "The same results reach Dr. Ananya on Welbuk Care, on her tablet."
+      },
+      {
+        "from": "08-5",
+        "to": "08-6",
+        "observation": "And the clinic, on Welbuk Practice, on the reception monitor, matching the user's wording."
+      },
+      {
+        "from": "08-6",
+        "to": "09-1",
+        "observation": "'Tomorrow, care may take us beyond our hometown.' moves to the train. His outfit and bag carry over."
+      },
+      {
+        "from": "09-1",
+        "to": "09-2",
+        "observation": "The WELBUK VISION label, the vignette and the lighter palette mark the vision."
+      },
+      {
+        "from": "09-2",
+        "to": "09-3",
+        "observation": "The repeated VISION label keeps the family scene marked as a vision, not a launched feature."
+      },
+      {
+        "from": "09-3",
+        "to": "09-4",
+        "observation": "Back to the clinic exterior for the closing portrait with the product label and tagline."
       }
     ],
-    "comparison": "Where I agree with the first reading: the reading order on every page, who is speaking, and that no face is covered. My judgement on each of the first reader's concerns: (p1) 'Our time belongs with patients' is source text, word for word (original.txt, Page 1 Panel 3): acceptable. The tails end at hair or cheek without covering a face: acceptable. (p2) No evening caption: the source caption 'The clinic begins its Welbuk onboarding.' is kept, and the sunset window carries the time: acceptable. Ananya looks younger and her hair looser in 02-4: mild drift, but her bun, stud, coat and stethoscope identify her: acceptable. The caption bottom on her hair, the CARE label near Meera's hip (her hands and phone are clear) and the 02-4 balloon next to her hair: no face, hand or prop covered: acceptable. (p3) Ravi named only in a caption, and the other patients unnamed: as in the source (original.txt Page 3 names only Ravi). A-12 inferred: the seating matches the check-in order and 04-1 confirms it. The 03-3 and 03-4 captions trim the edges of Ravi's hair, with his face clear (the 03-3 face box starts at y612 below the caption, and in 03-4 there is about 19px of clearance): acceptable. (p4) The nurse is unnamed: the source says only 'A nurse', and her scrubs show her role. The emptier waiting room: consistent, since A-10 and A-11 would have been called first. The tail on the nurse's hair: it points to her correctly. The 'RAVI ·' / 'READY' line break: cosmetic. The label touching the doctor's right-hand fingers: confirmed for her screen-right hand (her left, which holds the tablet). See the issue. (p5) The delayed answer: required by the user's AI voice consent follow-up. Dense labels and the long SOAP NOTES text: the user's 'add page if needed' decision (full wording). The long 'Yes, I agree.' tail and the small figures: readable, with an open-hand gesture: acceptable. The 05-4 caption corner on the back of Ravi's head: no face: acceptable. (p6) The specialty planner not related to Ravi: explicitly asked for in Request 3 (dentist / eye doctor / paediatrician tiles), and the tiredness is picked up by 'We'll go through your concerns' without medical advice, as the source requires. The PLAN OF CARE label over the coat and stethoscope tubing, and the tile overhang: cosmetic: acceptable. (p7) The skipped end of the consultation: the source has no caption, and the counter setting carries the cut: acceptable. The 03-panel balloon touches Ravi's hair only. (p8) 'Tomorrow', the unexplained specialist and family, and the repeated VISION label: source text and the required vision marking ('visibly labeled WELBUK VISION'; 'Symbolic family scene with Ravi, partner, and child'): acceptable. The tagline over Meera's feet and hem and the edge of Ananya's leg: minor, no face, hand or prop: acceptable. I verified the earlier fixes: the 03-2 ponytail now shows; the 07-2 label clears the gripping hand and the phone; the 07-4 caption clears the waving hand; the PDF now has 8 pages matching the PNGs. Status: changes-requested, only for the 04-3 label's tangent with the fingertips of the tablet-holding hand."
+    "comparison": "Where I agree with the first reading: the reading order on every page, who speaks each line, that every word is legible, and that no face is covered. My judgement on the first reader's concerns: (p1) the source wording and tails ending on hair are acceptable. (p2) The caption over the window and the CARE label over the hip are acceptable, and the Practice/Care 'reversal' is not an error. The labels say Practice is 'for the clinic' and Care is 'for clinic staff'. Page 8 notifies 'Dr. Ananya' on Care and 'The clinic' on Practice, which is the user's Request 4 word for word. The first reader linked each product to the nearest person, which the text does not say. (p3) The 03-2 caption covers only a hair strand. The slot is resolved by page 4. (p4) The first reader said RAVI · READY touches her fingers on both sides. On my measurement there is no overlap: the gap is about 2-7 px on the left and 4-7 px on the right, both grips stay readable, and the left side is a close near-tangent. I accept it as cosmetic. (p5-p7) Density, the split between question and answer, the planner aside and the cut without a caption come from user requests or the source, and are acceptable. (p8) 'Meanwhile' and 'Later that day' are clearly marked, and the same-day clinic-lab visit is the user's decision. The repeated RESULTS READY is intentional. The 08-5 label from the previous round's issue now has about 9-12 px of clearance from her knuckles, so it is fixed. (p9) 'us', the unintroduced figures and the label beside Ravi's hair are source text or the vision framing, and touch no face or hand. The PDF has 9 pages matching the PNGs. I did not run pdf verify myself. No unresolved issues remain, so the status is pass."
   },
-  "fingerprint": "9b0fa2c4f3d7b97e5d6bf738240dda091f973ceb1c6c2f7e4e631c306be48cb0",
-  "recordedAt": "2026-11-12T12:10:00.417Z"
+  "fingerprint": "d74a459b0d59aac8da283098f816fcaa3434ce0efa3171568250e21d837907c1",
+  "recordedAt": "2026-11-12T14:15:40.914Z"
 }
