@@ -1,6 +1,6 @@
 {
  "panel": "08-2",
- "fingerprint": "0048f7f3d4d206e336629a7041973860696baba820fdb1fb834259f5c17c81d1",
+ "fingerprint": "beaca4e6f8506a4110f50b1c8f360d127abf1fd2067ad7c2d7452b3754e6db31",
  "observation": "Clinic lab: the lab technician lifts an empty capped tube while reading the order on a monitor. Inspected at 25% (contact sheet), 100% (full panel) and 200% (face crops), and on the composed page.",
  "views": {
   "thumbnail": true,
@@ -38,10 +38,16 @@
   },
   "lettering": {
    "result": "pass",
-   "note": "One-line caption and the LAB ORDER label stacked at top-right over the shelf and the monitor bezel; the order card, her face and the sample-tube hand stay visible."
+   "note": "Two-line caption and the LAB ORDER label stacked at top-right over the shelf and the monitor bezel; the order card, her face and the sample-tube hand stay visible."
   }
  },
- "issues": [],
+ "issues": [
+  {
+   "category": "lettering",
+   "description": "Storyboard review r26: the one-line caption ended with its full stop on the box border; rewrapped to two lines so the box has a normal margin.",
+   "status": "resolved"
+  }
+ ],
  "faceIdentity": {
   "labtech": {
    "reference": "works/auto-6294ee8a2094/assets/characters/pharmacy-lab.png",

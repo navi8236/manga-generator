@@ -1319,8 +1319,8 @@ const SCREEN = 'The laptop stands at about a three-quarter angle toward the read
         },
         speakers: { labtech: speaker(r2, [130, 120, 95, 110]) },
         dialogue: [
-          line('narration', ['The lab is notified.'], 192, 4),
-          line('label', ['LAB ORDER:', 'samples to', 'collect'], 268, 82),
+          line('narration', ['The lab is', 'notified.'], 292, 2),
+          line('label', ['LAB ORDER:', 'samples to', 'collect'], 262, 110),
         ],
       },
       {
@@ -1391,8 +1391,8 @@ const SCREEN = 'The laptop stands at about a three-quarter angle toward the read
         },
         speakers: { ravi: speaker(r4, [150, 230, 100, 120]) },
         dialogue: [
-          line('narration', ['Results ready:', 'Ravi is notified.'], 140, 8),
-          line('label', ['Welbuk Health app ·', 'email · WhatsApp'], 90, 132),
+          line('narration', ['Results ready:', 'Ravi is', 'notified.'], 124, 8),
+          line('label', ['Welbuk Health app ·', 'email · WhatsApp'], 90, 154),
         ],
       },
       {
