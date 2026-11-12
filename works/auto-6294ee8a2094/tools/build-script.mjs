@@ -1188,7 +1188,7 @@ const SCREEN = 'The laptop stands at about a three-quarter angle toward the read
           ],
         },
         speakers: { ravi: speaker(r4, [560, 130, 100, 130]) },
-        dialogue: [line('narration', ['A smoother visit. A more connected experience.'], 24, 10)],
+        dialogue: [line('narration', ['A smoother visit. A more connected experience.'], 8, 6)],
       },
     ],
   });
@@ -1424,6 +1424,7 @@ const MEASURED = {
       ananya: F(291, 1239, 51, 52, 316, 1282),
       meera: F(370, 1255, 45, 49, 392, 1296),
     },
+    protected: [[678, 1198, 52, 64]],
     hands: {
       ananya: hands('relaxed at her side', 'raised, waving from the doorway'),
       meera: hands('raised, waving from the doorway', 'relaxed at her side'),
