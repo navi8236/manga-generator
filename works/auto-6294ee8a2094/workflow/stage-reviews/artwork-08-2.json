@@ -1,5 +1,5 @@
 {
-  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-08-2-c9f9c9efa8771f4b8853426713b0f7f64a0b123bb12a4f7c1a8cf1064d2c9339.json",
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-08-2-44fa6a2d30da6b05319d33cc873461e0a56f3967f05024f21528bb497ad875bd.json",
   "reviewer": {
     "role": "subagent",
     "task": "claude-code-agent:manga-reviewer:a212b7aa225bf0958",
@@ -8,12 +8,12 @@
   },
   "status": "pass",
   "observations": [
-    "Reviewer identity: the runtime gave me no task ID, so reviewer.task is null. The parent must supply the real one. I opened the re-rendered page-08.png myself. The new request lists assets/panels/08-2.png with hash 8e3975aedddc4b29c67a3e0598a24e2a390b5335552756d5a61a041b518c6f8a, the same as in the previous request. That is the file I opened with Read earlier in this session, alongside pharmacy-lab.png.",
-    "The Lab Technician matches pharmacy-lab.png: high bun, thin round glasses, freckles, sharp chin, light-blue coat over navy, purple gloves. Her right hand holds up an empty purple-capped tube with a blank label, and her left hand rests on the counter. This matches production.hands.",
-    "The monitor in the right foreground shows one card with three tube icons and blank bars, with no test names or values. A rack of empty capped tubes stands in the left foreground. The spec places it beside the monitor, but it is on the opposite side. This is minor and does not block. The blue collection chair sets up the room for 08-3.",
-    "On the re-rendered page-08.png the lettering for 08-2 is unchanged. The caption (about x 716-990, y 28-100) and the 'LAB ORDER' label (about x 792-995, y 106-243) sit right of her face, which ends at about x 750. The tube-icon card, the raised tube, both hands and the rack remain uncovered."
+    "Reviewer identity: the runtime gave me no task ID, so reviewer.task is null. The parent must supply the real one. I opened the re-rendered page-08.png myself. The new request lists assets/panels/08-2.png with hash 8e3975aedddc4b29c67a3e0598a24e2a390b5335552756d5a61a041b518c6f8a, the same as before. That is the file I opened earlier in this session, alongside pharmacy-lab.png.",
+    "The artwork is unchanged. The Lab Technician matches the sheet: bun, round glasses, freckles, light-blue coat over navy, purple gloves. Her right hand holds up an empty purple-capped tube and her left hand rests on the counter, matching production.hands. The monitor's order card shows only tube icons and blank bars, with no test names or values.",
+    "New lettering: the caption is now two lines, 'The lab is / notified.', at about page x 816-985, y 28-130. Its full stop sits inside the box. The 'LAB ORDER: samples to collect' label is now at about x 786-990, y 134-272.",
+    "Her face (about x 615-750, y 90-235), glasses and bun lie left of the label's left edge at about x 786, so the face is fully visible. The label's bottom edge (about y 272) covers only the top bezel of the monitor. The order card with the three tube icons and bars (about x 880-985, y 280-345) is fully visible below it. The raised tube (about x 740-765), both gloved hands and the rack are uncovered."
   ],
   "issues": [],
-  "fingerprint": "c9f9c9efa8771f4b8853426713b0f7f64a0b123bb12a4f7c1a8cf1064d2c9339",
-  "recordedAt": "2026-11-12T13:06:43.406Z"
+  "fingerprint": "44fa6a2d30da6b05319d33cc873461e0a56f3967f05024f21528bb497ad875bd",
+  "recordedAt": "2026-11-12T13:14:33.519Z"
 }
