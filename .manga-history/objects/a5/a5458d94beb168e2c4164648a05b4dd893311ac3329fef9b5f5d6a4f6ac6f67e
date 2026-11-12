@@ -1,0 +1,342 @@
+[
+ {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-06-1bf29de5bf9d3b2feb9e096a7db1fade1fd1286eff8382a2412435ed88d547d4.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Reviewer identity: the runtime gave me no subagent or task ID, so reviewer.task is null. The parent must supply the real ID from the Agent tool result. I have not invented one.",
+   "What I opened and looked at with Read: workflow/storyboards-unnumbered/page-06.png (first), workflow/storyboards/page-06.png, workflow/review/page-06.png, the boundary storyboards for pages 05 and 07, and workflow/review/page-07.png. I also read source/original.txt (PAGE 6), source/REVISION-2026-11-11.md (Request 3 and its follow-ups) and the page 06 script in the request. I did not open assets/panels/06-1.png or 06-2.png separately. I judged the art from the composed preview workflow/review/page-06.png. I did not open the reading-flow SVG overlay, and I did not open the reference sheets because identity is not in scope here. All files I opened were readable.",
+   "PNG against SVG: the text elements in storyboards/page-06.svg and storyboards-unnumbered/page-06.svg match what each PNG shows. They have the same label strings, the same line breaks, the placeholder names 'ananya' and 'ravi', page number 6, and the two numbered captions '1 / Close-up: the speciality-specific treatment planner' and '2 / Next steps together; the plan of care' only in the numbered version.",
+   "Script and source: 06-1 has the four labels from source PAGE 6 Panel 1 word for word. 06-2 has Ananya's line and the PLAN OF CARE label word for word from Panel 2. Both follow the user's Request 3 order: planner, then plan of care.",
+   "Placeholder text width: in the PNGs I can compare, the claim that the storyboard font renders wider than the final lettering does not hold. Text in storyboards/page-06.png and review/page-06.png has the same width. For example, 'SPECIALITY-SPECIFIC TREATMENT PLANNER' ends at about x=636 in both, and the 06-2 balloon lines wrap identically. So any edge contact I note on this page is real in the preview too."
+  ],
+  "issues": [],
+  "readingReview": {
+   "withoutGuides": true,
+   "predictedOrder": [
+    {
+     "panel": "06-1",
+     "dialogue": [
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    {
+     "panel": "06-2",
+     "dialogue": [
+      1,
+      2
+     ]
+    }
+   ],
+   "observations": [
+    "Natural scan of the unnumbered PNG: the top header label comes first, then the three tile labels left to right (Dentist, Eye doctor, Paediatrician). In 06-2, the centred balloon is read before the PLAN OF CARE label at lower left. This matches the script order. The reading-flow warning on 06-1 (dialogue 2 to 3) comes from a check that treats left-to-right movement as going backwards. On this left-to-right English page, that move goes forward through the tiles in order.",
+    "First-reader concern, 'whose screen is it, and how does it connect to Ravi?': acceptable. In review/page-06.png panel 1 shows the laptop bezel and camera dot, the same window and plant at the upper right, and the desk. Ananya's hand rests on the trackpad, with her white coat cuff and teal sleeve visible. It is her laptop in the same consultation, carried on from 05-4.",
+    "First-reader concern, 'dentist, eye and paediatric tools have nothing to do with tiredness': acceptable. The header 'SPECIALITY-SPECIFIC' frames the tiles as examples of how the planner adapts to each speciality, not as Ravi's diagnosis. The user asked for exactly this feature and these three examples (Request 3), and the source tells the comic to avoid treatment specifics.",
+    "First-reader concern, 'the Eye doctor and Paediatrician boxes nearly touch': this is in the preview too, about 7 px apart, so it is not a placeholder artefact. It is acceptable. Each box has its own border and sits under its own tile art (eye diagram, growth chart), and the reading order follows the tiles left to right. The Paediatrician box runs slightly below the screen onto the bezel but covers no tile art or hand.",
+    "First-reader concern, 'Ravi gives no reply': acceptable. In the preview Ravi smiles with his hands on his knees and his bag beside the chair, facing Ananya. His silent agreement is visible, and the label below is read as screen information, not a skipped reply.",
+    "In the preview, the tail on Ananya's balloon goes to her mouth. The PLAN OF CARE label sits over the laptop screen at lower left and does not cover either face or Ananya's open-hand gesture."
+   ],
+   "transitions": [
+    {
+     "from": "05-4",
+     "to": "06-1",
+     "observation": "05-4 shows Ananya listening at the desk with the laptop open at the desk edge. The page turns to a close-up of that laptop, with the same window and plant and her hand on the trackpad, so it is the same moment in the same consultation. No time caption is needed."
+    },
+    {
+     "from": "06-1",
+     "to": "06-2",
+     "observation": "The camera pulls back from the planner close-up to the two-shot past the same laptop, which now shows the plan-of-care cards, while Ananya sums up. The screen content moves forward in the order the user asked for."
+    },
+    {
+     "from": "06-2",
+     "to": "07-1",
+     "observation": "Ravi's bag is on the floor beside his chair in 06-2. In review/page-07.png it is back on his shoulder at the reception desk: a monitor, a plant and waiting chairs with patients seen from behind are visible. The art establishes the move from the consultation room back to reception without a caption."
+    }
+   ],
+   "firstReadingHash": "caa6e2dcd281461d15a3d3046172e58a3484fe310180019d2b0d4fee3ac8c020",
+   "comparison": "The first reader's order (header, three tiles left to right, balloon, then the PLAN OF CARE label) agrees exactly with the script order. Nothing was skipped. Their four concerns came from grey-box placeholders: no visible owner of the screen, relevance of the specialities, nearly touching boxes, and Ravi's silence. The accepted art in review/page-06.png resolves each one, as explained above. The near-touching tile labels are also in the preview and are acceptable because the tile borders and art keep them distinct."
+  }
+ },
+ {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-07-e10f790bddb9a72bbab3d8aaf34b22f2d55a3a7b8417e3588c84459a2295e449.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Reviewer identity: the runtime gave me no task ID, so reviewer.task is null. I have not invented one.",
+   "What I opened and looked at with Read: workflow/storyboards-unnumbered/page-07.png (first), workflow/storyboards/page-07.png, workflow/review/page-07.png, the boundary storyboards for page 06 and page 08 (both numbered and unnumbered), and review/page-06.png. I also read source/original.txt (PAGE 7, PAGE 8) and Request 4 in source/REVISION-2026-11-11.md. I judged the art from review/page-07.png and did not open assets/panels/07-*.png separately. All files I opened were readable.",
+   "PNG against SVG: the text elements and placeholder names in both page-07 SVGs match the PNGs. The truncated 'anany' in the PNG is the 'ananya' placeholder label clipped behind the meera placeholder box. The numbered SVG adds four captions (1 / Meera introduces Welbuk Health ... 4 / Ravi leaves, reassured) that do not appear in the unnumbered one.",
+   "Script and source: all four text items are word for word from source PAGE 7. Request 4 says pages 1 to 7 are unchanged, and the page 07 art and text are unchanged. What changed is the outgoing boundary, which now leads into the new page 8.",
+   "Stated in the observations because it affects the next stage: the composed previews for pages 08 and 09 are out of date. workflow/review/page-08.svg and page-08.png still contain the old vision page, with 'Tomorrow' and page number 8, and there is no workflow/review/page-09.png yet."
+  ],
+  "issues": [],
+  "readingReview": {
+   "withoutGuides": true,
+   "predictedOrder": [
+    {
+     "panel": "07-1",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "07-2",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "07-3",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "07-4",
+     "dialogue": [
+      1
+     ]
+    }
+   ],
+   "observations": [
+    "Natural scan, matching the first reading: Meera's balloon, then Ravi's question and the WELBUK HEALTH label below it, then Meera's answer at the middle right, then the bottom caption. The exchange is introduction, question, answer, with no skipped reply.",
+    "First-reader concern, 'no cue for the move from the consultation to reception': acceptable on the art. In review/page-07.png, 07-1 shows the reception desk with a monitor and keyboard, a plant, and waiting chairs with seated patients seen from behind, the same reception as earlier pages. Ravi has his bag on his shoulder and his phone in his hand. Page 6 ended with Ananya agreeing the next steps, so a return to the desk on the way out reads naturally.",
+    "First-reader concern, 'the WELBUK HEALTH label touches the left frame': in the preview the label also sits against the left frame (dialogue x:0). It is a deliberate tab-style screen label, the same style as the WELBUK VISION tab on page 9. It covers only the plant and monitor edge, not Ravi's face or the phone.",
+    "First-reader concern, 'the ravi label crosses the frame in 07-3': this is a placeholder artefact. In the art, 07-3 shows Ravi from behind at the right edge (a head-only anchor) holding his phone, with Meera facing him. Nothing crosses the frame.",
+    "First-reader concern, 'anany is cut off and the two figures overlap in 07-4': this is a placeholder-label artefact. In the art, Ananya and Meera stand side by side in the glass doorway, both faces clear and both waving. The caption at the top does not cover them.",
+    "First-reader concern, 'Ravi's tail is a small notch': in the preview the short tail on Ravi's 07-2 balloon points down to his face at the right. It is short but clearly his. Meera's 07-3 tail points to her."
+   ],
+   "transitions": [
+    {
+     "from": "06-2",
+     "to": "07-1",
+     "observation": "The page turns from the consultation two-shot to the reception desk. Ravi's bag goes from the floor to his shoulder, the costumes are the same, and Meera's desk is recognisable, so this is the same visit, now on the way out."
+    },
+    {
+     "from": "07-1",
+     "to": "07-2",
+     "observation": "Meera points at Ravi's phone. The next panel is a closer shot of Ravi holding the same dark-blue phone with the app screen facing the reader, asking his question. The cut follows the pointing gesture."
+    },
+    {
+     "from": "07-2",
+     "to": "07-3",
+     "observation": "Ravi's question is followed by the reverse angle: Meera answers, facing him, and Ravi is seen from behind on the right with the phone. Meera stays on the left and Ravi on the right, as in 07-1."
+    },
+    {
+     "from": "07-3",
+     "to": "07-4",
+     "observation": "After the walkthrough, Ravi steps out of the clinic waving. Ananya and Meera wave from the doorway, and his phone and bag carry over. The caption sums up the visit."
+    },
+    {
+     "from": "07-4",
+     "to": "08-1",
+     "observation": "This is the new outgoing boundary, checked against the page 08 storyboard plan because page 08 has no art yet. Ravi leaves, and the page turns to 'Meanwhile, the pharmacy is notified and fills the prescription.' 'Meanwhile' ties the pharmacy to the moment Ravi walks away. Page 07's expectation, 'What happens after the visit?', is answered directly by the new page. The caption 'A smoother visit. A more connected experience.' still works as the close of the visit, not of the story. The 08-1 image could not be checked because it does not exist yet."
+    }
+   ],
+   "firstReadingHash": "e2aa9dddcf8302d9b57a43a515b8dc692403b045d77d6a8e1b16bfb5b028aa6d",
+   "comparison": "The first reading's order and its finding that no reply is skipped agree with the script. Its concerns about the move from the consultation to reception, the overflowing placeholder label, the clipped 'anany' and the overlap come from grey-box placeholders. The accepted art in review/page-07.png resolves them. The left-flush WELBUK HEALTH label is also in the preview and is a deliberate tab style. The first reading noted no problem about the next page. I checked the new 07-4 to 08-1 boundary against the page 08 plan, and it works through the 'Meanwhile' caption."
+  }
+ },
+ {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-08-0b75249cb55e3612cd1ee57e2921c9ec7925db4a3e76229b7dd6f6762b4c1463.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Reviewer identity: the runtime gave me no task ID, so reviewer.task is null. I have not invented one.",
+   "What I opened and looked at with Read: workflow/storyboards-unnumbered/page-08.png (first), then workflow/storyboards/page-08.png, the page 07 and page 09 storyboards, review/page-07.png, the stale review/page-08.png (old vision page) and assets/panels/09-1 to 09-4.png. I also read source/original.txt (PAGE 8), Request 4 in source/REVISION-2026-11-11.md, the full page 08 script in the request, and the warnings in reading-flow/page-08.json. Page 08 has no art, so this is a review of the plan. All files I opened were readable.",
+   "PNG against SVG: every <text> and <rect> in storyboards-unnumbered/page-08.svg matches the PNG. That covers the six panel frames, caption and label boxes (for example the 08-2 caption box at x=540, width 276), the balloon in 08-3 with its tail toward labtech, and the placeholders pharmacist, labtech, ravi, labtech, ravi, ananya and meera. The numbered SVG adds the six captions '1 / The pharmacy is notified ...' to '6 / The clinic is notified on Welbuk Practice', which I saw in the numbered PNG.",
+   "Complete against Request 4: every item the user listed has its own panel. 'Pharmacy gets notified and they fill prescriptions': 08-1. 'Lab gets notified on what needs to be taken': 08-2, with the label 'LAB ORDER: samples to collect'. 'Patient arrives gives samples': 08-3, at the clinic lab on the same day, as confirmed. 'Get notified on mobile app / email / WhatsApp': 08-4, label 'Welbuk Health app · email · WhatsApp'. 'Doctor gets notified on the care app': 08-5. 'Clinic via practice once test results are ready': 08-6. The script text matches source PAGE 8 word for word, and no drug names, tests, values or diagnosis appear.",
+   "Out-of-date files under the new page 8 IDs, outside this storyboard's scope but a risk later: assets/panels/08-1.png to 08-4.png and their JSON records are still the old vision art. I opened 08-1.png and it is the train image, the same as 09-1.png. Its JSON acceptedJob describes the train scene, and assets/quality/08-1.json describes 'Ravi on a train'. workflow/review/page-08.svg and .png are also the old page 8, and assets/panels/06-3 and 06-4 are left over too. Their recorded fingerprints belong to the old plan, so the normal checks should reject them. They must not be re-adopted, used in a preview or counted as page 8 art. The new pharmacy, lab and results panels still need to be generated.",
+   "Placeholder text width: I could not confirm that the storyboard font is wider than the final lettering. On pages 06 and 07 the storyboard and composed-preview text have the same widths. So the tight right margins on this page may carry into lettering. In the SVG geometry the text stays inside every box. 'The lab is notified.' ends at the right border of its 276 px box, 'Ravi is notified.' ends about 5 px inside its 238 px box, 'The clinic is notified' ends about 3 px inside its 307 px box, and 'samples to collect' ends about 9 px inside its 260 px box. The left padding is about 18 px. Nothing overflows at storyboard stage. The lettering review must check these four boxes on workflow/review/page-08.png and widen them if text touches the border there."
+  ],
+  "issues": [],
+  "readingReview": {
+   "withoutGuides": true,
+   "predictedOrder": [
+    {
+     "panel": "08-1",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "08-2",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "08-3",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "08-4",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "08-5",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "08-6",
+     "dialogue": [
+      1,
+      2
+     ]
+    }
+   ],
+   "observations": [
+    "Reading order is clear and matches the script. The top row reads left to right (08-1, then 08-2). The full-width 08-3 reads caption then balloon. In the bottom tier, the tall 08-4 on the left comes before 08-5 and then 08-6 stacked on the right. The reading-flow warning on 08-3 (1 to 2) is again the check treating left-to-right movement as going backwards. Caption left, then balloon right, in one row is the natural English order.",
+    "A small risk in the bottom tier: the 08-4 label (y 1322 to 1428) sits level with 08-6. Someone reading straight across the row could read 08-5, then that label, then 08-6. The gutter and the full-height 08-4 frame make reading the tall panel first the obvious choice, and the label describes the phone in that same panel. I judge this acceptable. It should be confirmed with the art at lettering.",
+    "Time cues work. 'Meanwhile' (08-1) places the pharmacy and lab notifications while Ravi walks away in 07-4. 08-2 has no new cue and still reads as part of that 'meanwhile'. 'Later that day' (08-3) explains why Ravi, who just waved goodbye, is back at the clinic lab, as confirmed in Request 4. 'Results ready:' (08-4) answers the lab technician's promise 'We'll let you know when your results are ready', so the reader knows time has passed even though no length of time is given. The planned move to Ravi at home in evening light will add to this. A 'Some days later' caption is not needed, because the exact interval does not matter to the point.",
+    "First-reader concern, 'the prescription assumes a prescription nobody saw being written': acceptable. Ananya's 06-2 line about deciding next steps sits beside the plan-of-care label 'intelligent prescribing · ... · labs'. 08-1 and 08-2 follow up exactly two of those items, the prescription and the labs. The 'NEW PRESCRIPTION' card on the pharmacy tablet repeats the link. Showing a prescription being written would bring in the treatment detail the source avoids.",
+    "First-reader concern, 'text runs to the box edge in four boxes': this is the tight right margin noted in observations. Nothing overflows in the SVG geometry. It is kept as a lettering-stage check rather than a storyboard defect, because it cannot be judged without the composed lettering.",
+    "First-reader concern, 'RESULTS READY is repeated in 08-5 and 08-6': acceptable. The repetition is deliberate: one notification arrives on two staff devices. The captions tell them apart ('on Welbuk Care' and 'on Welbuk Practice'). Together with 08-4 ('Welbuk Health app'), the page names all three products just before page 9's product line.",
+    "First-reader concern, 'Ravi does not reply to the lab technician': acceptable. The plan has him smiling and pressing a cotton pad to his arm, and her line is a reassurance that needs no answer. The single balloon has a clear tail to labtech."
+   ],
+   "transitions": [
+    {
+     "from": "07-4",
+     "to": "08-1",
+     "observation": "Ravi walks out waving (in the art) and the page turns to the pharmacy with 'Meanwhile'. The place change is marked by the caption and by the new-prescription card that links back to the 06-2 plan of care. Checked against the plan only, because 08-1 art does not exist."
+    },
+    {
+     "from": "08-1",
+     "to": "08-2",
+     "observation": "One order goes to a second recipient. The parallel captions ('the pharmacy is notified' then 'The lab is notified.') and the matching screen labels ('NEW PRESCRIPTION', then 'LAB ORDER: samples to collect') make the two panels read as happening at the same time, side by side in the top row."
+    },
+    {
+     "from": "08-2",
+     "to": "08-3",
+     "observation": "The lab technician who read the order in 08-2 reappears in the same clinic lab with Ravi. 'Later that day' marks the time jump, and the sample tube she picked up in 08-2 becomes his labelled tube."
+    },
+    {
+     "from": "08-3",
+     "to": "08-4",
+     "observation": "Her promise 'We'll let you know when your results are ready' is paid off by the caption 'Results ready: Ravi is notified.' The scene moves to Ravi at home, and the planned evening light and setting mark a later day."
+    },
+    {
+     "from": "08-4",
+     "to": "08-5",
+     "observation": "The same results-ready event now reaches the doctor. The parallel caption 'Dr. Ananya is notified on Welbuk Care.' and the matching card on her tablet (from the art direction) connect them."
+    },
+    {
+     "from": "08-5",
+     "to": "08-6",
+     "observation": "This is the third recipient. The stacked panels and identical 'RESULTS READY' labels show one event reaching three places. Meera at reception stands for the clinic on Welbuk Practice."
+    },
+    {
+     "from": "08-6",
+     "to": "09-1",
+     "observation": "The page turns from Meera at the reception monitor to Ravi on a train under 'Tomorrow, care may take us beyond our hometown.' (assets/panels/09-1.png, unchanged art). 'Tomorrow' clearly signals a move into a possible future after the completed after-visit loop, and Ravi's return links the pages. Before this change Ravi led directly into the train scene; now page 8 closes the loop first, which makes the turn toward the vision clearer."
+    }
+   ],
+   "firstReadingHash": "a9aeb1497eba6cb9f8b4d7f2e5dd0839896ad73c44ff46bc7b546e23c8d70960",
+   "comparison": "The first reading's order agrees exactly with the script and with my own reading: top Z, full-width middle, tall left, then right top and right bottom. Nothing was skipped. I agree that 'Meanwhile' links back to page 7. Their point about 'the prescription' is accepted on the 06-2 evidence above. Their edge-contact finding is real geometry, not something I can dismiss as a font artefact, but nothing overflows. It is moved to a required lettering check rather than blocking the storyboard. Their 'RESULTS READY' redundancy and Ravi's silence are accepted as deliberate. Against Request 4 the plan is complete, and the time cues and both page boundaries work."
+  }
+ },
+ {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-09-b5dd8b99c850fc2c860489511a1318137bd19e23e6fbcaa69b42596755927084.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Reviewer identity: the runtime gave me no task ID, so reviewer.task is null. I have not invented one.",
+   "What I opened and looked at with Read: workflow/storyboards-unnumbered/page-09.png (first), workflow/storyboards/page-09.png, and the page 08 storyboards (numbered and unnumbered). I also opened assets/panels/09-1.png (Ravi by the train window, phone in hand, skyline), 09-2.png (the specialist gesturing in front of a modern clinic, dotted lines to small clinics, soft blue vignette), 09-3.png (Ravi, partner and child on a sofa with a tablet showing three profile circles and a heart, in a vignette) and 09-4.png (Meera, Ananya and Ravi in front of the teal-awning clinic, Ravi waving). I read source/original.txt (PAGE 9) and Request 4. All files I opened were readable.",
+   "Composed preview: there is no workflow/review/page-09.png. The only composed version of this page is the stale workflow/review/page-08.png, whose SVG still carries 'Tomorrow' and page number 8. I used it as the lettered view because Request 4 and renumber-2026-11-12b.json say the art and content are unchanged (09-x maps from 08-x with the same source images), and its panel layout matches storyboards/page-09.svg. A current page-09 preview needs to be exported before the lettering stage.",
+   "PNG against SVG: the text in both page-09 SVGs matches the PNGs: the four captions or labels, the placeholders ravi, specialist, ravi, partner, child, meera, ananya and ravi, page number 9, and in the numbered version the captions '1 / Ravi travels to another city (hypothetical tomorrow)' to '4 / The three people and the three Welbuk products'. The 'rav' in the PNG is the ravi placeholder label clipped by the product label box.",
+   "Script and source: all text is word for word from source PAGE 9, including the '•' separators in the product label. The vision panels (09-2, 09-3) carry 'WELBUK VISION' and pale vignettes in the art, as the source requires for future concepts."
+  ],
+  "issues": [],
+  "readingReview": {
+   "withoutGuides": true,
+   "predictedOrder": [
+    {
+     "panel": "09-1",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "09-2",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "09-3",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "09-4",
+     "dialogue": [
+      1,
+      2
+     ]
+    }
+   ],
+   "observations": [
+    "Natural scan, matching the first reading: 'Tomorrow...' at top left, then the WELBUK VISION tab and the vision caption in 09-2, then the WELBUK VISION tab and caption in 09-3, then the product label at the upper right of 09-4 and the closing tagline at its lower left. There are no balloons, so no reply can be skipped.",
+    "First-reader concern, 'whose voice says us and our hometown?': acceptable. Every caption in the comic is narration. 'Us' is the inclusive voice of the narrator and the brand, and 09-1's art places Ravi on a train looking out at an unfamiliar skyline, so the line reads as applying to patients like him. 'May' and the WELBUK VISION labels that follow keep it hypothetical.",
+    "First-reader concern, 'the partner and child are not introduced': acceptable. In 09-3 Ravi's arm is around them on a shared sofa and he points at the family tablet. Together with the WELBUK VISION tab and the vignette, this reads as a symbolic family scene, which is what the source specifies. No dialogue depends on their names.",
+    "First-reader concern, 'the WELBUK VISION label is repeated and touches the frame in 09-2': both repetitions are deliberate, so neither vision panel can be mistaken for a launched feature. The tab sitting against the top-left frame is the same in the composed preview. It is the shared tab style, also used for WELBUK HEALTH on page 7. The 09-2 caption box ends just above the bottom frame in both storyboard and preview, and in the art it covers only the lower clinic and the specialist's torso, not his face or his open hand.",
+    "First-reader concern, 'the product label clips the rav placeholder': in the art and the composed preview, the product label sits over the sky and awning to the right of Ravi's head. His face and his raised waving hand stay clear. The clipping happens only to the placeholder label.",
+    "First-reader concern, ''•' versus '·' separators': acceptable. The '•' separators are copied word for word from the source and separate three product names in a closing brand line. The '·' separators elsewhere separate items in on-screen feature lists, so the different marks serve different purposes.",
+    "First-reader concern, 'the closing tagline is isolated at the bottom left': acceptable. In the art, the large empty area of the storyboard is the three full-length figures. The eye moves from the product label down through Meera, Ananya and Ravi to the tagline, which closes the page."
+   ],
+   "transitions": [
+    {
+     "from": "08-6",
+     "to": "09-1",
+     "observation": "The previous page closes with the results reaching the clinic (plan only; 08-6 has no art). The page turns to Ravi on a train with 'Tomorrow, care may take us beyond our hometown.' 'Tomorrow' and the change of setting mark the jump to a possible future, and Ravi's return is the link. The 09-1 image is unchanged from the old opening of the vision page."
+    },
+    {
+     "from": "09-1",
+     "to": "09-2",
+     "observation": "Ravi looking out at a new city leads into the vision panel of a clinic in another city linked by dotted lines to small clinics. The WELBUK VISION tab and the pale vignette mark the switch from hypothetical travel to a labelled concept."
+    },
+    {
+     "from": "09-2",
+     "to": "09-3",
+     "observation": "The vision widens from clinics and specialists to family wellness. The same tab, the vignette and dotted clinic links on the left of 09-3 keep the two panels together as one vision sequence."
+    },
+    {
+     "from": "09-3",
+     "to": "09-4",
+     "observation": "The page leaves the vignette for full-colour daylight at the real clinic entrance with Meera, Ananya and Ravi. This marks the return from the vision to the present-day close and the three product names."
+    }
+   ],
+   "firstReadingHash": "9da7e0f7a4e41f6df27728757ed03d45cbfca18702544f196f49eae359b6f9ee",
+   "comparison": "The first reading's order agrees with the script, and nothing was skipped. Its concerns are covered above with evidence from the art and the composed version. 'Us' is inclusive narration over Ravi's travel. The family is a labelled symbolic vision. The tab placement and the repeated WELBUK VISION labels are deliberate and are the same in the preview. The 'rav' clipping exists only in the placeholder. The '•' separators follow the source. The isolated tagline is balanced by the full-length figures in the art. The new 08-6 to 09-1 boundary works through 'Tomorrow'. The only limit on this review is that the composed preview is stale-numbered (review/page-08.png), so a fresh review/page-09.png is needed before lettering."
+  }
+ }
+]
