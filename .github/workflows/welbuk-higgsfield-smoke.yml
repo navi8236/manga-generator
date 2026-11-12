@@ -1,0 +1,66 @@
+name: Welbuk Higgsfield API smoke test
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "dry-run checks secret shape only; generate-one submits exactly one paid image"
+        type: choice
+        required: true
+        default: dry-run
+        options:
+          - dry-run
+          - generate-one
+      confirm_paid_generation:
+        description: "For generate-one only, type YES_ONE_IMAGE to authorize one API charge"
+        type: string
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+
+concurrency:
+  group: welbuk-higgsfield-smoke
+  cancel-in-progress: false
+
+jobs:
+  smoke:
+    name: Check Higgsfield setup
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out existing Welbuk manga branch
+        uses: actions/checkout@v4
+        with:
+          ref: comic/welbuk-onboarding
+
+      - name: Set up Node 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+
+      - name: Install pinned dependencies
+        run: npm ci
+
+      - name: Validate secret or generate one opted-in test image
+        env:
+          HIGGSFIELD_API_KEY: ${{ secrets.HIGGSFIELD_API_KEY }}
+          CONFIRM_PAID_GENERATION: ${{ inputs.confirm_paid_generation }}
+          MODE: ${{ inputs.mode }}
+        run: |
+          if [ "$MODE" = "generate-one" ] && [ "$CONFIRM_PAID_GENERATION" != "YES_ONE_IMAGE" ]; then
+            echo "One-image generation was not explicitly authorized." >&2
+            exit 1
+          fi
+          node scripts/higgsfield-smoke.mjs "$MODE"
+
+      - name: Upload test image (only if generated)
+        if: ${{ inputs.mode == 'generate-one' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: welbuk-higgsfield-one-image-test
+          path: output/higgsfield-smoke/
+          if-no-files-found: error
+          retention-days: 7
