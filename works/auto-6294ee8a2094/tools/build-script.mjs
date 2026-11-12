@@ -1419,7 +1419,7 @@ const SCREEN = 'The laptop stands at about a three-quarter angle toward the read
         speakers: { ananya: speaker(r5, [380, 70, 80, 95]) },
         dialogue: [
           line('narration', ['Dr. Ananya', 'is notified on', 'Welbuk Care.'], 8, 4),
-          line('label', ['RESULTS', 'READY'], 18, 144),
+          line('label', ['RESULTS', 'READY'], 8, 144),
         ],
       },
       {
