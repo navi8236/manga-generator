@@ -1,0 +1,89 @@
+{
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/lettering-02-d7c84a0ffafc0711ba495a34b090d0cb3fe4421252fb067caaabf216513211c1.json",
+  "reviewer": {
+    "role": "subagent",
+    "task": "claude-code-agent:manga-reviewer:a1d5f9066e4819ea6",
+    "reportedTask": null,
+    "taskSource": "Agent ID returned by the Claude Code Agent tool to the parent."
+  },
+  "status": "changes-requested",
+  "observations": [
+    "What I read: this fresh request (the same page-02 first reading, hash 01914e3a..., and transitions 01-3>02-1 to 02-4>03-1), source/original.txt and the revision notes. Images I opened with Read and looked at again in this pass: workflow/review/page-02.png, assets/panels/02-1.png, and page-03.png for the outgoing boundary. In my previous pass I had opened 02-3.png. I did not open 02-2 or 02-4 panel art; I judged them from the lettered page.",
+    "The 02-1 caption against Ananya's hair and bun, mapped from the art as requested. The art is 1392x736, scaled to rect [24,24,976,520] (scale x 0.701, y 0.707). The art has a white area at the top left (about art x0-455, y0-195), but Ananya's head breaks into it. Her hair rises from the bun to a crown at about art (420,62), and the back of the head and crown fill about art x240-455, y60-195. That maps to page x192-343, y66-162. The caption box occupies page x24-323, y24-162. It therefore hides the crown and upper back of her hair, about page x192-323, y66-162, which is roughly the upper-left third of her head silhouette. On page-02.png her head is visibly cut by the box: hair appears only to the right of x≈323 (from about y60) and below y≈162. The bun (art x205-330, y270-410, which maps to page x168-255, y213-311) is fully clear, and so is the face (face rect 300-410 x 165-310; the box ends at y162). So no face is covered, but the head silhouette is cropped, as in the 03-3 case I flagged on page 03. I missed this in my previous page-02 pass, and I correct it here.",
+    "Unchanged items I re-checked on the same image. The WELBUK CARE label's right edge (x≈898) is clear of Meera's left hand (page x925-944, y974-1006, from the 02-3 art mapping). The 02-1 WELBUK PRACTICE label sits on the art's white top-right area (page x700-1000, y24-164), covering only the top-right of the window frame, which is acceptable. The tails in 02-2, 02-3 and 02-4 point to the scripted speakers (Ananya, Meera, Ananya), and their tips touch only hair or cheek edges. All text matches the source and sits inside its boxes ('here.', 'role.' and 'staff' all have 10-20 px margins).",
+    "A possible fix for 02-1: the only empty wall left of her head is about page x24-184, y24-182 (art x0-228, y0-224: wall, plant and the top of the bookshelf). Rewrap the caption to fit there, for example 'The clinic / begins its / Welbuk / onboarding.', with the box about x24-184. Alternatively, move the caption to a bottom-left caption over the chair and coat area. Then re-export page-02.png and check that the crown outline is complete."
+  ],
+  "issues": [
+    {
+      "problem": "The 02-1 caption box ('The clinic begins its Welbuk onboarding.', page x24-323, y24-162) covers the crown and upper back of Dr. Ananya's hair, about page x192-323, y66-162 (art x240-427, y60-195). Her head silhouette is cut by the box's right and bottom edges. The bun and face are clear. Fix: rewrap the caption narrower (box within about x24-184) on the empty wall left of her head, or move it, so that no hair falls under the box. Then re-export and check again.",
+      "location": "02-1 (page 02, top wide panel), caption box over Ananya's crown",
+      "resolved": false
+    }
+  ],
+  "readingReview": {
+    "withoutGuides": true,
+    "predictedOrder": [
+      {
+        "panel": "02-1",
+        "dialogue": [
+          1,
+          2
+        ]
+      },
+      {
+        "panel": "02-2",
+        "dialogue": [
+          1
+        ]
+      },
+      {
+        "panel": "02-3",
+        "dialogue": [
+          1,
+          2
+        ]
+      },
+      {
+        "panel": "02-4",
+        "dialogue": [
+          1
+        ]
+      }
+    ],
+    "observations": [
+      "Natural scan, unchanged from the image: the top-left caption, then the top-right WELBUK PRACTICE label, then the middle-left Ananya balloon, then the middle-right Meera balloon, then the WELBUK CARE label low in that panel, then the bottom Ananya balloon. This matches the script order, and the balloons in different panels do not merge across the gutter.",
+      "The white caption and speech boxes are clearly different from the teal product labels, so the labels read as product names, not speech. The only problem on the page is the 02-1 caption cropping the head silhouette. The reading order is not affected."
+    ],
+    "transitions": [
+      {
+        "from": "01-3",
+        "to": "02-1",
+        "observation": "The daytime reception cuts to the evening office, where Ananya is typing the onboarding form. The caption and the sunset window carry the time change, and her decision on page 1 leads into this setup."
+      },
+      {
+        "from": "02-1",
+        "to": "02-2",
+        "observation": "Same office and window. The over-the-shoulder view becomes a front view as she considers team roles and states what Practice organises."
+      },
+      {
+        "from": "02-2",
+        "to": "02-3",
+        "observation": "Same room (desk, laptop, sunset window). Meera's 'And our team...' adds the staff tool to Ananya's line, with the phone held up."
+      },
+      {
+        "from": "02-3",
+        "to": "02-4",
+        "observation": "The same moment as a two-shot. Meera still holds the phone and Ananya closes with 'One team. Better coordination.'"
+      },
+      {
+        "from": "02-4",
+        "to": "03-1",
+        "observation": "'A later morning: patients can always check in at the front desk.' and the bright reception on page-03.png mark the move from evening onboarding to a working morning."
+      }
+    ],
+    "firstReadingHash": "01914e3a184938c209385b9f338a6bef048d43656d82e939d7d3777f322ae883",
+    "comparison": "The first reader's order is the same as the script order 02-1[1,2], 02-2[1], 02-3[1,2], 02-4[1], with no skipped reply. Concerns: (1) The WELBUK CARE label near Meera's hand. It is clear by about 25 px, so this is acceptable. (2) Text close to the borders. Everything is inside, so this is acceptable. (3) The awkward caption line break. It is legible, so this is acceptable. (4) The tails ending at hair and cheek edges. They point to the correct speakers and cover no facial features, so this is acceptable. (5) Day to sunset. It is carried by the caption and the light, so this is acceptable. Neither the first reader nor my previous pass mentioned the 02-1 caption over Ananya's crown. Mapped from the panel art at the coordinator's request, it covers about page x192-323, y66-162 of her hair, so this is an ISSUE. Status: changes-requested."
+  },
+  "fingerprint": "d7c84a0ffafc0711ba495a34b090d0cb3fe4421252fb067caaabf216513211c1",
+  "recordedAt": "2026-11-12T13:34:37.199Z"
+}

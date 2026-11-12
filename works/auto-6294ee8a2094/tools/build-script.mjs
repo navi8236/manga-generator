@@ -505,7 +505,7 @@ const pages = [];
         },
         speakers: {},
         dialogue: [
-          line('narration', ['The clinic begins its', 'Welbuk', 'onboarding.'], 0, 0),
+          line('narration', ['The clinic', 'begins its', 'Welbuk', 'onboarding.'], 410, 0),
           line('label', ['WELBUK PRACTICE', 'for the', 'clinic'], 682, 0),
         ],
       },
@@ -662,7 +662,7 @@ const pages = [];
           props: [prop('priya-phone', 'in Priya’s hand', 'held in her left hand, check-in card on screen', 'in her hand', 'priya.left')],
         },
         speakers: { priya: speaker(r2, [230, 130, 80, 95]) },
-        dialogue: [line('narration', ['Some check in ahead', 'on the Welbuk Health app.'], 16, 4)],
+        dialogue: [line('narration', ['Some check', 'in ahead on', 'the Welbuk', 'Health app.'], 271, 4)],
       },
       {
         id: '03-3',

@@ -1,5 +1,5 @@
 {
-  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/lettering-03-f7166fda2c7b7f13154cb8af51bfc9b6451e442082eb0c9ce23ffc670e58b2ed.json",
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/lettering-03-1592ac0b32027739b0bbd510fcf06e3eed5fc554cfbff729d1efbfe2b77a0259.json",
   "reviewer": {
     "role": "subagent",
     "task": "claude-code-agent:manga-reviewer:a1d5f9066e4819ea6",
@@ -8,21 +8,15 @@
   },
   "status": "changes-requested",
   "observations": [
-    "What I read: this request (the script for 03-1 to 03-5, boundary context and first reading), source/original.txt and source/REVISION-2026-11-11.md. Images I opened with Read and looked at: workflow/review/page-03.png, assets/panels/03-1.png, 03-3.png and 03-4.png, plus page-02.png and page-04.png for the boundaries. I did not open 03-2 or 03-5 panel art separately; I judged them from the lettered page.",
-    "The text matches the source exactly: the five captions and the TV label 'A-10 · A-11 · A-12'. The page has no balloons, so tails do not apply. All text is legible and fits inside its boxes ('app.' and 'consent.' are close to the right borders but not clipped).",
-    "03-3 caption against Ravi's hair, checked in the art. The panel art is 1040x992, scaled to rect [24,488,464,440] (scale about 0.446). I checked the mapping with Ravi's watch: art (910,840) maps to page (430,860), which is where it appears on page-03.png. Ravi's hair silhouette spans art x522-860, with its upper-left edge running from art (640,150) to (522,250-300). That maps to page (309,555) to (257,599-621). The caption box occupies about page x40-313, y504-610, so it hides the upper-left of Ravi's hair, about page x257-313, y555-610. On page-03.png his head is visibly cut by a straight vertical edge at x≈313: the crown appears only to the right of the box, and a tuft of hair shows below its bottom edge. The face (rect 287-381, 612-712) is not covered, but the box crops his head in a medium close-up. This is avoidable: the box has about 35-40 px of empty padding below its second text line, and the wall at upper left (page x24-256, y488-599) is empty.",
-    "03-1 caption against Mr. Raman: the art (1072x960, scaled to 488x440 at 24,24) puts the top of his hair at about art y320, which maps to page y≈171. The caption box ends at about page y178 and spans x40-413, while his crown is at about x120-188. On page-03.png his hair starts right at the box's bottom edge, so the box grazes or clips the top few pixels of the crown. The box also hides the left third of the wall TV, which is acceptable because the TV has no story role in 03-1. This box also has about 35 px of empty bottom padding below 'in at the front desk.'",
-    "03-4 caption: the art (1072x960, scaled to 488x440 at 512,488) puts Ravi's leftmost hair at art x≈685, which maps to page x≈824, and the box's right edge is at about x825. It just meets the hair outline without covering any hair mass, and the phone, hands, watch and check mark are all clear, so this is acceptable. 03-5: the caption sits on the empty upper-left wall, well above the three patients' heads, and the label fits inside the TV screen, so this is acceptable. 03-2: the caption sits above the young woman's head, and her phone and hands are clear, so this is acceptable."
+    "What I read: this fresh request (the new image-only first reading, hash 770b7163..., panel rects and transitions 02-4>03-1 to 03-5>04-1) and source/original.txt. Images I opened with Read and looked at in this pass: the new workflow/review/page-03.png, assets/panels/03-2.png, page-02.png and page-04.png for the boundaries. I had opened 03-1.png, 03-3.png and 03-4.png in my previous pass, and I reuse those art mappings here against the new page.",
+    "Both previous fixes are confirmed on the new page. 03-3: the caption is now three lines ('Ravi scans / the QR code / at the door.') in a box about x40-234, y504-641. Ravi's hair silhouette starts at about page x257 (art x522 at scale 0.446), so there is a clear gap of about 23 px and his head outline is complete. The taller box ends about 14 px above the background Meera's head (art about 90-180, 375-450, which maps to page 64-104, 655-688). It covers only the top-left corner of the background wall TV, which is acceptable. 03-1: the box now ends at about y166, and Mr. Raman's crown (art y≈320, which maps to page y≈171) shows below it with a small visible gap. Resolved.",
+    "The 03-2 caption against Priya's crown, mapped as requested. The art is 1040x992, scaled to rect [536,24,464,440] (scale x 0.446, y 0.4435). Her ponytail rises in a tuft above the blue scrunchie, with its top at about art (400-460, 222). The scrunchie is at about art (420-470, 243-275), and the crown of the head runs at about art y245-260 from x480-560. These map to the tuft top at page x714-741, y≈122, the scrunchie at page x723-746, y132-146, and the crown at page x750-786, y133-139. The caption box occupies about page x552-906, y28-134. It therefore hides the top of the ponytail tuft (about 11 px, page y122-134) and its bottom edge sits on the scrunchie and crown line. On page-03.png her hair appears only from directly below the box edge, with no gap, so the head reads as cut flat at the top. The face is not covered. The fix is easy: the text ends at about y95, leaving about 40 px of empty bottom padding, the same situation that was fixed in 03-1.",
+    "Other placements. 03-4: the box (x527-825, y504-641) ends about 9 px above the phone's top edge (page ≈650) and meets Ravi's hair outline at x≈824 without covering any hair mass. Tight but clear, so this is acceptable. 03-5: the caption is on the empty wall above the three heads, and the A-10 · A-11 · A-12 label fills the TV screen. Its border nearly matching the screen edge is a style point and is legible. The text matches the source exactly, and all text sits inside its boxes."
   ],
   "issues": [
     {
-      "problem": "The 03-3 caption box ('Ravi scans the QR code at the door.') covers the upper-left of Ravi's hair, about page x257-313, y555-610, so his head is cut by the box's straight right edge. Fix: remove the excess bottom padding, or rewrap the caption into three narrow lines (for example 'Ravi scans / the QR code / at the door.') kept within page x≈40-245, so the box sits on the empty wall left of x≈255. Then re-export page-03.png and check the head silhouette.",
-      "location": "03-3 (page 03, middle-left panel), caption box bottom-right against Ravi's crown",
-      "resolved": false
-    },
-    {
-      "problem": "The bottom edge of the 03-1 caption box (about y178) meets or clips the crown of Mr. Raman's hair (top at about page y171-182, x120-188). Fix: remove the roughly 35 px of empty bottom padding below the third line (or move the box up), so a visible gap appears above his head.",
-      "location": "03-1 (page 03, top-left panel), caption box bottom edge over Mr. Raman's head",
+      "problem": "The bottom edge of the 03-2 caption box ('Some check in ahead on the Welbuk Health app.', about y134) covers the top of Priya's ponytail tuft (about page x714-741, y122-134; art y222-247) and sits on her scrunchie and crown line, with no gap. Fix: remove the roughly 40 px of empty bottom padding below the second line, or move the box up, so the box ends at about y≤115 and her hair outline shows completely with a visible gap. Then re-export page-03.png.",
+      "location": "03-2 (page 03, top-right panel), caption box bottom edge over Priya's ponytail and crown",
       "resolved": false
     }
   ],
@@ -56,50 +50,50 @@
       {
         "panel": "03-5",
         "dialogue": [
-          2,
-          1
+          1,
+          2
         ]
       }
     ],
     "observations": [
-      "Natural scan: the captions at the top left of each panel lead a clean Z path. Front desk (03-1), app (03-2), QR scan (03-3), form (03-4), then the waiting room (03-5). Each panel has exactly one caption, so there is no balloon-proximity ambiguity on this page.",
-      "In 03-5 the caption at the top left ('Every check-in gets a slot on the screen.') is read before the TV label at the right, which is slightly lower. That matches the intended order [1,2] (the predictedOrder entry above records [2,1] by mistake). The caption names the screen, and the eye then moves to it."
+      "Natural scan of the new page: the caption at the top left of each panel leads a Z path through front desk, app, QR scan, form and waiting room. In 03-5 the caption at the top left comes before the TV label at the right, which is slightly lower. There are no balloons, so no proximity misreading is possible.",
+      "The narrower three-line 03-3 caption reads naturally ('Ravi scans / the QR code / at the door.') and still introduces Ravi before his close-up in 03-4. The new 03-1 position does not change the order."
     ],
     "transitions": [
       {
         "from": "02-4",
         "to": "03-1",
-        "observation": "'A later morning:' plus the bright tidy reception mark the time change from the evening onboarding."
+        "observation": "'A later morning:' and the bright tidy reception mark the time change after the evening onboarding."
       },
       {
         "from": "03-1",
         "to": "03-2",
-        "observation": "The second check-in channel. The young woman with the phone is outside the same clinic entrance, and the caption 'Some check in ahead...' builds on 'can always check in at the front desk'."
+        "observation": "The second channel. Priya uses the app outside the same entrance, and 'Some check in ahead...' builds on the front-desk caption."
       },
       {
         "from": "03-2",
         "to": "03-3",
-        "observation": "The third channel. Ravi, named by the caption, scans the QR stand just inside the glass entrance, with Meera at the desk and the earlier patients waiting behind him in the background."
+        "observation": "The third channel. Ravi scans the stand just inside the glass entrance, with Meera and the earlier patients in the background."
       },
       {
         "from": "03-3",
         "to": "03-4",
-        "observation": "Continuous action. A close-up of the same phone, watch and green shirt shows the form opening after the scan, with consent stated in the caption."
+        "observation": "Continuous action. A close-up of the same phone, watch and shirt shows the form after the scan, with consent stated in the caption."
       },
       {
         "from": "03-4",
         "to": "03-5",
-        "observation": "All three patients from 03-1 to 03-3 sit together in the waiting area under the TV showing three slots, which closes the three-channel sequence."
+        "observation": "All three patients sit together under the TV showing three slots, which closes the sequence."
       },
       {
         "from": "03-5",
         "to": "04-1",
-        "observation": "'Soon, his slot comes up.' and 'NOW · A-12' on the same TV, as Ravi stands. His rising shows that A-12 is his slot (checked on page-04.png)."
+        "observation": "On page-04.png the same TV shows 'NOW · A-12' and Ravi alone stands, which shows that A-12 is his slot. 'Soon' bridges the wait."
       }
     ],
-    "firstReadingHash": "b01e3d8a79a16b854e3731b97b014f2f37cf052a9e00380c70fcb581ce440a91",
-    "comparison": "The first reader's order (the five captions left to right, top to bottom, then the TV label) is the same as the script order; there is no dialogue to skip. Concerns, each judged: (1) The 'Ravi scans...' box overlapping the top of Ravi's hair. I confirmed it against the panel art with a checked coordinate mapping: the box hides about x257-313, y555-610 of his hair silhouette, so this is an ISSUE (changes requested). (2) The 03-4 box beside the man's hair. The box edge (x≈825) only meets the hair outline (x≈824) without covering any hair, so this is acceptable. (3) 'app.' and 'consent.' close to borders. Both are inside and legible, so this is acceptable. (4) Which slot is Ravi's is not shown on page 3. On page 4 the 'NOW · A-12' label appears as Ravi alone stands up and looks at the screen, which answers it at once, so this is acceptable. In addition, I found the 03-1 box grazing Mr. Raman's crown, which the first reader did not mention (second issue). Two unresolved issues, so the status is changes-requested."
+    "firstReadingHash": "770b71632ef47868fb53f36bb08591e0ee9e20755c8854a1ce49d4bc5db67954",
+    "comparison": "The new first reading's Z-path order is the same as the script order 03-1 to 03-5 (03-5 caption then label). Its concerns, judged: (a) The panel 2 caption bottom nearly touching Priya's ponytail. Mapped from the art, it actually covers the top of the tuft by about 11 px and sits on the crown, so this is an ISSUE. (b) The panel 4 box close to Ravi's hair and above the phone. Both are clear (about 9 px above the phone, with the hair outline only met), so this is acceptable. (c) The panel 1 caption over the left of the wall monitor. That is a background object, and Mr. Raman's hair is now clear, so this is acceptable. (d) The panel 3 caption above the background receptionist. It is clear by about 14 px, and Ravi is clear by about 23 px, so this is acceptable. (e) The TV label border nearly matching the screen edge. Minor and legible, so this is acceptable. 'At the door' with the stand inside: the scene places the stand just inside the glass entrance, which is visible at the right, so this is acceptable. Only Ravi is named: the other patients work as silent showing, so this is acceptable. The previous 03-1 and 03-3 issues are resolved. One new unresolved issue (03-2), so the status is changes-requested."
   },
-  "fingerprint": "f7166fda2c7b7f13154cb8af51bfc9b6451e442082eb0c9ce23ffc670e58b2ed",
-  "recordedAt": "2026-11-12T13:25:00.430Z"
+  "fingerprint": "1592ac0b32027739b0bbd510fcf06e3eed5fc554cfbff729d1efbfe2b77a0259",
+  "recordedAt": "2026-11-12T13:34:37.563Z"
 }

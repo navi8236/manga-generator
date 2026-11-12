@@ -1,20 +1,25 @@
 {
-  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/lettering-02-e4122e242d40a2d539d5dc5f0a63e705bdc9388a326bb67bfb977d6108cbad6e.json",
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/lettering-02-d7c84a0ffafc0711ba495a34b090d0cb3fe4421252fb067caaabf216513211c1.json",
   "reviewer": {
     "role": "subagent",
     "task": "claude-code-agent:manga-reviewer:a1d5f9066e4819ea6",
     "reportedTask": null,
     "taskSource": "Agent ID returned by the Claude Code Agent tool to the parent."
   },
-  "status": "pass",
+  "status": "changes-requested",
   "observations": [
-    "What I read: this request's first reading and required transitions, plus the page-02 script (panels 02-1 to 02-4, which appear in request 01's boundary context with the same text), source/original.txt and the revision notes. Images I opened with Read and looked at: workflow/review/page-02.png and assets/panels/02-3.png, plus page-01.png and page-03.png for the boundaries. I did not open 02-1, 02-2 or 02-4 panel art separately; I judged them from the lettered page.",
-    "The text matches the source exactly. 02-1 caption: 'The clinic begins its Welbuk onboarding.' 02-1 label: 'WELBUK PRACTICE for the clinic'. 02-2 Ananya: 'We can organise our clinic workflow here.' 02-3 Meera: 'And our team can use tools suited to each staff role.' 02-3 label: 'WELBUK CARE for clinic staff'. 02-4 Ananya: 'One team. Better coordination.' The 'And...' line correctly continues Ananya's 02-2 line.",
-    "The 02-3 WELBUK CARE label against Meera's hand, checked in the art. The panel art is 832x1232, scaled to the 352x520 rect at page (648,568). In the art, Meera's relaxed left hand is at about x655-700, y960-1035, which maps to page x925-944, y974-1006. On page-02.png the label's right edge is at about x898, so there is a clear gap of about 25 px. The hand and fingers are fully visible to the right of the label. The phone hand (protected rect 794,794,40,61) is far above the label. The label covers only the lower kurta front and lies just below the laptop's base, so no face, hand or key prop is hidden.",
-    "Tails: in 02-2 the tail tip ends at Ananya's hair just above the ear (about x360, y720), outside the face rect 365-470. In 02-3 the tail points down to Meera's head top. In 02-4 the tail ends at the edge of Ananya's hair and cheek (about x400, y1237), at the outer edge of her face rect (325-397), not over her features. It points to the doctor, not to Meera on the right. That is correct, because the script gives the line to Ananya.",
-    "Fit: 'here.' ends about 20 px from its balloon edge, 'role.' about 12 px from its edge, and 'staff' about 10 px from the label edge. All text sits inside its box. The caption's 'its / Welbuk / onboarding.' break follows the scripted textColumns. It is uneven but legible, and the meaning is unaffected."
+    "What I read: this fresh request (the same page-02 first reading, hash 01914e3a..., and transitions 01-3>02-1 to 02-4>03-1), source/original.txt and the revision notes. Images I opened with Read and looked at again in this pass: workflow/review/page-02.png, assets/panels/02-1.png, and page-03.png for the outgoing boundary. In my previous pass I had opened 02-3.png. I did not open 02-2 or 02-4 panel art; I judged them from the lettered page.",
+    "The 02-1 caption against Ananya's hair and bun, mapped from the art as requested. The art is 1392x736, scaled to rect [24,24,976,520] (scale x 0.701, y 0.707). The art has a white area at the top left (about art x0-455, y0-195), but Ananya's head breaks into it. Her hair rises from the bun to a crown at about art (420,62), and the back of the head and crown fill about art x240-455, y60-195. That maps to page x192-343, y66-162. The caption box occupies page x24-323, y24-162. It therefore hides the crown and upper back of her hair, about page x192-323, y66-162, which is roughly the upper-left third of her head silhouette. On page-02.png her head is visibly cut by the box: hair appears only to the right of x≈323 (from about y60) and below y≈162. The bun (art x205-330, y270-410, which maps to page x168-255, y213-311) is fully clear, and so is the face (face rect 300-410 x 165-310; the box ends at y162). So no face is covered, but the head silhouette is cropped, as in the 03-3 case I flagged on page 03. I missed this in my previous page-02 pass, and I correct it here.",
+    "Unchanged items I re-checked on the same image. The WELBUK CARE label's right edge (x≈898) is clear of Meera's left hand (page x925-944, y974-1006, from the 02-3 art mapping). The 02-1 WELBUK PRACTICE label sits on the art's white top-right area (page x700-1000, y24-164), covering only the top-right of the window frame, which is acceptable. The tails in 02-2, 02-3 and 02-4 point to the scripted speakers (Ananya, Meera, Ananya), and their tips touch only hair or cheek edges. All text matches the source and sits inside its boxes ('here.', 'role.' and 'staff' all have 10-20 px margins).",
+    "A possible fix for 02-1: the only empty wall left of her head is about page x24-184, y24-182 (art x0-228, y0-224: wall, plant and the top of the bookshelf). Rewrap the caption to fit there, for example 'The clinic / begins its / Welbuk / onboarding.', with the box about x24-184. Alternatively, move the caption to a bottom-left caption over the chair and coat area. Then re-export page-02.png and check that the crown outline is complete."
   ],
-  "issues": [],
+  "issues": [
+    {
+      "problem": "The 02-1 caption box ('The clinic begins its Welbuk onboarding.', page x24-323, y24-162) covers the crown and upper back of Dr. Ananya's hair, about page x192-323, y66-162 (art x240-427, y60-195). Her head silhouette is cut by the box's right and bottom edges. The bun and face are clear. Fix: rewrap the caption narrower (box within about x24-184) on the empty wall left of her head, or move it, so that no hair falls under the box. Then re-export and check again.",
+      "location": "02-1 (page 02, top wide panel), caption box over Ananya's crown",
+      "resolved": false
+    }
+  ],
   "readingReview": {
     "withoutGuides": true,
     "predictedOrder": [
@@ -46,39 +51,39 @@
       }
     ],
     "observations": [
-      "Natural scan: the top-left caption, then the top-right teal WELBUK PRACTICE label at the same height, then the middle-left balloon. Next comes the middle-right balloon, whose top is at the same height as the left one, followed by the WELBUK CARE label low in the same panel. The bottom balloon is last. The 02-2 and 02-3 balloons are separated by a gutter and point to different figures, so they do not merge.",
-      "The teal product labels look clearly different from the white caption and speech balloons, so readers take them as product names, not speech. Each label sits in the panel showing that product: the laptop with Practice, the phone with Care."
+      "Natural scan, unchanged from the image: the top-left caption, then the top-right WELBUK PRACTICE label, then the middle-left Ananya balloon, then the middle-right Meera balloon, then the WELBUK CARE label low in that panel, then the bottom Ananya balloon. This matches the script order, and the balloons in different panels do not merge across the gutter.",
+      "The white caption and speech boxes are clearly different from the teal product labels, so the labels read as product names, not speech. The only problem on the page is the 02-1 caption cropping the head silhouette. The reading order is not affected."
     ],
     "transitions": [
       {
         "from": "01-3",
         "to": "02-1",
-        "observation": "The busy daytime reception cuts to the evening office, where Ananya is typing on the onboarding form. The caption 'The clinic begins its Welbuk onboarding.' and the sunset window mark the time change. Her decision on page 1 leads into this action."
+        "observation": "The daytime reception cuts to the evening office, where Ananya is typing the onboarding form. The caption and the sunset window carry the time change, and her decision on page 1 leads into this setup."
       },
       {
         "from": "02-1",
         "to": "02-2",
-        "observation": "Same evening, same office and window. The view moves from over her shoulder at the screen to the front, as she pauses with a finger at her chin and states what Practice organises."
+        "observation": "Same office and window. The over-the-shoulder view becomes a front view as she considers team roles and states what Practice organises."
       },
       {
         "from": "02-2",
         "to": "02-3",
-        "observation": "Same room: the desk, the laptop showing the blank form and the sunset window appear behind Meera. 'And our team...' adds the staff side to Ananya's statement, and the phone with a calendar icon is the new prop."
+        "observation": "Same room (desk, laptop, sunset window). Meera's 'And our team...' adds the staff tool to Ananya's line, with the phone held up."
       },
       {
         "from": "02-3",
         "to": "02-4",
-        "observation": "Same moment, now a two-shot. Meera still holds the staff phone at her side and Ananya is seated by the laptop, closing the pair's exchange with 'One team. Better coordination.'"
+        "observation": "The same moment as a two-shot. Meera still holds the phone and Ananya closes with 'One team. Better coordination.'"
       },
       {
         "from": "02-4",
         "to": "03-1",
-        "observation": "The 03-1 caption 'A later morning: patients can always check in at the front desk.' and the bright reception mark the move from evening onboarding to a later working morning (checked on page-03.png)."
+        "observation": "'A later morning: patients can always check in at the front desk.' and the bright reception on page-03.png mark the move from evening onboarding to a working morning."
       }
     ],
     "firstReadingHash": "01914e3a184938c209385b9f338a6bef048d43656d82e939d7d3777f322ae883",
-    "comparison": "The first reader's order (caption, top-right label, the doctor's line, the receptionist's 'And...' line with its label, the doctor's closing line) is the same as the script order 02-1[1,2], 02-2[1], 02-3[1,2], 02-4[1]; no reply is missing. Concerns, each judged: (1) The WELBUK CARE label close to Meera's hanging left hand. I mapped the panel art to the page: the hand is at page x925-944 and the label ends at about x898, so the hand is not clipped and this is acceptable. (2) 'here.', 'role.' and 'staff' close to their right borders. All are inside with 10-20 px margins, so this is acceptable. (3) The awkward 'its / Welbuk / onboarding.' break. It is legible and the meaning is unchanged, so I do not count it as an issue. (4) In 02-2 and 02-4 the tails end at the hair or cheek edge. Neither covers the eyes, nose or mouth, and both clearly point to Ananya as scripted, so this is acceptable. (5) Day to sunset without a 'later' caption. The onboarding caption marks the new activity and the light shows the time, so this is acceptable. No unresolved differences."
+    "comparison": "The first reader's order is the same as the script order 02-1[1,2], 02-2[1], 02-3[1,2], 02-4[1], with no skipped reply. Concerns: (1) The WELBUK CARE label near Meera's hand. It is clear by about 25 px, so this is acceptable. (2) Text close to the borders. Everything is inside, so this is acceptable. (3) The awkward caption line break. It is legible, so this is acceptable. (4) The tails ending at hair and cheek edges. They point to the correct speakers and cover no facial features, so this is acceptable. (5) Day to sunset. It is carried by the caption and the light, so this is acceptable. Neither the first reader nor my previous pass mentioned the 02-1 caption over Ananya's crown. Mapped from the panel art at the coordinator's request, it covers about page x192-323, y66-162 of her hair, so this is an ISSUE. Status: changes-requested."
   },
-  "fingerprint": "e4122e242d40a2d539d5dc5f0a63e705bdc9388a326bb67bfb977d6108cbad6e",
-  "recordedAt": "2026-11-12T13:25:00.070Z"
+  "fingerprint": "d7c84a0ffafc0711ba495a34b090d0cb3fe4421252fb067caaabf216513211c1",
+  "recordedAt": "2026-11-12T13:34:37.199Z"
 }
