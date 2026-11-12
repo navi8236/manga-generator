@@ -1,31 +1,31 @@
 {
-  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/lettering-08-0f0b208671af4c23b65713d901853b96a60ca31aa5272270f8c92be8b7223b4a.json",
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/lettering-08-42972d6719822220e0c91540e5de2b037ecc143d079dbda7b600dbbf06822948.json",
   "reviewer": {
     "role": "subagent",
-    "task": "claude-code-agent:manga-reviewer:aaaee08dce305c752",
+    "task": "claude-code-agent:manga-reviewer:a5e4ed5eb180b1f20",
     "reportedTask": null,
     "taskSource": "Agent ID returned by the Claude Code Agent tool to the parent."
   },
   "status": "pass",
   "observations": [
-    "What I read: the request JSON. With Read I viewed workflow/review/page-08.png and assets/panels/08-1.png, 08-2.png, 08-3.png and 08-4.png, and for the boundary review/page-07.png with the 07 assets. I compared these with storyboards/page-08.svg, the script in the request and source/original.txt lines 52-56. All files were readable. The runtime gave me no task ID, so task is null.",
-    "Text: all captions and labels match the source and script verbatim.",
-    "08-1: the caption covers the asset's blank top-left area and the window sky. Ravi's face, the hand at his chin and the phone in his lap are clear. Art note: a sliver of the asset's white unpainted block shows to the right of the caption (about x 299-327, y 24-166). It reads as blank sky at the window and does not affect reading.",
-    "08-2: the WELBUK VISION tag sits in the sky at top left. First reader's coverage note: the bottom caption (top edge y about 322) covers the specialist's lower torso and the base of the clinic. His face, his gesturing hand (protected [672,262,74,54], which ends at y 316) and the stethoscope are clear. Acceptable.",
-    "08-3: the tag and caption sit over the sky and the sofa arm at left. Ravi's pointing hand (around x 490-570) and the tablet (protected [583,681,159,103]) are clear of the caption, which ends at x 407. Faces are clear.",
-    "08-4, first reader's notes: the product label (x 704-985) starts about 5 px right of Ravi's face box (ends at 699). It sits beside his head and raised waving hand without covering either; it overlaps only part of his far shoulder and the background. The bottom caption covers Meera's lower legs and feet and reaches the edge of Ananya's feet. Neither is a face, hand or prop, and the phone in Meera's hand (at her right side) stays visible. Acceptable.",
-    "08-4 reading order (label at top right, tagline at bottom left): the label is read first, then the eye drops to the final tagline. A diagonal move to the last, closing line is normal and does not cause misreading.",
-    "First reader's 'us', the unintroduced vision characters and the repeated WELBUK VISION: these are verbatim or source-required (source line 4 requires marking future features as vision; lines 54-55 call the scenes symbolic). The vignette art and the tag keep both vision panels separate from the present. Acceptable."
+    "What I read: the whole request JSON for page 08 (the script for page 08, the boundary context for pages 07 and 09, and the first reading), source/original.txt and REVISION-2026-11-11.md (Request 4). I opened these images with Read and looked at them: workflow/review/page-07.png, page-08.png and page-09.png, and the panel art assets/panels/08-1.png, 08-3.png and 08-5.png. I did not open the panel art for 08-2, 08-4 or 08-6, storyboards/page-08.svg or the pharmacy-lab character sheet. I judged those panels from the lettered page.",
+    "Text against the source: every caption, label and the lab technician's line match source PAGE 8 Panels 1-6 word for word. Nothing implies drug names, test names, values or a diagnosis.",
+    "08-5, RESULTS READY label near Dr. Ananya's hand (the first reader asked for this check): from the 08-5 art (1408x736, scaled about 0.40), her left-side hand (her right hand) on the tablet's left edge starts at about page x 632 (protected [631,1075,40,56]). The label box ends at about x 628. On the page all her fingers and the tablet's left edge show right of the box, so the box touches but does not clip the hand. The test-tube and check-mark card stays fully visible. Acceptable.",
+    "08-1: the 'Meanwhile...' caption box (about x 28-286) ends about 5 px left of the pharmacist's hair (the hair starts at about x 291 in the art). The 'fills' line is tight: its right padding is about 6 px against about 18 px on the left, but nothing is clipped and it stays legible. The NEW PRESCRIPTION label covers only part of his coat sleeve and the space above the tablet. His hand and the box going into the bag (protected [265,214,95,50]) and the pill card on the tablet are visible. Acceptable.",
+    "08-2: the 'The lab is notified.' caption sits against the panel's top border, which is standard caption placement. The LAB ORDER label overlaps only the top bezel of the monitor. The tube icons on the screen stay visible. Her face (ends at x 748), her bun and the raised tube (protected [680,242,85,120]) are left of the label, which starts at about x 786. Acceptable.",
+    "08-3: the tail runs from the balloon's lower left to the right side of the lab technician's head, ending at her hair near the bun. The other figure, Ravi, is about 350 px away on the left, so the speaker is unambiguous. The caption and balloon sit over plain wall, and both faces, Ravi's cotton pad and the tube are clear.",
+    "08-5 and 08-6, first-reader concern about the apparent indent on the second line ('Dr. Ananya / is notified on', 'The clinic / is notified'): the textColumns carry trailing spaces, not leading ones. The apparent indent comes from the monospace 'i' glyph, which is narrow and centred in its cell, so it starts about half a cell to the right of 'D' or 'T'. It is not a lettering error. 08-6: the caption and label are clear of Meera's face (x 710-790). The label overlaps only the top of the monitor, and the check card stays visible.",
+    "Timeline: the first reader saw page 8 alone and raised 'Meanwhile' and 'Later that day'. Read against page 07, 07-4 clearly shows Ravi walking away from the clinic in morning sun. 'Meanwhile' therefore reads as 'while he heads off after the visit', and 'Later that day, Ravi gives his samples at the clinic lab' together with his bag on his lap shows a return visit the same day, which is the confirmed decision in Request 4. The prescription not being shown being issued is covered by the 06-2 label 'intelligent prescribing · ... · labs', which the NEW PRESCRIPTION and LAB ORDER labels pick up. 'Results ready', the evening light and the home setting in 08-4 mark the later day. Acceptable without changing the wording."
   ],
   "issues": [],
   "readingReview": {
     "withoutGuides": true,
-    "firstReadingHash": "acdc89d52559c01a67a4c430e38a69d360647d7844d61beb2f7b62a12a933950",
     "predictedOrder": [
       {
         "panel": "08-1",
         "dialogue": [
-          1
+          1,
+          2
         ]
       },
       {
@@ -48,36 +48,66 @@
           1,
           2
         ]
+      },
+      {
+        "panel": "08-5",
+        "dialogue": [
+          1,
+          2
+        ]
+      },
+      {
+        "panel": "08-6",
+        "dialogue": [
+          1,
+          2
+        ]
       }
     ],
     "observations": [
-      "Composite order: 'Tomorrow, care may take us beyond our hometown.'; WELBUK VISION, then 'The vision: trusted connections...'; WELBUK VISION, then 'One connected ecosystem for care and family wellness.'; 'Welbuk Practice • Welbuk Care • Welbuk Health', then 'Welbuk — Building a connected healthcare ecosystem.'.",
-      "There are no balloons on this page, so there are no tails to check. Teal tags and white narrator boxes are clearly different in style."
+      "Natural scan: top row left then right; the wide middle panel with the caption at top left, then the balloon at top right; then the bottom tier. Its tall left panel reads first, from caption to label, then the two stacked right panels top to bottom. In every panel the white caption sits above or left of the teal label, so caption-then-label is the natural order.",
+      "Only 08-3 has speech. Its caption (left) and balloon (right) share one row and read left to right, with no competing balloon nearby. The two RESULTS READY labels sit in separate panels and do not cluster."
     ],
     "transitions": [
       {
         "from": "07-4",
         "to": "08-1",
-        "observation": "From Ravi waving at the clinic door to Ravi on a train. The conditional caption marks a possible tomorrow, and his costume, bag and phone carry over."
+        "observation": "Ravi leaves the clinic (07-4). The page turn opens on a pharmacy with 'Meanwhile', which places it at the same time as his departure. The new-prescription card ties it back to the plan of care."
       },
       {
         "from": "08-1",
         "to": "08-2",
-        "observation": "Ravi's thoughtful look out of the window leads to the vignetted, tagged vision of a specialist at a clinic in another city, with dotted links between clinics."
+        "observation": "One notification goes to the pharmacy, the next to the lab: two parallel 'is notified' captions side by side in the top row, with matching on-screen labels."
       },
       {
         "from": "08-2",
         "to": "08-3",
-        "observation": "The same vignette style and tag widen the vision to Ravi's family sharing a wellness tablet."
+        "observation": "The same lab, with the monitor, tube rack and lab technician, now in a wide shot. 'Later that day' and Ravi in the collection chair with a cotton pad show that he came back."
       },
       {
         "from": "08-3",
         "to": "08-4",
-        "observation": "The vignette ends and the full-colour present-day clinic entrance returns, with the three main characters, the three product names and the closing tagline."
+        "observation": "Her line 'We'll let you know when your results are ready' leads straight into 'Results ready: Ravi is notified.', shown with Ravi at home in evening light. Promise and payoff are adjacent."
+      },
+      {
+        "from": "08-4",
+        "to": "08-5",
+        "observation": "The same 'is notified' pattern moves from Ravi to Dr. Ananya at her desk with her tablet. Her costume and the room match pages 05-06."
+      },
+      {
+        "from": "08-5",
+        "to": "08-6",
+        "observation": "Stacked panels with parallel captions: the doctor on Welbuk Care, then the clinic (Meera at reception) on Welbuk Practice, each with the same RESULTS READY card."
+      },
+      {
+        "from": "08-6",
+        "to": "09-1",
+        "observation": "After the notification chain closes, page 09 opens with 'Tomorrow, care may take us beyond our hometown.' and Ravi on a train. The conditional caption marks a future leap, not a direct consequence. This is the user-kept vision page, and the leap is clearly signalled."
       }
     ],
-    "comparison": "My order matches the first reader's and the script. Their coverage notes are confirmed but cover no face, hand or protected prop. The narrative notes are source-faithful. Page 08 changed only as a neighbour, and its lettering passes."
+    "firstReadingHash": "5449156288f5e857776bee498e8d9269a41367baf13fcc0e7392e1a56b3bb1a5",
+    "comparison": "The first reading's panel order (top row, middle panel, tall left panel, then the stacked right panels) and caption-before-label order match the intended order for 08-1 to 08-6 exactly. Nothing was skipped. The timeline ambiguity it raised comes from reading page 8 alone: with 07-4 showing Ravi walking out, 'Meanwhile' and 'Later that day' read as his departure and a same-day return, as confirmed in Request 4. On the fingers concern in 08-5, the label ends about 4 px left of the protected hand and does not clip it. The tight 'fills' line, the caption at the panel border, the LAB ORDER label over the monitor bezel and the tail at the hair bun do not hide a face, hand or key screen content. The 'indent' is the spacing of the monospace 'i', not a leading space."
   },
-  "fingerprint": "0f0b208671af4c23b65713d901853b96a60ca31aa5272270f8c92be8b7223b4a",
-  "recordedAt": "2026-11-12T12:04:05.216Z"
+  "fingerprint": "42972d6719822220e0c91540e5de2b037ecc143d079dbda7b600dbbf06822948",
+  "recordedAt": "2026-11-12T13:24:08.606Z"
 }
