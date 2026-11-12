@@ -828,7 +828,7 @@ const pages = [];
         speakers: { ananya: speaker(r3, [150, 470, 90, 110]) },
         dialogue: [
           line('narration', ['Dr. Ananya is', "notified when", "he's ready."], 16, 16),
-          line('label', ['RAVI ·', 'READY'], 182, 734),
+          line('label', ['RAVI ·', 'READY'], 175, 734),
         ],
       },
     ],
@@ -1390,7 +1390,7 @@ const MEASURED = {
     speakers: { ravi: F(93, 842, 95, 110, 163, 937), nurse: F(389, 739, 102, 110, 440, 827) },
     protected: [[199, 1047, 204, 109], [327, 955, 105, 99]],
   },
-  '04-3': { speakers: { ananya: F(730, 834, 116, 150, 786, 975) } },
+  '04-3': { speakers: { ananya: F(730, 834, 116, 150, 786, 975) }, protected: [[715, 1197, 58, 68], [922, 1197, 58, 73]] },
   '01-1': { speakers: { ananya: F(398, 170, 52, 64, 423, 222) } },
   '01-2': { speakers: { meera: F(318, 945, 85, 100, 358, 1028) } },
   '01-3': {
