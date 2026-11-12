@@ -1135,7 +1135,7 @@ const SCREEN = 'The laptop stands at about a three-quarter angle toward the read
         speakers: { ravi: speaker(r2, [340, 200, 140, 175]) },
         dialogue: [
           line('ravi', ['So I can keep useful', 'information in', 'one place?'], 20, 20),
-          line('label', ['WELBUK HEALTH', 'for patients'], 0, 440),
+          line('label', ['WELBUK HEALTH', 'for patients'], 0, 216),
         ],
       },
       {
@@ -1411,7 +1411,7 @@ const MEASURED = {
     speakers: { meera: F(367, 128, 96, 111, 428, 232), ravi: F(572, 114, 131, 118, 641, 191) },
     protected: [[528, 277, 66, 94]],
   },
-  '07-2': { speakers: { ravi: F(369, 614, 147, 169, 423, 739) }, protected: [[297, 805, 115, 208]] },
+  '07-2': { speakers: { ravi: F(369, 614, 147, 169, 423, 739) }, protected: [[297, 805, 115, 208], [250, 876, 50, 145]] },
   '07-3': {
     speakers: { meera: F(691, 741, 111, 125, 761, 838), ravi: HEAD(970, 760) },
     protected: [[890, 898, 79, 120]],

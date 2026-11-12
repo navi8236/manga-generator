@@ -1,0 +1,63 @@
+{
+  "panel": "05-3",
+  "fingerprint": "025dcb3c1cde88c1fb2c84fef7e1cb23a586fdaa242b90a88305c579ef55f5df",
+  "observation": "Ravi rubs the back of his neck, describing tiredness; SOAP notes on the laptop with a glowing AI mic. Inspected at 25% (contact sheet), 100% (full panel) and 200% (face crops), and on the composed page.",
+  "views": {
+    "thumbnail": true,
+    "native": true,
+    "detail": true
+  },
+  "checks": {
+    "anatomy": {
+      "result": "pass",
+      "note": "Right hand at the back of the neck and left hand on the knee correct; fingers countable at 100%."
+    },
+    "contact": {
+      "result": "pass",
+      "note": "Hand touches the neck; watch on the left wrist; laptop rests on the desk."
+    },
+    "objects": {
+      "result": "pass",
+      "note": "Four stacked cards with icons, coloured chips and a glowing teal mic with sound arcs in the right third; no text."
+    },
+    "faces": {
+      "result": "pass",
+      "note": "Faces match the sheets at 200%; see faceIdentity."
+    },
+    "linework": {
+      "result": "pass",
+      "note": "Consistent; the edited left edge has no seam."
+    },
+    "background": {
+      "result": "pass",
+      "note": "Plain wall at left, window with plant at upper right."
+    },
+    "continuity": {
+      "result": "pass",
+      "note": "Ravi faces screen-left toward the doctor; costume matches. An unplanned back of the doctor's head was removed by edit."
+    },
+    "lettering": {
+      "result": "pass",
+      "note": "Balloon top-left with its tail to Ravi's mouth; the SOAP NOTES label sits over the left part of the screen and stops just short of the protected mic icon."
+    }
+  },
+  "issues": [
+    {
+      "category": "lettering",
+      "description": "Back of the doctor's head at the left edge left no room for the SOAP label beside the mic; removed by edit 1f3a1ddd.",
+      "status": "resolved"
+    }
+  ],
+  "faceIdentity": {
+    "ravi": {
+      "reference": "works/auto-6294ee8a2094/assets/characters/main-cast.png",
+      "traits": [
+        "narrow warm eyes creasing at the corners",
+        "thick straight dark brows close to the eyes",
+        "square jaw with short trimmed beard and broad nose"
+      ],
+      "expression": "Sheepish, candid smile with slightly tired eyes"
+    }
+  },
+  "reviewedAt": "2026-11-12T11:52:00.908Z"
+}
