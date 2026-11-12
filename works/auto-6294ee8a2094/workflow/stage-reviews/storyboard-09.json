@@ -1,5 +1,5 @@
 {
-  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-09-06a5de7aa8aba851454c0a3db57d7caa70080f50f803c99082f9985cb5c8a366.json",
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-09-92ef27aeb588526d32ec892243d87b49ffb85407c9515727ef14e3908fd9183c.json",
   "reviewer": {
     "role": "subagent",
     "task": "claude-code-agent:manga-reviewer:aaee0f389264cbcd4",
@@ -9,20 +9,19 @@
   "status": "pass",
   "observations": [
     "Reviewer identity: the runtime gave me no task ID, so reviewer.task is null.",
-    "What I read in this pass: the fresh request. This includes the new image-only first reading (fingerprint c6c1aec9..., firstReadingHash 1ba68dc5...) and the revised entries: the 09-3 scene (grey QR grid on the page 3 stand, caption on the desk front at x8/dy196); the 09-4 scene (whole TV with wall above it, plain wall at the upper left, an elderly grey-haired man and a young man in a blue shirt, no bun and no kurta); and the 09-5 hands ('resting loosely together on the desk'). The text of every line is unchanged and matches PAGE 9 of original.txt word for word. Everything was readable.",
-    "Images I opened with Read in this pass, in this order: storyboards-unnumbered/page-09.png (the new export, with the 09-3 figures at the top and its 4-line caption at the bottom left), then the lettered workflow/review/page-09.png. For the boundaries I opened review/page-08.png and review/page-10.png.",
-    "The tiny 09-5 tail is still resolved on the current lettered page. In review/page-09.png the balloon (about 385-681, y962-1100) has its wedge at the lower left, pointing to Ananya's mouth at about x370, y1080. Her mouth is open in speech and her head is turned towards Ravi. Ravi's mouth is closed in a smile, and the line addresses him by name ('Welcome back, Ravi.'). Nothing points at Ravi. The doubt exists only on the grey-placeholder storyboard, where there is no acting.",
-    "09-5 corrections confirmed on the art. Ravi's empty hands rest loosely together on the desk, with his watch on his left wrist, which matches the corrected hands record. I see no mole on Ananya's face. He smiles back towards her and the tablet, which carries his silent reply.",
-    "09-3 on the lettered page: the full-height art shows Ravi holding his phone, with a check mark, to the teal-framed stand, whose white screen shows a grey QR grid. In the background Meera types at her monitor and no one is queuing at the desk, which illustrates 'No queue at the desk.' and answers the first reader's question about her role. The 4-line caption sits over the plain desk front at the lower left, just below Meera and her monitor, and covers no face or hand. The reader sees the action first and then reads 'He checks in himself.', as the first reader noted, which works. From the caption's bottom-left position the eye makes a normal Z-jump to the top caption of 09-4.",
-    "09-4 limitation: the lettered page still shows the old 09-4 art, which is being replaced, so I certify neither the 09-4 art nor its lettering. On the old art the TV is cut off at the top right behind the caption, NOW · A-31 floats over the wall and a patient's head rather than the TV screen, and the patient at the right (bun, yellow kurta) could be confused with Ravi's partner from page 10. The revised 09-4 scene addresses all three: the whole TV with wall above, plain wall at the upper left for the caption, and different patients. At the storyboard level the reading order is sound: the caption at the top left, then the label, with Ravi's placeholder beside it at about the same height. When 09-4 is re-lettered, the NOW · A-31 label must sit on the TV's token strip. That change will alter the page 09 storyboard and needs a fresh review.",
-    "Other first-reader points, checked on the lettered page. The 09-1 caption flush with the top and right borders is the comic's corner-tab style, and Ravi's head is clear below it. The FOLLOW-UP REMINDER label sits directly above his raised phone. The tiny 09-2 and 09-3 placeholders and the empty middle of 09-5 are placeholder artefacts that the art fills. The 09-5 bottom caption is a corner tab over the desk edge, below Ravi's hands. 'On the day' (with the morning glass entrance and free hands in 09-2) and 'As usual' (recalling 04-1) read clearly.",
-    "Completeness against Request 5 is confirmed on the art that exists: reminder, empty-handed arrival, QR self check-in, and the doctor with his history open. The token panel is pending, as noted. The captions are framed around clinic savings, and the dropped tagline is not used."
+    "What I read in this pass: the fresh request. This includes the new image-only first reading (fingerprint 807bdac3..., firstReadingHash 6d910b2d...), the revised 09-3 scene and hands, and the 09-4 scene and dialogue. In 09-3 Ravi is in profile facing right, holding the phone to the stand with his far (left) hand, watch on that wrist, with heldBy ravi.left and his right hand empty at his side. The text of every line is unchanged and matches PAGE 9 of original.txt word for word. Everything was readable.",
+    "Images I opened with Read in this pass, in this order: storyboards-unnumbered/page-09.png (the 09-4 caption is now a 3-line corner tab and the NOW · A-31 label is inside the right border), then the all-final lettered workflow/review/page-09.png. For the boundaries I opened review/page-08.png and review/page-10.png.",
+    "The tiny 09-5 tail is still resolved on the all-final lettered page. In review/page-09.png the balloon (about 385-681, y962-1100) has its wedge at the lower left, pointing to Ananya's mouth at about x370, y1080. Her mouth is open in speech and her head is turned towards Ravi. Ravi's mouth is closed in a smile, and the line addresses him by name ('Welcome back, Ravi.'). Nothing points at Ravi. The ambiguity the first reader raises exists only on the grey-placeholder storyboard.",
+    "09-4, regenerated: the whole TV is now visible at the upper right (about 840-995, y575-660), with wall above it. NOW · A-31 sits over the TV screen, and its box extends about 40 px left of the TV frame onto the wall, but the TV frame shows above and to the right of it, so the label reads as the TV display. It is 8 px inside the right panel border. Ravi sits under the TV and looks up towards it with a small smile, phone in his right hand in his lap and watch on his left wrist on the chair arm. An elderly grey-haired man (left) and a young man in a blue shirt (right) are seen from behind. The earlier sheared TV, the floating label and the patient resembling the partner (bun, yellow kurta) are gone. The 3-line caption is a top-left corner tab over plain wall and covers no face.",
+    "09-3: the watch is now on Ravi's reaching (left) wrist next to the phone at the QR stand, and his near (right) arm hangs empty. This matches the swapped hands record and heldBy ravi.left, and it keeps the watch on his left wrist in every page 09 panel (09-1 by the cup, 09-2, 09-3, 09-4 on the chair arm, 09-5 on the desk). The grey QR grid on the stand matches page 3. Meera types at her monitor with no queue in front of the desk, which answers the first reader's question about her role. The 4-line caption on the desk front at the lower left covers no face or hand.",
+    "Other first-reader points, checked on the lettered page. The captions flush with the borders in 09-1 and 09-4 are the comic's corner-tab style. The tiny placeholders and the empty middle of 09-5 are placeholder artefacts that the art fills. Ravi's silent reply is drawn as a smile back with empty hands on the desk. 'On the day' (with the morning entrance and free hands in 09-2) and 'As usual' (recalling 04-1, with a new token A-31) read clearly.",
+    "Completeness against Request 5 is now confirmed on all-final art: WhatsApp reminder, empty-handed arrival on a different day, QR self check-in, the token on the TV, and the doctor with his history open. The captions are framed around clinic savings, and the dropped tagline is not used."
   ],
   "issues": [],
   "readingReview": {
     "withoutGuides": true,
-    "firstReadingHash": "1ba68dc590db665b3ced283f4dde908f7f65f6c82b6e072bd4a957d78ec680d1",
-    "comparison": "The new first reader's order (A caption, FOLLOW-UP REMINDER, B caption, the 09-3 figures then its bottom-left caption, D caption, NOW · A-31, Ananya's balloon, bottom caption) matches 09-1 [1,2], 09-2 [1], 09-3 [1], 09-4 [1,2] and 09-5 [1,2]. The reader still asked for changes to the tiny 09-5 tail. On the current lettered page this is resolved: the wedge points to Ananya's open mouth, Ravi's mouth is closed, and the line names Ravi. Meera's role and Ravi's reaction are visible in the art. The remaining remarks (tabs flush with borders, tiny placeholders, the empty middle) are style or placeholder artefacts. No unresolved storyboard difference remains. The 09-4 art and lettering are explicitly not certified, because that panel is being regenerated.",
+    "firstReadingHash": "6d910b2d2ee9b0ee6b7e6abd70029056b335239da04d9f8698dd327838a097e9",
+    "comparison": "The new first reader's order (A caption, FOLLOW-UP REMINDER, B caption, the 09-3 figures then its bottom-left caption, D caption, NOW · A-31, Ananya's balloon, bottom caption) matches 09-1 [1,2], 09-2 [1], 09-3 [1], 09-4 [1,2] and 09-5 [1,2]. The reader's only request for a change is the tiny 09-5 tail on the placeholder. On the all-final lettered page it is resolved: the wedge points to Ananya's open mouth, Ravi's mouth is closed, and the line names Ravi. Meera's role and Ravi's reaction are visible in the art. The remaining remarks are style or placeholder artefacts. No unresolved difference remains.",
     "predictedOrder": [
       {
         "panel": "09-1",
@@ -59,7 +58,7 @@
       }
     ],
     "observations": [
-      "Unnumbered storyboard: a 2x2 grid, then the full-width 09-5. 09-3 now opens with the figures and ends with its caption at the bottom left. That is the only panel without a caption at the top left, and the reader still placed it in sequence.",
+      "Unnumbered storyboard and lettered page: a 2x2 grid, then the full-width 09-5. In 09-3 the action is seen before the bottom-left caption, then the eye makes a normal Z-jump to the 09-4 caption at the top left and on to the label on the TV.",
       "09-5 on the lettered page: the eye goes from Ananya's face to the balloon beside her mouth, then to Ravi's answering smile, then down to the bottom caption, which is the exit to page 10."
     ],
     "transitions": [
@@ -81,7 +80,7 @@
       {
         "from": "09-3",
         "to": "09-4",
-        "observation": "The check mark on his phone, then he waits seated with the phone in his lap. 'As usual' recalls page 04. This is judged on the plan, because the 09-4 art is being regenerated."
+        "observation": "The check mark on his phone at the stand, then he waits seated with the phone in his lap under the TV showing NOW · A-31. 'As usual' recalls page 04."
       },
       {
         "from": "09-4",
@@ -95,6 +94,6 @@
       }
     ]
   },
-  "fingerprint": "06a5de7aa8aba851454c0a3db57d7caa70080f50f803c99082f9985cb5c8a366",
-  "recordedAt": "2026-11-12T15:31:05.904Z"
+  "fingerprint": "92ef27aeb588526d32ec892243d87b49ffb85407c9515727ef14e3908fd9183c",
+  "recordedAt": "2026-11-12T15:45:13.694Z"
 }

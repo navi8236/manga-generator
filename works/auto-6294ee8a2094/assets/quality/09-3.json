@@ -1,6 +1,6 @@
 {
   "panel": "09-3",
-  "fingerprint": "f4938845e80c5665ada76e763963a823e69423a2f02ca2b9dca567bc13743da4",
+  "fingerprint": "b0e237707d3793afea9ccb8eeeef94880140c35f13224c88c51d6f9903600e75",
   "observation": "Ravi scans the QR stand with his phone; Meera works calmly at an empty reception desk behind him. Inspected at 25% (contact sheet), 100% (full panel) and 200% (face crops), and on the composed page.",
   "views": {
     "thumbnail": true,
@@ -10,15 +10,15 @@
   "checks": {
     "anatomy": {
       "result": "pass",
-      "note": "Right arm extended with the phone to the stand; left hand relaxed with the watch."
+      "note": "Ravi in profile facing right: far (left) arm extended with the phone to the stand, watch on that wrist; near (right) arm relaxed and empty at his side."
     },
     "contact": {
       "result": "pass",
-      "note": "Phone held near the stand; Meera's hands on the keyboard."
+      "note": "Phone held near the stand in his left hand; Meera's hands on the keyboard."
     },
     "objects": {
       "result": "pass",
-      "note": "QR stand shows an abstract pattern; phone shows a scan frame and a check mark; no text."
+      "note": "QR stand matches page 3: teal frame on a pole, white screen with an abstract grey QR-like grid (redrawn, tools/qr-stand-fix.py); phone shows a scan frame and a check mark; no text."
     },
     "faces": {
       "result": "pass",
@@ -26,25 +26,30 @@
     },
     "linework": {
       "result": "pass",
-      "note": "Consistent."
+      "note": "Consistent; the moved watch and the restored right wrist show no patch edge at 200%."
     },
     "background": {
       "result": "pass",
-      "note": "Reception desk with monitor, glass doors; wall extended above for lettering and the bottom (legs) trimmed (tools/pad-canvas.py crop-bottom)."
+      "note": "Reception desk with monitor, glass doors and window; full image height kept and the sides cropped (tools/pad-canvas.py crop-sides), so no padded band."
     },
     "continuity": {
       "result": "pass",
-      "note": "Meera matches (braid, blue kurta, bangle); no queue at the desk; Ravi without bag."
+      "note": "Meera matches (braid over her left shoulder, blue kurta, bangle on the right wrist); no queue at the desk; Ravi without bag; watch moved to his left wrist (tools/watch-move.py) to match the cast."
     },
     "lettering": {
       "result": "pass",
-      "note": "Two-line caption on the wall at top-left, above both heads."
+      "note": "Four-line caption on the plain desk front at the lower left, below Meera and left of Ravi; clear of faces and hands."
     }
   },
   "issues": [
     {
       "category": "faces",
       "description": "First take drew the receptionist as a nurse and gave Ravi his bag with phone and watch on the wrong hands; retake fixed all three.",
+      "status": "resolved"
+    },
+    {
+      "category": "continuity",
+      "description": "Review r20: padded top showed streaks and the stand screen differed from page 3; review r21: the watch was on his near right wrist. Fixed by full-height crop, stand-screen redraw and moving the watch to the left wrist.",
       "status": "resolved"
     }
   ],
@@ -68,5 +73,5 @@
       "expression": "Calm smile while typing (small in frame; traits checked at 200%)"
     }
   },
-  "reviewedAt": "2026-11-12T15:11:20.102Z"
+  "reviewedAt": "2026-11-12T15:46:15.377Z"
 }

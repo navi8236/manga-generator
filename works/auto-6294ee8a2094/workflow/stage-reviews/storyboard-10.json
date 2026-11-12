@@ -1,5 +1,5 @@
 {
-  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-10-76f84c124e2f086afd3efb3f5475615bb467c3e296ba468120b5b720f7319779.json",
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-10-cf909cd0747fa3398ec36ba606a580cbf7cf5c7904daa0333b9aac95289e9bd5.json",
   "reviewer": {
     "role": "subagent",
     "task": "claude-code-agent:manga-reviewer:aaee0f389264cbcd4",
@@ -10,11 +10,11 @@
   "observations": [
     "Reviewer identity: the runtime gave me no task ID, so reviewer.task is null.",
     "What I read in this pass: the fresh request. Its first reading is unchanged (firstReadingHash 3cf1bdf5...). The listed hash of storyboards-unnumbered/page-10.png (e4b9b6ab...) is the same as before. The new fingerprint comes from the refreshed page 09 boundary context. Earlier in this session I read PAGE 10 of original.txt and Request 5. Everything was readable.",
-    "Images I opened with Read in this pass: storyboards-unnumbered/page-10.png, then workflow/review/page-10.png. For the incoming boundary I opened review/page-09.png. Page 10 looks the same as in my previous pass.",
+    "Images I opened with Read in this pass: storyboards-unnumbered/page-10.png, then workflow/review/page-10.png. For the incoming boundary I opened the all-final review/page-09.png. Page 10 looks the same as in my previous passes.",
     "Script vs source: page 10 matches PAGE 10 of original.txt, including the two captions revised in Request 5.",
     "Lettered page check: the 10-1 caption sits over the window, clear of Ravi's face. The 10-2 caption covers only the base of the clinic, below the specialist. The 10-3 tab and caption sit at the left, clear of the family. The 10-4 product label sits over the sky beside Ravi's face and waving hand. The closing caption sits at the lower left and covers no face.",
     "10-1 'If Ravi travels, his record travels with him.' does not read as a launched cross-city capability. The sentence is conditional and says only that he carries his record. The phone in his hand ties it to the Welbuk Health app shown on page 7 and in 08-4. Every cross-clinic claim appears only in 10-2, under the WELBUK VISION label inside the pale-blue vignette. The residual risk is that 10-1 is drawn in the normal palette. I accept it because the caption asserts no network capability.",
-    "The other first-reader concerns are still acceptable. The repeated WELBUK VISION label in 10-3 is deliberate. The partner and child are introduced inside a labelled vision vignette with the family-wellness caption. The 10-2 corner tab is intentional. The 'rav' cut and the empty middle in 10-4 are placeholder artefacts, as the lettered page shows. Once 09-4 is regenerated with different background patients, nothing on page 09 will echo the partner's yellow kurta."
+    "The other first-reader concerns are still acceptable. The repeated WELBUK VISION label in 10-3 is deliberate. The partner and child are introduced inside a labelled vision vignette with the family-wellness caption. The 10-2 corner tab is intentional. The 'rav' cut and the empty middle in 10-4 are placeholder artefacts, as the lettered page shows. The regenerated 09-4 no longer has a background patient in a yellow kurta, so nothing on page 09 echoes the partner's costume."
   ],
   "issues": [],
   "readingReview": {
@@ -58,7 +58,7 @@
       {
         "from": "09-5",
         "to": "10-1",
-        "observation": "Seen on the lettered pages. Ravi smiling at Ananya in the consultation room, then Ravi on a train with the skyline outside. 'If Ravi travels' marks a possible later journey, and the phone in his hand links back to his app record."
+        "observation": "Seen on the all-final lettered pages. Ravi smiling at Ananya in the consultation room, then Ravi on a train with the skyline outside. 'If Ravi travels' marks a possible later journey, and the phone in his hand links back to his app record."
       },
       {
         "from": "10-1",
@@ -77,6 +77,6 @@
       }
     ]
   },
-  "fingerprint": "76f84c124e2f086afd3efb3f5475615bb467c3e296ba468120b5b720f7319779",
-  "recordedAt": "2026-11-12T15:31:06.261Z"
+  "fingerprint": "cf909cd0747fa3398ec36ba606a580cbf7cf5c7904daa0333b9aac95289e9bd5",
+  "recordedAt": "2026-11-12T15:45:14.093Z"
 }
