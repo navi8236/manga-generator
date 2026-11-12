@@ -1,22 +1,30 @@
 {
-  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-03-8d3ac2c8d6a4a2ad717b5e1fc2d8825b0c3583ed1d5e5f1c17cb90505269e2b5.json",
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-03-b1d140952c502aeae6e4313a4de012ea852233e43e5b39c62fe4b8500d3e5403.json",
   "reviewer": {
     "role": "subagent",
-    "task": "claude-code-agent:manga-reviewer:aeead53e3c5fa379c",
+    "task": "claude-code-agent:manga-reviewer:a2c25f20ddf16a6ec",
     "reportedTask": null,
     "taskSource": "Agent ID returned by the Claude Code Agent tool to the parent."
   },
   "status": "pass",
   "observations": [
-    "Files I actually read: the request JSON (page 03 script, requiredTransitions and the recorded first reading), source/original.txt and source/REVISION-2026-11-11.md (Requests 1 and 2 and the r13 caption change). I opened these images with Read and looked at them: workflow/storyboards-unnumbered/page-03.png, workflow/storyboards/page-03.png and workflow/review/page-03.png. I grepped the text and label rect of storyboards-unnumbered/page-03.svg and the beat text of storyboards/page-03.svg. No file was unreadable.",
-    "The PNGs match the SVGs. The SVG captions are 'A later morning: / patients can always check / in at the front desk.', 'Some check in ahead / on the Welbuk Health app.', 'Ravi scans the QR / code at the door.', 'A short form on / his own phone, / shared with consent.' and 'Every check-in gets / a slot on the screen.'. The label 'A-10 · A-11 · A-12' is in a rect at (664,1012,305x74), as drawn. The numbered PNG adds only the five beat footers.",
-    "The script matches the source, page 3 panels 1-5. All five captions and the TV label are verbatim. The page has no speech, so no question-and-answer pairs exist. The three check-in routes (front desk, app, QR) follow the user's Request 2. The revision note confirms that Ravi is the QR patient, so his own sequence continues on page 4.",
-    "Raman and Priya are not named anywhere on the page. That is acceptable because their roles are carried by the captions ('patients can always check in at the front desk', 'Some check in ahead on the Welbuk Health app') and by the art: an elderly man at the counter with Meera typing, and a young woman tapping a phone check-in card outside the clinic awning."
+    "Reviewer identity: the runtime gave this subagent no task ID, so reviewer.task is null.",
+    "What I read: the request JSON, including the page 03 script with all five panels, the boundary pages 02 and 04, and the new first reading (fingerprint 01dac2fc..., hash 1b2a046c..., reviewer task aad28437d17c000ce). I also read the geometry in storyboards-unnumbered/page-03.svg, original.txt and REVISION-2026-11-11.md (Requests 1 and 2 and the r13 wording note). All were readable. I did not compute hashes.",
+    "Images I opened with Read and looked at, in this order: storyboards-unnumbered/page-03.png, then storyboards/page-03.png, then workflow/review/page-03.png. I also looked at review/page-02.png and page-04.png for the boundaries.",
+    "The PNGs match the current SVG and script. The 03-1 caption is at 40,28 (373x138; dy:4, moved up). The 03-2 caption is at 552,28. The 03-3 caption is at 40,504 (194x138) in three lines, 'Ravi scans / the QR code / at the door.', matching the script's textColumns. The 03-4 caption is at 528,504. The 03-5 caption is at 40,968 and the slot label at 664,1012. The numbered PNG adds the panel captions 1-5.",
+    "Script vs source: all five captions and the TV label match PAGE 3 in original.txt word for word, including the r13 wording of 03-1. Page 3 follows Requests 1 and 2: three check-in channels before Ravi's own page, Ravi as the QR patient, a short caption for each step, and every check-in getting a slot on the TV.",
+    "The two fixes in page-03.png. 03-1: the caption box bottom is at y166, and Mr. Raman's white hair starts just below it, clear of the box. Meera's head (from about y195) is also clear. 03-3: the narrow three-line caption (40-234) sits on the empty wall at the left. Ravi's hair starts about x260, clear of it, and the background figures (Meera at the desk, Mr. Raman and Priya waiting) are below the box.",
+    "First-reader concern, the caption boxes are very close to the panel frames: acceptable. Only the box borders are close (y28 against a frame at y24), and the text keeps its padding. This is the same placement used throughout the comic.",
+    "First-reader concern, the art must keep heads clear of the captions: checked in page-03.png. 03-1 and 03-3 are clear after the fixes. In 03-4, Ravi's hair begins just right of the box edge at 825. Non-blocking note for the lettering stage: in 03-2 the box bottom (y134) sits very close to the crown of Priya's hair. At the size Read displays I cannot tell whether they touch. Please check at 100% and 200% with the same method used for 03-1 and 03-3.",
+    "First-reader concern, the A-10 · A-11 · A-12 label could read as a stand-alone box: resolved. In page-03.png the label sits inside the wall TV's teal screen above the three seated patients, who look up at it.",
+    "First-reader concern, the wide gap in 'Ravi scans': acceptable. It is the shared monospace lettering font, which spaces narrow letters the same way on other pages, for example 'Welbuk' in page-02.png.",
+    "First-reader confirmation, 'his own phone' in 03-4 refers to Ravi: correct. Ravi is named in 03-3 just before, and 03-4 shows his hands with the left-wrist watch on the phone form."
   ],
   "issues": [],
   "readingReview": {
     "withoutGuides": true,
-    "firstReadingHash": "09a4be91282303afaf23f699d34d0cda4d828b517d5a858b2afacd33501ff3bf",
+    "firstReadingHash": "1b2a046c1cdb5bb2e0c9406b2726da401715a36bf0cb437ece8f05a315605b9c",
+    "comparison": "The new first reader's order (03-1, 03-2, 03-3, 03-4, 03-5 caption, then the slot label) matches the intended Z path. The page has no dialogue to skip. Their concerns (boxes near the frames, heads near the captions, the screen label, the font spacing) are resolved by page-03.png, as listed in the observations. The one remaining item is the non-blocking 03-2 hair check for the lettering stage. No reading-order differences remain.",
     "predictedOrder": [
       {
         "panel": "03-1",
@@ -51,45 +59,42 @@
       }
     ],
     "observations": [
-      "Unnumbered scan: a Z-pattern of five top-left captions in a 2-2-1 grid, then the teal slot label on the right of the bottom tier. Each panel has one caption at its top left, so the order cannot be ambiguous.",
-      "First-reader concern: the link between Ravi and A-12 is only implied. The preview supports it in three ways that agree. (a) The check-in order on the page is Raman in 03-1, Priya in 03-2 and Ravi in 03-3/03-4. (b) In 03-5 they sit left to right in that order under the TV, where 'A-10 · A-11 · A-12' runs in the same direction. (c) Page 4 then confirms it explicitly: in 04-1 'Soon, his slot comes up.' appears with 'NOW · A-12' and Ravi standing alone while the two chairs beside him are empty. The mapping is implied on page 3 and confirmed on the next page, which is sufficient. No change is needed.",
-      "In 03-4 the placeholder for ravi is a tall box. The preview shows an over-the-shoulder close-up: Ravi's bearded profile at the right, his phone held in both hands, and a thumb on the consent tick-box with the wristwatch visible. The tall face region is a close-up and does not imply a full figure.",
-      "In the preview the 03-1 caption covers part of a wall TV behind the desk. It is clear of the faces of Raman and Meera and of Raman's hand and stick. The 03-5 label sits inside the drawn TV screen, so it reads as on-screen text."
+      "Each panel has one caption at its top-left entry point, and the page has no balloons, so no two text blocks compete. In 03-5 the caption is at the top left and the TV label at the top right, read left to right.",
+      "In page-03.png the gazes guide the eye. In 03-3 Ravi looks down to the left at the QR stand. In 03-4 his eyes and thumb go to the consent tick-box. In 03-5 all three patients look up to the right at the TV label, which ends the page."
     ],
     "transitions": [
       {
         "from": "02-4",
         "to": "03-1",
-        "observation": "The evening onboarding two-shot is followed by 'A later morning:' over the bright, tidy reception with the QR stand and a TV visible. The caption and the daylight mark the time jump, which answers the page 2 expectation 'What changes for patients once the clinic is set up?'."
+        "observation": "From the evening office to a bright morning reception, marked by 'A later morning:'. Meera checks Mr. Raman in at the desk, and a QR stand and a TV are visible."
       },
       {
         "from": "03-1",
         "to": "03-2",
-        "observation": "From the front desk to the street outside the teal awning: Priya walks in while tapping her phone. The caption 'Some check in ahead...' contrasts with 'can always... front desk', and the clinic doorway in the background ties her to the same clinic."
+        "observation": "The second channel: Priya on the street under the clinic awning, tapping a check card on her phone. 'Some check in ahead...' sets her alongside the front-desk route."
       },
       {
         "from": "03-2",
         "to": "03-3",
-        "observation": "The scene moves inside the glass entrance. Ravi is named in the caption as he scans the QR stand, and the reception and waiting patients are visible behind him, so it is the same place and the same morning."
+        "observation": "The third channel: Ravi just inside the glass entrance, scanning the QR stand. In the background, Meera is at the desk and Mr. Raman and Priya are already waiting, which links the three routes."
       },
       {
         "from": "03-3",
         "to": "03-4",
-        "observation": "The scan in 03-3 is followed by a close-up of the form on the same phone, with the same green shirt, beard and wristwatch. The caption 'his own phone' refers back to Ravi in 03-3."
+        "observation": "The scan leads to the form on his phone: an over-the-shoulder close-up of blank fields and a consent tick-box under his thumb, with his watch on his left wrist."
       },
       {
         "from": "03-4",
         "to": "03-5",
-        "observation": "The consent tap is followed by the wide waiting area, where all three patients from 03-1 to 03-4 sit under the TV slot list. Ravi has the phone in his hand and the bag on his lap (script props), and the caption ties together every route shown on the page."
+        "observation": "All three sit in the waiting area: Mr. Raman with his stick, Priya with her phone, and Ravi with his bag on his lap and his phone in his right hand. They look up at the TV showing A-10 · A-11 · A-12."
       },
       {
         "from": "03-5",
         "to": "04-1",
-        "observation": "The same waiting area. 'Soon, his slot comes up.' appears with 'NOW · A-12', Ravi stands with the bag back on his shoulder, and the chairs of Raman and Priya are now empty, so a short wait is implied (04-1 transition: time-change)."
+        "observation": "Page turn. 'Soon, his slot comes up.' Ravi stands under the TV showing NOW · A-12, his bag back on his shoulder. The chairs where Mr. Raman and Priya sat are empty, so their earlier slots were called first."
       }
-    ],
-    "comparison": "My comparison agrees with the recorded first reading: a clear Z-pattern of captions in the intended order [1],[1],[1],[1],[1,2], with no speech and no skipped replies. The first reader's concern is that the connection between Ravi and A-12 is only implied. I judge it acceptable: the order of check-ins, the seating order and the order of the label all agree left to right, and 04-1 states it explicitly with 'his slot' and 'NOW · A-12' while the other two chairs are empty. The tall ravi placeholder in 03-4 is a close-up in the art, not a full figure. The first reader's note that Raman and Priya are never named is acceptable because the captions and art carry their roles. Nothing is left unresolved."
+    ]
   },
-  "fingerprint": "8d3ac2c8d6a4a2ad717b5e1fc2d8825b0c3583ed1d5e5f1c17cb90505269e2b5",
-  "recordedAt": "2026-11-12T12:33:15.279Z"
+  "fingerprint": "b1d140952c502aeae6e4313a4de012ea852233e43e5b39c62fe4b8500d3e5403",
+  "recordedAt": "2026-11-12T13:32:02.666Z"
 }

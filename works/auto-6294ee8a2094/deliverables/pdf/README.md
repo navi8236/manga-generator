@@ -12,5 +12,6 @@ copies, and nothing here is regenerated or edited later. Each new version is add
 | 2026-11-12-v3-8-pages.pdf | 8 | official, verified (revision 3: doctor's screen, AI voice consent) | commit 4dbd5ea |
 | 2026-11-12-draft-8-pages-preview.pdf | 8 | draft preview sent before verification (smaller images) | scratch export |
 | 2026-11-12-draft-9-pages-page8-storyboard.pdf | 9 | draft preview; page 8 is still a storyboard sketch (Request 4) | scratch export |
+| 2026-11-12-draft-9-pages-preview-b.pdf | 9 | draft preview with the finished page 8 art, before final review and verification (reduced size) | review previews |
 
 Checksums are in `SHA256SUMS`. Git history also keeps every committed `output/pdf/manga.pdf`.
