@@ -1,6 +1,6 @@
 """Condense a prepared panel prompt to the Higgsfield API limit (5000 characters).
 
-Usage: python3 -I condense-prompt.py REQUEST.json OUT.txt
+Usage: python3 -I condense-prompt.py REQUEST.json OUT.txt [LIMIT]
 
 The Marketing Studio Image 2.5 Flare endpoint rejects prompts over 5000 characters, while the
 shared request prompt is about 7000. This keeps every content section of the prepared prompt
@@ -42,8 +42,14 @@ for line in lines:
         line = ('CONTINUITY DATA: "Keep every character identical to the canonical reference sheets in face traits, hair, '
                 'build, skin tone and clothing. Device screens never show readable text or real personal data."')
     out.append(line)
+LIMIT = int(sys.argv[3]) if len(sys.argv) > 3 else 4500  # leave room for a composition note
 text = '\n'.join(out)
 text = re.sub(r'\n{3,}', '\n\n', text)
-assert len(text) <= 5000, f'still {len(text)} characters'
+# If still long, drop the least drawing-relevant pieces in this order.
+for pattern in (r'"information":"[^"]*",?', r'\nDRAWING PRIORITIES:[^\n]*', r'"description":"[^"]*",?'):
+    if len(text) <= LIMIT:
+        break
+    text = re.sub(pattern, '', text)
+assert len(text) <= LIMIT, f'still {len(text)} characters'
 open(out_file, 'w').write(text)
 print(len(prompt), '->', len(text))
