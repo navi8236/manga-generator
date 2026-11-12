@@ -81,7 +81,7 @@
         "walking-stick": "Mr. Raman’s simple wooden walking stick.",
         "priya-phone": "Priya’s smartphone; app screen shows only a calendar icon and a check-mark card, no text.",
         "vitals-kit": "Blood-pressure cuff with a hand bulb, fingertip pulse oximeter and a small monitor showing abstract shapes only (no readings).",
-        "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 6 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
+        "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 7 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
       }
     },
     "consultation": {
@@ -1822,8 +1822,8 @@
     {
       "id": "05",
       "section": "consultation",
-      "purpose": "The consultation stays human while the doctor’s screen supports it, section by section in the user’s order: patient details, SOAP notes (with AI listening), the speciality treatment planner and the plan of care. No diagnosis or medical claim.",
-      "expectation": "How does care continue after the visit?",
+      "purpose": "The consultation stays human while the doctor’s screen supports it: patient details, then SOAP notes with the AI listening. No diagnosis or medical claim.",
+      "expectation": "What else does the doctor’s screen do?",
       "panels": [
         {
           "id": "05-1",
@@ -1834,9 +1834,9 @@
             24,
             24,
             976,
-            360
+            600
           ],
-          "scene": "Bright simple consultation room, the same room as 04-3 (window with a plant behind). In the LEFT foreground, filling roughly the left 40% of the panel, Dr. Ananya’s open laptop on the desk, its screen turned toward the reader: a patient-details layout of several light rounded cards (a small heart icon card, a small history card, an allergy card with a warning-triangle icon, a microphone icon toggle, a document icon, a test-tube icon). The laptop screen shows only abstract light cards, simple icons and blank bars (draw NO text, letters or numbers; no real data); the section name and contents are lettered over it later. Behind it, at centre, Dr. Ananya seated at her desk turns toward Ravi with an open-hand welcoming gesture; at right, Ravi sits down in the patient chair, smiling, his shoulder bag set on the floor beside the chair. Plain wall across the top for a balloon.",
+          "scene": "Bright simple consultation room, the same room as 04-3 (window with a plant behind). In the LEFT foreground, filling roughly the left 45% of the panel and most of its height, Dr. Ananya’s open laptop on the desk, its screen turned toward the reader: a patient-details layout of six light rounded cards in a column (a heart icon card, a history/clock icon card, an allergy card with a warning-triangle icon, a microphone toggle switched on, a document icon card, a test-tube icon card). The laptop screen shows only abstract light cards, simple icons and blank bars (draw NO text, letters or numbers; no real data); the section name and contents are lettered over it later. Behind it, at centre-right, Dr. Ananya seated at her desk turns toward Ravi with an open-hand welcoming gesture; at far right, Ravi sits down in the patient chair, smiling, his shoulder bag set on the floor beside the chair. Plain wall across the top for a balloon.",
           "action": "Ananya welcomes Ravi as he sits; his details are already on her screen.",
           "emotion": "Warm and attentive.",
           "camera": "Medium-wide two-shot past the laptop in the foreground, eye level.",
@@ -1853,7 +1853,7 @@
             ],
             "exit": [
               990,
-              380
+              620
             ]
           },
           "production": {
@@ -1897,26 +1897,26 @@
           "speakers": {
             "ananya": {
               "anchor": [
-                604,
-                270
+                634,
+                370
               ],
               "face": [
-                564,
-                194,
-                80,
-                95
+                584,
+                274,
+                100,
+                120
               ]
             },
             "ravi": {
               "anchor": [
-                864,
-                280
+                884,
+                390
               ],
               "face": [
-                824,
-                204,
-                80,
-                95
+                834,
+                294,
+                100,
+                120
               ]
             }
           },
@@ -1931,22 +1931,24 @@
               ],
               "textDirection": "horizontal",
               "side": "left",
-              "x": 620,
-              "dy": 8
+              "x": 600,
+              "dy": 16
             },
             {
               "speaker": "label",
-              "text": "PATIENT DETAILS: vitals · history · allergies · AI mic · docs · lab reports",
+              "text": "PATIENT DETAILS: current vitals · prior health info · allergy panel · AI mic on · patient docs · lab reports",
               "textColumns": [
                 "PATIENT DETAILS: ",
-                "vitals · history · ",
-                "allergies · AI mic · ",
-                "docs · lab reports"
+                "current vitals · ",
+                "prior health info · ",
+                "allergy panel · ",
+                "AI mic on · ",
+                "patient docs · lab reports"
               ],
               "textDirection": "horizontal",
               "side": "left",
               "x": 16,
-              "dy": 130
+              "dy": 300
             }
           ]
         },
@@ -1957,23 +1959,23 @@
           "beat": "Ravi shares a routine concern; SOAP notes listen",
           "rect": [
             24,
-            408,
+            648,
             560,
-            380
+            816
           ],
-          "scene": "In the LEFT foreground, the laptop screen seen at an angle from the doctor’s side, filling the lower-left half of the panel: a notes layout with four stacked light blocks and a glowing teal microphone icon with small sound-wave arcs (AI listening), plus a small row of tag chips. The laptop screen shows only abstract light cards, simple icons and blank bars (draw NO text, letters or numbers; no real data); the section name and contents are lettered over it later. At right, Ravi in the patient chair faces screen-left toward the doctor (off-panel left), rubbing the back of his neck with his right hand, a slightly tired but candid expression; his left hand (wristwatch) rests on his knee. Plain wall at the top-left for a balloon.",
+          "scene": "Tall panel. Upper half: Ravi in the patient chair faces screen-left toward the doctor (off-panel left), rubbing the back of his neck with his right hand, a slightly tired but candid expression; his left hand (wristwatch) rests on his knee. Lower half, in the foreground: the laptop screen seen at an angle from the doctor’s side, filling the lower half of the panel: a notes layout of four stacked light blocks marked by four small icons, a glowing teal microphone icon with sound-wave arcs (AI listening), and a small row of code-tag chips. The laptop screen shows only abstract light cards, simple icons and blank bars (draw NO text, letters or numbers; no real data); the section name and contents are lettered over it later. Plain wall at the top-left for a balloon.",
           "action": "Ravi explains, a little sheepish, while the notes listen.",
           "emotion": "Mildly tired, honest.",
-          "camera": "Medium shot from the doctor’s side, past the laptop, Ravi facing screen-left.",
+          "camera": "Tall medium shot from the doctor’s side, past the laptop, Ravi facing screen-left.",
           "information": "A routine concern only; no diagnosis is shown. The AI mic is on in SOAP notes.",
           "readingFlow": {
             "entry": [
               40,
-              424
+              664
             ],
             "exit": [
               580,
-              784
+              1460
             ]
           },
           "production": {
@@ -1999,14 +2001,14 @@
           "speakers": {
             "ravi": {
               "anchor": [
-                489,
-                602
+                379,
+                952
               ],
               "face": [
-                444,
-                518,
-                90,
-                105
+                324,
+                848,
+                110,
+                130
               ]
             }
           },
@@ -2025,17 +2027,19 @@
             },
             {
               "speaker": "label",
-              "text": "SOAP NOTES: type, or AI listens and summarises · ICD / SNOMED codes",
+              "text": "SOAP NOTES: fill in manually and choose ICD or SNOMED codes, or let AI listen and summarise the conversation",
               "textColumns": [
                 "SOAP NOTES: ",
-                "type, or AI listens ",
-                "and summarises · ",
-                "ICD / SNOMED codes"
+                "fill in manually and ",
+                "choose ICD or SNOMED ",
+                "codes, or let AI listen ",
+                "and summarise the ",
+                "conversation"
               ],
               "textDirection": "horizontal",
               "side": "left",
               "x": 16,
-              "dy": 190
+              "dy": 540
             }
           ]
         },
@@ -2046,29 +2050,29 @@
           "beat": "The doctor listens; technology stays in the background",
           "rect": [
             608,
-            408,
+            648,
             392,
-            380
+            816
           ],
-          "scene": "Dr. Ananya leans slightly forward at her desk, hands folded, listening with full attention and gentle eye contact toward Ravi (off-panel right), NOT looking at the laptop, which stands open at the left edge of the desk showing only soft abstract cards and a small glowing microphone icon. Window with a plant behind. Plain wall in the upper part for a caption.",
+          "scene": "Tall panel. Dr. Ananya leans slightly forward at her desk, hands folded, listening with full attention and gentle eye contact toward Ravi (off-panel right), NOT looking at the laptop, which stands open at the left edge of the desk showing only soft abstract cards and a small glowing microphone icon. Window with a plant behind. Plain wall in the upper third for a caption.",
           "action": "Ananya nods slowly while listening.",
           "emotion": "Attentive, compassionate.",
-          "camera": "Medium close-up, Ananya facing screen-right.",
+          "camera": "Tall medium shot, Ananya facing screen-right.",
           "information": "Technology supports the workflow; the conversation is human.",
           "readingFlow": {
             "entry": [
               624,
-              424
+              664
             ],
             "exit": [
               990,
-              784
+              1460
             ]
           },
           "production": {
             "moment": "Ananya listening, mid-nod.",
             "before": "Ravi described his tiredness.",
-            "after": "The screen moves to the speciality planner (05-4).",
+            "after": "The screen moves to the speciality-specific planner (06-1).",
             "hands": {
               "ananya": {
                 "left": "folded under the right hand on the desk",
@@ -2080,7 +2084,7 @@
                 "id": "consult-laptop",
                 "before": "open on SOAP notes (05-2)",
                 "during": "open at the desk edge, microphone icon still glowing",
-                "after": "shows the speciality planner (05-4)",
+                "after": "shows the speciality-specific planner (06-1)",
                 "heldBy": "none"
               }
             ]
@@ -2089,13 +2093,13 @@
             "ananya": {
               "anchor": [
                 803,
-                682
+                1082
               ],
               "face": [
-                758,
-                598,
-                90,
-                105
+                748,
+                978,
+                110,
+                130
               ]
             }
           },
@@ -2106,52 +2110,66 @@
               "textColumns": [
                 "Technology supports ",
                 "the workflow. The ",
-                "conversation stays human."
+                "conversation stays ",
+                "human."
               ],
               "textDirection": "horizontal",
               "side": "left",
-              "x": 4,
-              "dy": 4
+              "x": 16,
+              "dy": 16
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "section": "consultation",
+      "purpose": "The rest of the doctor’s screen in the user’s order: the speciality-specific treatment planner, then the plan of care while Ananya sums up. No diagnosis or treatment advice.",
+      "expectation": "How does care continue after the visit?",
+      "panels": [
         {
-          "id": "05-4",
-          "order": 4,
+          "id": "06-1",
+          "order": 1,
           "role": "提示",
-          "beat": "Close-up: the speciality treatment planner",
+          "beat": "Close-up: the speciality-specific treatment planner",
           "rect": [
             24,
-            812,
+            24,
             976,
-            300
+            620
           ],
-          "scene": "Close-up of the laptop screen filling the panel, light background with a slim teal header bar. Three equal tiles side by side across the middle and lower part: LEFT a simple tooth chart (two arches of small rounded teeth, two teeth tinted teal); CENTRE a simple eye diagram (an iris circle with three small teal marker dots and lines); RIGHT a small growth chart (a rising curve on a light grid) beside a small vaccine card with three tick marks. The laptop screen shows only abstract light cards, simple icons and blank bars (draw NO text, letters or numbers; no real data); the section name and contents are lettered over it later. Keep the top-left strip and a band along the bottom of each tile plain for the labels.",
+          "scene": "Close-up of the same laptop screen filling the panel, light background with a slim teal header bar. Three equal tiles side by side across the middle: LEFT a simple tooth chart (two arches of small rounded teeth, two teeth tinted teal); CENTRE a simple eye diagram (an iris circle with three small teal marker dots and short lines); RIGHT a small growth chart (a rising curve on a light grid) beside a small vaccine card with three tick marks. The laptop screen shows only abstract light cards, simple icons and blank bars (draw NO text, letters or numbers; no real data); the section name and contents are lettered over it later. Keep the top-left strip and a band along the bottom of each tile plain for the labels.",
           "action": "The planner adapts to the speciality.",
           "emotion": "Clear, informative.",
           "camera": "Flat close-up of the screen.",
-          "information": "Each speciality gets its own planner: odontogram for dentists, eye markers for eye doctors, growth scales and vaccines for paediatricians.",
+          "information": "Each speciality gets its own planner: an odontogram for dentists, eye markers for eye doctors, growth scales and vaccines for paediatricians.",
+          "transition": {
+            "kind": "time-change",
+            "bridge": "Page turn from Ananya listening (05-3) to a close-up of the same laptop, now on the planner section; same consultation.",
+            "settingBasis": "Source (2026-11-12): \"Close-up of the laptop screen: the speciality-specific treatment planner.\""
+          },
           "readingFlow": {
             "entry": [
               40,
-              828
+              40
             ],
             "exit": [
               990,
-              1108
+              640
             ]
           },
           "production": {
-            "moment": "The speciality planner view on the screen.",
+            "moment": "The speciality-specific planner view on the screen.",
             "before": "Ananya listened to Ravi (05-3).",
-            "after": "The plan of care section opens as she sums up (05-5).",
+            "after": "The plan of care section opens as she sums up (06-2).",
             "hands": {},
             "props": [
               {
                 "id": "consult-laptop",
                 "before": "open beside Ananya (05-3)",
                 "during": "screen filling the panel: speciality planner tiles",
-                "after": "shows the plan of care (05-5)",
+                "after": "shows the plan of care (06-2)",
                 "heldBy": "none"
               }
             ]
@@ -2160,14 +2178,14 @@
           "dialogue": [
             {
               "speaker": "label",
-              "text": "SPECIALITY PLANNER",
+              "text": "SPECIALITY-SPECIFIC TREATMENT PLANNER",
               "textColumns": [
-                "SPECIALITY PLANNER"
+                "SPECIALITY-SPECIFIC TREATMENT PLANNER"
               ],
               "textDirection": "horizontal",
               "side": "left",
               "x": 16,
-              "dy": 12
+              "dy": 16
             },
             {
               "speaker": "label",
@@ -2178,8 +2196,8 @@
               ],
               "textDirection": "horizontal",
               "side": "left",
-              "x": 40,
-              "dy": 182
+              "x": 50,
+              "dy": 470
             },
             {
               "speaker": "label",
@@ -2190,43 +2208,44 @@
               ],
               "textDirection": "horizontal",
               "side": "left",
-              "x": 370,
-              "dy": 182
+              "x": 380,
+              "dy": 470
             },
             {
               "speaker": "label",
-              "text": "Paediatrics: scales · vaccines",
+              "text": "Paediatrician: growth scales · vaccines",
               "textColumns": [
-                "Paediatrics: ",
-                "scales · vaccines"
+                "Paediatrician: ",
+                "growth scales · ",
+                "vaccines"
               ],
               "textDirection": "horizontal",
               "side": "left",
-              "x": 690,
-              "dy": 182
+              "x": 700,
+              "dy": 470
             }
           ]
         },
         {
-          "id": "05-5",
-          "order": 5,
+          "id": "06-2",
+          "order": 2,
           "role": "決定",
           "beat": "Next steps together; the plan of care",
           "rect": [
             24,
-            1136,
+            668,
             976,
-            328
+            796
           ],
-          "scene": "Two-shot with the laptop: Dr. Ananya at left speaks warmly with a reassuring open hand; Ravi in the middle, nodding and relaxed, both hands on his knees, his bag on the floor beside the chair; in the RIGHT foreground, filling roughly the right 45% of the panel, the open laptop with its screen toward the reader showing a plan-of-care layout (a list of light cards with a pill icon, a document icon, a two-pill warning icon, a test-tube icon and an arrow-out icon). The laptop screen shows only abstract light cards, simple icons and blank bars (draw NO text, letters or numbers; no real data); the section name and contents are lettered over it later. Plain wall across the upper left for a balloon. No prescriptions on paper and no instruments in use (Ananya’s stethoscope stays around her neck).",
+          "scene": "Two-shot past the laptop, keeping the 05-1 staging: in the LEFT foreground, filling roughly the left 45% of the panel and its lower two-thirds, the open laptop on Ananya’s side of the desk with its screen toward the reader showing a plan-of-care layout (a list of five light cards with a pill icon, a document icon, a two-pill warning icon, a test-tube icon and an arrow-out icon). The laptop screen shows only abstract light cards, simple icons and blank bars (draw NO text, letters or numbers; no real data); the section name and contents are lettered over it later. Behind it at centre, Dr. Ananya speaks warmly with a reassuring open hand; at right, Ravi nods, relaxed, both hands on his knees, his bag on the floor beside the chair. Window with a plant behind. Plain wall across the upper part for a balloon. No prescriptions on paper and no instruments in use (Ananya’s stethoscope stays around her neck).",
           "action": "Ananya reassures; Ravi relaxes; the plan of care is on screen.",
           "emotion": "Reassured, collaborative.",
           "camera": "Medium two-shot past the laptop, eye level.",
-          "information": "Shared decision-making; no specific treatment advice. The plan-of-care section gathers prescribing, summary, interaction checks, labs and referrals.",
+          "information": "Shared decision-making; no specific treatment advice. The plan-of-care section gathers intelligent prescribing, the summary, drug-interaction checks, labs and referrals.",
           "readingFlow": {
             "entry": [
               40,
-              1152
+              684
             ],
             "exit": [
               990,
@@ -2235,8 +2254,8 @@
           },
           "production": {
             "moment": "Ananya finishes her sentence; Ravi nods.",
-            "before": "The screen showed the speciality planner (05-4).",
-            "after": "Ravi picks up his bag and returns to reception (page 6).",
+            "before": "The screen showed the speciality-specific planner (06-1).",
+            "after": "Ravi picks up his bag and returns to reception (page 7).",
             "hands": {
               "ananya": {
                 "left": "open reassuring gesture toward Ravi",
@@ -2250,7 +2269,7 @@
             "props": [
               {
                 "id": "consult-laptop",
-                "before": "shows the speciality planner (05-4)",
+                "before": "shows the speciality-specific planner (06-1)",
                 "during": "open, screen toward the reader, plan-of-care cards",
                 "after": "stays on the desk",
                 "heldBy": "none"
@@ -2259,7 +2278,7 @@
                 "id": "shoulder-bag",
                 "before": "beside his chair",
                 "during": "on the floor beside his chair",
-                "after": "back on his shoulder as he leaves",
+                "after": "back on his shoulder as he leaves (07-1)",
                 "heldBy": "none"
               }
             ]
@@ -2267,26 +2286,26 @@
           "speakers": {
             "ananya": {
               "anchor": [
-                184,
-                1392
+                579,
+                1032
               ],
               "face": [
-                144,
-                1316,
-                80,
-                95
+                524,
+                928,
+                110,
+                130
               ]
             },
             "ravi": {
               "anchor": [
-                494,
-                1392
+                839,
+                1052
               ],
               "face": [
-                454,
-                1316,
-                80,
-                95
+                784,
+                948,
+                110,
+                130
               ]
             }
           },
@@ -2295,42 +2314,41 @@
               "speaker": "ananya",
               "text": "We'll go through your concerns and decide the right next steps together.",
               "textColumns": [
-                "We'll go through ",
-                "your concerns and ",
-                "decide the right ",
-                "next steps together."
+                "We'll go through your concerns ",
+                "and decide the right next ",
+                "steps together."
               ],
               "textDirection": "horizontal",
               "side": "left",
-              "x": 230,
-              "dy": 4
+              "x": 440,
+              "dy": 16
             },
             {
               "speaker": "label",
-              "text": "PLAN OF CARE: intelligent prescribing · summary · interactions · labs · referrals",
+              "text": "PLAN OF CARE: intelligent prescribing · summary · drug interactions · labs · referrals",
               "textColumns": [
                 "PLAN OF CARE: ",
                 "intelligent prescribing · ",
-                "summary · interactions · ",
+                "summary · drug interactions · ",
                 "labs · referrals"
               ],
               "textDirection": "horizontal",
               "side": "left",
-              "x": 590,
-              "dy": 150
+              "x": 16,
+              "dy": 420
             }
           ]
         }
       ]
     },
     {
-      "id": "06",
+      "id": "07",
       "section": "reception",
       "purpose": "Introduce Welbuk Health for patients, framed carefully as what is available, without invented features.",
       "expectation": "Where could connected care go next?",
       "panels": [
         {
-          "id": "06-1",
+          "id": "07-1",
           "order": 1,
           "role": "提示",
           "beat": "Meera introduces Welbuk Health",
@@ -2363,7 +2381,7 @@
           "production": {
             "moment": "Meera points at Ravi’s phone and explains.",
             "before": "Ravi came back to reception after the consultation and took his phone out again.",
-            "after": "Ravi brings the phone closer to look at the app (06-2).",
+            "after": "Ravi brings the phone closer to look at the app (07-2).",
             "hands": {
               "meera": {
                 "left": "resting on the desk",
@@ -2444,7 +2462,7 @@
           ]
         },
         {
-          "id": "06-2",
+          "id": "07-2",
           "order": 2,
           "role": "期待",
           "beat": "Ravi sees a conceptual app screen",
@@ -2472,7 +2490,7 @@
           "production": {
             "moment": "Ravi asks while holding the phone.",
             "before": "Meera pointed at the app on his phone.",
-            "after": "Meera answers and offers a walkthrough (06-3); Ravi keeps his phone.",
+            "after": "Meera answers and offers a walkthrough (07-3); Ravi keeps his phone.",
             "hands": {
               "ravi": {
                 "left": "supporting the lower right corner of ravi-phone, thumb on the screen edge (wristwatch on this wrist)",
@@ -2540,7 +2558,7 @@
           ]
         },
         {
-          "id": "06-3",
+          "id": "07-3",
           "order": 3,
           "role": "反応",
           "beat": "Meera offers a walkthrough of what is available",
@@ -2550,7 +2568,7 @@
             392,
             560
           ],
-          "scene": "Meera smiles warmly, facing screen-right toward Ravi, who is seen from behind in the right foreground holding his phone in his left hand (keeping Meera-left / Ravi-right from 06-1). Meera’s right hand gestures toward his phone; her left hand rests on the desk. Tidy reception background.",
+          "scene": "Meera smiles warmly, facing screen-right toward Ravi, who is seen from behind in the right foreground holding his phone in his left hand (keeping Meera-left / Ravi-right from 07-1). Meera’s right hand gestures toward his phone; her left hand rests on the desk. Tidy reception background.",
           "action": "Meera answers and offers to walk him through.",
           "emotion": "Warm, honest, helpful.",
           "camera": "Tall medium shot.",
@@ -2568,7 +2586,7 @@
           "production": {
             "moment": "Meera answers Ravi’s question.",
             "before": "Ravi asked about keeping information in one place.",
-            "after": "After the walkthrough Ravi leaves with his phone (06-4).",
+            "after": "After the walkthrough Ravi leaves with his phone (07-4).",
             "hands": {
               "meera": {
                 "left": "resting on the desk",
@@ -2635,7 +2653,7 @@
           ]
         },
         {
-          "id": "06-4",
+          "id": "07-4",
           "order": 4,
           "section": "departure",
           "role": "余韻",
@@ -2664,7 +2682,7 @@
           "production": {
             "moment": "Ravi mid-step, waving back.",
             "before": "Meera walked him through what is available.",
-            "after": "He heads home; the story looks toward tomorrow (page 7).",
+            "after": "He heads home; the story looks toward tomorrow (page 8).",
             "hands": {
               "ravi": {
                 "left": "holding his own ravi-phone at his side",
@@ -2751,13 +2769,13 @@
       ]
     },
     {
-      "id": "07",
+      "id": "08",
       "section": "vision",
       "purpose": "Present the bigger Welbuk vision, clearly labelled as vision, then close on the three products and the three people.",
       "expectation": "Closing: Welbuk is building a connected healthcare ecosystem.",
       "panels": [
         {
-          "id": "07-1",
+          "id": "08-1",
           "order": 1,
           "role": "転換",
           "beat": "Ravi travels to another city (hypothetical tomorrow)",
@@ -2791,7 +2809,7 @@
           "production": {
             "moment": "Ravi watching the city pass.",
             "before": "He boarded the train.",
-            "after": "The page moves into the vision (07-2).",
+            "after": "The page moves into the vision (08-2).",
             "hands": {
               "ravi": {
                 "left": "holding his own ravi-phone in his lap",
@@ -2840,7 +2858,7 @@
           ]
         },
         {
-          "id": "07-2",
+          "id": "08-2",
           "order": 2,
           "role": "期待",
           "beat": "WELBUK VISION: connected clinics and specialists",
@@ -2868,7 +2886,7 @@
           "production": {
             "moment": "The specialist welcomes, dotted connection lines above.",
             "before": "Ravi’s journey hints at care beyond his hometown.",
-            "after": "The vision widens to the family (07-3).",
+            "after": "The vision widens to the family (08-3).",
             "hands": {
               "specialist": {
                 "left": "relaxed at his side, empty",
@@ -2927,7 +2945,7 @@
           ]
         },
         {
-          "id": "07-3",
+          "id": "08-3",
           "order": 3,
           "role": "期待",
           "beat": "A family wellness ecosystem (vision)",
@@ -2955,7 +2973,7 @@
           "production": {
             "moment": "The family shares the tablet, smiling.",
             "before": "Vision of connected clinics.",
-            "after": "Return to the present-day closing (07-4).",
+            "after": "Return to the present-day closing (08-4).",
             "hands": {
               "ravi": {
                 "left": "arm along the back of the sofa behind his partner, hand resting on the sofa back behind the child",
@@ -3054,7 +3072,7 @@
           ]
         },
         {
-          "id": "07-4",
+          "id": "08-4",
           "order": 4,
           "role": "余韻",
           "beat": "The three people and the three Welbuk products",
@@ -3208,7 +3226,7 @@
   "colorMode": "color",
   "readingDirection": "left-to-right",
   "language": "en",
-  "continuity": "Keep Dr. Ananya, Meera, Ravi, the Nurse, Mr. Raman and Priya identical to their canonical reference sheets in face traits, hair, build, skin tone and clothing for the whole comic. Device screens never show readable text or real personal data. Page 7 panels 2-3 (07-2, 07-3) are a future vision: soft pale-blue vignette border and lighter, airy palette so they never read as current features.",
+  "continuity": "Keep Dr. Ananya, Meera, Ravi, the Nurse, Mr. Raman and Priya identical to their canonical reference sheets in face traits, hair, build, skin tone and clothing for the whole comic. Device screens never show readable text or real personal data. Page 8 panels 2-3 (08-2, 08-3) are a future vision: soft pale-blue vignette border and lighter, airy palette so they never read as current features.",
   "productionDecisions": [
     {
       "id": "renderer-higgsfield",

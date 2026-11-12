@@ -287,21 +287,21 @@
     },
     {
       "page": "05",
-      "feeling": "The consultation stays human while the doctor’s screen supports it, section by section in the user’s order: patient details, SOAP notes (with AI listening), the speciality treatment planner and the plan of care. No diagnosis or medical claim.",
-      "questionForNextPage": "How does care continue after the visit?",
+      "feeling": "The consultation stays human while the doctor’s screen supports it: patient details, then SOAP notes with the AI listening. No diagnosis or medical claim.",
+      "questionForNextPage": "What else does the doctor’s screen do?",
       "intent": {
-        "emotion": "The consultation stays human while the doctor’s screen supports it, section by section in the user’s order: patient details, SOAP notes (with AI listening), the speciality treatment planner and the plan of care. No diagnosis or medical claim.",
+        "emotion": "The consultation stays human while the doctor’s screen supports it: patient details, then SOAP notes with the AI listening. No diagnosis or medical claim.",
         "revealOrder": null,
         "peakPanel": null,
-        "turnQuestion": "How does care continue after the visit?",
+        "turnQuestion": "What else does the doctor’s screen do?",
         "turnAnswer": null
       },
       "showcase": null,
       "diagnostics": {
         "showcaseExists": true,
         "areaRange": [
-          148960,
-          351360
+          319872,
+          585600
         ],
         "strengthsEqual": false
       },
@@ -310,7 +310,7 @@
           "id": "05-1",
           "beat": "Ananya greets Ravi; the laptop opens on patient details",
           "camera": "Medium-wide two-shot past the laptop in the foreground, eye level.",
-          "area": 351360,
+          "area": 585600,
           "strength": 1,
           "showcase": false,
           "information": "The vitals taken in 04-2 and Ravi’s records are ready on the doctor’s screen before the conversation starts.",
@@ -321,9 +321,9 @@
         {
           "id": "05-2",
           "beat": "Ravi shares a routine concern; SOAP notes listen",
-          "camera": "Medium shot from the doctor’s side, past the laptop, Ravi facing screen-left.",
-          "area": 212800,
-          "strength": 0.61,
+          "camera": "Tall medium shot from the doctor’s side, past the laptop, Ravi facing screen-left.",
+          "area": 456960,
+          "strength": 0.78,
           "showcase": false,
           "information": "A routine concern only; no diagnosis is shown. The AI mic is on in SOAP notes.",
           "pause": null,
@@ -333,35 +333,11 @@
         {
           "id": "05-3",
           "beat": "The doctor listens; technology stays in the background",
-          "camera": "Medium close-up, Ananya facing screen-right.",
-          "area": 148960,
-          "strength": 0.42,
+          "camera": "Tall medium shot, Ananya facing screen-right.",
+          "area": 319872,
+          "strength": 0.55,
           "showcase": false,
           "information": "Technology supports the workflow; the conversation is human.",
-          "pause": null,
-          "readingGroups": null,
-          "layoutRow": null
-        },
-        {
-          "id": "05-4",
-          "beat": "Close-up: the speciality treatment planner",
-          "camera": "Flat close-up of the screen.",
-          "area": 292800,
-          "strength": 0.83,
-          "showcase": false,
-          "information": "Each speciality gets its own planner: odontogram for dentists, eye markers for eye doctors, growth scales and vaccines for paediatricians.",
-          "pause": null,
-          "readingGroups": null,
-          "layoutRow": null
-        },
-        {
-          "id": "05-5",
-          "beat": "Next steps together; the plan of care",
-          "camera": "Medium two-shot past the laptop, eye level.",
-          "area": 320128,
-          "strength": 0.91,
-          "showcase": false,
-          "information": "Shared decision-making; no specific treatment advice. The plan-of-care section gathers prescribing, summary, interaction checks, labs and referrals.",
           "pause": null,
           "readingGroups": null,
           "layoutRow": null
@@ -370,6 +346,53 @@
     },
     {
       "page": "06",
+      "feeling": "The rest of the doctor’s screen in the user’s order: the speciality-specific treatment planner, then the plan of care while Ananya sums up. No diagnosis or treatment advice.",
+      "questionForNextPage": "How does care continue after the visit?",
+      "intent": {
+        "emotion": "The rest of the doctor’s screen in the user’s order: the speciality-specific treatment planner, then the plan of care while Ananya sums up. No diagnosis or treatment advice.",
+        "revealOrder": null,
+        "peakPanel": null,
+        "turnQuestion": "How does care continue after the visit?",
+        "turnAnswer": null
+      },
+      "showcase": null,
+      "diagnostics": {
+        "showcaseExists": true,
+        "areaRange": [
+          605120,
+          776896
+        ],
+        "strengthsEqual": false
+      },
+      "panels": [
+        {
+          "id": "06-1",
+          "beat": "Close-up: the speciality-specific treatment planner",
+          "camera": "Flat close-up of the screen.",
+          "area": 605120,
+          "strength": 0.78,
+          "showcase": false,
+          "information": "Each speciality gets its own planner: an odontogram for dentists, eye markers for eye doctors, growth scales and vaccines for paediatricians.",
+          "pause": null,
+          "readingGroups": null,
+          "layoutRow": null
+        },
+        {
+          "id": "06-2",
+          "beat": "Next steps together; the plan of care",
+          "camera": "Medium two-shot past the laptop, eye level.",
+          "area": 776896,
+          "strength": 1,
+          "showcase": false,
+          "information": "Shared decision-making; no specific treatment advice. The plan-of-care section gathers intelligent prescribing, the summary, drug-interaction checks, labs and referrals.",
+          "pause": null,
+          "readingGroups": null,
+          "layoutRow": null
+        }
+      ]
+    },
+    {
+      "page": "07",
       "feeling": "Introduce Welbuk Health for patients, framed carefully as what is available, without invented features.",
       "questionForNextPage": "Where could connected care go next?",
       "intent": {
@@ -390,7 +413,7 @@
       },
       "panels": [
         {
-          "id": "06-1",
+          "id": "07-1",
           "beat": "Meera introduces Welbuk Health",
           "camera": "Medium-wide two-shot across the desk corner.",
           "area": 488000,
@@ -402,7 +425,7 @@
           "layoutRow": null
         },
         {
-          "id": "06-2",
+          "id": "07-2",
           "beat": "Ravi sees a conceptual app screen",
           "camera": "Medium close-up at eye level, the reception monitor and plant in the left foreground.",
           "area": 313600,
@@ -414,7 +437,7 @@
           "layoutRow": null
         },
         {
-          "id": "06-3",
+          "id": "07-3",
           "beat": "Meera offers a walkthrough of what is available",
           "camera": "Tall medium shot.",
           "area": 219520,
@@ -426,7 +449,7 @@
           "layoutRow": null
         },
         {
-          "id": "06-4",
+          "id": "07-4",
           "beat": "Ravi leaves, reassured",
           "camera": "Wide shot from the street, eye level.",
           "area": 324032,
@@ -440,7 +463,7 @@
       ]
     },
     {
-      "page": "07",
+      "page": "08",
       "feeling": "Present the bigger Welbuk vision, clearly labelled as vision, then close on the three products and the three people.",
       "questionForNextPage": "Closing: Welbuk is building a connected healthcare ecosystem.",
       "intent": {
@@ -461,7 +484,7 @@
       },
       "panels": [
         {
-          "id": "07-1",
+          "id": "08-1",
           "beat": "Ravi travels to another city (hypothetical tomorrow)",
           "camera": "Medium shot from across the aisle.",
           "area": 206800,
@@ -473,7 +496,7 @@
           "layoutRow": null
         },
         {
-          "id": "07-2",
+          "id": "08-2",
           "beat": "WELBUK VISION: connected clinics and specialists",
           "camera": "Medium-wide shot, eye level.",
           "area": 212080,
@@ -485,7 +508,7 @@
           "layoutRow": null
         },
         {
-          "id": "07-3",
+          "id": "08-3",
           "beat": "A family wellness ecosystem (vision)",
           "camera": "Medium-wide shot, slight high angle.",
           "area": 331840,
@@ -497,7 +520,7 @@
           "layoutRow": null
         },
         {
-          "id": "07-4",
+          "id": "08-4",
           "beat": "The three people and the three Welbuk products",
           "camera": "Medium-full group shot, eye level, symmetrical.",
           "area": 597312,
@@ -947,7 +970,7 @@
             "walking-stick": "Mr. Raman’s simple wooden walking stick.",
             "priya-phone": "Priya’s smartphone; app screen shows only a calendar icon and a check-mark card, no text.",
             "vitals-kit": "Blood-pressure cuff with a hand bulb, fingertip pulse oximeter and a small monitor showing abstract shapes only (no readings).",
-            "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 6 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
+            "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 7 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
           }
         },
         "scene": "The tidy reception desk on a bright morning: Mr. Raman (elderly patient from the check-in patients sheet: round reading glasses, cream shirt, wooden walking stick in his right hand) stands at the counter, smiling; Meera behind the desk greets him warmly and types on the keyboard, the desktop monitor angled toward her (screen not visible). Two other waiting patients seen from behind in muted grey and dark-brown clothes. Plain wall at the upper left for a caption.",
@@ -1011,7 +1034,7 @@
             "walking-stick": "Mr. Raman’s simple wooden walking stick.",
             "priya-phone": "Priya’s smartphone; app screen shows only a calendar icon and a check-mark card, no text.",
             "vitals-kit": "Blood-pressure cuff with a hand bulb, fingertip pulse oximeter and a small monitor showing abstract shapes only (no readings).",
-            "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 6 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
+            "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 7 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
           }
         },
         "scene": "The tidy reception desk on a bright morning: Mr. Raman (elderly patient from the check-in patients sheet: round reading glasses, cream shirt, wooden walking stick in his right hand) stands at the counter, smiling; Meera behind the desk greets him warmly and types on the keyboard, the desktop monitor angled toward her (screen not visible). Two other waiting patients seen from behind in muted grey and dark-brown clothes. Plain wall at the upper left for a caption.",
@@ -1037,7 +1060,7 @@
             "walking-stick": "Mr. Raman’s simple wooden walking stick.",
             "priya-phone": "Priya’s smartphone; app screen shows only a calendar icon and a check-mark card, no text.",
             "vitals-kit": "Blood-pressure cuff with a hand bulb, fingertip pulse oximeter and a small monitor showing abstract shapes only (no readings).",
-            "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 6 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
+            "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 7 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
           }
         },
         "scene": "Priya (young patient from the check-in patients sheet: high ponytail, coral-pink kurti, crossbody bag) walks along a sunny street toward the clinic’s teal awning, smiling at her phone held in her left hand; the phone screen faces the reader and shows a simple app card with a calendar icon and a check-mark icon (no text). Plain sky at the upper left for a caption.",
@@ -1099,7 +1122,7 @@
             "walking-stick": "Mr. Raman’s simple wooden walking stick.",
             "priya-phone": "Priya’s smartphone; app screen shows only a calendar icon and a check-mark card, no text.",
             "vitals-kit": "Blood-pressure cuff with a hand bulb, fingertip pulse oximeter and a small monitor showing abstract shapes only (no readings).",
-            "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 6 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
+            "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 7 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
           }
         },
         "scene": "Priya (young patient from the check-in patients sheet: high ponytail, coral-pink kurti, crossbody bag) walks along a sunny street toward the clinic’s teal awning, smiling at her phone held in her left hand; the phone screen faces the reader and shows a simple app card with a calendar icon and a check-mark icon (no text). Plain sky at the upper left for a caption.",
@@ -1125,7 +1148,7 @@
             "walking-stick": "Mr. Raman’s simple wooden walking stick.",
             "priya-phone": "Priya’s smartphone; app screen shows only a calendar icon and a check-mark card, no text.",
             "vitals-kit": "Blood-pressure cuff with a hand bulb, fingertip pulse oximeter and a small monitor showing abstract shapes only (no readings).",
-            "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 6 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
+            "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 7 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
           }
         },
         "scene": "Just inside the clinic’s glass entrance, Ravi holds his phone up to a small check-in stand with a square QR-like pattern (abstract, not a real code, no text); a simple scan frame glows on his phone. His face in three-quarter view, focused and pleased; his left hand on the shoulder-bag strap. Plain wall at the upper left for a caption.",
@@ -1187,7 +1210,7 @@
             "walking-stick": "Mr. Raman’s simple wooden walking stick.",
             "priya-phone": "Priya’s smartphone; app screen shows only a calendar icon and a check-mark card, no text.",
             "vitals-kit": "Blood-pressure cuff with a hand bulb, fingertip pulse oximeter and a small monitor showing abstract shapes only (no readings).",
-            "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 6 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
+            "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 7 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
           }
         },
         "scene": "Just inside the clinic’s glass entrance, Ravi holds his phone up to a small check-in stand with a square QR-like pattern (abstract, not a real code, no text); a simple scan frame glows on his phone. His face in three-quarter view, focused and pleased; his left hand on the shoulder-bag strap. Plain wall at the upper left for a caption.",
@@ -1213,7 +1236,7 @@
             "walking-stick": "Mr. Raman’s simple wooden walking stick.",
             "priya-phone": "Priya’s smartphone; app screen shows only a calendar icon and a check-mark card, no text.",
             "vitals-kit": "Blood-pressure cuff with a hand bulb, fingertip pulse oximeter and a small monitor showing abstract shapes only (no readings).",
-            "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 6 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
+            "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 7 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
           }
         },
         "scene": "Close-up over Ravi’s shoulder of his phone held in both hands: a simple check-in form of blank rounded fields, a large tick-box being tapped by his right thumb for consent, and a teal submit button (abstract, no letters or numbers, no personal data). His green shirt sleeve and the wristwatch on his left wrist are visible. Plain light background at the upper left for a caption.",
@@ -1275,7 +1298,7 @@
             "walking-stick": "Mr. Raman’s simple wooden walking stick.",
             "priya-phone": "Priya’s smartphone; app screen shows only a calendar icon and a check-mark card, no text.",
             "vitals-kit": "Blood-pressure cuff with a hand bulb, fingertip pulse oximeter and a small monitor showing abstract shapes only (no readings).",
-            "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 6 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
+            "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 7 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
           }
         },
         "scene": "Close-up over Ravi’s shoulder of his phone held in both hands: a simple check-in form of blank rounded fields, a large tick-box being tapped by his right thumb for consent, and a teal submit button (abstract, no letters or numbers, no personal data). His green shirt sleeve and the wristwatch on his left wrist are visible. Plain light background at the upper left for a caption.",
@@ -1301,7 +1324,7 @@
             "walking-stick": "Mr. Raman’s simple wooden walking stick.",
             "priya-phone": "Priya’s smartphone; app screen shows only a calendar icon and a check-mark card, no text.",
             "vitals-kit": "Blood-pressure cuff with a hand bulb, fingertip pulse oximeter and a small monitor showing abstract shapes only (no readings).",
-            "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 6 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
+            "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 7 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
           }
         },
         "scene": "Wide view of the waiting area: a wall-mounted TV in the upper-right corner of the panel (its screen filling roughly the right third of the width and the top quarter of the height) shows a plain light-teal screen with ONE wide, clean, empty white strip across it where the slot list will be lettered in a single line (draw NO text or numbers on the screen). Below it, from screen-left to screen-right, Mr. Raman (glasses, walking stick), Priya (ponytail, coral kurti) and Ravi (green shirt, shoulder bag on his lap, phone in his right hand) sit side by side on waiting chairs, all looking up at the screen with small satisfied smiles. Plain wall at the upper left for a caption.",
@@ -1363,7 +1386,7 @@
             "walking-stick": "Mr. Raman’s simple wooden walking stick.",
             "priya-phone": "Priya’s smartphone; app screen shows only a calendar icon and a check-mark card, no text.",
             "vitals-kit": "Blood-pressure cuff with a hand bulb, fingertip pulse oximeter and a small monitor showing abstract shapes only (no readings).",
-            "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 6 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
+            "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 7 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
           }
         },
         "scene": "Wide view of the waiting area: a wall-mounted TV in the upper-right corner of the panel (its screen filling roughly the right third of the width and the top quarter of the height) shows a plain light-teal screen with ONE wide, clean, empty white strip across it where the slot list will be lettered in a single line (draw NO text or numbers on the screen). Below it, from screen-left to screen-right, Mr. Raman (glasses, walking stick), Priya (ponytail, coral kurti) and Ravi (green shirt, shoulder bag on his lap, phone in his right hand) sit side by side on waiting chairs, all looking up at the screen with small satisfied smiles. Plain wall at the upper left for a caption.",
@@ -1389,7 +1412,7 @@
             "walking-stick": "Mr. Raman’s simple wooden walking stick.",
             "priya-phone": "Priya’s smartphone; app screen shows only a calendar icon and a check-mark card, no text.",
             "vitals-kit": "Blood-pressure cuff with a hand bulb, fingertip pulse oximeter and a small monitor showing abstract shapes only (no readings).",
-            "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 6 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
+            "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 7 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
           }
         },
         "scene": "Waiting area, wide: Ravi rises from his chair with the shoulder bag back on his left shoulder, looking up at the wall-mounted TV in the upper-right part of the panel, whose light-teal screen shows one clean, empty white highlighted strip where his slot will be lettered (draw NO text or numbers). The two waiting chairs at screen-left of him (on his right), where Mr. Raman and Priya sat in 03-5, are now empty: their slots (A-10, A-11) were called before his. Meera types at the reception desk in the background at the right; any other seated figures are seen from behind in grey or brown. Plain wall at the upper left for a caption.",
@@ -1451,7 +1474,7 @@
             "walking-stick": "Mr. Raman’s simple wooden walking stick.",
             "priya-phone": "Priya’s smartphone; app screen shows only a calendar icon and a check-mark card, no text.",
             "vitals-kit": "Blood-pressure cuff with a hand bulb, fingertip pulse oximeter and a small monitor showing abstract shapes only (no readings).",
-            "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 6 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
+            "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 7 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
           }
         },
         "scene": "Waiting area, wide: Ravi rises from his chair with the shoulder bag back on his left shoulder, looking up at the wall-mounted TV in the upper-right part of the panel, whose light-teal screen shows one clean, empty white highlighted strip where his slot will be lettered (draw NO text or numbers). The two waiting chairs at screen-left of him (on his right), where Mr. Raman and Priya sat in 03-5, are now empty: their slots (A-10, A-11) were called before his. Meera types at the reception desk in the background at the right; any other seated figures are seen from behind in grey or brown. Plain wall at the upper left for a caption.",
@@ -1477,7 +1500,7 @@
             "walking-stick": "Mr. Raman’s simple wooden walking stick.",
             "priya-phone": "Priya’s smartphone; app screen shows only a calendar icon and a check-mark card, no text.",
             "vitals-kit": "Blood-pressure cuff with a hand bulb, fingertip pulse oximeter and a small monitor showing abstract shapes only (no readings).",
-            "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 6 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
+            "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 7 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
           }
         },
         "scene": "Small vitals corner beside reception, tall framing: Ravi sits at the lower left in a chair, relaxed, his left arm resting on a little side table with a blood-pressure cuff on his upper arm and a fingertip pulse oximeter on his left index finger (wristwatch still visible on that wrist); his shoulder bag on the floor beside his chair. The nurse (from the nurse sheet: chin-length wavy bob, lavender scrubs, blank lanyard card) stands at the right holding the cuff’s hand bulb, speaking kindly to him; Ravi smiles and nods back at her. A small monitor on the table shows only abstract shapes, no numbers. Behind the nurse, at mid-height on the right, a glimpse of the same white reception counter with its teal front and a corner of a teal waiting chair, showing the vitals corner is just beside reception and the waiting area. Plain wall in the upper third for a caption and a balloon.",
@@ -1539,7 +1562,7 @@
             "walking-stick": "Mr. Raman’s simple wooden walking stick.",
             "priya-phone": "Priya’s smartphone; app screen shows only a calendar icon and a check-mark card, no text.",
             "vitals-kit": "Blood-pressure cuff with a hand bulb, fingertip pulse oximeter and a small monitor showing abstract shapes only (no readings).",
-            "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 6 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
+            "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 7 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
           }
         },
         "scene": "Small vitals corner beside reception, tall framing: Ravi sits at the lower left in a chair, relaxed, his left arm resting on a little side table with a blood-pressure cuff on his upper arm and a fingertip pulse oximeter on his left index finger (wristwatch still visible on that wrist); his shoulder bag on the floor beside his chair. The nurse (from the nurse sheet: chin-length wavy bob, lavender scrubs, blank lanyard card) stands at the right holding the cuff’s hand bulb, speaking kindly to him; Ravi smiles and nods back at her. A small monitor on the table shows only abstract shapes, no numbers. Behind the nurse, at mid-height on the right, a glimpse of the same white reception counter with its teal front and a corner of a teal waiting chair, showing the vitals corner is just beside reception and the waiting area. Plain wall in the upper third for a caption and a balloon.",
@@ -1631,7 +1654,7 @@
             "doctor-tablet": "Dr. Ananya’s tablet. Shown only in 04-3 (a simple notification card with a blank strip; the alert text is lettered, never drawn); from 05-1 on it is put away in the desk drawer and must not appear."
           }
         },
-        "scene": "Bright simple consultation room, the same room as 04-3 (window with a plant behind). In the LEFT foreground, filling roughly the left 40% of the panel, Dr. Ananya’s open laptop on the desk, its screen turned toward the reader: a patient-details layout of several light rounded cards (a small heart icon card, a small history card, an allergy card with a warning-triangle icon, a microphone icon toggle, a document icon, a test-tube icon). The laptop screen shows only abstract light cards, simple icons and blank bars (draw NO text, letters or numbers; no real data); the section name and contents are lettered over it later. Behind it, at centre, Dr. Ananya seated at her desk turns toward Ravi with an open-hand welcoming gesture; at right, Ravi sits down in the patient chair, smiling, his shoulder bag set on the floor beside the chair. Plain wall across the top for a balloon.",
+        "scene": "Bright simple consultation room, the same room as 04-3 (window with a plant behind). In the LEFT foreground, filling roughly the left 45% of the panel and most of its height, Dr. Ananya’s open laptop on the desk, its screen turned toward the reader: a patient-details layout of six light rounded cards in a column (a heart icon card, a history/clock icon card, an allergy card with a warning-triangle icon, a microphone toggle switched on, a document icon card, a test-tube icon card). The laptop screen shows only abstract light cards, simple icons and blank bars (draw NO text, letters or numbers; no real data); the section name and contents are lettered over it later. Behind it, at centre-right, Dr. Ananya seated at her desk turns toward Ravi with an open-hand welcoming gesture; at far right, Ravi sits down in the patient chair, smiling, his shoulder bag set on the floor beside the chair. Plain wall across the top for a balloon.",
         "action": "Ananya welcomes Ravi as he sits; his details are already on her screen."
       },
       "ledger": {
@@ -1679,7 +1702,7 @@
             "doctor-tablet": "Dr. Ananya’s tablet. Shown only in 04-3 (a simple notification card with a blank strip; the alert text is lettered, never drawn); from 05-1 on it is put away in the desk drawer and must not appear."
           }
         },
-        "scene": "Bright simple consultation room, the same room as 04-3 (window with a plant behind). In the LEFT foreground, filling roughly the left 40% of the panel, Dr. Ananya’s open laptop on the desk, its screen turned toward the reader: a patient-details layout of several light rounded cards (a small heart icon card, a small history card, an allergy card with a warning-triangle icon, a microphone icon toggle, a document icon, a test-tube icon). The laptop screen shows only abstract light cards, simple icons and blank bars (draw NO text, letters or numbers; no real data); the section name and contents are lettered over it later. Behind it, at centre, Dr. Ananya seated at her desk turns toward Ravi with an open-hand welcoming gesture; at right, Ravi sits down in the patient chair, smiling, his shoulder bag set on the floor beside the chair. Plain wall across the top for a balloon.",
+        "scene": "Bright simple consultation room, the same room as 04-3 (window with a plant behind). In the LEFT foreground, filling roughly the left 45% of the panel and most of its height, Dr. Ananya’s open laptop on the desk, its screen turned toward the reader: a patient-details layout of six light rounded cards in a column (a heart icon card, a history/clock icon card, an allergy card with a warning-triangle icon, a microphone toggle switched on, a document icon card, a test-tube icon card). The laptop screen shows only abstract light cards, simple icons and blank bars (draw NO text, letters or numbers; no real data); the section name and contents are lettered over it later. Behind it, at centre-right, Dr. Ananya seated at her desk turns toward Ravi with an open-hand welcoming gesture; at far right, Ravi sits down in the patient chair, smiling, his shoulder bag set on the floor beside the chair. Plain wall across the top for a balloon.",
         "action": "Ananya welcomes Ravi as he sits; his details are already on her screen."
       },
       "after": {
@@ -1696,7 +1719,7 @@
             "doctor-tablet": "Dr. Ananya’s tablet. Shown only in 04-3 (a simple notification card with a blank strip; the alert text is lettered, never drawn); from 05-1 on it is put away in the desk drawer and must not appear."
           }
         },
-        "scene": "In the LEFT foreground, the laptop screen seen at an angle from the doctor’s side, filling the lower-left half of the panel: a notes layout with four stacked light blocks and a glowing teal microphone icon with small sound-wave arcs (AI listening), plus a small row of tag chips. The laptop screen shows only abstract light cards, simple icons and blank bars (draw NO text, letters or numbers; no real data); the section name and contents are lettered over it later. At right, Ravi in the patient chair faces screen-left toward the doctor (off-panel left), rubbing the back of his neck with his right hand, a slightly tired but candid expression; his left hand (wristwatch) rests on his knee. Plain wall at the top-left for a balloon.",
+        "scene": "Tall panel. Upper half: Ravi in the patient chair faces screen-left toward the doctor (off-panel left), rubbing the back of his neck with his right hand, a slightly tired but candid expression; his left hand (wristwatch) rests on his knee. Lower half, in the foreground: the laptop screen seen at an angle from the doctor’s side, filling the lower half of the panel: a notes layout of four stacked light blocks marked by four small icons, a glowing teal microphone icon with sound-wave arcs (AI listening), and a small row of code-tag chips. The laptop screen shows only abstract light cards, simple icons and blank bars (draw NO text, letters or numbers; no real data); the section name and contents are lettered over it later. Plain wall at the top-left for a balloon.",
         "action": "Ravi explains, a little sheepish, while the notes listen."
       },
       "ledger": {
@@ -1744,7 +1767,7 @@
             "doctor-tablet": "Dr. Ananya’s tablet. Shown only in 04-3 (a simple notification card with a blank strip; the alert text is lettered, never drawn); from 05-1 on it is put away in the desk drawer and must not appear."
           }
         },
-        "scene": "In the LEFT foreground, the laptop screen seen at an angle from the doctor’s side, filling the lower-left half of the panel: a notes layout with four stacked light blocks and a glowing teal microphone icon with small sound-wave arcs (AI listening), plus a small row of tag chips. The laptop screen shows only abstract light cards, simple icons and blank bars (draw NO text, letters or numbers; no real data); the section name and contents are lettered over it later. At right, Ravi in the patient chair faces screen-left toward the doctor (off-panel left), rubbing the back of his neck with his right hand, a slightly tired but candid expression; his left hand (wristwatch) rests on his knee. Plain wall at the top-left for a balloon.",
+        "scene": "Tall panel. Upper half: Ravi in the patient chair faces screen-left toward the doctor (off-panel left), rubbing the back of his neck with his right hand, a slightly tired but candid expression; his left hand (wristwatch) rests on his knee. Lower half, in the foreground: the laptop screen seen at an angle from the doctor’s side, filling the lower half of the panel: a notes layout of four stacked light blocks marked by four small icons, a glowing teal microphone icon with sound-wave arcs (AI listening), and a small row of code-tag chips. The laptop screen shows only abstract light cards, simple icons and blank bars (draw NO text, letters or numbers; no real data); the section name and contents are lettered over it later. Plain wall at the top-left for a balloon.",
         "action": "Ravi explains, a little sheepish, while the notes listen."
       },
       "after": {
@@ -1761,7 +1784,7 @@
             "doctor-tablet": "Dr. Ananya’s tablet. Shown only in 04-3 (a simple notification card with a blank strip; the alert text is lettered, never drawn); from 05-1 on it is put away in the desk drawer and must not appear."
           }
         },
-        "scene": "Dr. Ananya leans slightly forward at her desk, hands folded, listening with full attention and gentle eye contact toward Ravi (off-panel right), NOT looking at the laptop, which stands open at the left edge of the desk showing only soft abstract cards and a small glowing microphone icon. Window with a plant behind. Plain wall in the upper part for a caption.",
+        "scene": "Tall panel. Dr. Ananya leans slightly forward at her desk, hands folded, listening with full attention and gentle eye contact toward Ravi (off-panel right), NOT looking at the laptop, which stands open at the left edge of the desk showing only soft abstract cards and a small glowing microphone icon. Window with a plant behind. Plain wall in the upper third for a caption.",
         "action": "Ananya nods slowly while listening."
       },
       "ledger": {
@@ -1791,10 +1814,10 @@
     },
     {
       "from": "05-3",
-      "to": "05-4",
-      "pageBoundary": false,
-      "layoutBoundary": false,
-      "kind": "continuation",
+      "to": "06-1",
+      "pageBoundary": true,
+      "layoutBoundary": true,
+      "kind": "time-change",
       "before": {
         "section": "consultation",
         "setting": {
@@ -1809,7 +1832,7 @@
             "doctor-tablet": "Dr. Ananya’s tablet. Shown only in 04-3 (a simple notification card with a blank strip; the alert text is lettered, never drawn); from 05-1 on it is put away in the desk drawer and must not appear."
           }
         },
-        "scene": "Dr. Ananya leans slightly forward at her desk, hands folded, listening with full attention and gentle eye contact toward Ravi (off-panel right), NOT looking at the laptop, which stands open at the left edge of the desk showing only soft abstract cards and a small glowing microphone icon. Window with a plant behind. Plain wall in the upper part for a caption.",
+        "scene": "Tall panel. Dr. Ananya leans slightly forward at her desk, hands folded, listening with full attention and gentle eye contact toward Ravi (off-panel right), NOT looking at the laptop, which stands open at the left edge of the desk showing only soft abstract cards and a small glowing microphone icon. Window with a plant behind. Plain wall in the upper third for a caption.",
         "action": "Ananya nods slowly while listening."
       },
       "after": {
@@ -1826,7 +1849,7 @@
             "doctor-tablet": "Dr. Ananya’s tablet. Shown only in 04-3 (a simple notification card with a blank strip; the alert text is lettered, never drawn); from 05-1 on it is put away in the desk drawer and must not appear."
           }
         },
-        "scene": "Close-up of the laptop screen filling the panel, light background with a slim teal header bar. Three equal tiles side by side across the middle and lower part: LEFT a simple tooth chart (two arches of small rounded teeth, two teeth tinted teal); CENTRE a simple eye diagram (an iris circle with three small teal marker dots and lines); RIGHT a small growth chart (a rising curve on a light grid) beside a small vaccine card with three tick marks. The laptop screen shows only abstract light cards, simple icons and blank bars (draw NO text, letters or numbers; no real data); the section name and contents are lettered over it later. Keep the top-left strip and a band along the bottom of each tile plain for the labels.",
+        "scene": "Close-up of the same laptop screen filling the panel, light background with a slim teal header bar. Three equal tiles side by side across the middle: LEFT a simple tooth chart (two arches of small rounded teeth, two teeth tinted teal); CENTRE a simple eye diagram (an iris circle with three small teal marker dots and short lines); RIGHT a small growth chart (a rising curve on a light grid) beside a small vaccine card with three tick marks. The laptop screen shows only abstract light cards, simple icons and blank bars (draw NO text, letters or numbers; no real data); the section name and contents are lettered over it later. Keep the top-left strip and a band along the bottom of each tile plain for the labels.",
         "action": "The planner adapts to the speciality."
       },
       "ledger": {
@@ -1835,8 +1858,8 @@
         "locationBefore": "Bright, simple consultation room: desk, two chairs, Dr. Ananya’s laptop (closed in 04-3, open on page 5), window with plant. No medical charts with text.",
         "locationAfter": "Bright, simple consultation room: desk, two chairs, Dr. Ananya’s laptop (closed in 04-3, open on page 5), window with plant. No medical charts with text.",
         "readerMustKnow": null,
-        "anchor": null,
-        "anchorEvidencePanel": "05-4",
+        "anchor": "visual-or-caption",
+        "anchorEvidencePanel": "06-1",
         "axisBefore": null,
         "axisAfter": null,
         "resetCue": null,
@@ -1848,15 +1871,15 @@
         "actionBefore": "Ananya nods slowly while listening.",
         "actionAfter": "The planner adapts to the speciality.",
         "sourceBasis": null,
-        "supplementBasis": null
+        "supplementBasis": "Source (2026-11-12): \"Close-up of the laptop screen: the speciality-specific treatment planner.\""
       },
-      "bridge": null,
-      "settingBasis": null,
+      "bridge": "Page turn from Ananya listening (05-3) to a close-up of the same laptop, now on the planner section; same consultation.",
+      "settingBasis": "Source (2026-11-12): \"Close-up of the laptop screen: the speciality-specific treatment planner.\"",
       "warnings": []
     },
     {
-      "from": "05-4",
-      "to": "05-5",
+      "from": "06-1",
+      "to": "06-2",
       "pageBoundary": false,
       "layoutBoundary": false,
       "kind": "continuation",
@@ -1874,7 +1897,7 @@
             "doctor-tablet": "Dr. Ananya’s tablet. Shown only in 04-3 (a simple notification card with a blank strip; the alert text is lettered, never drawn); from 05-1 on it is put away in the desk drawer and must not appear."
           }
         },
-        "scene": "Close-up of the laptop screen filling the panel, light background with a slim teal header bar. Three equal tiles side by side across the middle and lower part: LEFT a simple tooth chart (two arches of small rounded teeth, two teeth tinted teal); CENTRE a simple eye diagram (an iris circle with three small teal marker dots and lines); RIGHT a small growth chart (a rising curve on a light grid) beside a small vaccine card with three tick marks. The laptop screen shows only abstract light cards, simple icons and blank bars (draw NO text, letters or numbers; no real data); the section name and contents are lettered over it later. Keep the top-left strip and a band along the bottom of each tile plain for the labels.",
+        "scene": "Close-up of the same laptop screen filling the panel, light background with a slim teal header bar. Three equal tiles side by side across the middle: LEFT a simple tooth chart (two arches of small rounded teeth, two teeth tinted teal); CENTRE a simple eye diagram (an iris circle with three small teal marker dots and short lines); RIGHT a small growth chart (a rising curve on a light grid) beside a small vaccine card with three tick marks. The laptop screen shows only abstract light cards, simple icons and blank bars (draw NO text, letters or numbers; no real data); the section name and contents are lettered over it later. Keep the top-left strip and a band along the bottom of each tile plain for the labels.",
         "action": "The planner adapts to the speciality."
       },
       "after": {
@@ -1891,7 +1914,7 @@
             "doctor-tablet": "Dr. Ananya’s tablet. Shown only in 04-3 (a simple notification card with a blank strip; the alert text is lettered, never drawn); from 05-1 on it is put away in the desk drawer and must not appear."
           }
         },
-        "scene": "Two-shot with the laptop: Dr. Ananya at left speaks warmly with a reassuring open hand; Ravi in the middle, nodding and relaxed, both hands on his knees, his bag on the floor beside the chair; in the RIGHT foreground, filling roughly the right 45% of the panel, the open laptop with its screen toward the reader showing a plan-of-care layout (a list of light cards with a pill icon, a document icon, a two-pill warning icon, a test-tube icon and an arrow-out icon). The laptop screen shows only abstract light cards, simple icons and blank bars (draw NO text, letters or numbers; no real data); the section name and contents are lettered over it later. Plain wall across the upper left for a balloon. No prescriptions on paper and no instruments in use (Ananya’s stethoscope stays around her neck).",
+        "scene": "Two-shot past the laptop, keeping the 05-1 staging: in the LEFT foreground, filling roughly the left 45% of the panel and its lower two-thirds, the open laptop on Ananya’s side of the desk with its screen toward the reader showing a plan-of-care layout (a list of five light cards with a pill icon, a document icon, a two-pill warning icon, a test-tube icon and an arrow-out icon). The laptop screen shows only abstract light cards, simple icons and blank bars (draw NO text, letters or numbers; no real data); the section name and contents are lettered over it later. Behind it at centre, Dr. Ananya speaks warmly with a reassuring open hand; at right, Ravi nods, relaxed, both hands on his knees, his bag on the floor beside the chair. Window with a plant behind. Plain wall across the upper part for a balloon. No prescriptions on paper and no instruments in use (Ananya’s stethoscope stays around her neck).",
         "action": "Ananya reassures; Ravi relaxes; the plan of care is on screen."
       },
       "ledger": {
@@ -1901,7 +1924,7 @@
         "locationAfter": "Bright, simple consultation room: desk, two chairs, Dr. Ananya’s laptop (closed in 04-3, open on page 5), window with plant. No medical charts with text.",
         "readerMustKnow": null,
         "anchor": null,
-        "anchorEvidencePanel": "05-5",
+        "anchorEvidencePanel": "06-2",
         "axisBefore": null,
         "axisAfter": null,
         "resetCue": null,
@@ -1920,8 +1943,8 @@
       "warnings": []
     },
     {
-      "from": "05-5",
-      "to": "06-1",
+      "from": "06-2",
+      "to": "07-1",
       "pageBoundary": true,
       "layoutBoundary": true,
       "kind": "place-change",
@@ -1939,7 +1962,7 @@
             "doctor-tablet": "Dr. Ananya’s tablet. Shown only in 04-3 (a simple notification card with a blank strip; the alert text is lettered, never drawn); from 05-1 on it is put away in the desk drawer and must not appear."
           }
         },
-        "scene": "Two-shot with the laptop: Dr. Ananya at left speaks warmly with a reassuring open hand; Ravi in the middle, nodding and relaxed, both hands on his knees, his bag on the floor beside the chair; in the RIGHT foreground, filling roughly the right 45% of the panel, the open laptop with its screen toward the reader showing a plan-of-care layout (a list of light cards with a pill icon, a document icon, a two-pill warning icon, a test-tube icon and an arrow-out icon). The laptop screen shows only abstract light cards, simple icons and blank bars (draw NO text, letters or numbers; no real data); the section name and contents are lettered over it later. Plain wall across the upper left for a balloon. No prescriptions on paper and no instruments in use (Ananya’s stethoscope stays around her neck).",
+        "scene": "Two-shot past the laptop, keeping the 05-1 staging: in the LEFT foreground, filling roughly the left 45% of the panel and its lower two-thirds, the open laptop on Ananya’s side of the desk with its screen toward the reader showing a plan-of-care layout (a list of five light cards with a pill icon, a document icon, a two-pill warning icon, a test-tube icon and an arrow-out icon). The laptop screen shows only abstract light cards, simple icons and blank bars (draw NO text, letters or numbers; no real data); the section name and contents are lettered over it later. Behind it at centre, Dr. Ananya speaks warmly with a reassuring open hand; at right, Ravi nods, relaxed, both hands on his knees, his bag on the floor beside the chair. Window with a plant behind. Plain wall across the upper part for a balloon. No prescriptions on paper and no instruments in use (Ananya’s stethoscope stays around her neck).",
         "action": "Ananya reassures; Ravi relaxes; the plan of care is on screen."
       },
       "after": {
@@ -1962,7 +1985,7 @@
             "walking-stick": "Mr. Raman’s simple wooden walking stick.",
             "priya-phone": "Priya’s smartphone; app screen shows only a calendar icon and a check-mark card, no text.",
             "vitals-kit": "Blood-pressure cuff with a hand bulb, fingertip pulse oximeter and a small monitor showing abstract shapes only (no readings).",
-            "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 6 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
+            "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 7 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
           }
         },
         "scene": "Back at reception after the consultation. Ravi (right) holds his own smartphone (dark blue case) in his right hand; Meera (left) leans over the desk and points helpfully at its screen with her right index finger. Screen content not visible from this angle.",
@@ -1975,7 +1998,7 @@
         "locationAfter": "The same clinic reception, now tidy: a QR check-in stand just inside the glass entrance, a wall-mounted waiting-room TV, waiting chairs with a few seated figures seen from behind, the reception desk with a desktop monitor angled toward Meera, and a small vitals corner beside reception.",
         "readerMustKnow": null,
         "anchor": "visual-or-caption",
-        "anchorEvidencePanel": "06-1",
+        "anchorEvidencePanel": "07-1",
         "axisBefore": null,
         "axisAfter": null,
         "resetCue": null,
@@ -2001,8 +2024,8 @@
       "warnings": []
     },
     {
-      "from": "06-1",
-      "to": "06-2",
+      "from": "07-1",
+      "to": "07-2",
       "pageBoundary": false,
       "layoutBoundary": false,
       "kind": "continuation",
@@ -2026,7 +2049,7 @@
             "walking-stick": "Mr. Raman’s simple wooden walking stick.",
             "priya-phone": "Priya’s smartphone; app screen shows only a calendar icon and a check-mark card, no text.",
             "vitals-kit": "Blood-pressure cuff with a hand bulb, fingertip pulse oximeter and a small monitor showing abstract shapes only (no readings).",
-            "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 6 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
+            "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 7 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
           }
         },
         "scene": "Back at reception after the consultation. Ravi (right) holds his own smartphone (dark blue case) in his right hand; Meera (left) leans over the desk and points helpfully at its screen with her right index finger. Screen content not visible from this angle.",
@@ -2052,7 +2075,7 @@
             "walking-stick": "Mr. Raman’s simple wooden walking stick.",
             "priya-phone": "Priya’s smartphone; app screen shows only a calendar icon and a check-mark card, no text.",
             "vitals-kit": "Blood-pressure cuff with a hand bulb, fingertip pulse oximeter and a small monitor showing abstract shapes only (no readings).",
-            "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 6 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
+            "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 7 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
           }
         },
         "scene": "Ravi holds his own phone (dark blue case) in both hands at chest height, screen toward the reader: a friendly conceptual app screen with simple rounded cards, a calendar icon and a heart icon, no text and no personal data. Ravi’s curious, hopeful face above it, glancing up and away to screen-right as he thinks the question aloud (deliberate thinking glance; Meera is off-panel left).",
@@ -2065,7 +2088,7 @@
         "locationAfter": "The same clinic reception, now tidy: a QR check-in stand just inside the glass entrance, a wall-mounted waiting-room TV, waiting chairs with a few seated figures seen from behind, the reception desk with a desktop monitor angled toward Meera, and a small vitals corner beside reception.",
         "readerMustKnow": null,
         "anchor": null,
-        "anchorEvidencePanel": "06-2",
+        "anchorEvidencePanel": "07-2",
         "axisBefore": null,
         "axisAfter": null,
         "resetCue": null,
@@ -2089,8 +2112,8 @@
       "warnings": []
     },
     {
-      "from": "06-2",
-      "to": "06-3",
+      "from": "07-2",
+      "to": "07-3",
       "pageBoundary": false,
       "layoutBoundary": false,
       "kind": "continuation",
@@ -2114,7 +2137,7 @@
             "walking-stick": "Mr. Raman’s simple wooden walking stick.",
             "priya-phone": "Priya’s smartphone; app screen shows only a calendar icon and a check-mark card, no text.",
             "vitals-kit": "Blood-pressure cuff with a hand bulb, fingertip pulse oximeter and a small monitor showing abstract shapes only (no readings).",
-            "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 6 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
+            "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 7 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
           }
         },
         "scene": "Ravi holds his own phone (dark blue case) in both hands at chest height, screen toward the reader: a friendly conceptual app screen with simple rounded cards, a calendar icon and a heart icon, no text and no personal data. Ravi’s curious, hopeful face above it, glancing up and away to screen-right as he thinks the question aloud (deliberate thinking glance; Meera is off-panel left).",
@@ -2140,10 +2163,10 @@
             "walking-stick": "Mr. Raman’s simple wooden walking stick.",
             "priya-phone": "Priya’s smartphone; app screen shows only a calendar icon and a check-mark card, no text.",
             "vitals-kit": "Blood-pressure cuff with a hand bulb, fingertip pulse oximeter and a small monitor showing abstract shapes only (no readings).",
-            "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 6 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
+            "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 7 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
           }
         },
-        "scene": "Meera smiles warmly, facing screen-right toward Ravi, who is seen from behind in the right foreground holding his phone in his left hand (keeping Meera-left / Ravi-right from 06-1). Meera’s right hand gestures toward his phone; her left hand rests on the desk. Tidy reception background.",
+        "scene": "Meera smiles warmly, facing screen-right toward Ravi, who is seen from behind in the right foreground holding his phone in his left hand (keeping Meera-left / Ravi-right from 07-1). Meera’s right hand gestures toward his phone; her left hand rests on the desk. Tidy reception background.",
         "action": "Meera answers and offers to walk him through."
       },
       "ledger": {
@@ -2153,7 +2176,7 @@
         "locationAfter": "The same clinic reception, now tidy: a QR check-in stand just inside the glass entrance, a wall-mounted waiting-room TV, waiting chairs with a few seated figures seen from behind, the reception desk with a desktop monitor angled toward Meera, and a small vitals corner beside reception.",
         "readerMustKnow": null,
         "anchor": null,
-        "anchorEvidencePanel": "06-3",
+        "anchorEvidencePanel": "07-3",
         "axisBefore": null,
         "axisAfter": null,
         "resetCue": null,
@@ -2177,8 +2200,8 @@
       "warnings": []
     },
     {
-      "from": "06-3",
-      "to": "06-4",
+      "from": "07-3",
+      "to": "07-4",
       "pageBoundary": false,
       "layoutBoundary": false,
       "kind": "scene-change",
@@ -2202,10 +2225,10 @@
             "walking-stick": "Mr. Raman’s simple wooden walking stick.",
             "priya-phone": "Priya’s smartphone; app screen shows only a calendar icon and a check-mark card, no text.",
             "vitals-kit": "Blood-pressure cuff with a hand bulb, fingertip pulse oximeter and a small monitor showing abstract shapes only (no readings).",
-            "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 6 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
+            "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 7 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
           }
         },
-        "scene": "Meera smiles warmly, facing screen-right toward Ravi, who is seen from behind in the right foreground holding his phone in his left hand (keeping Meera-left / Ravi-right from 06-1). Meera’s right hand gestures toward his phone; her left hand rests on the desk. Tidy reception background.",
+        "scene": "Meera smiles warmly, facing screen-right toward Ravi, who is seen from behind in the right foreground holding his phone in his left hand (keeping Meera-left / Ravi-right from 07-1). Meera’s right hand gestures toward his phone; her left hand rests on the desk. Tidy reception background.",
         "action": "Meera answers and offers to walk him through."
       },
       "after": {
@@ -2230,7 +2253,7 @@
         "locationAfter": "Clinic entrance from the street side, morning sun.",
         "readerMustKnow": null,
         "anchor": null,
-        "anchorEvidencePanel": "06-4",
+        "anchorEvidencePanel": "07-4",
         "axisBefore": null,
         "axisAfter": null,
         "resetCue": null,
@@ -2256,8 +2279,8 @@
       ]
     },
     {
-      "from": "06-4",
-      "to": "07-1",
+      "from": "07-4",
+      "to": "08-1",
       "pageBoundary": true,
       "layoutBoundary": true,
       "kind": "time-change",
@@ -2296,7 +2319,7 @@
         "locationAfter": "Indian Railways-style train seat by a window, passing city skyline (no signage).",
         "readerMustKnow": null,
         "anchor": "visual-or-caption",
-        "anchorEvidencePanel": "07-1",
+        "anchorEvidencePanel": "08-1",
         "axisBefore": null,
         "axisAfter": null,
         "resetCue": null,
@@ -2312,8 +2335,8 @@
       "warnings": []
     },
     {
-      "from": "07-1",
-      "to": "07-2",
+      "from": "08-1",
+      "to": "08-2",
       "pageBoundary": false,
       "layoutBoundary": false,
       "kind": "scene-change",
@@ -2355,7 +2378,7 @@
         "locationAfter": "Idealised, airy spaces: a modern clinic in another city linked by faint dotted lines to small clinic silhouettes; a family living room. Lighter palette and rounded vignette border.",
         "readerMustKnow": null,
         "anchor": null,
-        "anchorEvidencePanel": "07-2",
+        "anchorEvidencePanel": "08-2",
         "axisBefore": null,
         "axisAfter": null,
         "resetCue": null,
@@ -2375,8 +2398,8 @@
       ]
     },
     {
-      "from": "07-2",
-      "to": "07-3",
+      "from": "08-2",
+      "to": "08-3",
       "pageBoundary": false,
       "layoutBoundary": false,
       "kind": "continuation",
@@ -2423,7 +2446,7 @@
         "locationAfter": "Idealised, airy spaces: a modern clinic in another city linked by faint dotted lines to small clinic silhouettes; a family living room. Lighter palette and rounded vignette border.",
         "readerMustKnow": null,
         "anchor": null,
-        "anchorEvidencePanel": "07-3",
+        "anchorEvidencePanel": "08-3",
         "axisBefore": null,
         "axisAfter": null,
         "resetCue": null,
@@ -2441,8 +2464,8 @@
       "warnings": []
     },
     {
-      "from": "07-3",
-      "to": "07-4",
+      "from": "08-3",
+      "to": "08-4",
       "pageBoundary": false,
       "layoutBoundary": false,
       "kind": "return",
@@ -2486,7 +2509,7 @@
         "locationAfter": "Clinic entrance with awning and plants, warm morning light.",
         "readerMustKnow": null,
         "anchor": "visual-or-caption",
-        "anchorEvidencePanel": "07-4",
+        "anchorEvidencePanel": "08-4",
         "axisBefore": null,
         "axisAfter": null,
         "resetCue": null,

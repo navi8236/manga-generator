@@ -10,63 +10,76 @@
         24,
         24,
         976,
-        500
+        620
       ],
       "steps": [
         {
           "number": 1,
-          "speaker": "meera",
-          "text": "Welbuk Health is designed to help patients stay connected with their care.",
+          "speaker": "label",
+          "text": "SPECIALITY-SPECIFIC TREATMENT PLANNER",
           "rect": [
-            48,
-            44,
-            249,
-            202
+            40,
+            40,
+            639,
+            74
           ],
           "center": [
-            172.5,
-            145
+            359.5,
+            77
           ],
-          "mouth": [
-            428,
-            232
-          ]
-        }
-      ],
-      "faces": {
-        "meera": {
-          "face": [
-            367,
-            128,
-            96,
-            111
-          ],
-          "anchor": [
-            428,
-            232
-          ]
+          "mouth": null
         },
-        "ravi": {
-          "face": [
-            572,
-            114,
-            131,
-            118
+        {
+          "number": 2,
+          "speaker": "label",
+          "text": "Dentist: odontogram",
+          "rect": [
+            74,
+            494,
+            182,
+            106
           ],
-          "anchor": [
-            641,
-            191
-          ]
+          "center": [
+            165,
+            547
+          ],
+          "mouth": null
+        },
+        {
+          "number": 3,
+          "speaker": "label",
+          "text": "Eye doctor: eye markers",
+          "rect": [
+            404,
+            494,
+            197,
+            106
+          ],
+          "center": [
+            502.5,
+            547
+          ],
+          "mouth": null
+        },
+        {
+          "number": 4,
+          "speaker": "label",
+          "text": "Paediatrician: growth scales · vaccines",
+          "rect": [
+            724,
+            494,
+            244,
+            138
+          ],
+          "center": [
+            846,
+            563
+          ],
+          "mouth": null
         }
-      },
-      "protected": [
-        [
-          528,
-          277,
-          66,
-          94
-        ]
       ],
+      "faces": {},
+      "protected": [],
       "intent": {
         "entry": [
           40,
@@ -74,224 +87,91 @@
         ],
         "exit": [
           990,
-          520
+          640
         ]
       },
       "groups": null,
-      "warnings": []
+      "warnings": [
+        {
+          "from": 2,
+          "to": 3,
+          "reason": "左から右へ戻る移動と縦方向の範囲が重なる。段差・余白・人物の配置を目視で検討する。"
+        },
+        {
+          "from": 3,
+          "to": 4,
+          "reason": "左から右へ戻る移動と縦方向の範囲が重なる。段差・余白・人物の配置を目視で検討する。"
+        }
+      ]
     },
     {
       "id": "06-2",
       "rect": [
         24,
-        548,
-        560,
-        560
+        668,
+        976,
+        796
       ],
       "steps": [
         {
           "number": 1,
-          "speaker": "ravi",
-          "text": "So I can keep useful information in one place?",
+          "speaker": "ananya",
+          "text": "We'll go through your concerns and decide the right next steps together.",
           "rect": [
-            44,
-            568,
-            305,
+            464,
+            684,
+            441,
             138
           ],
           "center": [
-            196.5,
-            637
+            684.5,
+            753
           ],
           "mouth": [
-            423,
-            739
+            579,
+            1032
           ]
         },
         {
           "number": 2,
           "speaker": "label",
-          "text": "WELBUK HEALTH for patients",
+          "text": "PLAN OF CARE: intelligent prescribing · summary · drug interactions · labs · referrals",
           "rect": [
-            24,
-            988,
-            268,
-            106
+            40,
+            1088,
+            429,
+            170
           ],
           "center": [
-            158,
-            1041
+            254.5,
+            1173
           ],
           "mouth": null
         }
       ],
       "faces": {
-        "ravi": {
-          "face": [
-            369,
-            614,
-            147,
-            169
-          ],
-          "anchor": [
-            423,
-            739
-          ]
-        }
-      },
-      "protected": [
-        [
-          297,
-          805,
-          115,
-          208
-        ]
-      ],
-      "intent": {
-        "entry": [
-          44,
-          570
-        ],
-        "exit": [
-          580,
-          1100
-        ]
-      },
-      "groups": null,
-      "warnings": []
-    },
-    {
-      "id": "06-3",
-      "rect": [
-        608,
-        548,
-        392,
-        560
-      ],
-      "steps": [
-        {
-          "number": 1,
-          "speaker": "meera",
-          "text": "That's the idea. Let's walk through what is available to you.",
-          "rect": [
-            616,
-            556,
-            342,
-            138
-          ],
-          "center": [
-            787,
-            625
-          ],
-          "mouth": [
-            761,
-            838
-          ]
-        }
-      ],
-      "faces": {
-        "meera": {
-          "face": [
-            691,
-            741,
-            111,
-            125
-          ],
-          "anchor": [
-            761,
-            838
-          ]
-        },
-        "ravi": {
-          "kind": "head",
-          "anchor": [
-            970,
-            760
-          ]
-        }
-      },
-      "protected": [
-        [
-          890,
-          898,
-          79,
-          120
-        ]
-      ],
-      "intent": {
-        "entry": [
-          624,
-          570
-        ],
-        "exit": [
-          990,
-          1100
-        ]
-      },
-      "groups": null,
-      "warnings": []
-    },
-    {
-      "id": "06-4",
-      "rect": [
-        24,
-        1132,
-        976,
-        332
-      ],
-      "steps": [
-        {
-          "number": 1,
-          "speaker": "narration",
-          "text": "A smoother visit. A more connected experience.",
-          "rect": [
-            48,
-            1142,
-            640,
-            74
-          ],
-          "center": [
-            368,
-            1179
-          ],
-          "mouth": null
-        }
-      ],
-      "faces": {
-        "ravi": {
-          "face": [
-            755,
-            1164,
-            70,
-            85
-          ],
-          "anchor": [
-            786,
-            1229
-          ]
-        },
         "ananya": {
-          "face": [
-            291,
-            1239,
-            51,
-            52
-          ],
           "anchor": [
-            316,
-            1282
+            579,
+            1032
+          ],
+          "face": [
+            524,
+            928,
+            110,
+            130
           ]
         },
-        "meera": {
-          "face": [
-            370,
-            1255,
-            45,
-            49
-          ],
+        "ravi": {
           "anchor": [
-            392,
-            1296
+            839,
+            1052
+          ],
+          "face": [
+            784,
+            948,
+            110,
+            130
           ]
         }
       },
@@ -299,11 +179,11 @@
       "intent": {
         "entry": [
           40,
-          1150
+          684
         ],
         "exit": [
           990,
-          1505
+          1460
         ]
       },
       "groups": null,
