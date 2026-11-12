@@ -152,7 +152,7 @@
       }
     },
     "travel": {
-      "summary": "A possible tomorrow: Ravi travels to another Indian city by train. Hypothetical framing (\"care may take us beyond our hometown\").",
+      "summary": "A possible journey after the follow-up: Ravi travels to another Indian city by train. Conditional framing (\"If Ravi travels, his record travels with him.\").",
       "location": "Indian Railways-style train seat by a window, passing city skyline (no signage).",
       "costumes": {
         "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
@@ -3078,7 +3078,7 @@
       "id": "08",
       "section": "after-visit",
       "purpose": "Show what happens after the consultation: the pharmacy and the clinic lab receive the orders, Ravi gives his samples, and Ravi, Dr. Ananya and the clinic are each notified when the results are ready. No drug names, tests, values or diagnosis.",
-      "expectation": "Where could connected care go next?",
+      "expectation": "What happens at the follow-up?",
       "panels": [
         {
           "id": "08-1",
@@ -3676,7 +3676,7 @@
           "production": {
             "moment": "Meera reads the results-ready card.",
             "before": "Dr. Ananya was notified (08-5).",
-            "after": "The story looks toward tomorrow (page 9).",
+            "after": "Some days later the clinic sends Ravi a follow-up reminder (09-1).",
             "hands": {
               "meera": {
                 "left": "resting on the desk",
@@ -4241,7 +4241,7 @@
           "section": "travel",
           "transition": {
             "kind": "time-change",
-            "bridge": "Train window and moving skyline; conditional caption (\"may\").",
+            "bridge": "Train window and moving skyline; the conditional caption \"If Ravi travels...\" leads into the WELBUK VISION panels.",
             "settingBasis": "Source: \"Ravi travels to another Indian city; simple train-window transition.\""
           },
           "readingFlow": {
@@ -4332,7 +4332,7 @@
           },
           "production": {
             "moment": "The specialist welcomes, dotted connection lines above.",
-            "before": "Ravi’s journey hints at care beyond his hometown.",
+            "before": "If Ravi travels, his record travels with him (10-1).",
             "after": "The vision widens to the family (10-3).",
             "hands": {
               "specialist": {
@@ -4679,8 +4679,8 @@
     {
       "id": "renderer-higgsfield",
       "kind": "preference",
-      "text": "Generate all images with Higgsfield model gpt_image_2_6 (quality high, PNG). Character sheets and panels are text-free; lettering is composited by the shared CLI.",
-      "reason": "User instruction on 2026-11-10 ('sure') approving Higgsfield after the declared ComfyUI renderer was unreachable in this session."
+      "text": "Pages 1-8 and 10: images generated with Higgsfield model gpt_image_2_6 (quality high, PNG) through the connected Higgsfield account. Page 9 (Request 5, 2026-11-12): images generated with the Higgsfield API, Marketing Studio Image 2.5 Flare (marketing-studio/image/flare, quality high, 2k, enhance_prompt false), using the canonical character sheets and the layout PNG as ordered references. Character sheets and panels are text-free; lettering is composited by the shared CLI.",
+      "reason": "User instruction on 2026-11-10 ('sure') approving Higgsfield; on 2026-11-12 the connected account had 1.25 credits, the user supplied an API key with an API balance ('i’ve $10 + in hf api'), and gpt_image_2_6 is not offered through the API, so Flare (GPT Image 2.5 based) is the closest available model."
     }
   ]
 }

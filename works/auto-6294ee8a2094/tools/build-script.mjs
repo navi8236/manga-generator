@@ -320,7 +320,7 @@ config.sections = {
   },
   travel: {
     summary:
-      'A possible tomorrow: Ravi travels to another Indian city by train. Hypothetical framing ("care may take us beyond our hometown").',
+      'A possible journey after the follow-up: Ravi travels to another Indian city by train. Conditional framing ("If Ravi travels, his record travels with him.").',
     location: 'Indian Railways-style train seat by a window, passing city skyline (no signage).',
     costumes: { ravi: costumes.ravi },
     objects: {},
@@ -1270,7 +1270,7 @@ const SCREEN = 'The laptop stands at about a three-quarter angle toward the read
     section: 'after-visit',
     purpose:
       'Show what happens after the consultation: the pharmacy and the clinic lab receive the orders, Ravi gives his samples, and Ravi, Dr. Ananya and the clinic are each notified when the results are ready. No drug names, tests, values or diagnosis.',
-    expectation: 'Where could connected care go next?',
+    expectation: 'What happens at the follow-up?',
     panels: [
       {
         id: '08-1',
@@ -1451,7 +1451,7 @@ const SCREEN = 'The laptop stands at about a three-quarter angle toward the read
         production: {
           moment: 'Meera reads the results-ready card.',
           before: 'Dr. Ananya was notified (08-5).',
-          after: 'The story looks toward tomorrow (page 9).',
+          after: 'Some days later the clinic sends Ravi a follow-up reminder (09-1).',
           hands: { meera: hands('resting on the desk', 'on the mouse') },
           props: [prop('monitor', 'on the reception desk', 'results-ready card on screen', 'on the desk', 'none')],
         },
@@ -1665,7 +1665,7 @@ const SCREEN = 'The laptop stands at about a three-quarter angle toward the read
         section: 'travel',
         transition: {
           kind: 'time-change',
-          bridge: 'Train window and moving skyline; conditional caption ("may").',
+          bridge: 'Train window and moving skyline; the conditional caption "If Ravi travels..." leads into the WELBUK VISION panels.',
           settingBasis: 'Source: "Ravi travels to another Indian city; simple train-window transition."',
         },
         readingFlow: { entry: [40, 40], exit: [490, 460] },
@@ -1694,7 +1694,7 @@ const SCREEN = 'The laptop stands at about a three-quarter angle toward the read
         readingFlow: { entry: [534, 40], exit: [990, 460] },
         production: {
           moment: 'The specialist welcomes, dotted connection lines above.',
-          before: 'Ravi’s journey hints at care beyond his hometown.',
+          before: 'If Ravi travels, his record travels with him (10-1).',
           after: 'The vision widens to the family (10-3).',
           hands: { specialist: hands('relaxed at his side, empty', 'open palm in a welcoming gesture') },
           props: [],
