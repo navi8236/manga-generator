@@ -1,0 +1,392 @@
+[
+ {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-01-0683a7043afaa8a3765b812a7bbdde475d66b7bf0b7372b302f2431ab3ce8efc.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Files I actually read: docs/REVISION-AND-REVIEWS.md, docs/PROMPTS.md, the request JSON (script for page 01 and boundary page 02, recorded first reading), source/original.txt, source/REVISION-2026-11-11.md. I opened these images with Read and looked at them: workflow/storyboards-unnumbered/page-01.png, workflow/storyboards/page-01.png and workflow/review/page-01.png. I read workflow/storyboards-unnumbered/page-01.svg in full and grepped the numbered page-01.svg for its text. None of these files was unreadable. I did not open the reading-flow overlay SVG or the character-sheet PNGs.",
+   "The PNGs match the current SVGs. The unnumbered SVG has the caption box at (48,48,286x106) with 'A busy day at / Dr. Ananya's clinic.'. Meera's balloons are at (44,672) and (304,768) with the same line breaks, and Ananya's balloon is at (626,672). The tails end at (297,941), (393,939) and (852,961), which is exactly what the PNG shows. The numbered PNG differs only by the grey beat footers ('1 / A warm, busy morning at the clinic', etc.), and those match the numbered SVG text.",
+   "The script matches the source, page 1 panels 1-3. The caption and Ananya's line are verbatim. The source's single Meera line is split at the ellipsis into two balloons, 'Appointments, patient details, follow-ups...' and 'I wish everything were easier to manage!', in the same order and with the same speaker. Nothing is removed, and no other speaker's line falls between them.",
+   "Motive chain: Meera's wish in 01-2 is the stated problem. Ananya's 'Let's make the rest simpler' in 01-3 directly answers it, and she is shown looking at the desk. That answer motivates the onboarding on page 2, and the page expectation ('How will Dr. Ananya make the busy work simpler?') is set up."
+  ],
+  "issues": [],
+  "readingReview": {
+   "withoutGuides": true,
+   "firstReadingHash": "95ab6d8fdf6cfb9604e8384f8618a38c52eb5b204eda60f2cf5fc06d3818790e",
+   "predictedOrder": [
+    {
+     "panel": "01-1",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "01-2",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "01-3",
+     "dialogue": [
+      1
+     ]
+    }
+   ],
+   "observations": [
+    "Unnumbered scan: the caption sits at the top left of the wide top tier. In the lower-left tall panel, Meera's two balloons step down from top left (y 672) to middle right (y 768), so they read as one continuous complaint. Ananya's single balloon then sits at the top of the right panel. The layout gives one obvious left-to-right, top-to-bottom path, and no balloon pair could be mistaken for a reply from another speaker.",
+    "First-reader concern: the first tail stops just short of the meera placeholder box. In the composed preview (workflow/review/page-01.png) the tail tip at (297,941) lands on the top-left of Meera's hair. Her open mouth and phone-at-ear pose make both balloons clearly hers. This exists only in the placeholder and is resolved in the art.",
+    "First-reader concern: the spatial relation between the two characters is first set up in 01-3. In the preview, 01-2 is a frontal desk shot from the queue side. 01-3 shows Ananya at the right with her hand at her chin, looking left toward the same desk, where Meera is still on the phone writing in the register in the background. Her gaze leads the eye back to the problem, then her balloon resolves it. This is acceptable and intended (script 01-3 scene and production.before).",
+    "01-1 is silent for Ananya. The preview shows her welcoming a patient in at the doorway with an open left hand, which carries the establishing beat without dialogue."
+   ],
+   "transitions": [
+    {
+     "from": "01-1",
+     "to": "01-2",
+     "observation": "From the exterior welcome to the inside reception desk on the same morning. The preview's 01-1 shows the reception desk with a phone and registers through the glass door, and 01-2 cuts to that desk with Meera on the phone. No caption is needed because the place is visibly continuous."
+    },
+    {
+     "from": "01-2",
+     "to": "01-3",
+     "observation": "Meera's wish ends 01-2. 01-3 shows Ananya watching the same desk, with Meera still on the call in the background, and her line answers the wish. The cause and the reaction are adjacent on the same tier."
+    },
+    {
+     "from": "01-3",
+     "to": "02-1",
+     "observation": "Ananya's resolve leads into page 2's caption 'The clinic begins its Welbuk onboarding.'. The page 02 SVG and preview show an evening window and a laptop over Ananya's shoulder, so the time and place change is marked by the caption and the evening light (02-1 transition.bridge). The decision is followed directly by the action."
+    }
+   ],
+   "comparison": "My comparison agrees with the recorded first reading: caption, Meera's two balloons, then Ananya's reply, which is the intended dialogue order [1],[1,2],[1]. The first reader saw no skipped reply, and I agree. Ananya's line answers Meera's wish. The two concerns it raised exist only in the placeholders: the weak first tail and the fact that the characters' relative positions are only set up in 01-3. I checked both against the composed preview and the art (the tail reaches Meera's head, and 01-3 places Meera behind Ananya's gaze). Neither needs a change, and nothing is left unresolved."
+  }
+ },
+ {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-02-df309bc3d417c1cfaf36a096473bf79b9e2abb9079023dafe035098c2a18c47e.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Files I actually read: the request JSON (requiredTransitions and the recorded first reading; I took the page 02 panel script from the identical boundary context in the page 01 request and the page 03 request), source/original.txt and source/REVISION-2026-11-11.md. I opened these images with Read and looked at them: workflow/storyboards-unnumbered/page-02.png, workflow/storyboards/page-02.png, workflow/review/page-02.png and assets/panels/02-4.png. I grepped the text and the teal label rects of storyboards-unnumbered/page-02.svg and the beat text of storyboards/page-02.svg. No file was unreadable.",
+   "The PNGs match the SVGs. The SVG text runs are 'The clinic begins its / Welbuk / onboarding.', 'WELBUK PRACTICE / for the / clinic', 'We can organise our / clinic workflow here.', 'And our team can / use tools suited / to each staff role.', 'WELBUK CARE / for clinic staff' and 'One team. / Better / coordination.'. The teal label rects are at (706,24,294x138) and (664,968,234x106), which matches the image. The numbered PNG adds only the beat footers. In 02-3 the footer '3 / Meera discovers Welbuk Care for staff' is partly overlapped by the WELBUK CARE label, but it is an internal storyboard annotation and is not in the final.",
+   "The script matches the source, page 2 panels 1-4. The caption and all three dialogue lines are verbatim, with the source's speakers (Ananya, Meera, Ananya). The two product labels are manga supplements that name the products shown in the source ('Welbuk Practice' on the laptop and 'Welbuk Care' on the staff phone).",
+   "Meera's 'And our team can...' continues Ananya's 'We can organise our clinic workflow here.' as an additive second point ('And'). The referent of 'here' is the laptop shown in 02-1 and 02-2. 'One team. Better coordination.' sums up both points. No reply depends on a removed line."
+  ],
+  "issues": [],
+  "readingReview": {
+   "withoutGuides": true,
+   "firstReadingHash": "876f1ede95defd848d8c91af63c6532891abdef5e65d5ffffcbb6df70a4901d6",
+   "predictedOrder": [
+    {
+     "panel": "02-1",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "02-2",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "02-3",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "02-4",
+     "dialogue": [
+      1
+     ]
+    }
+   ],
+   "observations": [
+    "Unnumbered scan: the top-left caption, then the top-right WELBUK PRACTICE label. Next, Ananya's balloon at the top left of the middle-left panel, then Meera's balloon at the top of the middle-right panel with the WELBUK CARE label below it. The bottom tier has one centred balloon. Each panel has at most one balloon, so there are no proximity clusters that could cause a skipped reply.",
+    "First-reader concern 1: the caption and the WELBUK PRACTICE label are flush with the panel frame. In the composed preview the caption is a square corner box fitted into the top-left corner, and 'its' clears the box's right edge with a small margin. The label fills the top-right corner over the evening window and does not touch Ananya's face, hands or the laptop screen. It is a cosmetic corner-box placement with no effect on reading, and it is legible at page size. I accept it.",
+    "First-reader concerns 2 and 3: in 02-4 the balloon cuts off the 'ananya' placeholder name, and a reader might attribute the line to Meera. In the preview and in assets/panels/02-4.png, the balloon sits in the wall area between the two women. Its short tail enters from the right at Ananya's open, smiling mouth, and her raised encouraging fist matches 'One team.'. Meera, at the right, has a closed-mouth smile and is listening. The balloon covers neither face. The placeholder overlap exists only in the storyboard, and the art and preview show the attribution clearly.",
+    "02-3: in the preview the WELBUK CARE label covers the desk and laptop corner below Meera. It is clear of her face and of the protected phone region (794,794,40,61), and the phone screen with the calendar icon stays visible."
+   ],
+   "transitions": [
+    {
+     "from": "01-3",
+     "to": "02-1",
+     "observation": "Ananya says 'Let's make the rest simpler' in the morning reception. Then the caption 'The clinic begins its Welbuk onboarding.' appears over an over-the-shoulder evening shot of Ananya typing into a blank setup form. The caption plus the sunset window mark the time and place change (02-1 transition: time-change), and the decision on page 1 is followed by the action."
+    },
+    {
+     "from": "02-1",
+     "to": "02-2",
+     "observation": "The same office, evening light, laptop and coat. 02-2 moves from typing to a seated three-quarter view, with a finger at her chin and her gaze up and away, as she speaks about organising the workflow. The action continues directly."
+    },
+    {
+     "from": "02-2",
+     "to": "02-3",
+     "observation": "02-3 shows Meera standing by the desk with the staff phone and the open laptop beside her, in the same evening window light. 'And our team...' adds to Ananya's line. Meera's entrance is not shown, but the shared office and her direct continuation make it clear that she is with Ananya."
+    },
+    {
+     "from": "02-3",
+     "to": "02-4",
+     "observation": "A two-shot brings them together: Ananya seated at the left, Meera standing at the right with the same phone at her side, and the laptop between them. Ananya's summary line follows Meera's point."
+    },
+    {
+     "from": "02-4",
+     "to": "03-1",
+     "observation": "The evening two-shot is followed by page 3's caption 'A later morning: patients can always check in at the front desk.' over a bright reception. The page 03 SVG and preview show daylight and a tidy desk. The time change is stated in the caption (03-1 transition: time-change)."
+    }
+   ],
+   "comparison": "My comparison agrees with the recorded first reading's order: caption, label, Ananya, Meera with the label, then the closing line, which is the intended [1,2],[1],[1,2],[1]. The first reader saw no skipped reply, and I agree. Its four layout notes are resolved as follows. (1) The flush caption and label are a cosmetic corner placement that stays legible in the preview, so I accept them. (2) and (3) The balloon overlapping the ananya placeholder and the possible attribution to Meera exist only in the placeholder. In the preview and accepted art the tail goes to Ananya's speaking mouth, Meera is a silent listener, and no face is covered. (4) The page 1 to page 2 transition is understandable, and I agree. Nothing is left unresolved."
+  }
+ },
+ {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-03-8d3ac2c8d6a4a2ad717b5e1fc2d8825b0c3583ed1d5e5f1c17cb90505269e2b5.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Files I actually read: the request JSON (page 03 script, requiredTransitions and the recorded first reading), source/original.txt and source/REVISION-2026-11-11.md (Requests 1 and 2 and the r13 caption change). I opened these images with Read and looked at them: workflow/storyboards-unnumbered/page-03.png, workflow/storyboards/page-03.png and workflow/review/page-03.png. I grepped the text and label rect of storyboards-unnumbered/page-03.svg and the beat text of storyboards/page-03.svg. No file was unreadable.",
+   "The PNGs match the SVGs. The SVG captions are 'A later morning: / patients can always check / in at the front desk.', 'Some check in ahead / on the Welbuk Health app.', 'Ravi scans the QR / code at the door.', 'A short form on / his own phone, / shared with consent.' and 'Every check-in gets / a slot on the screen.'. The label 'A-10 · A-11 · A-12' is in a rect at (664,1012,305x74), as drawn. The numbered PNG adds only the five beat footers.",
+   "The script matches the source, page 3 panels 1-5. All five captions and the TV label are verbatim. The page has no speech, so no question-and-answer pairs exist. The three check-in routes (front desk, app, QR) follow the user's Request 2. The revision note confirms that Ravi is the QR patient, so his own sequence continues on page 4.",
+   "Raman and Priya are not named anywhere on the page. That is acceptable because their roles are carried by the captions ('patients can always check in at the front desk', 'Some check in ahead on the Welbuk Health app') and by the art: an elderly man at the counter with Meera typing, and a young woman tapping a phone check-in card outside the clinic awning."
+  ],
+  "issues": [],
+  "readingReview": {
+   "withoutGuides": true,
+   "firstReadingHash": "09a4be91282303afaf23f699d34d0cda4d828b517d5a858b2afacd33501ff3bf",
+   "predictedOrder": [
+    {
+     "panel": "03-1",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "03-2",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "03-3",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "03-4",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "03-5",
+     "dialogue": [
+      1,
+      2
+     ]
+    }
+   ],
+   "observations": [
+    "Unnumbered scan: a Z-pattern of five top-left captions in a 2-2-1 grid, then the teal slot label on the right of the bottom tier. Each panel has one caption at its top left, so the order cannot be ambiguous.",
+    "First-reader concern: the link between Ravi and A-12 is only implied. The preview supports it in three ways that agree. (a) The check-in order on the page is Raman in 03-1, Priya in 03-2 and Ravi in 03-3/03-4. (b) In 03-5 they sit left to right in that order under the TV, where 'A-10 · A-11 · A-12' runs in the same direction. (c) Page 4 then confirms it explicitly: in 04-1 'Soon, his slot comes up.' appears with 'NOW · A-12' and Ravi standing alone while the two chairs beside him are empty. The mapping is implied on page 3 and confirmed on the next page, which is sufficient. No change is needed.",
+    "In 03-4 the placeholder for ravi is a tall box. The preview shows an over-the-shoulder close-up: Ravi's bearded profile at the right, his phone held in both hands, and a thumb on the consent tick-box with the wristwatch visible. The tall face region is a close-up and does not imply a full figure.",
+    "In the preview the 03-1 caption covers part of a wall TV behind the desk. It is clear of the faces of Raman and Meera and of Raman's hand and stick. The 03-5 label sits inside the drawn TV screen, so it reads as on-screen text."
+   ],
+   "transitions": [
+    {
+     "from": "02-4",
+     "to": "03-1",
+     "observation": "The evening onboarding two-shot is followed by 'A later morning:' over the bright, tidy reception with the QR stand and a TV visible. The caption and the daylight mark the time jump, which answers the page 2 expectation 'What changes for patients once the clinic is set up?'."
+    },
+    {
+     "from": "03-1",
+     "to": "03-2",
+     "observation": "From the front desk to the street outside the teal awning: Priya walks in while tapping her phone. The caption 'Some check in ahead...' contrasts with 'can always... front desk', and the clinic doorway in the background ties her to the same clinic."
+    },
+    {
+     "from": "03-2",
+     "to": "03-3",
+     "observation": "The scene moves inside the glass entrance. Ravi is named in the caption as he scans the QR stand, and the reception and waiting patients are visible behind him, so it is the same place and the same morning."
+    },
+    {
+     "from": "03-3",
+     "to": "03-4",
+     "observation": "The scan in 03-3 is followed by a close-up of the form on the same phone, with the same green shirt, beard and wristwatch. The caption 'his own phone' refers back to Ravi in 03-3."
+    },
+    {
+     "from": "03-4",
+     "to": "03-5",
+     "observation": "The consent tap is followed by the wide waiting area, where all three patients from 03-1 to 03-4 sit under the TV slot list. Ravi has the phone in his hand and the bag on his lap (script props), and the caption ties together every route shown on the page."
+    },
+    {
+     "from": "03-5",
+     "to": "04-1",
+     "observation": "The same waiting area. 'Soon, his slot comes up.' appears with 'NOW · A-12', Ravi stands with the bag back on his shoulder, and the chairs of Raman and Priya are now empty, so a short wait is implied (04-1 transition: time-change)."
+    }
+   ],
+   "comparison": "My comparison agrees with the recorded first reading: a clear Z-pattern of captions in the intended order [1],[1],[1],[1],[1,2], with no speech and no skipped replies. The first reader's concern is that the connection between Ravi and A-12 is only implied. I judge it acceptable: the order of check-ins, the seating order and the order of the label all agree left to right, and 04-1 states it explicitly with 'his slot' and 'NOW · A-12' while the other two chairs are empty. The tall ravi placeholder in 03-4 is a close-up in the art, not a full figure. The first reader's note that Raman and Priya are never named is acceptable because the captions and art carry their roles. Nothing is left unresolved."
+  }
+ },
+ {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-04-7fc198deabceff65cdcf1c195d3696929e75ca2f75681b8dcf839826e1c6a22f.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Files I actually read: the request JSON (page 04 script, requiredTransitions and the recorded first reading), source/original.txt and source/REVISION-2026-11-11.md (the r13 change to the nurse's line). I opened these images with Read and looked at them: workflow/storyboards-unnumbered/page-04.png, workflow/storyboards/page-04.png and workflow/review/page-04.png. I grepped the text and label rects of storyboards-unnumbered/page-04.svg and the beat text of storyboards/page-04.svg. No file was unreadable.",
+   "The PNGs match the SVGs. The SVG text runs are 'Soon, his slot / comes up.', 'NOW · A-12' (rect 786,64,190x74), 'A quick vitals / check first.', 'Hi, Ravi! Just relax / your arm for me.', 'Dr. Ananya is / notified when / he's ready.' and 'RAVI · / READY' (rect 783,1202,129x106), exactly as drawn. The numbered PNG adds only the beat footers.",
+   "The script matches the source, page 4 panels 1-3. The three captions, both labels and the nurse's line are verbatim. The revision note records why the nurse's line changed: the old line repeated the caption, while the new one names Ravi and gives a practical instruction.",
+   "Ravi does not answer the nurse aloud. Her line is an instruction, not a question, and the preview shows his compliance: his arm rests on the side table with the cuff on, and he smiles at her. This is a silent reaction, not a missing reply."
+  ],
+  "issues": [],
+  "readingReview": {
+   "withoutGuides": true,
+   "firstReadingHash": "82fca92a20578a98cc5b9484c1c5ad3cee19cc349173fafe966ef7593340051c",
+   "predictedOrder": [
+    {
+     "panel": "04-1",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "04-2",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "04-3",
+     "dialogue": [
+      1,
+      2
+     ]
+    }
+   ],
+   "observations": [
+    "Unnumbered scan: the top-left caption, then the top-right 'NOW · A-12' in the wide top tier. In the lower-left tall panel, the caption sits at the top left with the nurse's balloon below and to the right of it. In the lower-right tall panel the caption is at the top and the label 'RAVI · READY' near the bottom. Every panel runs caption first, then the element further right or lower, so the order is unambiguous.",
+    "First-reader concern: the nurse's tail is tiny. In the preview the notch sits directly over the nurse's head, and her mouth is open and smiling while Ravi's is closed. The attribution is clear, and her chin-length bob, lavender scrubs and lanyard match the nurse sheet described in the script. The tail is clear of Ravi and the cuff region.",
+    "First-reader concern: 'RAVI · READY' wraps with 'RAVI ·' alone on the first line. In the preview the label sits on the tablet screen under a drawn check-mark icon and reads as a two-line notification card. The trailing middle dot is a little awkward, but it does not cause a misreading. This is a lettering-stage cosmetic choice and does not need a storyboard change.",
+    "First-reader concern: Meera appears in 04-1. In the preview she types at the reception desk in the background at the right, which matches the reception section and Meera's role in 03-1. The TV and Ravi carry the panel's focus, and her presence is consistent with the setting."
+   ],
+   "transitions": [
+    {
+     "from": "03-5",
+     "to": "04-1",
+     "observation": "The same waiting area and TV. 'Soon, his slot comes up.' plus 'NOW · A-12' on the screen, Ravi standing and looking up at it while tucking his phone into his pocket, and the chairs beside him empty (Raman and Priya were called first) show a short wait and that his turn has come."
+    },
+    {
+     "from": "04-1",
+     "to": "04-2",
+     "observation": "From the waiting area to the vitals corner beside reception. The caption 'A quick vitals check first.' carries the move, and the preview shows a teal reception counter and a waiting chair behind the nurse. Ravi's bag is now on the floor by his chair. The slot coming up is followed by the next step of the visit."
+    },
+    {
+     "from": "04-2",
+     "to": "04-3",
+     "observation": "A cut to the consultation room. The caption names Dr. Ananya and 'when he's ready', which refers back to Ravi, and the label RAVI · READY on her tablet confirms the alert. A closed laptop sits at the lower right of the desk, as the script requires for the next page."
+    },
+    {
+     "from": "04-3",
+     "to": "05-1",
+     "observation": "The same consultation room (window and plant). In 05-1 Ananya greets Ravi, who is now seated. The tablet is put away and the laptop that was closed in 04-3 is open with patient details. Being notified is followed by the greeting, in the same costumes and on the same visit."
+    }
+   ],
+   "comparison": "My comparison agrees with the recorded first reading: caption, label, the nurse's line, then Ananya's notification, which is the intended [1,2],[1,2],[1,2]. The first reader's note that 'his slot' depends on page 3 is covered by the page 3 review, and 04-1 itself confirms A-12 with Ravi alone standing. The tiny nurse tail is clear in the composed preview. Ravi's silent compliance is a valid non-verbal reaction to an instruction. The wrap of RAVI · READY is a legible cosmetic choice. Meera's presence in the background is consistent with the reception setting. Nothing is left unresolved."
+  }
+ },
+ {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-05-f0ddd8644e5f2b94e907be4b0705c0c7385a53c81a3b22f53ee689f77b6638f7.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Files I actually read: the request JSON (page 05 script, requiredTransitions and the recorded first reading), source/original.txt, source/REVISION-2026-11-11.md (Request 3, the 'add page if needed' follow-up and the AI voice consent follow-up) and workflow/reading-flow/page-05.json. I opened these images with Read and looked at them: workflow/storyboards-unnumbered/page-05.png, workflow/storyboards/page-05.png, workflow/review/page-05.png, assets/panels/05-1.png and assets/panels/05-3.png. I grepped the text and label rects of storyboards-unnumbered/page-05.svg, the beat text of storyboards/page-05.svg and the text of storyboards-unnumbered/page-06.svg for the boundary. No file was unreadable.",
+   "The PNGs match the SVGs. The text runs, including 'PATIENT DETAILS: / current vitals · / ... / lab reports', 'May the AI listen and / save notes of our talk?', 'Yes, I agree.', 'AI VOICE CONSENT: / asked at the first visit, / before any voice is saved', 'I've been feeling / tired lately.' and the eight-line SOAP NOTES label, and the label rects (34,224,292x266), (631,572,369x138) and (26,1160,248x298) all appear as drawn. The numbered PNG adds only the beat footers. The 05-3 footer is overlapped by the SOAP label, and the 05-4 footer runs past the frame. Both are internal storyboard annotations and are not in the final.",
+   "The script matches the source, page 5 panels 1-4. Every line, the caption and all three labels are verbatim. The source fixes the order: greeting, then consent, then Ravi's concern, then the listening caption. The revision notes record that the consent exchange was inserted at the user's request ('consent check for first time for ai voice save'), and that the full label wording follows the user's 'add page if needed'.",
+   "Question and answer: 'Tell me what brings you in.' (05-1) is answered by 'I've been feeling tired lately.' (05-3), with the consent question between them. The interruption is a natural procedural step that a doctor takes before recording, and Ravi gives the expected answer to that question ('Yes, I agree.'). His answer to the opening question then follows in the next tier with the microphone visibly glowing, which shows causally that the recording starts after consent. The answer is not skipped or orphaned; it comes one panel later, and the cause for that is shown on the page."
+  ],
+  "issues": [],
+  "readingReview": {
+   "withoutGuides": true,
+   "firstReadingHash": "ab46a4e42ad4a3a8bf1138ac0e12df0ee54bf3b9f32153a1706961444dcf0b8c",
+   "predictedOrder": [
+    {
+     "panel": "05-1",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "05-2",
+     "dialogue": [
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "panel": "05-3",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "05-4",
+     "dialogue": [
+      1
+     ]
+    }
+   ],
+   "observations": [
+    "First-reader concern 1: the PATIENT DETAILS label might be read before the greeting. The greeting balloon starts at y 40 and the label at y 224, so the balloon is clearly the topmost element and is read first. The label is on-screen text: in the preview it sits on the laptop screen in the left foreground. Reading it second, as a description of what the doctor has open, does not affect the dialogue. In assets/panels/05-1.png the six abstract cards, including the grey mic toggle in the off position, lie under the label. The label lists the same six sections in the same order, so the label carries the information and no meaning is lost. I accept it.",
+    "First-reader concern 3: 'Yes, I agree.' nearly touches Ananya's balloon (rects 64-396 and 396-595 in a single row at y 572). In the preview, the question's tail drops to Ananya at the left and the answer's long tail runs down to Ravi's head at the right. The two speakers are far apart on either side of the laptop with the consent card, and Ravi's raised open hand shows agreement. Placing the balloons edge to edge links question and answer in reading order, left to right. The tail passes under the consent label but does not cross any face or the protected laptop and hand regions. The two warnings in reading-flow page-05.json for 05-2 are the automatic same-row heuristic, and a single top-aligned row reads correctly left to right. I accept it.",
+    "First-reader concerns 4 and 5: AI VOICE CONSENT touches the right frame, and SOAP NOTES touches the left frame and is long. In the preview both are legible, with their text inside the box margins. The consent label sits over the plain wall above Ravi without touching his face. The SOAP label covers the left list blocks of the laptop screen, while the glowing microphone in the right third stays visible (assets/panels/05-3.png has the mic in exactly that area), and Ravi's face and neck-rubbing hand are clear. Neither label ends with punctuation, which matches the other screen labels and the source wording. The labels make the page text-heavy, but their full wording is the user's explicit choice ('add page if needed'), and the speech stays short. I accept it.",
+    "First-reader concern 6: Ravi appears only as a dot in 05-4. He is registered as kind 'head' at (957,1193), and in the preview the back of his head and his green shoulder fill the right foreground, so the over-the-shoulder framing is as scripted. Ananya faces him with her hands folded, and the laptop with a small glowing mic is pushed to the left edge, which illustrates the caption. This exists only in the placeholder and is resolved in the art."
+   ],
+   "transitions": [
+    {
+     "from": "04-3",
+     "to": "05-1",
+     "observation": "The consultation room from 04-3 (window and plant). Ravi now sits in the patient chair with his bag on the floor, the tablet from 04-3 is gone and the laptop that was closed in 04-3 is open on patient details. Ananya's open-hand greeting begins the conversation. Being notified that he is ready is followed by him arriving."
+    },
+    {
+     "from": "05-1",
+     "to": "05-2",
+     "observation": "The same room in a wider shot. The laptop now shows the consent card with a mic, a shield and a check box. Ananya's hand gestures toward it as she asks, and Ravi raises an open hand to agree. The screen changes from details to consent before any recording, which matches the mic toggle being off in 05-1."
+    },
+    {
+     "from": "05-2",
+     "to": "05-3",
+     "observation": "Consent is followed by Ravi's answer to the opening question. The SOAP screen shows the glowing microphone, and Ravi rubs his neck, so the tiredness is acted out. Consent comes before listening, and the order is visible."
+    },
+    {
+     "from": "05-3",
+     "to": "05-4",
+     "observation": "Ravi speaks, then a reverse over-the-shoulder shot shows Ananya listening with eye contact. The laptop with the mic still glowing is set aside, and the caption states the theme. The cut is a dialogue reaction cut."
+    },
+    {
+     "from": "05-4",
+     "to": "06-1",
+     "observation": "Page 6 (storyboard SVG text) opens with 'SPECIALITY-SPECIFIC TREATMENT PLANNER' on the laptop, and then 06-2 has Ananya's line about next steps. The walk through the doctor's screen continues on the same laptop in the same visit. The page turn falls at the end of the listening beat, which is a natural break in topic."
+    }
+   ],
+   "comparison": "My comparison agrees with the recorded first reading's predicted path: greeting, details label, question, answer, consent label, Ravi's line, SOAP label, caption, which is the intended [1,2],[1,2,3],[1,2],[1]. I went through the six concerns. (1) The greeting balloon is clearly topmost, and the details label is on-screen text whose order is harmless. (2) Stretching the question-and-answer across panels is the source's order, with the consent question as a visible procedural cause, and the answer is not skipped. (3) The touching balloons are a question-and-answer pair in left-to-right order with separate tails to well-separated speakers. (4) and (5) The labels flush with the frame are legible in the preview, clear of faces and the visible mic, and use the user's full wording by explicit decision. (6) The 'dot' for Ravi is a back-of-head registration, and the art shows it. Nothing is left unresolved."
+  }
+ }
+]

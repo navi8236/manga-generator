@@ -1,20 +1,22 @@
 {
-  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-04-aff8195ea8e095977d9485d4a76195184809096f49d63529fe61d0122c3034f5.json",
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-04-7fc198deabceff65cdcf1c195d3696929e75ca2f75681b8dcf839826e1c6a22f.json",
   "reviewer": {
     "role": "subagent",
-    "task": "claude-code-agent:manga-reviewer:ad26d746df75c3a72",
+    "task": "claude-code-agent:manga-reviewer:aeead53e3c5fa379c",
     "reportedTask": null,
     "taskSource": "Agent ID returned by the Claude Code Agent tool to the parent."
   },
   "status": "pass",
   "observations": [
-    "Files I read: AGENTS.md and CLAUDE.md (session context), docs/REVISION-AND-REVIEWS.md, docs/PROMPTS.md, this request in full (page-04 script, boundary pages 03 and 05, embedded first reading), source/original.txt and source/REVISION-2026-11-11.md. I checked rect geometry in storyboards-unnumbered/page-04.svg and the opening text in storyboards-unnumbered/page-05.svg with Grep. Images I opened with Read and looked at myself: storyboards-unnumbered/page-04.png, storyboards/page-04.png, and for context review/page-03.png, review/page-04.png, review/page-05.png and assets/panels/04-1.png to 04-3.png. Every image was readable. I computed no hashes.",
-    "PNG against SVG: the SVG's frames (24,24,976x420; 24,468,560x996; 608,468,392x996), captions (40,40,215x106; 40,484,215x106; 624,484,217x138), the nurse balloon at 274,618,290x106, the labels at 786,64,190x74 and 790,1202,129x106, and the face boxes (ravi 577,71; meera 908,205; ravi 93,842; nurse 389,739; ananya 730,834) all match the unnumbered PNG. The numbered PNG adds only the three guides. Page 04 is unchanged and appears here only as page 03's neighbour.",
-    "The order follows source PAGE 4 and the script: 'Soon, his slot comes up.', 'NOW · A-12', 'A quick vitals check first.', the nurse's 'Hi, Ravi! Just relax your arm for me.', 'Dr. Ananya is notified when he's ready.' and 'RAVI · READY'. The wording is identical to the source."
+    "Files I actually read: the request JSON (page 04 script, requiredTransitions and the recorded first reading), source/original.txt and source/REVISION-2026-11-11.md (the r13 change to the nurse's line). I opened these images with Read and looked at them: workflow/storyboards-unnumbered/page-04.png, workflow/storyboards/page-04.png and workflow/review/page-04.png. I grepped the text and label rects of storyboards-unnumbered/page-04.svg and the beat text of storyboards/page-04.svg. No file was unreadable.",
+    "The PNGs match the SVGs. The SVG text runs are 'Soon, his slot / comes up.', 'NOW · A-12' (rect 786,64,190x74), 'A quick vitals / check first.', 'Hi, Ravi! Just relax / your arm for me.', 'Dr. Ananya is / notified when / he's ready.' and 'RAVI · / READY' (rect 783,1202,129x106), exactly as drawn. The numbered PNG adds only the beat footers.",
+    "The script matches the source, page 4 panels 1-3. The three captions, both labels and the nurse's line are verbatim. The revision note records why the nurse's line changed: the old line repeated the caption, while the new one names Ravi and gives a practical instruction.",
+    "Ravi does not answer the nurse aloud. Her line is an instruction, not a question, and the preview shows his compliance: his arm rests on the side table with the cuff on, and he smiles at her. This is a silent reaction, not a missing reply."
   ],
   "issues": [],
   "readingReview": {
     "withoutGuides": true,
+    "firstReadingHash": "82fca92a20578a98cc5b9484c1c5ad3cee19cc349173fafe966ef7593340051c",
     "predictedOrder": [
       {
         "panel": "04-1",
@@ -39,34 +41,35 @@
       }
     ],
     "observations": [
-      "Unnumbered PNG: 04-1's caption and label lie on the same top band, so the caption on the left is read first. In 04-2, the caption at the top left comes before the balloon lower right. The 04-3 caption (y 484-622) is higher than the 04-2 balloon (y 618-724), but the eye finishes the 04-2 column before crossing the gutter, so the nurse's line is not skipped.",
-      "The nurse balloon's tail is short and points straight down into the nurse box. The ravi box sits far to the lower left, and its silence reads as listening. 'RAVI · READY' sits low in 04-3 and is that panel's exit."
+      "Unnumbered scan: the top-left caption, then the top-right 'NOW · A-12' in the wide top tier. In the lower-left tall panel, the caption sits at the top left with the nurse's balloon below and to the right of it. In the lower-right tall panel the caption is at the top and the label 'RAVI · READY' near the bottom. Every panel runs caption first, then the element further right or lower, so the order is unambiguous.",
+      "First-reader concern: the nurse's tail is tiny. In the preview the notch sits directly over the nurse's head, and her mouth is open and smiling while Ravi's is closed. The attribution is clear, and her chin-length bob, lavender scrubs and lanyard match the nurse sheet described in the script. The tail is clear of Ravi and the cuff region.",
+      "First-reader concern: 'RAVI · READY' wraps with 'RAVI ·' alone on the first line. In the preview the label sits on the tablet screen under a drawn check-mark icon and reads as a two-line notification card. The trailing middle dot is a little awkward, but it does not cause a misreading. This is a lettering-stage cosmetic choice and does not need a storyboard change.",
+      "First-reader concern: Meera appears in 04-1. In the preview she types at the reception desk in the background at the right, which matches the reception section and Meera's role in 03-1. The TV and Ravi carry the panel's focus, and her presence is consistent with the setting."
     ],
     "transitions": [
       {
         "from": "03-5",
         "to": "04-1",
-        "observation": "The same waiting room and TV. 'A-10 · A-11 · A-12' becomes 'NOW · A-12', and 'Soon' covers the wait. The 03-2 caption move on page 03 does not affect this hand-off."
+        "observation": "The same waiting area and TV. 'Soon, his slot comes up.' plus 'NOW · A-12' on the screen, Ravi standing and looking up at it while tucking his phone into his pocket, and the chairs beside him empty (Raman and Priya were called first) show a short wait and that his turn has come."
       },
       {
         "from": "04-1",
         "to": "04-2",
-        "observation": "From the waiting area to the vitals corner. The caption 'A quick vitals check first.' carries the move, and in the art the reception counter and a teal chair sit behind the nurse."
+        "observation": "From the waiting area to the vitals corner beside reception. The caption 'A quick vitals check first.' carries the move, and the preview shows a teal reception counter and a waiting chair behind the nurse. Ravi's bag is now on the floor by his chair. The slot coming up is followed by the next step of the visit."
       },
       {
         "from": "04-2",
         "to": "04-3",
-        "observation": "A cut to the consultation room. The caption and the tablet label connect the finished vitals check to the doctor's alert."
+        "observation": "A cut to the consultation room. The caption names Dr. Ananya and 'when he's ready', which refers back to Ravi, and the label RAVI · READY on her tablet confirms the alert. A closed laptop sits at the lower right of the desk, as the script requires for the next page."
       },
       {
         "from": "04-3",
         "to": "05-1",
-        "observation": "'RAVI · READY' leads to page 05's 'Hello, Ravi. Tell me what brings you in.' (page-05.svg). In review/page-05.png the laptop that was closed in 04-3 is open on PATIENT DETAILS, and the tablet is gone."
+        "observation": "The same consultation room (window and plant). In 05-1 Ananya greets Ravi, who is now seated. The tablet is put away and the laptop that was closed in 04-3 is open with patient details. Being notified is followed by the greeting, in the same costumes and on the same visit."
       }
     ],
-    "firstReadingHash": "6f32389be005f83524af95075c5feb90a21f96f23f71087b28f51062b86f4a19",
-    "comparison": "The first reader's order matches the script exactly. Their concerns: (1) It is unclear what displays 'NOW · A-12'. In the art the label sits on the wall TV established in 03-5. Resolved. (2) Meera is a tiny, unexplained box in 04-1. She has been introduced on pages 01 to 03, and here she is background at the reception desk (as scripted), so she needs no introduction. Acceptable. (3) Ravi does not answer the nurse. His smile and nod in the art are the response, and no reply is skipped. Acceptable. (4) The link between 'RAVI · READY' and Ananya depends on the art. The art shows her holding a tablet with a notification card under the label. Resolved. (5) The tall panels have empty space. The art fills them with full figures (the vitals scene, Ananya at her desk), and the plain upper third is the intended caption area. This is acceptable pacing for the two tall beats. Nothing is unresolved."
+    "comparison": "My comparison agrees with the recorded first reading: caption, label, the nurse's line, then Ananya's notification, which is the intended [1,2],[1,2],[1,2]. The first reader's note that 'his slot' depends on page 3 is covered by the page 3 review, and 04-1 itself confirms A-12 with Ravi alone standing. The tiny nurse tail is clear in the composed preview. Ravi's silent compliance is a valid non-verbal reaction to an instruction. The wrap of RAVI · READY is a legible cosmetic choice. Meera's presence in the background is consistent with the reception setting. Nothing is left unresolved."
   },
-  "fingerprint": "aff8195ea8e095977d9485d4a76195184809096f49d63529fe61d0122c3034f5",
-  "recordedAt": "2026-11-12T11:44:18.376Z"
+  "fingerprint": "7fc198deabceff65cdcf1c195d3696929e75ca2f75681b8dcf839826e1c6a22f",
+  "recordedAt": "2026-11-12T12:33:15.587Z"
 }
