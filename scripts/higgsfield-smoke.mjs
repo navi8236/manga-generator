@@ -11,7 +11,7 @@ if (!['dry-run', 'generate-one'].includes(mode)) {
 if (!credential) {
   throw new Error('HIGGSFIELD_API_KEY is not set. Configure the repository Actions secret.');
 }
-if (!/^[^:\\s]+:[^:\\s]+$/.test(credential)) {
+if (!/^[^:\s]+:[^:\s]+$/.test(credential)) {
   throw new Error('HIGGSFIELD_API_KEY must contain the Higgsfield API KEY_ID:KEY_SECRET pair. Value was not printed.');
 }
 console.log('Higgsfield credential is present and matches the expected KEY_ID:KEY_SECRET shape.');
