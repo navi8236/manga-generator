@@ -287,10 +287,10 @@
     },
     {
       "page": "05",
-      "feeling": "The consultation stays human while the doctor’s screen supports it: patient details, then SOAP notes with the AI listening. No diagnosis or medical claim.",
+      "feeling": "The consultation stays human while the doctor’s screen supports it: patient details, a first-time consent check before any AI voice is saved, then SOAP notes with the AI listening. No diagnosis or medical claim.",
       "questionForNextPage": "What else does the doctor’s screen do?",
       "intent": {
-        "emotion": "The consultation stays human while the doctor’s screen supports it: patient details, then SOAP notes with the AI listening. No diagnosis or medical claim.",
+        "emotion": "The consultation stays human while the doctor’s screen supports it: patient details, a first-time consent check before any AI voice is saved, then SOAP notes with the AI listening. No diagnosis or medical claim.",
         "revealOrder": null,
         "peakPanel": null,
         "turnQuestion": "What else does the doctor’s screen do?",
@@ -300,8 +300,8 @@
       "diagnostics": {
         "showcaseExists": true,
         "areaRange": [
-          319872,
-          585600
+          212464,
+          507520
         ],
         "strengthsEqual": false
       },
@@ -310,7 +310,7 @@
           "id": "05-1",
           "beat": "Ananya greets Ravi; the laptop opens on patient details",
           "camera": "Medium-wide two-shot past the laptop in the foreground, eye level.",
-          "area": 585600,
+          "area": 507520,
           "strength": 1,
           "showcase": false,
           "information": "The vitals taken in 04-2 and Ravi’s records are ready on the doctor’s screen before the conversation starts.",
@@ -320,10 +320,22 @@
         },
         {
           "id": "05-2",
+          "beat": "First-time AI voice consent",
+          "camera": "Wide eye-level shot past the laptop.",
+          "area": 322080,
+          "strength": 0.63,
+          "showcase": false,
+          "information": "At the first visit the patient is asked before any AI voice notes are saved.",
+          "pause": null,
+          "readingGroups": null,
+          "layoutRow": null
+        },
+        {
+          "id": "05-3",
           "beat": "Ravi shares a routine concern; SOAP notes listen",
           "camera": "Tall medium shot from the doctor’s side, past the laptop, Ravi facing screen-left.",
-          "area": 456960,
-          "strength": 0.78,
+          "area": 303520,
+          "strength": 0.6,
           "showcase": false,
           "information": "A routine concern only; no diagnosis is shown. The AI mic is on in SOAP notes.",
           "pause": null,
@@ -331,11 +343,11 @@
           "layoutRow": null
         },
         {
-          "id": "05-3",
+          "id": "05-4",
           "beat": "The doctor listens; technology stays in the background",
           "camera": "Tall medium shot, Ananya facing screen-right.",
-          "area": 319872,
-          "strength": 0.55,
+          "area": 212464,
+          "strength": 0.42,
           "showcase": false,
           "information": "Technology supports the workflow; the conversation is human.",
           "pause": null,
@@ -1719,8 +1731,8 @@
             "doctor-tablet": "Dr. Ananya’s tablet. Shown only in 04-3 (a simple notification card with a blank strip; the alert text is lettered, never drawn); from 05-1 on it is put away in the desk drawer and must not appear."
           }
         },
-        "scene": "Tall panel. Upper half: Ravi in the patient chair faces screen-left toward the doctor (off-panel left), rubbing the back of his neck with his right hand, a slightly tired but candid expression; his left hand (wristwatch) rests on his knee. Lower half, in the foreground: the laptop screen seen at an angle from the doctor’s side, filling the lower half of the panel: a notes layout of four stacked light blocks marked by four small icons, a glowing teal microphone icon with sound-wave arcs (AI listening), and a small row of code-tag chips. The laptop screen shows only abstract light cards, simple icons and blank bars (draw NO text, letters or numbers; no real data); the section name and contents are lettered over it later. Plain wall at the top-left for a balloon.",
-        "action": "Ravi explains, a little sheepish, while the notes listen."
+        "scene": "Wide panel in the same consultation room. At left, Dr. Ananya turns toward Ravi and asks with an open palm gesturing toward the laptop; at centre in the foreground, the open laptop on her side of the desk, screen toward the reader, showing a single consent card: a large microphone icon, a shield icon, an empty check box being ticked and two rounded buttons (one teal). The laptop screen shows only abstract light cards, simple icons and blank bars (draw NO text, letters or numbers; no real data); the section name and contents are lettered over it later. At right, Ravi nods with a small smile and an open hand, agreeing. Plain wall across the top for two balloons.",
+        "action": "Ananya asks before the AI mic records; Ravi agrees."
       },
       "ledger": {
         "timeBefore": null,
@@ -1739,7 +1751,7 @@
         ],
         "changedObjects": [],
         "actionBefore": "Ananya welcomes Ravi as he sits; his details are already on her screen.",
-        "actionAfter": "Ravi explains, a little sheepish, while the notes listen.",
+        "actionAfter": "Ananya asks before the AI mic records; Ravi agrees.",
         "sourceBasis": null,
         "supplementBasis": null
       },
@@ -1767,7 +1779,72 @@
             "doctor-tablet": "Dr. Ananya’s tablet. Shown only in 04-3 (a simple notification card with a blank strip; the alert text is lettered, never drawn); from 05-1 on it is put away in the desk drawer and must not appear."
           }
         },
-        "scene": "Tall panel. Upper half: Ravi in the patient chair faces screen-left toward the doctor (off-panel left), rubbing the back of his neck with his right hand, a slightly tired but candid expression; his left hand (wristwatch) rests on his knee. Lower half, in the foreground: the laptop screen seen at an angle from the doctor’s side, filling the lower half of the panel: a notes layout of four stacked light blocks marked by four small icons, a glowing teal microphone icon with sound-wave arcs (AI listening), and a small row of code-tag chips. The laptop screen shows only abstract light cards, simple icons and blank bars (draw NO text, letters or numbers; no real data); the section name and contents are lettered over it later. Plain wall at the top-left for a balloon.",
+        "scene": "Wide panel in the same consultation room. At left, Dr. Ananya turns toward Ravi and asks with an open palm gesturing toward the laptop; at centre in the foreground, the open laptop on her side of the desk, screen toward the reader, showing a single consent card: a large microphone icon, a shield icon, an empty check box being ticked and two rounded buttons (one teal). The laptop screen shows only abstract light cards, simple icons and blank bars (draw NO text, letters or numbers; no real data); the section name and contents are lettered over it later. At right, Ravi nods with a small smile and an open hand, agreeing. Plain wall across the top for two balloons.",
+        "action": "Ananya asks before the AI mic records; Ravi agrees."
+      },
+      "after": {
+        "section": "consultation",
+        "setting": {
+          "summary": "The same visit: Ravi talks with Dr. Ananya in the consultation room.",
+          "location": "Bright, simple consultation room: desk, two chairs, Dr. Ananya’s laptop (closed in 04-3, open on page 5), window with plant. No medical charts with text.",
+          "costumes": {
+            "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
+            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
+          },
+          "objects": {
+            "consult-laptop": "Dr. Ananya’s laptop on the consultation desk: closed and pushed aside in 04-3, opened on page 5 with the screen turned toward the reader. The screen shows only abstract cards and icons; section names are lettered over it, never drawn.",
+            "doctor-tablet": "Dr. Ananya’s tablet. Shown only in 04-3 (a simple notification card with a blank strip; the alert text is lettered, never drawn); from 05-1 on it is put away in the desk drawer and must not appear."
+          }
+        },
+        "scene": "Upper half: Ravi in the patient chair faces screen-left toward the doctor (off-panel left), rubbing the back of his neck with his right hand, a slightly tired but candid expression; his left hand (wristwatch) rests on his knee. Lower half, in the foreground: the laptop screen seen at an angle from the doctor’s side, filling the lower half of the panel: a notes layout of four stacked light blocks marked by four small icons, a glowing teal microphone icon with sound-wave arcs (AI listening), and a small row of code-tag chips. The laptop screen shows only abstract light cards, simple icons and blank bars (draw NO text, letters or numbers; no real data); the section name and contents are lettered over it later. Plain wall at the top-left for a balloon.",
+        "action": "Ravi explains, a little sheepish, while the notes listen."
+      },
+      "ledger": {
+        "timeBefore": null,
+        "timeAfter": null,
+        "locationBefore": "Bright, simple consultation room: desk, two chairs, Dr. Ananya’s laptop (closed in 04-3, open on page 5), window with plant. No medical charts with text.",
+        "locationAfter": "Bright, simple consultation room: desk, two chairs, Dr. Ananya’s laptop (closed in 04-3, open on page 5), window with plant. No medical charts with text.",
+        "readerMustKnow": null,
+        "anchor": null,
+        "anchorEvidencePanel": "05-3",
+        "axisBefore": null,
+        "axisAfter": null,
+        "resetCue": null,
+        "retainedObjects": [
+          "consult-laptop",
+          "doctor-tablet"
+        ],
+        "changedObjects": [],
+        "actionBefore": "Ananya asks before the AI mic records; Ravi agrees.",
+        "actionAfter": "Ravi explains, a little sheepish, while the notes listen.",
+        "sourceBasis": null,
+        "supplementBasis": null
+      },
+      "bridge": null,
+      "settingBasis": null,
+      "warnings": []
+    },
+    {
+      "from": "05-3",
+      "to": "05-4",
+      "pageBoundary": false,
+      "layoutBoundary": false,
+      "kind": "continuation",
+      "before": {
+        "section": "consultation",
+        "setting": {
+          "summary": "The same visit: Ravi talks with Dr. Ananya in the consultation room.",
+          "location": "Bright, simple consultation room: desk, two chairs, Dr. Ananya’s laptop (closed in 04-3, open on page 5), window with plant. No medical charts with text.",
+          "costumes": {
+            "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
+            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
+          },
+          "objects": {
+            "consult-laptop": "Dr. Ananya’s laptop on the consultation desk: closed and pushed aside in 04-3, opened on page 5 with the screen turned toward the reader. The screen shows only abstract cards and icons; section names are lettered over it, never drawn.",
+            "doctor-tablet": "Dr. Ananya’s tablet. Shown only in 04-3 (a simple notification card with a blank strip; the alert text is lettered, never drawn); from 05-1 on it is put away in the desk drawer and must not appear."
+          }
+        },
+        "scene": "Upper half: Ravi in the patient chair faces screen-left toward the doctor (off-panel left), rubbing the back of his neck with his right hand, a slightly tired but candid expression; his left hand (wristwatch) rests on his knee. Lower half, in the foreground: the laptop screen seen at an angle from the doctor’s side, filling the lower half of the panel: a notes layout of four stacked light blocks marked by four small icons, a glowing teal microphone icon with sound-wave arcs (AI listening), and a small row of code-tag chips. The laptop screen shows only abstract light cards, simple icons and blank bars (draw NO text, letters or numbers; no real data); the section name and contents are lettered over it later. Plain wall at the top-left for a balloon.",
         "action": "Ravi explains, a little sheepish, while the notes listen."
       },
       "after": {
@@ -1784,7 +1861,7 @@
             "doctor-tablet": "Dr. Ananya’s tablet. Shown only in 04-3 (a simple notification card with a blank strip; the alert text is lettered, never drawn); from 05-1 on it is put away in the desk drawer and must not appear."
           }
         },
-        "scene": "Tall panel. Dr. Ananya leans slightly forward at her desk, hands folded, listening with full attention and gentle eye contact toward Ravi (off-panel right), NOT looking at the laptop, which stands open at the left edge of the desk showing only soft abstract cards and a small glowing microphone icon. Window with a plant behind. Plain wall in the upper third for a caption.",
+        "scene": "Dr. Ananya leans slightly forward at her desk, hands folded, listening with full attention and gentle eye contact toward Ravi (off-panel right), NOT looking at the laptop, which stands open at the left edge of the desk showing only soft abstract cards and a small glowing microphone icon. Window with a plant behind. Plain wall in the upper third for a caption.",
         "action": "Ananya nods slowly while listening."
       },
       "ledger": {
@@ -1794,7 +1871,7 @@
         "locationAfter": "Bright, simple consultation room: desk, two chairs, Dr. Ananya’s laptop (closed in 04-3, open on page 5), window with plant. No medical charts with text.",
         "readerMustKnow": null,
         "anchor": null,
-        "anchorEvidencePanel": "05-3",
+        "anchorEvidencePanel": "05-4",
         "axisBefore": null,
         "axisAfter": null,
         "resetCue": null,
@@ -1813,7 +1890,7 @@
       "warnings": []
     },
     {
-      "from": "05-3",
+      "from": "05-4",
       "to": "06-1",
       "pageBoundary": true,
       "layoutBoundary": true,
@@ -1832,7 +1909,7 @@
             "doctor-tablet": "Dr. Ananya’s tablet. Shown only in 04-3 (a simple notification card with a blank strip; the alert text is lettered, never drawn); from 05-1 on it is put away in the desk drawer and must not appear."
           }
         },
-        "scene": "Tall panel. Dr. Ananya leans slightly forward at her desk, hands folded, listening with full attention and gentle eye contact toward Ravi (off-panel right), NOT looking at the laptop, which stands open at the left edge of the desk showing only soft abstract cards and a small glowing microphone icon. Window with a plant behind. Plain wall in the upper third for a caption.",
+        "scene": "Dr. Ananya leans slightly forward at her desk, hands folded, listening with full attention and gentle eye contact toward Ravi (off-panel right), NOT looking at the laptop, which stands open at the left edge of the desk showing only soft abstract cards and a small glowing microphone icon. Window with a plant behind. Plain wall in the upper third for a caption.",
         "action": "Ananya nods slowly while listening."
       },
       "after": {

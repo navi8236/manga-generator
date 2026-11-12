@@ -1822,7 +1822,7 @@
     {
       "id": "05",
       "section": "consultation",
-      "purpose": "The consultation stays human while the doctor’s screen supports it: patient details, then SOAP notes with the AI listening. No diagnosis or medical claim.",
+      "purpose": "The consultation stays human while the doctor’s screen supports it: patient details, a first-time consent check before any AI voice is saved, then SOAP notes with the AI listening. No diagnosis or medical claim.",
       "expectation": "What else does the doctor’s screen do?",
       "panels": [
         {
@@ -1834,7 +1834,7 @@
             24,
             24,
             976,
-            600
+            520
           ],
           "scene": "Bright simple consultation room, the same room as 04-3 (window with a plant behind). In the LEFT foreground, filling roughly the left 45% of the panel and most of its height, Dr. Ananya’s open laptop on the desk, its screen turned toward the reader: a patient-details layout of six light rounded cards in a column (a heart icon card, a history/clock icon card, an allergy card with a warning-triangle icon, a microphone toggle switched on, a document icon card, a test-tube icon card). The laptop screen shows only abstract light cards, simple icons and blank bars (draw NO text, letters or numbers; no real data); the section name and contents are lettered over it later. Behind it, at centre-right, Dr. Ananya seated at her desk turns toward Ravi with an open-hand welcoming gesture; at far right, Ravi sits down in the patient chair, smiling, his shoulder bag set on the floor beside the chair. Plain wall across the top for a balloon.",
           "action": "Ananya welcomes Ravi as he sits; his details are already on her screen.",
@@ -1853,13 +1853,13 @@
             ],
             "exit": [
               990,
-              620
+              540
             ]
           },
           "production": {
             "moment": "Ananya greets Ravi as he settles into the chair.",
             "before": "Ananya was notified that Ravi was ready (04-3).",
-            "after": "Ravi explains why he came while SOAP notes open (05-2).",
+            "after": "Before the AI mic listens, Ananya asks for Ravi’s consent (05-2).",
             "hands": {
               "ananya": {
                 "left": "open palm welcoming Ravi",
@@ -1875,7 +1875,7 @@
                 "id": "consult-laptop",
                 "before": "closed on the desk (04-3)",
                 "during": "open, screen toward the reader, patient-details cards",
-                "after": "open on SOAP notes (05-2)",
+                "after": "shows the AI voice consent card (05-2)",
                 "heldBy": "none"
               },
               {
@@ -1898,11 +1898,11 @@
             "ananya": {
               "anchor": [
                 634,
-                370
+                350
               ],
               "face": [
                 584,
-                274,
+                254,
                 100,
                 120
               ]
@@ -1910,11 +1910,11 @@
             "ravi": {
               "anchor": [
                 884,
-                390
+                370
               ],
               "face": [
                 834,
-                294,
+                274,
                 100,
                 120
               ]
@@ -1948,22 +1948,137 @@
               "textDirection": "horizontal",
               "side": "left",
               "x": 16,
-              "dy": 300
+              "dy": 270
             }
           ]
         },
         {
           "id": "05-2",
           "order": 2,
+          "role": "反応",
+          "beat": "First-time AI voice consent",
+          "rect": [
+            24,
+            568,
+            976,
+            330
+          ],
+          "scene": "Wide panel in the same consultation room. At left, Dr. Ananya turns toward Ravi and asks with an open palm gesturing toward the laptop; at centre in the foreground, the open laptop on her side of the desk, screen toward the reader, showing a single consent card: a large microphone icon, a shield icon, an empty check box being ticked and two rounded buttons (one teal). The laptop screen shows only abstract light cards, simple icons and blank bars (draw NO text, letters or numbers; no real data); the section name and contents are lettered over it later. At right, Ravi nods with a small smile and an open hand, agreeing. Plain wall across the top for two balloons.",
+          "action": "Ananya asks before the AI mic records; Ravi agrees.",
+          "emotion": "Respectful, reassured.",
+          "camera": "Wide eye-level shot past the laptop.",
+          "information": "At the first visit the patient is asked before any AI voice notes are saved.",
+          "readingFlow": {
+            "entry": [
+              40,
+              584
+            ],
+            "exit": [
+              990,
+              894
+            ]
+          },
+          "production": {
+            "moment": "Ravi says yes as the consent box is ticked.",
+            "before": "Ananya greeted Ravi; his details are on screen (05-1).",
+            "after": "With consent given, SOAP notes listen as Ravi explains (05-3).",
+            "hands": {
+              "ananya": {
+                "left": "open palm gesturing toward the consult-laptop",
+                "right": "resting on the desk"
+              },
+              "ravi": {
+                "left": "open hand raised slightly in agreement",
+                "right": "resting on his knee"
+              }
+            },
+            "props": [
+              {
+                "id": "consult-laptop",
+                "before": "patient-details cards (05-1)",
+                "during": "screen toward the reader: AI voice consent card, check box being ticked",
+                "after": "opens SOAP notes (05-3)",
+                "heldBy": "none"
+              }
+            ]
+          },
+          "speakers": {
+            "ananya": {
+              "anchor": [
+                184,
+                794
+              ],
+              "face": [
+                144,
+                718,
+                80,
+                95
+              ]
+            },
+            "ravi": {
+              "anchor": [
+                864,
+                784
+              ],
+              "face": [
+                824,
+                708,
+                80,
+                95
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "ananya",
+              "text": "May the AI listen and save notes of our talk?",
+              "textColumns": [
+                "May the AI listen and ",
+                "save notes of our talk?"
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "x": 16,
+              "dy": 16
+            },
+            {
+              "speaker": "ravi",
+              "text": "Yes, I agree.",
+              "textColumns": [
+                "Yes, I agree."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "x": 700,
+              "dy": 16
+            },
+            {
+              "speaker": "label",
+              "text": "AI VOICE CONSENT: asked at the first visit, before any voice is saved",
+              "textColumns": [
+                "AI VOICE CONSENT: ",
+                "asked at the first visit, ",
+                "before any voice is saved"
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "x": 330,
+              "dy": 170
+            }
+          ]
+        },
+        {
+          "id": "05-3",
+          "order": 3,
           "role": "始動",
           "beat": "Ravi shares a routine concern; SOAP notes listen",
           "rect": [
             24,
-            648,
+            922,
             560,
-            816
+            542
           ],
-          "scene": "Tall panel. Upper half: Ravi in the patient chair faces screen-left toward the doctor (off-panel left), rubbing the back of his neck with his right hand, a slightly tired but candid expression; his left hand (wristwatch) rests on his knee. Lower half, in the foreground: the laptop screen seen at an angle from the doctor’s side, filling the lower half of the panel: a notes layout of four stacked light blocks marked by four small icons, a glowing teal microphone icon with sound-wave arcs (AI listening), and a small row of code-tag chips. The laptop screen shows only abstract light cards, simple icons and blank bars (draw NO text, letters or numbers; no real data); the section name and contents are lettered over it later. Plain wall at the top-left for a balloon.",
+          "scene": "Upper half: Ravi in the patient chair faces screen-left toward the doctor (off-panel left), rubbing the back of his neck with his right hand, a slightly tired but candid expression; his left hand (wristwatch) rests on his knee. Lower half, in the foreground: the laptop screen seen at an angle from the doctor’s side, filling the lower half of the panel: a notes layout of four stacked light blocks marked by four small icons, a glowing teal microphone icon with sound-wave arcs (AI listening), and a small row of code-tag chips. The laptop screen shows only abstract light cards, simple icons and blank bars (draw NO text, letters or numbers; no real data); the section name and contents are lettered over it later. Plain wall at the top-left for a balloon.",
           "action": "Ravi explains, a little sheepish, while the notes listen.",
           "emotion": "Mildly tired, honest.",
           "camera": "Tall medium shot from the doctor’s side, past the laptop, Ravi facing screen-left.",
@@ -1971,7 +2086,7 @@
           "readingFlow": {
             "entry": [
               40,
-              664
+              938
             ],
             "exit": [
               580,
@@ -1980,8 +2095,8 @@
           },
           "production": {
             "moment": "Ravi describes feeling tired; the microphone icon glows.",
-            "before": "The doctor asked what brings him in (05-1).",
-            "after": "The doctor listens, eyes on Ravi (05-3).",
+            "before": "Ravi agreed to the AI listening (05-2); the doctor had asked what brings him in (05-1).",
+            "after": "The doctor listens, eyes on Ravi (05-4).",
             "hands": {
               "ravi": {
                 "left": "resting on his knee",
@@ -1991,9 +2106,9 @@
             "props": [
               {
                 "id": "consult-laptop",
-                "before": "open on patient details (05-1)",
+                "before": "consent given on the consent card (05-2)",
                 "during": "open on SOAP notes, microphone icon glowing",
-                "after": "open beside Ananya (05-3)",
+                "after": "open beside Ananya (05-4)",
                 "heldBy": "none"
               }
             ]
@@ -2001,12 +2116,12 @@
           "speakers": {
             "ravi": {
               "anchor": [
-                379,
-                952
+                409,
+                1166
               ],
               "face": [
-                324,
-                848,
+                354,
+                1062,
                 110,
                 130
               ]
@@ -2039,22 +2154,22 @@
               "textDirection": "horizontal",
               "side": "left",
               "x": 16,
-              "dy": 540
+              "dy": 290
             }
           ]
         },
         {
-          "id": "05-3",
-          "order": 3,
+          "id": "05-4",
+          "order": 4,
           "role": "反応",
           "beat": "The doctor listens; technology stays in the background",
           "rect": [
             608,
-            648,
+            922,
             392,
-            816
+            542
           ],
-          "scene": "Tall panel. Dr. Ananya leans slightly forward at her desk, hands folded, listening with full attention and gentle eye contact toward Ravi (off-panel right), NOT looking at the laptop, which stands open at the left edge of the desk showing only soft abstract cards and a small glowing microphone icon. Window with a plant behind. Plain wall in the upper third for a caption.",
+          "scene": "Dr. Ananya leans slightly forward at her desk, hands folded, listening with full attention and gentle eye contact toward Ravi (off-panel right), NOT looking at the laptop, which stands open at the left edge of the desk showing only soft abstract cards and a small glowing microphone icon. Window with a plant behind. Plain wall in the upper third for a caption.",
           "action": "Ananya nods slowly while listening.",
           "emotion": "Attentive, compassionate.",
           "camera": "Tall medium shot, Ananya facing screen-right.",
@@ -2062,7 +2177,7 @@
           "readingFlow": {
             "entry": [
               624,
-              664
+              938
             ],
             "exit": [
               990,
@@ -2082,7 +2197,7 @@
             "props": [
               {
                 "id": "consult-laptop",
-                "before": "open on SOAP notes (05-2)",
+                "before": "open on SOAP notes (05-3)",
                 "during": "open at the desk edge, microphone icon still glowing",
                 "after": "shows the speciality-specific planner (06-1)",
                 "heldBy": "none"
@@ -2093,11 +2208,11 @@
             "ananya": {
               "anchor": [
                 803,
-                1082
+                1276
               ],
               "face": [
                 748,
-                978,
+                1172,
                 110,
                 130
               ]

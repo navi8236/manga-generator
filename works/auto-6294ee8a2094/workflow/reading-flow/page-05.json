@@ -10,7 +10,7 @@
         24,
         24,
         976,
-        600
+        520
       ],
       "steps": [
         {
@@ -29,7 +29,7 @@
           ],
           "mouth": [
             634,
-            370
+            350
           ]
         },
         {
@@ -38,13 +38,13 @@
           "text": "PATIENT DETAILS: current vitals · prior health info · allergy panel · AI mic on · patient docs · lab reports",
           "rect": [
             40,
-            324,
+            294,
             363,
             234
           ],
           "center": [
             221.5,
-            441
+            411
           ],
           "mouth": null
         }
@@ -53,11 +53,11 @@
         "ananya": {
           "anchor": [
             634,
-            370
+            350
           ],
           "face": [
             584,
-            274,
+            254,
             100,
             120
           ]
@@ -65,11 +65,11 @@
         "ravi": {
           "anchor": [
             884,
-            390
+            370
           ],
           "face": [
             834,
-            294,
+            274,
             100,
             120
           ]
@@ -83,7 +83,7 @@
         ],
         "exit": [
           990,
-          620
+          540
         ]
       },
       "groups": null,
@@ -93,9 +93,128 @@
       "id": "05-2",
       "rect": [
         24,
-        648,
+        568,
+        976,
+        330
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "ananya",
+          "text": "May the AI listen and save notes of our talk?",
+          "rect": [
+            40,
+            584,
+            332,
+            106
+          ],
+          "center": [
+            206,
+            637
+          ],
+          "mouth": [
+            184,
+            794
+          ]
+        },
+        {
+          "number": 2,
+          "speaker": "ravi",
+          "text": "Yes, I agree.",
+          "rect": [
+            724,
+            584,
+            199,
+            74
+          ],
+          "center": [
+            823.5,
+            621
+          ],
+          "mouth": [
+            864,
+            784
+          ]
+        },
+        {
+          "number": 3,
+          "speaker": "label",
+          "text": "AI VOICE CONSENT: asked at the first visit, before any voice is saved",
+          "rect": [
+            354,
+            738,
+            369,
+            138
+          ],
+          "center": [
+            538.5,
+            807
+          ],
+          "mouth": null
+        }
+      ],
+      "faces": {
+        "ananya": {
+          "anchor": [
+            184,
+            794
+          ],
+          "face": [
+            144,
+            718,
+            80,
+            95
+          ]
+        },
+        "ravi": {
+          "anchor": [
+            864,
+            784
+          ],
+          "face": [
+            824,
+            708,
+            80,
+            95
+          ]
+        }
+      },
+      "protected": [],
+      "intent": {
+        "entry": [
+          40,
+          584
+        ],
+        "exit": [
+          990,
+          894
+        ]
+      },
+      "groups": null,
+      "warnings": [
+        {
+          "from": 1,
+          "to": 2,
+          "reason": "左から右へ戻る移動と縦方向の範囲が重なる。段差・余白・人物の配置を目視で検討する。"
+        },
+        {
+          "code": "nonconsecutive-cluster",
+          "from": 1,
+          "expected": 2,
+          "competing": 3,
+          "expectedGap": 352,
+          "competingGap": 48,
+          "reason": "非連続の吹き出しが同じ縦列で近接し、間の返答を飛ばして続けて読まれる候補。番号なしで確認し、行・会話グループ・人物配置またはコマ分割を直す。"
+        }
+      ]
+    },
+    {
+      "id": "05-3",
+      "rect": [
+        24,
+        922,
         560,
-        816
+        542
       ],
       "steps": [
         {
@@ -104,17 +223,17 @@
           "text": "I've been feeling tired lately.",
           "rect": [
             40,
-            664,
+            938,
             257,
             106
           ],
           "center": [
             168.5,
-            717
+            991
           ],
           "mouth": [
-            379,
-            952
+            409,
+            1166
           ]
         },
         {
@@ -123,13 +242,13 @@
           "text": "SOAP NOTES: fill in manually and choose ICD or SNOMED codes, or let AI listen and summarise the conversation",
           "rect": [
             40,
-            1188,
+            1212,
             340,
             234
           ],
           "center": [
             210,
-            1305
+            1329
           ],
           "mouth": null
         }
@@ -137,12 +256,12 @@
       "faces": {
         "ravi": {
           "anchor": [
-            379,
-            952
+            409,
+            1166
           ],
           "face": [
-            324,
-            848,
+            354,
+            1062,
             110,
             130
           ]
@@ -152,7 +271,7 @@
       "intent": {
         "entry": [
           40,
-          664
+          938
         ],
         "exit": [
           580,
@@ -163,12 +282,12 @@
       "warnings": []
     },
     {
-      "id": "05-3",
+      "id": "05-4",
       "rect": [
         608,
-        648,
+        922,
         392,
-        816
+        542
       ],
       "steps": [
         {
@@ -177,13 +296,13 @@
           "text": "Technology supports the workflow. The conversation stays human.",
           "rect": [
             624,
-            664,
+            938,
             311,
             170
           ],
           "center": [
             779.5,
-            749
+            1023
           ],
           "mouth": null
         }
@@ -192,11 +311,11 @@
         "ananya": {
           "anchor": [
             803,
-            1082
+            1276
           ],
           "face": [
             748,
-            978,
+            1172,
             110,
             130
           ]
@@ -206,7 +325,7 @@
       "intent": {
         "entry": [
           624,
-          664
+          938
         ],
         "exit": [
           990,

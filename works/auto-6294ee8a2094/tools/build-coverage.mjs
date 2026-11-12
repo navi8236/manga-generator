@@ -32,8 +32,9 @@ const notes = {
   '04-2': [['04-2'], 'The nurse (cast + nurse sheet) takes Ravi\'s vitals with a cuff and oximeter; the monitor shows no readings; caption and line verbatim.'],
   '04-3': [['04-3'], 'Cut to the consultation room: Dr. Ananya reads a notification on her tablet; the screen is drawn blank and "RAVI · READY" is lettered over it; caption verbatim.'],
   '05-1': [['05-1'], 'Reworked page 5 (2026-11-12, user request). Consultation-room greeting with the laptop opened on the patient details section; the screen is drawn with abstract cards and the label is lettered over it in the user\'s wording; line verbatim.'],
-  '05-2': [['05-2'], 'Ravi states a routine concern (no diagnosis drawn or written) while the laptop shows SOAP notes with the AI mic listening; line and label verbatim.'],
-  '05-3': [['05-3'], 'Ananya listens, eyes on Ravi, with the laptop open beside her; the caption is verbatim.'],
+  '05-2': [['05-2'], 'First-time AI voice consent (2026-11-12 user note): the laptop shows a text-free consent card; Ananya asks and Ravi agrees before any voice is saved; lines and label verbatim.'],
+  '05-3': [['05-3'], 'Ravi states a routine concern (no diagnosis drawn or written) while the laptop shows SOAP notes with the AI mic listening; line and label verbatim.'],
+  '05-4': [['05-4'], 'Ananya listens, eyes on Ravi, with the laptop open beside her; the caption is verbatim.'],
   '06-1': [['06-1'], 'New page 6 (2026-11-12, user request). Close-up of the speciality-specific treatment planner: three text-free example tiles (tooth chart, eye diagram, growth chart and vaccine card); heading and tile labels lettered verbatim.'],
   '06-2': [['06-2'], 'Ananya discusses next steps with a reassuring gesture and no treatment details; the laptop shows the plan of care section with abstract cards; line and label verbatim.'],
   '07-1': [['07-1'], 'Meera introduces the Welbuk Health patient app on a phone; line verbatim.'],
@@ -53,7 +54,7 @@ const notes = {
 const cuts = [{ start: 0, key: 'intro' }];
 for (let page = 1; page <= 8; page++) {
   const pageAt = at(`PAGE ${page} —`);
-  const panelCount = page === 1 ? 3 : page === 3 ? 5 : page === 4 ? 3 : page === 5 ? 3 : page === 6 ? 2 : 4;
+  const panelCount = page === 1 ? 3 : page === 3 ? 5 : page === 4 ? 3 : page === 5 ? 4 : page === 6 ? 2 : 4;
   for (let n = 1; n <= panelCount; n++) {
     const start = n === 1 ? pageAt : at(`Panel ${n}`, pageAt);
     cuts.push({ start, key: `0${page}-${n}` });

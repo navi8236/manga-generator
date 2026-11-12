@@ -838,13 +838,14 @@ const pages = [];
 // PAGE 5 — MORE TIME FOR CARE (reworked 2026-11-12 at the user's request: the doctor's screen)
 const SCREEN = 'The laptop screen shows only abstract light cards, simple icons and blank bars (draw NO text, letters or numbers; no real data); the section name and contents are lettered over it later.';
 {
-  const r1 = panelRect(24, 24, 976, 600);
-  const r2 = panelRect(24, 648, 560, 816);
-  const r3 = panelRect(608, 648, 392, 816);
+  const r1 = panelRect(24, 24, 976, 520);
+  const rc = panelRect(24, 568, 976, 330);
+  const r2 = panelRect(24, 922, 560, 542);
+  const r3 = panelRect(608, 922, 392, 542);
   pages.push({
     id: '05',
     section: 'consultation',
-    purpose: 'The consultation stays human while the doctor’s screen supports it: patient details, then SOAP notes with the AI listening. No diagnosis or medical claim.',
+    purpose: 'The consultation stays human while the doctor’s screen supports it: patient details, a first-time consent check before any AI voice is saved, then SOAP notes with the AI listening. No diagnosis or medical claim.',
     expectation: 'What else does the doctor’s screen do?',
     panels: [
       {
@@ -864,77 +865,110 @@ const SCREEN = 'The laptop screen shows only abstract light cards, simple icons 
           bridge: 'Ravi walks into the consultation room the reader saw in 04-3 and sits down; Ananya has put her tablet away and opened the laptop that was closed in 04-3; same costumes show it is the same visit.',
           settingBasis: 'Source (reworked 2026-11-12): "She has opened her laptop, angled so the reader can see it, on the first screen section, patient details."',
         },
-        readingFlow: { entry: [40, 40], exit: [990, 620] },
+        readingFlow: { entry: [40, 40], exit: [990, 540] },
         production: {
           moment: 'Ananya greets Ravi as he settles into the chair.',
           before: 'Ananya was notified that Ravi was ready (04-3).',
-          after: 'Ravi explains why he came while SOAP notes open (05-2).',
+          after: 'Before the AI mic listens, Ananya asks for Ravi’s consent (05-2).',
           hands: {
             ananya: hands('open palm welcoming Ravi', 'resting on the desk beside the consult-laptop'),
             ravi: hands('on the chair armrest as he sits', 'resting on his knee'),
           },
           props: [
-            prop('consult-laptop', 'closed on the desk (04-3)', 'open, screen toward the reader, patient-details cards', 'open on SOAP notes (05-2)', 'none'),
+            prop('consult-laptop', 'closed on the desk (04-3)', 'open, screen toward the reader, patient-details cards', 'shows the AI voice consent card (05-2)', 'none'),
             prop('doctor-tablet', 'read after the alert (04-3)', 'put away in the desk drawer, not visible', 'put away', 'none'),
             prop('shoulder-bag', 'on Ravi’s shoulder', 'set down on the floor beside his chair', 'beside his chair', 'none'),
           ],
         },
         speakers: {
-          ananya: speaker(r1, [560, 250, 100, 120]),
-          ravi: speaker(r1, [810, 270, 100, 120]),
+          ananya: speaker(r1, [560, 230, 100, 120]),
+          ravi: speaker(r1, [810, 250, 100, 120]),
         },
         dialogue: [
           line('ananya', ['Hello, Ravi.', 'Tell me what', 'brings you in.'], 600, 16),
-          line('label', ['PATIENT DETAILS:', 'current vitals ·', 'prior health info ·', 'allergy panel ·', 'AI mic on ·', 'patient docs · lab reports'], 16, 300),
+          line('label', ['PATIENT DETAILS:', 'current vitals ·', 'prior health info ·', 'allergy panel ·', 'AI mic on ·', 'patient docs · lab reports'], 16, 270),
         ],
       },
       {
         id: '05-2',
         order: 2,
-        role: '始動',
-        beat: 'Ravi shares a routine concern; SOAP notes listen',
-        rect: r2,
+        role: '反応',
+        beat: 'First-time AI voice consent',
+        rect: rc,
         scene:
-          'Tall panel. Upper half: Ravi in the patient chair faces screen-left toward the doctor (off-panel left), rubbing the back of his neck with his right hand, a slightly tired but candid expression; his left hand (wristwatch) rests on his knee. Lower half, in the foreground: the laptop screen seen at an angle from the doctor’s side, filling the lower half of the panel: a notes layout of four stacked light blocks marked by four small icons, a glowing teal microphone icon with sound-wave arcs (AI listening), and a small row of code-tag chips. ' + SCREEN + ' Plain wall at the top-left for a balloon.',
-        action: 'Ravi explains, a little sheepish, while the notes listen.',
-        emotion: 'Mildly tired, honest.',
-        camera: 'Tall medium shot from the doctor’s side, past the laptop, Ravi facing screen-left.',
-        information: 'A routine concern only; no diagnosis is shown. The AI mic is on in SOAP notes.',
-        readingFlow: { entry: [40, 664], exit: [580, 1460] },
+          'Wide panel in the same consultation room. At left, Dr. Ananya turns toward Ravi and asks with an open palm gesturing toward the laptop; at centre in the foreground, the open laptop on her side of the desk, screen toward the reader, showing a single consent card: a large microphone icon, a shield icon, an empty check box being ticked and two rounded buttons (one teal). ' + SCREEN + ' At right, Ravi nods with a small smile and an open hand, agreeing. Plain wall across the top for two balloons.',
+        action: 'Ananya asks before the AI mic records; Ravi agrees.',
+        emotion: 'Respectful, reassured.',
+        camera: 'Wide eye-level shot past the laptop.',
+        information: 'At the first visit the patient is asked before any AI voice notes are saved.',
+        readingFlow: { entry: [40, 584], exit: [990, 894] },
         production: {
-          moment: 'Ravi describes feeling tired; the microphone icon glows.',
-          before: 'The doctor asked what brings him in (05-1).',
-          after: 'The doctor listens, eyes on Ravi (05-3).',
-          hands: { ravi: hands('resting on his knee', 'rubbing the back of his neck') },
-          props: [prop('consult-laptop', 'open on patient details (05-1)', 'open on SOAP notes, microphone icon glowing', 'open beside Ananya (05-3)', 'none')],
+          moment: 'Ravi says yes as the consent box is ticked.',
+          before: 'Ananya greeted Ravi; his details are on screen (05-1).',
+          after: 'With consent given, SOAP notes listen as Ravi explains (05-3).',
+          hands: {
+            ananya: hands('open palm gesturing toward the consult-laptop', 'resting on the desk'),
+            ravi: hands('open hand raised slightly in agreement', 'resting on his knee'),
+          },
+          props: [prop('consult-laptop', 'patient-details cards (05-1)', 'screen toward the reader: AI voice consent card, check box being ticked', 'opens SOAP notes (05-3)', 'none')],
         },
-        speakers: { ravi: speaker(r2, [300, 200, 110, 130]) },
+        speakers: {
+          ananya: speaker(rc, [120, 150, 80, 95]),
+          ravi: speaker(rc, [800, 140, 80, 95]),
+        },
         dialogue: [
-          line('ravi', ["I've been feeling", 'tired lately.'], 16, 16),
-          line('label', ['SOAP NOTES:', 'fill in manually and', 'choose ICD or SNOMED', 'codes, or let AI listen', 'and summarise the', 'conversation'], 16, 540),
+          line('ananya', ['May the AI listen and', 'save notes of our talk?'], 16, 16),
+          line('ravi', ['Yes, I agree.'], 700, 16),
+          line('label', ['AI VOICE CONSENT:', 'asked at the first visit,', 'before any voice is saved'], 330, 170),
         ],
       },
       {
         id: '05-3',
         order: 3,
+        role: '始動',
+        beat: 'Ravi shares a routine concern; SOAP notes listen',
+        rect: r2,
+        scene:
+          'Upper half: Ravi in the patient chair faces screen-left toward the doctor (off-panel left), rubbing the back of his neck with his right hand, a slightly tired but candid expression; his left hand (wristwatch) rests on his knee. Lower half, in the foreground: the laptop screen seen at an angle from the doctor’s side, filling the lower half of the panel: a notes layout of four stacked light blocks marked by four small icons, a glowing teal microphone icon with sound-wave arcs (AI listening), and a small row of code-tag chips. ' + SCREEN + ' Plain wall at the top-left for a balloon.',
+        action: 'Ravi explains, a little sheepish, while the notes listen.',
+        emotion: 'Mildly tired, honest.',
+        camera: 'Tall medium shot from the doctor’s side, past the laptop, Ravi facing screen-left.',
+        information: 'A routine concern only; no diagnosis is shown. The AI mic is on in SOAP notes.',
+        readingFlow: { entry: [40, 938], exit: [580, 1460] },
+        production: {
+          moment: 'Ravi describes feeling tired; the microphone icon glows.',
+          before: 'Ravi agreed to the AI listening (05-2); the doctor had asked what brings him in (05-1).',
+          after: 'The doctor listens, eyes on Ravi (05-4).',
+          hands: { ravi: hands('resting on his knee', 'rubbing the back of his neck') },
+          props: [prop('consult-laptop', 'consent given on the consent card (05-2)', 'open on SOAP notes, microphone icon glowing', 'open beside Ananya (05-4)', 'none')],
+        },
+        speakers: { ravi: speaker(r2, [330, 140, 110, 130]) },
+        dialogue: [
+          line('ravi', ["I've been feeling", 'tired lately.'], 16, 16),
+          line('label', ['SOAP NOTES:', 'fill in manually and', 'choose ICD or SNOMED', 'codes, or let AI listen', 'and summarise the', 'conversation'], 16, 290),
+        ],
+      },
+      {
+        id: '05-4',
+        order: 4,
         role: '反応',
         beat: 'The doctor listens; technology stays in the background',
         rect: r3,
         scene:
-          'Tall panel. Dr. Ananya leans slightly forward at her desk, hands folded, listening with full attention and gentle eye contact toward Ravi (off-panel right), NOT looking at the laptop, which stands open at the left edge of the desk showing only soft abstract cards and a small glowing microphone icon. Window with a plant behind. Plain wall in the upper third for a caption.',
+          'Dr. Ananya leans slightly forward at her desk, hands folded, listening with full attention and gentle eye contact toward Ravi (off-panel right), NOT looking at the laptop, which stands open at the left edge of the desk showing only soft abstract cards and a small glowing microphone icon. Window with a plant behind. Plain wall in the upper third for a caption.',
         action: 'Ananya nods slowly while listening.',
         emotion: 'Attentive, compassionate.',
         camera: 'Tall medium shot, Ananya facing screen-right.',
         information: 'Technology supports the workflow; the conversation is human.',
-        readingFlow: { entry: [624, 664], exit: [990, 1460] },
+        readingFlow: { entry: [624, 938], exit: [990, 1460] },
         production: {
           moment: 'Ananya listening, mid-nod.',
           before: 'Ravi described his tiredness.',
           after: 'The screen moves to the speciality-specific planner (06-1).',
           hands: { ananya: hands('folded under the right hand on the desk', 'folded over the left hand on the desk') },
-          props: [prop('consult-laptop', 'open on SOAP notes (05-2)', 'open at the desk edge, microphone icon still glowing', 'shows the speciality-specific planner (06-1)', 'none')],
+          props: [prop('consult-laptop', 'open on SOAP notes (05-3)', 'open at the desk edge, microphone icon still glowing', 'shows the speciality-specific planner (06-1)', 'none')],
         },
-        speakers: { ananya: speaker(r3, [140, 330, 110, 130]) },
+        speakers: { ananya: speaker(r3, [140, 250, 110, 130]) },
         dialogue: [
           line('narration', ['Technology supports', 'the workflow. The', 'conversation stays', 'human.'], 16, 16),
         ],
