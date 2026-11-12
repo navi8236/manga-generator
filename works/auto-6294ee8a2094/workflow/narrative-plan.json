@@ -571,6 +571,89 @@
     },
     {
       "page": "09",
+      "feeling": "Show the follow-up visit from the clinic side: an automatic WhatsApp reminder, Ravi arriving with nothing to carry because Welbuk already holds his records, self check-in, the token, and a consultation with his history already open. Each caption names what the clinic saves.",
+      "questionForNextPage": "Does Welbuk stop at one clinic?",
+      "intent": {
+        "emotion": "Show the follow-up visit from the clinic side: an automatic WhatsApp reminder, Ravi arriving with nothing to carry because Welbuk already holds his records, self check-in, the token, and a consultation with his history already open. Each caption names what the clinic saves.",
+        "revealOrder": null,
+        "peakPanel": null,
+        "turnQuestion": "Does Welbuk stop at one clinic?",
+        "turnAnswer": null
+      },
+      "showcase": null,
+      "diagnostics": {
+        "showcaseExists": true,
+        "areaRange": [
+          180880,
+          499712
+        ],
+        "strengthsEqual": false
+      },
+      "panels": [
+        {
+          "id": "09-1",
+          "beat": "The clinic sends the follow-up reminder on WhatsApp",
+          "camera": "Medium shot, eye level.",
+          "area": 238000,
+          "strength": 0.48,
+          "showcase": false,
+          "information": "Welbuk Practice sends the follow-up reminder automatically on WhatsApp.",
+          "pause": null,
+          "readingGroups": null,
+          "layoutRow": null
+        },
+        {
+          "id": "09-2",
+          "beat": "Ravi arrives on a different day with nothing to carry",
+          "camera": "Full shot from inside the reception, eye level.",
+          "area": 238000,
+          "strength": 0.48,
+          "showcase": false,
+          "information": "No files to find or re-enter: Welbuk already holds his prescriptions and results.",
+          "pause": null,
+          "readingGroups": null,
+          "layoutRow": null
+        },
+        {
+          "id": "09-3",
+          "beat": "Self check-in with the QR code",
+          "camera": "Medium shot, three-quarter view.",
+          "area": 180880,
+          "strength": 0.36,
+          "showcase": false,
+          "information": "Self check-in: no queue and no typing at the desk.",
+          "pause": null,
+          "readingGroups": null,
+          "layoutRow": null
+        },
+        {
+          "id": "09-4",
+          "beat": "As usual, his token comes up on the screen",
+          "camera": "Medium-wide shot.",
+          "area": 180880,
+          "strength": 0.36,
+          "showcase": false,
+          "information": "His slot is called on the screen; no names shouted, no paper tokens.",
+          "pause": null,
+          "readingGroups": null,
+          "layoutRow": null
+        },
+        {
+          "id": "09-5",
+          "beat": "Dr. Ananya already has his history: care continues",
+          "camera": "Wide two-shot, eye level.",
+          "area": 499712,
+          "strength": 1,
+          "showcase": false,
+          "information": "His history and results are already open; the visit is shorter and paper-free.",
+          "pause": null,
+          "readingGroups": null,
+          "layoutRow": null
+        }
+      ]
+    },
+    {
+      "page": "10",
       "feeling": "Present the bigger Welbuk vision, clearly labelled as vision, then close on the three products and the three people.",
       "questionForNextPage": "Closing: Welbuk is building a connected healthcare ecosystem.",
       "intent": {
@@ -591,31 +674,31 @@
       },
       "panels": [
         {
-          "id": "09-1",
+          "id": "10-1",
           "beat": "Ravi travels to another city (hypothetical tomorrow)",
           "camera": "Medium shot from across the aisle.",
           "area": 206800,
           "strength": 0.35,
           "showcase": false,
-          "information": "A possible tomorrow beyond his hometown.",
+          "information": "Wherever he travels, his record goes with him.",
           "pause": null,
           "readingGroups": null,
           "layoutRow": null
         },
         {
-          "id": "09-2",
+          "id": "10-2",
           "beat": "WELBUK VISION: connected clinics and specialists",
           "camera": "Medium-wide shot, eye level.",
           "area": 212080,
           "strength": 0.36,
           "showcase": false,
-          "information": "Vision only: trusted connections across locations — not a launched feature.",
+          "information": "Vision only: trusted network clinics continue his care and gain referred patients — not a launched feature.",
           "pause": null,
           "readingGroups": null,
           "layoutRow": null
         },
         {
-          "id": "09-3",
+          "id": "10-3",
           "beat": "A family wellness ecosystem (vision)",
           "camera": "Medium-wide shot, slight high angle.",
           "area": 331840,
@@ -627,7 +710,7 @@
           "layoutRow": null
         },
         {
-          "id": "09-4",
+          "id": "10-4",
           "beat": "The three people and the three Welbuk products",
           "camera": "Medium-full group shot, eye level, symmetrical.",
           "area": 597312,
@@ -2915,6 +2998,372 @@
         "action": "Meera sees the notification at reception."
       },
       "after": {
+        "section": "followup",
+        "setting": {
+          "summary": "The follow-up visit on a different day (added 2026-11-12, Request 5): WhatsApp reminder, Ravi arrives empty-handed, self check-in, token, consultation with his history already open.",
+          "location": "Ravi’s home table; the clinic entrance, QR stand, waiting area with the TV, and the consultation room (same places as pages 3-5).",
+          "costumes": {
+            "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
+            "meera": "Blue kurta with white churidar, silver bangle on right wrist.",
+            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
+          },
+          "objects": {
+            "ravi-phone": "Ravi’s smartphone (dark blue case): a generic green chat-bubble reminder card with a calendar icon at home; a scan frame with a check mark at the QR stand. No logos, no text.",
+            "qr-stand": "The same small check-in stand just inside the entrance, abstract QR-like pattern (not a real code, no text).",
+            "waiting-tv": "The same wall-mounted waiting-room TV; teal screen with an empty white token strip; the token is lettered, never drawn.",
+            "doctor-tablet": "Dr. Ananya’s tablet: a simple timeline of cards with a test-tube icon and a check mark; no text or values."
+          }
+        },
+        "scene": "Ravi at home in daylight, sitting at a small table with a cup of tea, smiling at his phone (dark blue case) held in his right hand, screen toward the reader: one green chat-bubble message card with a small calendar icon (generic chat app, no logo, no text). Plain wall in the upper half for a caption and a label.",
+        "action": "Ravi reads the reminder."
+      },
+      "ledger": {
+        "timeBefore": null,
+        "timeAfter": null,
+        "locationBefore": "Ravi’s simple living room by a window; Dr. Ananya’s consultation desk; the clinic reception desk (manga supplement).",
+        "locationAfter": "Ravi’s home table; the clinic entrance, QR stand, waiting area with the TV, and the consultation room (same places as pages 3-5).",
+        "readerMustKnow": null,
+        "anchor": "visual-or-caption",
+        "anchorEvidencePanel": "09-1",
+        "axisBefore": null,
+        "axisAfter": null,
+        "resetCue": null,
+        "retainedObjects": [],
+        "changedObjects": [
+          "ravi-phone",
+          "doctor-tablet",
+          "monitor",
+          "qr-stand",
+          "waiting-tv"
+        ],
+        "actionBefore": "Meera sees the notification at reception.",
+        "actionAfter": "Ravi reads the reminder.",
+        "sourceBasis": null,
+        "supplementBasis": "User Request 5: \"clinic sends a wa msg to ravi about followup visit\"."
+      },
+      "bridge": "A new day at home after the results; the reminder sets up the follow-up visit.",
+      "settingBasis": "User Request 5: \"clinic sends a wa msg to ravi about followup visit\".",
+      "warnings": []
+    },
+    {
+      "from": "09-1",
+      "to": "09-2",
+      "pageBoundary": false,
+      "layoutBoundary": false,
+      "kind": "time-change",
+      "before": {
+        "section": "followup",
+        "setting": {
+          "summary": "The follow-up visit on a different day (added 2026-11-12, Request 5): WhatsApp reminder, Ravi arrives empty-handed, self check-in, token, consultation with his history already open.",
+          "location": "Ravi’s home table; the clinic entrance, QR stand, waiting area with the TV, and the consultation room (same places as pages 3-5).",
+          "costumes": {
+            "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
+            "meera": "Blue kurta with white churidar, silver bangle on right wrist.",
+            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
+          },
+          "objects": {
+            "ravi-phone": "Ravi’s smartphone (dark blue case): a generic green chat-bubble reminder card with a calendar icon at home; a scan frame with a check mark at the QR stand. No logos, no text.",
+            "qr-stand": "The same small check-in stand just inside the entrance, abstract QR-like pattern (not a real code, no text).",
+            "waiting-tv": "The same wall-mounted waiting-room TV; teal screen with an empty white token strip; the token is lettered, never drawn.",
+            "doctor-tablet": "Dr. Ananya’s tablet: a simple timeline of cards with a test-tube icon and a check mark; no text or values."
+          }
+        },
+        "scene": "Ravi at home in daylight, sitting at a small table with a cup of tea, smiling at his phone (dark blue case) held in his right hand, screen toward the reader: one green chat-bubble message card with a small calendar icon (generic chat app, no logo, no text). Plain wall in the upper half for a caption and a label.",
+        "action": "Ravi reads the reminder."
+      },
+      "after": {
+        "section": "followup",
+        "setting": {
+          "summary": "The follow-up visit on a different day (added 2026-11-12, Request 5): WhatsApp reminder, Ravi arrives empty-handed, self check-in, token, consultation with his history already open.",
+          "location": "Ravi’s home table; the clinic entrance, QR stand, waiting area with the TV, and the consultation room (same places as pages 3-5).",
+          "costumes": {
+            "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
+            "meera": "Blue kurta with white churidar, silver bangle on right wrist.",
+            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
+          },
+          "objects": {
+            "ravi-phone": "Ravi’s smartphone (dark blue case): a generic green chat-bubble reminder card with a calendar icon at home; a scan frame with a check mark at the QR stand. No logos, no text.",
+            "qr-stand": "The same small check-in stand just inside the entrance, abstract QR-like pattern (not a real code, no text).",
+            "waiting-tv": "The same wall-mounted waiting-room TV; teal screen with an empty white token strip; the token is lettered, never drawn.",
+            "doctor-tablet": "Dr. Ananya’s tablet: a simple timeline of cards with a test-tube icon and a check mark; no text or values."
+          }
+        },
+        "scene": "Morning, a different day: Ravi walks through the clinic’s glass entrance under the teal awning, smiling, both hands empty and relaxed (no file, no folder, no papers, no bag), his phone just visible in his shirt pocket, wristwatch on his left wrist. Plain sky and wall in the upper part for a caption.",
+        "action": "Ravi strolls in empty-handed."
+      },
+      "ledger": {
+        "timeBefore": null,
+        "timeAfter": null,
+        "locationBefore": "Ravi’s home table; the clinic entrance, QR stand, waiting area with the TV, and the consultation room (same places as pages 3-5).",
+        "locationAfter": "Ravi’s home table; the clinic entrance, QR stand, waiting area with the TV, and the consultation room (same places as pages 3-5).",
+        "readerMustKnow": null,
+        "anchor": "visual-or-caption",
+        "anchorEvidencePanel": "09-2",
+        "axisBefore": null,
+        "axisAfter": null,
+        "resetCue": null,
+        "retainedObjects": [
+          "ravi-phone",
+          "qr-stand",
+          "waiting-tv",
+          "doctor-tablet"
+        ],
+        "changedObjects": [],
+        "actionBefore": "Ravi reads the reminder.",
+        "actionAfter": "Ravi strolls in empty-handed.",
+        "sourceBasis": null,
+        "supplementBasis": "User Request 5: \"ravi arrives diff day free hand nothing no papers, reports or prescriptions\"."
+      },
+      "bridge": "The caption \"On the day\" and the morning light at the familiar entrance mark the follow-up day.",
+      "settingBasis": "User Request 5: \"ravi arrives diff day free hand nothing no papers, reports or prescriptions\".",
+      "warnings": []
+    },
+    {
+      "from": "09-2",
+      "to": "09-3",
+      "pageBoundary": false,
+      "layoutBoundary": false,
+      "kind": "continuation",
+      "before": {
+        "section": "followup",
+        "setting": {
+          "summary": "The follow-up visit on a different day (added 2026-11-12, Request 5): WhatsApp reminder, Ravi arrives empty-handed, self check-in, token, consultation with his history already open.",
+          "location": "Ravi’s home table; the clinic entrance, QR stand, waiting area with the TV, and the consultation room (same places as pages 3-5).",
+          "costumes": {
+            "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
+            "meera": "Blue kurta with white churidar, silver bangle on right wrist.",
+            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
+          },
+          "objects": {
+            "ravi-phone": "Ravi’s smartphone (dark blue case): a generic green chat-bubble reminder card with a calendar icon at home; a scan frame with a check mark at the QR stand. No logos, no text.",
+            "qr-stand": "The same small check-in stand just inside the entrance, abstract QR-like pattern (not a real code, no text).",
+            "waiting-tv": "The same wall-mounted waiting-room TV; teal screen with an empty white token strip; the token is lettered, never drawn.",
+            "doctor-tablet": "Dr. Ananya’s tablet: a simple timeline of cards with a test-tube icon and a check mark; no text or values."
+          }
+        },
+        "scene": "Morning, a different day: Ravi walks through the clinic’s glass entrance under the teal awning, smiling, both hands empty and relaxed (no file, no folder, no papers, no bag), his phone just visible in his shirt pocket, wristwatch on his left wrist. Plain sky and wall in the upper part for a caption.",
+        "action": "Ravi strolls in empty-handed."
+      },
+      "after": {
+        "section": "followup",
+        "setting": {
+          "summary": "The follow-up visit on a different day (added 2026-11-12, Request 5): WhatsApp reminder, Ravi arrives empty-handed, self check-in, token, consultation with his history already open.",
+          "location": "Ravi’s home table; the clinic entrance, QR stand, waiting area with the TV, and the consultation room (same places as pages 3-5).",
+          "costumes": {
+            "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
+            "meera": "Blue kurta with white churidar, silver bangle on right wrist.",
+            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
+          },
+          "objects": {
+            "ravi-phone": "Ravi’s smartphone (dark blue case): a generic green chat-bubble reminder card with a calendar icon at home; a scan frame with a check mark at the QR stand. No logos, no text.",
+            "qr-stand": "The same small check-in stand just inside the entrance, abstract QR-like pattern (not a real code, no text).",
+            "waiting-tv": "The same wall-mounted waiting-room TV; teal screen with an empty white token strip; the token is lettered, never drawn.",
+            "doctor-tablet": "Dr. Ananya’s tablet: a simple timeline of cards with a test-tube icon and a check mark; no text or values."
+          }
+        },
+        "scene": "Just inside the glass entrance: Ravi holds his phone up to the small QR check-in stand (abstract QR-like pattern in a teal frame, not a real code, no text); his phone shows a scan frame and a check mark. Meera works at the reception desk in the background, not needed. Plain wall in the upper part for a caption.",
+        "action": "Ravi scans the QR code."
+      },
+      "ledger": {
+        "timeBefore": null,
+        "timeAfter": null,
+        "locationBefore": "Ravi’s home table; the clinic entrance, QR stand, waiting area with the TV, and the consultation room (same places as pages 3-5).",
+        "locationAfter": "Ravi’s home table; the clinic entrance, QR stand, waiting area with the TV, and the consultation room (same places as pages 3-5).",
+        "readerMustKnow": null,
+        "anchor": null,
+        "anchorEvidencePanel": "09-3",
+        "axisBefore": null,
+        "axisAfter": null,
+        "resetCue": null,
+        "retainedObjects": [
+          "ravi-phone",
+          "qr-stand",
+          "waiting-tv",
+          "doctor-tablet"
+        ],
+        "changedObjects": [],
+        "actionBefore": "Ravi strolls in empty-handed.",
+        "actionAfter": "Ravi scans the QR code.",
+        "sourceBasis": null,
+        "supplementBasis": null
+      },
+      "bridge": null,
+      "settingBasis": null,
+      "warnings": []
+    },
+    {
+      "from": "09-3",
+      "to": "09-4",
+      "pageBoundary": false,
+      "layoutBoundary": false,
+      "kind": "continuation",
+      "before": {
+        "section": "followup",
+        "setting": {
+          "summary": "The follow-up visit on a different day (added 2026-11-12, Request 5): WhatsApp reminder, Ravi arrives empty-handed, self check-in, token, consultation with his history already open.",
+          "location": "Ravi’s home table; the clinic entrance, QR stand, waiting area with the TV, and the consultation room (same places as pages 3-5).",
+          "costumes": {
+            "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
+            "meera": "Blue kurta with white churidar, silver bangle on right wrist.",
+            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
+          },
+          "objects": {
+            "ravi-phone": "Ravi’s smartphone (dark blue case): a generic green chat-bubble reminder card with a calendar icon at home; a scan frame with a check mark at the QR stand. No logos, no text.",
+            "qr-stand": "The same small check-in stand just inside the entrance, abstract QR-like pattern (not a real code, no text).",
+            "waiting-tv": "The same wall-mounted waiting-room TV; teal screen with an empty white token strip; the token is lettered, never drawn.",
+            "doctor-tablet": "Dr. Ananya’s tablet: a simple timeline of cards with a test-tube icon and a check mark; no text or values."
+          }
+        },
+        "scene": "Just inside the glass entrance: Ravi holds his phone up to the small QR check-in stand (abstract QR-like pattern in a teal frame, not a real code, no text); his phone shows a scan frame and a check mark. Meera works at the reception desk in the background, not needed. Plain wall in the upper part for a caption.",
+        "action": "Ravi scans the QR code."
+      },
+      "after": {
+        "section": "followup",
+        "setting": {
+          "summary": "The follow-up visit on a different day (added 2026-11-12, Request 5): WhatsApp reminder, Ravi arrives empty-handed, self check-in, token, consultation with his history already open.",
+          "location": "Ravi’s home table; the clinic entrance, QR stand, waiting area with the TV, and the consultation room (same places as pages 3-5).",
+          "costumes": {
+            "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
+            "meera": "Blue kurta with white churidar, silver bangle on right wrist.",
+            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
+          },
+          "objects": {
+            "ravi-phone": "Ravi’s smartphone (dark blue case): a generic green chat-bubble reminder card with a calendar icon at home; a scan frame with a check mark at the QR stand. No logos, no text.",
+            "qr-stand": "The same small check-in stand just inside the entrance, abstract QR-like pattern (not a real code, no text).",
+            "waiting-tv": "The same wall-mounted waiting-room TV; teal screen with an empty white token strip; the token is lettered, never drawn.",
+            "doctor-tablet": "Dr. Ananya’s tablet: a simple timeline of cards with a test-tube icon and a check mark; no text or values."
+          }
+        },
+        "scene": "Waiting area: the wall-mounted waiting-room TV in the upper right shows a teal screen with one empty white token strip (no text or numbers). Ravi sits in a waiting chair, phone in his lap, looking up at the TV with a small smile; two other patients seen from behind. Plain wall in the upper left for a caption.",
+        "action": "Ravi sees his slot called."
+      },
+      "ledger": {
+        "timeBefore": null,
+        "timeAfter": null,
+        "locationBefore": "Ravi’s home table; the clinic entrance, QR stand, waiting area with the TV, and the consultation room (same places as pages 3-5).",
+        "locationAfter": "Ravi’s home table; the clinic entrance, QR stand, waiting area with the TV, and the consultation room (same places as pages 3-5).",
+        "readerMustKnow": null,
+        "anchor": null,
+        "anchorEvidencePanel": "09-4",
+        "axisBefore": null,
+        "axisAfter": null,
+        "resetCue": null,
+        "retainedObjects": [
+          "ravi-phone",
+          "qr-stand",
+          "waiting-tv",
+          "doctor-tablet"
+        ],
+        "changedObjects": [],
+        "actionBefore": "Ravi scans the QR code.",
+        "actionAfter": "Ravi sees his slot called.",
+        "sourceBasis": null,
+        "supplementBasis": null
+      },
+      "bridge": null,
+      "settingBasis": null,
+      "warnings": []
+    },
+    {
+      "from": "09-4",
+      "to": "09-5",
+      "pageBoundary": false,
+      "layoutBoundary": false,
+      "kind": "continuation",
+      "before": {
+        "section": "followup",
+        "setting": {
+          "summary": "The follow-up visit on a different day (added 2026-11-12, Request 5): WhatsApp reminder, Ravi arrives empty-handed, self check-in, token, consultation with his history already open.",
+          "location": "Ravi’s home table; the clinic entrance, QR stand, waiting area with the TV, and the consultation room (same places as pages 3-5).",
+          "costumes": {
+            "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
+            "meera": "Blue kurta with white churidar, silver bangle on right wrist.",
+            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
+          },
+          "objects": {
+            "ravi-phone": "Ravi’s smartphone (dark blue case): a generic green chat-bubble reminder card with a calendar icon at home; a scan frame with a check mark at the QR stand. No logos, no text.",
+            "qr-stand": "The same small check-in stand just inside the entrance, abstract QR-like pattern (not a real code, no text).",
+            "waiting-tv": "The same wall-mounted waiting-room TV; teal screen with an empty white token strip; the token is lettered, never drawn.",
+            "doctor-tablet": "Dr. Ananya’s tablet: a simple timeline of cards with a test-tube icon and a check mark; no text or values."
+          }
+        },
+        "scene": "Waiting area: the wall-mounted waiting-room TV in the upper right shows a teal screen with one empty white token strip (no text or numbers). Ravi sits in a waiting chair, phone in his lap, looking up at the TV with a small smile; two other patients seen from behind. Plain wall in the upper left for a caption.",
+        "action": "Ravi sees his slot called."
+      },
+      "after": {
+        "section": "followup",
+        "setting": {
+          "summary": "The follow-up visit on a different day (added 2026-11-12, Request 5): WhatsApp reminder, Ravi arrives empty-handed, self check-in, token, consultation with his history already open.",
+          "location": "Ravi’s home table; the clinic entrance, QR stand, waiting area with the TV, and the consultation room (same places as pages 3-5).",
+          "costumes": {
+            "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
+            "meera": "Blue kurta with white churidar, silver bangle on right wrist.",
+            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
+          },
+          "objects": {
+            "ravi-phone": "Ravi’s smartphone (dark blue case): a generic green chat-bubble reminder card with a calendar icon at home; a scan frame with a check mark at the QR stand. No logos, no text.",
+            "qr-stand": "The same small check-in stand just inside the entrance, abstract QR-like pattern (not a real code, no text).",
+            "waiting-tv": "The same wall-mounted waiting-room TV; teal screen with an empty white token strip; the token is lettered, never drawn.",
+            "doctor-tablet": "Dr. Ananya’s tablet: a simple timeline of cards with a test-tube icon and a check mark; no text or values."
+          }
+        },
+        "scene": "The consultation room (window with plant): Dr. Ananya at her desk smiles and greets Ravi as he sits down opposite her, empty-handed. She holds her tablet angled toward the reader; it shows a simple timeline of cards with a test-tube icon and a check mark (no text, no values). Plain wall across the top for a balloon and a caption.",
+        "action": "Ananya welcomes Ravi back."
+      },
+      "ledger": {
+        "timeBefore": null,
+        "timeAfter": null,
+        "locationBefore": "Ravi’s home table; the clinic entrance, QR stand, waiting area with the TV, and the consultation room (same places as pages 3-5).",
+        "locationAfter": "Ravi’s home table; the clinic entrance, QR stand, waiting area with the TV, and the consultation room (same places as pages 3-5).",
+        "readerMustKnow": null,
+        "anchor": null,
+        "anchorEvidencePanel": "09-5",
+        "axisBefore": null,
+        "axisAfter": null,
+        "resetCue": null,
+        "retainedObjects": [
+          "ravi-phone",
+          "qr-stand",
+          "waiting-tv",
+          "doctor-tablet"
+        ],
+        "changedObjects": [],
+        "actionBefore": "Ravi sees his slot called.",
+        "actionAfter": "Ananya welcomes Ravi back.",
+        "sourceBasis": null,
+        "supplementBasis": null
+      },
+      "bridge": null,
+      "settingBasis": null,
+      "warnings": []
+    },
+    {
+      "from": "09-5",
+      "to": "10-1",
+      "pageBoundary": true,
+      "layoutBoundary": true,
+      "kind": "time-change",
+      "before": {
+        "section": "followup",
+        "setting": {
+          "summary": "The follow-up visit on a different day (added 2026-11-12, Request 5): WhatsApp reminder, Ravi arrives empty-handed, self check-in, token, consultation with his history already open.",
+          "location": "Ravi’s home table; the clinic entrance, QR stand, waiting area with the TV, and the consultation room (same places as pages 3-5).",
+          "costumes": {
+            "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
+            "meera": "Blue kurta with white churidar, silver bangle on right wrist.",
+            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
+          },
+          "objects": {
+            "ravi-phone": "Ravi’s smartphone (dark blue case): a generic green chat-bubble reminder card with a calendar icon at home; a scan frame with a check mark at the QR stand. No logos, no text.",
+            "qr-stand": "The same small check-in stand just inside the entrance, abstract QR-like pattern (not a real code, no text).",
+            "waiting-tv": "The same wall-mounted waiting-room TV; teal screen with an empty white token strip; the token is lettered, never drawn.",
+            "doctor-tablet": "Dr. Ananya’s tablet: a simple timeline of cards with a test-tube icon and a check mark; no text or values."
+          }
+        },
+        "scene": "The consultation room (window with plant): Dr. Ananya at her desk smiles and greets Ravi as he sits down opposite her, empty-handed. She holds her tablet angled toward the reader; it shows a simple timeline of cards with a test-tube icon and a check mark (no text, no values). Plain wall across the top for a balloon and a caption.",
+        "action": "Ananya welcomes Ravi back."
+      },
+      "after": {
         "section": "travel",
         "setting": {
           "summary": "A possible tomorrow: Ravi travels to another Indian city by train. Hypothetical framing (\"care may take us beyond our hometown\").",
@@ -2930,21 +3379,22 @@
       "ledger": {
         "timeBefore": null,
         "timeAfter": null,
-        "locationBefore": "Ravi’s simple living room by a window; Dr. Ananya’s consultation desk; the clinic reception desk (manga supplement).",
+        "locationBefore": "Ravi’s home table; the clinic entrance, QR stand, waiting area with the TV, and the consultation room (same places as pages 3-5).",
         "locationAfter": "Indian Railways-style train seat by a window, passing city skyline (no signage).",
         "readerMustKnow": null,
         "anchor": "visual-or-caption",
-        "anchorEvidencePanel": "09-1",
+        "anchorEvidencePanel": "10-1",
         "axisBefore": null,
         "axisAfter": null,
         "resetCue": null,
         "retainedObjects": [],
         "changedObjects": [
           "ravi-phone",
-          "doctor-tablet",
-          "monitor"
+          "qr-stand",
+          "waiting-tv",
+          "doctor-tablet"
         ],
-        "actionBefore": "Meera sees the notification at reception.",
+        "actionBefore": "Ananya welcomes Ravi back.",
         "actionAfter": "Ravi gazes out of the window.",
         "sourceBasis": null,
         "supplementBasis": "Source: \"Ravi travels to another Indian city; simple train-window transition.\""
@@ -2954,8 +3404,8 @@
       "warnings": []
     },
     {
-      "from": "09-1",
-      "to": "09-2",
+      "from": "10-1",
+      "to": "10-2",
       "pageBoundary": false,
       "layoutBoundary": false,
       "kind": "scene-change",
@@ -2997,7 +3447,7 @@
         "locationAfter": "Idealised, airy spaces: a modern clinic in another city linked by faint dotted lines to small clinic silhouettes; a family living room. Lighter palette and rounded vignette border.",
         "readerMustKnow": null,
         "anchor": null,
-        "anchorEvidencePanel": "09-2",
+        "anchorEvidencePanel": "10-2",
         "axisBefore": null,
         "axisAfter": null,
         "resetCue": null,
@@ -3017,8 +3467,8 @@
       ]
     },
     {
-      "from": "09-2",
-      "to": "09-3",
+      "from": "10-2",
+      "to": "10-3",
       "pageBoundary": false,
       "layoutBoundary": false,
       "kind": "continuation",
@@ -3065,7 +3515,7 @@
         "locationAfter": "Idealised, airy spaces: a modern clinic in another city linked by faint dotted lines to small clinic silhouettes; a family living room. Lighter palette and rounded vignette border.",
         "readerMustKnow": null,
         "anchor": null,
-        "anchorEvidencePanel": "09-3",
+        "anchorEvidencePanel": "10-3",
         "axisBefore": null,
         "axisAfter": null,
         "resetCue": null,
@@ -3083,8 +3533,8 @@
       "warnings": []
     },
     {
-      "from": "09-3",
-      "to": "09-4",
+      "from": "10-3",
+      "to": "10-4",
       "pageBoundary": false,
       "layoutBoundary": false,
       "kind": "return",
@@ -3128,7 +3578,7 @@
         "locationAfter": "Clinic entrance with awning and plants, warm morning light.",
         "readerMustKnow": null,
         "anchor": "visual-or-caption",
-        "anchorEvidencePanel": "09-4",
+        "anchorEvidencePanel": "10-4",
         "axisBefore": null,
         "axisAfter": null,
         "resetCue": null,

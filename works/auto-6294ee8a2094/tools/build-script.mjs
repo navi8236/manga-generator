@@ -36,7 +36,7 @@ config.narrativeDesign = {
 config.style =
   'Full-colour, approachable Indian slice-of-life manga. Clean confident line art with varied line weight, soft flat cel shading, warm natural daylight, restrained blue and teal accents, simple readable backgrounds. Expressive but natural faces, precise hands. No photorealism, no glossy gradients, no surface microtexture. Absolutely no text, letters, logos, numbers, speech bubbles or captions inside the artwork; device screens show only abstract blank blocks and simple icons.';
 config.continuity =
-  'Keep Dr. Ananya, Meera, Ravi, the Nurse, Mr. Raman, Priya, the Pharmacist and the Lab Technician identical to their canonical reference sheets in face traits, hair, build, skin tone and clothing for the whole comic. Device screens never show readable text or real personal data. Page 9 panels 2-3 (09-2, 09-3) are a future vision: soft pale-blue vignette border and lighter, airy palette so they never read as current features.';
+  'Keep Dr. Ananya, Meera, Ravi, the Nurse, Mr. Raman, Priya, the Pharmacist and the Lab Technician identical to their canonical reference sheets in face traits, hair, build, skin tone and clothing for the whole comic. Device screens never show readable text or real personal data. Page 10 panels 2-3 (10-2, 10-3) are a future vision: soft pale-blue vignette border and lighter, airy palette so they never read as current features.';
 config.quality.avoid = [
   'Uniform microdetail, glossy gradients, dense decorative hatching, random grain and redundant highlights.',
   'Any readable text, logos, fake UI copy, real patient names or numbers on screens, papers or signs.',
@@ -304,6 +304,18 @@ config.sections = {
       'ravi-phone': 'Ravi’s smartphone (dark blue case): one results-ready notification card with a check mark, plus small generic app, envelope and chat-bubble icons; no logos and no text.',
       'doctor-tablet': 'Dr. Ananya’s tablet: one results-ready card with a check mark and a test-tube icon; no text or values.',
       monitor: 'Reception monitor angled toward the reader: one results-ready card with a check mark; no text or values.',
+    },
+  },
+  followup: {
+    summary:
+      'The follow-up visit on a different day (added 2026-11-12, Request 5): WhatsApp reminder, Ravi arrives empty-handed, self check-in, token, consultation with his history already open.',
+    location: 'Ravi’s home table; the clinic entrance, QR stand, waiting area with the TV, and the consultation room (same places as pages 3-5).',
+    costumes: { ananya: costumes.ananya, meera: costumes.meera, ravi: costumes.ravi },
+    objects: {
+      'ravi-phone': 'Ravi’s smartphone (dark blue case): a generic green chat-bubble reminder card with a calendar icon at home; a scan frame with a check mark at the QR stand. No logos, no text.',
+      'qr-stand': 'The same small check-in stand just inside the entrance, abstract QR-like pattern (not a real code, no text).',
+      'waiting-tv': 'The same wall-mounted waiting-room TV; teal screen with an empty white token strip; the token is lettered, never drawn.',
+      'doctor-tablet': 'Dr. Ananya’s tablet: a simple timeline of cards with a test-tube icon and a check mark; no text or values.',
     },
   },
   travel: {
@@ -1453,21 +1465,193 @@ const SCREEN = 'The laptop stands at about a three-quarter angle toward the read
   });
 }
 
-// PAGE 9 — THE BIGGER WELBUK VISION (was page 6 originally; 7, then 8, on 2026-11-12)
+// PAGE 9 — THE FOLLOW-UP VISIT (added 2026-11-12, Request 5: clinic-savings framing)
+{
+  const r1 = panelRect(24, 24, 476, 500);
+  const r2 = panelRect(524, 24, 476, 500);
+  const r3 = panelRect(24, 548, 476, 380);
+  const r4 = panelRect(524, 548, 476, 380);
+  const r5 = panelRect(24, 952, 976, 512);
+  pages.push({
+    id: '09',
+    section: 'followup',
+    purpose:
+      'Show the follow-up visit from the clinic side: an automatic WhatsApp reminder, Ravi arriving with nothing to carry because Welbuk already holds his records, self check-in, the token, and a consultation with his history already open. Each caption names what the clinic saves.',
+    expectation: 'Does Welbuk stop at one clinic?',
+    panels: [
+      {
+        id: '09-1',
+        order: 1,
+        role: '転換',
+        beat: 'The clinic sends the follow-up reminder on WhatsApp',
+        rect: r1,
+        scene:
+          'Ravi at home in daylight, sitting at a small table with a cup of tea, smiling at his phone (dark blue case) held in his right hand, screen toward the reader: one green chat-bubble message card with a small calendar icon (generic chat app, no logo, no text). Plain wall in the upper half for a caption and a label.',
+        action: 'Ravi reads the reminder.',
+        emotion: 'Pleased, unbothered.',
+        camera: 'Medium shot, eye level.',
+        information: 'Welbuk Practice sends the follow-up reminder automatically on WhatsApp.',
+        transition: {
+          kind: 'time-change',
+          bridge: 'A new day at home after the results; the reminder sets up the follow-up visit.',
+          settingBasis: 'User Request 5: "clinic sends a wa msg to ravi about followup visit".',
+        },
+        readingFlow: { entry: [40, 40], exit: [490, 430] },
+        production: {
+          moment: 'Ravi glances at the reminder on his phone.',
+          before: 'His results were ready (page 8).',
+          after: 'On the follow-up day he comes to the clinic (09-2).',
+          hands: { ravi: hands('resting beside his tea cup (wristwatch on this wrist)', 'holding ravi-phone') },
+          props: [prop('ravi-phone', 'on the table', 'in his right hand, reminder card on screen', 'in his pocket', 'ravi.right')],
+        },
+        speakers: { ravi: speaker(r1, [250, 200, 100, 120]) },
+        dialogue: [
+          line('narration', ['Welbuk Practice sends', "Ravi's follow-up", 'reminder on WhatsApp. No', 'calls from the front desk.'], 8, 4),
+          line('label', ['FOLLOW-UP', 'REMINDER'], 8, 182),
+        ],
+      },
+      {
+        id: '09-2',
+        order: 2,
+        role: '提示',
+        beat: 'Ravi arrives on a different day with nothing to carry',
+        rect: r2,
+        scene:
+          'Morning, a different day: Ravi walks through the clinic’s glass entrance under the teal awning, smiling, both hands empty and relaxed (no file, no folder, no papers, no bag), his phone just visible in his shirt pocket, wristwatch on his left wrist. Plain sky and wall in the upper part for a caption.',
+        action: 'Ravi strolls in empty-handed.',
+        emotion: 'Relaxed, confident.',
+        camera: 'Full shot from inside the reception, eye level.',
+        information: 'No files to find or re-enter: Welbuk already holds his prescriptions and results.',
+        transition: {
+          kind: 'time-change',
+          bridge: 'The caption "On the day" and the morning light at the familiar entrance mark the follow-up day.',
+          settingBasis: 'User Request 5: "ravi arrives diff day free hand nothing no papers, reports or prescriptions".',
+        },
+        readingFlow: { entry: [540, 40], exit: [990, 430] },
+        production: {
+          moment: 'Ravi steps through the entrance with free hands.',
+          before: 'He received the reminder (09-1).',
+          after: 'He checks in at the QR stand (09-3).',
+          hands: { ravi: hands('empty, relaxed at his side (wristwatch on this wrist)', 'empty, relaxed at his side') },
+          props: [prop('ravi-phone', 'in his shirt pocket', 'in his shirt pocket', 'in his hand for check-in', 'none')],
+        },
+        speakers: { ravi: speaker(r2, [200, 200, 70, 85]) },
+        dialogue: [
+          line('narration', ['On the day, Ravi arrives', 'empty-handed. No files to find,', 'no reports to re-enter:', 'Welbuk already has them.'], 8, 4),
+        ],
+      },
+      {
+        id: '09-3',
+        order: 3,
+        role: '始動',
+        beat: 'Self check-in with the QR code',
+        rect: r3,
+        scene:
+          'Just inside the glass entrance: Ravi holds his phone up to the small QR check-in stand (abstract QR-like pattern in a teal frame, not a real code, no text); his phone shows a scan frame and a check mark. Meera works at the reception desk in the background, not needed. Plain wall in the upper part for a caption.',
+        action: 'Ravi scans the QR code.',
+        emotion: 'Easy, focused.',
+        camera: 'Medium shot, three-quarter view.',
+        information: 'Self check-in: no queue and no typing at the desk.',
+        readingFlow: { entry: [40, 484], exit: [490, 880] },
+        production: {
+          moment: 'The phone confirms the check-in.',
+          before: 'He walked in empty-handed (09-2).',
+          after: 'He waits for his slot (09-4).',
+          hands: {
+            ravi: hands('relaxed at his side, empty (wristwatch on this wrist)', 'holding ravi-phone to the QR stand'),
+            meera: hands('typing at the reception keyboard (background)', 'typing at the reception keyboard (background)'),
+          },
+          props: [
+            prop('ravi-phone', 'in his shirt pocket', 'held to the QR stand, check mark on screen', 'in his hand', 'ravi.right'),
+            prop('qr-stand', 'just inside the entrance', 'being scanned', 'just inside the entrance', 'none'),
+          ],
+        },
+        speakers: {
+          ravi: speaker(r3, [270, 160, 90, 105]),
+          meera: speaker(r3, [60, 230, 40, 48]),
+        },
+        dialogue: [line('narration', ['He checks in himself.', 'No queue at the desk.'], 8, 4)],
+      },
+      {
+        id: '09-4',
+        order: 4,
+        role: '期待',
+        beat: 'As usual, his token comes up on the screen',
+        rect: r4,
+        scene:
+          'Waiting area: the wall-mounted waiting-room TV in the upper right shows a teal screen with one empty white token strip (no text or numbers). Ravi sits in a waiting chair, phone in his lap, looking up at the TV with a small smile; two other patients seen from behind. Plain wall in the upper left for a caption.',
+        action: 'Ravi sees his slot called.',
+        emotion: 'Calm.',
+        camera: 'Medium-wide shot.',
+        information: 'His slot is called on the screen; no names shouted, no paper tokens.',
+        readingFlow: { entry: [540, 484], exit: [990, 880] },
+        production: {
+          moment: 'His slot appears on the TV.',
+          before: 'He checked in (09-3).',
+          after: 'He goes in to Dr. Ananya (09-5).',
+          hands: { ravi: hands('resting on the chair arm (wristwatch on this wrist)', 'holding ravi-phone in his lap') },
+          props: [
+            prop('ravi-phone', 'in his hand', 'in his lap', 'in his pocket', 'ravi.right'),
+            prop('waiting-tv', 'on the wall', 'token strip shown', 'on the wall', 'none'),
+          ],
+        },
+        speakers: { ravi: speaker(r4, [180, 250, 70, 85]) },
+        dialogue: [
+          line('narration', ['As usual, his slot', 'comes up on the screen.'], 8, 4),
+          line('label', ['NOW · A-31'], 270, 120),
+        ],
+      },
+      {
+        id: '09-5',
+        order: 5,
+        role: '余韻',
+        beat: 'Dr. Ananya already has his history: care continues',
+        rect: r5,
+        scene:
+          'The consultation room (window with plant): Dr. Ananya at her desk smiles and greets Ravi as he sits down opposite her, empty-handed. She holds her tablet angled toward the reader; it shows a simple timeline of cards with a test-tube icon and a check mark (no text, no values). Plain wall across the top for a balloon and a caption.',
+        action: 'Ananya welcomes Ravi back.',
+        emotion: 'Warm, efficient.',
+        camera: 'Wide two-shot, eye level.',
+        information: 'His history and results are already open; the visit is shorter and paper-free.',
+        readingFlow: { entry: [40, 928], exit: [990, 1455] },
+        production: {
+          moment: 'Ananya greets Ravi with the tablet in hand.',
+          before: 'His slot was called (09-4).',
+          after: 'Welbuk does not stop at one clinic (page 10).',
+          hands: {
+            ananya: hands('holding the left edge of doctor-tablet', 'holding the right edge of doctor-tablet'),
+            ravi: hands('resting on his knee (wristwatch on this wrist)', 'resting on the chair arm'),
+          },
+          props: [prop('doctor-tablet', 'on her desk', 'held in both hands, history cards on screen', 'on her desk', 'ananya.left')],
+        },
+        speakers: {
+          ananya: speaker(r5, [300, 180, 110, 130]),
+          ravi: speaker(r5, [660, 200, 100, 120]),
+        },
+        dialogue: [
+          line('ananya', ['Welcome back, Ravi.', 'Your results are already here.'], 120, 16),
+          line('narration', ['Fewer missed follow-ups, shorter visits, less paperwork.', "The clinic's time goes to patients."], 16, 400),
+        ],
+      },
+    ],
+  });
+}
+
+// PAGE 10 — WELBUK DOESN'T STOP THERE (the vision; was page 6 originally; 7, 8, then 9 on 2026-11-12)
 {
   const r1 = panelRect(24, 24, 470, 440);
   const r2 = panelRect(518, 24, 482, 440);
   const r3 = panelRect(24, 488, 976, 340);
   const r4 = panelRect(24, 852, 976, 612);
   pages.push({
-    id: '09',
+    id: '10',
     section: 'vision',
     purpose:
       'Present the bigger Welbuk vision, clearly labelled as vision, then close on the three products and the three people.',
     expectation: 'Closing: Welbuk is building a connected healthcare ecosystem.',
     panels: [
       {
-        id: '09-1',
+        id: '10-1',
         order: 1,
         role: '転換',
         beat: 'Ravi travels to another city (hypothetical tomorrow)',
@@ -1477,7 +1661,7 @@ const SCREEN = 'The laptop stands at about a three-quarter angle toward the read
         action: 'Ravi gazes out of the window.',
         emotion: 'Calm, thoughtful.',
         camera: 'Medium shot from across the aisle.',
-        information: 'A possible tomorrow beyond his hometown.',
+        information: 'Wherever he travels, his record goes with him.',
         section: 'travel',
         transition: {
           kind: 'time-change',
@@ -1488,15 +1672,15 @@ const SCREEN = 'The laptop stands at about a three-quarter angle toward the read
         production: {
           moment: 'Ravi watching the city pass.',
           before: 'He boarded the train.',
-          after: 'The page moves into the vision (09-2).',
+          after: 'The page moves into the vision (10-2).',
           hands: { ravi: hands('holding his own ravi-phone in his lap', 'elbow on the window ledge, hand near his chin') },
           props: [prop('ravi-phone', 'in his hand', 'in his lap', 'in his lap', 'ravi.left')],
         },
         speakers: { ravi: speaker(r1, [250, 180, 120, 150]) },
-        dialogue: [line('narration', ['Tomorrow,', 'care may take us', 'beyond our', 'hometown.'], 16, 16)],
+        dialogue: [line('narration', ['If Ravi travels,', 'his record', 'travels with him.'], 16, 16)],
       },
       {
-        id: '09-2',
+        id: '10-2',
         order: 2,
         role: '期待',
         beat: 'WELBUK VISION: connected clinics and specialists',
@@ -1506,23 +1690,23 @@ const SCREEN = 'The laptop stands at about a three-quarter angle toward the read
         action: 'The specialist welcomes the viewer.',
         emotion: 'Hopeful, aspirational.',
         camera: 'Medium-wide shot, eye level.',
-        information: 'Vision only: trusted connections across locations — not a launched feature.',
+        information: 'Vision only: trusted network clinics continue his care and gain referred patients — not a launched feature.',
         readingFlow: { entry: [534, 40], exit: [990, 460] },
         production: {
           moment: 'The specialist welcomes, dotted connection lines above.',
           before: 'Ravi’s journey hints at care beyond his hometown.',
-          after: 'The vision widens to the family (09-3).',
+          after: 'The vision widens to the family (10-3).',
           hands: { specialist: hands('relaxed at his side, empty', 'open palm in a welcoming gesture') },
           props: [],
         },
         speakers: { specialist: speaker(r2, [324, 250, 105, 135]) },
         dialogue: [
           line('label', ['WELBUK VISION'], 0, 0),
-          line('narration', ['The vision: trusted connections', 'between clinics, specialists,', 'and patients across locations.'], 4, 298),
+          line('narration', ['Trusted clinics in the network', 'can continue his care if needed,', 'and gain referred patients.'], 4, 298),
         ],
       },
       {
-        id: '09-3',
+        id: '10-3',
         order: 3,
         role: '期待',
         beat: 'A family wellness ecosystem (vision)',
@@ -1537,7 +1721,7 @@ const SCREEN = 'The laptop stands at about a three-quarter angle toward the read
         production: {
           moment: 'The family shares the tablet, smiling.',
           before: 'Vision of connected clinics.',
-          after: 'Return to the present-day closing (09-4).',
+          after: 'Return to the present-day closing (10-4).',
           hands: {
             ravi: hands('arm along the back of the sofa behind his partner, hand resting on the sofa back behind the child', 'pointing gently at the tablet'),
             partner: hands('holding family-tablet, left edge', 'holding family-tablet, right edge'),
@@ -1556,7 +1740,7 @@ const SCREEN = 'The laptop stands at about a three-quarter angle toward the read
         ],
       },
       {
-        id: '09-4',
+        id: '10-4',
         order: 4,
         role: '余韻',
         beat: 'The three people and the three Welbuk products',
@@ -1698,9 +1882,9 @@ const MEASURED = {
   '08-4': { speakers: { ravi: F(209, 1139, 98, 103, 264, 1220) }, protected: [[137, 1220, 72, 110], [230, 1392, 62, 57]] },
   '08-5': { speakers: { ananya: F(754, 892, 76, 92, 788, 972) }, protected: [[631, 1075, 40, 56], [774, 1079, 36, 52]] },
   '08-6': { speakers: { meera: F(710, 1206, 80, 88, 762, 1278) } },
-  '09-1': { speakers: { ravi: F(313, 105, 94, 108, 349, 195) } },
-  '09-2': { speakers: { specialist: F(819, 132, 73, 81, 865, 195) }, protected: [[672, 262, 74, 54]] },
-  '09-3': {
+  '10-1': { speakers: { ravi: F(313, 105, 94, 108, 349, 195) } },
+  '10-2': { speakers: { specialist: F(819, 132, 73, 81, 865, 195) }, protected: [[672, 262, 74, 54]] },
+  '10-3': {
     speakers: {
       ravi: F(462, 501, 115, 129, 526, 610),
       partner: F(609, 514, 108, 122, 666, 617),
@@ -1708,7 +1892,7 @@ const MEASURED = {
     },
     protected: [[583, 681, 159, 103]],
   },
-  '09-4': {
+  '10-4': {
     speakers: {
       meera: F(344, 925, 54, 68, 371, 980),
       ananya: F(481, 906, 62, 76, 512, 968),
