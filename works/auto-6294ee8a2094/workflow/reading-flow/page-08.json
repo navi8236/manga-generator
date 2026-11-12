@@ -9,38 +9,54 @@
       "rect": [
         24,
         24,
-        470,
-        440
+        476,
+        404
       ],
       "steps": [
         {
           "number": 1,
           "speaker": "narration",
-          "text": "Tomorrow, care may take us beyond our hometown.",
+          "text": "Meanwhile, the pharmacy is notified and fills the prescription.",
           "rect": [
             40,
             40,
-            259,
-            170
+            356,
+            138
           ],
           "center": [
-            169.5,
-            125
+            218,
+            109
+          ],
+          "mouth": null
+        },
+        {
+          "number": 2,
+          "speaker": "label",
+          "text": "NEW PRESCRIPTION",
+          "rect": [
+            40,
+            314,
+            294,
+            74
+          ],
+          "center": [
+            187,
+            351
           ],
           "mouth": null
         }
       ],
       "faces": {
-        "ravi": {
-          "face": [
-            313,
-            105,
-            94,
-            108
-          ],
+        "pharmacist": {
           "anchor": [
-            349,
-            195
+            392,
+            292
+          ],
+          "face": [
+            344,
+            204,
+            95,
+            110
           ]
         }
       },
@@ -52,7 +68,7 @@
         ],
         "exit": [
           490,
-          460
+          400
         ]
       },
       "groups": null,
@@ -61,75 +77,68 @@
     {
       "id": "08-2",
       "rect": [
-        518,
+        524,
         24,
-        482,
-        440
+        476,
+        404
       ],
       "steps": [
         {
           "number": 1,
-          "speaker": "label",
-          "text": "WELBUK VISION",
+          "speaker": "narration",
+          "text": "The lab is notified.",
           "rect": [
-            518,
-            24,
-            240,
+            540,
+            40,
+            276,
             74
           ],
           "center": [
-            638,
-            61
+            678,
+            77
           ],
           "mouth": null
         },
         {
           "number": 2,
-          "speaker": "narration",
-          "text": "The vision: trusted connections between clinics, specialists, and patients across locations.",
+          "speaker": "label",
+          "text": "LAB ORDER: samples to collect",
           "rect": [
-            522,
-            322,
-            442,
-            138
+            664,
+            274,
+            260,
+            106
           ],
           "center": [
-            743,
-            391
+            794,
+            327
           ],
           "mouth": null
         }
       ],
       "faces": {
-        "specialist": {
-          "face": [
-            819,
-            132,
-            73,
-            81
-          ],
+        "labtech": {
           "anchor": [
-            865,
-            195
+            702,
+            232
+          ],
+          "face": [
+            654,
+            144,
+            95,
+            110
           ]
         }
       },
-      "protected": [
-        [
-          672,
-          262,
-          74,
-          54
-        ]
-      ],
+      "protected": [],
       "intent": {
         "entry": [
-          534,
+          540,
           40
         ],
         "exit": [
           990,
-          460
+          400
         ]
       },
       "groups": null,
@@ -139,180 +148,70 @@
       "id": "08-3",
       "rect": [
         24,
-        488,
+        452,
         976,
-        340
+        376
       ],
       "steps": [
         {
           "number": 1,
-          "speaker": "label",
-          "text": "WELBUK VISION",
+          "speaker": "narration",
+          "text": "Later that day, Ravi gives his samples at the clinic lab.",
           "rect": [
             40,
-            504,
-            240,
-            74
-          ],
-          "center": [
-            160,
-            541
-          ],
-          "mouth": null
-        },
-        {
-          "number": 2,
-          "speaker": "narration",
-          "text": "One connected ecosystem for care and family wellness.",
-          "rect": [
-            40,
-            588,
-            367,
-            138
-          ],
-          "center": [
-            223.5,
-            657
-          ],
-          "mouth": null
-        }
-      ],
-      "faces": {
-        "ravi": {
-          "face": [
-            462,
-            501,
-            115,
-            129
-          ],
-          "anchor": [
-            526,
-            610
-          ]
-        },
-        "partner": {
-          "face": [
-            609,
-            514,
-            108,
-            122
-          ],
-          "anchor": [
-            666,
-            617
-          ]
-        },
-        "child": {
-          "face": [
-            742,
-            585,
-            89,
-            96
-          ],
-          "anchor": [
-            786,
-            662
-          ]
-        }
-      },
-      "protected": [
-        [
-          583,
-          681,
-          159,
-          103
-        ]
-      ],
-      "intent": {
-        "entry": [
-          40,
-          505
-        ],
-        "exit": [
-          990,
-          820
-        ]
-      },
-      "groups": null,
-      "warnings": []
-    },
-    {
-      "id": "08-4",
-      "rect": [
-        24,
-        852,
-        976,
-        612
-      ],
-      "steps": [
-        {
-          "number": 1,
-          "speaker": "label",
-          "text": "Welbuk Practice • Welbuk Care • Welbuk Health",
-          "rect": [
-            704,
-            872,
-            281,
-            138
-          ],
-          "center": [
-            844.5,
-            941
-          ],
-          "mouth": null
-        },
-        {
-          "number": 2,
-          "speaker": "narration",
-          "text": "Welbuk — Building a connected healthcare ecosystem.",
-          "rect": [
-            48,
-            1342,
-            433,
+            468,
+            416,
             106
           ],
           "center": [
-            264.5,
-            1395
+            248,
+            521
           ],
           "mouth": null
+        },
+        {
+          "number": 2,
+          "speaker": "labtech",
+          "text": "All done, Ravi! We'll let you know when your results are ready.",
+          "rect": [
+            484,
+            468,
+            383,
+            138
+          ],
+          "center": [
+            675.5,
+            537
+          ],
+          "mouth": [
+            714,
+            708
+          ]
         }
       ],
       "faces": {
-        "meera": {
-          "face": [
-            344,
-            925,
-            54,
-            68
-          ],
-          "anchor": [
-            371,
-            980
-          ]
-        },
-        "ananya": {
-          "face": [
-            481,
-            906,
-            62,
-            76
-          ],
-          "anchor": [
-            512,
-            968
-          ]
-        },
         "ravi": {
-          "face": [
-            638,
-            894,
-            61,
-            73
-          ],
           "anchor": [
-            668,
-            955
+            314,
+            698
+          ],
+          "face": [
+            264,
+            602,
+            100,
+            120
+          ]
+        },
+        "labtech": {
+          "anchor": [
+            714,
+            708
+          ],
+          "face": [
+            664,
+            612,
+            100,
+            120
           ]
         }
       },
@@ -320,11 +219,227 @@
       "intent": {
         "entry": [
           40,
-          870
+          468
         ],
         "exit": [
           990,
-          1505
+          820
+        ]
+      },
+      "groups": null,
+      "warnings": [
+        {
+          "from": 1,
+          "to": 2,
+          "reason": "左から右へ戻る移動と縦方向の範囲が重なる。段差・余白・人物の配置を目視で検討する。"
+        }
+      ]
+    },
+    {
+      "id": "08-4",
+      "rect": [
+        24,
+        852,
+        392,
+        612
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "narration",
+          "text": "Results ready: Ravi is notified.",
+          "rect": [
+            40,
+            868,
+            238,
+            106
+          ],
+          "center": [
+            159,
+            921
+          ],
+          "mouth": null
+        },
+        {
+          "number": 2,
+          "speaker": "label",
+          "text": "Welbuk Health app · email · WhatsApp",
+          "rect": [
+            40,
+            1322,
+            293,
+            106
+          ],
+          "center": [
+            186.5,
+            1375
+          ],
+          "mouth": null
+        }
+      ],
+      "faces": {
+        "ravi": {
+          "anchor": [
+            224,
+            1178
+          ],
+          "face": [
+            174,
+            1082,
+            100,
+            120
+          ]
+        }
+      },
+      "protected": [],
+      "intent": {
+        "entry": [
+          40,
+          868
+        ],
+        "exit": [
+          410,
+          1460
+        ]
+      },
+      "groups": null,
+      "warnings": []
+    },
+    {
+      "id": "08-5",
+      "rect": [
+        440,
+        852,
+        560,
+        294
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "narration",
+          "text": "Dr. Ananya is notified on Welbuk Care.",
+          "rect": [
+            456,
+            868,
+            324,
+            106
+          ],
+          "center": [
+            618,
+            921
+          ],
+          "mouth": null
+        },
+        {
+          "number": 2,
+          "speaker": "label",
+          "text": "RESULTS READY",
+          "rect": [
+            500,
+            1042,
+            260,
+            74
+          ],
+          "center": [
+            630,
+            1079
+          ],
+          "mouth": null
+        }
+      ],
+      "faces": {
+        "ananya": {
+          "anchor": [
+            860,
+            998
+          ],
+          "face": [
+            820,
+            922,
+            80,
+            95
+          ]
+        }
+      },
+      "protected": [],
+      "intent": {
+        "entry": [
+          456,
+          868
+        ],
+        "exit": [
+          990,
+          1140
+        ]
+      },
+      "groups": null,
+      "warnings": []
+    },
+    {
+      "id": "08-6",
+      "rect": [
+        440,
+        1170,
+        560,
+        294
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "narration",
+          "text": "The clinic is notified on Welbuk Practice.",
+          "rect": [
+            456,
+            1186,
+            307,
+            106
+          ],
+          "center": [
+            609.5,
+            1239
+          ],
+          "mouth": null
+        },
+        {
+          "number": 2,
+          "speaker": "label",
+          "text": "RESULTS READY",
+          "rect": [
+            500,
+            1360,
+            260,
+            74
+          ],
+          "center": [
+            630,
+            1397
+          ],
+          "mouth": null
+        }
+      ],
+      "faces": {
+        "meera": {
+          "anchor": [
+            820,
+            1326
+          ],
+          "face": [
+            780,
+            1250,
+            80,
+            95
+          ]
+        }
+      },
+      "protected": [],
+      "intent": {
+        "entry": [
+          456,
+          1186
+        ],
+        "exit": [
+          990,
+          1460
         ]
       },
       "groups": null,

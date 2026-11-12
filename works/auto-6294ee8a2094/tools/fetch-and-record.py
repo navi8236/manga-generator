@@ -20,6 +20,7 @@ SHEETS = {
     'vision-cast.png': '99375824-3f6f-4cb8-9865-3b7f624d96cb',
     'nurse.png': '7b4306e3-3fbf-49b0-8a29-23572e730b4d',
     'checkin-patients.png': '75cd559e-e649-4e9d-ad5d-6e1db8630556',
+    'pharmacy-lab.png': 'e37c7ee4-56b7-4348-864c-57542e815ad5',
 }
 folder = f'{work}/assets/candidates/{panel}'
 os.makedirs(folder, exist_ok=True)

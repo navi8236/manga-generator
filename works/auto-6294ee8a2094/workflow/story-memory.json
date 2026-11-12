@@ -117,6 +117,32 @@
         "settingBasis": "Revised source (2026-11-11): a young woman who checks in on the Welbuk Health app. Name and appearance are manga supplements."
       }
     },
+    "pharmacist": {
+      "name": "Pharmacist",
+      "description": "Indian man in his early 40s, pharmacist. Careful and reassuring (revised source: the pharmacy fills the prescription). White pharmacist coat over a light blue collared shirt, dark grey trousers; short wavy black hair with a little grey at the temples (manga supplement, from the accepted pharmacy-lab sheet).",
+      "faceDesign": {
+        "traits": [
+          "Kind hooded eyes with crow’s feet",
+          "Thick arched eyebrows",
+          "Round face with a neat moustache and dimpled cheeks"
+        ],
+        "reference": "works/auto-6294ee8a2094/assets/characters/pharmacy-lab.png",
+        "settingBasis": "Revised source (2026-11-12): the pharmacy is notified and fills the prescription. Appearance is a manga supplement."
+      }
+    },
+    "labtech": {
+      "name": "Lab Technician",
+      "description": "Indian woman in her mid-20s, clinic lab technician. Precise and friendly (revised source: the lab is notified and the patient gives samples). Light-blue lab coat over a plain navy top, dark trousers, white clinic shoes, purple nitrile gloves; black hair in a neat high bun (manga supplement, from the accepted pharmacy-lab sheet).",
+      "faceDesign": {
+        "traits": [
+          "Large round eyes behind thin round glasses",
+          "Thin straight eyebrows",
+          "Narrow face with a sharp chin and light freckles across the nose"
+        ],
+        "reference": "works/auto-6294ee8a2094/assets/characters/pharmacy-lab.png",
+        "settingBasis": "Revised source (2026-11-12): the lab is notified of the samples and Ravi gives his samples at the clinic lab. Appearance is a manga supplement."
+      }
+    },
     "narration": {
       "kind": "caption",
       "name": "Caption"
@@ -194,6 +220,36 @@
         "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
       },
       "objects": {}
+    },
+    "after-visit": {
+      "summary": "After the visit (added 2026-11-12): the pharmacy and the clinic lab receive the orders, and later that day Ravi gives his samples at the clinic lab.",
+      "location": "A small bright pharmacy counter with shelves of plain unlabelled medicine boxes; the clinic lab room with a sample-collection chair, a tube rack and a monitor (manga supplement).",
+      "costumes": {
+        "ravi": "Light green shirt, dark trousers, wristwatch on left wrist.",
+        "pharmacist": "White pharmacist coat over a light blue collared shirt, dark grey trousers.",
+        "labtech": "Light-blue lab coat over a plain navy top, dark trousers, white clinic shoes, purple nitrile gloves."
+      },
+      "objects": {
+        "pharmacy-tablet": "Pharmacist’s tablet on the counter: one new-prescription card with a simple pill icon; no drug names or text (the label is lettered).",
+        "medicine-boxes": "Plain medicine boxes and a paper pharmacy bag with no labels, logos or text.",
+        "lab-monitor": "Lab monitor showing one order card with simple test-tube icons; no test names or text (the label is lettered).",
+        "sample-tube": "One capped sample tube with a blank white label; a cotton pad on Ravi’s inner arm. No needle shown.",
+        "shoulder-bag": "Ravi’s dark-brown shoulder bag."
+      }
+    },
+    "results": {
+      "summary": "Some days later (added 2026-11-12): the results are ready; Ravi, Dr. Ananya and the clinic each get a notification.",
+      "location": "Ravi’s simple living room by a window; Dr. Ananya’s consultation desk; the clinic reception desk (manga supplement).",
+      "costumes": {
+        "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
+        "meera": "Blue kurta with white churidar, silver bangle on right wrist.",
+        "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
+      },
+      "objects": {
+        "ravi-phone": "Ravi’s smartphone (dark blue case): one results-ready notification card with a check mark, plus small generic app, envelope and chat-bubble icons; no logos and no text.",
+        "doctor-tablet": "Dr. Ananya’s tablet: one results-ready card with a check mark and a test-tube icon; no text or values.",
+        "monitor": "Reception monitor angled toward the reader: one results-ready card with a check mark; no text or values."
+      }
     },
     "travel": {
       "summary": "A possible tomorrow: Ravi travels to another Indian city by train. Hypothetical framing (\"care may take us beyond our hometown\").",
@@ -718,6 +774,120 @@
     },
     {
       "id": "08-1",
+      "section": "after-visit",
+      "state": {
+        "summary": "After the visit (added 2026-11-12): the pharmacy and the clinic lab receive the orders, and later that day Ravi gives his samples at the clinic lab.",
+        "location": "A small bright pharmacy counter with shelves of plain unlabelled medicine boxes; the clinic lab room with a sample-collection chair, a tube rack and a monitor (manga supplement).",
+        "costumes": {
+          "ravi": "Light green shirt, dark trousers, wristwatch on left wrist.",
+          "pharmacist": "White pharmacist coat over a light blue collared shirt, dark grey trousers.",
+          "labtech": "Light-blue lab coat over a plain navy top, dark trousers, white clinic shoes, purple nitrile gloves."
+        },
+        "objects": {
+          "pharmacy-tablet": "Pharmacist’s tablet on the counter: one new-prescription card with a simple pill icon; no drug names or text (the label is lettered).",
+          "medicine-boxes": "Plain medicine boxes and a paper pharmacy bag with no labels, logos or text.",
+          "lab-monitor": "Lab monitor showing one order card with simple test-tube icons; no test names or text (the label is lettered).",
+          "sample-tube": "One capped sample tube with a blank white label; a cotton pad on Ravi’s inner arm. No needle shown.",
+          "shoulder-bag": "Ravi’s dark-brown shoulder bag."
+        }
+      }
+    },
+    {
+      "id": "08-2",
+      "section": "after-visit",
+      "state": {
+        "summary": "After the visit (added 2026-11-12): the pharmacy and the clinic lab receive the orders, and later that day Ravi gives his samples at the clinic lab.",
+        "location": "A small bright pharmacy counter with shelves of plain unlabelled medicine boxes; the clinic lab room with a sample-collection chair, a tube rack and a monitor (manga supplement).",
+        "costumes": {
+          "ravi": "Light green shirt, dark trousers, wristwatch on left wrist.",
+          "pharmacist": "White pharmacist coat over a light blue collared shirt, dark grey trousers.",
+          "labtech": "Light-blue lab coat over a plain navy top, dark trousers, white clinic shoes, purple nitrile gloves."
+        },
+        "objects": {
+          "pharmacy-tablet": "Pharmacist’s tablet on the counter: one new-prescription card with a simple pill icon; no drug names or text (the label is lettered).",
+          "medicine-boxes": "Plain medicine boxes and a paper pharmacy bag with no labels, logos or text.",
+          "lab-monitor": "Lab monitor showing one order card with simple test-tube icons; no test names or text (the label is lettered).",
+          "sample-tube": "One capped sample tube with a blank white label; a cotton pad on Ravi’s inner arm. No needle shown.",
+          "shoulder-bag": "Ravi’s dark-brown shoulder bag."
+        }
+      }
+    },
+    {
+      "id": "08-3",
+      "section": "after-visit",
+      "state": {
+        "summary": "After the visit (added 2026-11-12): the pharmacy and the clinic lab receive the orders, and later that day Ravi gives his samples at the clinic lab.",
+        "location": "A small bright pharmacy counter with shelves of plain unlabelled medicine boxes; the clinic lab room with a sample-collection chair, a tube rack and a monitor (manga supplement).",
+        "costumes": {
+          "ravi": "Light green shirt, dark trousers, wristwatch on left wrist.",
+          "pharmacist": "White pharmacist coat over a light blue collared shirt, dark grey trousers.",
+          "labtech": "Light-blue lab coat over a plain navy top, dark trousers, white clinic shoes, purple nitrile gloves."
+        },
+        "objects": {
+          "pharmacy-tablet": "Pharmacist’s tablet on the counter: one new-prescription card with a simple pill icon; no drug names or text (the label is lettered).",
+          "medicine-boxes": "Plain medicine boxes and a paper pharmacy bag with no labels, logos or text.",
+          "lab-monitor": "Lab monitor showing one order card with simple test-tube icons; no test names or text (the label is lettered).",
+          "sample-tube": "One capped sample tube with a blank white label; a cotton pad on Ravi’s inner arm. No needle shown.",
+          "shoulder-bag": "Ravi’s dark-brown shoulder bag."
+        }
+      }
+    },
+    {
+      "id": "08-4",
+      "section": "results",
+      "state": {
+        "summary": "Some days later (added 2026-11-12): the results are ready; Ravi, Dr. Ananya and the clinic each get a notification.",
+        "location": "Ravi’s simple living room by a window; Dr. Ananya’s consultation desk; the clinic reception desk (manga supplement).",
+        "costumes": {
+          "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
+          "meera": "Blue kurta with white churidar, silver bangle on right wrist.",
+          "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
+        },
+        "objects": {
+          "ravi-phone": "Ravi’s smartphone (dark blue case): one results-ready notification card with a check mark, plus small generic app, envelope and chat-bubble icons; no logos and no text.",
+          "doctor-tablet": "Dr. Ananya’s tablet: one results-ready card with a check mark and a test-tube icon; no text or values.",
+          "monitor": "Reception monitor angled toward the reader: one results-ready card with a check mark; no text or values."
+        }
+      }
+    },
+    {
+      "id": "08-5",
+      "section": "results",
+      "state": {
+        "summary": "Some days later (added 2026-11-12): the results are ready; Ravi, Dr. Ananya and the clinic each get a notification.",
+        "location": "Ravi’s simple living room by a window; Dr. Ananya’s consultation desk; the clinic reception desk (manga supplement).",
+        "costumes": {
+          "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
+          "meera": "Blue kurta with white churidar, silver bangle on right wrist.",
+          "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
+        },
+        "objects": {
+          "ravi-phone": "Ravi’s smartphone (dark blue case): one results-ready notification card with a check mark, plus small generic app, envelope and chat-bubble icons; no logos and no text.",
+          "doctor-tablet": "Dr. Ananya’s tablet: one results-ready card with a check mark and a test-tube icon; no text or values.",
+          "monitor": "Reception monitor angled toward the reader: one results-ready card with a check mark; no text or values."
+        }
+      }
+    },
+    {
+      "id": "08-6",
+      "section": "results",
+      "state": {
+        "summary": "Some days later (added 2026-11-12): the results are ready; Ravi, Dr. Ananya and the clinic each get a notification.",
+        "location": "Ravi’s simple living room by a window; Dr. Ananya’s consultation desk; the clinic reception desk (manga supplement).",
+        "costumes": {
+          "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
+          "meera": "Blue kurta with white churidar, silver bangle on right wrist.",
+          "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
+        },
+        "objects": {
+          "ravi-phone": "Ravi’s smartphone (dark blue case): one results-ready notification card with a check mark, plus small generic app, envelope and chat-bubble icons; no logos and no text.",
+          "doctor-tablet": "Dr. Ananya’s tablet: one results-ready card with a check mark and a test-tube icon; no text or values.",
+          "monitor": "Reception monitor angled toward the reader: one results-ready card with a check mark; no text or values."
+        }
+      }
+    },
+    {
+      "id": "09-1",
       "section": "travel",
       "state": {
         "summary": "A possible tomorrow: Ravi travels to another Indian city by train. Hypothetical framing (\"care may take us beyond our hometown\").",
@@ -729,7 +899,7 @@
       }
     },
     {
-      "id": "08-2",
+      "id": "09-2",
       "section": "vision",
       "state": {
         "summary": "WELBUK VISION — not a launched feature. A conceptual future of connected clinics, specialists and family wellness, drawn inside a soft pale-blue vignette.",
@@ -746,7 +916,7 @@
       }
     },
     {
-      "id": "08-3",
+      "id": "09-3",
       "section": "vision",
       "state": {
         "summary": "WELBUK VISION — not a launched feature. A conceptual future of connected clinics, specialists and family wellness, drawn inside a soft pale-blue vignette.",
@@ -763,7 +933,7 @@
       }
     },
     {
-      "id": "08-4",
+      "id": "09-4",
       "section": "closing",
       "state": {
         "summary": "Symbolic closing group portrait in front of the clinic, tying the three Welbuk products to the three people.",
