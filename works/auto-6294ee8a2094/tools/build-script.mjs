@@ -268,7 +268,7 @@ config.sections = {
     objects: {
       'consult-laptop': 'Dr. Ananya’s laptop on the consultation desk: closed and pushed aside in 04-3, opened on page 5 with the screen turned toward the reader. The screen shows only abstract cards and icons; section names are lettered over it, never drawn.',
       'doctor-tablet':
-        'Dr. Ananya’s tablet. Shown only in 04-3 (a simple notification card with a blank strip; the alert text is lettered, never drawn); from 05-1 on it is put away in the desk drawer and must not appear.',
+        'Dr. Ananya’s tablet. Shown only in 04-3 (a simple notification card with a blank strip; the alert text is lettered, never drawn); from 05-1 to the end of the visit it is put away in the desk drawer and must not appear (it returns days later in 08-5, results section).',
     },
   },
   departure: {
@@ -1120,7 +1120,7 @@ const SCREEN = 'The laptop stands at about a three-quarter angle toward the read
     id: '07',
     section: 'reception',
     purpose: 'Introduce Welbuk Health for patients, framed carefully as what is available, without invented features.',
-    expectation: 'Where could connected care go next?',
+    expectation: 'What happens after the visit?',
     panels: [
       {
         id: '07-1',
@@ -1355,12 +1355,12 @@ const SCREEN = 'The laptop stands at about a three-quarter angle toward the read
           ],
         },
         speakers: {
-          ravi: speaker(r3, [240, 150, 100, 120]),
-          labtech: speaker(r3, [640, 160, 100, 120]),
+          ravi: speaker(r3, [240, 190, 100, 120]),
+          labtech: speaker(r3, [660, 210, 100, 120]),
         },
         dialogue: [
           line('narration', ['Later that day, Ravi gives his', 'samples at the clinic lab.'], 16, 16),
-          line('labtech', ["All done, Ravi! We'll let you", 'know when your results', 'are ready.'], 460, 16),
+          line('labtech', ['All done, Ravi!', "We'll let you know when", 'your results are ready.'], 470, 16),
         ],
       },
       {
