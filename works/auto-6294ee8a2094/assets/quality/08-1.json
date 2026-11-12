@@ -1,6 +1,6 @@
 {
   "panel": "08-1",
-  "fingerprint": "25fa1402262267aa618d21d6253537d6857d0b036299fac468dba6882f5c88c2",
+  "fingerprint": "6e6941174f9dce1b59db70bd7f9c48a4cf9a03bedbbaca0c49be84a9aec8f6c2",
   "observation": "Pharmacy counter: the pharmacist slips a plain box into a paper bag; prescription tablet in the left foreground. Inspected at 25% (contact sheet), 100% (full panel) and 200% (face crops), and on the composed page.",
   "views": {
     "thumbnail": true,
@@ -38,10 +38,16 @@
     },
     "lettering": {
       "result": "pass",
-      "note": "Four-line caption top-left and the NEW PRESCRIPTION label bottom-left over the tablet edge; clear of his face and both hands."
+      "note": "Four-line caption top-left; the NEW PRESCRIPTION label just below it, over the tablet top bezel only, so the prescription card stays visible; clear of his face and both hands."
     }
   },
-  "issues": [],
+  "issues": [
+    {
+      "category": "lettering",
+      "description": "Artwork review r14: the NEW PRESCRIPTION label hid the tablet and its prescription card; moved up to sit above the screen.",
+      "status": "resolved"
+    }
+  ],
   "faceIdentity": {
     "pharmacist": {
       "reference": "works/auto-6294ee8a2094/assets/characters/pharmacy-lab.png",
@@ -53,5 +59,5 @@
       "expression": "Warm reassuring smile"
     }
   },
-  "reviewedAt": "2026-11-12T12:56:51.739Z"
+  "reviewedAt": "2026-11-12T13:04:28.897Z"
 }

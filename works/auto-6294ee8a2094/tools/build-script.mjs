@@ -1290,8 +1290,8 @@ const SCREEN = 'The laptop stands at about a three-quarter angle toward the read
         },
         speakers: { pharmacist: speaker(r1, [320, 180, 95, 110]) },
         dialogue: [
-          line('narration', ['Meanwhile, the', 'pharmacy is', 'notified and fills', 'the prescription.'], 4, 4),
-          line('label', ['NEW', 'PRESCRIPTION'], 6, 292),
+          line('narration', ['Meanwhile, the', 'pharmacy is', 'notified and fills', 'the prescription.'], 4, 2),
+          line('label', ['NEW', 'PRESCRIPTION'], 4, 180),
         ],
       },
       {

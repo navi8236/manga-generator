@@ -1,20 +1,21 @@
 {
-  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-08-4-a0ac68c8c4a01927a178622c5036e016d41d0d42b2611c0aa75c78b4311eea6d.json",
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-08-4-fcc4d1eeb21fa0b85c879bfbf2d6ac7f9c4aa279223a70e79a6ede8720cf2640.json",
   "reviewer": {
     "role": "subagent",
-    "task": "claude-code-agent:manga-reviewer:a46c684323ee07509",
+    "task": "claude-code-agent:manga-reviewer:a212b7aa225bf0958",
     "reportedTask": null,
     "taskSource": "Agent ID returned by the Claude Code Agent tool to the parent."
   },
   "status": "pass",
   "observations": [
-    "I read assets/panels/08-4.png. Meera (left), Ananya (centre) and Ravi (right) stand in front of the clinic entrance with its teal awning, glass doors, planters and warm morning light. It is full colour with no vignette, so it clearly returns to the present after 08-2/08-3.",
-    "Meera matches main-cast (side braid with teal tie, blue patterned kurta, white churidar, navy flats). She holds the staff phone, back toward the reader, in her right hand (the bangle wrist) at her side, and her left hand is empty. This matches production.",
-    "Ananya matches her sheet (low bun, stethoscope, white coat over teal kurta, leggings, sandals) and her hands are clasped in front. Small pale marks show on both wrists. They are most likely the kurta cuffs, but they could read as bandages at 200%. This is minor and not raised as an issue.",
-    "Ravi raises his right hand in a small wave, and his left hand, with the watch, hangs empty at his side, matching production. The bag is on his right shoulder, matching the main-cast sheet and 07-4.",
-    "There is a clear sky band at the top and an empty pavement band at the bottom for the product label and the closing caption. There is no text or signage in the art."
+    "Reviewer identity: the runtime gave me no task ID, so reviewer.task is null. The parent must supply the real one. I opened these myself with Read: assets/panels/08-4.png (the current edited version, with the figure lowered), assets/characters/main-cast.png and workflow/review/page-08.png.",
+    "Ravi sits on a simple beige sofa with a teal cushion, beside a window with an evening sunset sky, a curtain with a leaf pattern and a potted plant. This matches 'at home, soft evening light, some days later'. His face matches the sheet: side-parted hair, short beard, thick straight brows, eyes creased in a gentle smile. He wears the light-green shirt and dark trousers.",
+    "Hands match production. His right hand (viewer's left) holds the phone in a dark-blue case, screen toward the reader. His left hand rests on his knee with the wristwatch on that wrist. The fingers on the phone read correctly.",
+    "The phone screen shows one green check-mark card and three small icons: an app grid, an envelope and a chat bubble. There are no logos, letters or values. A plain wall fills the upper half for lettering.",
+    "From 08-3 to 08-4: the cut moves from the lab to home with a light change from daylight to evening, which supports the time jump to the results day. His costume stays the same, which matches the sections and continuity fields.",
+    "Lettering on page-08.png: the caption (about page x 165-402, y 862-965) and the label (about x 115-406, y 985-1088) sit on the wall and curtain above his head, which starts at about y 1130. His face, the phone screen, his left hand and the watch are all uncovered."
   ],
   "issues": [],
-  "fingerprint": "a0ac68c8c4a01927a178622c5036e016d41d0d42b2611c0aa75c78b4311eea6d",
-  "recordedAt": "2026-11-12T11:13:04.355Z"
+  "fingerprint": "fcc4d1eeb21fa0b85c879bfbf2d6ac7f9c4aa279223a70e79a6ede8720cf2640",
+  "recordedAt": "2026-11-12T13:03:19.625Z"
 }

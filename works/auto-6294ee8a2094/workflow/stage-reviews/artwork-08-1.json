@@ -1,20 +1,28 @@
 {
-  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-08-1-f193dc24a7ba59bfd6470b2d27a8d15d50d5757a0697b50a8e2213c522b7beef.json",
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-08-1-cacae92f48a1aa3e823db94340dee5cf2b6933438dd811040117b953792e6186.json",
   "reviewer": {
     "role": "subagent",
-    "task": "claude-code-agent:manga-reviewer:a46c684323ee07509",
+    "task": "claude-code-agent:manga-reviewer:a212b7aa225bf0958",
     "reportedTask": null,
     "taskSource": "Agent ID returned by the Claude Code Agent tool to the parent."
   },
-  "status": "pass",
+  "status": "changes-requested",
   "observations": [
-    "I read assets/panels/08-1.png. Ravi matches main-cast in face (thick brows, creased eyes, trimmed beard, side-parted hair), shirt, trousers and watch. He sits on a blue train seat with a white headrest cover, gazing calmly out of the window with a slight smile.",
-    "His right elbow (the window side, away from the shirt pocket) rests on the window ledge with the hand near his chin. His left hand, with the watch, holds the dark-blue phone in his lap with its back toward the reader. This matches production.",
-    "Outside, the city blurs past: mid-rise buildings and a domed historic building, with no signs, text or recognisable logos. The window has horizontal bars in the style of Indian Railways, and a luggage rack holds a bag above.",
-    "His bag is worn cross-body (strap over the right shoulder, bag at the left hip). This is a different, hypothetical day, so it is not a continuity conflict.",
-    "A flat white rectangle covers the upper left, over the window glass and frame, for the caption, which must hide its hard edge (a lettering check)."
+    "Reviewer identity: the runtime gave me no task or agent ID, so reviewer.task is null. The parent must supply the real Agent ID from its own tool result. It must not invent one. If none is available, this response cannot be recorded, because the CLI requires reviewer.task.",
+    "What I opened myself with Read: the request JSON for 08-1 (full scene, production and cast), assets/characters/pharmacy-lab.png, assets/characters/main-cast.png, assets/panels/07-4.png, assets/panels/08-1.png and workflow/review/page-08.png. I did not open workflow/storyboards/page-08.svg or source/original.txt, so this review does not cover them. Every file I opened was readable.",
+    "The Pharmacist matches pharmacy-lab.png. He has short wavy black hair with grey at the temples, kind hooded eyes with crow's feet, thick arched brows, a round face with a neat moustache and dimpled cheeks, a white coat over a light-blue collared shirt, and two blue pens in the breast pocket as on the sheet. He smiles in a careful, reassuring way, which fits the emotion field.",
+    "Hands match production. His right hand (viewer's left) holds a plain white unlabelled box and is slipping it into the bag. His left hand (viewer's right) holds the open white paper bag at its edge. The fingers read correctly. The box and bag carry no labels, logos or text. The shelf boxes behind him are plain white.",
+    "The tablet stands on its stand in the left foreground with the screen toward the reader. The screen shows one card with a teal capsule icon and two blank bars. There is no drug name, letter or number anywhere in the art. The top-left wall is plain, leaving room for the caption.",
+    "From 07-4 to 08-1: in 07-4 Ravi waves goodbye outside the clinic in morning sun. 08-1 is a new place, the pharmacy, and the caption 'Meanwhile' bridges the change. The daylight is consistent and the cut reads as a clear place change.",
+    "Lettering on page-08.png: the top-left caption ends just left of his hair (box right edge at about page x 286), so it does not cover his face. The box, bag and both hands are clear. However, the 'NEW PRESCRIPTION' label (about page x 30-262, y 316-420) covers almost the whole tablet. Only the top bezel shows, and the capsule card is hidden. The tablet is the key prop that shows the notification arrived, so the reader loses the visual link. On 08-2, 08-5 and 08-6 the order or results card stays visible next to its label."
   ],
-  "issues": [],
-  "fingerprint": "f193dc24a7ba59bfd6470b2d27a8d15d50d5757a0697b50a8e2213c522b7beef",
-  "recordedAt": "2026-11-12T11:13:03.679Z"
+  "issues": [
+    {
+      "problem": "In the composite, the 'NEW PRESCRIPTION' label hides almost the whole tablet, including the screen card with the capsule icon. Only the top bezel is visible, so the key prop that shows the notification cannot be read. Move or shrink the label, for example place it on the wall above the tablet or let it cover only the blank bars, so the screen card and the tablet stay readable. Then recheck the composite.",
+      "location": "08-1 label (dialogue[1], x 6, dy 292) on workflow/review/page-08.png, about page x 30-262, y 316-420",
+      "resolved": false
+    }
+  ],
+  "fingerprint": "cacae92f48a1aa3e823db94340dee5cf2b6933438dd811040117b953792e6186",
+  "recordedAt": "2026-11-12T13:03:18.650Z"
 }
