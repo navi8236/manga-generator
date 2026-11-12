@@ -611,7 +611,7 @@ const pages = [];
           props: [prop('priya-phone', 'in Priya’s hand', 'held in her left hand, check-in card on screen', 'in her hand', 'priya.left')],
         },
         speakers: { priya: speaker(r2, [230, 130, 80, 95]) },
-        dialogue: [line('narration', ['Some check in ahead', 'on the Welbuk Health app.'], 16, 16)],
+        dialogue: [line('narration', ['Some check in ahead', 'on the Welbuk Health app.'], 16, 4)],
       },
       {
         id: '03-3',

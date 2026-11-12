@@ -1,27 +1,30 @@
 {
-  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/final-all-98f3e6747daaa649461823176a3645dd5fa9535905ffe8b1a2b860f1987869d2.json",
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/final-all-4d6d7888f239b4fd1f607e0b0e0a24096cd539848e202038869380aac28d4b11.json",
   "reviewer": {
     "role": "subagent",
-    "task": "claude-code-agent:manga-reviewer:a27a955449e2fd451",
+    "task": "claude-code-agent:manga-reviewer:aa0d4368c4b61016a",
     "reportedTask": null,
     "taskSource": "Agent ID returned by the Claude Code Agent tool to the parent."
   },
-  "status": "pass",
+  "status": "changes-requested",
   "observations": [
-    "Identity note for the parent: the runtime did not give me a subagent/task ID, so reviewer.task is null. The parent must fill this in from the Agent tool's returned ID and must not invent one.",
-    "What I read: AGENTS.md (in context), docs/REVISION-AND-REVIEWS.md, docs/PROMPTS.md, the full prepared request (lines 1-3298: decisions, script, firstReading and file entries), cli/stage-review.mjs lines 100-179 (prepare and record validation), source/original.txt and source/REVISION-2026-11-11.md. I opened all seven final pages, output/page-01.png to page-07.png, with Read and looked at each one. I also opened panel assets 03-2.png, 04-1.png and 06-2.png and the reference assets/characters/checkin-patients.png to check what lettering hides. Every file I opened loaded and was readable. I did not open the PDF, reader.html, the other reference sheets or the storyboard SVGs.",
-    "User request 1, the self check-in flow, is met across pages 3-4. 03-3: Ravi holds his phone up to a QR stand just inside the glass entrance, and a scan frame shows on the phone. 03-4: over-the-shoulder close-up of a blank form, his thumb tapping a tick-box, with a teal button. 03-5: the TV shows 'A-10 · A-11 · A-12'. 04-1: the TV shows 'NOW · A-12' and Ravi stands. 04-2: the nurse in lavender scrubs holds the cuff bulb, and the oximeter is on his left index finger. 04-3: Dr. Ananya holds a tablet with the 'RAVI · READY' card. The request said 'his tablet'; the doctor stays female, which the revision record says the user confirmed.",
-    "User request 2, three check-in routes with the front desk always an option, is met on page 3. 03-1: Mr. Raman, with a cane, checks in with Meera at the desk, under the caption 'A later morning: patients can always check in at the front desk.' 03-2: Priya taps the calendar/check card in the app outside the teal awning. 03-3: Ravi uses the QR stand. 03-5: all three sit in a row, left to right Raman, Priya, Ravi, under 'Every check-in gets a slot on the screen.' with the three slots on the TV. 04-1's 'NOW · A-12' and 'his slot' settle that Ravi is A-12.",
-    "The lettering matches the script word for word on all 26 panels, including the labels 'WELBUK PRACTICE for the clinic', 'WELBUK CARE for clinic staff', 'WELBUK HEALTH for patients', both 'WELBUK VISION' labels and 'Welbuk Practice • Welbuk Care • Welbuk Health'. The only differences are typographic curly apostrophes. Line breaks follow the textColumns. The two lines changed in the r13 revision ('A later morning: …' and 'Hi, Ravi! Just relax your arm for me.') appear in their revised form.",
-    "Every tail points to the correct speaker: 01-2 (both to Meera), 01-3 (Ananya), 02-2 (Ananya), 02-3 (Meera, down), 02-4 (left to the seated Ananya, not Meera), 04-2 (down to the nurse), 05-1 (left to Ananya), 05-2 (Ravi), 05-4 (left to Ananya), 06-1 (Meera), 06-2 (Ravi), 06-3 (down to Meera). Captions and labels have no tails.",
-    "No lettering covers a face, a hand or story-relevant screen content. The 03-4 caption sits above the phone, and the form and both hands are clear. The 03-5 and 04-1 slot labels sit on the empty TV strip by design. On 04-3 the 'RAVI · READY' card sits on the tablet screen, and the check icon and both hands stay visible. On 06-2 the label covers only the monitor base and plant; its right edge stops just short of Ravi's fingers, and the phone screen is clear. In 07-4 the product label clears Ravi's raised hand. Minor overlaps that do not affect the story: the 02-3 label covers Meera's lower kurta and the desk; the 07-4 closing caption touches the outer edge of Ananya's lower leg; the 03-1 caption covers the left part of a background wall TV, which carries no story content; the 03-2 caption hides the top of Priya's ponytail.",
-    "Continuity 2→3: the evening office with the sunset window cuts to bright reception with the caption 'A later morning', a clear time change. Meera's blue kurta, braid and bangle match. 3→4: in 03-5 Ravi sits with the bag on his lap and the phone in his right hand. In 04-1 he stands with the bag back on his left shoulder and his right hand in his trouser pocket. The two chairs to his left (screen-left) are empty, implying A-10 and A-11 were called. He looks up and right at the TV. 04-1 to 04-2 move to the vitals cart, which is visible in 04-1 beside reception; the bag is on the floor by his chair. 4→5: 04-3 introduces the consultation room (window, plant, closed laptop). In 05-1 Ravi sits in that room, the bag is on the floor by his chair, the tablet is put away and the laptop is closed. Costumes are identical, so it reads as the same visit.",
-    "Judgement of the first reader's concerns. (1) p1, Meera speaks while holding the phone: fixed by the source (Panel 2 gives her line while she manages the phone and queue), and Ananya's reply reads naturally. (2) p2, evening shown only by the sunset: acceptable; the onboarding caption and the window make the time clear. (3) p3, the wording 'A later morning': fixed by the source (r13 revision, recorded with its reason). (4) p3, the QR stand looks inside rather than at the door: acceptable; the glass entrance frame is visible at the right edge of 03-3, matching 'just inside the entrance'. (5) p3, Ravi as A-12 is only inferred: resolved on the next page by 'Soon, his slot comes up.' + 'NOW · A-12'. (6) p3, Priya's hair looks loose in 03-2 but in a ponytail in 03-5: not a defect in the art. Panel asset 03-2.png draws a high ponytail with a blue scrunchie that matches checkin-patients.png. The 03-2 caption box hides the tie, so it is an acceptable cropping effect, not a continuity break. (7) p4, manual bulb next to a digital monitor: acceptable; the script's vitals kit specifies both. (8) p6, the walkthrough cuts straight to his departure: fixed by the source (Panel 3 goes straight to Panel 4) and reads as an ellipsis. (9) p6, label close to his fingers: acceptable, no overlap. (10) p7, 'Tomorrow … us/our' voice: fixed by the source (caption verbatim); 'may' plus the vision labels mark it as hypothetical. (11) p7, unnamed specialist and family: fixed by the source ('symbolic' in the source), framed by the 'WELBUK VISION' labels and the pale vignette. (12) p7, closing caption touches Ananya's leg: acceptable, not a face or hand. (13) p2, label overlaps Meera's kurta: acceptable, the phone, hand and face are clear.",
-    "Vision framing: 07-2 and 07-3 have the pale-blue rounded vignette, a lighter palette and 'WELBUK VISION' labels. 07-4 returns to the present at the full-colour clinic entrance without a vignette, so the future is not shown as a launched feature, as the source requires."
+    "Files I opened and looked at with Read: output/page-01.png to page-08.png (all eight final pages, each viewed in full); assets/panels/03-2.png; assets/panels/03-5.png; assets/characters/checkin-patients.png; source/original.txt; source/REVISION-2026-11-11.md; and the request JSON, including the script dialogue and the recorded first reading. I did not open the other panel PNGs, the workflow/review PNGs, the storyboard SVGs, reader.html or manga.pdf. I make no claim about them.",
+    "The first reader's Priya hairstyle concern is a real visible defect, but it comes from the lettering, not the art. In the accepted art assets/panels/03-2.png, Priya has a high ponytail with a blue scrunchie at the crown, which matches checkin-patients.png and her look in 03-5.png (high ponytail, blue scrunchie). On the final page-03.png, the 03-2 caption box 'Some check in ahead on the Welbuk Health app.' (about y40-145) covers the top of her head, the scrunchie and the ponytail's base. Only the loose wavy lengths framing her face and shoulder show, so on the page she reads as wearing her hair down. In 03-3 (a small background figure) and 03-5 the ponytail and clip are visible. So on the page her hair appears to change twice within page 3.",
+    "Every line of text on all eight pages matches the script, and every script line matches the source text word for word: captions, balloons, labels and the TV/tablet labels 'A-10 · A-11 · A-12', 'NOW · A-12' and 'RAVI · READY'. The page 5 and 6 labels use the full wording the user approved ('add page if needed'), with the corrections recorded in source review r7 (odontogram, growth scales, Paediatrician). The added consent exchange in 05-2 follows the user's 2026-11-12 follow-up.",
+    "Tails and speakers, checked page by page: 01-2 both tails go to Meera; 01-3 to Ananya; 02-2 to Ananya; 02-3 to Meera; 02-4 to Ananya (seated left), and the balloon sits between the two figures but the tail is clear; 04-2 to the nurse; 05-1 to Ananya; 05-2 'May the AI...' to Ananya and 'Yes, I agree.' by a long diagonal tail to Ravi on the right; 05-3 to Ravi; 06-2 to Ananya; 07-1 and 07-3 to Meera; 07-2 to Ravi. No balloon or caption covers a face.",
+    "Character continuity, checked by eye: Ananya keeps the low bun, gold stud, teal kurta, white coat and an unused stethoscope on pages 1, 2, 4, 5, 6, 7 and 8. In 02-4 her face reads slightly rounder and her bun looser than in 02-1/02-2, but the costume, stud and stethoscope match, so she is still identifiable. Meera keeps her left-shoulder braid and blue print kurta, with the bangle visible in 01-2, 07-1, 07-3 and 08-4. Ravi keeps his sage shirt, left-wrist watch and brown shoulder bag (shoulder, then lap in 03-5, floor in 04-2, beside the chair on pages 5 and 6). Mr. Raman keeps his glasses, cream shirt and cane in 03-1, 03-3 and 03-5. The nurse matches her cast description (lavender scrubs, bob, lanyard, watch). In 08-2 and 08-3 the soft rounded vignette and the lighter palette set the vision panels apart from the present-day panels.",
+    "Pages 1, 2 and 4-8 read cleanly in their intended left-to-right, top-to-bottom order. The only open problem is the 03-2 occlusion, which creates a visible continuity break for the reader."
   ],
-  "issues": [],
+  "issues": [
+    {
+      "problem": "On the final page, the 03-2 caption box covers Priya's blue scrunchie and the base of her high ponytail. She therefore appears to wear her hair loose in 03-2, but has a high ponytail with a blue clip in 03-3 (background) and 03-5. The accepted art is consistent, but the lettered page shows a hairstyle mismatch within the same page, which the first reader reported. Fix: move or reshape the 03-2 caption, for example a shorter or wider box placed higher in the open sky at upper left, or adjust the panel crop, so that the scrunchie and ponytail crown stay visible. Then re-render page 3, the PDF and the reader, and re-review.",
+      "location": "page 03, panel 03-2 (caption placement over Priya's head; compare with 03-5)",
+      "resolved": false
+    }
+  ],
   "readingReview": {
     "withoutGuides": true,
+    "firstReadingHash": "b48e4c475a567786185c3bbbcb817c26d95a64f2eea53b1ee7a0cc938147fbe8",
     "predictedOrder": [
       {
         "panel": "01-1",
@@ -123,19 +126,23 @@
       {
         "panel": "05-1",
         "dialogue": [
-          1
+          1,
+          2
         ]
       },
       {
         "panel": "05-2",
         "dialogue": [
-          1
+          1,
+          2,
+          3
         ]
       },
       {
         "panel": "05-3",
         "dialogue": [
-          1
+          1,
+          2
         ]
       },
       {
@@ -147,7 +154,10 @@
       {
         "panel": "06-1",
         "dialogue": [
-          1
+          1,
+          2,
+          3,
+          4
         ]
       },
       {
@@ -155,18 +165,6 @@
         "dialogue": [
           1,
           2
-        ]
-      },
-      {
-        "panel": "06-3",
-        "dialogue": [
-          1
-        ]
-      },
-      {
-        "panel": "06-4",
-        "dialogue": [
-          1
         ]
       },
       {
@@ -185,12 +183,37 @@
       {
         "panel": "07-3",
         "dialogue": [
+          1
+        ]
+      },
+      {
+        "panel": "07-4",
+        "dialogue": [
+          1
+        ]
+      },
+      {
+        "panel": "08-1",
+        "dialogue": [
+          1
+        ]
+      },
+      {
+        "panel": "08-2",
+        "dialogue": [
           1,
           2
         ]
       },
       {
-        "panel": "07-4",
+        "panel": "08-3",
+        "dialogue": [
+          1,
+          2
+        ]
+      },
+      {
+        "panel": "08-4",
         "dialogue": [
           1,
           2
@@ -198,146 +221,157 @@
       }
     ],
     "observations": [
-      "I read the final pages as a reader would, without numbers or guide lines. Each page is read left to right, top row first: p1 wide/left/right; p2 wide/left/right/wide; p3 left/right, left/right, wide; p4 wide, left tall/right tall; p5 wide/left/right/wide; p6 wide/left/right/wide; p7 left/right/wide/wide. There are no confusing gutters, and every row break is a clear horizontal gutter.",
-      "01-2 has the only close pair of balloons from one speaker: the top-left 'Appointments…' sits higher and further left than 'I wish everything…', so the natural order is 1 then 2, and both tails point to Meera. 02-3 reads the balloon at the top, then the label at the bottom. 07-2 reads the 'WELBUK VISION' label at the top left, then the caption at the bottom. 07-3 reads the label, then the caption directly below it. 07-4 reads the top-right product label first because it sits higher, then the bottom-left closing caption, which matches the script order.",
-      "Each reply sits in the panel after its prompt, so no answer is skipped: 01-2 wish → 01-3 reply; 05-1 question → 05-2 answer → 05-3 listening → 05-4 next steps; 06-1 explanation → 06-2 question → 06-3 'That's the idea.' 04-2 reads the caption before the nurse's balloon because of height and left position.",
-      "The 03-5 and 04-1 TV labels read as on-screen text after the panel caption, because they sit right and lower than the caption."
+      "01-2: the two Meera balloons sit side by side, left one higher, and both tails go to her. They read left then right as a single complaint, in script order.",
+      "05-1: the Ananya balloon is at the top centre-right (y40) and the PATIENT DETAILS label is lower on the left (y225). A natural scan reads the balloon first because it is higher and attached to the speaking face, which matches the script order (balloon, then label). The first reader also read it this way.",
+      "05-2: three boxes in one row, left to right: Ananya's question, 'Yes, I agree.', then the AI VOICE CONSENT label. The short reply sits right next to the question, but its tail runs diagonally to Ravi, who answers with an open-palm gesture, so the speaker is clear. The predicted order matches the script.",
+      "06-1: the header label is read first, then the three tile labels left to right, in script order. The Paediatrician label hangs slightly below the screen bezel onto the keyboard edge. This is cosmetic, and nothing important is hidden.",
+      "08-4: the product label at upper right comes before the caption at bottom left in a top-to-bottom scan, which matches the script. The bottom caption covers Meera's kurta hem and feet and part of Ananya's lower legs. No face, hand or prop is hidden.",
+      "03-2: the caption reads in the right place in the sequence, but it hides Priya's ponytail crown (see the issue)."
     ],
     "transitions": [
       {
         "from": "01-1",
         "to": "01-2",
-        "observation": "Exterior welcome cuts to the reception interior; the register stack and phone set up the busy desk the caption promised."
+        "observation": "Exterior to reception desk in the same morning. The paper registers and phone set up the complaint. The desk is visible through the glass door in 01-1."
       },
       {
         "from": "01-2",
         "to": "01-3",
-        "observation": "Ananya watches the same desk; Meera is still on the phone in the background, so the reply follows directly."
+        "observation": "Meera is still on the phone in the background of 01-3 while Ananya watches, hand at chin, so her reply clearly answers the complaint."
       },
       {
         "from": "01-3",
         "to": "02-1",
-        "observation": "Page turn to the evening office: the sunset window and the 'begins its Welbuk onboarding' caption mark the time and place change; same coat, bun and stud."
+        "observation": "Time change to an evening office, shown by the sunset window. The source caption 'The clinic begins its Welbuk onboarding.' is enough. A separate evening caption is not needed, and the 03-1 caption later gives the 'later morning' cue."
       },
       {
         "from": "02-1",
         "to": "02-2",
-        "observation": "Same desk and laptop, seen from the front; Ananya, hand at her chin, voices the plan."
+        "observation": "Same office, same laptop and window. Ananya moves from typing to considering roles."
       },
       {
         "from": "02-2",
         "to": "02-3",
-        "observation": "Same office (blind, evening window, laptop); Meera joins with the staff phone, and her line opens with 'And' to continue Ananya's."
+        "observation": "Meera, holding the staff phone, joins in the same evening office. The open laptop and empty chair link the two panels, and her 'And our team...' continues Ananya's line."
       },
       {
         "from": "02-3",
         "to": "02-4",
-        "observation": "Two-shot in the same office; Meera still holds the phone at her side, and Ananya's closing line has its tail pointing to her."
+        "observation": "Two-shot in the same room. Meera still holds the phone, and Ananya's closing line sums up both roles. Ananya's face is slightly rounder here, but her costume, stud and stethoscope match."
       },
       {
         "from": "02-4",
         "to": "03-1",
-        "observation": "Evening office cuts to bright reception, signalled by 'A later morning'; Meera's costume is consistent, and the new patient Raman is at the desk."
+        "observation": "The caption 'A later morning:' marks the time change. The reception is now tidy, with a QR stand and TV visible, against the paper chaos of page 1."
       },
       {
         "from": "03-1",
         "to": "03-2",
-        "observation": "Parallel route: Priya outside the same teal awning (the reception is visible through the glass) checks in on the app."
+        "observation": "Second check-in route: Priya outside, using the app, with the clinic's teal awning and TV visible through the glass. In the lettered page, her ponytail is hidden by the caption (see the issue)."
       },
       {
         "from": "03-2",
         "to": "03-3",
-        "observation": "Third route: Ravi just inside the glass entrance at the QR stand; Meera, Raman and Priya are visible in the background, tying the three together."
+        "observation": "Third route: Ravi just inside the glass entrance. Meera, Raman and Priya (ponytail visible) are in the background. The script places the stand 'just inside the clinic's glass entrance', so 'at the door' is accurate, and the glass door frame is at the right edge."
       },
       {
         "from": "03-3",
         "to": "03-4",
-        "observation": "Ravi's own phone (same watch, green sleeve) now shows the form, a direct action continuation."
+        "observation": "The scan leads to a close-up of the form on the same phone, with the watch on his left wrist. The tick-box tap matches 'shared with consent'."
       },
       {
         "from": "03-4",
         "to": "03-5",
-        "observation": "All three seated in the order front desk, app, QR; the TV lists three slots and Ravi has the phone in hand and the bag on his lap."
+        "observation": "All three patients are seated under the TV showing A-10 · A-11 · A-12 (source label, word for word), in the order Raman, Priya, Ravi, which matches the order they checked in. Ravi's phone and bag carry over. Priya has a ponytail here, which conflicts with how 03-2 looks on the page."
       },
       {
         "from": "03-5",
         "to": "04-1",
-        "observation": "Same waiting area: 'NOW · A-12', Ravi standing with the bag back on his shoulder and his hand pocketing the phone; the Raman and Priya chairs are empty."
+        "observation": "'NOW · A-12' plus Ravi standing up confirms that he is A-12, which resolves the first reader's inference. His bag is back on his shoulder."
       },
       {
         "from": "04-1",
         "to": "04-2",
-        "observation": "The vitals cart seen beside reception in 04-1 is the setting; the 'quick vitals check first' caption and the bag on the floor carry the move."
+        "observation": "Vitals corner next to reception. The vitals trolley is visible in 04-1. His bag on the floor carries over, and the nurse names Ravi."
       },
       {
         "from": "04-2",
         "to": "04-3",
-        "observation": "Cut to the consultation room: 'notified when he's ready' + 'RAVI · READY' on the tablet."
+        "observation": "The caption 'Dr. Ananya is notified when he's ready.' moves to the doctor and her tablet. The closed laptop beside her sets up page 5."
       },
       {
         "from": "04-3",
         "to": "05-1",
-        "observation": "Page turn into the same consultation room (window, plant, closed laptop); the tablet is gone, Ravi sits with the bag on the floor, same visit."
+        "observation": "Consultation room. The laptop is now open, the tablet is gone, and the greeting follows the notification."
       },
       {
         "from": "05-1",
         "to": "05-2",
-        "observation": "Reverse angle over Ananya's bun; Ravi answers the question."
+        "observation": "The question 'what brings you in' is held over while the consent comes first. The user decided that consent comes before the AI listens, and Ravi's answer arrives in 05-3, so the delay is deliberate and still reads."
       },
       {
         "from": "05-2",
         "to": "05-3",
-        "observation": "Reverse over Ravi's shoulder; Ananya listens, keeping the left/right screen direction."
+        "observation": "After consent, the mic on the laptop glows (SOAP NOTES), and Ravi gives his concern, answering 05-1."
       },
       {
         "from": "05-3",
         "to": "05-4",
-        "observation": "Wide two-shot again; Ananya proposes next steps and Ravi nods."
+        "observation": "Ananya listens to Ravi, seen from behind, while the laptop sits to the side. The caption sums up the panel."
       },
       {
         "from": "05-4",
         "to": "06-1",
-        "observation": "Back at reception after the consultation: desk, monitor and waiting chairs; the bag is back on Ravi's shoulder and he holds his own blue-case phone."
+        "observation": "Close-up of the same laptop with the doctor's hand on the trackpad. This is the screen walkthrough the user asked for in Request 3 and the 'add page if needed' follow-up. It is a product aside rather than Ravi-specific care, as the source intends."
       },
       {
         "from": "06-1",
         "to": "06-2",
-        "observation": "Close-up of the same phone showing the app cards; Ravi's question follows Meera's explanation."
+        "observation": "Back to the two-shot with PLAN OF CARE on the laptop. Ananya's next-steps line closes the visit without giving medical advice, as the source requires."
       },
       {
         "from": "06-2",
-        "to": "06-3",
-        "observation": "Meera answers; Ravi is seen from behind holding the phone, keeping Meera left / Ravi right."
-      },
-      {
-        "from": "06-3",
-        "to": "06-4",
-        "observation": "Ellipsis to his departure outside the entrance, waving to Ananya and Meera; the ellipsis comes from the source."
-      },
-      {
-        "from": "06-4",
         "to": "07-1",
-        "observation": "Page turn to the train window; 'Tomorrow … may' marks it as hypothetical, same green shirt, bag and watch."
+        "observation": "The cut to the reception counter (same chairs, monitor and waiting patients as page 3) reads as checkout after the consult. The source has no transition caption here, and the setting makes the move clear."
       },
       {
         "from": "07-1",
         "to": "07-2",
-        "observation": "Into the vignette with the 'WELBUK VISION' label: specialist and linked clinics."
+        "observation": "Ravi holds up his phone showing the app, a direct continuation of Meera pointing at it."
       },
       {
         "from": "07-2",
         "to": "07-3",
-        "observation": "Same vignette and label: family wellness scene with Ravi."
+        "observation": "Meera answers his question while gesturing at his phone in the foreground, so the walkthrough begins on screen."
       },
       {
         "from": "07-3",
         "to": "07-4",
-        "observation": "The vignette disappears; return to the present at the clinic entrance with the three main characters and the product labels."
+        "observation": "Ravi leaves, waving, phone in hand. The walkthrough is implied by 07-3, not drawn. This follows the source text word for word and does not leave the reader confused."
+      },
+      {
+        "from": "07-4",
+        "to": "08-1",
+        "observation": "Train window. 'Tomorrow, care may take us beyond our hometown.' is source text, word for word. Ravi in the same outfit and bag ties the panel to him."
+      },
+      {
+        "from": "08-1",
+        "to": "08-2",
+        "observation": "The WELBUK VISION label, the pale vignette and the lighter palette mark it as a vision. The specialist and connected clinics fit the caption."
+      },
+      {
+        "from": "08-2",
+        "to": "08-3",
+        "observation": "The second WELBUK VISION label repeats on purpose, so the family scene is also not read as a launched feature (the source says to mark the future as vision). The family is symbolic, as in the source."
+      },
+      {
+        "from": "08-3",
+        "to": "08-4",
+        "observation": "Returns to the clinic exterior for the closing group portrait. The '•' separators are the source's own wording for this label. The panel works as a symbolic ending, not a timed scene."
       }
     ],
-    "firstReadingHash": "cda6906f965a0b1037850d3c9b6c08c570d2c7b782d3ef7b335805ca22f01580",
-    "comparison": "The recorded image-only first reading predicted the same panel order and balloon order as the script on all seven pages. It reported no skipped reply or wrong tail, and I found none. Its concerns are judged in the observations: none is a real defect in the finished pages. Fixed by the source: Meera on the phone, 'A later morning', the walkthrough ellipsis, the 'Tomorrow/us' voice, the symbolic specialist and family. Resolved by the next page: Ravi as A-12, settled by 04-1. Acceptable: the implied evening, the QR stand inside the entrance, the bulb with the digital monitor, minor label overlaps on clothing and a leg. Priya's hair: the ponytail is drawn in 03-2 and only its top is hidden by the caption."
+    "comparison": "Agreements with the first reading: the reading order on all pages, the speaker attribution, and the absence of covered faces. Judgement on each concern the first reader raised: (p1) Meera is unnamed: acceptable, because the source gives no dialogue that names her. (p2) No evening caption: acceptable, because the source caption is kept word for word and the sunset window is clear. The CARE label over Meera's lower kurta: acceptable, because her protected phone hand is clear. The top caption touching Ananya's hair: minor, with no feature hidden. Ananya's face in 02-4: a mild drift, acceptable because her costume, bun and stud identify her. (p3) QR 'at the door': acceptable, because the stand is just inside the glass entrance as scripted. Ravi named by caption and A-12 inferred: both are source text, and 04-1 confirms A-12. Priya's hairstyle: confirmed as a defect. It is not in the art (03-2.png has the high ponytail and blue scrunchie) but is caused by the 03-2 caption covering them, so this is unresolved. (p4) The nurse is unintroduced: acceptable, because her scrubs show her role. The 'RAVI ·' / 'READY' break: source label word for word, and the trailing-dot line break matches the label style elsewhere, so acceptable. (p5) The delayed answer: required by the user's consent decision. The reply balloon's position: resolved by its tail and Ravi's gesture. Dense jargon: the full wording the user asked for. (p6) A specialty showcase unrelated to Ravi: explicitly requested by the user (Request 3). The label overhang: cosmetic. (p7) The scene jump and the walkthrough not drawn: source text word for word, and the setting carries the reader. (p8) 'Tomorrow/us', the repeated VISION label, the '•' separators, the family and specialist, and Ravi's outfit: all source text or deliberate vision marking. The caption over the feet: minor. One difference stays open, the 03-2 hairstyle occlusion, so the status is changes-requested."
   },
-  "fingerprint": "98f3e6747daaa649461823176a3645dd5fa9535905ffe8b1a2b860f1987869d2",
-  "recordedAt": "2026-11-11T11:51:53.866Z"
+  "fingerprint": "4d6d7888f239b4fd1f607e0b0e0a24096cd539848e202038869380aac28d4b11",
+  "recordedAt": "2026-11-12T11:35:46.710Z"
 }

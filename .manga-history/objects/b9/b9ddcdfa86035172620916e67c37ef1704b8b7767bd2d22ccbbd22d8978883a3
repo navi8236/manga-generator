@@ -1,0 +1,1463 @@
+// Writes the Welbuk onboarding script, cast, sections and storyboard geometry
+// into workflow.json. Run through `node cli/history.mjs run` so the before and
+// after states are saved. Coordinates: rect/face/anchor are page coordinates on
+// the 1024x1536 page; dialogue x/dy are panel-local, as the shared CLI expects.
+import fs from 'node:fs';
+
+const W = 'works/auto-6294ee8a2094';
+const file = `${W}/workflow.json`;
+const config = JSON.parse(fs.readFileSync(file, 'utf8'));
+
+// Qwen-Image-Edit accepts at most three images: layout + two canonical sheets.
+const MAIN = `${W}/assets/characters/main-cast.png`;
+const VISION = `${W}/assets/characters/vision-cast.png`;
+const NURSE = `${W}/assets/characters/nurse.png`;
+const PATIENTS = `${W}/assets/characters/checkin-patients.png`;
+const ref = (id) =>
+  ['ananya', 'meera', 'ravi'].includes(id) ? MAIN : id === 'nurse' ? NURSE : ['raman', 'priya'].includes(id) ? PATIENTS : VISION;
+
+config.title = 'A Better Way to Care — Welbuk';
+config.author = '';
+config.colorMode = 'color';
+config.readingDirection = 'left-to-right';
+config.language = 'en';
+config.narrativeDesign = {
+  version: 1,
+  direction: 'left-to-right, top-to-bottom',
+  rules: [
+    'one beat per panel',
+    'speech groups and faces are planned together',
+    'scene and time boundaries receive a visual or caption anchor',
+    'page-end question and next-page answer are reviewed, not forced',
+    'future-vision panels are visually and verbally separated from current features',
+  ],
+};
+config.style =
+  'Full-colour, approachable Indian slice-of-life manga. Clean confident line art with varied line weight, soft flat cel shading, warm natural daylight, restrained blue and teal accents, simple readable backgrounds. Expressive but natural faces, precise hands. No photorealism, no glossy gradients, no surface microtexture. Absolutely no text, letters, logos, numbers, speech bubbles or captions inside the artwork; device screens show only abstract blank blocks and simple icons.';
+config.continuity =
+  'Keep Dr. Ananya, Meera, Ravi, the Nurse, Mr. Raman and Priya identical to their canonical reference sheets in face traits, hair, build, skin tone and clothing for the whole comic. Device screens never show readable text or real personal data. Page 8 panels 2-3 (08-2, 08-3) are a future vision: soft pale-blue vignette border and lighter, airy palette so they never read as current features.';
+config.quality.avoid = [
+  'Uniform microdetail, glossy gradients, dense decorative hatching, random grain and redundant highlights.',
+  'Any readable text, logos, fake UI copy, real patient names or numbers on screens, papers or signs.',
+  'Medical equipment, prescriptions or imagery that implies a diagnosis or treatment.',
+];
+
+config.cast = {
+  ananya: {
+    name: 'Dr. Ananya',
+    description:
+      'Indian woman in her late 30s, clinic owner and doctor. Calm, confident and caring. Teal kurta beneath an open white coat (source). Shoulder-length black hair tied in a low bun with a few loose strands, slim build, small gold stud earrings, a stethoscope worn around her neck (never in use) in every scene where she wears the white coat (manga supplement, from the accepted reference sheet).',
+    faceDesign: {
+      traits: [
+        'Calm almond-shaped eyes with slightly heavy upper lids and a gentle downward outer corner',
+        'Soft, straight medium-thick eyebrows set fairly level',
+        'Oval face with a defined, slightly pointed chin and a small bindi-free forehead; small nose with a rounded tip',
+      ],
+      reference: ref('ananya'),
+      settingBasis:
+        'Source: Indian female clinic owner, late 30s, calm, confident, caring; teal kurta beneath white coat. Manga supplement: the three face traits, low bun hairstyle and gold studs, chosen to separate her from Meera.',
+    },
+  },
+  meera: {
+    name: 'Meera',
+    description:
+      'Indian woman in her late 20s, clinic receptionist. Friendly and capable. Blue kurta (source). Long black hair in a single side braid over her left shoulder, round face, slim build, a thin silver bangle on the right wrist (manga supplement).',
+    faceDesign: {
+      traits: [
+        'Large, round bright eyes with clearly visible lower lash line',
+        'Thin, gently arched eyebrows set high above the eyes',
+        'Round face with full cheeks and a short soft chin; small dimple on the left cheek when smiling',
+      ],
+      reference: ref('meera'),
+      settingBasis:
+        'Source: Indian female receptionist, late 20s, friendly and capable, blue kurta. Manga supplement: the three face traits, side braid and silver bangle.',
+    },
+  },
+  ravi: {
+    name: 'Ravi',
+    description:
+      'Indian man in his mid-30s, patient. Warm and approachable. Light green shirt (source). Short neat black hair with a side part, trimmed short beard, medium build, dark trousers, a simple wristwatch on the left wrist, small dark-brown shoulder bag (manga supplement).',
+    faceDesign: {
+      traits: [
+        'Warm, slightly narrow eyes that crease at the outer corners when he smiles',
+        'Thick, straight dark eyebrows close to the eyes',
+        'Square jaw framed by a short trimmed beard and a broad nose',
+      ],
+      reference: ref('ravi'),
+      settingBasis:
+        'Source: Indian male patient, mid-30s, warm, approachable, light green shirt. Manga supplement: the three face traits, beard, side part and wristwatch.',
+    },
+  },
+  specialist: {
+    name: 'Specialist (vision)',
+    description:
+      'Symbolic specialist doctor in a future-vision clinic in another city. Indian man in his 50s with greying temples, rimless glasses, light grey blazer over a pale blue shirt, stethoscope around his neck (manga supplement; the source only says "specialist").',
+    faceDesign: {
+      traits: [
+        'Kind eyes behind thin rimless rectangular glasses',
+        'Bushy salt-and-pepper eyebrows',
+        'Long face with deep smile lines and a neat grey moustache',
+      ],
+      reference: ref('vision-family'),
+      settingBasis:
+        'Source: "a conceptual Welbuk-connected clinic and specialist". Every visual detail is a manga supplement.',
+    },
+  },
+  partner: {
+    name: "Ravi's partner",
+    description:
+      "Symbolic family member in the vision scene. Indian woman in her early 30s, shoulder-length wavy hair, mustard-yellow kurta (manga supplement; the source only says 'partner').",
+    faceDesign: {
+      traits: [
+        'Wide-set eyes with a soft, lively expression',
+        'Medium eyebrows with a high gentle arch',
+        'Heart-shaped face with a narrow chin and a small mole under the right eye',
+      ],
+      reference: ref('vision-family'),
+      settingBasis:
+        'Source: "symbolic family scene with Ravi, partner, and child". Appearance is a manga supplement.',
+    },
+  },
+  child: {
+    name: "Ravi's child",
+    description:
+      "Symbolic family member in the vision scene. Child of about seven, short hair, orange T-shirt (manga supplement; the source only says 'child').",
+    faceDesign: {
+      traits: [
+        'Big round curious eyes',
+        'Short, light eyebrows',
+        'Round chubby cheeks and a small upturned nose',
+      ],
+      reference: ref('vision-family'),
+      settingBasis:
+        'Source: "symbolic family scene with Ravi, partner, and child". Appearance is a manga supplement.',
+    },
+  },
+  nurse: {
+    name: 'Nurse',
+    description:
+      'Indian woman in her early 30s, clinic nurse. Friendly and efficient (revised source). Plain lavender scrub top and trousers, white clinic shoes, a plain lavender lanyard with a blank card, small wristwatch on her left wrist; chin-length wavy black bob with a side part tucked behind her right ear (manga supplement, from the accepted nurse sheet).',
+    faceDesign: {
+      traits: [
+        'Wide-set bright eyes with slightly lifted outer corners',
+        'Thick straight eyebrows',
+        'Heart-shaped face with a small cleft (dimpled) chin and a small straight nose',
+      ],
+      reference: ref('nurse'),
+      settingBasis:
+        'Revised source (2026-11-11): Indian female clinic nurse, friendly and efficient. Manga supplement: the three face traits, bob haircut and lavender scrubs, chosen to separate her from Ananya and Meera.',
+    },
+  },
+  raman: {
+    name: 'Mr. Raman',
+    description:
+      'Indian man in his early 70s, a regular patient (revised source: elderly man who checks in at the front desk). Cream half-sleeve shirt, grey trousers, brown sandals, round reading glasses, wooden walking stick in his right hand, short white hair (manga supplement, from the accepted check-in patients sheet).',
+    faceDesign: {
+      traits: ['Deep-set gentle eyes with smile lines', 'Bushy white eyebrows', 'Long oval face with prominent ears'],
+      reference: ref('raman'),
+      settingBasis: 'Revised source (2026-11-11): an elderly man who checks in at the front desk. Name and appearance are manga supplements.',
+    },
+  },
+  priya: {
+    name: 'Priya',
+    description:
+      'Indian woman in her mid-20s, a patient (revised source: young woman who checks in on the Welbuk Health app). Coral-pink kurti over blue jeans, white sneakers, small crossbody bag, high ponytail (manga supplement, from the accepted check-in patients sheet).',
+    faceDesign: {
+      traits: ['Large almond eyes with winged lashes', 'Short straight eyebrows', 'Small pointed chin with a beauty spot above the left lip'],
+      reference: ref('priya'),
+      settingBasis: 'Revised source (2026-11-11): a young woman who checks in on the Welbuk Health app. Name and appearance are manga supplements.',
+    },
+  },
+  narration: { kind: 'caption', name: 'Caption' },
+  label: { kind: 'caption', variant: 'label', name: 'Product / vision label' },
+};
+
+config.references = [MAIN, VISION, NURSE, PATIENTS];
+config.referenceRoles = {
+  [MAIN]:
+    'identity: canonical turnaround and expression sheet for Dr. Ananya, Meera and Ravi (face traits, hair, build, skin tone, clothing).',
+  [VISION]:
+    "identity: canonical sheet for the vision-only characters (specialist, Ravi's partner, Ravi's child).",
+  [NURSE]: 'identity: canonical sheet for the clinic nurse (added in the 2026-11-11 revision; appears on page 4).',
+  [PATIENTS]: 'identity: canonical sheet for the two other patients on page 3, Mr. Raman (elderly, front desk) and Priya (young, Welbuk Health app).',
+};
+
+const costumes = {
+  ananya: 'Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.',
+  meera: 'Blue kurta with white churidar, silver bangle on right wrist.',
+  ravi: 'Light green shirt, dark trousers, wristwatch on left wrist.',
+};
+const nurseCostume = 'Plain lavender scrubs, white clinic shoes, blank lavender lanyard card, wristwatch on left wrist.';
+const patientCostumes = {
+  raman: 'Cream half-sleeve shirt, grey trousers, brown sandals, round reading glasses, wooden walking stick.',
+  priya: 'Coral-pink kurti over blue jeans, white sneakers, small crossbody bag.',
+};
+config.sections = {
+  'clinic-morning': {
+    summary:
+      'A weekday morning at Dr. Ananya’s friendly neighbourhood clinic in Tamil Nadu, before Welbuk: busy reception, paper registers, ringing phone, queue.',
+    location:
+      'Small neighbourhood clinic in Tamil Nadu: whitewashed entrance with potted plants and a simple awning, reception desk with paper registers and a desk phone, waiting chairs (setting is source; furniture details are manga supplement).',
+    costumes: { ananya: costumes.ananya, meera: costumes.meera },
+    objects: {
+      registers: 'Stack of paper appointment registers with blank pages (no legible writing).',
+      'desk-phone': 'Corded beige desk phone on the reception desk.',
+    },
+  },
+  onboarding: {
+    summary:
+      'Later the same week, after hours: the clinic sets up Welbuk. Ananya configures Welbuk Practice on a laptop; Meera tries Welbuk Care on a staff phone.',
+    location:
+      'Dr. Ananya’s small office beside reception, desk with a laptop, window with evening light (manga supplement).',
+    costumes: { ananya: costumes.ananya, meera: costumes.meera },
+    objects: {
+      laptop:
+        'Silver laptop; screen shows only a generic setup form of blank fields and simple blocks, no text.',
+      'staff-phone':
+        'Meera’s smartphone; screen shows abstract blocks and a simple calendar icon, no text.',
+    },
+  },
+  reception: {
+    summary:
+      'A later morning: the clinic now runs with Welbuk. Patients check in at the front desk, ahead on the Welbuk Health app, or with the QR code at the door; slots appear on the waiting-room TV; the nurse takes Ravi’s vitals.',
+    location:
+      'The same clinic reception, now tidy: a QR check-in stand just inside the glass entrance, a wall-mounted waiting-room TV, waiting chairs with a few seated figures seen from behind, the reception desk with a desktop monitor angled toward Meera, and a small vitals corner beside reception.',
+    costumes: { ...costumes, nurse: nurseCostume, ...patientCostumes },
+    objects: {
+      monitor:
+        'Reception desktop monitor and keyboard; screen faces Meera, only blank fields visible if seen.',
+      'qr-stand':
+        'Small check-in stand just inside the entrance with a square abstract QR-like pattern (not a real code, no text).',
+      'waiting-tv':
+        'Wall-mounted waiting-room TV; teal screen with an empty white token area; the token number is lettered, never drawn.',
+      'walking-stick': 'Mr. Raman’s simple wooden walking stick.',
+      'priya-phone': 'Priya’s smartphone; app screen shows only a calendar icon and a check-mark card, no text.',
+      'vitals-kit':
+        'Blood-pressure cuff with a hand bulb, fingertip pulse oximeter and a small monitor showing abstract shapes only (no readings).',
+      'ravi-phone':
+        'Ravi’s own smartphone (dark blue case). On page 7 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text.',
+    },
+  },
+  consultation: {
+    summary: 'The same visit: Ravi talks with Dr. Ananya in the consultation room.',
+    location:
+      'Bright, simple consultation room: desk, two chairs, Dr. Ananya’s laptop (closed in 04-3, open on page 5), window with plant. No medical charts with text.',
+    costumes: { ananya: costumes.ananya, ravi: costumes.ravi },
+    objects: {
+      'consult-laptop': 'Dr. Ananya’s laptop on the consultation desk: closed and pushed aside in 04-3, opened on page 5 with the screen turned toward the reader. The screen shows only abstract cards and icons; section names are lettered over it, never drawn.',
+      'doctor-tablet':
+        'Dr. Ananya’s tablet. Shown only in 04-3 (a simple notification card with a blank strip; the alert text is lettered, never drawn); from 05-1 on it is put away in the desk drawer and must not appear.',
+    },
+  },
+  departure: {
+    summary: 'The end of the same visit: Ravi leaves the clinic reassured.',
+    location: 'Clinic entrance from the street side, morning sun.',
+    costumes: { ...costumes },
+    objects: {},
+  },
+  travel: {
+    summary:
+      'A possible tomorrow: Ravi travels to another Indian city by train. Hypothetical framing ("care may take us beyond our hometown").',
+    location: 'Indian Railways-style train seat by a window, passing city skyline (no signage).',
+    costumes: { ravi: costumes.ravi },
+    objects: {},
+  },
+  vision: {
+    summary:
+      'WELBUK VISION — not a launched feature. A conceptual future of connected clinics, specialists and family wellness, drawn inside a soft pale-blue vignette.',
+    location:
+      'Idealised, airy spaces: a modern clinic in another city linked by faint dotted lines to small clinic silhouettes; a family living room. Lighter palette and rounded vignette border.',
+    costumes: {
+      ravi: costumes.ravi,
+      specialist: 'Light grey blazer over a pale blue shirt, rimless glasses, stethoscope worn around his neck (not in use).',
+      partner: 'Mustard-yellow kurta.',
+      child: 'Orange T-shirt and shorts.',
+    },
+    objects: {
+      'family-tablet':
+        'Tablet showing an abstract family wellness app: three simple profile circles and a heart icon, no text.',
+    },
+  },
+  closing: {
+    summary:
+      'Symbolic closing group portrait in front of the clinic, tying the three Welbuk products to the three people.',
+    location: 'Clinic entrance with awning and plants, warm morning light.',
+    costumes: { ...costumes },
+    objects: {},
+  },
+};
+
+// Helpers -------------------------------------------------------------------
+const panelRect = (x, y, w, h) => [x, y, w, h];
+function face(rect, local) {
+  return [rect[0] + local[0], rect[1] + local[1], local[2], local[3]];
+}
+function speaker(rect, local) {
+  const f = face(rect, local);
+  return {
+    anchor: [Math.round(f[0] + f[2] / 2), Math.round(f[1] + f[3] * 0.8)],
+    face: f,
+  };
+}
+function line(speakerId, lines, x, dy, extra = {}) {
+  const textColumns = lines.map((s, i) => (i < lines.length - 1 ? s + ' ' : s));
+  return {
+    speaker: speakerId,
+    text: textColumns.join(''),
+    textColumns,
+    textDirection: 'horizontal',
+    side: 'left',
+    x,
+    dy,
+    ...extra,
+  };
+}
+const hands = (left, right) => ({ left, right });
+const prop = (id, before, during, after, heldBy) => ({ id, before, during, after, heldBy });
+
+// Pages ---------------------------------------------------------------------
+const pages = [];
+
+// PAGE 1 — A CLINIC WITH A BIG HEART
+{
+  const r1 = panelRect(24, 24, 976, 600);
+  const r2 = panelRect(24, 648, 560, 816);
+  const r3 = panelRect(608, 648, 392, 816);
+  pages.push({
+    id: '01',
+    section: 'clinic-morning',
+    purpose:
+      'Introduce Dr. Ananya’s warm clinic and the paperwork pressure that motivates change.',
+    expectation: 'How will Dr. Ananya make the busy work simpler?',
+    panels: [
+      {
+        id: '01-1',
+        order: 1,
+        role: '提示',
+        beat: 'A warm, busy morning at the clinic',
+        rect: r1,
+        scene:
+          'Wide establishing shot of a friendly neighbourhood clinic in Tamil Nadu in morning sun: whitewashed entrance, simple awning, potted plants. Dr. Ananya stands in the doorway left of centre, smiling and welcoming an elderly patient seen from behind; two more patients wait on perforated metal chairs at right, seen from behind or in small side view without detailed faces.',
+        action: 'Ananya gestures the patient inside with an open left hand.',
+        emotion: 'Warm, welcoming, energetic morning.',
+        camera: 'Wide, eye level, slight high angle; empty sky band at top-left for the caption.',
+        information: 'Who Dr. Ananya is and that her clinic is busy and caring.',
+        readingFlow: { entry: [40, 40], exit: [990, 620] },
+        production: {
+          moment: 'Ananya mid-greeting as the first patient steps toward the door.',
+          before: 'Patients arrive and line up outside the clinic.',
+          after: 'The patient walks in; Ananya follows to start the day.',
+          hands: { ananya: hands('open palm gesturing the patient inside', 'resting at her side, empty') },
+          props: [],
+        },
+        speakers: { ananya: speaker(r1, [330, 250, 90, 115]) },
+        dialogue: [line('narration', ['A busy day at', "Dr. Ananya's clinic."], 24, 24)],
+      },
+      {
+        id: '01-2',
+        order: 2,
+        role: '始動',
+        beat: 'Meera is overwhelmed by paper registers and calls',
+        rect: r2,
+        scene:
+          'Reception desk, medium shot. Meera behind the desk holds a ringing corded desk phone receiver to her ear with her left hand while writing in an open paper register with a pen in her right hand. A tall stack of paper registers beside her; a queue of patients (backs only) in front of the desk. Small motion lines show the phone ringing.',
+        action: 'Meera juggles the call and the register, eyebrows raised, a sweat drop.',
+        emotion: 'Flustered but still friendly and capable.',
+        camera: 'Medium shot from the waiting-area side, tall framing to show the stack of registers.',
+        information: 'The specific pain points: appointments, patient details, follow-ups.',
+        readingFlow: { entry: [44, 680], exit: [560, 1490] },
+        production: {
+          moment: 'Meera pauses writing mid-call and sighs her wish aloud.',
+          before: 'The phone rang while she was registering the next patient in the queue.',
+          after: 'She keeps going with the call and the queue.',
+          hands: {
+            meera: hands('holding desk-phone receiver to her left ear', 'holding a pen over the open register'),
+          },
+          props: [
+            prop('desk-phone', 'ringing on the desk', 'receiver held to Meera’s ear', 'still in use', 'meera.left'),
+            prop('registers', 'stacked on the desk', 'one open under her pen, the rest stacked high', 'unchanged', 'none'),
+            prop('pen', 'in Meera’s hand', 'writing in the register', 'in Meera’s hand', 'meera.right'),
+          ],
+        },
+        speakers: { meera: speaker(r2, [150, 330, 150, 190]) },
+        dialogue: [
+          line('meera', ['Appointments,', 'patient details,', 'follow-ups...'], 20, 24),
+          line('meera', ['I wish everything', 'were easier', 'to manage!'], 280, 120),
+        ],
+      },
+      {
+        id: '01-3',
+        order: 3,
+        role: '決定',
+        beat: 'Ananya resolves to simplify the clinic’s work',
+        rect: r3,
+        scene:
+          'Dr. Ananya stands at the side of the reception area, looking thoughtfully toward the busy desk in the background at frame left, where Meera is still on the phone writing in the register. Right hand lightly at her chin, left hand loosely at the front of her white coat. Simple background: wall, doorway, waiting chairs.',
+        action: 'Ananya watches Meera, then speaks with quiet determination.',
+        emotion: 'Thoughtful, then resolved and kind.',
+        camera: 'Tall medium-full shot, slight low angle, empty wall above her for the balloon.',
+        information: 'Ananya’s motive: time belongs with patients.',
+        readingFlow: { entry: [630, 680], exit: [990, 1500] },
+        production: {
+          moment: 'Ananya decides, eyes on the reception desk.',
+          before: 'She has just seen Meera juggling the call and the registers.',
+          after: 'She will look for a better system (page 2).',
+          hands: { ananya: hands('loosely closed at the front of her white coat', 'fingers lightly at her chin') },
+          props: [],
+        },
+        speakers: { ananya: speaker(r3, [130, 390, 140, 175]) },
+        dialogue: [
+          line('ananya', ['Our time belongs', 'with patients.', "Let's make the", 'rest simpler.'], 18, 24),
+        ],
+      },
+    ],
+  });
+}
+
+// PAGE 2 — THE CLINIC JOINS WELBUK
+{
+  const r1 = panelRect(24, 24, 976, 520);
+  const r2 = panelRect(24, 568, 600, 520);
+  const r3 = panelRect(648, 568, 352, 520);
+  const r4 = panelRect(24, 1112, 976, 352);
+  pages.push({
+    id: '02',
+    section: 'onboarding',
+    purpose:
+      'Show onboarding with Welbuk Practice and Welbuk Care, establishing two of the three product roles.',
+    expectation: 'What changes for patients once the clinic is set up?',
+    panels: [
+      {
+        id: '02-1',
+        order: 1,
+        role: '転換',
+        beat: 'Onboarding begins on a laptop',
+        rect: r1,
+        scene:
+          'Over-the-shoulder shot from behind Dr. Ananya’s right shoulder (she faces screen-right; her bun, gold stud and calm profile visible) at a desk: a clean silver laptop with a generic setup form of blank rounded fields and simple blocks (no text, no logos). Both her hands (teal sleeves under white coat cuffs) type on the keyboard. A mug on a coaster. Evening window light. Clear empty areas at top-left and top-right for labels.',
+        action: 'Fingers typing into the blank setup fields.',
+        emotion: 'Calm, fresh start.',
+        camera: 'Over-the-shoulder shot from behind Ananya’s right shoulder, laptop at three-quarter view.',
+        information: 'Time and place change: the clinic is now onboarding to Welbuk Practice.',
+        transition: {
+          kind: 'time-change',
+          bridge: 'Office with evening light and the laptop replaces the busy morning desk.',
+          settingBasis: 'Source: "The clinic begins its Welbuk onboarding." Evening timing is a manga supplement.',
+        },
+        readingFlow: { entry: [40, 40], exit: [990, 540] },
+        production: {
+          moment: 'Ananya fills in the first generic clinic field.',
+          before: 'She opened the laptop to begin onboarding.',
+          after: 'She pauses to think about team roles (02-2).',
+          hands: { ananya: hands('typing on the laptop keyboard', 'typing on the laptop keyboard') },
+          props: [prop('laptop', 'closed on the desk', 'open, generic blank setup form on screen', 'open', 'none')],
+        },
+        speakers: {},
+        dialogue: [
+          line('narration', ['The clinic begins its', 'Welbuk', 'onboarding.'], 0, 0),
+          line('label', ['WELBUK PRACTICE', 'for the', 'clinic'], 682, 0),
+        ],
+      },
+      {
+        id: '02-2',
+        order: 2,
+        role: '始動',
+        beat: 'Ananya organises clinic information and roles',
+        rect: r2,
+        scene:
+          'Dr. Ananya seated at the desk in front of the laptop (screen angled away from the reader), right hand on the trackpad, left index finger resting at her chin as she considers team roles. Window behind her with soft evening light.',
+        action: 'Ananya looks from the screen up and to the right, planning.',
+        emotion: 'Focused, quietly pleased.',
+        camera: 'Medium shot, three-quarter front view, empty wall at upper left for the balloon.',
+        information: 'Welbuk Practice organises the clinic’s workflow.',
+        readingFlow: { entry: [44, 590], exit: [620, 1080] },
+        production: {
+          moment: 'Ananya speaks while considering staff roles.',
+          before: 'She entered the clinic information.',
+          after: 'Meera joins with a staff phone (02-3).',
+          hands: { ananya: hands('resting on the laptop trackpad', 'index finger lightly tapping her lower lip') },
+          props: [prop('laptop', 'open on the desk', 'open, screen angled away', 'open', 'none')],
+        },
+        speakers: { ananya: speaker(r2, [360, 180, 130, 165]) },
+        dialogue: [line('ananya', ['We can organise our', 'clinic workflow here.'], 20, 20)],
+      },
+      {
+        id: '02-3',
+        order: 3,
+        role: '始動',
+        beat: 'Meera discovers Welbuk Care for staff',
+        rect: r3,
+        scene:
+          'Tall medium shot in the same evening office: Meera stands beside the wooden desk (open laptop with blank abstract form, pen cup, plant; an empty second office chair beside her (Dr. Ananya sits at the desk off-panel left); window with a roller blind and evening sky at right), holding a staff smartphone in her right hand at upper-chest height, screen toward the reader showing only abstract blocks and a simple calendar icon (no text). Left hand relaxed at her side. She looks up from the phone with a bright smile.',
+        action: 'Meera looks up from the phone with a bright smile.',
+        emotion: 'Relieved, excited.',
+        camera: 'Tall medium shot, slightly from her right.',
+        information: 'Welbuk Care gives staff role-specific tools.',
+        readingFlow: { entry: [664, 590], exit: [990, 1080] },
+        production: {
+          moment: 'Meera holds up the staff phone and speaks.',
+          before: 'Meera picked up the staff phone from the desk to try the staff app.',
+          after: 'Both share a confident look (02-4).',
+          hands: { meera: hands('relaxed at her side, empty', 'holding staff-phone at upper chest') },
+          props: [prop('staff-phone', 'on the desk', 'in Meera’s right hand, abstract staff screen', 'in Meera’s hand', 'meera.right'), prop('laptop', 'open on the desk', 'open on the desk beside Meera, blank abstract form', 'open', 'none')],
+        },
+        speakers: { meera: speaker(r3, [190, 190, 120, 150]) },
+        dialogue: [
+          line('meera', ['And our team can', 'use tools suited', 'to each staff role.'], 16, 16),
+          line('label', ['WELBUK CARE', 'for clinic staff'], 16, 400),
+        ],
+      },
+      {
+        id: '02-4',
+        order: 4,
+        role: '余韻',
+        beat: 'One team, better coordination',
+        rect: r4,
+        scene:
+          'Friendly two-shot in the office: Dr. Ananya (left) seated, turning to Meera (right) who stands holding the staff phone at her side; they share a warm, confident smile. Laptop open on the desk between them, its screen turned toward the reader showing only blank abstract fields (no text).',
+        action: 'Ananya says the line; Meera nods.',
+        emotion: 'Confident teamwork.',
+        camera: 'Medium two-shot, eye level, wide horizontal framing.',
+        information: 'Coordination is the shared benefit.',
+        readingFlow: { entry: [40, 1130], exit: [990, 1505] },
+        production: {
+          moment: 'Ananya and Meera smile at each other as Ananya speaks.',
+          before: 'Meera tried Welbuk Care.',
+          after: 'The clinic is ready to see patients with Welbuk (page 3).',
+          hands: {
+            ananya: hands('resting on the desk beside the laptop', 'raised in a small encouraging fist'),
+            meera: hands('relaxed at her side, empty', 'holding staff-phone at her side'),
+          },
+          props: [
+            prop('laptop', 'open on the desk', 'open on the desk, Ananya has turned its screen toward Meera and the reader (blank fields only)', 'open', 'none'),
+            prop('staff-phone', 'in Meera’s right hand', 'held at her side', 'in Meera’s hand', 'meera.right'),
+          ],
+        },
+        speakers: {
+          ananya: speaker(r4, [300, 175, 120, 150]),
+          meera: speaker(r4, [600, 160, 115, 145]),
+        },
+        dialogue: [line('ananya', ['One team.', 'Better', 'coordination.'], 400, 20)],
+      },
+    ],
+  });
+}
+
+// PAGE 3 — THREE WAYS TO CHECK IN (revised 2026-11-11 at the user's request)
+{
+  const r1 = panelRect(24, 24, 488, 440);
+  const r2 = panelRect(536, 24, 464, 440);
+  const r3 = panelRect(24, 488, 464, 440);
+  const r4 = panelRect(512, 488, 488, 440);
+  const r5 = panelRect(24, 952, 976, 512);
+  pages.push({
+    id: '03',
+    section: 'reception',
+    purpose: 'Show that patients can check in three ways — at the front desk (always an option), ahead on the Welbuk Health app, or with the QR code at the door — and that every check-in gets a slot on the waiting-room screen.',
+    expectation: 'When is Ravi’s turn, and what happens next?',
+    panels: [
+      {
+        id: '03-1',
+        order: 1,
+        role: '提示',
+        beat: 'Front-desk check-in with Meera',
+        rect: r1,
+        scene:
+          'The tidy reception desk on a bright morning: Mr. Raman (elderly patient from the check-in patients sheet: round reading glasses, cream shirt, wooden walking stick in his right hand) stands at the counter, smiling; Meera behind the desk greets him warmly and types on the keyboard, the desktop monitor angled toward her (screen not visible). Two other waiting patients seen from behind in muted grey and dark-brown clothes. Plain wall at the upper left for a caption.',
+        action: 'Meera checks Mr. Raman in at the desk.',
+        emotion: 'Warm, unhurried.',
+        camera: 'Medium two-shot across the counter, eye level.',
+        information: 'The front desk is still there for anyone who prefers it.',
+        transition: {
+          kind: 'time-change',
+          bridge: 'Morning light at the now-tidy reception after the evening onboarding on page 2.',
+          settingBasis: 'Revised source: "An elderly patient checks in at the front desk with Meera." Later-morning timing is a manga supplement.',
+        },
+        readingFlow: { entry: [40, 40], exit: [508, 460] },
+        production: {
+          moment: 'Meera smiles at Mr. Raman while typing his check-in.',
+          before: 'Mr. Raman walked up to the desk.',
+          after: 'He takes a seat to wait; his slot appears on the screen (03-5).',
+          hands: {
+            meera: hands('typing on the keyboard', 'typing on the keyboard'),
+            raman: hands('resting on the counter', 'holding the walking-stick'),
+          },
+          props: [
+            prop('monitor', 'on the desk', 'on the desk, angled toward Meera, screen not visible', 'on the desk', 'none'),
+            prop('walking-stick', 'in Mr. Raman’s hand', 'held in his right hand', 'in his hand', 'raman.right'),
+          ],
+        },
+        speakers: { meera: speaker(r1, [300, 190, 80, 95]), raman: speaker(r1, [110, 210, 80, 95]) },
+        dialogue: [line('narration', ['A later morning:', 'patients can always check', 'in at the front desk.'], 16, 16)],
+      },
+      {
+        id: '03-2',
+        order: 2,
+        role: '提示',
+        beat: 'Priya checks in ahead on the Welbuk Health app',
+        rect: r2,
+        scene:
+          'Priya (young patient from the check-in patients sheet: high ponytail, coral-pink kurti, crossbody bag) walks along a sunny street toward the clinic’s teal awning, smiling at her phone held in her left hand; the phone screen faces the reader and shows a simple app card with a calendar icon and a check-mark icon (no text). Plain sky at the upper left for a caption.',
+        action: 'Priya taps check-in on the app on her way.',
+        emotion: 'Brisk, cheerful.',
+        camera: 'Medium shot on the street, slight low angle.',
+        information: 'Patients can check in ahead on the Welbuk Health app.',
+        readingFlow: { entry: [552, 40], exit: [996, 460] },
+        production: {
+          moment: 'Priya taps the check-in card on her phone.',
+          before: 'She was walking to her appointment.',
+          after: 'She arrives and takes a seat; her slot appears on the screen (03-5).',
+          hands: { priya: hands('holding priya-phone', 'swinging lightly at her side') },
+          props: [prop('priya-phone', 'in Priya’s hand', 'held in her left hand, check-in card on screen', 'in her hand', 'priya.left')],
+        },
+        speakers: { priya: speaker(r2, [230, 130, 80, 95]) },
+        dialogue: [line('narration', ['Some check in ahead', 'on the Welbuk Health app.'], 16, 4)],
+      },
+      {
+        id: '03-3',
+        order: 3,
+        role: '始動',
+        beat: 'Ravi scans the QR code at the door',
+        rect: r3,
+        scene:
+          'Just inside the clinic’s glass entrance, Ravi holds his phone up to a small check-in stand with a square QR-like pattern (abstract, not a real code, no text); a simple scan frame glows on his phone. His face in three-quarter view, focused and pleased; his left hand on the shoulder-bag strap. Plain wall at the upper left for a caption.',
+        action: 'Ravi scans the code.',
+        emotion: 'Focused, easy.',
+        camera: 'Medium close-up from the side of the stand.',
+        information: 'Ravi, a patient, uses the QR code at the door.',
+        readingFlow: { entry: [40, 504], exit: [484, 924] },
+        production: {
+          moment: 'The phone camera frames the QR pattern.',
+          before: 'Ravi walked in through the glass entrance.',
+          after: 'A short form opens on his phone (03-4).',
+          hands: { ravi: hands('resting on the shoulder-bag strap', 'holding ravi-phone up to the QR stand') },
+          props: [
+            prop('ravi-phone', 'in Ravi’s hand as he arrives', 'held up to the QR pattern, scan frame on screen', 'shows the check-in form (03-4)', 'ravi.right'),
+            prop('qr-stand', 'inside the entrance', 'in front of the phone', 'in place', 'none'),
+            prop('shoulder-bag', 'on Ravi’s left shoulder', 'on his left shoulder', 'on his left shoulder', 'none'),
+          ],
+        },
+        speakers: { ravi: speaker(r3, [220, 170, 85, 105]) },
+        dialogue: [line('narration', ['Ravi scans the QR', 'code at the door.'], 16, 16)],
+      },
+      {
+        id: '03-4',
+        order: 4,
+        role: '始動',
+        beat: 'He fills a short form on his phone',
+        rect: r4,
+        scene:
+          'Close-up over Ravi’s shoulder of his phone held in both hands: a simple check-in form of blank rounded fields, a large tick-box being tapped by his right thumb for consent, and a teal submit button (abstract, no letters or numbers, no personal data). His green shirt sleeve and the wristwatch on his left wrist are visible. Plain light background at the upper left for a caption.',
+        action: 'Ravi taps the consent tick-box.',
+        emotion: 'Calm, in control.',
+        camera: 'Over-the-shoulder close-up of the phone.',
+        information: 'He shares only what the visit needs, with consent.',
+        readingFlow: { entry: [528, 504], exit: [996, 924] },
+        production: {
+          moment: 'His thumb taps the consent tick-box.',
+          before: 'The form opened after the scan (03-3).',
+          after: 'His slot appears on the waiting-room screen (03-5).',
+          hands: { ravi: hands('holding ravi-phone from below (wristwatch on this wrist)', 'thumb tapping the consent tick-box on ravi-phone') },
+          props: [prop('ravi-phone', 'showing the check-in form', 'held in both hands, blank fields and tick-box on screen', 'in his hand as he sits to wait (03-5)', 'ravi.left')],
+        },
+        speakers: {},
+        dialogue: [line('narration', ['A short form on', 'his own phone,', 'shared with consent.'], 16, 16)],
+      },
+      {
+        id: '03-5',
+        order: 5,
+        role: '反応',
+        beat: 'All three get slots on the screen',
+        rect: r5,
+        scene:
+          'Wide view of the waiting area: a wall-mounted TV in the upper-right corner of the panel (its screen filling roughly the right third of the width and the top quarter of the height) shows a plain light-teal screen with ONE wide, clean, empty white strip across it where the slot list will be lettered in a single line (draw NO text or numbers on the screen). Below it, from screen-left to screen-right, Mr. Raman (glasses, walking stick), Priya (ponytail, coral kurti) and Ravi (green shirt, shoulder bag on his lap, phone in his right hand) sit side by side on waiting chairs, all looking up at the screen with small satisfied smiles. Plain wall at the upper left for a caption.',
+        action: 'The three patients see their slots appear.',
+        emotion: 'Calm, reassured.',
+        camera: 'Wide shot of the waiting area, slight low angle toward the TV.',
+        information: 'Every check-in route ends in the same queue on the screen.',
+        readingFlow: { entry: [40, 968], exit: [996, 1456] },
+        production: {
+          moment: 'Three slots appear on the TV and the patients look up.',
+          before: 'Each checked in their own way (03-1, 03-2, 03-4).',
+          after: 'Ravi’s slot comes up (04-1).',
+          hands: {
+            raman: hands('resting on his knee', 'holding the walking-stick'),
+            priya: hands('holding priya-phone in her lap', 'resting on the armrest'),
+            ravi: hands('resting on the shoulder-bag on his lap', 'holding ravi-phone'),
+          },
+          props: [
+            prop('waiting-tv', 'on the wall', 'teal screen with one wide empty white strip for the lettered slot list', 'on the wall', 'none'),
+            prop('ravi-phone', 'in his hand', 'held in his right hand', 'put away in his pocket (04-1)', 'ravi.right'),
+            prop('shoulder-bag', 'on his left shoulder', 'resting on his lap', 'back on his shoulder as he stands (04-1)', 'none'),
+            prop('walking-stick', 'in his hand', 'held upright beside his knee', 'in his hand', 'raman.right'),
+            prop('priya-phone', 'in her hand', 'held in her lap', 'in her lap', 'priya.left'),
+          ],
+        },
+        speakers: {
+          raman: speaker(r5, [330, 300, 70, 85]),
+          priya: speaker(r5, [460, 290, 70, 85]),
+          ravi: speaker(r5, [590, 290, 70, 85]),
+        },
+        dialogue: [
+          line('narration', ['Every check-in gets', 'a slot on the screen.'], 16, 16),
+          line('label', ['A-10 · A-11 · A-12'], 640, 60),
+        ],
+      },
+    ],
+  });
+}
+
+// PAGE 4 — RAVI'S TURN (added 2026-11-11 at the user's request)
+{
+  const r1 = panelRect(24, 24, 976, 420);
+  const r2 = panelRect(24, 468, 560, 996);
+  const r3 = panelRect(608, 468, 392, 996);
+  pages.push({
+    id: '04',
+    section: 'reception',
+    purpose: 'Ravi’s turn: his slot comes up, the nurse takes his vitals, and Dr. Ananya is notified on her tablet that he is ready.',
+    expectation: 'What happens in Ravi’s consultation?',
+    panels: [
+      {
+        id: '04-1',
+        order: 1,
+        role: '転換',
+        beat: 'Ravi’s slot comes up',
+        rect: r1,
+        scene:
+          'Waiting area, wide: Ravi rises from his chair with the shoulder bag back on his left shoulder, looking up at the wall-mounted TV in the upper-right part of the panel, whose light-teal screen shows one clean, empty white highlighted strip where his slot will be lettered (draw NO text or numbers). The two waiting chairs at screen-left of him (on his right), where Mr. Raman and Priya sat in 03-5, are now empty: their slots (A-10, A-11) were called before his. Meera types at the reception desk in the background at the right; any other seated figures are seen from behind in grey or brown. Plain wall at the upper left for a caption.',
+        action: 'Ravi stands as his slot comes up.',
+        emotion: 'Ready, pleased.',
+        camera: 'Wide shot of the waiting area, eye level.',
+        information: 'Ravi is called by the screen, not by a raised voice.',
+        transition: {
+          kind: 'time-change',
+          bridge: 'A short wait later in the same waiting area; the screen now highlights his slot.',
+          settingBasis: 'Revised source: "Ravi\'s slot comes up on the waiting-room TV and he stands."',
+        },
+        readingFlow: { entry: [40, 40], exit: [996, 440] },
+        production: {
+          moment: 'Ravi stands as the screen highlights his slot.',
+          before: 'He waited after his slot appeared (03-5); Mr. Raman (A-10) and Priya (A-11) were called in before him.',
+          after: 'The nurse takes his vitals (04-2).',
+          hands: {
+            ravi: hands('holding the shoulder-bag strap', 'tucking ravi-phone into his trouser pocket'),
+          },
+          props: [
+            prop('waiting-tv', 'one strip listing the three slots (03-5)', 'one highlighted empty strip for the called slot', 'on the wall', 'none'),
+            prop('ravi-phone', 'in his hand', 'being tucked into his trouser pocket', 'in his pocket', 'ravi.right'),
+            prop('shoulder-bag', 'on his lap', 'back on his left shoulder', 'on his shoulder', 'ravi.left'),
+          ],
+        },
+        speakers: { ravi: speaker(r1, [330, 110, 75, 90]) },
+        dialogue: [
+          line('narration', ['Soon, his slot', 'comes up.'], 16, 16),
+          line('label', ['NOW · A-12'], 762, 40),
+        ],
+      },
+      {
+        id: '04-2',
+        order: 2,
+        role: '始動',
+        beat: 'The nurse takes his vitals',
+        rect: r2,
+        scene:
+          'Small vitals corner beside reception, tall framing: Ravi sits at the lower left in a chair, relaxed, his left arm resting on a little side table with a blood-pressure cuff on his upper arm and a fingertip pulse oximeter on his left index finger (wristwatch still visible on that wrist); his shoulder bag on the floor beside his chair. The nurse (from the nurse sheet: chin-length wavy bob, lavender scrubs, blank lanyard card) stands at the right holding the cuff’s hand bulb, speaking kindly to him; Ravi smiles and nods back at her. A small monitor on the table shows only abstract shapes, no numbers. Behind the nurse, at mid-height on the right, a glimpse of the same white reception counter with its teal front and a corner of a teal waiting chair, showing the vitals corner is just beside reception and the waiting area. Plain wall in the upper third for a caption and a balloon.',
+        action: 'The nurse begins the vitals check.',
+        emotion: 'Friendly, efficient; Ravi at ease.',
+        camera: 'Tall medium two-shot, eye level.',
+        information: 'Routine vitals before the consultation; no readings shown.',
+        transition: {
+          kind: 'place-change',
+          bridge: 'From the waiting area (04-1) to the small vitals corner beside reception; the caption "A quick vitals check first." and the reception counter edge in the background carry the move.',
+          settingBasis: 'Revised source: "A nurse takes his vitals." The vitals corner beside reception is a manga supplement.',
+        },
+        readingFlow: { entry: [40, 484], exit: [580, 1456] },
+        production: {
+          moment: 'The nurse is about to squeeze the cuff bulb and smiles at Ravi.',
+          before: 'His slot came up (04-1).',
+          after: 'Dr. Ananya is notified that he is ready (04-3).',
+          hands: {
+            ravi: hands('resting on the side table with the vitals-kit cuff on the upper arm and the oximeter on the index finger', 'resting on his knee'),
+            nurse: hands('lightly steadying the cuff tube', 'holding the vitals-kit cuff bulb'),
+          },
+          props: [
+            prop('vitals-kit', 'on the side table', 'cuff on Ravi’s left upper arm, oximeter on his left index finger', 'removed after the check', 'nurse.right'),
+            prop('ravi-phone', 'in his pocket', 'in his trouser pocket, not visible', 'in his pocket', 'none'),
+            prop('shoulder-bag', 'on his shoulder', 'on the floor beside his chair', 'carried into the consultation and set beside his chair (05-1); back on his shoulder at reception (07-1)', 'none'),
+          ],
+        },
+        speakers: {
+          ravi: speaker(r2, [110, 560, 90, 105]),
+          nurse: speaker(r2, [360, 470, 90, 105]),
+        },
+        dialogue: [
+          line('narration', ['A quick vitals', 'check first.'], 16, 16),
+          line('nurse', ['Hi, Ravi! Just relax', 'your arm for me.'], 250, 150),
+        ],
+      },
+      {
+        id: '04-3',
+        order: 3,
+        role: '期待',
+        beat: 'Dr. Ananya is notified on her tablet',
+        section: 'consultation',
+        rect: r3,
+        scene:
+          'Tall framing in the consultation room (window with a plant behind, closed laptop pushed aside on the desk): Dr. Ananya sits at her desk and looks down at a tablet held in both hands with a small smile; the tablet screen, angled toward the reader, shows a simple notification card with a blank white strip in its centre (draw NO text or numbers). Plain wall in the upper third for a caption.',
+        action: 'Ananya reads the notification.',
+        emotion: 'Ready, attentive.',
+        camera: 'Tall medium shot, slightly from above the tablet.',
+        information: 'The doctor knows the patient is ready without anyone walking over.',
+        transition: {
+          kind: 'place-change',
+          bridge: 'Cut from the vitals corner to the consultation room, where the alert arrives on Ananya’s tablet.',
+          settingBasis: 'Revised source: "Dr. Ananya is notified on her tablet."',
+        },
+        readingFlow: { entry: [624, 484], exit: [996, 1456] },
+        production: {
+          moment: 'The notification card appears on her tablet.',
+          before: 'The nurse finished Ravi’s vitals (04-2).',
+          after: 'She puts the tablet away and greets Ravi (05-1).',
+          hands: { ananya: hands('holding the doctor-tablet left edge', 'holding the doctor-tablet right edge') },
+          props: [
+            prop('doctor-tablet', 'on the desk', 'held in both hands, blank notification card on screen', 'put away in the desk drawer before Ravi comes in (05-1)', 'ananya.left'),
+            prop('consult-laptop', 'on the desk', 'closed and pushed aside', 'opened on patient details as Ravi comes in (05-1)', 'none'),
+          ],
+        },
+        speakers: { ananya: speaker(r3, [150, 470, 90, 110]) },
+        dialogue: [
+          line('narration', ['Dr. Ananya is', "notified when", "he's ready."], 16, 16),
+          line('label', ['RAVI ·', 'READY'], 182, 734),
+        ],
+      },
+    ],
+  });
+}
+
+// PAGE 5 — MORE TIME FOR CARE (reworked 2026-11-12 at the user's request: the doctor's screen)
+const SCREEN = 'The laptop stands at about a three-quarter angle toward the reader, so its screen is readable while Ananya can still use it. The screen shows only abstract light cards, simple icons and blank bars (draw NO text, letters or numbers; no real data); the section name and contents are lettered over it later.';
+{
+  const r1 = panelRect(24, 24, 976, 520);
+  const rc = panelRect(24, 568, 976, 330);
+  const r2 = panelRect(24, 922, 560, 542);
+  const r3 = panelRect(608, 922, 392, 542);
+  pages.push({
+    id: '05',
+    section: 'consultation',
+    purpose: 'The consultation stays human while the doctor’s screen supports it: patient details, a first-time consent check before any AI voice is saved, then SOAP notes with the AI listening. No diagnosis or medical claim.',
+    expectation: 'What else does the doctor’s screen do?',
+    panels: [
+      {
+        id: '05-1',
+        order: 1,
+        role: '転換',
+        beat: 'Ananya greets Ravi; the laptop opens on patient details',
+        rect: r1,
+        scene:
+          'Bright simple consultation room, the same room as 04-3 (window with a plant behind). In the LEFT foreground, filling roughly the left 45% of the panel and most of its height, Dr. Ananya’s open laptop on the desk, its screen turned toward the reader: a patient-details layout of six light rounded cards in a column (a heart icon card, a history/clock icon card, an allergy card with a warning-triangle icon, a microphone toggle switched OFF (grey, not glowing), a document icon card, a test-tube icon card). ' + SCREEN + ' Behind it, at centre-right, Dr. Ananya seated at her desk turns toward Ravi with an open-hand welcoming gesture; at far right, Ravi sits down in the patient chair, smiling, his shoulder bag set on the floor beside the chair. Plain wall across the top for a balloon.',
+        action: 'Ananya welcomes Ravi as he sits; his details are already on her screen.',
+        emotion: 'Warm and attentive.',
+        camera: 'Medium-wide two-shot past the laptop in the foreground, eye level.',
+        information: 'The vitals taken in 04-2 and Ravi’s records are ready on the doctor’s screen before the conversation starts.',
+        transition: {
+          kind: 'place-change',
+          bridge: 'Ravi walks into the consultation room the reader saw in 04-3 and sits down; Ananya has put her tablet away and opened the laptop that was closed in 04-3; same costumes show it is the same visit.',
+          settingBasis: 'Source (reworked 2026-11-12): "She has opened her laptop, angled so the reader can see it, on the first screen section, patient details."',
+        },
+        readingFlow: { entry: [40, 40], exit: [990, 540] },
+        production: {
+          moment: 'Ananya greets Ravi as he settles into the chair.',
+          before: 'Ananya was notified that Ravi was ready (04-3).',
+          after: 'Before the AI mic listens, Ananya asks for Ravi’s consent (05-2).',
+          hands: {
+            ananya: hands('open palm welcoming Ravi', 'resting on the desk beside the consult-laptop'),
+            ravi: hands('on the chair armrest as he sits', 'resting on his knee'),
+          },
+          props: [
+            prop('consult-laptop', 'closed on the desk (04-3)', 'open, screen toward the reader, patient-details cards', 'shows the AI voice consent card (05-2)', 'none'),
+            prop('doctor-tablet', 'read after the alert (04-3)', 'put away in the desk drawer, not visible', 'put away', 'none'),
+            prop('shoulder-bag', 'on Ravi’s shoulder', 'set down on the floor beside his chair', 'beside his chair', 'none'),
+          ],
+        },
+        speakers: {
+          ananya: speaker(r1, [560, 230, 100, 120]),
+          ravi: speaker(r1, [810, 250, 100, 120]),
+        },
+        dialogue: [
+          line('ananya', ['Hello, Ravi.', 'Tell me what', 'brings you in.'], 490, 16),
+          line('label', ['PATIENT DETAILS:', 'current vitals ·', 'prior health info ·', 'allergy panel ·', 'AI mic option ·', 'patient docs ·', 'lab reports'], 10, 200),
+        ],
+      },
+      {
+        id: '05-2',
+        order: 2,
+        role: '反応',
+        beat: 'First-time AI voice consent',
+        rect: rc,
+        scene:
+          'Wide panel in the same consultation room. At left, Dr. Ananya turns toward Ravi, her left hand gesturing toward the laptop as she asks and her right fingertip on the laptop trackpad, ticking the box; at centre in the foreground, the open laptop on her side of the desk, screen toward the reader, showing a single consent card: a large microphone icon, a shield icon, an empty check box being ticked and two rounded buttons (one teal). ' + SCREEN + ' At right, Ravi nods with a small smile and an open hand, agreeing. Plain wall across the top for two balloons.',
+        action: 'Ananya asks before the AI mic records; Ravi agrees.',
+        emotion: 'Respectful, reassured.',
+        camera: 'Wide eye-level shot past the laptop.',
+        information: 'At the first visit the patient is asked before any AI voice notes are saved.',
+        readingFlow: { entry: [40, 584], exit: [990, 894] },
+        production: {
+          moment: 'Ravi says yes as the consent box is ticked.',
+          before: 'Ananya greeted Ravi; his details are on screen (05-1).',
+          after: 'With consent given, SOAP notes listen as Ravi explains (05-3).',
+          hands: {
+            ananya: hands('open palm gesturing toward the consult-laptop', 'fingertip on the consult-laptop trackpad, ticking the consent box'),
+            ravi: hands('open hand raised slightly in agreement', 'resting on his knee'),
+          },
+          props: [prop('consult-laptop', 'patient-details cards (05-1)', 'screen toward the reader: AI voice consent card, check box being ticked', 'opens SOAP notes (05-3)', 'none')],
+        },
+        speakers: {
+          ananya: speaker(rc, [120, 150, 80, 95]),
+          ravi: speaker(rc, [800, 140, 80, 95]),
+        },
+        dialogue: [
+          line('ananya', ['May the AI listen and', 'save notes of our talk?'], 40, 4),
+          line('ravi', ['Yes, I agree.'], 372, 4),
+          line('label', ['AI VOICE CONSENT:', 'asked at the first visit,', 'before any voice is saved'], 607, 4),
+        ],
+      },
+      {
+        id: '05-3',
+        order: 3,
+        role: '始動',
+        beat: 'Ravi shares a routine concern; SOAP notes listen',
+        rect: r2,
+        scene:
+          'Upper half: Ravi in the patient chair faces screen-left toward the doctor (off-panel left), rubbing the back of his neck with his right hand, a slightly tired but candid expression; his left hand (wristwatch) rests on his knee. Lower half, in the foreground: the laptop screen seen at an angle from the doctor’s side, filling the lower half of the panel: a notes layout: four stacked light blocks with four small icons and a small row of code-tag chips on the LEFT part of the screen, and a large glowing teal microphone icon with sound-wave arcs (AI listening) in the RIGHT third of the screen, kept clear of the left part where the label will sit. ' + SCREEN + ' Plain wall at the top-left for a balloon.',
+        action: 'Ravi explains, a little sheepish, while the notes listen.',
+        emotion: 'Mildly tired, honest.',
+        camera: 'Tall medium shot from the doctor’s side, past the laptop, Ravi facing screen-left.',
+        information: 'A routine concern only; no diagnosis is shown. The AI mic is on in SOAP notes.',
+        readingFlow: { entry: [40, 938], exit: [580, 1460] },
+        production: {
+          moment: 'Ravi describes feeling tired; the microphone icon glows.',
+          before: 'Ravi agreed to the AI listening (05-2); the doctor had asked what brings him in (05-1).',
+          after: 'The doctor listens, eyes on Ravi (05-4).',
+          hands: { ravi: hands('resting on his knee', 'rubbing the back of his neck') },
+          props: [prop('consult-laptop', 'consent given on the consent card (05-2)', 'open on SOAP notes, microphone icon glowing', 'open beside Ananya (05-4)', 'none')],
+        },
+        speakers: { ravi: speaker(r2, [330, 140, 110, 130]) },
+        dialogue: [
+          line('ravi', ["I've been feeling", 'tired lately.'], 16, 16),
+          line('label', ['SOAP NOTES:', 'fill in', 'manually and', 'choose ICD or', 'SNOMED codes,', 'or let AI listen', 'and summarise', 'the conversation'], 2, 238),
+        ],
+      },
+      {
+        id: '05-4',
+        order: 4,
+        role: '反応',
+        beat: 'The doctor listens; technology stays in the background',
+        rect: r3,
+        scene:
+          'Over Ravi’s shoulder: the back of his head (short dark hair) and his green-shirted shoulder fill the lower RIGHT foreground. Facing him across the desk, Dr. Ananya leans slightly forward, hands folded, listening with full attention and gentle eye contact with Ravi, NOT looking at the laptop, which stands open at the left edge of the desk showing only soft abstract cards and a small glowing microphone icon. Window with a plant behind. Plain wall in the upper third for a caption.',
+        action: 'Ananya nods slowly while listening.',
+        emotion: 'Attentive, compassionate.',
+        camera: 'Tall over-the-shoulder shot from behind Ravi, Ananya facing screen-right toward him.',
+        information: 'Technology supports the workflow; the conversation is human.',
+        readingFlow: { entry: [624, 938], exit: [990, 1460] },
+        production: {
+          moment: 'Ananya listening, mid-nod.',
+          before: 'Ravi described his tiredness.',
+          after: 'The screen moves to the speciality-specific planner (06-1).',
+          hands: { ananya: hands('folded under the right hand on the desk', 'folded over the left hand on the desk'), ravi: hands('out of frame', 'out of frame') },
+          props: [prop('consult-laptop', 'open on SOAP notes (05-3)', 'open at the desk edge, microphone icon still glowing', 'shows the speciality-specific planner (06-1)', 'none')],
+        },
+        speakers: { ananya: speaker(r3, [110, 250, 110, 130]), ravi: { kind: 'head', anchor: [938, 1352] } },
+        dialogue: [
+          line('narration', ['Technology supports', 'the workflow. The', 'conversation stays', 'human.'], 12, 12),
+        ],
+      },
+    ],
+  });
+}
+
+// PAGE 6 — THE DOCTOR'S SCREEN (added 2026-11-12 at the user's request)
+{
+  const r1 = panelRect(24, 24, 976, 620);
+  const r2 = panelRect(24, 668, 976, 796);
+  pages.push({
+    id: '06',
+    section: 'consultation',
+    purpose: 'The rest of the doctor’s screen in the user’s order: the speciality-specific treatment planner, then the plan of care while Ananya sums up. No diagnosis or treatment advice.',
+    expectation: 'How does care continue after the visit?',
+    panels: [
+      {
+        id: '06-1',
+        order: 1,
+        role: '提示',
+        beat: 'Close-up: the speciality-specific treatment planner',
+        rect: r1,
+        scene:
+          'Close-up of Ananya’s laptop on the consultation desk: the screen fills most of the panel, but its dark bezel, the top edge with the camera dot and the hinge stay visible, with a sliver of the consultation room around it (the window frame and a plant leaf at the top-right corner, the wooden desk edge along the bottom) and Ananya’s right hand resting on the trackpad at the lower right. Light screen background with a slim teal header bar. Three equal tiles side by side across the middle: LEFT a simple tooth chart (two arches of small rounded teeth, two teeth tinted teal); CENTRE a simple eye diagram (an iris circle with three small teal marker dots and short lines); RIGHT a small growth chart (a rising curve on a light grid) beside a small vaccine card with three tick marks. ' + SCREEN + ' Keep the top-left strip and a band along the bottom of each tile plain for the labels.',
+        action: 'The planner adapts to the speciality.',
+        emotion: 'Clear, informative.',
+        camera: 'Close-up of the laptop at a three-quarter angle, slightly above desk height, with the bezel, desk edge and her hand at the margins.',
+        information: 'Each speciality gets its own planner: an odontogram for dentists, eye markers for eye doctors, growth scales and vaccines for paediatricians.',
+        transition: {
+          kind: 'time-change',
+          bridge: 'Page turn from Ananya listening (05-4) to a close-up of the same laptop, now on the planner section; the bezel, desk edge and her hand keep it in the same consultation.',
+          settingBasis: 'Source (2026-11-12): "Close-up of the laptop screen: the speciality-specific treatment planner."',
+        },
+        readingFlow: { entry: [40, 40], exit: [990, 640] },
+        production: {
+          moment: 'The speciality-specific planner view on the screen.',
+          before: 'Ananya listened to Ravi (05-4).',
+          after: 'The plan of care section opens as she sums up (06-2).',
+          hands: { ananya: hands('out of frame', 'resting on the consult-laptop trackpad') },
+          props: [prop('consult-laptop', 'open beside Ananya (05-4)', 'close-up, bezel and desk edge visible: speciality planner tiles', 'shows the plan of care (06-2)', 'none')],
+        },
+        speakers: {},
+        dialogue: [
+          line('label', ['SPECIALITY-SPECIFIC TREATMENT PLANNER'], 114, 82),
+          line('label', ['Dentist:', 'odontogram'], 169, 364),
+          line('label', ['Eye doctor:', 'eye markers'], 397, 364),
+          line('label', ['Paediatrician:', 'growth scales ·', 'vaccines'], 600, 364),
+        ],
+      },
+      {
+        id: '06-2',
+        order: 2,
+        role: '決定',
+        beat: 'Next steps together; the plan of care',
+        rect: r2,
+        scene:
+          'Two-shot past the laptop, keeping the 05-1 staging: in the LEFT foreground, filling roughly the left 45% of the panel and its lower two-thirds, the open laptop on Ananya’s side of the desk with its screen toward the reader showing a plan-of-care layout (a list of five light cards with a pill icon, a document icon, a two-pill warning icon, a test-tube icon and an arrow-out icon). ' + SCREEN + ' Behind it at centre, Dr. Ananya speaks warmly with a reassuring open hand; at right, Ravi nods, relaxed, both hands on his knees, his bag on the floor beside the chair. Window with a plant behind. Plain wall across the upper part for a balloon. No prescriptions on paper and no instruments in use (Ananya’s stethoscope stays around her neck).',
+        action: 'Ananya reassures; Ravi relaxes; the plan of care is on screen.',
+        emotion: 'Reassured, collaborative.',
+        camera: 'Medium two-shot past the laptop, eye level.',
+        information: 'Shared decision-making; no specific treatment advice. The plan-of-care section gathers intelligent prescribing, the summary, drug-interaction checks, labs and referrals.',
+        readingFlow: { entry: [40, 684], exit: [990, 1460] },
+        production: {
+          moment: 'Ananya finishes her sentence; Ravi nods.',
+          before: 'The screen showed the speciality-specific planner (06-1).',
+          after: 'Ravi picks up his bag and returns to reception (page 7).',
+          hands: {
+            ananya: hands('open reassuring gesture toward Ravi', 'resting on the desk'),
+            ravi: hands('resting on his knee', 'resting on his knee'),
+          },
+          props: [
+            prop('consult-laptop', 'shows the speciality-specific planner (06-1)', 'open, screen toward the reader, plan-of-care cards', 'stays on the desk', 'none'),
+            prop('shoulder-bag', 'beside his chair', 'on the floor beside his chair', 'back on his shoulder as he leaves (07-1)', 'none'),
+          ],
+        },
+        speakers: {
+          ananya: speaker(r2, [500, 260, 110, 130]),
+          ravi: speaker(r2, [760, 280, 110, 130]),
+        },
+        dialogue: [
+          line('ananya', ["We'll go through your concerns", 'and decide the right next', 'steps together.'], 280, 16),
+          line('label', ['PLAN OF CARE:', 'intelligent', 'prescribing ·', 'summary ·', 'drug interactions ·', 'labs · referrals'], 16, 440),
+        ],
+      },
+    ],
+  });
+}
+
+// PAGE 7 — CARE DOESN'T END AT THE DOOR (was page 5 originally, 6 before 2026-11-12)
+{
+  const r1 = panelRect(24, 24, 976, 500);
+  const r2 = panelRect(24, 548, 560, 560);
+  const r3 = panelRect(608, 548, 392, 560);
+  const r4 = panelRect(24, 1132, 976, 332);
+  pages.push({
+    id: '07',
+    section: 'reception',
+    purpose: 'Introduce Welbuk Health for patients, framed carefully as what is available, without invented features.',
+    expectation: 'Where could connected care go next?',
+    panels: [
+      {
+        id: '07-1',
+        order: 1,
+        role: '提示',
+        beat: 'Meera introduces Welbuk Health',
+        rect: r1,
+        scene:
+          'Back at reception after the consultation. Ravi (right) holds his own smartphone (dark blue case) in his right hand; Meera (left) leans over the desk and points helpfully at its screen with her right index finger. Screen content not visible from this angle.',
+        action: 'Meera points to Ravi’s phone while explaining; Ravi leans closer.',
+        emotion: 'Helpful, curious.',
+        camera: 'Medium-wide two-shot across the desk corner.',
+        information: 'Welbuk Health is the patient app.',
+        transition: {
+          kind: 'place-change',
+          bridge: 'Reception desk again, Ravi now on the way out.',
+          settingBasis: 'Source: "Meera helps Ravi learn about the Welbuk Health patient app."',
+        },
+        readingFlow: { entry: [40, 40], exit: [990, 520] },
+        production: {
+          moment: 'Meera points at Ravi’s phone and explains.',
+          before: 'Ravi came back to reception after the consultation and took his phone out again.',
+          after: 'Ravi brings the phone closer to look at the app (07-2).',
+          hands: {
+            meera: hands('resting on the desk', 'index finger pointing at ravi-phone'),
+            ravi: hands('resting on the desk edge', 'holding ravi-phone'),
+          },
+          props: [
+            prop('ravi-phone', 'in his pocket since his slot was called (04-1)', 'in Ravi’s right hand, Meera pointing at it', 'held by Ravi', 'ravi.right'),
+            prop('shoulder-bag', 'on Ravi’s shoulder', 'on his shoulder', 'on his shoulder', 'none'),
+          ],
+        },
+        speakers: {
+          meera: speaker(r1, [250, 210, 120, 150]),
+          ravi: speaker(r1, [620, 210, 120, 150]),
+        },
+        dialogue: [
+          line('meera', ['Welbuk Health is', 'designed to help', 'patients stay', 'connected with', 'their care.'], 24, 20),
+        ],
+      },
+      {
+        id: '07-2',
+        order: 2,
+        role: '期待',
+        beat: 'Ravi sees a conceptual app screen',
+        rect: r2,
+        scene:
+          'Ravi holds his own phone (dark blue case) in both hands at chest height, screen toward the reader: a friendly conceptual app screen with simple rounded cards, a calendar icon and a heart icon, no text and no personal data. Ravi’s curious, hopeful face above it, glancing up and away to screen-right as he thinks the question aloud (deliberate thinking glance; Meera is off-panel left).',
+        action: 'Ravi studies the screen and looks up with a question.',
+        emotion: 'Curious, hopeful.',
+        camera: 'Medium close-up at eye level, the reception monitor and plant in the left foreground.',
+        information: 'Conceptual view: appointments and health information in one place.',
+        readingFlow: { entry: [44, 570], exit: [580, 1100] },
+        production: {
+          moment: 'Ravi asks while holding the phone.',
+          before: 'Meera pointed at the app on his phone.',
+          after: 'Meera answers and offers a walkthrough (07-3); Ravi keeps his phone.',
+          hands: {
+            ravi: hands('supporting the lower right corner of ravi-phone, thumb on the screen edge (wristwatch on this wrist)', 'fingers wrapped around the left edge of ravi-phone'),
+          },
+          props: [prop('ravi-phone', 'in Ravi’s right hand', 'held in both of Ravi’s hands, conceptual screen', 'held by Ravi', 'ravi.right')],
+        },
+        speakers: { ravi: speaker(r2, [340, 200, 140, 175]) },
+        dialogue: [
+          line('ravi', ['So I can keep useful', 'information in', 'one place?'], 20, 20),
+          line('label', ['WELBUK HEALTH', 'for patients'], 0, 440),
+        ],
+      },
+      {
+        id: '07-3',
+        order: 3,
+        role: '反応',
+        beat: 'Meera offers a walkthrough of what is available',
+        rect: r3,
+        scene:
+          'Meera smiles warmly, facing screen-right toward Ravi, who is seen from behind in the right foreground holding his phone in his left hand (keeping Meera-left / Ravi-right from 07-1). Meera’s right hand gestures toward his phone; her left hand rests on the desk. Tidy reception background.',
+        action: 'Meera answers and offers to walk him through.',
+        emotion: 'Warm, honest, helpful.',
+        camera: 'Tall medium shot.',
+        information: 'Only what is available to Ravi is shown; no invented features.',
+        readingFlow: { entry: [624, 570], exit: [990, 1100] },
+        production: {
+          moment: 'Meera answers Ravi’s question.',
+          before: 'Ravi asked about keeping information in one place.',
+          after: 'After the walkthrough Ravi leaves with his phone (07-4).',
+          hands: { meera: hands('resting on the desk', 'open hand gesturing toward Ravi’s phone') },
+          props: [prop('ravi-phone', 'held by Ravi (off-panel right)', 'held by Ravi off-panel right', 'held by Ravi', 'none')],
+        },
+        speakers: { meera: speaker(r3, [150, 250, 130, 165]) },
+        dialogue: [
+          line('meera', ["That's the idea.", "Let's walk through what", 'is available to you.'], 8, 8),
+        ],
+      },
+      {
+        id: '07-4',
+        order: 4,
+        section: 'departure',
+        role: '余韻',
+        beat: 'Ravi leaves, reassured',
+        rect: r4,
+        scene:
+          'Outside the clinic entrance in morning sun: Ravi steps out onto the street, smiling and waving back toward the door with his right hand; his phone is in his left hand at his side and his bag on his shoulder. Dr. Ananya and Meera wave back from the glass doorway at left. Simple street and teal awning.',
+        action: 'Ravi waves goodbye while walking.',
+        emotion: 'Reassured, light.',
+        camera: 'Wide shot from the street, eye level.',
+        information: 'A smoother, more connected visit.',
+        readingFlow: { entry: [40, 1150], exit: [990, 1505] },
+        production: {
+          moment: 'Ravi mid-step, waving back.',
+          before: 'Meera walked him through what is available.',
+          after: 'He heads home; the story looks toward tomorrow (page 8).',
+          hands: { ravi: hands('holding his own ravi-phone at his side', 'raised, waving back') },
+          props: [
+            prop('ravi-phone', 'in his hand after the walkthrough', 'in his left hand at his side', 'in his hand', 'ravi.left'),
+            prop('shoulder-bag', 'on his shoulder', 'on his shoulder as he walks out', 'on his shoulder', 'none'),
+          ],
+        },
+        speakers: { ravi: speaker(r4, [560, 130, 100, 130]) },
+        dialogue: [line('narration', ['A smoother visit. A more connected experience.'], 24, 10)],
+      },
+    ],
+  });
+}
+
+// PAGE 8 — THE BIGGER WELBUK VISION (was page 6 originally, 7 before 2026-11-12)
+{
+  const r1 = panelRect(24, 24, 470, 440);
+  const r2 = panelRect(518, 24, 482, 440);
+  const r3 = panelRect(24, 488, 976, 340);
+  const r4 = panelRect(24, 852, 976, 612);
+  pages.push({
+    id: '08',
+    section: 'vision',
+    purpose:
+      'Present the bigger Welbuk vision, clearly labelled as vision, then close on the three products and the three people.',
+    expectation: 'Closing: Welbuk is building a connected healthcare ecosystem.',
+    panels: [
+      {
+        id: '08-1',
+        order: 1,
+        role: '転換',
+        beat: 'Ravi travels to another city (hypothetical tomorrow)',
+        rect: r1,
+        scene:
+          'Ravi sits by a train window, looking out calmly; a different Indian city skyline blurs past outside (no signs or text). His left hand holds his phone in his lap; right elbow on the window ledge.',
+        action: 'Ravi gazes out of the window.',
+        emotion: 'Calm, thoughtful.',
+        camera: 'Medium shot from across the aisle.',
+        information: 'A possible tomorrow beyond his hometown.',
+        section: 'travel',
+        transition: {
+          kind: 'time-change',
+          bridge: 'Train window and moving skyline; conditional caption ("may").',
+          settingBasis: 'Source: "Ravi travels to another Indian city; simple train-window transition."',
+        },
+        readingFlow: { entry: [40, 40], exit: [490, 460] },
+        production: {
+          moment: 'Ravi watching the city pass.',
+          before: 'He boarded the train.',
+          after: 'The page moves into the vision (08-2).',
+          hands: { ravi: hands('holding his own ravi-phone in his lap', 'elbow on the window ledge, hand near his chin') },
+          props: [prop('ravi-phone', 'in his hand', 'in his lap', 'in his lap', 'ravi.left')],
+        },
+        speakers: { ravi: speaker(r1, [250, 180, 120, 150]) },
+        dialogue: [line('narration', ['Tomorrow,', 'care may take us', 'beyond our', 'hometown.'], 16, 16)],
+      },
+      {
+        id: '08-2',
+        order: 2,
+        role: '期待',
+        beat: 'WELBUK VISION: connected clinics and specialists',
+        rect: r2,
+        scene:
+          'Inside a soft pale-blue rounded vignette border: a symbolic modern clinic in another city; a friendly specialist doctor stands at its entrance with a welcoming open hand. Faint dotted lines float in the sky linking small simple clinic silhouettes, suggesting connection. Airy, lighter palette. No text or logos anywhere.',
+        action: 'The specialist welcomes the viewer.',
+        emotion: 'Hopeful, aspirational.',
+        camera: 'Medium-wide shot, eye level.',
+        information: 'Vision only: trusted connections across locations — not a launched feature.',
+        readingFlow: { entry: [534, 40], exit: [990, 460] },
+        production: {
+          moment: 'The specialist welcomes, dotted connection lines above.',
+          before: 'Ravi’s journey hints at care beyond his hometown.',
+          after: 'The vision widens to the family (08-3).',
+          hands: { specialist: hands('relaxed at his side, empty', 'open palm in a welcoming gesture') },
+          props: [],
+        },
+        speakers: { specialist: speaker(r2, [324, 250, 105, 135]) },
+        dialogue: [
+          line('label', ['WELBUK VISION'], 0, 0),
+          line('narration', ['The vision: trusted connections', 'between clinics, specialists,', 'and patients across locations.'], 4, 298),
+        ],
+      },
+      {
+        id: '08-3',
+        order: 3,
+        role: '期待',
+        beat: 'A family wellness ecosystem (vision)',
+        rect: r3,
+        scene:
+          'Inside the same soft pale-blue vignette: symbolic family scene on a sofa. Ravi (left), his partner (centre) holding a tablet with an abstract family wellness app (three profile circles and a heart icon, no text), and their child (right) leaning in, all smiling.',
+        action: 'The family looks at the tablet together.',
+        emotion: 'Warm, secure.',
+        camera: 'Medium-wide shot, slight high angle.',
+        information: 'Vision: one connected ecosystem including family wellness.',
+        readingFlow: { entry: [40, 505], exit: [990, 820] },
+        production: {
+          moment: 'The family shares the tablet, smiling.',
+          before: 'Vision of connected clinics.',
+          after: 'Return to the present-day closing (08-4).',
+          hands: {
+            ravi: hands('arm along the back of the sofa behind his partner, hand resting on the sofa back behind the child', 'pointing gently at the tablet'),
+            partner: hands('holding family-tablet, left edge', 'holding family-tablet, right edge'),
+            child: hands('resting on the partner’s arm', 'resting on the sofa cushion'),
+          },
+          props: [prop('family-tablet', 'on the table', 'held by the partner in both hands', 'held by the partner', 'partner.left')],
+        },
+        speakers: {
+          ravi: speaker(r3, [420, 110, 100, 130]),
+          partner: speaker(r3, [570, 105, 100, 130]),
+          child: speaker(r3, [720, 170, 80, 100]),
+        },
+        dialogue: [
+          line('label', ['WELBUK VISION'], 16, 16),
+          line('narration', ['One connected ecosystem', 'for care and', 'family wellness.'], 16, 100),
+        ],
+      },
+      {
+        id: '08-4',
+        order: 4,
+        role: '余韻',
+        beat: 'The three people and the three Welbuk products',
+        rect: r4,
+        scene:
+          'Large closing panel back in the present, in front of the clinic entrance in warm morning light: Meera (left), Dr. Ananya (centre) and Ravi (right) stand together smiling at the reader. Ananya’s hands clasped in front, Meera holds her staff phone at her side, Ravi gives a small wave. Clear sky band at top and empty pavement band at bottom for captions. Normal full-colour palette, no vignette.',
+        action: 'All three smile toward the reader.',
+        emotion: 'Warm, optimistic, trustworthy.',
+        camera: 'Medium-full group shot, eye level, symmetrical.',
+        information: 'Practice for the clinic, Care for staff, Health for patients.',
+        section: 'closing',
+        transition: {
+          kind: 'return',
+          bridge: 'Vignette disappears; familiar clinic entrance and present-day costumes.',
+          settingBasis: 'Source: "Dr. Ananya, Meera and Ravi smile, with three product labels" (large closing panel).',
+        },
+        readingFlow: { entry: [40, 870], exit: [990, 1505] },
+        production: {
+          moment: 'Group smile for the closing.',
+          before: 'The vision scenes.',
+          after: 'End of the comic.',
+          hands: {
+            meera: hands('relaxed at her side, empty', 'holding staff-phone at her side'),
+            ananya: hands('clasped in front of her', 'clasped in front of her'),
+            ravi: hands('relaxed at his side, empty', 'raised in a small wave'),
+          },
+          props: [prop('staff-phone', 'in Meera’s hand', 'held at her side', 'held at her side', 'meera.right')],
+        },
+        speakers: {
+          meera: speaker(r4, [250, 260, 120, 150]),
+          ananya: speaker(r4, [430, 230, 125, 160]),
+          ravi: speaker(r4, [610, 255, 120, 150]),
+        },
+        dialogue: [
+          line('label', ['Welbuk Practice •', 'Welbuk Care •', 'Welbuk Health'], 680, 20),
+          line('narration', ['Welbuk — Building a connected', 'healthcare ecosystem.'], 24, 490),
+        ],
+      },
+    ],
+  });
+}
+
+
+// Re-measured on the accepted artwork (page coordinates). Faces include every
+// visible cast member; "head" marks a visible back of head without a face.
+const F = (x, y, w, h, ax, ay) => ({ face: [x, y, w, h], anchor: [ax, ay] });
+const HEAD = (ax, ay) => ({ kind: 'head', anchor: [ax, ay] });
+const MEASURED = {
+  // 2026-11-12 revision: measured from the accepted new page 5-6 art.
+  '05-1': {
+    speakers: { ananya: F(392, 117, 88, 112, 445, 210), ravi: F(795, 110, 105, 119, 830, 200) },
+    protected: [[585, 271, 102, 63]],
+  },
+  '05-2': {
+    speakers: { ananya: F(268, 744, 53, 55, 300, 788), ravi: F(701, 744, 50, 58, 720, 791) },
+    protected: [[365, 805, 50, 30], [373, 860, 44, 25], [612, 810, 42, 36]],
+    hands: { ravi: hands('resting on his knee (wristwatch)', 'open hand raised slightly in agreement') },
+  },
+  '05-3': { speakers: { ravi: F(393, 979, 96, 112, 431, 1059) }, protected: [[277, 1329, 89, 63], [459, 1294, 68, 109]] },
+  '05-4': { speakers: { ananya: F(762, 1161, 75, 90, 808, 1234), ravi: HEAD(957, 1193) }, protected: [[774, 1362, 77, 47]] },
+  '06-1': { speakers: {}, protected: [[607, 544, 277, 100]] },
+  '06-2': {
+    speakers: { ananya: F(278, 861, 137, 150, 376, 977), ravi: F(780, 857, 129, 154, 835, 970) },
+    protected: [[535, 1093, 133, 77]],
+  },
+  // 2026-11-11 revision: measured from the accepted new art (panel px scaled into the rect).
+  '03-1': { speakers: { raman: F(156, 189, 50, 64, 183, 246), meera: F(333, 207, 50, 66, 354, 262) } },
+  '03-2': {
+    speakers: { priya: F(728, 153, 76, 80, 766, 219) },
+    protected: [[801, 215, 49, 77]],
+    hands: { priya: hands('holding priya-phone', 'index finger tapping the check-in card on priya-phone') },
+  },
+  '03-3': { speakers: { ravi: F(287, 612, 94, 100, 327, 685) }, protected: [[127, 747, 71, 111]] },
+  '03-4': { speakers: { ravi: F(844, 580, 91, 180, 876, 692) }, protected: [[635, 648, 145, 206]] },
+  '03-5': {
+    speakers: {
+      raman: F(166, 1129, 97, 97, 235, 1206),
+      priya: F(384, 1150, 90, 90, 447, 1220),
+      ravi: F(561, 1129, 94, 97, 634, 1199),
+    },
+  },
+  '04-1': {
+    speakers: {
+      ravi: F(577, 71, 72, 72, 631, 130),
+      meera: F(908, 205, 44, 50, 935, 246),
+    },
+    hands: { meera: hands('typing at the reception keyboard (background)', 'typing at the reception keyboard (background)') },
+  },
+  '04-2': {
+    speakers: { ravi: F(93, 842, 95, 110, 163, 937), nurse: F(389, 739, 102, 110, 440, 827) },
+    protected: [[199, 1047, 204, 109], [327, 955, 105, 99]],
+  },
+  '04-3': { speakers: { ananya: F(730, 834, 116, 150, 786, 975) } },
+  '01-1': { speakers: { ananya: F(398, 170, 52, 64, 423, 222) } },
+  '01-2': { speakers: { meera: F(318, 945, 85, 100, 358, 1028) } },
+  '01-3': {
+    speakers: { ananya: F(855, 945, 72, 90, 882, 1022), meera: F(680, 1080, 45, 55, 703, 1125) },
+    hands: { meera: hands('holding the desk-phone receiver to her ear (background)', 'writing in the register (background)') },
+  },
+  '02-1': { speakers: { ananya: F(300, 165, 110, 145, 372, 290) } },
+  '02-2': {
+    speakers: { ananya: F(365, 655, 105, 115, 425, 752) },
+    hands: { ananya: hands('index finger resting at her chin', 'resting on the laptop trackpad') },
+  },
+  '02-3': { speakers: { meera: F(851, 739, 51, 66, 873, 788) }, protected: [[794, 794, 40, 61]] },
+  '02-4': {
+    speakers: { ananya: F(325, 1170, 72, 90, 367, 1245), meera: F(700, 1130, 70, 88, 737, 1200) },
+    protected: [[668, 1365, 62, 80]],
+  },
+  '07-1': {
+    speakers: { meera: F(367, 128, 96, 111, 428, 232), ravi: F(572, 114, 131, 118, 641, 191) },
+    protected: [[528, 277, 66, 94]],
+  },
+  '07-2': { speakers: { ravi: F(369, 614, 147, 169, 423, 739) }, protected: [[297, 805, 115, 208]] },
+  '07-3': {
+    speakers: { meera: F(691, 741, 111, 125, 761, 838), ravi: HEAD(970, 760) },
+    protected: [[890, 898, 79, 120]],
+    hands: { ravi: hands('holding ravi-phone (foreground right)', 'out of frame') },
+    props: [prop('ravi-phone', 'held by Ravi', 'held in Ravi’s left hand in the foreground, screen toward Meera', 'held by Ravi', 'ravi.left')],
+  },
+  '07-4': {
+    speakers: {
+      ravi: F(755, 1164, 70, 85, 786, 1229),
+      ananya: F(291, 1239, 51, 52, 316, 1282),
+      meera: F(370, 1255, 45, 49, 392, 1296),
+    },
+    hands: {
+      ananya: hands('relaxed at her side', 'raised, waving from the doorway'),
+      meera: hands('raised, waving from the doorway', 'relaxed at her side'),
+    },
+  },
+  '08-1': { speakers: { ravi: F(313, 105, 94, 108, 349, 195) } },
+  '08-2': { speakers: { specialist: F(819, 132, 73, 81, 865, 195) }, protected: [[672, 262, 74, 54]] },
+  '08-3': {
+    speakers: {
+      ravi: F(462, 501, 115, 129, 526, 610),
+      partner: F(609, 514, 108, 122, 666, 617),
+      child: F(742, 585, 89, 96, 786, 662),
+    },
+    protected: [[583, 681, 159, 103]],
+  },
+  '08-4': {
+    speakers: {
+      meera: F(344, 925, 54, 68, 371, 980),
+      ananya: F(481, 906, 62, 76, 512, 968),
+      ravi: F(638, 894, 61, 73, 668, 955),
+    },
+  },
+};
+for (const page of pages)
+  for (const panel of page.panels) {
+    const m = MEASURED[panel.id];
+    if (!m) continue;
+    panel.speakers = m.speakers;
+    if (m.protected) panel.protected = m.protected;
+    if (m.hands) Object.assign(panel.production.hands, m.hands);
+    if (m.props) panel.production.props = m.props;
+    if (m.addProps) panel.production.props.push(...m.addProps);
+  }
+
+config.pages = pages;
+fs.writeFileSync(file, JSON.stringify(config, null, 2) + '\n');
+console.log(`Wrote ${pages.length} pages, ${pages.reduce((n, p) => n + p.panels.length, 0)} panels to ${file}`);
