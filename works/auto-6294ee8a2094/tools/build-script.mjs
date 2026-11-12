@@ -885,8 +885,8 @@ const SCREEN = 'The laptop stands at about a three-quarter angle toward the read
           ravi: speaker(r1, [810, 250, 100, 120]),
         },
         dialogue: [
-          line('ananya', ['Hello, Ravi.', 'Tell me what', 'brings you in.'], 600, 16),
-          line('label', ['PATIENT DETAILS:', 'current vitals ·', 'prior health info ·', 'allergy panel ·', 'AI mic option ·', 'patient docs · lab reports'], 16, 270),
+          line('ananya', ['Hello, Ravi.', 'Tell me what', 'brings you in.'], 490, 16),
+          line('label', ['PATIENT DETAILS:', 'current vitals ·', 'prior health info ·', 'allergy panel ·', 'AI mic option ·', 'patient docs ·', 'lab reports'], 10, 200),
         ],
       },
       {
@@ -917,9 +917,9 @@ const SCREEN = 'The laptop stands at about a three-quarter angle toward the read
           ravi: speaker(rc, [800, 140, 80, 95]),
         },
         dialogue: [
-          line('ananya', ['May the AI listen and', 'save notes of our talk?'], 16, 16),
-          line('ravi', ['Yes, I agree.'], 700, 16),
-          line('label', ['AI VOICE CONSENT:', 'asked at the first visit,', 'before any voice is saved'], 330, 170),
+          line('ananya', ['May the AI listen and', 'save notes of our talk?'], 40, 4),
+          line('ravi', ['Yes, I agree.'], 376, 4),
+          line('label', ['AI VOICE CONSENT:', 'asked at the first visit,', 'before any voice is saved'], 601, 4),
         ],
       },
       {
@@ -945,7 +945,7 @@ const SCREEN = 'The laptop stands at about a three-quarter angle toward the read
         speakers: { ravi: speaker(r2, [330, 140, 110, 130]) },
         dialogue: [
           line('ravi', ["I've been feeling", 'tired lately.'], 16, 16),
-          line('label', ['SOAP NOTES:', 'fill in manually and', 'choose ICD or SNOMED', 'codes, or let AI listen', 'and summarise the', 'conversation'], 16, 290),
+          line('label', ['SOAP NOTES:', 'fill in', 'manually and', 'choose ICD or', 'SNOMED codes,', 'or let AI listen', 'and summarise', 'the conversation'], 2, 238),
         ],
       },
       {
@@ -970,7 +970,7 @@ const SCREEN = 'The laptop stands at about a three-quarter angle toward the read
         },
         speakers: { ananya: speaker(r3, [110, 250, 110, 130]), ravi: { kind: 'head', anchor: [938, 1352] } },
         dialogue: [
-          line('narration', ['Technology supports', 'the workflow. The', 'conversation stays', 'human.'], 16, 16),
+          line('narration', ['Technology supports', 'the workflow. The', 'conversation stays', 'human.'], 12, 12),
         ],
       },
     ],
@@ -1014,10 +1014,10 @@ const SCREEN = 'The laptop stands at about a three-quarter angle toward the read
         },
         speakers: {},
         dialogue: [
-          line('label', ['SPECIALITY-SPECIFIC TREATMENT PLANNER'], 16, 16),
-          line('label', ['Dentist:', 'odontogram'], 50, 470),
-          line('label', ['Eye doctor:', 'eye markers'], 380, 470),
-          line('label', ['Paediatrician:', 'growth scales ·', 'vaccines'], 700, 470),
+          line('label', ['SPECIALITY-SPECIFIC TREATMENT PLANNER'], 114, 82),
+          line('label', ['Dentist:', 'odontogram'], 169, 364),
+          line('label', ['Eye doctor:', 'eye markers'], 397, 364),
+          line('label', ['Paediatrician:', 'growth scales ·', 'vaccines'], 600, 326),
         ],
       },
       {
@@ -1051,8 +1051,8 @@ const SCREEN = 'The laptop stands at about a three-quarter angle toward the read
           ravi: speaker(r2, [760, 280, 110, 130]),
         },
         dialogue: [
-          line('ananya', ["We'll go through your concerns", 'and decide the right next', 'steps together.'], 440, 16),
-          line('label', ['PLAN OF CARE:', 'intelligent prescribing ·', 'summary · drug interactions ·', 'labs · referrals'], 16, 420),
+          line('ananya', ["We'll go through your concerns", 'and decide the right next', 'steps together.'], 280, 16),
+          line('label', ['PLAN OF CARE:', 'intelligent', 'prescribing ·', 'summary ·', 'drug interactions ·', 'labs · referrals'], 16, 440),
         ],
       },
     ],
@@ -1346,6 +1346,23 @@ const SCREEN = 'The laptop stands at about a three-quarter angle toward the read
 const F = (x, y, w, h, ax, ay) => ({ face: [x, y, w, h], anchor: [ax, ay] });
 const HEAD = (ax, ay) => ({ kind: 'head', anchor: [ax, ay] });
 const MEASURED = {
+  // 2026-11-12 revision: measured from the accepted new page 5-6 art.
+  '05-1': {
+    speakers: { ananya: F(392, 117, 88, 112, 445, 210), ravi: F(795, 110, 105, 119, 830, 200) },
+    protected: [[585, 271, 102, 63]],
+  },
+  '05-2': {
+    speakers: { ananya: F(268, 744, 53, 55, 300, 788), ravi: F(701, 744, 50, 58, 720, 791) },
+    protected: [[365, 805, 50, 30], [373, 860, 44, 25], [612, 810, 42, 36]],
+    hands: { ravi: hands('resting on his knee (wristwatch)', 'open hand raised slightly in agreement') },
+  },
+  '05-3': { speakers: { ravi: F(393, 979, 96, 112, 431, 1059) }, protected: [[277, 1329, 89, 63], [459, 1294, 68, 109]] },
+  '05-4': { speakers: { ananya: F(762, 1161, 75, 90, 808, 1234), ravi: HEAD(957, 1193) }, protected: [[774, 1362, 77, 47]] },
+  '06-1': { speakers: {}, protected: [[622, 491, 300, 153]] },
+  '06-2': {
+    speakers: { ananya: F(278, 861, 137, 150, 376, 977), ravi: F(780, 857, 129, 154, 835, 970) },
+    protected: [[535, 1093, 133, 77]],
+  },
   // 2026-11-11 revision: measured from the accepted new art (panel px scaled into the rect).
   '03-1': { speakers: { raman: F(156, 189, 50, 64, 183, 246), meera: F(333, 207, 50, 66, 354, 262) } },
   '03-2': {

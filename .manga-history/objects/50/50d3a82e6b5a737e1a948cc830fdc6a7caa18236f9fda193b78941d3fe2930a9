@@ -1,0 +1,23 @@
+{
+  "promptVersion": 2,
+  "panel": "05-3",
+  "project": "works/auto-6294ee8a2094/workflow.json",
+  "fingerprint": "f66de425475e7f7764f26f414f749122b70ecedd9a2cf4e3c80b93a6b4ee15e6",
+  "operation": "edit",
+  "sourceHash": "a18ff7eb09e93d285bd7e12386085ca8d9b680c861492309f8813acfb918fce5",
+  "prompt": "TASK: Edit image 1. This is a local revision of the supplied artwork.\nINPUT IMAGES (in supplied order):\nImage 1: edit-target. Base image to edit; requested changes take precedence over preservation.\nCHANGE REQUEST:\nRemove the back of the doctor's head, her ear, earring, hair and white shoulder from the left edge of the panel. Fill that area naturally: continue the plain, light wall above and the wooden desk below, and complete the left edge of the laptop (its dark bezel and screen corner) where her head covered it. Keep everything else exactly as it is: Ravi's face, tired but candid smile, his right hand rubbing the back of his neck, his left hand with the wristwatch on his knee, his light green shirt and the blue chair; the window with the plant at the upper right; the laptop screen with its four stacked light blocks and icons, the row of small coloured chips on the left part and the large glowing teal microphone icon with sound-wave arcs on the right part; the plain wall at the top-left. No text, numbers or logos anywhere.\nPRESERVE: retain all areas, identity traits, acting, clothing, composition and lettering space outside the requested change. The change request overrides preservation where necessary; repair connected anatomy, contact objects and occlusion together. Supporting images supply only their stated roles. Do not copy their entire scene or pose.\nOUTPUT: one edited image matching the target aspect. Do not add text, guide marks or a global style filter. Re-measure faces and mouths and inspect lettering space after adoption.",
+  "promptHash": "13c547a7d414176656012aa29796f4b439ad32c234dd4d98ccb7ea593a04faea",
+  "references": [
+    {
+      "file": "works/auto-6294ee8a2094/workflow/generation-inputs/05-3-83580eb059a4bb0e/reference-0.png",
+      "hash": "fbe3046bc1931b4a9d372760a97a50aa58233e2515e1ba43e2b1a9743a0acbb0",
+      "original": "works/auto-6294ee8a2094/assets/candidates/05-3/9eca02a3-153d-4e72-9421-2075afbfd183.png",
+      "index": 1,
+      "kind": "edit-target",
+      "role": "Base image to edit; requested changes take precedence over preservation."
+    }
+  ],
+  "renderer": "Codex built-in image_gen",
+  "model": null,
+  "seed": null
+}
