@@ -1,19 +1,19 @@
 {
-  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/lettering-03-6096d599cb2877c74557e6d10f4c2e08e2666beec6da72b7f443fdc41d8de019.json",
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/lettering-03-bae6687281a77440ea38606e4217b1895bfd2342f03b5363ecfbcd275e38f7a1.json",
   "reviewer": {
     "role": "subagent",
-    "task": "claude-code-agent:manga-reviewer:a5fe05f44dc07e895",
+    "task": "claude-code-agent:manga-reviewer:ad26d746df75c3a72",
     "reportedTask": null,
     "taskSource": "Agent ID returned by the Claude Code Agent tool to the parent."
   },
   "status": "pass",
   "observations": [
-    "The runtime gave me no subagent or task ID, so reviewer.task is null. Files I read: this request (script for page 03, boundary pages 02 and 04, first reading), source/original.txt, source/REVISION-2026-11-11.md and the docs. Images I opened with Read and looked at myself: workflow/review/page-03.png, page-02.png and page-04.png (boundaries). None were unreadable.",
-    "Wording matches the source and script exactly: 'A later morning: patients can always check in at the front desk.' (the r13 wording recorded in REVISION-2026-11-11.md), 'Some check in ahead on the Welbuk Health app.', 'Ravi scans the QR code at the door.', 'A short form on his own phone, shared with consent.', 'Every check-in gets a slot on the screen.' and the TV label 'A-10 · A-11 · A-12'.",
-    "03-1: the caption is on the upper-left wall. Its right edge meets the left edge of a background wall screen, which is blank and carries no information. The faces of Mr. Raman and Meera, his hand on the walking stick, her typing hands and the QR stand at the far left are clear.",
-    "03-2: the caption's lower edge touches the top of Priya's hair. Her face, tapping finger, phone with its calendar and check icons, and bag are clear.",
-    "03-3 and 03-4: 03-3's caption touches only the top-left of Ravi's hair, and his face, phone scan frame, the QR stand and his hand on the bag strap are clear. 03-4's caption sits left of Ravi's face above the phone, and the form, tick box, tapping thumb and wristwatch are uncovered.",
-    "03-5: the caption is on the plain upper-left wall, and the label sits inside the TV's drawn strip on one line. All three faces, the walking stick, both phones and Ravi's bag are clear. There are no balloons or tails on this page. All text is legible."
+    "Files I read: AGENTS.md and CLAUDE.md (session context), docs/REVISION-AND-REVIEWS.md, docs/PROMPTS.md, this request in full (page-03 script with the 03-2 caption at dy 4, boundary pages 02 and 04, embedded first reading), source/original.txt and source/REVISION-2026-11-11.md. Images I opened with Read and looked at myself: workflow/review/page-03.png, assets/panels/03-1.png, 03-2.png, 03-3.png, 03-4.png and 03-5.png, and the boundary images review/page-02.png, review/page-04.png, assets/panels/02-1.png to 02-4.png and 04-1.png to 04-3.png. Every image was readable.",
+    "Wording is unchanged and matches the source: 'A later morning: patients can always check in at the front desk.', 'Some check in ahead on the Welbuk Health app.', 'Ravi scans the QR code at the door.', 'A short form on his own phone, shared with consent.', 'Every check-in gets a slot on the screen.' and 'A-10 · A-11 · A-12'.",
+    "03-2 fix verified. The caption box now spans page y 28 to 134. Mapping assets/panels/03-2.png onto the panel (464x440 from 1040x992, scale about 0.446), the blue scrunchie (art about x 430-470, y 243-275) lands at page y about 132-146 and is visible just below the box. The dark ponytail falls behind her head and left shoulder, fully visible. Only the topmost few pixels of the ponytail loop meet the box edge. In review/page-03.png she clearly wears a high ponytail with a blue scrunchie. That matches 03-3, where she is seated from behind with a ponytail and blue tie, and 03-5, where she has a ponytail and blue scrunchie. The hair inconsistency the final reviewer reported between 03-2 and 03-3/03-5 is gone. Her face, earrings, tapping finger, phone with its calendar and check icons, and crossbody bag remain uncovered. The box now covers only sky, foliage and the top of the awning.",
+    "03-3 hair check. The caption box spans page x 40-313, y 504-610. Mapped onto assets/panels/03-3.png (scale about 0.446), that is art x below about 648 and y below about 273. Ravi's hair reaches into that area from about art x 522 to 648 and y 125 to 273. So the box's lower-right corner hides the upper-left part of his crown, roughly 55x50 page px, about a sixth of his hair silhouette. His forehead and hairline start at art y about 285-300, below the box (face box 287,612; box bottom 610). His eyebrows, eyes, beard, ear and the rest of his short dark hair are visible, so his hairstyle and identity do not change, unlike the 03-2 case where a hidden tie made the hair read as loose. I judge this an acceptable tuck-behind-caption overlap. Raising this caption to dy 4 would reduce the overlap by only 12 px and would not remove it, so I do not require a change.",
+    "Other coverage: in 03-1 the caption's right end overlaps the left edge of the blank background wall screen, and Mr. Raman's and Meera's faces and hands and the QR stand are clear. In 03-4 the caption sits left of Ravi's profile, and the form, tick box, thumb and watch are clear. In 03-5 the caption is on the plain wall, the label sits inside the TV's drawn strip, and all three faces, the cane, both phones and the bag are clear. There are no balloons or tails. All text is legible.",
+    "Cosmetic note: the 03-2 box now sits 4 px below its panel border, while the 03-1 box sits 16 px below, so the top row's caption margins differ. This does not affect reading or coverage."
   ],
   "issues": [],
   "readingReview": {
@@ -52,44 +52,44 @@
       }
     ],
     "observations": [
-      "Scanning naturally, I follow a Z-path: top-left caption, top-right caption, middle-left, middle-right, then the bottom-tier caption and finally the TV label at its right. This is the script order.",
-      "Each caption sits in its own panel's top-left corner, and boxes in neighbouring panels are separated by gutters. Nothing can be read out of turn. The TV label is lower and to the right of the 03-5 caption and reads as the result of the three check-ins."
+      "Scanning naturally, I follow a Z-path: the 03-1 caption, the 03-2 caption (a little higher now but in the next panel to the right), 03-3, 03-4, then the 03-5 caption and the TV label. This is the script order.",
+      "Each caption is alone at the top of its panel, separated from its neighbours by gutters, so nothing is read out of turn. The TV label sits lower and to the right of the 03-5 caption and reads as the result of the three check-ins."
     ],
     "transitions": [
       {
         "from": "02-4",
         "to": "03-1",
-        "observation": "From the evening office to the bright reception. 'A later morning' states the time change, and Meera in the same blue kurta and braid anchors the clinic."
+        "observation": "From the evening office to the bright reception. 'A later morning' states the jump, and Meera, in the same blue kurta and braid, anchors the clinic."
       },
       {
         "from": "03-1",
         "to": "03-2",
-        "observation": "A second check-in route. Priya is outside the same clinic, identified by the teal awning and the reception and TV visible through the glass, and 'Some check in ahead' contrasts with the front desk."
+        "observation": "A second route. Priya is outside the same clinic (teal awning, reception and TV through the glass). Her high ponytail and blue scrunchie are now visible."
       },
       {
         "from": "03-2",
         "to": "03-3",
-        "observation": "A third route. Ravi scans the stand just inside the glass entrance while Meera, Mr. Raman and Priya are visible behind him, tying the three panels into one morning."
+        "observation": "A third route. Ravi scans just inside the entrance, with Meera, Mr. Raman and Priya (ponytail with a blue tie, seen from behind) in the background, which now matches 03-2."
       },
       {
         "from": "03-3",
         "to": "03-4",
-        "observation": "A close-up of the same phone after the scan: the form and the consent tick box being tapped. The green sleeve and the wristwatch are continuous."
+        "observation": "A close-up of the same phone after the scan. The green sleeve and the watch continue."
       },
       {
         "from": "03-4",
         "to": "03-5",
-        "observation": "All three sit together under the TV in the order front desk, app, QR, matching A-10, A-11, A-12. Ravi's phone and the bag on his lap continue."
+        "observation": "All three sit in check-in order under A-10 · A-11 · A-12. Priya's ponytail and scrunchie, Ravi's phone and the bag on his lap continue."
       },
       {
         "from": "03-5",
         "to": "04-1",
-        "observation": "The same waiting room and TV. 'A-10 · A-11 · A-12' becomes 'NOW · A-12', the seats where Mr. Raman and Priya sat are empty, and Ravi stands with his bag back on his shoulder. 'Soon, his slot comes up.' bridges the page turn."
+        "observation": "The same room and TV. 'NOW · A-12', the empty seats beside Ravi, and 'Soon, his slot comes up.' bridge the page turn."
       }
     ],
-    "firstReadingHash": "89d8aac4efadc027f8d8f456c5ec0191294f9fd1c6caeea7713d5cbe0dac9b78",
-    "comparison": "The first reader's Z-path order matches the script exactly, and their coverage findings (the 03-2 caption touching the hair, the 03-1 caption meeting the wall monitor) match mine. Neither covers a face or carries information, so both are acceptable. Their ambiguities: (1) Ravi named first in 03-3: the caption plus the man in frame introduce him, and pages 04 to 08 follow him. For a narration-led page this introduction is enough. (2) QR 'at the door': in 03-3 the stand is beside the glass entrance and window at the right, and in 03-1 it is at the left by the glass front. The source says 'at the entrance', so this is acceptable. (3) Slot ownership inferred from seating: page 04 confirms it ('NOW · A-12' as Ravi stands, with the other two seats empty), so the inference is intended. (4) Consent being abstract: 03-4 shows the check box being tapped on the form, which is a visible consent step, and the caption wording is the source's. Nothing is unresolved."
+    "firstReadingHash": "77a5e1ee7d192c6890b57b6789bfa5acabd8849caf4c9c4003854e8f82202c07",
+    "comparison": "The first reader's Z-path order matches the script exactly. Their concerns: (1) The 03-1 caption overlaps the wall screen. Confirmed. The screen is blank background in that panel, so this is harmless. (2) In 03-2 the caption ends just above the ponytail with very little clearance but does not cover her. Confirmed, and this is the intended result of the dy 16 to 4 change: the scrunchie and ponytail are visible and consistent with 03-3 and 03-5. (3) The 03-3 caption may clip the top-left of Ravi's hair. Confirmed: it hides roughly the upper-left sixth of his hair. His face, hairline and identifying features are clear, and his hairstyle still reads, so this is acceptable (details above). (4) The QR code is said to be 'at the door', but the stand is drawn near the counter. In 03-3 the stand is beside the glass entrance and window, and the source says 'at the entrance', so this is acceptable. (5) Slot ownership is only implied by seating. 04-1 confirms it with 'NOW · A-12' as Ravi stands and the other two seats are empty. Acceptable. (6) The receptionist is not named on this page. She is Meera, established on pages 01 and 02, and the source does not name her on page 3. Acceptable. Nothing is unresolved."
   },
-  "fingerprint": "6096d599cb2877c74557e6d10f4c2e08e2666beec6da72b7f443fdc41d8de019",
-  "recordedAt": "2026-11-12T11:27:33.082Z"
+  "fingerprint": "bae6687281a77440ea38606e4217b1895bfd2342f03b5363ecfbcd275e38f7a1",
+  "recordedAt": "2026-11-12T11:44:18.973Z"
 }
