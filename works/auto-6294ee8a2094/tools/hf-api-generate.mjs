@@ -2,7 +2,8 @@
 // from a request prepared by `node cli/generation.mjs prepare <panel>`, then record it.
 //
 // Usage (from the repository root):
-//   node works/auto-6294ee8a2094/tools/hf-api-generate.mjs PANEL REQUEST.json ASPECT [--prompt-file FILE]
+//   NODE_USE_ENV_PROXY=1 node works/auto-6294ee8a2094/tools/hf-api-generate.mjs PANEL REQUEST.json ASPECT [--prompt-file FILE]
+// (NODE_USE_ENV_PROXY=1 makes Node's fetch use the session's HTTPS proxy; omit it where no proxy is needed.)
 //
 // Credentials: the Authorization header uses HF_CREDENTIALS from .env.local (git-ignored).
 // In the cloud session the real key is injected by the network proxy and the variable holds a
