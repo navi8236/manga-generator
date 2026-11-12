@@ -1,22 +1,30 @@
 {
-  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-09-b5dd8b99c850fc2c860489511a1318137bd19e23e6fbcaa69b42596755927084.json",
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-09-1d3a3ec15b81477ed0d33f5cd4b0a296aa721ad85a2737ca0966ea7e1a89893d.json",
   "reviewer": {
     "role": "subagent",
-    "task": "claude-code-agent:manga-reviewer:ac31894e258aa760e",
+    "task": "claude-code-agent:manga-reviewer:a2c25f20ddf16a6ec",
     "reportedTask": null,
     "taskSource": "Agent ID returned by the Claude Code Agent tool to the parent."
   },
   "status": "pass",
   "observations": [
-    "Reviewer identity: the runtime gave me no task ID, so reviewer.task is null. I have not invented one.",
-    "What I opened and looked at with Read: workflow/storyboards-unnumbered/page-09.png (first), workflow/storyboards/page-09.png, and the page 08 storyboards (numbered and unnumbered). I also opened assets/panels/09-1.png (Ravi by the train window, phone in hand, skyline), 09-2.png (the specialist gesturing in front of a modern clinic, dotted lines to small clinics, soft blue vignette), 09-3.png (Ravi, partner and child on a sofa with a tablet showing three profile circles and a heart, in a vignette) and 09-4.png (Meera, Ananya and Ravi in front of the teal-awning clinic, Ravi waving). I read source/original.txt (PAGE 9) and Request 4. All files I opened were readable.",
-    "Composed preview: there is no workflow/review/page-09.png. The only composed version of this page is the stale workflow/review/page-08.png, whose SVG still carries 'Tomorrow' and page number 8. I used it as the lettered view because Request 4 and renumber-2026-11-12b.json say the art and content are unchanged (09-x maps from 08-x with the same source images), and its panel layout matches storyboards/page-09.svg. A current page-09 preview needs to be exported before the lettering stage.",
-    "PNG against SVG: the text in both page-09 SVGs matches the PNGs: the four captions or labels, the placeholders ravi, specialist, ravi, partner, child, meera, ananya and ravi, page number 9, and in the numbered version the captions '1 / Ravi travels to another city (hypothetical tomorrow)' to '4 / The three people and the three Welbuk products'. The 'rav' in the PNG is the ravi placeholder label clipped by the product label box.",
-    "Script and source: all text is word for word from source PAGE 9, including the '•' separators in the product label. The vision panels (09-2, 09-3) carry 'WELBUK VISION' and pale vignettes in the art, as the source requires for future concepts."
+    "Reviewer identity: the runtime gave this subagent no task ID, so reviewer.task is null.",
+    "What I read: the refreshed request. Its first reading hash is unchanged (9da7e0f7...). Only the page 08 boundary changed. I also read the current page-08 SVG, original.txt and Request 4. All were readable. I did not compute hashes.",
+    "Images: earlier in this session I opened workflow/storyboards-unnumbered/page-09.png before storyboards/page-09.png, and both match the page-09 SVG: the 09-1 caption at 40,40, the 09-2 label at 518,24 and caption at 522,322, the 09-3 label at 40,504 and caption at 40,588, and the 09-4 label at 704,872 and tagline at 48,1342. I also looked at workflow/review/page-09.png. In this pass I opened both page-08 storyboard PNGs and review/page-08.png for the boundary.",
+    "Script vs source: page 9 matches PAGE 9 in original.txt word for word. Request 4 keeps its content and art unchanged.",
+    "First-reader concern, whose voice is 'us': acceptable. It is the inclusive narrator voice of the source caption, the same voice as 07-4 and the closing tagline, shown over Ravi on a train.",
+    "First-reader concern, the partner and child are not introduced: acceptable. The source calls this a symbolic family scene. In page-09.png it is inside the pale-blue vignette, labelled WELBUK VISION, and Ravi is with them.",
+    "First-reader concern, the repeated WELBUK VISION label: acceptable. The source requires the vision to be visibly labelled, so both vision panels carry it.",
+    "First-reader concern, the 09-2 label and caption box touch the frame: acceptable. The label is a deliberate corner tab. The caption box ends about 4 px inside the frame, and its text is well clear.",
+    "First-reader concern, the label overlaps the 'rav' tag in 09-4: this is a placeholder artefact. In page-09.png the label is right of Ravi's face and waving hand.",
+    "First-reader concern, '•' vs '·': acceptable. 09-4 uses the source's own separators.",
+    "First-reader concern, the empty area and isolated tagline in 09-4: resolved by the art. The group fills the panel, and the eye goes from the label at top right down to the tagline at bottom left. The tagline covers only hems and legs."
   ],
   "issues": [],
   "readingReview": {
     "withoutGuides": true,
+    "firstReadingHash": "9da7e0f7a4e41f6df27728757ed03d45cbfca18702544f196f49eae359b6f9ee",
+    "comparison": "The first reader's order (09-1 caption, 09-2 label then caption, 09-3 label then caption, 09-4 label then tagline) is the intended order, with no skips. Every ambiguity the first reader raised is resolved with evidence from the source and page-09.png. No differences remain.",
     "predictedOrder": [
       {
         "panel": "09-1",
@@ -47,39 +55,32 @@
       }
     ],
     "observations": [
-      "Natural scan, matching the first reading: 'Tomorrow...' at top left, then the WELBUK VISION tab and the vision caption in 09-2, then the WELBUK VISION tab and caption in 09-3, then the product label at the upper right of 09-4 and the closing tagline at its lower left. There are no balloons, so no reply can be skipped.",
-      "First-reader concern, 'whose voice says us and our hometown?': acceptable. Every caption in the comic is narration. 'Us' is the inclusive voice of the narrator and the brand, and 09-1's art places Ravi on a train looking out at an unfamiliar skyline, so the line reads as applying to patients like him. 'May' and the WELBUK VISION labels that follow keep it hypothetical.",
-      "First-reader concern, 'the partner and child are not introduced': acceptable. In 09-3 Ravi's arm is around them on a shared sofa and he points at the family tablet. Together with the WELBUK VISION tab and the vignette, this reads as a symbolic family scene, which is what the source specifies. No dialogue depends on their names.",
-      "First-reader concern, 'the WELBUK VISION label is repeated and touches the frame in 09-2': both repetitions are deliberate, so neither vision panel can be mistaken for a launched feature. The tab sitting against the top-left frame is the same in the composed preview. It is the shared tab style, also used for WELBUK HEALTH on page 7. The 09-2 caption box ends just above the bottom frame in both storyboard and preview, and in the art it covers only the lower clinic and the specialist's torso, not his face or his open hand.",
-      "First-reader concern, 'the product label clips the rav placeholder': in the art and the composed preview, the product label sits over the sky and awning to the right of Ravi's head. His face and his raised waving hand stay clear. The clipping happens only to the placeholder label.",
-      "First-reader concern, ''•' versus '·' separators': acceptable. The '•' separators are copied word for word from the source and separate three product names in a closing brand line. The '·' separators elsewhere separate items in on-screen feature lists, so the different marks serve different purposes.",
-      "First-reader concern, 'the closing tagline is isolated at the bottom left': acceptable. In the art, the large empty area of the storyboard is the three full-length figures. The eye moves from the product label down through Meera, Ananya and Ravi to the tagline, which closes the page."
+      "The page has no balloons, so no two nearby balloons can be confused. In each panel the label comes before its caption.",
+      "In page-09.png the vignette in 09-2 and 09-3 and the return to normal colour in 09-4 separate the vision from the present."
     ],
     "transitions": [
       {
         "from": "08-6",
         "to": "09-1",
-        "observation": "The previous page closes with the results reaching the clinic (plan only; 08-6 has no art). The page turns to Ravi on a train with 'Tomorrow, care may take us beyond our hometown.' 'Tomorrow' and the change of setting mark the jump to a possible future, and Ravi's return is the link. The 09-1 image is unchanged from the old opening of the vision page."
+        "observation": "Meera sees RESULTS READY at reception (current page-08 storyboards and page-08.png). Next comes 'Tomorrow, care may take us beyond our hometown.' with Ravi on a train, holding his phone in his left hand in his lap. The caption and the setting mark the change in time and place."
       },
       {
         "from": "09-1",
         "to": "09-2",
-        "observation": "Ravi looking out at a new city leads into the vision panel of a clinic in another city linked by dotted lines to small clinics. The WELBUK VISION tab and the pale vignette mark the switch from hypothetical travel to a labelled concept."
+        "observation": "From the train window to the labelled vision vignette, with the specialist and dotted links between clinics."
       },
       {
         "from": "09-2",
         "to": "09-3",
-        "observation": "The vision widens from clinics and specialists to family wellness. The same tab, the vignette and dotted clinic links on the left of 09-3 keep the two panels together as one vision sequence."
+        "observation": "The same vignette and label widen the vision to family wellness, and Ravi appears in both scenes."
       },
       {
         "from": "09-3",
         "to": "09-4",
-        "observation": "The page leaves the vignette for full-colour daylight at the real clinic entrance with Meera, Ananya and Ravi. This marks the return from the vision to the present-day close and the three product names."
+        "observation": "The vignette is gone and the scene returns to the present-day clinic entrance with the three main characters, the product labels and the tagline."
       }
-    ],
-    "firstReadingHash": "9da7e0f7a4e41f6df27728757ed03d45cbfca18702544f196f49eae359b6f9ee",
-    "comparison": "The first reading's order agrees with the script, and nothing was skipped. Its concerns are covered above with evidence from the art and the composed version. 'Us' is inclusive narration over Ravi's travel. The family is a labelled symbolic vision. The tab placement and the repeated WELBUK VISION labels are deliberate and are the same in the preview. The 'rav' clipping exists only in the placeholder. The '•' separators follow the source. The isolated tagline is balanced by the full-length figures in the art. The new 08-6 to 09-1 boundary works through 'Tomorrow'. The only limit on this review is that the composed preview is stale-numbered (review/page-08.png), so a fresh review/page-09.png is needed before lettering."
+    ]
   },
-  "fingerprint": "b5dd8b99c850fc2c860489511a1318137bd19e23e6fbcaa69b42596755927084",
-  "recordedAt": "2026-11-12T12:35:26.820Z"
+  "fingerprint": "1d3a3ec15b81477ed0d33f5cd4b0a296aa721ad85a2737ca0966ea7e1a89893d",
+  "recordedAt": "2026-11-12T13:15:36.354Z"
 }
