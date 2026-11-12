@@ -1,23 +1,29 @@
 {
-  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/lettering-07-299b1b4f498d05c8085d0d3ee4ef43263651c77b30ec3a6b6dfc7deb572e2155.json",
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/lettering-07-5930d938ed5a0158e76a622830ceca605f738042cec6dcaef4044e748cc51310.json",
   "reviewer": {
     "role": "subagent",
-    "task": "claude-code-agent:manga-reviewer:a0dfb1b3cde5f7c17",
+    "task": "claude-code-agent:manga-reviewer:aaaee08dce305c752",
     "reportedTask": null,
     "taskSource": "Agent ID returned by the Claude Code Agent tool to the parent."
   },
   "status": "pass",
   "observations": [
-    "Identity: the runtime gave me no task ID, so task is null.",
-    "What I read: the request JSON's page-07 script (lines 225-704), required transitions, first reading, file list and hashes, and source/original.txt PAGE 7. I opened these PNGs with Read and looked at them: workflow/review/page-07.png and assets/panels/07-1.png to 07-4.png, plus the boundary pages workflow/review/page-06.png and page-08.png and assets/panels/06-1.png, 06-2.png and 08-1.png to 08-4.png. I did not open the storyboard SVGs or the character sheets.",
-    "Wording: the text matches the source and script exactly: 'Welbuk Health is designed to help patients stay connected with their care.', 'So I can keep useful information in one place?', 'That's the idea. Let's walk through what is available to you.' and 'A smoother visit. A more connected experience.' The label 'WELBUK HEALTH for patients' is in the script as a manga supplement and is not in the source text. It is unchanged from the version that already passed as the former page 06.",
-    "Tails: in 07-1 the tail ends at Meera's cheek. In 07-2 it ends at the left side of Ravi's face. In 07-3 it drops to just above Meera's head. Each tail goes to the correct speaker and crosses no face.",
-    "Coverage: in 07-2 the label covers the monitor stand, keyboard and plant. Its right edge (about x292) stops before Ravi's hand and phone (protected box from x297). In 07-3 Ravi's phone and hand in the foreground are clear. In 07-4 the caption's right edge (about x687) ends just left of Ravi's raised waving fingers. It touches the edge but does not hide the hand. Ananya's and Meera's faces and waving hands are clear.",
-    "Art and lettering are unchanged from the former page 06, apart from the page number."
+    "What I read: the request JSON. With Read I viewed workflow/review/page-07.png, assets/panels/07-1.png, 07-2.png, 07-3.png and 07-4.png, and for the boundaries review/page-06.png, review/page-08.png and assets/panels/06-1, 06-2 and 08-1 to 08-4. I compared these with storyboards/page-07.svg (full element list), the script in the request and source/original.txt lines 46-50. All files were readable. The runtime gave me no task ID, so task is null.",
+    "Text: all four lines and the label match the source and script verbatim.",
+    "07-2 label move, verified: the box is now at x 24-292, y 764-870 (mid-left). The 07-2 asset is 1024 px wide scaled into a 560 px panel (factor about 0.547). In it, Ravi's hand gripping the left edge of the phone has its topmost thumb tip at about asset (495,600), which is page y about 876. The fingers run down to page y about 1024, at x about 264-308. The label's bottom edge (870) is about 6 px above that thumb tip, and the whole hand base, which the old bottom-left placement cut, is now uncovered. This agrees with protected box [250,876,50,145]. The label's right edge (292) is also left of the protected phone [297,805,115,208].",
+    "What the 07-2 label covers now: the top of the reception monitor, the waiting chairs and part of Ravi's sleeve and upper arm on the left of the frame. It just reaches the collar of the background elderly patient. No face, hand or phone is covered. Placed beside the phone and under Ravi's question, it reads as the product tag. Acceptable.",
+    "07-4 caption move, verified: the caption box is at x 32-672, y 1138-1212. In the 07-4 asset (1536 px scaled into a 976 px panel, factor about 0.635), Ravi's raised waving hand spans asset x about 1025-1100, y 112-195, which is page x about 675-723, y about 1203-1256. At the caption's height (y up to 1212) only the fingertips reach up, at page x about 688-716. So the caption clears the hand by about 3 px at the hand's leftmost edge and about 16 px at the fingers, and protected box [678,1198,52,64] is clear. The waving hand reads in full. The tip of the teal awning shows to the right of the caption, and Ananya's and Meera's faces and waving hands in the doorway are below the caption and clear.",
+    "07-4 art note, not a lettering defect: the asset has a white unpainted block at its top left (page about x 24-440, y 1132-1229). The caption hides almost all of it. Only a thin white strip shows below the caption's bottom edge (y 1212 to about 1229) and in the 8 px left margin. Next to the white caption it reads as caption margin or blank wall, and it does not affect reading.",
+    "Tail and hair, 07-1: the tail tip is at (361,209), in the loose hair just in front of Meera's ear and stud. That is left of her face box [367,128,96,111]. The balloon's right edge (297) touches only the outer edge of her hair. Pointing at the speaker's head is standard. It covers no part of her eyes, mouth or profile. Acceptable.",
+    "Tail and hair, 07-2: the tail tip is at (363.5,712), at Ravi's temple and hairline, about 5 px outside his face box [369,614,147,169]. The balloon's right edge is about 9-10 px from his hair. He is the only person in the panel, his mouth is open and his eyes are clear. Acceptable.",
+    "Tail and hair, 07-3: the tail tip is at (773.6,735), just at the top of Meera's hair (her hair top is at page y about 737), and points correctly to her as she speaks. The balloon's lower-right rounded corner (about x 945-958, y 670-694) grazes at most a few hair-tip pixels at the top of Ravi's back-of-head in the right foreground. Ravi is a non-speaking 'head' figure there with no face visible, and his silhouette still reads. Acceptable.",
+    "First reader's remaining note, the walkthrough ellipsis: it follows the source (line 49, then line 50). The 07-4 caption bridges it. Acceptable.",
+    "Continuity seen in passing, unchanged art: Ravi's watch is on his left wrist in 07-1, 07-2, 07-3 and 07-4, and the phone stays with Ravi throughout, as the script records."
   ],
   "issues": [],
   "readingReview": {
     "withoutGuides": true,
+    "firstReadingHash": "49f87265975f3e376e4d82efbb66e6ed73f61dc3af534c8079104a566de25120",
     "predictedOrder": [
       {
         "panel": "07-1",
@@ -46,39 +52,38 @@
       }
     ],
     "observations": [
-      "Natural scan: 07-1 balloon. 07-2 top balloon, then the lower-left label. 07-3 top balloon. 07-4 top caption. This matches the script order.",
-      "Ravi's question in 07-2 and Meera's answer in 07-3 sit side by side at the same height, so the answer is read straight after the question."
+      "Composite order: Meera's 'Welbuk Health is designed...' (top-left balloon, tail to Meera); Ravi's 'So I can keep useful information in one place?' (tail to Ravi); the 'WELBUK HEALTH for patients' tag directly below it; Meera's 'That's the idea...' (top of the right panel, tail down to Meera); then the 07-4 caption. No reply is skipped.",
+      "Moving the label to mid-left keeps it next to Ravi's question and the phone screen it names. It is far from the 07-3 balloon (x 616+), so it is not mistaken for part of Meera's answer."
     ],
     "transitions": [
       {
         "from": "06-2",
         "to": "07-1",
-        "observation": "From the consultation two-shot to the reception desk. The monitor, waiting patients, Meera's consistent design and Ravi's bag back on his shoulder mark the move after the consultation."
+        "observation": "From the consultation's next-steps line to the familiar reception. Ravi has his bag on his shoulder and his own phone out, and Meera points at it. It reads as after the visit."
       },
       {
         "from": "07-1",
         "to": "07-2",
-        "observation": "Meera points at Ravi's phone, then a close-up of Ravi holding the same dark-blue phone with app cards visible and asking his question."
+        "observation": "Meera's pointing leads to the close-up of the phone screen (calendar and heart cards) held in both of Ravi's hands. His question draws on what he sees."
       },
       {
         "from": "07-2",
         "to": "07-3",
-        "observation": "Reverse angle: Meera answers, facing Ravi, who is seen from behind with the phone in the foreground. The Meera-left, Ravi-right staging is kept."
+        "observation": "Meera, on the left, answers toward the back of Ravi's head and his phone, keeping the left/right placement of 07-1. 'That's the idea.' answers the question directly."
       },
       {
         "from": "07-3",
         "to": "07-4",
-        "observation": "After her offer to walk him through, the panel cuts outside: Ravi leaves waving, phone in hand, while Ananya and Meera wave from the door. The caption sums up the visit."
+        "observation": "Cut outside: Ravi waving as he leaves, with phone and bag, and Ananya and Meera waving from the glass doorway. The caption summarises the visit."
       },
       {
         "from": "07-4",
         "to": "08-1",
-        "observation": "Ravi walks away waving, then (after the page turn) Ravi on a train in the same shirt with his bag and phone. The caption 'Tomorrow, care may take us beyond our hometown.' frames it as a possible future."
+        "observation": "From the farewell to Ravi on a train, under the conditional 'Tomorrow, care may take us beyond our hometown.'. The same shirt, bag and phone carry over, and the window with the skyline shows the change of place."
       }
     ],
-    "firstReadingHash": "fffe16879f0d5590e082b599f5b9a431e6e7a439110098e1879e43569781d143",
-    "comparison": "The first reader's order matches the script exactly, and the tails were read correctly. The concern that the move from the office to reception has no caption and the woman is unnamed is acceptable. Meera has worked this reception desk on earlier pages (she is at the desk in 04-1, in the same blue kurta and braid). The reception set and Ravi's bag on his shoulder carry the place change. The concern that the walk-through is skipped is acceptable: the source goes straight from Meera's offer to Ravi leaving, and the narration 'A smoother visit...' summarises it. The coverage notes (the 07-2 label near the hands, the 07-4 caption near Ravi's raised hand) match my inspection: no hand or face is covered. Nothing unresolved remains."
+    "comparison": "The first reader read the current composite: their notes already have the label at mid-left and the caption ending at x about 672. Their order matches mine and the script. I verified both requested changes against the assets: the 07-2 label clears the protected phone-holding hand by about 6 px, and the 07-4 caption clears the protected waving hand (by about 3 px at its leftmost edge, about 16 px at the fingers). The hair contacts at the tails in 07-1, 07-2 and 07-3 are on hair only, outside every face box, and point at the correct speaker. They are acceptable. Nothing remains open."
   },
-  "fingerprint": "299b1b4f498d05c8085d0d3ee4ef43263651c77b30ec3a6b6dfc7deb572e2155",
-  "recordedAt": "2026-11-12T11:29:13.387Z"
+  "fingerprint": "5930d938ed5a0158e76a622830ceca605f738042cec6dcaef4044e748cc51310",
+  "recordedAt": "2026-11-12T12:04:04.699Z"
 }
