@@ -18,18 +18,18 @@
           "speaker": "ananya",
           "text": "Hello, Ravi. Tell me what brings you in.",
           "rect": [
-            624,
+            514,
             40,
             211,
             138
           ],
           "center": [
-            729.5,
+            619.5,
             109
           ],
           "mouth": [
-            634,
-            350
+            445,
+            210
           ]
         },
         {
@@ -37,45 +37,52 @@
           "speaker": "label",
           "text": "PATIENT DETAILS: current vitals · prior health info · allergy panel · AI mic option · patient docs · lab reports",
           "rect": [
-            40,
-            294,
-            363,
-            234
+            34,
+            224,
+            292,
+            266
           ],
           "center": [
-            221.5,
-            411
+            180,
+            357
           ],
           "mouth": null
         }
       ],
       "faces": {
         "ananya": {
-          "anchor": [
-            634,
-            350
-          ],
           "face": [
-            584,
-            254,
-            100,
-            120
+            392,
+            117,
+            88,
+            112
+          ],
+          "anchor": [
+            445,
+            210
           ]
         },
         "ravi": {
-          "anchor": [
-            884,
-            370
-          ],
           "face": [
-            834,
-            274,
-            100,
-            120
+            795,
+            110,
+            105,
+            119
+          ],
+          "anchor": [
+            830,
+            200
           ]
         }
       },
-      "protected": [],
+      "protected": [
+        [
+          585,
+          271,
+          102,
+          63
+        ]
+      ],
       "intent": {
         "entry": [
           40,
@@ -103,18 +110,18 @@
           "speaker": "ananya",
           "text": "May the AI listen and save notes of our talk?",
           "rect": [
-            40,
-            584,
+            64,
+            572,
             332,
             106
           ],
           "center": [
-            206,
-            637
+            230,
+            625
           ],
           "mouth": [
-            184,
-            794
+            300,
+            788
           ]
         },
         {
@@ -122,18 +129,18 @@
           "speaker": "ravi",
           "text": "Yes, I agree.",
           "rect": [
-            724,
-            584,
+            400,
+            572,
             199,
             74
           ],
           "center": [
-            823.5,
-            621
+            499.5,
+            609
           ],
           "mouth": [
-            864,
-            784
+            720,
+            791
           ]
         },
         {
@@ -141,45 +148,64 @@
           "speaker": "label",
           "text": "AI VOICE CONSENT: asked at the first visit, before any voice is saved",
           "rect": [
-            354,
-            738,
+            625,
+            572,
             369,
             138
           ],
           "center": [
-            538.5,
-            807
+            809.5,
+            641
           ],
           "mouth": null
         }
       ],
       "faces": {
         "ananya": {
-          "anchor": [
-            184,
-            794
-          ],
           "face": [
-            144,
-            718,
-            80,
-            95
+            268,
+            744,
+            53,
+            55
+          ],
+          "anchor": [
+            300,
+            788
           ]
         },
         "ravi": {
-          "anchor": [
-            864,
-            784
-          ],
           "face": [
-            824,
-            708,
-            80,
-            95
+            701,
+            744,
+            50,
+            58
+          ],
+          "anchor": [
+            720,
+            791
           ]
         }
       },
-      "protected": [],
+      "protected": [
+        [
+          365,
+          805,
+          50,
+          30
+        ],
+        [
+          373,
+          860,
+          44,
+          25
+        ],
+        [
+          612,
+          810,
+          42,
+          36
+        ]
+      ],
       "intent": {
         "entry": [
           40,
@@ -198,13 +224,9 @@
           "reason": "左から右へ戻る移動と縦方向の範囲が重なる。段差・余白・人物の配置を目視で検討する。"
         },
         {
-          "code": "nonconsecutive-cluster",
-          "from": 1,
-          "expected": 2,
-          "competing": 3,
-          "expectedGap": 352,
-          "competingGap": 48,
-          "reason": "非連続の吹き出しが同じ縦列で近接し、間の返答を飛ばして続けて読まれる候補。番号なしで確認し、行・会話グループ・人物配置またはコマ分割を直す。"
+          "from": 2,
+          "to": 3,
+          "reason": "左から右へ戻る移動と縦方向の範囲が重なる。段差・余白・人物の配置を目視で検討する。"
         }
       ]
     },
@@ -232,8 +254,8 @@
             991
           ],
           "mouth": [
-            409,
-            1166
+            431,
+            1059
           ]
         },
         {
@@ -241,33 +263,46 @@
           "speaker": "label",
           "text": "SOAP NOTES: fill in manually and choose ICD or SNOMED codes, or let AI listen and summarise the conversation",
           "rect": [
-            40,
-            1212,
-            340,
-            234
+            26,
+            1160,
+            248,
+            298
           ],
           "center": [
-            210,
-            1329
+            150,
+            1309
           ],
           "mouth": null
         }
       ],
       "faces": {
         "ravi": {
-          "anchor": [
-            409,
-            1166
-          ],
           "face": [
-            354,
-            1062,
-            110,
-            130
+            393,
+            979,
+            96,
+            112
+          ],
+          "anchor": [
+            431,
+            1059
           ]
         }
       },
-      "protected": [],
+      "protected": [
+        [
+          277,
+          1329,
+          89,
+          63
+        ],
+        [
+          459,
+          1294,
+          68,
+          109
+        ]
+      ],
       "intent": {
         "entry": [
           40,
@@ -295,40 +330,47 @@
           "speaker": "narration",
           "text": "Technology supports the workflow. The conversation stays human.",
           "rect": [
-            624,
-            938,
+            620,
+            934,
             311,
             170
           ],
           "center": [
-            779.5,
-            1023
+            775.5,
+            1019
           ],
           "mouth": null
         }
       ],
       "faces": {
         "ananya": {
-          "anchor": [
-            773,
-            1276
-          ],
           "face": [
-            718,
-            1172,
-            110,
-            130
+            762,
+            1161,
+            75,
+            90
+          ],
+          "anchor": [
+            808,
+            1234
           ]
         },
         "ravi": {
           "kind": "head",
           "anchor": [
-            938,
-            1352
+            957,
+            1193
           ]
         }
       },
-      "protected": [],
+      "protected": [
+        [
+          774,
+          1362,
+          77,
+          47
+        ]
+      ],
       "intent": {
         "entry": [
           624,

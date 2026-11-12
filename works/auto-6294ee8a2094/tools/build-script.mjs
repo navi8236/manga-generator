@@ -1017,7 +1017,7 @@ const SCREEN = 'The laptop stands at about a three-quarter angle toward the read
           line('label', ['SPECIALITY-SPECIFIC TREATMENT PLANNER'], 114, 82),
           line('label', ['Dentist:', 'odontogram'], 169, 364),
           line('label', ['Eye doctor:', 'eye markers'], 397, 364),
-          line('label', ['Paediatrician:', 'growth scales ·', 'vaccines'], 600, 326),
+          line('label', ['Paediatrician:', 'growth scales ·', 'vaccines'], 600, 364),
         ],
       },
       {
@@ -1358,7 +1358,7 @@ const MEASURED = {
   },
   '05-3': { speakers: { ravi: F(393, 979, 96, 112, 431, 1059) }, protected: [[277, 1329, 89, 63], [459, 1294, 68, 109]] },
   '05-4': { speakers: { ananya: F(762, 1161, 75, 90, 808, 1234), ravi: HEAD(957, 1193) }, protected: [[774, 1362, 77, 47]] },
-  '06-1': { speakers: {}, protected: [[622, 491, 300, 153]] },
+  '06-1': { speakers: {}, protected: [[607, 544, 277, 100]] },
   '06-2': {
     speakers: { ananya: F(278, 861, 137, 150, 376, 977), ravi: F(780, 857, 129, 154, 835, 970) },
     protected: [[535, 1093, 133, 77]],
