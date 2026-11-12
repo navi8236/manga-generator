@@ -997,7 +997,7 @@ const SCREEN = 'The laptop stands at about a three-quarter angle toward the read
           'Close-up of Ananya’s laptop on the consultation desk: the screen fills most of the panel, but its dark bezel, the top edge with the camera dot and the hinge stay visible, with a sliver of the consultation room around it (the window frame and a plant leaf at the top-right corner, the wooden desk edge along the bottom) and Ananya’s right hand resting on the trackpad at the lower right. Light screen background with a slim teal header bar. Three equal tiles side by side across the middle: LEFT a simple tooth chart (two arches of small rounded teeth, two teeth tinted teal); CENTRE a simple eye diagram (an iris circle with three small teal marker dots and short lines); RIGHT a small growth chart (a rising curve on a light grid) beside a small vaccine card with three tick marks. ' + SCREEN + ' Keep the top-left strip and a band along the bottom of each tile plain for the labels.',
         action: 'The planner adapts to the speciality.',
         emotion: 'Clear, informative.',
-        camera: 'Flat close-up of the screen.',
+        camera: 'Close-up of the laptop at a three-quarter angle, slightly above desk height, with the bezel, desk edge and her hand at the margins.',
         information: 'Each speciality gets its own planner: an odontogram for dentists, eye markers for eye doctors, growth scales and vaccines for paediatricians.',
         transition: {
           kind: 'time-change',
