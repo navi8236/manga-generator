@@ -55,7 +55,7 @@ assert.ok(
 
 const hash = (value) => crypto.createHash('sha256').update(value).digest('hex');
 
-const { tailGeometry, balloon, balloonMask } = createLettering(cast);
+const { tailGeometry, balloon, balloonMask } = createLettering(cast, config.brand || null);
 const stateFor = (page, p) => resolveStoryState(config, page, p, local);
 const { prompt, job, panelJob, layoutReference } = createGenerationJobs({
   config,
@@ -361,7 +361,22 @@ function svg(page, art, rough = false, layer = 'all', guides = true) {
     })
     .join(
       '',
-    )}${layer === 'artwork' ? '' : `<text x="512" y="1500" text-anchor="middle" font-family="sans-serif" font-size="20">${Number(page.id)}</text>`}</svg>`;
+    )}${layer === 'artwork' ? '' : pageFooter(page)}</svg>`;
+}
+
+// Page number, or with workflow.json "brand.footer" a branded footer: two accent rules, the
+// page number and the brand logo file (omitted on pages with "brand": false, e.g. a pre-brand page).
+function pageFooter(page) {
+  const b = config.brand;
+  if (!b?.footer)
+    return `<text x="512" y="1500" text-anchor="middle" font-family="sans-serif" font-size="20">${Number(page.id)}</text>`;
+  const y = b.footerY ?? 1508;
+  const logo =
+    page.brand !== false && b.logo
+      ? `<image href="data:image/png;base64,${fs.readFileSync(path.resolve(root, path.dirname(configFile), b.logo)).toString('base64')}" x="${512 + 26}" y="${y - 19}" width="38" height="38"/>`
+      : '';
+  const gap = logo ? 70 : 36;
+  return `<line x1="40" y1="${y}" x2="${512 - gap}" y2="${y}" stroke="${b.accent}" stroke-width="2"/><line x1="${512 + gap}" y1="${y}" x2="984" y2="${y}" stroke="${b.accent}" stroke-width="2"/><text x="${logo ? 512 - 18 : 512}" y="${y + 7}" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="#333">${Number(page.id)}</text>${logo}`;
 }
 
 function materialJobs(page) {

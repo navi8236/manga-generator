@@ -167,7 +167,9 @@ export function segmentEntry(a, b, rect) {
   }
   return low;
 }
-export function createLettering(cast) {
+// theme (optional, from workflow.json "brand"): { accent, labelFill, captionBar }.
+// Without a theme the output is unchanged (teal labels, plain captions).
+export function createLettering(cast, theme = null) {
   const caption = (id) => cast[id]?.kind === 'caption';
   function tailGeometry(panel, d) {
     const speaker = panel.speakers?.[d.speaker];
@@ -229,9 +231,13 @@ export function createLettering(cast) {
     // cast.variant "label" (opt-in) marks typeset signage/product labels so they
     // read differently from narration captions.
     const label = isCaption && cast[d.speaker]?.variant === 'label';
+    const accent = theme?.accent;
     const shape = label
-      ? `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="10" fill="#e6f4f3" stroke="#1d6f6a" stroke-width="3"/>`
-      : `<rect x="${x}" y="${y}" width="${w}" height="${h}" ${isCaption ? '' : `rx="${Math.min(34, w / 3)}"`} fill="white" stroke="black" stroke-width="2"/>`;
+      ? `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="10" fill="${accent ? theme.labelFill || 'white' : '#e6f4f3'}" stroke="${accent || '#1d6f6a'}" stroke-width="3"/>`
+      : `<rect x="${x}" y="${y}" width="${w}" height="${h}" ${isCaption ? '' : `rx="${Math.min(34, w / 3)}"`} fill="white" stroke="black" stroke-width="2"/>` +
+        (isCaption && accent && theme.captionBar
+          ? `<rect x="${x + 8}" y="${y + 10}" width="5" height="${h - 20}" fill="${accent}"/>`
+          : '');
     let offset = 0;
     const content = lines.map((text) => {
       const result = sizedText(text, d, offset);
