@@ -78,8 +78,10 @@ export function box(panel, speech) {
   // Optional speech.fontSize (20-26, horizontal only) scales the box with the text; 26 is the default.
   const fs = fontSizeOf(speech);
   const step = Math.round((32 * fs) / 26);
-  const width = horizontal ? Math.ceil((widest * fs) / 26) + 36 : lines.length * 28 + 36;
-  const height = horizontal ? lines.length * step + 42 - (26 - fs) : longest * 27 + 42;
+  // Optional speech.compact (horizontal only) uses tighter padding so balloons fit narrow bands.
+  const compact = horizontal && speech.compact === true;
+  const width = horizontal ? Math.ceil((widest * fs) / 26) + (compact ? 26 : 36) : lines.length * 28 + 36;
+  const height = horizontal ? lines.length * step + (compact ? 20 : 42 - (26 - fs)) : longest * 27 + 42;
   const [x, y, w] = panel.rect;
   return [
     speech.x === undefined
@@ -179,7 +181,7 @@ export function segmentEntry(a, b, rect) {
   }
   return low;
 }
-// theme (optional, from workflow.json "brand"): { accent, labelFill, captionBar }.
+// theme (optional, from workflow.json "brand"): { accent, labelFill, captionBar, fontFamily }.
 // Without a theme the output is unchanged (teal labels, plain captions).
 export function createLettering(cast, theme = null) {
   const caption = (id) => cast[id]?.kind === 'caption';
@@ -263,7 +265,7 @@ export function createLettering(cast, theme = null) {
         lines
           .map(
             (text, i) =>
-              `<text x="${x + 18}" y="${y + 34 - (26 - fontSizeOf(d)) + i * Math.round((32 * fontSizeOf(d)) / 26)}" font-family="Meiryo,MS Gothic,sans-serif" font-size="${fontSizeOf(d)}" fill="black">${content[i]}</text>`,
+              `<text x="${x + (d.compact === true ? 13 : 18)}" y="${(d.compact === true ? y + 8 + Math.round(fontSizeOf(d) * 0.95) : y + 34 - (26 - fontSizeOf(d))) + i * Math.round((32 * fontSizeOf(d)) / 26)}" font-family="${theme?.fontFamily || 'Meiryo,MS Gothic,sans-serif'}" font-size="${fontSizeOf(d)}" fill="black">${content[i]}</text>`,
           )
           .join('')
       );

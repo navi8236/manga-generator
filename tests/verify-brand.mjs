@@ -38,3 +38,14 @@ assert.ok(box(panel, small)[2] < box(panel, big)[2] && box(panel, small)[3] < bo
 assert.match(plain.balloon(panel, small), /font-size="20"/);
 assert.throws(() => box(panel, { ...big, fontSize: 30 }), /fontSize/);
 console.log('Caption font size verified');
+
+// Optional fontFamily replaces the default horizontal lettering font.
+const fam = createLettering(cast, { ...theme, fontFamily: 'Inter, DejaVu Sans, sans-serif' });
+assert.match(fam.balloon(panel, speech), /font-family="Inter, DejaVu Sans, sans-serif"/);
+assert.match(plain.balloon(panel, speech), /font-family="Meiryo,MS Gothic,sans-serif"/);
+console.log('Lettering font family verified');
+
+// Optional compact padding makes the box smaller; default boxes are unchanged.
+const comp = { ...small, compact: true };
+assert.ok(box(panel, comp)[3] < box(panel, small)[3] && box(panel, comp)[2] < box(panel, small)[2]);
+console.log('Compact balloon verified');

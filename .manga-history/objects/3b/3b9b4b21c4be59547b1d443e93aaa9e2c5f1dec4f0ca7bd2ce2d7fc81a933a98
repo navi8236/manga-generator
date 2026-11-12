@@ -1,0 +1,21 @@
+// List every lettering placement problem at once (the plan command stops at the first one).
+// Usage: node works/welbuk-24/tools/check-layout.mjs
+import fs from 'node:fs';
+import { box } from '../../../src/lettering.mjs';
+
+const cfg = JSON.parse(fs.readFileSync('works/welbuk-24/workflow.json', 'utf8'));
+const inter = (a, b) => a[0] < b[0] + b[2] && b[0] < a[0] + a[2] && a[1] < b[1] + b[3] && b[1] < a[1] + a[3];
+let n = 0;
+for (const page of cfg.pages)
+  for (const p of page.panels) {
+    const [px, py, pw, ph] = p.rect;
+    const boxes = p.dialogue.map((d) => box(p, d));
+    boxes.forEach((b, i) => {
+      const tag = `${p.id}#${i} ${p.dialogue[i].speaker} [${b.join(',')}]`;
+      if (b[0] < px || b[1] < py || b[0] + b[2] > px + pw || b[1] + b[3] > py + ph) { console.log('OUTSIDE ', tag, 'panel', p.rect.join(',')); n++; }
+      for (const [id, s] of Object.entries(p.speakers || {}))
+        if (s.face && inter(b, s.face)) { console.log('FACE    ', tag, 'covers', id, s.face.join(',')); n++; }
+      for (let j = i + 1; j < boxes.length; j++) if (inter(b, boxes[j])) { console.log('OVERLAP ', tag, 'with #' + j); n++; }
+    });
+  }
+console.log(n ? `${n} problems` : 'layout clean');

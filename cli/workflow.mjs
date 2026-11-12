@@ -55,7 +55,10 @@ assert.ok(
 
 const hash = (value) => crypto.createHash('sha256').update(value).digest('hex');
 
-const { tailGeometry, balloon, balloonMask } = createLettering(cast, config.brand || null);
+const { tailGeometry, balloon: brandedBalloon, balloonMask } = createLettering(cast, config.brand || null);
+// Pages marked "brand": false (e.g. a before-the-product page) use the unthemed lettering.
+const plainBalloon = createLettering(cast, config.brand?.fontFamily ? { fontFamily: config.brand.fontFamily } : null).balloon;
+let balloon = brandedBalloon;
 const stateFor = (page, p) => resolveStoryState(config, page, p, local);
 const { prompt, job, panelJob, layoutReference } = createGenerationJobs({
   config,
@@ -295,6 +298,7 @@ function validate(data = config) {
 }
 
 function svg(page, art, rough = false, layer = 'all', guides = true) {
+  balloon = page.brand === false ? plainBalloon : brandedBalloon;
   const provenance = art
     ? JSON.parse(
         fs.readFileSync(

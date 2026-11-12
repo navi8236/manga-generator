@@ -1,0 +1,212 @@
+// Page definitions for the 24-page Welbuk comic (storyboard v3.0, source/original.txt).
+// Art only: no text, balloons or logos are drawn. Dialogue is lettered afterwards.
+
+export const ART = [
+  'Draw ONE complete full-colour manga PAGE, portrait, read left to right, with exactly FOUR panels, black panel borders, thin white gutters and a small white page margin.',
+  'Style: approachable Indian slice-of-life manga, clean confident line art with varied line weight, soft flat cel shading, warm natural light, simple readable backgrounds, expressive natural faces, precise hands. No photorealism, no glossy gradients, no surface microtexture.',
+  'BALLOON SPACE: in EVERY panel keep the upper quarter as plain empty background (plain wall, ceiling or sky) with no faces, hands, screens or important objects in it; speech balloons and captions are added there later. Keep heads below that band.',
+  'ABSOLUTELY NO TEXT anywhere: no letters, words, numbers, speech balloons, captions, sound effects, signage text, logos, brand marks or watermarks. Do not draw any Welbuk logo, and no heart, cross or medical-cross symbols anywhere: buildings, hospitals, clinics, pharmacies and icons never show a cross or plus sign.',
+  'Screens show only simple abstract interface shapes: a hot-pink (#FD006A) header bar, white cards, grey lines, simple icons and charts; never readable text or numbers. All data is fictional.',
+].join(' ');
+
+export const CAST = {
+  ananya: 'Dr. Ananya, Indian woman, late 30s, clinic owner and doctor; black hair in a low bun with a few loose strands, small gold stud earrings, teal kurta under an open white coat, stethoscope around her neck; calm almond eyes, level brows, oval face.',
+  meera: 'Meera, Indian woman, late 20s, receptionist; long black single braid over her LEFT shoulder, blue block-print kurta, thin silver bangle on her right wrist; large round eyes, high thin brows, round face.',
+  ravi: 'Ravi, Indian man, mid 30s, patient; short neat black hair with side part, short trimmed beard, light green shirt with rolled sleeves, dark trousers, wristwatch on his LEFT wrist; thick straight brows, square jaw.',
+  nurse: 'the Nurse, Indian woman, early 30s; chin-length wavy black bob tucked behind her right ear, plain LAVENDER scrub top and trousers, lavender lanyard with a blank card, small watch on her left wrist.',
+  raman: 'Mr. Raman, Indian man, early 70s; short white hair, round glasses, cream half-sleeve shirt, grey trousers, wooden walking stick.',
+  priya: 'Priya, Indian woman, mid 20s; high ponytail, coral-pink kurti over blue jeans, small crossbody bag.',
+  pharmacist: 'the Pharmacist, Indian man, early 40s; short wavy black hair greying at the temples, neat moustache, white coat over a light blue shirt.',
+  labtech: 'the Lab Technician, Indian woman, mid 20s; neat high bun, thin round glasses, light-blue lab coat over a navy top, purple gloves.',
+  specialist: 'the Specialist, Indian man, 50s; greying temples, rimless glasses, grey moustache, light grey blazer over a pale blue shirt, stethoscope.',
+  partner: "Ravi's partner, Indian woman, early 30s; shoulder-length wavy hair, mustard-yellow kurta, small mole under her right eye.",
+  child: "Ravi's child, about seven; short hair, round cheeks, orange T-shirt.",
+  urgent: 'an unwell elderly man (NOT Mr. Raman): bald with a grey beard, white kurta and veshti, pale, leaning on a younger family member (son, 40s, checked shirt).',
+  dentist: 'the Dentist, Indian woman, 40s; short bob, white coat over a navy top, surgical mask lowered on her chin.',
+  dentalpt: 'the dental patient, Indian man, late 20s; curly hair, yellow T-shirt.',
+  ophth: 'the Ophthalmologist, Indian man, 40s; neat side-parted hair, thin glasses, white coat over a maroon shirt.',
+  derm: 'the Dermatologist, Indian woman, 40s; long hair in a low ponytail, white coat over a purple kurta, gloves.',
+  dermpt: 'the dermatology patient, Indian woman, 50s; grey-streaked hair in a bun, green sari.',
+  paed: 'the Paediatrician, Indian man, 30s; short hair, round friendly face, white coat over a light yellow shirt, stethoscope.',
+  mother: 'the mother, Indian woman, early 30s; long hair, red-and-gold churidar.',
+  kid: 'her son, about four; short hair, striped blue T-shirt.',
+  admin: 'the Clinic Administrator, Indian man, 40s; short hair, glasses, navy blazer over a white shirt.',
+};
+
+const L1 = 'Panel 1 full-width at the top (about 35% of the page height); panels 2 and 3 side by side in the middle (about 30%); panel 4 full-width at the bottom (about 35%).';
+const L2 = 'Panels 1 and 2 side by side across the top (about 30%); panel 3 full-width in the middle (about 30%); panel 4 full-width at the bottom, the largest (about 40%).';
+const L3 = 'Panel 1 full-width at the top (about 30%); panel 2 full-width (about 25%); panels 3 and 4 side by side at the bottom, tall (about 45%).';
+const L4 = 'Panel 1 tall on the left half spanning the top 62% of the page; panels 2 and 3 stacked on the right half beside it; panel 4 full-width at the bottom (about 38%).';
+
+const MAIN = 'main-cast.png';
+export const pages = [
+  { id: '01', layout: L1, refs: [MAIN], cast: ['ananya', 'meera'], notes: 'BEFORE WELBUK: a traditional, unbranded paper-based clinic. No pink interface, no computers in focus; paper registers, files and slips everywhere. Panels 3-4 are evening.',
+    panels: [
+      'Morning, wide establishing shot of a small neighbourhood clinic in Tamil Nadu: patients waiting on metal chairs outside the open glass door under a teal awning; Dr. Ananya at the door welcoming an elderly woman; inside, Meera behind a reception desk piled with paper.',
+      'Medium shot: Meera at the crowded desk, landline receiver at her ear with her left hand, writing in a paper register with her right; appointment slips and files around her; patients waiting in front; she looks stretched but friendly.',
+      'Evening: empty waiting chairs; Dr. Ananya reviewing a stack of paper patient files at a desk while Meera keeps writing in the background.',
+      'Large emotional panel, late evening, a wall clock (no numbers, just hands near nine) on the wall: Dr. Ananya exhausted at the desk, hand to her forehead; Meera resting her head on a pile of registers; desk lamp light.',
+    ] },
+  { id: '02', layout: L2, refs: [MAIN], cast: ['ananya', 'meera'], notes: 'The SAME clinic as page 1 adopting Welbuk.',
+    panels: [
+      'Daytime, the same reception, paper files still piled at the side: Dr. Ananya and Meera lean in together over a laptop showing a pink-headed dashboard; Ananya points at it, Meera curious and pleased.',
+      'Close-up of the laptop screen alone filling the panel: three simple pink-and-white rounded tiles side by side with abstract icons (a laptop with a calendar, a group of three people, a smartphone with a person silhouette), joined by thin pink lines. No text.',
+      'A few weeks later, bright and tidy: Meera at reception working on a monitor with a pink-headed dashboard; behind her Dr. Ananya reviews a schedule on a tablet. No paper piles.',
+      'Wide: Dr. Ananya and Meera smiling and welcoming two arriving patients at a clean reception desk; plants, calm daylight.',
+    ] },
+  { id: '03', layout: L3, refs: [MAIN, 'checkin-patients.png'], cast: ['ravi', 'priya', 'meera', 'ananya'],
+    panels: [
+      'Ravi at home in the morning, smiling at his phone, which shows an abstract pink appointment card with a calendar icon.',
+      'Clinic reception: Priya walks up to Meera at the desk and asks; a few patients wait on chairs behind her.',
+      'Over-the-shoulder close-up of Meera\'s monitor: an abstract schedule grid with rows of coloured blocks: pink blocks (booked), light-blue blocks (walk-in) and empty slots. No text.',
+      'Waiting area: Ravi seated calmly with his phone confirmation card; Priya holding a small paper token slip; Dr. Ananya visible at a doorway behind, smiling.',
+    ] },
+  { id: '04', layout: L1, refs: [MAIN, 'nurse.png'], cast: ['urgent', 'meera', 'nurse', 'ananya'], notes: 'Calm, realistic clinical tone; no ambulance, no blood.',
+    panels: [
+      'Reception: a worried son helps an unwell elderly man through the door; Meera stands up from her desk, alert, reaching for the phone.',
+      'Close-up of a monitor: an abstract queue list with one row highlighted in red at the top, other rows pink and blue below. No text or numbers.',
+      'The Nurse guides the elderly man by the arm toward an assessment room; Dr. Ananya at the open door preparing, gesturing him in.',
+      'The waiting room: a wall display with abstract coloured rows updated; Meera calmly speaking to two waiting patients, reassuring them.',
+    ] },
+  { id: '05', layout: L4, refs: [MAIN, 'checkin-patients.png'], cast: ['ravi', 'raman', 'meera'],
+    panels: [
+      'Tall panel: Ravi at the clinic entrance holding his phone up to a pink-and-white QR standee (abstract QR-like square pattern, no text, no logo).',
+      'Close-up of Ravi\'s hands holding the phone: an abstract check-in form with a ticked consent box and a pink button.',
+      'Mr. Raman at the reception counter with his walking stick; Meera leans forward, smiling, offering to help.',
+      'Waiting area: Ravi and Mr. Raman seated side by side, relaxed; a wall display shows abstract queue tiles; Ravi looks at his phone happily.',
+    ] },
+  { id: '06', layout: L2, refs: [MAIN, 'nurse.png'], cast: ['meera', 'nurse', 'ravi', 'ananya'],
+    panels: [
+      'Meera at reception looking at her monitor with an abstract arrivals list, a few ticks.',
+      'Vitals corner: the Nurse takes Ravi\'s blood pressure with a cuff and enters it on a tablet; Ravi seated, relaxed.',
+      'Consultation room: Dr. Ananya at her desk looking at a tablet with an abstract patient queue and a small vitals card (icons only).',
+      'Wide connected scene: three zones of the clinic side by side (reception with Meera, vitals corner with the Nurse, consultation room with Dr. Ananya), joined by thin dotted pink lines between their devices.',
+    ] },
+  { id: '07', layout: L3, refs: [MAIN], cast: ['ananya', 'ravi'],
+    panels: [
+      'Consultation room with a window and a plant: Dr. Ananya welcomes Ravi as he comes in and sits down.',
+      'Two-shot across the desk: Ravi explaining, slightly tired, a hand at the back of his neck; Dr. Ananya listening attentively.',
+      'Over-the-shoulder view of Dr. Ananya\'s laptop: abstract history cards (calendar, pill, allergy warning triangle, heart-rate icon). No text.',
+      'Dr. Ananya typing structured notes into the laptop, focused and caring; Ravi seen from behind in the foreground.',
+    ] },
+  { id: '08', layout: L1, refs: [MAIN], cast: ['ananya', 'ravi'], notes: 'Optional AI documentation shown responsibly: consent first, doctor in control.',
+    panels: [
+      'Consultation room two-shot: Dr. Ananya explaining, an open-hand gesture toward a small phone or mic on the desk; Ravi nodding, open palm in agreement.',
+      'The consultation continues naturally, the doctor listening; a small pink recording dot on the device on the desk.',
+      'Close-up of a laptop: an abstract two-column interface: left, transcript lines in two alternating colours (two speakers); right, a summary card of grey lines. No text.',
+      'Dr. Ananya reviewing and editing the draft notes on the laptop with a careful expression, pen in hand.',
+    ] },
+  { id: '09', layout: L2, refs: [MAIN], cast: ['dentist', 'dentalpt'],
+    panels: [
+      'Dental clinic: the dental patient in the chair points to his cheek, wincing; the Dentist listens.',
+      'The Dentist looks at a monitor showing an abstract tooth chart (two arches of small white teeth, one tooth highlighted pink).',
+      'Close-up of the monitor: the tooth chart with a highlighted tooth and simple treatment-option cards (icons only).',
+      'The Dentist turns the monitor toward the patient and points; the patient looks relieved and understanding.',
+    ] },
+  { id: '10', layout: L4, refs: [MAIN, 'checkin-patients.png'], cast: ['priya', 'ophth'],
+    panels: [
+      'Tall panel: eye clinic; Priya seated, squinting slightly as she describes her blurry distance vision; the Ophthalmologist listening, an eye chart on the far wall drawn as abstract shapes (no letters).',
+      'The Ophthalmologist examines Priya\'s eyes with a slit-lamp style instrument.',
+      'Close-up of a screen: abstract two-column interface, left eye and right eye, each with a small eye icon and grey fields. No text or numbers.',
+      'The Ophthalmologist explains with a gesture; Priya smiles, reassured.',
+    ] },
+  { id: '11', layout: L1, refs: [MAIN], cast: ['derm', 'dermpt'], notes: 'Privacy and consent: modest framing, only the forearm shown.',
+    panels: [
+      'Dermatology room: the patient shows a small patch on her forearm and talks; the Dermatologist listens closely.',
+      'The Dermatologist marks the location on a tablet showing an abstract body outline with one pink dot on the forearm.',
+      'The patient nods consent while the Dermatologist photographs the forearm with a clinic tablet; privacy screen behind.',
+      'The Dermatologist compares two abstract photo cards side by side on the screen (earlier and current), thoughtful.',
+    ] },
+  { id: '12', layout: L3, refs: [MAIN], cast: ['mother', 'kid', 'paed'],
+    panels: [
+      'Paediatric clinic with bright colours: the mother brings her young son in; the Paediatrician greets them warmly.',
+      'The child stands on a height-measuring board, the Paediatrician measuring; a small scale nearby.',
+      'Close-up of a screen: an abstract growth curve chart with a dotted line, plus small vaccine-check icons. No text or numbers.',
+      'The Paediatrician explains to the mother, who smiles; the child sits on her lap.',
+    ] },
+  { id: '13', layout: L2, refs: [MAIN], cast: ['ananya', 'ravi'],
+    panels: [
+      'Consultation room: Dr. Ananya explaining calmly to Ravi across the desk.',
+      'Close-up of her laptop: an abstract prescription screen with pill icons and grey lines. No drug names or text.',
+      'Dr. Ananya checking the screen carefully, finger on the trackpad.',
+      'Ravi smiling at his phone, which shows an abstract prescription card with a pill icon and a tick.',
+    ] },
+  { id: '14', layout: L1, refs: ['pharmacy-lab.png'], cast: ['pharmacist'],
+    panels: [
+      'Clinic pharmacy counter: the Pharmacist looks at a monitor with an abstract prescription card; shelves of medicine boxes behind (no labels).',
+      'Close-up of the monitor: abstract inventory table with rows of boxes, small calendar icons and bar lengths. No text or numbers.',
+      'The Pharmacist picks a box from the front of a shelf section, checking it.',
+      'The Pharmacist hands a paper bag across the counter; the monitor beside him shows an abstract stock bar going down with a tick.',
+    ] },
+  { id: '15', layout: L4, refs: [MAIN, 'pharmacy-lab.png'], cast: ['ananya', 'labtech', 'ravi'],
+    panels: [
+      'Tall panel: consultation room; Dr. Ananya explaining tests to Ravi and tapping her laptop.',
+      'Clinic lab: the Lab Technician reads an abstract order card on a monitor, tube rack beside her.',
+      'Ravi seated in a sample chair, cotton pad on his inner arm; the Lab Technician standing at the right holding a capped tube; Ravi asks her something. Both figures are in the LOWER 55% of this panel, drawn smaller; the upper 45% is a wide, completely empty plain wall (draw nothing there: no shapes, no bubbles).',
+      'Dr. Ananya reviewing an abstract lab report card with a test-tube icon and a tick on her tablet.',
+    ] },
+  { id: '16', layout: L3, refs: [MAIN, 'vision-cast.png'], cast: ['ananya', 'ravi', 'specialist'],
+    panels: [
+      'Consultation room: Dr. Ananya explaining to Ravi with a reassuring gesture.',
+      'Close-up of a laptop: an abstract referral form with a doctor icon and a pink send arrow.',
+      'Close-up: an abstract status track of four connected circles (first two filled pink, the others outlined).',
+      'Another clinic: the Specialist reviewing information on a tablet that shows a consent tick icon.',
+    ] },
+  { id: '17', layout: L1, refs: [MAIN], cast: ['meera', 'ravi'],
+    panels: [
+      'Billing desk at reception: Ravi walks up; Meera smiles and turns her monitor slightly toward him.',
+      'Close-up of the monitor: an abstract invoice with grey line items and a total bar. No numbers or text.',
+      'Ravi scans a pink-framed payment QR stand on the counter with his phone.',
+      'Meera hands Ravi a small receipt slip with a smile; Ravi nods thanks.',
+    ] },
+  { id: '18', layout: L2, refs: [MAIN], cast: ['meera', 'admin', 'ananya'], notes: 'Mirror page 1: same clinic and a similar camera angle, but calm and organised in warm evening light.',
+    panels: [
+      'Evening, wide exterior mirroring page 1: the same small neighbourhood clinic with the teal awning and glass door, warm lights inside, tidy empty waiting chairs, an organised reception desk with a monitor visible through the glass.',
+      'Meera at her monitor reviewing an abstract day-end summary with simple bar and pie charts.',
+      'The Clinic Administrator in a small office reviewing abstract financial charts on a laptop.',
+      'Wide: Dr. Ananya and Meera leaving together at dusk under the same teal awning, smiling, Ananya locking the glass door.',
+    ] },
+  { id: '19', layout: L2, refs: [], cast: ['admin'], notes: 'Infrastructure concepts drawn as simple, clearly separate diagrams. Every building is a plain grey-and-white multi-storey block with a flat roof and windows only: NO sign, NO symbol, NO cross, NO plus, nothing on the roof or facade.',
+    panels: [
+      'Tall panel: the Clinic Administrator at a desk with a large monitor showing two small plain building icons connected to one dashboard.',
+      'A plain building icon connected by a secure pink line to a cloud with a padlock.',
+      'Full-width panel: two separate simple diagrams side by side in the LEFT 75%: a plain large building with its own server rack (on-premises) and a plain large building with a server rack linked to a cloud (hybrid), each with an empty plain strip directly under it for a label; the Administrator small at the far RIGHT edge, looking at them thoughtfully.',
+      'A plain large building drawn inside a closed boundary box, with a server and a small chip icon entirely inside it and no lines going outside.',
+    ] },
+  { id: '20', layout: L1, refs: [MAIN, 'nurse.png'], cast: ['meera', 'nurse', 'admin'],
+    panels: [
+      'Morning: Meera and the Nurse arrive at the clinic entrance for their shift.',
+      'The Nurse taps her phone on a small attendance terminal by the staff door.',
+      'The Clinic Administrator reviewing an abstract staff calendar and attendance grid on his laptop.',
+      'Wide: reception, nursing, a doctor and the administrator each working at their stations, each with a device.',
+    ] },
+  { id: '21', layout: L3, refs: [MAIN], cast: ['ravi', 'ananya'],
+    panels: [
+      'Evening at home: Ravi on his sofa looking at his phone with an abstract visit-summary card.',
+      'Close-up of his phone: abstract app sections, a prescription card and a report card with icons.',
+      'Daytime: Ravi at a small table with tea, surprised and smiling at a reminder card on his phone with a calendar icon.',
+      'The clinic consultation room: Dr. Ananya welcomes Ravi back with a warm smile as he sits down.',
+    ] },
+  { id: '22', layout: L2, refs: [MAIN, 'vision-cast.png'], cast: ['ravi', 'partner', 'child'], notes: 'The grandparents are NOT the specialist from the reference sheet. ' + 'Panels 3 and 4 are future-looking: a soft pale-pink vignette border and lighter palette.',
+    panels: [
+      'Home: Ravi, his partner and their child sit together on a sofa, relaxed.',
+      'Close-up of a tablet held by the partner: three separate round profile icons in a row.',
+      'Soft vignette: a tablet with an abstract growth curve and small vaccine icons, the child looking at it curiously.',
+      'Soft vignette, warm scene: three generations together smiling: an elderly grandmother with white hair in a bun and a maroon sari, an elderly grandfather with white hair, no glasses, in a white kurta, with Ravi, his partner and the child.',
+    ] },
+  { id: '23', layout: L4, refs: [MAIN, 'vision-cast.png'], cast: ['ravi', 'specialist'], notes: 'All four panels are a future vision: soft pale-pink vignette border and a lighter, airy palette.',
+    panels: [
+      'Tall panel: Ravi on a train by the window, a different Indian city skyline outside (no signs or text), phone in hand.',
+      'Ravi standing outside a modern clinic in the new city, looking at his phone, hopeful.',
+      'Medium close-up of Ravi\'s hand holding his phone in the LOWER 60% of the panel, phone drawn smaller: an abstract consent screen with a toggle switched on and a doctor icon linked by a dotted line. The upper 40% of the panel is soft, empty, out-of-focus background with nothing in it.',
+      'Inside the clinic: the Specialist with a tablet warmly welcoming Ravi, open hand.',
+    ] },
+  { id: '24', layout: L1, refs: [MAIN, 'nurse.png', 'pharmacy-lab.png', 'vision-cast.png'], cast: ['ananya', 'meera', 'nurse', 'pharmacist', 'labtech', 'ravi', 'partner', 'child'],
+    notes: 'Final page. Panel 2 is left mostly empty for the real logo; panel 3 is a soft vision vignette.',
+    panels: [
+      'Wide: the clinic team working together in one bright space: Dr. Ananya, Meera, the Nurse, the Pharmacist and the Lab Technician, each at their task, smiling.',
+      'A clean white panel with three empty pink rounded rectangles stacked, each with a simple icon (a laptop, a group of people, a person with a heart-free phone icon). Leave large clean white space.',
+      'Soft vision vignette: a network of small round icons (plain clinic buildings with no cross, a pill bottle for a pharmacy, a lab flask, a family) linked by dotted pink lines.',
+      'Final full-width scene in front of the clinic: Dr. Ananya welcoming a patient, staff in the doorway, Ravi with his partner and child smiling. Keep the upper third as clean sky for the logo.',
+    ] },
+];

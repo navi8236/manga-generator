@@ -1,0 +1,221 @@
+{
+  "version": 3,
+  "page": "01",
+  "status": "planning-guide-not-reviewed",
+  "direction": "left-to-right, top-to-bottom",
+  "panels": [
+    {
+      "id": "01-1",
+      "rect": [
+        45,
+        29,
+        934,
+        452
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "narration",
+          "text": "A busy day at Dr. Ananya's clinic.",
+          "rect": [
+            221,
+            37,
+            372,
+            46
+          ],
+          "center": [
+            407,
+            60
+          ],
+          "mouth": null
+        }
+      ],
+      "faces": {},
+      "protected": [],
+      "intent": null,
+      "groups": null,
+      "warnings": []
+    },
+    {
+      "id": "01-2",
+      "rect": [
+        45,
+        494,
+        463,
+        478
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "meera",
+          "text": "Appointments, patient details, follow-ups... there's always something to manage!",
+          "rect": [
+            143,
+            502,
+            328,
+            98
+          ],
+          "center": [
+            307,
+            551
+          ],
+          "mouth": [
+            311,
+            680
+          ]
+        }
+      ],
+      "faces": {
+        "meera": {
+          "face": [
+            269,
+            614,
+            79,
+            107
+          ],
+          "anchor": [
+            311,
+            680
+          ]
+        }
+      },
+      "protected": [],
+      "intent": null,
+      "groups": null,
+      "warnings": []
+    },
+    {
+      "id": "01-3",
+      "rect": [
+        518,
+        494,
+        462,
+        478
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "meera",
+          "text": "The patients have gone home... but we're still here.",
+          "rect": [
+            526,
+            502,
+            446,
+            72
+          ],
+          "center": [
+            749,
+            538
+          ],
+          "mouth": [
+            916,
+            742
+          ]
+        }
+      ],
+      "faces": {
+        "meera": {
+          "face": [
+            900,
+            720,
+            31,
+            35
+          ],
+          "anchor": [
+            916,
+            742
+          ]
+        },
+        "ananya": {
+          "face": [
+            704,
+            666,
+            79,
+            99
+          ],
+          "anchor": [
+            745,
+            725
+          ]
+        }
+      },
+      "protected": [],
+      "intent": null,
+      "groups": null,
+      "warnings": []
+    },
+    {
+      "id": "01-4",
+      "rect": [
+        45,
+        984,
+        934,
+        461
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "ananya",
+          "text": "Our time should belong to patients, not paperwork.",
+          "rect": [
+            53,
+            992,
+            538,
+            46
+          ],
+          "center": [
+            322,
+            1015
+          ],
+          "mouth": [
+            282,
+            1168
+          ]
+        }
+      ],
+      "faces": {
+        "ananya": {
+          "face": [
+            220,
+            1096,
+            119,
+            107
+          ],
+          "anchor": [
+            282,
+            1168
+          ]
+        },
+        "meera": {
+          "face": [
+            740,
+            1188,
+            62,
+            89
+          ],
+          "anchor": [
+            772,
+            1247
+          ]
+        }
+      },
+      "protected": [],
+      "intent": null,
+      "groups": null,
+      "warnings": []
+    }
+  ],
+  "checklist": [
+    "番号と誘導線を隠した画像を先に読み、予測した発話順を記録する",
+    "最初のセリフへ上・左から入れるか",
+    "近い非連続の吹き出しを一組と誤認して返答を飛ばさないか",
+    "前の会話のまとまりを読み終えてから次のまとまりへ進めるか",
+    "返答へ自然に移り、視線が大きく逆戻りしないか",
+    "顔の向き・視線・手や小道具の動作と読順がつながるか",
+    "話者への尾が別人物や重要物を横切らないか",
+    "場所・時間・回想の切替と物の移動を直前直後から理解できるか",
+    "最後のセリフ・反応から次のコマへ移れるか",
+    "大きなコマ・余白・情報公開の順がページの感情の狙いに合うか",
+    "話題の境界と段・ページ境界が一致し、不要な読み戻りを誘わないか"
+  ]
+}

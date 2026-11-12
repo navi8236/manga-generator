@@ -1,0 +1,269 @@
+{
+  "version": 3,
+  "page": "03",
+  "status": "planning-guide-not-reviewed",
+  "direction": "left-to-right, top-to-bottom",
+  "panels": [
+    {
+      "id": "03-1",
+      "rect": [
+        46,
+        30,
+        933,
+        389
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "ravi",
+          "text": "I can choose a doctor and book a convenient slot!",
+          "rect": [
+            498,
+            140,
+            370,
+            106
+          ],
+          "center": [
+            683,
+            193
+          ],
+          "mouth": [
+            441,
+            251
+          ]
+        }
+      ],
+      "faces": {
+        "ravi": {
+          "face": [
+            381,
+            139,
+            106,
+            126
+          ],
+          "anchor": [
+            441,
+            251
+          ]
+        }
+      },
+      "protected": [],
+      "intent": null,
+      "groups": null,
+      "warnings": []
+    },
+    {
+      "id": "03-2",
+      "rect": [
+        46,
+        432,
+        933,
+        409
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "priya",
+          "text": "I don't have an appointment. Can I still see the doctor?",
+          "rect": [
+            468,
+            446,
+            390,
+            106
+          ],
+          "center": [
+            663,
+            499
+          ],
+          "mouth": [
+            441,
+            587
+          ]
+        },
+        {
+          "number": 2,
+          "speaker": "meera",
+          "text": "Of course. Let me check the available slots.",
+          "rect": [
+            498,
+            656,
+            402,
+            106
+          ],
+          "center": [
+            699,
+            709
+          ],
+          "mouth": [
+            702,
+            640
+          ]
+        }
+      ],
+      "faces": {
+        "priya": {
+          "face": [
+            388,
+            508,
+            72,
+            86
+          ],
+          "anchor": [
+            441,
+            587
+          ]
+        },
+        "meera": {
+          "face": [
+            665,
+            561,
+            72,
+            85
+          ],
+          "anchor": [
+            702,
+            640
+          ]
+        }
+      },
+      "protected": [],
+      "intent": null,
+      "groups": null,
+      "warnings": []
+    },
+    {
+      "id": "03-3",
+      "rect": [
+        46,
+        856,
+        445,
+        588
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "meera",
+          "text": "Booked visits and walk-ins are organized in one schedule.",
+          "rect": [
+            54,
+            1146,
+            384,
+            138
+          ],
+          "center": [
+            246,
+            1215
+          ],
+          "mouth": [
+            151,
+            1082
+          ]
+        }
+      ],
+      "faces": {
+        "meera": {
+          "face": [
+            52,
+            923,
+            125,
+            212
+          ],
+          "anchor": [
+            151,
+            1082
+          ],
+          "kind": "head"
+        }
+      },
+      "protected": [],
+      "intent": null,
+      "groups": null,
+      "warnings": []
+    },
+    {
+      "id": "03-4",
+      "rect": [
+        504,
+        856,
+        476,
+        588
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "ananya",
+          "text": "The team knows who's coming and can prepare in advance.",
+          "rect": [
+            554,
+            888,
+            415,
+            106
+          ],
+          "center": [
+            761.5,
+            941
+          ],
+          "mouth": [
+            909,
+            1049
+          ]
+        }
+      ],
+      "faces": {
+        "ananya": {
+          "face": [
+            883,
+            1003,
+            46,
+            53
+          ],
+          "anchor": [
+            909,
+            1049
+          ]
+        },
+        "ravi": {
+          "face": [
+            559,
+            1029,
+            79,
+            106
+          ],
+          "anchor": [
+            599,
+            1118
+          ]
+        },
+        "priya": {
+          "face": [
+            718,
+            1042,
+            79,
+            106
+          ],
+          "anchor": [
+            757,
+            1138
+          ]
+        }
+      },
+      "protected": [],
+      "intent": null,
+      "groups": null,
+      "warnings": []
+    }
+  ],
+  "checklist": [
+    "番号と誘導線を隠した画像を先に読み、予測した発話順を記録する",
+    "最初のセリフへ上・左から入れるか",
+    "近い非連続の吹き出しを一組と誤認して返答を飛ばさないか",
+    "前の会話のまとまりを読み終えてから次のまとまりへ進めるか",
+    "返答へ自然に移り、視線が大きく逆戻りしないか",
+    "顔の向き・視線・手や小道具の動作と読順がつながるか",
+    "話者への尾が別人物や重要物を横切らないか",
+    "場所・時間・回想の切替と物の移動を直前直後から理解できるか",
+    "最後のセリフ・反応から次のコマへ移れるか",
+    "大きなコマ・余白・情報公開の順がページの感情の狙いに合うか",
+    "話題の境界と段・ページ境界が一致し、不要な読み戻りを誘わないか"
+  ]
+}

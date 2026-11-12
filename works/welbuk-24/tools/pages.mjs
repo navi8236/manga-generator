@@ -142,7 +142,7 @@ export const pages = [
     panels: [
       'Tall panel: consultation room; Dr. Ananya explaining tests to Ravi and tapping her laptop.',
       'Clinic lab: the Lab Technician reads an abstract order card on a monitor, tube rack beside her.',
-      'Ravi seated in a sample chair, cotton pad on his inner arm; the Lab Technician holding a capped tube; Ravi asks her something.',
+      'Ravi seated in a sample chair, cotton pad on his inner arm; the Lab Technician standing at the right holding a capped tube; Ravi asks her something. Both figures are in the LOWER 55% of this panel, drawn smaller; the upper 45% is a wide, completely empty plain wall (draw nothing there: no shapes, no bubbles).',
       'Dr. Ananya reviewing an abstract lab report card with a test-tube icon and a tick on her tablet.',
     ] },
   { id: '16', layout: L3, refs: [MAIN, 'vision-cast.png'], cast: ['ananya', 'ravi', 'specialist'],
@@ -166,11 +166,11 @@ export const pages = [
       'The Clinic Administrator in a small office reviewing abstract financial charts on a laptop.',
       'Wide: Dr. Ananya and Meera leaving together at dusk under the same teal awning, smiling, Ananya locking the glass door.',
     ] },
-  { id: '19', layout: L4, refs: [], cast: ['admin'], notes: 'Infrastructure concepts drawn as simple, clearly separate diagrams. Every building is a plain grey-and-white multi-storey block with a flat roof and windows only: NO sign, NO symbol, NO cross, NO plus, nothing on the roof or facade.',
+  { id: '19', layout: L2, refs: [], cast: ['admin'], notes: 'Infrastructure concepts drawn as simple, clearly separate diagrams. Every building is a plain grey-and-white multi-storey block with a flat roof and windows only: NO sign, NO symbol, NO cross, NO plus, nothing on the roof or facade.',
     panels: [
       'Tall panel: the Clinic Administrator at a desk with a large monitor showing two small plain building icons connected to one dashboard.',
       'A plain building icon connected by a secure pink line to a cloud with a padlock.',
-      'Two separate simple diagrams side by side: a plain large building with its own server rack inside (on-premises), and a plain large building with a server rack linked to a cloud (hybrid). The Administrator looks thoughtfully at them.',
+      'Full-width panel: two separate simple diagrams side by side in the LEFT 75%: a plain large building with its own server rack (on-premises) and a plain large building with a server rack linked to a cloud (hybrid), each with an empty plain strip directly under it for a label; the Administrator small at the far RIGHT edge, looking at them thoughtfully.',
       'A plain large building drawn inside a closed boundary box, with a server and a small chip icon entirely inside it and no lines going outside.',
     ] },
   { id: '20', layout: L1, refs: [MAIN, 'nurse.png'], cast: ['meera', 'nurse', 'admin'],
@@ -198,7 +198,7 @@ export const pages = [
     panels: [
       'Tall panel: Ravi on a train by the window, a different Indian city skyline outside (no signs or text), phone in hand.',
       'Ravi standing outside a modern clinic in the new city, looking at his phone, hopeful.',
-      'Close-up of his phone: an abstract consent screen with a toggle switched on and a doctor icon linked by a dotted line.',
+      'Medium close-up of Ravi\'s hand holding his phone in the LOWER 60% of the panel, phone drawn smaller: an abstract consent screen with a toggle switched on and a doctor icon linked by a dotted line. The upper 40% of the panel is soft, empty, out-of-focus background with nothing in it.',
       'Inside the clinic: the Specialist with a tablet warmly welcoming Ravi, open hand.',
     ] },
   { id: '24', layout: L1, refs: [MAIN, 'nurse.png', 'pharmacy-lab.png', 'vision-cast.png'], cast: ['ananya', 'meera', 'nurse', 'pharmacist', 'labtech', 'ravi', 'partner', 'child'],
