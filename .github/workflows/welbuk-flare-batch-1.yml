@@ -27,6 +27,13 @@ jobs:
         env:
           HIGGSFIELD_API_KEY: ${{ secrets.HIGGSFIELD_API_KEY }}
         run: node scripts/welbuk-flare-batch-1.mjs
+      - name: Letter and package generated pages
+        if: always()
+        run: |
+          python -m pip install Pillow
+          if [ -f output/welbuk-flare-batch-1/manifest.json ]; then
+            python scripts/assemble-welbuk-flare-batch-1.py
+          fi
       - name: Upload pages and generation manifest
         if: always()
         uses: actions/upload-artifact@v4
