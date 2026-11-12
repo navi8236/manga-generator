@@ -19,7 +19,6 @@ if (mode === 'dry-run') {
   console.log('DRY RUN PASSED. No authentication request or image generation was made. No credits used.');
   process.exit(0);
 }
-throw new Error('Paid generation disabled: the configured model was rejected with model_not_found in run #3. Verify a supported Higgsfield API model and pricing before enabling this path.');
 if (process.env.CONFIRM_PAID_GENERATION !== 'YES_ONE_IMAGE') {
   throw new Error('Paid generation requires explicit CONFIRM_PAID_GENERATION=YES_ONE_IMAGE');
 }
@@ -33,12 +32,13 @@ const prompt = [
   'No logos, no text, no speech bubbles, no lettering, no watermarks; suitable as a visual style test, not final published artwork.'
 ].join(' ');
 console.log('Submitting exactly ONE paid image request (Welbuk BEFORE scene).');
-const result = await higgsfield.subscribe('flux-pro/kontext/max/text-to-image', {
-  input: { aspect_ratio: '3:4', prompt, safety_tolerance: 2 },
+const result = await higgsfield.subscribe('higgsfield-ai/soul/v2/standard', {
+  input: { aspect_ratio: '3:4', prompt, resolution: '720p', batch_size: 1, enhance_prompt: true },
   withPolling: true,
 });
-if (!result?.isCompleted) throw new Error('Higgsfield did not return a completed image.');
-const imageUrl = result.jobs?.[0]?.results?.raw?.url;
+if (result?.isCompleted === false || result?.status === 'failed') throw new Error('Higgsfield did not return a completed image.');
+const image = result?.images?.[0];
+const imageUrl = typeof image === 'string' ? image : image?.url || image?.image_url || result?.jobs?.[0]?.results?.raw?.url;
 if (!imageUrl || !/^https:\/\//.test(imageUrl)) throw new Error('No HTTPS image URL returned');
 const response = await fetch(imageUrl, { signal: AbortSignal.timeout(90_000) });
 if (!response.ok) throw new Error('Image download failed (' + response.status + ')');
