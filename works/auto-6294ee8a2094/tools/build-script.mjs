@@ -918,8 +918,8 @@ const SCREEN = 'The laptop stands at about a three-quarter angle toward the read
         },
         dialogue: [
           line('ananya', ['May the AI listen and', 'save notes of our talk?'], 40, 4),
-          line('ravi', ['Yes, I agree.'], 376, 4),
-          line('label', ['AI VOICE CONSENT:', 'asked at the first visit,', 'before any voice is saved'], 601, 4),
+          line('ravi', ['Yes, I agree.'], 372, 4),
+          line('label', ['AI VOICE CONSENT:', 'asked at the first visit,', 'before any voice is saved'], 607, 4),
         ],
       },
       {
