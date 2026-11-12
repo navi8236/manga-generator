@@ -639,7 +639,7 @@ const pages = [];
           ],
         },
         speakers: { meera: speaker(r1, [300, 190, 80, 95]), raman: speaker(r1, [110, 210, 80, 95]) },
-        dialogue: [line('narration', ['A later morning:', 'patients can always check', 'in at the front desk.'], 16, 16)],
+        dialogue: [line('narration', ['A later morning:', 'patients can always check', 'in at the front desk.'], 16, 4)],
       },
       {
         id: '03-2',
@@ -689,7 +689,7 @@ const pages = [];
           ],
         },
         speakers: { ravi: speaker(r3, [220, 170, 85, 105]) },
-        dialogue: [line('narration', ['Ravi scans the QR', 'code at the door.'], 16, 16)],
+        dialogue: [line('narration', ['Ravi scans', 'the QR code', 'at the door.'], 16, 16)],
       },
       {
         id: '03-4',
