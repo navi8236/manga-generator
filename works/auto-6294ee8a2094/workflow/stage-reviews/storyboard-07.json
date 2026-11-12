@@ -1,5 +1,5 @@
 {
-  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-07-36ddc0c95b5767542c4819bd63689ab8a202037885027d35bf1fe2485ddeb41e.json",
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-07-7991ea9e066a3fb95d197d63b5b5ed91956350c3939b43d96bfd05f4952e5201.json",
   "reviewer": {
     "role": "subagent",
     "task": "claude-code-agent:manga-reviewer:a2c25f20ddf16a6ec",
@@ -9,20 +9,19 @@
   "status": "pass",
   "observations": [
     "Reviewer identity: the runtime gave this subagent no task ID, so reviewer.task is null.",
-    "What I read: the refreshed request. Its first reading hash is unchanged (e2aa9ddd...). Only the page 08 boundary changed. I also read the current unnumbered page-08.svg, source/original.txt and source/REVISION-2026-11-11.md (Request 4). All were readable. I did not compute hashes because no shell was available.",
-    "Images: earlier in this session I opened workflow/storyboards-unnumbered/page-07.png with Read before storyboards/page-07.png, and both match the page-07 SVG coordinates: Meera's balloon at 48,44, Ravi's balloon at 44,568, the label at 24,764, the 07-3 balloon at 616,556 and the 07-4 caption at 32,1138. I also looked at workflow/review/page-07.png. In this pass I opened both re-exported page-08 storyboard PNGs and workflow/review/page-08.png for the boundary.",
+    "What I read: the refreshed request. Its first reading is unchanged (hash e2aa9ddd...) and only the page 08 boundary changed. I did not compute hashes.",
+    "Images: earlier in this session I opened workflow/storyboards-unnumbered/page-07.png before the numbered storyboards/page-07.png, and both match the page-07 SVG: Meera's balloon at 48,44, Ravi's balloon at 44,568, the label at 24,764, the 07-3 balloon at 616,556 and the 07-4 caption at 32,1138. I also looked at workflow/review/page-07.png. In this pass I opened both re-exported page-08 storyboard PNGs and review/page-08.png for the boundary.",
     "Script vs source: page 7 matches PAGE 7 in original.txt word for word. Request 4 leaves pages 1-7 unchanged, and page 7 is unchanged.",
-    "First-reader concern, no time or place cue from page 6 to page 7: acceptable. In page-07.png, 07-1 shows the reception desk, monitor, waiting chairs with patients, and Meera, all known from pages 1-4. Ravi's bag is back on his shoulder, while it was on the floor in 06-2. The move to reception after the consultation is clear from the art.",
-    "First-reader concern, the WELBUK HEALTH label sits on the left frame: acceptable. It is set at x:0 on purpose as a tab and keeps its inner padding. Page 9 uses the same tab style.",
-    "First-reader concern, the 'ravi' tag crosses the 07-3 frame: this is a placeholder artefact. It is a head-only speaker. In page-07.png Ravi is the over-the-shoulder back of a head and a hand holding the phone, cut by the frame on purpose.",
-    "First-reader concern, the 'anany' tag is clipped in 07-4: this is a placeholder artefact. In page-07.png Ananya and Meera stand apart in the doorway, both waving.",
+    "First-reader concern, no cue for the move from page 6 to page 7: acceptable. In page-07.png the reception desk, waiting area and Meera, together with Ravi's bag back on his shoulder (it was on the floor in 06-2), show the move to reception after the consultation.",
+    "First-reader concern, the WELBUK HEALTH label sits on the left frame: acceptable. It is a deliberate tab at x:0, and the text keeps its padding.",
+    "First-reader concerns, the 'ravi' tag crossing the 07-3 frame and the clipped 'anany' tag in 07-4: both are placeholder artefacts. In page-07.png Ravi is a back-of-head over-the-shoulder figure cut by the frame on purpose, and Ananya and Meera stand apart in the doorway.",
     "First-reader concern, the small tail in 07-2: acceptable. It points to Ravi, who is the only person in the panel."
   ],
   "issues": [],
   "readingReview": {
     "withoutGuides": true,
     "firstReadingHash": "e2aa9dddcf8302d9b57a43a515b8dc692403b045d77d6a8e1b16bfb5b028aa6d",
-    "comparison": "The first reader's natural order (07-1 Meera, 07-2 Ravi's question then the label, 07-3 Meera, 07-4 caption) is the intended order, with no skipped reply. The first reader's continuity and placeholder concerns are resolved by page-07.png, as listed in the observations. No differences remain.",
+    "comparison": "The first reader's order (07-1 Meera, 07-2 Ravi's question then the label, 07-3 Meera, 07-4 caption) is the intended order, with no skipped reply. All of the first reader's concerns are resolved by page-07.png. No differences remain.",
     "predictedOrder": [
       {
         "panel": "07-1",
@@ -51,38 +50,37 @@
       }
     ],
     "observations": [
-      "07-1 and 07-3 have one balloon each, and in 07-2 the label sits below the balloon, so there are no competing nearby balloons.",
-      "Ravi's question in 07-2 and Meera's answer in 07-3 are at the same height across the gutter, so they read as one horizontal exchange.",
-      "In page-07.png the gazes link the panels. Meera points at the phone. Ravi looks up to the right toward 07-3, where Meera faces right toward him. In 07-4 Ravi waves back to the left, then walks off to the right toward the page turn."
+      "07-1 and 07-3 have one balloon each, and in 07-2 the label sits below the balloon. No nearby balloons compete.",
+      "Ravi's question in 07-2 and Meera's answer in 07-3 are at the same height across the gutter, so they read as one exchange. In page-07.png the gazes link the panels in the same left-to-right direction."
     ],
     "transitions": [
       {
         "from": "06-2",
         "to": "07-1",
-        "observation": "From the consultation (plan of care, bag on the floor) to reception (desk, waiting area, Meera), with the bag back on Ravi's shoulder."
+        "observation": "From the consultation, with the bag on the floor, to reception, with Meera at the desk and the bag back on Ravi's shoulder."
       },
       {
         "from": "07-1",
         "to": "07-2",
-        "observation": "Meera points at the dark-blue phone. Ravi then holds it in both hands, screen toward the reader, and asks his question."
+        "observation": "Meera points at the phone. Ravi then holds it in both hands, screen toward the reader, and asks his question."
       },
       {
         "from": "07-2",
         "to": "07-3",
-        "observation": "The question is answered by 'That's the idea.' Meera stays left and Ravi right, seen from behind holding the phone."
+        "observation": "'That's the idea.' answers him directly. Meera stays on the left and Ravi on the right."
       },
       {
         "from": "07-3",
         "to": "07-4",
-        "observation": "From the walkthrough offer to the departure outside. Ravi waves with his right hand and holds the phone in his left, while Ananya and Meera wave from the doorway."
+        "observation": "From the walkthrough to the departure: Ravi waves goodbye, and Ananya and Meera wave back from the doorway."
       },
       {
         "from": "07-4",
         "to": "08-1",
-        "observation": "Page turn after Ravi leaves, then 'Meanwhile, the pharmacy is notified...' at the pharmacy. In the current page-08.png the NEW PRESCRIPTION label sits above the tablet's visible pill card. After 06-2's plan of care, 'Meanwhile' reads as during or just after the visit."
+        "observation": "Page turn to 'Meanwhile' at the pharmacy. In the current page-08.png the NEW PRESCRIPTION label sits above the tablet's visible pill card, which links back to 06-2's plan of care."
       }
     ]
   },
-  "fingerprint": "36ddc0c95b5767542c4819bd63689ab8a202037885027d35bf1fe2485ddeb41e",
-  "recordedAt": "2026-11-12T13:15:35.699Z"
+  "fingerprint": "7991ea9e066a3fb95d197d63b5b5ed91956350c3939b43d96bfd05f4952e5201",
+  "recordedAt": "2026-11-12T14:00:40.905Z"
 }
