@@ -1,6 +1,6 @@
 # Manga Generator
 
-English | [日本語](README.md)
+[English](README.en.md) | [Bahasa Indonesia](README.id.md) | [日本語](README.md) | [简体中文](README.zh.md) | [繁體中文](README.zh-Hant.md) | [Español](README.es.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | [Português](README.pt.md) | [한국어](README.ko.md)
 
 A manga production tool for working with Codex to turn a novel or other source text into a script, storyboards, generated artwork, lettering, reviewed pages, and a PDF.
 
@@ -58,6 +58,10 @@ Start with the [English setup and production walkthrough](docs/QUICKSTART.en.md)
 ## Claude Code
 
 See [Claude Code setup](docs/CLAUDE-CODE.md) and [ComfyUI provisioning](docs/COMFYUI.md) (Japanese). Claude Code orchestrates and reviews; external ComfyUI generates images. Composition, PDF, history and completion checks use the shared CLI. A separate GPU environment is required.
+
+## Agent Skills
+
+For compatible agents (Claude Code, Cursor, and others), `.agents/skills/` provides production, review, and art-direction skills ([`manga-production`](.agents/skills/manga-production/SKILL.md), [`manga-review`](.agents/skills/manga-review/SKILL.md), [`manga-art-direction`](.agents/skills/manga-art-direction/SKILL.md)). See each skill's `SKILL.md` and its linked documents for the detailed procedures. No installation step is needed inside a checkout; compatible agents discover the skills automatically. To install the skills into another project, run `npx skills add stockedge/manga-generator`.
 
 ## License
 

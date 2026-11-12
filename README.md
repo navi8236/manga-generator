@@ -1,6 +1,6 @@
 # Manga Generator
 
-[English](README.en.md) | 日本語
+[English](README.en.md) | [Bahasa Indonesia](README.id.md) | [日本語](README.md) | [简体中文](README.zh.md) | [繁體中文](README.zh-Hant.md) | [Español](README.es.md) | [Deutsch](README.de.md) | [Français](README.fr.md) | [Português](README.pt.md) | [한국어](README.ko.md)
 
 小説や文章の原作から、脚本・ネーム・画像生成・文字入れ・検品・PDF出力までをCodexと進める漫画制作ツールです。
 
@@ -72,6 +72,10 @@ node cli/auto.mjs start "C:\path\original.txt" --mode economy
 ## Claude Codeで使う
 
 [Claude Code向け導入・制作手順](docs/CLAUDE-CODE.md)と[ComfyUI構築手順](docs/COMFYUI.md)を用意しています。画像生成は外部ComfyUI、視覚確認と独立レビューはClaude Code、組版・PDF・履歴・再現は共通CLIが担当します。GPU環境は別途必要です。
+
+## Agent Skills
+
+対応エージェント（Claude Code、Cursorなど）向けに、`.agents/skills/` へ制作・レビュー・作画のスキル（[`manga-production`](.agents/skills/manga-production/SKILL.md)、[`manga-review`](.agents/skills/manga-review/SKILL.md)、[`manga-art-direction`](.agents/skills/manga-art-direction/SKILL.md)）を用意しています。詳細な手順は各スキルの `SKILL.md` とリンク先のドキュメントを参照してください。 このリポジトリ内では導入操作は不要です（対応エージェントが自動認識します）。他のプロジェクトへ導入するには `npx skills add stockedge/manga-generator` を実行してください。
 
 ## ライセンス
 
