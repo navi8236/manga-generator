@@ -1547,11 +1547,11 @@ const SCREEN = 'The laptop stands at about a three-quarter angle toward the read
         beat: 'Self check-in with the QR code',
         rect: r3,
         scene:
-          'Just inside the glass entrance: Ravi holds his phone up to the small QR check-in stand (abstract QR-like pattern in a teal frame, not a real code, no text); his phone shows a scan frame and a check mark. In the background the reception desk has no queue at all: nobody is waiting in front of it, and Meera, free of check-in work, types calmly at her monitor. Plain wall in the upper part for a caption.',
+          'Just inside the glass entrance: Ravi holds his phone up to the small QR check-in stand (the same stand as page 3: teal frame on a pole, white screen with an abstract grey QR-like grid, not a real code, no text); his phone shows a scan frame and a check mark. In the background the reception desk has no queue at all: nobody is waiting in front of it, and Meera, free of check-in work, types calmly at her monitor. The plain desk front at the lower left carries the caption.',
         action: 'Ravi scans the QR code.',
         emotion: 'Easy, focused.',
         camera: 'Medium shot, three-quarter view.',
-        information: 'Self check-in: no queue and no typing at the desk.',
+        information: 'Self check-in: no queue at the desk, and nobody has to type his details in for him.',
         readingFlow: { entry: [40, 484], exit: [490, 880] },
         production: {
           moment: 'The phone confirms the check-in.',
@@ -1570,7 +1570,7 @@ const SCREEN = 'The laptop stands at about a three-quarter angle toward the read
           ravi: speaker(r3, [270, 160, 90, 105]),
           meera: speaker(r3, [60, 230, 40, 48]),
         },
-        dialogue: [line('narration', ['He checks in himself.', 'No queue at the desk.'], 8, 4)],
+        dialogue: [line('narration', ['He checks in', 'himself.', 'No queue', 'at the desk.'], 8, 196)],
       },
       {
         id: '09-4',
@@ -1579,7 +1579,7 @@ const SCREEN = 'The laptop stands at about a three-quarter angle toward the read
         beat: 'As usual, his token comes up on the screen',
         rect: r4,
         scene:
-          'Waiting area: the wall-mounted waiting-room TV in the upper right shows a teal screen with one empty white token strip (no text or numbers). Ravi sits in a waiting chair, phone in his lap, looking up at the TV with a small smile; two other patients seen from behind. Plain wall in the upper left for a caption.',
+          'Waiting area: the wall-mounted waiting-room TV in the upper right shows a teal screen with one empty white token strip (no text or numbers). Ravi sits in a waiting chair, phone in his right hand in his lap, left hand with the wristwatch on the chair arm, looking up at the TV with a small smile; two other patients seen from behind: an elderly grey-haired man at the left and a young man with short hair in a blue shirt at the right (no bun, no kurta). The whole TV is in frame with plain wall above it, and the upper-left half of the panel is plain wall for a two-line caption.',
         action: 'Ravi sees his slot called.',
         emotion: 'Calm.',
         camera: 'Medium-wide shot.',
@@ -1608,7 +1608,7 @@ const SCREEN = 'The laptop stands at about a three-quarter angle toward the read
         beat: 'Dr. Ananya already has his history: care continues',
         rect: r5,
         scene:
-          'The consultation room (window with plant): Dr. Ananya at her desk smiles and greets Ravi, who sits opposite her, empty-handed. She holds her tablet angled toward the reader; it shows a simple timeline of cards with a test-tube icon and a check mark (no text, no values). Ravi smiles back, relaxed and at ease, glancing at the history on her tablet, his empty hands resting on his knee and the chair arm. Plain wall across the top for a balloon and a caption.',
+          'The consultation room (window with plant): Dr. Ananya at her desk smiles and greets Ravi, who sits opposite her, empty-handed. She holds her tablet angled toward the reader; it shows a simple timeline of cards with a test-tube icon and a check mark (no text, no values). Ravi smiles back, relaxed and at ease, glancing at the history on her tablet, his empty hands resting loosely together on the desk, forearms on the desktop. Plain wall across the top for a balloon and a caption.',
         action: 'Ananya welcomes Ravi back.',
         emotion: 'Ananya warm and efficient; Ravi relaxed and reassured, smiling back.',
         camera: 'Wide two-shot, eye level.',
@@ -1620,7 +1620,7 @@ const SCREEN = 'The laptop stands at about a three-quarter angle toward the read
           after: 'Welbuk does not stop at one clinic (page 10).',
           hands: {
             ananya: hands('holding the left edge of doctor-tablet', 'holding the right edge of doctor-tablet'),
-            ravi: hands('resting on his knee (wristwatch on this wrist)', 'resting on the chair arm'),
+            ravi: hands('forearm on the desk, hand resting loosely beside his right hand (wristwatch on this wrist)', 'forearm on the desk, hand resting loosely on the desktop'),
           },
           props: [prop('doctor-tablet', 'on her desk', 'held in both hands, history cards on screen', 'on her desk', 'ananya.left')],
         },
@@ -1885,10 +1885,13 @@ const MEASURED = {
   '09-1': { speakers: { ravi: F(238, 232, 78, 78, 274, 286) }, protected: [[140, 279, 56, 80]] },
   '09-2': { speakers: { ravi: F(738, 254, 32, 38, 754, 282) }, protected: [[712, 368, 14, 24], [780, 366, 14, 26]] },
   '09-3': {
-    speakers: { ravi: F(289, 701, 50, 66, 323, 751), meera: F(108, 767, 38, 36, 125, 795) },
-    protected: [[399, 817, 42, 53]],
+    speakers: { ravi: F(281, 595, 50, 58, 316, 638), meera: F(89, 650, 38, 40, 111, 683) },
+    protected: [[391, 705, 56, 58], [439, 682, 52, 91], [259, 838, 30, 60]],
   },
-  '09-4': { speakers: { ravi: F(684, 789, 48, 54, 714, 832) } },
+  '09-4': {
+    speakers: { ravi: F(674, 670, 55, 63, 716, 710) },
+    protected: [[694, 838, 53, 43], [769, 848, 30, 53]],
+  },
   '09-5': {
     speakers: { ananya: F(279, 1017, 85, 105, 324, 1100), ravi: F(704, 1012, 95, 110, 736, 1092) },
     protected: [[309, 1182, 175, 140], [674, 1292, 150, 50]],

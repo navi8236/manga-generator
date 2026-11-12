@@ -37,7 +37,18 @@ for i in range(min(BLEND, top)):
 im = np.concatenate([pad.round().astype(np.uint8), im], axis=0)
 h, w = im.shape[:2]
 crop = 0
-if mode == 'crop-top':
+if mode.startswith('crop-sides'):
+    # Keep the full height and trim columns to reach the target aspect. 'crop-sides:F' takes the
+    # fraction F of the removed width from the left (default 0.5). Use with TOP_PX 0 when the
+    # image already has plain wall for the lettering.
+    frac = float(mode.split(':')[1]) if ':' in mode else 0.5
+    target_w = round(h * aspect)
+    cut = max(0, w - target_w)
+    lcut = round(cut * frac)
+    im = im[:, lcut : lcut + target_w]
+    side = -lcut
+    crop = cut
+elif mode == 'crop-top':
     # Fill the panel width: trim rows from the top (plain wall) to reach the target aspect.
     target_h = round(w / aspect)
     crop = max(0, h - target_h)
