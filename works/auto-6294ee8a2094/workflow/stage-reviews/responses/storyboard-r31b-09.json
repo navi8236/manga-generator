@@ -1,0 +1,112 @@
+{
+ "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-09-f533df3d61945673ad5b025a76dca919b77eaf89e0621ff4a386900654f48c9b.json",
+ "reviewer": {
+  "role": "subagent",
+  "task": "claude-code-agent:manga-reviewer:aaee0f389264cbcd4",
+  "reportedTask": null,
+  "taskSource": "Agent ID returned by the Claude Code Agent tool to the parent."
+ },
+ "status": "changes-requested",
+ "observations": [
+  "Reviewer identity: the runtime gave me no task ID, so reviewer.task is null.",
+  "What I read: the whole of this request (the page 09 script with all five panels' scene, production, speakers and dialogue, the page 08 and page 10 boundary context, and the first reading with fingerprint 87320fb1... and hash 7221fef3...), PAGE 9 and PAGE 10 of original.txt, and Request 5 with its follow-ups in REVISION-2026-11-11.md. Everything was readable.",
+  "Images I opened with Read and looked at, in this order: storyboards-unnumbered/page-09.png, then storyboards/page-09.png. For the boundaries I looked at review/page-08.png, storyboards-unnumbered/page-10.png, storyboards/page-10.png and the art in assets/panels/10-1.png to 10-4.png. Page 09 has no art. I judged its plan from the storyboard and the script only, and I certify no page 09 image.",
+  "Completeness against Request 5: every element is planned. WhatsApp follow-up reminder (09-1). A different day with free hands and 'no file, no folder, no papers, no bag' (09-2). Digital self check-in by QR (09-3). The token 'as usual' (09-4). The doctor visit with his history open and care continuing (09-5). Following the user's follow-ups, 'Welbuk - The care that stays with you.' is not used and the captions are framed around clinic savings. All page 09 text matches PAGE 9 of original.txt word for word.",
+  "Reading order: clear. Captions sit at the top left of each panel in a 2x2 grid, followed by a full-width bottom tier: 09-1 caption then label, 09-2 caption, 09-3 caption, 09-4 caption then the NOW · A-31 label at the upper right where the TV is planned, then 09-5's balloon (tail to Ananya) and the bottom caption. No two non-consecutive text items sit close enough to be read out of turn.",
+  "Time cues: 'On the day' in 09-2 follows the reminder in 09-1 and reads naturally as the appointed follow-up day. The scene plan backs it up with morning light at the familiar entrance. 'As usual' in 09-4 calls back to 04-1 ('Soon, his slot comes up', NOW · A-12). The new token A-31 marks a different visit. Both cues work.",
+  "First-reader concern (Ravi does not answer 'Welcome back'): a silent reaction is acceptable only if it is drawn. The 09-5 scene says only that he 'sits down opposite her, empty-handed', and the emotion field ('Warm, efficient') describes Ananya. Nothing tells the image model to give Ravi a readable reaction. See issue 1.",
+  "First-reader concern (Meera's role in Panel C is unexplained): the caption 'No queue at the desk' is the reason she is shown. But the 09-3 scene says only 'Meera works at the reception desk in the background, not needed'. It does not say that no patients are queuing at her desk, and 'not needed' is not something an artist can draw. See issue 2.",
+  "Continuity in the plan is sound. In 09-1 the phone is in Ravi's right hand. In 09-2 it is in his shirt pocket and his hands are empty. In 09-3 it is in his right hand at the QR stand. In 09-4 it is in his lap, and in 09-5 it is put away. Dropping his usual shoulder bag in 09-2 supports 'empty-handed'. The bag comes back in 10-1 (a later trip) and 10-4 (the symbolic closing), which does not contradict page 09.",
+  "Note for the artwork stage, not an issue now: the source calls FOLLOW-UP REMINDER a label 'on the phone', but the plan puts it on the wall at the upper left. Keep Ravi's phone near that label so the label reads as the phone's message.",
+  "Production caution outside this storyboard: assets/panels/09-1.png still holds the old vision train art, the same as 10-1.png, and assets/panels/09-2.png to 09-4.png appear to be the old vision panels (renumber-2026-11-12c.json maps them to 10-x). workflow/review/page-09.png is the stale pre-Request-5 vision page ('Tomorrow, care may take us beyond our hometown.'). assets/page-09.review.json and stage-reviews artwork-09-*.json and lettering-09.json are probably stale as well. None of these may be treated as page 09 art or reviews. Replace or archive them through the proper CLI, not by hand."
+ ],
+ "issues": [
+  {
+   "problem": "09-5 gives Ravi no visible reaction to 'Welcome back, Ravi. Your results are already here.' The scene and emotion fields describe only Ananya. The first reader flagged the missing reply, and a silent answer works only if the art shows one. Add a concrete reaction to the 09-5 scene, emotion and production fields, for example: Ravi smiles back, relaxed and at ease, glancing at the history on her tablet with his empty hands resting on his knee and the chair arm.",
+   "location": "09-5 scene / emotion / production (workflow.json)",
+   "resolved": false
+  },
+  {
+   "problem": "In 09-3 Meera's background role is not explained in a drawable way. 'Meera works at the reception desk in the background, not needed' does not show the caption's claim 'No queue at the desk'. State that no one is queuing at the reception desk, and that Meera, free of a queue, is busy with other work at her monitor (or glances up with a small smile). Then the reader sees why she is there, and the art shows the clinic saving staff time.",
+   "location": "09-3 scene (workflow.json)",
+   "resolved": false
+  }
+ ],
+ "readingReview": {
+  "withoutGuides": true,
+  "firstReadingHash": "7221fef30099eddc16c55c17788c193185577b5fe9967a03c5b2431491517379",
+  "comparison": "The first reader's order (A caption and label, B, C, D caption and label, Ananya's balloon, bottom caption) matches 09-1 [1,2], 09-2 [1], 09-3 [1], 09-4 [1,2] and 09-5 [1,2]. The reader also found 'On the day' and 'As usual' clear, and I agree. Two concerns remain unresolved in the plan: Ravi's silent reaction in 09-5 and Meera's unexplained presence in 09-3. Neither scene description yet gives the art what it needs, so the status is changes-requested.",
+  "predictedOrder": [
+   {
+    "panel": "09-1",
+    "dialogue": [
+     1,
+     2
+    ]
+   },
+   {
+    "panel": "09-2",
+    "dialogue": [
+     1
+    ]
+   },
+   {
+    "panel": "09-3",
+    "dialogue": [
+     1
+    ]
+   },
+   {
+    "panel": "09-4",
+    "dialogue": [
+     1,
+     2
+    ]
+   },
+   {
+    "panel": "09-5",
+    "dialogue": [
+     1,
+     2
+    ]
+   }
+  ],
+  "observations": [
+   "Unnumbered storyboard: a 2x2 grid of panels of equal width, then one wide closing panel. Each grid panel opens with a caption at the top left, so the Z-path is unambiguous.",
+   "09-4: the NOW · A-31 label sits at the upper right below the caption and is read second. That matches the TV planned for the upper right.",
+   "09-5: the balloon is at the upper left with a short tail to Ananya. Ravi, at the right, has no text. The bottom caption spans the lower edge and is reached last, which is also the exit to page 10."
+  ],
+  "transitions": [
+   {
+    "from": "08-6",
+    "to": "09-1",
+    "observation": "Plan only. The clinic is notified on Welbuk Practice (08-6), then 'Welbuk Practice sends Ravi's follow-up reminder' (09-1), so the same system acts next. The home table in daylight and the green chat card differ from 08-4's sofa in the evening."
+   },
+   {
+    "from": "09-1",
+    "to": "09-2",
+    "observation": "Plan only. The reminder sets up the visit, and 'On the day' plus the morning entrance marks the jump to the appointed day. Ravi's phone moves from his hand to his shirt pocket, and his hands are empty."
+   },
+   {
+    "from": "09-2",
+    "to": "09-3",
+    "observation": "Plan only. He walks in through the glass entrance and then stands at the QR stand just inside it. The places are adjacent and the time is continuous."
+   },
+   {
+    "from": "09-3",
+    "to": "09-4",
+    "observation": "Plan only. The check-in confirmation leads to waiting under the TV. 'As usual' and the token label recall page 04."
+   },
+   {
+    "from": "09-4",
+    "to": "09-5",
+    "observation": "Plan only. His token is called, and he is in the consultation room with Ananya, the same room as pages 5 and 6. 'Welcome back' and 'results are already here' pay off 08-5. Ravi's answering reaction is missing from the plan (issue 1)."
+   },
+   {
+    "from": "09-5",
+    "to": "10-1",
+    "observation": "Plan to accepted art. The cut goes from the consultation room to Ravi at a train window with a city skyline (10-1 art). The conditional 'If Ravi travels' marks it as a possible later journey, and the phone in his hand ties 'his record' to the Welbuk Health app already shown on pages 7 and 8. The bottom caption of 09-5 closes the clinic-savings point before the change of scene."
+   }
+  ]
+ }
+}
