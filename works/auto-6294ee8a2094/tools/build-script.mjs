@@ -836,7 +836,7 @@ const pages = [];
 }
 
 // PAGE 5 — MORE TIME FOR CARE (reworked 2026-11-12 at the user's request: the doctor's screen)
-const SCREEN = 'The laptop screen shows only abstract light cards, simple icons and blank bars (draw NO text, letters or numbers; no real data); the section name and contents are lettered over it later.';
+const SCREEN = 'The laptop stands at about a three-quarter angle toward the reader, so its screen is readable while Ananya can still use it. The screen shows only abstract light cards, simple icons and blank bars (draw NO text, letters or numbers; no real data); the section name and contents are lettered over it later.';
 {
   const r1 = panelRect(24, 24, 976, 520);
   const rc = panelRect(24, 568, 976, 330);
@@ -855,7 +855,7 @@ const SCREEN = 'The laptop screen shows only abstract light cards, simple icons 
         beat: 'Ananya greets Ravi; the laptop opens on patient details',
         rect: r1,
         scene:
-          'Bright simple consultation room, the same room as 04-3 (window with a plant behind). In the LEFT foreground, filling roughly the left 45% of the panel and most of its height, Dr. Ananya’s open laptop on the desk, its screen turned toward the reader: a patient-details layout of six light rounded cards in a column (a heart icon card, a history/clock icon card, an allergy card with a warning-triangle icon, a microphone toggle switched on, a document icon card, a test-tube icon card). ' + SCREEN + ' Behind it, at centre-right, Dr. Ananya seated at her desk turns toward Ravi with an open-hand welcoming gesture; at far right, Ravi sits down in the patient chair, smiling, his shoulder bag set on the floor beside the chair. Plain wall across the top for a balloon.',
+          'Bright simple consultation room, the same room as 04-3 (window with a plant behind). In the LEFT foreground, filling roughly the left 45% of the panel and most of its height, Dr. Ananya’s open laptop on the desk, its screen turned toward the reader: a patient-details layout of six light rounded cards in a column (a heart icon card, a history/clock icon card, an allergy card with a warning-triangle icon, a microphone toggle switched OFF (grey, not glowing), a document icon card, a test-tube icon card). ' + SCREEN + ' Behind it, at centre-right, Dr. Ananya seated at her desk turns toward Ravi with an open-hand welcoming gesture; at far right, Ravi sits down in the patient chair, smiling, his shoulder bag set on the floor beside the chair. Plain wall across the top for a balloon.',
         action: 'Ananya welcomes Ravi as he sits; his details are already on her screen.',
         emotion: 'Warm and attentive.',
         camera: 'Medium-wide two-shot past the laptop in the foreground, eye level.',
@@ -886,7 +886,7 @@ const SCREEN = 'The laptop screen shows only abstract light cards, simple icons 
         },
         dialogue: [
           line('ananya', ['Hello, Ravi.', 'Tell me what', 'brings you in.'], 600, 16),
-          line('label', ['PATIENT DETAILS:', 'current vitals ·', 'prior health info ·', 'allergy panel ·', 'AI mic on ·', 'patient docs · lab reports'], 16, 270),
+          line('label', ['PATIENT DETAILS:', 'current vitals ·', 'prior health info ·', 'allergy panel ·', 'AI mic option ·', 'patient docs · lab reports'], 16, 270),
         ],
       },
       {
@@ -896,7 +896,7 @@ const SCREEN = 'The laptop screen shows only abstract light cards, simple icons 
         beat: 'First-time AI voice consent',
         rect: rc,
         scene:
-          'Wide panel in the same consultation room. At left, Dr. Ananya turns toward Ravi and asks with an open palm gesturing toward the laptop; at centre in the foreground, the open laptop on her side of the desk, screen toward the reader, showing a single consent card: a large microphone icon, a shield icon, an empty check box being ticked and two rounded buttons (one teal). ' + SCREEN + ' At right, Ravi nods with a small smile and an open hand, agreeing. Plain wall across the top for two balloons.',
+          'Wide panel in the same consultation room. At left, Dr. Ananya turns toward Ravi, her left hand gesturing toward the laptop as she asks and her right fingertip on the laptop trackpad, ticking the box; at centre in the foreground, the open laptop on her side of the desk, screen toward the reader, showing a single consent card: a large microphone icon, a shield icon, an empty check box being ticked and two rounded buttons (one teal). ' + SCREEN + ' At right, Ravi nods with a small smile and an open hand, agreeing. Plain wall across the top for two balloons.',
         action: 'Ananya asks before the AI mic records; Ravi agrees.',
         emotion: 'Respectful, reassured.',
         camera: 'Wide eye-level shot past the laptop.',
@@ -907,7 +907,7 @@ const SCREEN = 'The laptop screen shows only abstract light cards, simple icons 
           before: 'Ananya greeted Ravi; his details are on screen (05-1).',
           after: 'With consent given, SOAP notes listen as Ravi explains (05-3).',
           hands: {
-            ananya: hands('open palm gesturing toward the consult-laptop', 'resting on the desk'),
+            ananya: hands('open palm gesturing toward the consult-laptop', 'fingertip on the consult-laptop trackpad, ticking the consent box'),
             ravi: hands('open hand raised slightly in agreement', 'resting on his knee'),
           },
           props: [prop('consult-laptop', 'patient-details cards (05-1)', 'screen toward the reader: AI voice consent card, check box being ticked', 'opens SOAP notes (05-3)', 'none')],
@@ -929,7 +929,7 @@ const SCREEN = 'The laptop screen shows only abstract light cards, simple icons 
         beat: 'Ravi shares a routine concern; SOAP notes listen',
         rect: r2,
         scene:
-          'Upper half: Ravi in the patient chair faces screen-left toward the doctor (off-panel left), rubbing the back of his neck with his right hand, a slightly tired but candid expression; his left hand (wristwatch) rests on his knee. Lower half, in the foreground: the laptop screen seen at an angle from the doctor’s side, filling the lower half of the panel: a notes layout of four stacked light blocks marked by four small icons, a glowing teal microphone icon with sound-wave arcs (AI listening), and a small row of code-tag chips. ' + SCREEN + ' Plain wall at the top-left for a balloon.',
+          'Upper half: Ravi in the patient chair faces screen-left toward the doctor (off-panel left), rubbing the back of his neck with his right hand, a slightly tired but candid expression; his left hand (wristwatch) rests on his knee. Lower half, in the foreground: the laptop screen seen at an angle from the doctor’s side, filling the lower half of the panel: a notes layout: four stacked light blocks with four small icons and a small row of code-tag chips on the LEFT part of the screen, and a large glowing teal microphone icon with sound-wave arcs (AI listening) in the RIGHT third of the screen, kept clear of the left part where the label will sit. ' + SCREEN + ' Plain wall at the top-left for a balloon.',
         action: 'Ravi explains, a little sheepish, while the notes listen.',
         emotion: 'Mildly tired, honest.',
         camera: 'Tall medium shot from the doctor’s side, past the laptop, Ravi facing screen-left.',
@@ -955,20 +955,20 @@ const SCREEN = 'The laptop screen shows only abstract light cards, simple icons 
         beat: 'The doctor listens; technology stays in the background',
         rect: r3,
         scene:
-          'Dr. Ananya leans slightly forward at her desk, hands folded, listening with full attention and gentle eye contact toward Ravi (off-panel right), NOT looking at the laptop, which stands open at the left edge of the desk showing only soft abstract cards and a small glowing microphone icon. Window with a plant behind. Plain wall in the upper third for a caption.',
+          'Over Ravi’s shoulder: the back of his head (short dark hair) and his green-shirted shoulder fill the lower RIGHT foreground. Facing him across the desk, Dr. Ananya leans slightly forward, hands folded, listening with full attention and gentle eye contact with Ravi, NOT looking at the laptop, which stands open at the left edge of the desk showing only soft abstract cards and a small glowing microphone icon. Window with a plant behind. Plain wall in the upper third for a caption.',
         action: 'Ananya nods slowly while listening.',
         emotion: 'Attentive, compassionate.',
-        camera: 'Tall medium shot, Ananya facing screen-right.',
+        camera: 'Tall over-the-shoulder shot from behind Ravi, Ananya facing screen-right toward him.',
         information: 'Technology supports the workflow; the conversation is human.',
         readingFlow: { entry: [624, 938], exit: [990, 1460] },
         production: {
           moment: 'Ananya listening, mid-nod.',
           before: 'Ravi described his tiredness.',
           after: 'The screen moves to the speciality-specific planner (06-1).',
-          hands: { ananya: hands('folded under the right hand on the desk', 'folded over the left hand on the desk') },
+          hands: { ananya: hands('folded under the right hand on the desk', 'folded over the left hand on the desk'), ravi: hands('out of frame', 'out of frame') },
           props: [prop('consult-laptop', 'open on SOAP notes (05-3)', 'open at the desk edge, microphone icon still glowing', 'shows the speciality-specific planner (06-1)', 'none')],
         },
-        speakers: { ananya: speaker(r3, [140, 250, 110, 130]) },
+        speakers: { ananya: speaker(r3, [110, 250, 110, 130]), ravi: { kind: 'head', anchor: [938, 1352] } },
         dialogue: [
           line('narration', ['Technology supports', 'the workflow. The', 'conversation stays', 'human.'], 16, 16),
         ],
@@ -994,23 +994,23 @@ const SCREEN = 'The laptop screen shows only abstract light cards, simple icons 
         beat: 'Close-up: the speciality-specific treatment planner',
         rect: r1,
         scene:
-          'Close-up of the same laptop screen filling the panel, light background with a slim teal header bar. Three equal tiles side by side across the middle: LEFT a simple tooth chart (two arches of small rounded teeth, two teeth tinted teal); CENTRE a simple eye diagram (an iris circle with three small teal marker dots and short lines); RIGHT a small growth chart (a rising curve on a light grid) beside a small vaccine card with three tick marks. ' + SCREEN + ' Keep the top-left strip and a band along the bottom of each tile plain for the labels.',
+          'Close-up of Ananya’s laptop on the consultation desk: the screen fills most of the panel, but its dark bezel, the top edge with the camera dot and the hinge stay visible, with a sliver of the consultation room around it (the window frame and a plant leaf at the top-right corner, the wooden desk edge along the bottom) and Ananya’s right hand resting on the trackpad at the lower right. Light screen background with a slim teal header bar. Three equal tiles side by side across the middle: LEFT a simple tooth chart (two arches of small rounded teeth, two teeth tinted teal); CENTRE a simple eye diagram (an iris circle with three small teal marker dots and short lines); RIGHT a small growth chart (a rising curve on a light grid) beside a small vaccine card with three tick marks. ' + SCREEN + ' Keep the top-left strip and a band along the bottom of each tile plain for the labels.',
         action: 'The planner adapts to the speciality.',
         emotion: 'Clear, informative.',
         camera: 'Flat close-up of the screen.',
         information: 'Each speciality gets its own planner: an odontogram for dentists, eye markers for eye doctors, growth scales and vaccines for paediatricians.',
         transition: {
           kind: 'time-change',
-          bridge: 'Page turn from Ananya listening (05-3) to a close-up of the same laptop, now on the planner section; same consultation.',
+          bridge: 'Page turn from Ananya listening (05-4) to a close-up of the same laptop, now on the planner section; the bezel, desk edge and her hand keep it in the same consultation.',
           settingBasis: 'Source (2026-11-12): "Close-up of the laptop screen: the speciality-specific treatment planner."',
         },
         readingFlow: { entry: [40, 40], exit: [990, 640] },
         production: {
           moment: 'The speciality-specific planner view on the screen.',
-          before: 'Ananya listened to Ravi (05-3).',
+          before: 'Ananya listened to Ravi (05-4).',
           after: 'The plan of care section opens as she sums up (06-2).',
-          hands: {},
-          props: [prop('consult-laptop', 'open beside Ananya (05-3)', 'screen filling the panel: speciality planner tiles', 'shows the plan of care (06-2)', 'none')],
+          hands: { ananya: hands('out of frame', 'resting on the consult-laptop trackpad') },
+          props: [prop('consult-laptop', 'open beside Ananya (05-4)', 'close-up, bezel and desk edge visible: speciality planner tiles', 'shows the plan of care (06-2)', 'none')],
         },
         speakers: {},
         dialogue: [
