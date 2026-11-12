@@ -1,31 +1,40 @@
 {
-  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-06-32033a4a079908c400c183160c6b931179a277d8a1a34d11f39b0a064fe4138e.json",
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-06-a1501506555d019f4e51cab699e9d025e421519a166be35c315743c42b254588.json",
   "reviewer": {
     "role": "subagent",
-    "task": "claude-code-agent:manga-reviewer:a84259a72dae41a0b",
+    "task": "claude-code-agent:manga-reviewer:a99ccfc87aaef1a1c",
     "reportedTask": null,
     "taskSource": "Agent ID returned by the Claude Code Agent tool to the parent."
   },
   "status": "pass",
   "observations": [
-    "Reviewer identity: the runtime did not give me a task ID, so task is null. The parent must supply the real Agent ID.",
-    "What I read: the unnumbered page-06.png (opened before any script), the full page 6 script, source page 6, and the accepted art assets/panels/06-1.png, 06-3.png and 06-4.png.",
-    "My unnumbered scan of page 06, in order: Meera 'Welbuk Health is designed to help patients stay connected with their care.'; Ravi 'So I can keep useful information in one place?', then the label 'WELBUK HEALTH for patients'; Meera 'That's the idea. Let's walk through what is available to you.'; caption 'A smoother visit. A more connected experience.' This matches the script and the source.",
-    "First-reader issue 1 (unmarked change of scene from the consultation): the 06-1 art shows the reception desk and monitor, teal waiting chairs with seated patients, and Ravi with his shoulder bag on, so he is clearly on his way out. Reception was already set up on page 1 and, once generated, on page 3. Not blocking.",
-    "First-reader issue 2 (06-4 faces nearly touch): in the 06-4 art the two faces are separate, Ananya at about x281-338 and Meera at about x364-415. The cut-off label is a placeholder artifact. The caption (y1142-1216) is above both faces (y1239+).",
-    "First-reader issue 3 (Ravi off the edge in 06-3): he is kind 'head'. The 06-3 art shows the back and side of his head and his phone hand in the right foreground, as intended.",
-    "First-reader issue 5 (QR form versus Welbuk Health): on page 3 Priya uses the app and Ravi uses QR. Meera showing Ravi the app on his own phone reads as introducing the patient app to a QR user, which is consistent with the three-channel page. First-reader issue 4 (walkthrough not shown) follows the source structure. Neither blocks."
+    "Reviewer identity: task is null because the runtime supplied no task ID. The parent must record the real Agent ID.",
+    "What I read: this request's header, page-6 first reading and file list (lines 1-50 and 1340-1403). I relied on the identical page-6 script carried as boundary context in the 05 request, and on 06 boundary data in the 07 request. I also read source page 6, the REVISION follow-ups, reading-flow/page-06.json (warnings) and responses/storyboard-r18-06.json. Images I opened with Read and looked at: storyboards-unnumbered/page-06.png, storyboards/page-06.png, storyboards-unnumbered/page-07.png and the old-numbered composed preview workflow/review/page-06.png (accepted art now used for 07-1 to 07-4). I did not open the SVGs or the character sheets. All PNGs loaded.",
+    "Unnumbered scan: top wide panel with no faces: teal heading 'SPECIALITY-SPECIFIC TREATMENT PLANNER' at top left (x40-679, y40-114), then three tile labels on one band, left to right: 'Dentist: odontogram', 'Eye doctor: eye markers', 'Paediatrician: growth scales · vaccines'. Bottom panel: Ananya's balloon 'We'll go through your concerns and decide the right next steps together.' at upper right (y684-822), tail down to the ananya box (x524-634, y928-1058). Ravi's box is at right (x784-894). Teal 'PLAN OF CARE: intelligent prescribing · summary · drug interactions · labs · referrals' is at lower left (x40-469, y1088-1258). This matches source page 6 and the user's section order (planner, then plan of care).",
+    "r18-06 issue (06-1 not anchored to the consultation) is resolved in the plan. The scene now keeps the dark bezel, the top edge with the camera dot and the hinge, the window frame and a plant leaf at top right, the wooden desk edge along the bottom, and Ananya's right hand on the trackpad at lower right. The top-right window corner is clear of the heading label (which ends at x679).",
+    "First-reader concern 1 (panel 1 has no place, person or device): answered by the anchored close-up above. The empty placeholder cannot show it, but the scene text does.",
+    "First-reader concern 2 (06-2 balloon high right, label low left; backwards reading): the balloon top is y684 and the label top is y1088. The balloon clearly reads first, and the label sits over the laptop in the left-foreground zone (left 45%, lower two-thirds), the same staging as 05-1. The small leftward return is unambiguous. Resolved.",
+    "First-reader concern 3 ('your concerns' / 'We'll' unresolved on this page): the reader said it depends on page 5. 05-3 has Ravi's 'I've been feeling tired lately.' and 05-4 shows Ananya listening, so 'your concerns' refers back to it and 'we' is doctor and patient. Resolved across the spread.",
+    "First-reader concern 4 (Ravi silent, no reaction): the 06-2 plan has Ravi nodding, relaxed, both hands on his knees. That is an art matter, not a layout problem.",
+    "First-reader concern 5 (why dentist/eye/paediatric tools for a general consultation): the three example tiles are the user's explicit confirmed decision. The heading plus 'Dentist: / Eye doctor: / Paediatrician:' reads as examples of how the planner adapts, not as tools used on Ravi. Acceptable.",
+    "First-reader concern 6 (tail close to Ananya's box): the tail ends at the top edge of her box and does not cross Ravi. Recheck against the real head after generation.",
+    "First-reader concern 7 (empty space, uneven bottom row): the empty middle of 06-1 is where the tiles will be drawn, and the lower third of 06-2 is the laptop and desk. The three-line Paediatrician label ends at y632, 12 px above the panel bottom (644). That is a cosmetic margin for lettering.",
+    "Carry-forward to lettering, not blocking: the scene puts Ananya's anchoring hand 'at the lower right', and the storyboard's tallest label (Paediatrician, x724-968, y494-632) also sits at lower right. The scene reserves a plain band at the bottom of each tile for the labels, so after generation the labels should be re-measured onto the tile bands and must not cover her hand or the hinge. It would help to tell the generator to keep the hand below the screen edge.",
+    "Reading-flow warnings for 06-1 (2→3, 3→4) are false positives: the three tile labels share one horizontal band and read left to right in tile order."
   ],
   "issues": [],
   "readingReview": {
     "withoutGuides": true,
-    "firstReadingHash": "11d5dd69e518019ac903d437a8409e994c35662caa11853189a16c286dbbca4b",
-    "comparison": "My order agrees with the first reader's, with no skips. The scene change they flagged is carried by the accepted 06-1 art (desk, waiting area, bag on shoulder). The face-overlap and off-edge points are placeholder artifacts or intended 'head' framing.",
+    "firstReadingHash": "5383ed50b88272ce5e0fc5b8c74b309952e907bed0382c60ea2b8c6c4a078d0b",
+    "comparison": "My order matches the first reader's (heading, three tile labels left to right, balloon, PLAN OF CARE label), with no skips. Their main concern, the unanchored panel 1, is fixed in the revised scene, which closes r18-06. The backwards-reading concern is settled by the 400 px height difference and the screen placement. 'Your concerns' resolves against 05-3. The speciality tiles are a user decision.",
     "predictedOrder": [
       {
         "panel": "06-1",
         "dialogue": [
-          1
+          1,
+          2,
+          3,
+          4
         ]
       },
       {
@@ -34,52 +43,30 @@
           1,
           2
         ]
-      },
-      {
-        "panel": "06-3",
-        "dialogue": [
-          1
-        ]
-      },
-      {
-        "panel": "06-4",
-        "dialogue": [
-          1
-        ]
       }
     ],
     "observations": [
-      "Meera's explanation, Ravi's question and Meera's 'That's the idea' run left, left, right in alternation, and each answer sits right after its question.",
-      "In 06-2 the WELBUK HEALTH label sits bottom-left, read after Ravi's balloon and before 06-3's balloon at the top-right. It does not interrupt the question-and-answer pair."
+      "06-1: the heading at top left opens the panel, and the eye sweeps the tiles to their labels left to right, then exits at lower right toward 06-2.",
+      "06-2: entry at the empty upper left, then the balloon at upper right, down to Ananya and Ravi, back to the screen label at lower left, then out of the page."
     ],
     "transitions": [
       {
         "from": "05-4",
         "to": "06-1",
-        "observation": "From the consultation room to reception. The accepted art shows the desk and waiting area and Ravi with his bag, so it is the same visit, now leaving."
+        "observation": "Page turn from Ananya listening, hands folded, to a close-up of the same laptop with her hand now on the trackpad. The bezel, desk edge and window/plant corner keep it in the consultation. The time step is small and implied."
       },
       {
         "from": "06-1",
         "to": "06-2",
-        "observation": "Close-up on Ravi's phone (blue case), which he was holding in 06-1. His question follows Meera's explanation."
+        "observation": "From the planner close-up back out to the 05-1 two-shot past the laptop, now on the plan of care. Ananya's line closes the concern Ravi raised in 05-3, and Ravi's planned nod gives the reaction."
       },
       {
         "from": "06-2",
-        "to": "06-3",
-        "observation": "Reverse angle: Meera faces right toward Ravi, who is in the foreground, keeping Meera on the left as in 06-1. She answers him."
-      },
-      {
-        "from": "06-3",
-        "to": "06-4",
-        "observation": "From the desk to the street outside the entrance in the 06-4 art. Ravi waves back, and Ananya and Meera wave from the door. The caption sums up the visit."
-      },
-      {
-        "from": "06-4",
         "to": "07-1",
-        "observation": "From the street to a train window (07-1 art: Ravi with the same shirt, bag and phone). 'Tomorrow, care may take us...' marks a hypothetical time jump."
+        "observation": "From the consultation room (Ravi seated, bag on the floor) to reception. In the accepted art (old-numbered review/page-06.png, top panel) Meera is at the desk monitor, waiting chairs with patients are behind, and Ravi stands with his bag back on his shoulder and his blue phone out. It reads as the same visit on his way out. This matches 06-2 production.after ('Ravi picks up his bag and returns to reception'). No caption needed."
       }
     ]
   },
-  "fingerprint": "32033a4a079908c400c183160c6b931179a277d8a1a34d11f39b0a064fe4138e",
-  "recordedAt": "2026-11-11T10:40:31.774Z"
+  "fingerprint": "a1501506555d019f4e51cab699e9d025e421519a166be35c315743c42b254588",
+  "recordedAt": "2026-11-12T10:44:01.728Z"
 }
