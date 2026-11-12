@@ -1290,8 +1290,8 @@ const SCREEN = 'The laptop stands at about a three-quarter angle toward the read
         },
         speakers: { pharmacist: speaker(r1, [320, 180, 95, 110]) },
         dialogue: [
-          line('narration', ['Meanwhile, the pharmacy', 'is notified and fills', 'the prescription.'], 16, 16),
-          line('label', ['NEW PRESCRIPTION'], 16, 290),
+          line('narration', ['Meanwhile, the', 'pharmacy is', 'notified and fills', 'the prescription.'], 4, 4),
+          line('label', ['NEW', 'PRESCRIPTION'], 6, 292),
         ],
       },
       {
@@ -1319,8 +1319,8 @@ const SCREEN = 'The laptop stands at about a three-quarter angle toward the read
         },
         speakers: { labtech: speaker(r2, [130, 120, 95, 110]) },
         dialogue: [
-          line('narration', ['The lab is notified.'], 16, 16),
-          line('label', ['LAB ORDER:', 'samples to collect'], 140, 250),
+          line('narration', ['The lab is notified.'], 192, 4),
+          line('label', ['LAB ORDER:', 'samples to', 'collect'], 268, 82),
         ],
       },
       {
@@ -1359,8 +1359,8 @@ const SCREEN = 'The laptop stands at about a three-quarter angle toward the read
           labtech: speaker(r3, [660, 210, 100, 120]),
         },
         dialogue: [
-          line('narration', ['Later that day, Ravi gives his', 'samples at the clinic lab.'], 16, 16),
-          line('labtech', ['All done, Ravi!', "We'll let you know when", 'your results are ready.'], 470, 16),
+          line('narration', ['Later that day, Ravi gives his', 'samples at the clinic lab.'], 8, 8),
+          line('labtech', ['All done, Ravi!', "We'll let you", 'know when your', 'results are ready.'], 690, 8),
         ],
       },
       {
@@ -1391,8 +1391,8 @@ const SCREEN = 'The laptop stands at about a three-quarter angle toward the read
         },
         speakers: { ravi: speaker(r4, [150, 230, 100, 120]) },
         dialogue: [
-          line('narration', ['Results ready:', 'Ravi is notified.'], 16, 16),
-          line('label', ['Welbuk Health app ·', 'email · WhatsApp'], 16, 470),
+          line('narration', ['Results ready:', 'Ravi is notified.'], 140, 8),
+          line('label', ['Welbuk Health app ·', 'email · WhatsApp'], 90, 132),
         ],
       },
       {
@@ -1418,8 +1418,8 @@ const SCREEN = 'The laptop stands at about a three-quarter angle toward the read
         },
         speakers: { ananya: speaker(r5, [380, 70, 80, 95]) },
         dialogue: [
-          line('narration', ['Dr. Ananya is notified', 'on Welbuk Care.'], 16, 16),
-          line('label', ['RESULTS READY'], 60, 190),
+          line('narration', ['Dr. Ananya', 'is notified on', 'Welbuk Care.'], 8, 4),
+          line('label', ['RESULTS', 'READY'], 18, 144),
         ],
       },
       {
@@ -1445,8 +1445,8 @@ const SCREEN = 'The laptop stands at about a three-quarter angle toward the read
         },
         speakers: { meera: speaker(r6, [340, 80, 80, 95]) },
         dialogue: [
-          line('narration', ['The clinic is notified', 'on Welbuk Practice.'], 16, 16),
-          line('label', ['RESULTS READY'], 60, 190),
+          line('narration', ['The clinic', 'is notified', 'on Welbuk', 'Practice.'], 8, 4),
+          line('label', ['RESULTS', 'READY'], 382, 4),
         ],
       },
     ],
@@ -1689,6 +1689,15 @@ const MEASURED = {
       meera: hands('raised, waving from the doorway', 'relaxed at her side'),
     },
   },
+  '08-1': { speakers: { pharmacist: F(321, 67, 77, 98, 364, 133) }, protected: [[265, 214, 95, 50], [394, 277, 45, 58]] },
+  '08-2': { speakers: { labtech: F(654, 131, 94, 103, 714, 210) }, protected: [[680, 242, 85, 120], [759, 375, 71, 34]] },
+  '08-3': {
+    speakers: { ravi: F(263, 630, 63, 72, 305, 690), labtech: F(658, 621, 48, 63, 685, 678) },
+    protected: [[341, 746, 42, 24], [616, 692, 75, 66]],
+  },
+  '08-4': { speakers: { ravi: F(209, 1139, 98, 103, 264, 1220) }, protected: [[137, 1220, 72, 110], [230, 1392, 62, 57]] },
+  '08-5': { speakers: { ananya: F(754, 892, 76, 92, 788, 972) }, protected: [[631, 1075, 40, 56], [774, 1079, 36, 52]] },
+  '08-6': { speakers: { meera: F(710, 1206, 80, 88, 762, 1278) } },
   '09-1': { speakers: { ravi: F(313, 105, 94, 108, 349, 195) } },
   '09-2': { speakers: { specialist: F(819, 132, 73, 81, 865, 195) }, protected: [[672, 262, 74, 54]] },
   '09-3': {

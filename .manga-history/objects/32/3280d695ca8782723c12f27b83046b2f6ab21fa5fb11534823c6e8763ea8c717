@@ -1,0 +1,76 @@
+{
+ "panel": "04-1",
+ "fingerprint": "bfea20c32c73cb290e170d21362c9e904107a51a3029cd0b01be71c01bb4b700",
+ "observation": "Ravi stands as NOW A-12 appears; the two chairs where Raman and Priya sat are empty. Inspected at 25% (contact sheet), 100% (full panel) and 200% (face crops), and on the composed page.",
+ "views": {
+  "thumbnail": true,
+  "native": true,
+  "detail": true
+ },
+ "checks": {
+  "anatomy": {
+   "result": "pass",
+   "note": "Standing pose balanced; right hand at the trouser pocket, left hand on the strap."
+  },
+  "contact": {
+   "result": "pass",
+   "note": "Bag strap over his left shoulder."
+  },
+  "objects": {
+   "result": "pass",
+   "note": "TV strip blank for the lettered label; vitals cart and QR stand inside the entrance."
+  },
+  "faces": {
+   "result": "pass",
+   "note": "Faces match the sheets at 200%; see faceIdentity."
+  },
+  "linework": {
+   "result": "pass",
+   "note": "Consistent."
+  },
+  "background": {
+   "result": "pass",
+   "note": "Waiting area with two background patients in grey and brown seen from behind; Meera at the desk."
+  },
+  "continuity": {
+   "result": "pass",
+   "note": "Edit (empty-chairs) removed Raman and Priya so A-10 and A-11 read as already called."
+  },
+  "lettering": {
+   "result": "pass",
+   "note": "Caption top-left; NOW label on the TV strip."
+  }
+ },
+ "issues": [
+  {
+   "category": "continuity",
+   "description": "Storyboard first reading r18: A-12 called while A-10/A-11 still waited; records changed and edit (empty-chairs) applied.",
+   "status": "resolved"
+  },
+  {
+   "category": "objects",
+   "description": "Artwork review r10: the QR stand was a flat black-framed sign unlike the grey/teal kiosk in 03-1/03-3; replaced by edit (qr-stand).",
+   "status": "resolved"
+  }
+ ],
+ "faceIdentity": {
+  "ravi": {
+   "reference": "works/auto-6294ee8a2094/assets/characters/main-cast.png",
+   "traits": [
+    "narrow warm eyes creasing at the corners",
+    "thick straight dark brows close to the eyes",
+    "square jaw with short trimmed beard and broad nose"
+   ],
+   "expression": "Ready, pleased smile"
+  },
+  "meera": {
+   "reference": "works/auto-6294ee8a2094/assets/characters/main-cast.png",
+   "traits": [
+    "large round bright eyes with visible lower lashes",
+    "thin high arched brows",
+    "round face with full cheeks and short chin; braid over her left shoulder"
+   ],
+   "expression": "Calm smile at the desk (small in frame; traits checked at 200%)"
+  }
+ }
+}
