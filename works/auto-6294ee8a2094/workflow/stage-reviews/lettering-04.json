@@ -1,5 +1,5 @@
 {
-  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/lettering-04-907f4fa4622a173505f021922c23f494228316054811c0f7463d4326fe4c0e56.json",
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/lettering-04-5a996599462186e537c62cc3d4c192142699c56cc8f2b79ff16cb8596dc7e72c.json",
   "reviewer": {
     "role": "subagent",
     "task": "claude-code-agent:manga-reviewer:a1d5f9066e4819ea6",
@@ -8,10 +8,10 @@
   },
   "status": "pass",
   "observations": [
-    "What I read: this fresh request (the unchanged page-04 first reading, hash 7de3960a..., and transitions 03-5>04-1 to 04-3>05-1) and source/original.txt. Images I opened with Read and looked at again in this pass: workflow/review/page-04.png and the new page-03.png for the incoming boundary. I reused my earlier mapping of assets/panels/04-3.png, which I opened in my previous pass. Page 04 looks identical to the image I reviewed before.",
-    "The text matches the source exactly: 'Soon, his slot comes up.', 'NOW · A-12', 'A quick vitals check first.', 'Hi, Ravi! Just relax your arm for me.', 'Dr. Ananya is notified when he's ready.' and 'RAVI · READY'. Everything is legible and inside its boxes ('relax' is about 12 px inside the border).",
-    "Covering: the 04-1 caption is on the empty wall far left of Ravi (box ends at about x255, and Ravi starts at about x475), and the NOW label sits on the TV. In 04-2 the caption and balloon are on the empty upper wall. The nurse's crown starts at about y735, below the balloon (ends about y722), and the cuff, bulb, oximeter, hands and both faces are clear. The 04-3 caption is on the empty upper third, ending at about y621, well above Ananya's hair (top about y780). The RAVI · READY label (about x782-912) clears both hands (fingers at page x706-776 and x923-979, from the 04-3 art mapping at scale 0.6125).",
-    "Tails and typography. The short nurse tail points down to her crown and is unambiguously hers. The 'RAVI ·' / 'READY' break follows the scripted textColumns. It leaves a hanging separator dot but reads clearly, so I treat it as a style note, not an issue."
+    "What I read: this fresh request (the unchanged page-04 first reading, hash 7de3960a..., and transitions 03-5>04-1 to 04-3>05-1) and source/original.txt. Images I opened with Read and looked at in this pass: workflow/review/page-04.png and the new page-03.png for the incoming boundary. I reuse my earlier mapping of assets/panels/04-3.png and my look at page-05.png. Page 04 looks identical to the image I reviewed earlier.",
+    "The text matches the source exactly: 'Soon, his slot comes up.', 'NOW · A-12', 'A quick vitals check first.', 'Hi, Ravi! Just relax your arm for me.', 'Dr. Ananya is notified when he's ready.' and 'RAVI · READY'. Everything is legible and inside its boxes.",
+    "Covering: the 04-1 caption (ends about x255) is far from Ravi (starts about x475), and the NOW label sits on the TV. The 04-2 balloon (ends about y722) is above the nurse's crown (about y735), and the cuff, bulb, oximeter, hands and faces are clear. The 04-3 caption ends at about y621, well above Ananya's hair. The RAVI · READY label (about x782-912) clears both hands (fingers at page x706-776 and x923-979, from the art mapping at scale 0.6125).",
+    "The short nurse tail points down to her crown and is unambiguously hers. The 'RAVI ·' / 'READY' break follows the scripted textColumns. It is legible, and the hanging dot is a style note only."
   ],
   "issues": [],
   "readingReview": {
@@ -40,19 +40,19 @@
       }
     ],
     "observations": [
-      "Natural scan: in 04-1 the caption at the top left comes before the TV label at the top right. In 04-2 the caption at the top left comes before the nurse's balloon, which is lower and to the right. In 04-3 the caption at the top comes before the tablet label at the bottom. Each first item is higher and further left, so the scripted order is what a reader would predict.",
-      "There are no competing balloons. In 04-2 the square narration box and the rounded tailed balloon are clearly different, and Ravi's relaxed smile is his silent response."
+      "Natural scan: in 04-1 the caption at the top left comes before the TV label at the top right. In 04-2 the caption at the top left comes before the nurse's balloon, which is lower and to the right. In 04-3 the caption at the top comes before the tablet label below. Each first item is higher and further left.",
+      "There are no competing balloons. The square narration box and the rounded tailed balloon in 04-2 are clearly different, and Ravi's relaxed smile is his silent response."
     ],
     "transitions": [
       {
         "from": "03-5",
         "to": "04-1",
-        "observation": "The TV from 03-5 (on the new page-03.png) now reads 'NOW · A-12' and Ravi stands. 'Soon' bridges the wait, and his rising shows the slot is his."
+        "observation": "The TV from 03-5 on the new page-03.png now reads 'NOW · A-12' and Ravi stands. 'Soon' bridges the wait, and his rising shows the slot is his. The page 03 caption moves do not affect this boundary."
       },
       {
         "from": "04-1",
         "to": "04-2",
-        "observation": "The vitals cart in the 04-1 background becomes the 04-2 setting. 'A quick vitals check first.' sets the order of steps, and the nurse greets Ravi by name."
+        "observation": "The vitals cart in the 04-1 background becomes the 04-2 setting. The caption sets the order of steps, and the nurse greets Ravi by name."
       },
       {
         "from": "04-2",
@@ -62,12 +62,12 @@
       {
         "from": "04-3",
         "to": "05-1",
-        "observation": "Same consultation room and window on page 5. The tablet is put away, the laptop is open and Ravi is seated, and 'Hello, Ravi.' follows the READY alert."
+        "observation": "Same consultation room and window. The tablet is put away, the laptop is open and Ravi is seated, and 'Hello, Ravi.' follows the alert."
       }
     ],
     "firstReadingHash": "7de3960aaf2c276342d5fcab9515ad4e41ee86191dec82a18266a01dd1158032",
-    "comparison": "The first reader's order (top caption and screen label, then the bottom-left caption and nurse balloon, then the bottom-right caption and tablet label) is the same as the script order 04-1[1,2], 04-2[1,2], 04-3[1,2]. Concerns: (1) Ravi does not reply. The nurse's line is an instruction and his relaxed compliance shows the response, so this is acceptable. (2) The short nurse tail at her hair top. It touches only the crown outline and clearly names her, so this is acceptable. (3) 'relax' near the border. It is inside, so this is acceptable. (4) The hanging dot in 'RAVI · / READY'. This is the scripted break and it is legible, so I treat it as a style note. (5) The label near the doctor's thumb. It is clear by about 11 px, mapped from the art, so this is acceptable. (6) Ravi's slot is inferred. He alone stands at 'NOW · A-12', so this is acceptable. The page 03 caption changes do not affect the incoming 03-5 to 04-1 boundary. No unresolved differences."
+    "comparison": "The first reader's order is the same as the script order 04-1[1,2], 04-2[1,2], 04-3[1,2]. Concerns: (1) Ravi does not reply. The nurse's line is an instruction and his relaxed compliance answers it, so this is acceptable. (2) The short nurse tail at her hair top. It touches only the crown outline, so this is acceptable. (3) 'relax' near the border. It is inside, so this is acceptable. (4) The hanging dot in 'RAVI · / READY'. This is the scripted break and it is legible, so I treat it as a style note. (5) The label near the thumb. It is clear by about 11 px, mapped from the art, so this is acceptable. (6) Ravi's slot is inferred. He alone stands at 'NOW · A-12', so this is acceptable. No unresolved differences."
   },
-  "fingerprint": "907f4fa4622a173505f021922c23f494228316054811c0f7463d4326fe4c0e56",
-  "recordedAt": "2026-11-12T13:34:37.914Z"
+  "fingerprint": "5a996599462186e537c62cc3d4c192142699c56cc8f2b79ff16cb8596dc7e72c",
+  "recordedAt": "2026-11-12T13:47:31.634Z"
 }

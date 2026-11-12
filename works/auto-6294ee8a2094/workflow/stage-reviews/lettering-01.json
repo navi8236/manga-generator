@@ -1,5 +1,5 @@
 {
-  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/lettering-01-1411aa55025062c42be9b2b5c386ca22e397ece3c6ca43912858de44de70b62c.json",
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/lettering-01-68ef93e3e9ee081b16da39976fc856773ddbfb29c3af957bff06f188f112b78a.json",
   "reviewer": {
     "role": "subagent",
     "task": "claude-code-agent:manga-reviewer:a1d5f9066e4819ea6",
@@ -8,11 +8,10 @@
   },
   "status": "pass",
   "observations": [
-    "What I read: docs/REVISION-AND-REVIEWS.md, docs/PROMPTS.md, cli/stage-review.mjs (prepare/record), src/stage-reviews.mjs validateReadingReview, src/first-reading.mjs validateFirstComparison, source/original.txt, source/REVISION-2026-11-11.md and this request (script, boundary context and the embedded first reading). Images I opened with Read and looked at: workflow/review/page-01.png, assets/panels/01-2.png and assets/panels/01-3.png. I did not open 01-1.png separately; I judged 01-1 from the lettered page, where its caption sits on a sky and wall area with no figure.",
-    "The lettering matches the script and source exactly. 01-1 caption: 'A busy day at Dr. Ananya's clinic.' 01-2, two Meera balloons: 'Appointments, patient details, follow-ups...' then 'I wish everything were easier to manage!' (the source line split in two). 01-3, Ananya: 'Our time belongs with patients. Let's make the rest simpler.' There are no typos or missing words.",
-    "Tails: both 01-2 tails go to Meera, who is the only foreground figure. The first ends at her crown (about page x297, y940) and the second points at the top of her head. In 01-3 the tail ends at the side of Ananya's hair, above the ear (about x850, y955). It does not go to the small background Meera, who is about 150 px lower and further left. No tail tip enters an eye, nose or mouth.",
-    "Covering: in the 01-2 art the top 40% of the panel is empty wall, and both balloons sit in that space. The balloons stop above Meera's hair. The phone, pen, ledger and register stack (protected props) are all clear. The 01-3 balloon fills the empty upper wall of the tall panel, and Ananya's hand at her chin and the background desk are untouched. The 01-1 caption sits over the sky and the white wall and stays clear of Ananya, the patient and the awning.",
-    "Fit: 'clinic.' ends about 12 px inside the caption border, and 'details,' about 6 px inside its balloon border. This is tight but inside the boxes, with no clipping. All text is legible at page size."
+    "What I read: this fresh request (the unchanged page-01 first reading, hash ae5b5620..., and transitions 01-1>01-2, 01-2>01-3, 01-3>02-1), source/original.txt and the revision notes. Images I opened with Read and looked at: workflow/review/page-01.png in this pass, and the new page-02.png for the outgoing boundary. I reuse my earlier inspection of assets/panels/01-2.png and 01-3.png. Page 01 looks identical to the image I reviewed earlier.",
+    "The text matches the source exactly: the 01-1 caption 'A busy day at Dr. Ananya's clinic.', Meera's 'Appointments, patient details, follow-ups...' and 'I wish everything were easier to manage!', and Ananya's 'Our time belongs with patients. Let's make the rest simpler.' All text is legible and inside its boxes ('clinic.' about 12 px and 'details,' about 6 px from the borders).",
+    "Tails: both 01-2 tails go to the only foreground figure, Meera, with tips at her crown and head top. The 01-3 tail ends at Ananya's hair above the ear, not at the small background Meera. No tail tip enters an eye, nose or mouth.",
+    "Covering: the 01-1 caption sits on sky and white wall, clear of Ananya, the patient and the awning. The 01-2 balloons fill the empty upper wall above Meera's hair, and the phone, pen, ledger and register stack are clear. The 01-3 balloon fills the empty upper wall, and Ananya's hand at her chin and the background desk are clear."
   ],
   "issues": [],
   "readingReview": {
@@ -39,29 +38,29 @@
       }
     ],
     "observations": [
-      "Natural scan of the unnumbered page-01.png: the wide top panel's caption first. Then the bottom-left panel, where 'Appointments...' at the top left is read before 'I wish everything...', which sits lower and further right, so a Z path gives that order. The bottom-right panel's single balloon comes last. The two 01-2 balloons are the same speaker's continuous thought, so being near each other causes no misattribution.",
-      "Across the gutter, the 01-3 balloon sits at almost the same height as the 01-2 balloons. A reader still finishes 01-2's lower balloon ('I wish...') before moving right, because the gutter and Ananya's thinking pose mark a new panel. Her line answers Meera's complaint directly, so no reply is skipped."
+      "Natural scan: the top caption first, then the 01-2 balloon at the top left ('Appointments...'), then the lower right one ('I wish...') in a Z path, then the single 01-3 balloon across the gutter. The two 01-2 balloons are the same speaker's continuous thought, so being near each other causes no misattribution.",
+      "Ananya's 01-3 line answers Meera's complaint directly, so no reply is skipped. The gutter and her thinking pose separate the panels, even though her balloon is at the same height as the 01-2 balloons."
     ],
     "transitions": [
       {
         "from": "01-1",
         "to": "01-2",
-        "observation": "Same morning, same clinic. The wide exterior with a patient being waved in cuts to the reception desk inside, with a queue seen from behind. The paper registers and the ringing phone explain why the day is 'busy'."
+        "observation": "Same busy morning. The clinic exterior cuts to the reception desk inside, with a queue seen from behind and the ringing phone and registers."
       },
       {
         "from": "01-2",
         "to": "01-3",
-        "observation": "Continuous moment. 01-3 shows the same Meera in the background, still on the phone writing in the ledger, while Ananya watches from the side. That makes her resolve a direct reaction to 01-2."
+        "observation": "Continuous moment. Meera is still on the phone writing in the ledger in the 01-3 background while Ananya watches and resolves."
       },
       {
         "from": "01-3",
         "to": "02-1",
-        "observation": "Time change. Page 2 opens on an over-the-shoulder shot of Ananya at a laptop with a sunset window, and the caption 'The clinic begins its Welbuk onboarding.' Her 'Let's make the rest simpler' leads into the setup. The caption and the evening light carry the time change, so no extra 'later' cue is needed (checked on page-02.png)."
+        "observation": "Time change to the evening office. On the new page-02.png the caption 'The clinic begins its Welbuk onboarding.' now sits over the window, and with the sunset light it carries the change. Ananya at the laptop follows from 'Let's make the rest simpler'."
       }
     ],
     "firstReadingHash": "ae5b5620db9ae068d75cfb752ce576671e70898232b55aa19286f7f007825ece",
-    "comparison": "The first reader's order (caption, Meera's two balloons left then right, Ananya's answer) is the same as the script order 01-1[1], 01-2[1,2], 01-3[1]; I found no skipped reply. First-reader concerns, each checked: (1) 'clinic.' and 'details,' close to box borders. Both stay inside with visible margins (about 12 px and 6 px) and nothing is clipped, so this is acceptable. (2) The 'Appointments...' tail ends at the top of Meera's hair. It touches only the crown outline, well above her forehead and eyes, and it clearly names the only foreground figure, so this is acceptable. (3) Ananya's tail ends against her hair at the side of her head. The tip sits above the ear, outside the face and away from the hand at her chin, so this is acceptable. (4) The reader saw no hand, phone or ledger covered, and I confirmed that against panels 01-2 and 01-3. No unresolved differences."
+    "comparison": "The first reader's order (caption, Meera's two balloons left then right, Ananya's answer) is the same as the script order 01-1[1], 01-2[1,2], 01-3[1]. Concerns: (1) 'clinic.' and 'details,' close to borders. Both are inside with margins, so this is acceptable. (2) The 'Appointments...' tail tip at the top of Meera's hair. It touches only the crown outline and names the sole foreground figure, so this is acceptable. (3) Ananya's tail against her hair at the side of the head. It is above the ear, outside the face, so this is acceptable. (4) The reader saw no hand or prop covered, and I confirmed that against the panel art. No unresolved differences."
   },
-  "fingerprint": "1411aa55025062c42be9b2b5c386ca22e397ece3c6ca43912858de44de70b62c",
-  "recordedAt": "2026-11-12T13:24:59.356Z"
+  "fingerprint": "68ef93e3e9ee081b16da39976fc856773ddbfb29c3af957bff06f188f112b78a",
+  "recordedAt": "2026-11-12T13:47:30.432Z"
 }
