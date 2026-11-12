@@ -1,42 +1,45 @@
 {
-  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/lettering-09-89f54e3db0aff48540a68d8a1261c3ec2d8d6de652f39e8cfdb2731ebbdacd39.json",
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/lettering-09-2369bdf62c6028da94985e00698f5c9af3610ba72e8c9b4ca7a6d310a25c7bdb.json",
   "reviewer": {
     "role": "subagent",
-    "task": "claude-code-agent:manga-reviewer:a5e4ed5eb180b1f20",
+    "task": "claude-code-agent:manga-reviewer:aaee0f389264cbcd4",
     "reportedTask": null,
     "taskSource": "Agent ID returned by the Claude Code Agent tool to the parent."
   },
   "status": "pass",
   "observations": [
-    "What I read for this request: the first-reading section of the new 09 request (found with Grep; firstReadingHash ee16ee1486cbc69d47a05ecc240b445a6b909594284dc95ec19cb15a74b014cb and request fingerprint 89f54e3d..., both confirmed). I took the page 09 script from the boundary context in the page 08 request, and I had read the source and revision files earlier in this session. In this pass I opened workflow/review/page-08.png and page-09.png with Read and looked at them. Earlier in this session I had looked at assets/panels/09-3.png and 09-4.png. I did not open the panel art for 09-1 or 09-2, or storyboards/page-09.svg. Page 09 looks the same as in my previous pass.",
-    "All captions and labels match source PAGE 9 word for word, including the '•' separators in the product label; the source itself uses '•' there. 'WELBUK VISION' appears in both 09-2 and 09-3 because the source requires every vision scene to be labelled. Together with the vignette, this stops both from reading as features that are already launched.",
-    "09-3, caption near Ravi's arm: based on the art (scaled about 0.644), the box (about x 40-407, y 588-725) covers a sliver of the outer edge of Ravi's right shoulder and upper sleeve, about 30-45 px wide between y 617 and 725. His pointing forearm and hand (about x 469-572), his face and the tablet (protected [583,681,159,103]) are clear. Only some clothing is cut off. Acceptable, and narrowing the box would be optional polish.",
-    "09-4, label near Ravi's hair: in the art (scaled about 0.765) his hair ends at about page x 702 and the label starts at about x 704. The two touch without the label hiding any hair. His face (ends at x 699) and waving hand are clear, and the label covers only the top of his far shoulder and the awning. Acceptable.",
-    "09-4, caption over legs: the bottom caption (about x 48-480, y 1342-1448) hides Meera's lower legs and feet and grazes the outer edge of Ananya's left legging and sandal. No face, hair, hand or prop is hidden, and Meera's hand holding the phone is visible. In this full-length shot the feet reach the bottom of the panel, so no bottom band is free of figures. Acceptable. Moving the caption to the empty lower-left area would be optional polish.",
-    "Other first-reader concerns: the 09-1 caption is clear of Ravi's hand at his chin and his face. The 09-2 caption's top edge is below the specialist's protected hand, and 'connections' keeps about 20 px of padding. The 'us' and 'our' in 09-1 read as the brand speaking, matching the closing 'Welbuk — Building...'. The specialist and the family are presented as symbolic by the vignette and the label, as the source intends."
+    "Reviewer identity: the runtime gave me no task ID, so reviewer.task is null.",
+    "What I read: this request's image-only lettering first reading (fingerprint 6877a28c..., firstReadingHash bb224348...) and its file list. Earlier in this session I read original.txt, Request 5 and the page 09 script. Everything was readable.",
+    "Images I opened with Read in this pass: workflow/review/page-08.png, review/page-09.png and review/page-10.png. I did not open the separate assets/panels/09-x files; the composed page shows that art.",
+    "The text is verbatim: the 09-1 caption and FOLLOW-UP REMINDER, the 09-2 caption, the 09-3 caption, the 09-4 caption and 'NOW · A-31', 'Welcome back, Ravi. Your results are already here.' and the closing caption all match PAGE 9.",
+    "Tail: the 09-5 wedge at the balloon's lower left points to Ananya's open mouth (about x370, y1080). Ravi's mouth is closed in a smile, and the line names Ravi. The first reader also found the speaker unambiguous on the final art.",
+    "Coverage: in 09-1 the label sits above the raised phone, and the phone's calendar card and Ravi's face are clear. The 09-2 caption covers the awning and sky, and Ravi walking in empty-handed is clear. The 09-3 caption covers the front of the desk below Meera, and her face, Ravi's face, his phone and the QR stand are clear. The 09-4 caption covers wall above the elderly patient. The label sits on the TV, and Ravi's face, his phone in his lap and the watch are clear. The 09-5 balloon sits on the wall between the two heads, and the closing caption covers the desk edge below Ravi's hands and watch and below the tablet.",
+    "First-reader concern (Meera has no clear role against 'No queue at the desk'): acceptable. She types at her monitor with nobody waiting in front of the desk, which shows the claim visually, and the reader also judged it fine as background.",
+    "Ravi has no bag in 09-1 to 09-5, which supports 'empty-handed', and his watch is on his left wrist throughout."
   ],
   "issues": [],
   "readingReview": {
     "withoutGuides": true,
+    "firstReadingHash": "bb224348bb4b6e95082d30d9e0091ba449e90c88883918b1be1e51797460a27a",
+    "comparison": "The first reader's order (A caption, FOLLOW-UP REMINDER, B caption, the 09-3 art then its caption, D caption, NOW · A-31, the doctor's balloon, the closing caption) matches 09-1 [1,2], 09-2 [1], 09-3 [1], 09-4 [1,2] and 09-5 [1,2]. The reader judged the tail unambiguous on the final art, and I agree. Meera's background role illustrates 'No queue at the desk'. No unresolved difference remains.",
     "predictedOrder": [
       {
         "panel": "09-1",
         "dialogue": [
-          1
+          1,
+          2
         ]
       },
       {
         "panel": "09-2",
         "dialogue": [
-          1,
-          2
+          1
         ]
       },
       {
         "panel": "09-3",
         "dialogue": [
-          1,
-          2
+          1
         ]
       },
       {
@@ -45,37 +48,52 @@
           1,
           2
         ]
+      },
+      {
+        "panel": "09-5",
+        "dialogue": [
+          1,
+          2
+        ]
       }
     ],
     "observations": [
-      "Reading the page cold, the panels follow a Z path and each reads top to bottom: 09-1 caption; 09-2 label, then the caption below it; 09-3 label, then the caption directly beneath; 09-4 label at top right, then the final caption at bottom left.",
-      "There are no speech balloons, so no reply can be skipped. Each label is higher than its caption, so the label is naturally read first."
+      "A 2x2 grid, then the full-width 09-5. 09-3 is the only panel whose caption is at the bottom left. The eye takes in the scan first, then the caption, then makes a Z-jump to the 09-4 caption and on to the TV label.",
+      "09-5: the eye moves from Ananya's face to the balloon by her mouth, then to Ravi's smile, then down to the closing caption."
     ],
     "transitions": [
       {
         "from": "08-6",
         "to": "09-1",
-        "observation": "After the clinic is notified on page 08, 'Tomorrow, care may take us beyond our hometown.' with Ravi on a train is a clearly marked, conditional jump into the future, signalled by 'Tomorrow' and 'may'. This is the vision page the user kept unchanged."
+        "observation": "The clinic is notified on Welbuk Practice, then Welbuk Practice sends the reminder. Daylight, tea and a green calendar card set it apart from 08-4."
       },
       {
         "from": "09-1",
         "to": "09-2",
-        "observation": "Ravi looks out of the window, then the WELBUK VISION label and the pale-blue vignette show the clinic and specialist in another city, as if he is imagining where he is heading."
+        "observation": "'On the day', with the morning glass doors under the teal awning. Ravi walks in empty-handed with his phone in his shirt pocket."
       },
       {
         "from": "09-2",
         "to": "09-3",
-        "observation": "The same vignette and label continue, opening out to the family. Ravi's green shirt connects the panels, and the dotted lines between clinics appear again."
+        "observation": "From the doorway to the QR stand inside, with the reception desk (no queue, Meera typing) behind."
       },
       {
         "from": "09-3",
         "to": "09-4",
-        "observation": "The vignette is gone, and the scene is back in the present at the full-colour clinic entrance with Meera, Ananya and Ravi in their usual clothes. The product label and final caption close the comic."
+        "observation": "The check mark on his phone, then he waits seated under the TV showing NOW · A-31. 'As usual' recalls page 04."
+      },
+      {
+        "from": "09-4",
+        "to": "09-5",
+        "observation": "The slot is called, then the consultation room. 'Welcome back' and 'results are already here' pay off 08-5, and Ravi smiles back."
+      },
+      {
+        "from": "09-5",
+        "to": "10-1",
+        "observation": "From the consultation room to Ravi on a train. 'If Ravi travels' marks a possible later journey, and the phone in his hand links back to his record."
       }
-    ],
-    "firstReadingHash": "ee16ee1486cbc69d47a05ecc240b445a6b909594284dc95ec19cb15a74b014cb",
-    "comparison": "The order in the first reading matches the intended order for 09-1 to 09-4, and there is no dialogue to skip. I checked its overlap concerns against the art. The 09-3 caption cuts a sliver of Ravi's shoulder but not his arm or hand. The 09-4 label touches his hair without covering it. The bottom caption covers Meera's lower legs and feet but no face, hand or prop. I accept all three and note optional moves. The jump to 'Tomorrow', the narrator voice, the repeated vision label and the '•' separator follow the source and the user's decision to keep the page. The only change in this request is the updated page 08 boundary, which I checked in the 08-6 to 09-1 transition."
+    ]
   },
-  "fingerprint": "89f54e3db0aff48540a68d8a1261c3ec2d8d6de652f39e8cfdb2731ebbdacd39",
-  "recordedAt": "2026-11-12T14:03:06.650Z"
+  "fingerprint": "2369bdf62c6028da94985e00698f5c9af3610ba72e8c9b4ca7a6d310a25c7bdb",
+  "recordedAt": "2026-11-12T15:49:39.709Z"
 }
