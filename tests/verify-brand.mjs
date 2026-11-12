@@ -29,3 +29,12 @@ assert.match(branded.balloon(panel, cap), /width="5" height="\d+" fill="#FD006A"
 const speech = { speaker: 'a', text: 'Hello.', textColumns: ['Hello.'], textDirection: 'horizontal', x: 300, dy: 20 };
 assert.equal(branded.balloon(panel, speech), plain.balloon(panel, speech));
 console.log('Brand theme lettering verified');
+
+// Optional fontSize scales the box and the text; the default stays 26.
+import { box } from '../src/lettering.mjs';
+const big = { speaker: 'narration', text: 'Clinic and hospital operations.', textColumns: ['Clinic and hospital operations.'], textDirection: 'horizontal', x: 20, dy: 20 };
+const small = { ...big, fontSize: 20 };
+assert.ok(box(panel, small)[2] < box(panel, big)[2] && box(panel, small)[3] < box(panel, big)[3]);
+assert.match(plain.balloon(panel, small), /font-size="20"/);
+assert.throws(() => box(panel, { ...big, fontSize: 30 }), /fontSize/);
+console.log('Caption font size verified');

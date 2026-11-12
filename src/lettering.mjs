@@ -75,8 +75,11 @@ export function box(panel, speech) {
   const horizontal = speech.textDirection === 'horizontal';
   const longest = Math.max(...lines.map((s) => [...s].length));
   const widest = Math.max(...lines.map(horizontalAdvance));
-  const width = horizontal ? widest + 36 : lines.length * 28 + 36;
-  const height = horizontal ? lines.length * 32 + 42 : longest * 27 + 42;
+  // Optional speech.fontSize (20-26, horizontal only) scales the box with the text; 26 is the default.
+  const fs = fontSizeOf(speech);
+  const step = Math.round((32 * fs) / 26);
+  const width = horizontal ? Math.ceil((widest * fs) / 26) + 36 : lines.length * 28 + 36;
+  const height = horizontal ? lines.length * step + 42 - (26 - fs) : longest * 27 + 42;
   const [x, y, w] = panel.rect;
   return [
     speech.x === undefined
@@ -88,6 +91,15 @@ export function box(panel, speech) {
     width,
     height,
   ];
+}
+export function fontSizeOf(speech) {
+  if (speech.fontSize === undefined) return 26;
+  assert.ok(
+    Number.isInteger(speech.fontSize) && speech.fontSize >= 20 && speech.fontSize <= 26,
+    'fontSize must be an integer from 20 to 26',
+  );
+  assert.ok(speech.textDirection === 'horizontal', 'fontSize is only supported for horizontal text');
+  return speech.fontSize;
 }
 export function validateTextSizeRanges(speech) {
   if (speech.textSizeRanges === undefined) return;
@@ -251,7 +263,7 @@ export function createLettering(cast, theme = null) {
         lines
           .map(
             (text, i) =>
-              `<text x="${x + 18}" y="${y + 34 + i * 32}" font-family="Meiryo,MS Gothic,sans-serif" font-size="26" fill="black">${content[i]}</text>`,
+              `<text x="${x + 18}" y="${y + 34 - (26 - fontSizeOf(d)) + i * Math.round((32 * fontSizeOf(d)) / 26)}" font-family="Meiryo,MS Gothic,sans-serif" font-size="${fontSizeOf(d)}" fill="black">${content[i]}</text>`,
           )
           .join('')
       );

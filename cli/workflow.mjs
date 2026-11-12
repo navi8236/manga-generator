@@ -375,8 +375,16 @@ function pageFooter(page) {
     page.brand !== false && b.logo
       ? `<image href="data:image/png;base64,${fs.readFileSync(path.resolve(root, path.dirname(configFile), b.logo)).toString('base64')}" x="${512 + 26}" y="${y - 19}" width="38" height="38"/>`
       : '';
+  // brand.logos: [{ page, x, y, size }] places the logo file at a fixed spot (e.g. a closing page).
+  const placed = (b.logos || [])
+    .filter((l) => l.page === page.id)
+    .map(
+      (l) =>
+        `<image href="data:image/png;base64,${fs.readFileSync(path.resolve(root, path.dirname(configFile), l.file || b.logo)).toString('base64')}" x="${l.x}" y="${l.y}" width="${l.size}" height="${l.size}"/>`,
+    )
+    .join('');
   const gap = logo ? 70 : 36;
-  return `<line x1="40" y1="${y}" x2="${512 - gap}" y2="${y}" stroke="${b.accent}" stroke-width="2"/><line x1="${512 + gap}" y1="${y}" x2="984" y2="${y}" stroke="${b.accent}" stroke-width="2"/><text x="${logo ? 512 - 18 : 512}" y="${y + 7}" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="#333">${Number(page.id)}</text>${logo}`;
+  return `<line x1="40" y1="${y}" x2="${512 - gap}" y2="${y}" stroke="${b.accent}" stroke-width="2"/><line x1="${512 + gap}" y1="${y}" x2="984" y2="${y}" stroke="${b.accent}" stroke-width="2"/><text x="${logo ? 512 - 18 : 512}" y="${y + 7}" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="#333">${Number(page.id)}</text>${logo}${placed}`;
 }
 
 function materialJobs(page) {
