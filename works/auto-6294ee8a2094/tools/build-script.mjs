@@ -1579,7 +1579,7 @@ const SCREEN = 'The laptop stands at about a three-quarter angle toward the read
         beat: 'As usual, his token comes up on the screen',
         rect: r4,
         scene:
-          'Waiting area: the wall-mounted waiting-room TV in the upper right shows a teal screen with one empty white token strip (no text or numbers). Ravi sits in a waiting chair, phone in his right hand in his lap, left hand with the wristwatch on the chair arm, looking up at the TV with a small smile; two other patients seen from behind: an elderly grey-haired man at the left and a young man with short hair in a blue shirt at the right (no bun, no kurta). The whole TV is in frame with plain wall above it, and the upper-left half of the panel is plain wall for a two-line caption.',
+          'Waiting area: the wall-mounted waiting-room TV in the upper right shows a teal screen with one empty white token strip (no text or numbers). Ravi sits in a waiting chair, phone in his right hand in his lap, left forearm along the chair arm with the hand (wristwatch) resting on his thigh, looking up at the TV with a small smile; two other patients seen from behind: an elderly grey-haired man at the left and a young man with short hair in a blue shirt at the right (no bun, no kurta). The whole TV is in frame with plain wall above it, and the upper-left half of the panel is plain wall for a two-line caption.',
         action: 'Ravi sees his slot called.',
         emotion: 'Calm.',
         camera: 'Medium-wide shot.',
@@ -1589,7 +1589,7 @@ const SCREEN = 'The laptop stands at about a three-quarter angle toward the read
           moment: 'His slot appears on the TV.',
           before: 'He checked in (09-3).',
           after: 'He goes in to Dr. Ananya (09-5).',
-          hands: { ravi: hands('resting on the chair arm (wristwatch on this wrist)', 'holding ravi-phone in his lap') },
+          hands: { ravi: hands('forearm along the chair arm, hand resting on his thigh (wristwatch on this wrist)', 'holding ravi-phone in his lap') },
           props: [
             prop('ravi-phone', 'in his hand', 'in his lap', 'in his pocket', 'ravi.right'),
             prop('waiting-tv', 'on the wall', 'token strip shown', 'on the wall', 'none'),
@@ -1597,8 +1597,8 @@ const SCREEN = 'The laptop stands at about a three-quarter angle toward the read
         },
         speakers: { ravi: speaker(r4, [180, 250, 70, 85]) },
         dialogue: [
-          line('narration', ['As usual, his slot', 'comes up on the screen.'], 8, 4),
-          line('label', ['NOW · A-31'], 270, 146),
+          line('narration', ['As usual, his', 'slot comes up', 'on the screen.'], 0, 0),
+          line('label', ['NOW · A-31'], 286, 38),
         ],
       },
       {
@@ -1889,8 +1889,8 @@ const MEASURED = {
     protected: [[391, 705, 56, 58], [439, 682, 52, 91], [259, 838, 30, 60]],
   },
   '09-4': {
-    speakers: { ravi: F(674, 670, 55, 63, 716, 710) },
-    protected: [[694, 838, 53, 43], [769, 848, 30, 53]],
+    speakers: { ravi: F(711, 693, 38, 47, 736, 725) },
+    protected: [[706, 835, 35, 28], [791, 833, 28, 48]],
   },
   '09-5': {
     speakers: { ananya: F(279, 1017, 85, 105, 324, 1100), ravi: F(704, 1012, 95, 110, 736, 1092) },

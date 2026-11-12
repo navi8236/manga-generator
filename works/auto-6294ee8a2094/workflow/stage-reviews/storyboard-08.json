@@ -1,5 +1,5 @@
 {
-  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-08-c487e2df7e0f280cd126807bbbf7a6c1e65e5f610e72fdf149621415a4d2a4a6.json",
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-08-4d97b572fc9d3f6cb1de440101d6e422b7f8aa5ecbf4f494538e65efcd896228.json",
   "reviewer": {
     "role": "subagent",
     "task": "claude-code-agent:manga-reviewer:aaee0f389264cbcd4",
@@ -9,11 +9,11 @@
   "status": "pass",
   "observations": [
     "Reviewer identity: the runtime gave me no task ID, so reviewer.task is null.",
-    "What I read in this pass: the fresh request. Its first reading is unchanged (firstReadingHash bae172a8...). The listed hash of storyboards-unnumbered/page-08.png (4a90ec89...) is the same as in the earlier requests. The new fingerprint comes from the refreshed page 09 boundary context. Earlier in this session I read all of original.txt, Requests 4 and 5, and the 08-x script. Everything was readable. I did not compute any hashes.",
-    "Images I opened with Read in this pass, in this order: storyboards-unnumbered/page-08.png, then the lettered workflow/review/page-08.png. For the outgoing boundary I opened storyboards-unnumbered/page-09.png and the new lettered workflow/review/page-09.png, which now contains the page 09 art.",
+    "What I read in this pass: the fresh request. Its first reading is unchanged (firstReadingHash bae172a8...). The listed hash of storyboards-unnumbered/page-08.png (4a90ec89...) is the same as before. The new fingerprint comes from the refreshed page 09 boundary context. Earlier in this session I read all of original.txt, Requests 4 and 5, and the 08-x script. Everything was readable. I did not compute any hashes.",
+    "Images I opened with Read in this pass: storyboards-unnumbered/page-08.png, then workflow/review/page-08.png. For the boundary I opened storyboards-unnumbered/page-09.png and workflow/review/page-09.png. Page 08 looks the same as in my earlier passes.",
     "Script vs source: all page 08 text matches PAGE 8 of original.txt word for word. Page 08 and its art are unchanged.",
     "First-reader concerns, still acceptable, with evidence from review/page-08.png. 'Meanwhile' follows Ravi's departure in 07-4. 'The prescription' is set up by 'intelligent prescribing' on the 06-2 PLAN OF CARE label. Collecting the medicine was not part of Request 4. In 08-3 Ravi smiles at the lab technician, which is his reaction. Meera's face is clear of the RESULTS READY label. The caption boxes flush with the top border are the deliberate corner tabs. Every notification panel has a reacting face.",
-    "The 08-6 to 09-1 boundary is now confirmed on real art. In 08-4 Ravi sits on a sofa in sunset light with a check-mark card. In 09-1 he sits at a round wooden table in daylight with a teacup, holding up a phone with a green calendar card beneath the FOLLOW-UP REMINDER label. The two moments cannot be confused."
+    "The 08-6 to 09-1 boundary is unchanged on the lettered pages. 08-4 shows a sofa in sunset light with a check-mark card. 09-1 shows a daylight table with tea, and Ravi holding up a phone with a green calendar card under FOLLOW-UP REMINDER. The two moments are distinct."
   ],
   "issues": [],
   "readingReview": {
@@ -106,6 +106,6 @@
       }
     ]
   },
-  "fingerprint": "c487e2df7e0f280cd126807bbbf7a6c1e65e5f610e72fdf149621415a4d2a4a6",
-  "recordedAt": "2026-11-12T15:17:59.772Z"
+  "fingerprint": "4d97b572fc9d3f6cb1de440101d6e422b7f8aa5ecbf4f494538e65efcd896228",
+  "recordedAt": "2026-11-12T15:31:05.551Z"
 }
