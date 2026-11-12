@@ -1,0 +1,97 @@
+{
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-05-258e17a17c96eb0912019593b0c54a2c556af2a07aeba81f86a288d3c07499ef.json",
+  "reviewer": {
+    "role": "subagent",
+    "task": "claude-code-agent:manga-reviewer:a63179389584a0e8b",
+    "reportedTask": null,
+    "taskSource": "Agent ID returned by the Claude Code Agent tool to the parent."
+  },
+  "status": "changes-requested",
+  "observations": [
+    "Reviewer identity: task is null because the runtime gave me no task ID. The parent must record the real Agent ID.",
+    "What I read: this request (page-05 script, 04 and 06 boundary context, transitions, first reading), source/original.txt in full, and REVISION-2026-11-11.md from Request 3 through the AI-voice-consent follow-up. Text files I read: storyboards-unnumbered/page-05.svg and storyboards/page-05.svg. Images I opened with Read and looked at: storyboards-unnumbered/page-05.png, storyboards/page-05.png, workflow/review/page-05.png and workflow/review/page-06.png. I did not open the reading-flow files, the character sheets or the individual assets/panels/05-*.png files. I did not compute any hashes.",
+    "BLOCKING. Both storyboard PNGs for page 05 (storyboards-unnumbered/page-05.png and storyboards/page-05.png) show the old layout from before the refit. They do not match the SVGs or the script in this request. In the PNG, 05-1 has the ananya box at about 584,254, the balloon at about 624,40 and the PATIENT DETAILS label at about 40,294. The SVG and script have ananya at 392,117, the balloon at 514,40 and the label at 34,224. In the PNG, 05-2 has 'Yes, I agree.' at the far right (about 724,584) and the consent label in the lower centre (about 354,738). The SVG has 'Yes, I agree.' at 400,572, directly beside the question, and the label at the right of the top row (625,572). In the PNG, 05-3 has ravi at about 354,1062; the SVG has 393,979. In the PNG, 05-4 has ananya at about 718,1172 and the ravi dot at about 937,1351; the SVG has 762,1161 and 957,1193. The PNGs were not re-exported after the refit.",
+    "As a result, the recorded first reading (0d3c38a9…) describes the stale PNG layout: 'Yes, I agree.' at upper right, the consent caption between question and answer, and the ravi dot in the 05-4 corner. No image-only first reading exists for the current refitted storyboard. I cannot pass a comparison whose first reading looked at a different image from the one under review.",
+    "Judging the current layout on its own merits (SVG plus composed preview), it looks sound. In 05-1 the greeting balloon is the top element (y40) and the PATIENT DETAILS label sits lower (y224) on the drawn laptop screen, so it reads greeting first and screen content second. The balloon tail reaches Ananya's mouth, and Ravi sits smiling on the right with his bag on the floor, as scripted.",
+    "In 05-2 the question, the answer and the consent label now run left to right in a single top row. 'Yes, I agree.' follows the question directly, which settles first-reader concern 3 for the current layout. Minor lettering item: in review/page-05.png the long tail from 'Yes, I agree.' to Ravi passes within a few pixels of the consent label's lower-left corner (at x=625 the tail is at about y713; the label's bottom edge is at y710). Check this at the lettering stage. Also, unlike 05-1 and 05-3, this label sits on the wall instead of over the laptop screen. It still reads as screen information because of its teal style, and the drawn consent card (mic, shield, check box) stays visible.",
+    "First-reader concern 2 (the consent question interrupts 'Tell me what brings you in.'): acceptable. Source page 5 (lines 37-39) and the user's 2026-11-12 consent follow-up put the consent before the AI listens and before Ravi's answer. The consent exchange answers itself within one panel, and the art shows Ananya gesturing to the consent card. 05-3's 'I've been feeling tired lately.' plainly answers the opening question, and 'Yes, I agree.' cannot be read as an answer to it because it sits right beside the AI question.",
+    "First-reader concern 4 (Ananya absent from 05-3, long tail): in the preview the tail is short and reaches Ravi's mouth. 05-4 shows Ananya listening right after, so the listener is shown one panel later. Acceptable.",
+    "First-reader concern 5 (the ravi dot in 05-4 with no box): Ravi is a scripted 'head' (anchor 957,1193). The accepted art shows the back of his head and his shoulder at the lower right, which settles the concern.",
+    "First-reader concern 7 (labels take up a large share): in the preview the 05-1 label covers only the laptop screen. The 05-3 label covers the left part of the screen and leaves the glowing mic, Ravi's face and his hands clear. Acceptable."
+  ],
+  "issues": [
+    {
+      "problem": "storyboards-unnumbered/page-05.png and storyboards/page-05.png are stale pre-refit exports that do not match the refitted page-05 SVGs and script in this request. The recorded image-only first reading was made on that stale layout, so the current storyboard has had no first reading. Re-export both PNGs from the current SVGs, run a fresh prepare-reading and record-reading on the new unnumbered PNG, then prepare a new comparison request.",
+      "location": "page 05 (all panels), workflow/storyboards-unnumbered/page-05.png, workflow/storyboards/page-05.png, first-reading storyboard-05-0d3c38a9…",
+      "resolved": false
+    }
+  ],
+  "readingReview": {
+    "withoutGuides": true,
+    "firstReadingHash": "a6790c5bc8f404b345e2a96c8af96eef4c94a20ea6544810ee3de0ec976db986",
+    "comparison": "The first reading describes the stale PNG layout, not the current SVG and script. Its speaker order (greeting, consent question, agreement, complaint, closing caption) matches the script. But its spatial observations ('Yes, I agree.' at upper right, the consent caption between question and answer, the ravi dot in the 05-4 corner) are about positions that no longer exist. In the current layout the 05-2 answer sits next to the question and the label comes last in the row. The predicted order below is from the current SVG and preview, not from an image-only reading. A new first reading on a re-exported PNG is required before this comparison can pass.",
+    "predictedOrder": [
+      {
+        "panel": "05-1",
+        "dialogue": [
+          1,
+          2
+        ]
+      },
+      {
+        "panel": "05-2",
+        "dialogue": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "panel": "05-3",
+        "dialogue": [
+          1,
+          2
+        ]
+      },
+      {
+        "panel": "05-4",
+        "dialogue": [
+          1
+        ]
+      }
+    ],
+    "observations": [
+      "Current SVG, 05-2: the three text boxes share the top band (y572) and run left to right: question at 64-396, answer at 400-599, label at 625-994. Question and answer form one adjacent pair.",
+      "Current SVG, 05-1 and 05-3: the balloon is the highest element, and the teal label sits lower-left on the laptop screen, so it is read second."
+    ],
+    "transitions": [
+      {
+        "from": "04-3",
+        "to": "05-1",
+        "observation": "Same consultation room, with window and plant. In review/page-05.png the tablet from 04-3 is gone, the laptop closed in 04-3 is open on patient details, and Ravi has arrived and sits on the right with his bag on the floor."
+      },
+      {
+        "from": "05-1",
+        "to": "05-2",
+        "observation": "Same two-shot widened. The laptop now shows the consent card (mic, shield, check box) as Ananya asks before the AI listens."
+      },
+      {
+        "from": "05-2",
+        "to": "05-3",
+        "observation": "Ravi, having consented, answers the opening question ('I've been feeling tired lately.'). The laptop shows SOAP notes with the mic glowing, so the consent comes before the listening."
+      },
+      {
+        "from": "05-3",
+        "to": "05-4",
+        "observation": "Reverse angle over Ravi's shoulder. Ananya listens, looking at him and not at the laptop, while the mic glows at the left. The caption sums up."
+      },
+      {
+        "from": "05-4",
+        "to": "06-1",
+        "observation": "Page turn to a laptop close-up. In review/page-06.png the bezel, desk edge, window and plant at the top right, and Ananya's coat-sleeved hand on the trackpad keep it in the same consultation."
+      }
+    ]
+  },
+  "fingerprint": "258e17a17c96eb0912019593b0c54a2c556af2a07aeba81f86a288d3c07499ef",
+  "recordedAt": "2026-11-12T11:12:21.382Z"
+}

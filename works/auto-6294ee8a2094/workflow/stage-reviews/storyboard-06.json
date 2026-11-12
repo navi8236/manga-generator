@@ -1,32 +1,34 @@
 {
-  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-06-a1501506555d019f4e51cab699e9d025e421519a166be35c315743c42b254588.json",
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-06-6a878c6df180e7eff0c1ab8ec92130d3e43d8f2ab00ebded1d717d942db04330.json",
   "reviewer": {
     "role": "subagent",
-    "task": "claude-code-agent:manga-reviewer:a99ccfc87aaef1a1c",
+    "task": "claude-code-agent:manga-reviewer:a63179389584a0e8b",
     "reportedTask": null,
     "taskSource": "Agent ID returned by the Claude Code Agent tool to the parent."
   },
-  "status": "pass",
+  "status": "changes-requested",
   "observations": [
-    "Reviewer identity: task is null because the runtime supplied no task ID. The parent must record the real Agent ID.",
-    "What I read: this request's header, page-6 first reading and file list (lines 1-50 and 1340-1403). I relied on the identical page-6 script carried as boundary context in the 05 request, and on 06 boundary data in the 07 request. I also read source page 6, the REVISION follow-ups, reading-flow/page-06.json (warnings) and responses/storyboard-r18-06.json. Images I opened with Read and looked at: storyboards-unnumbered/page-06.png, storyboards/page-06.png, storyboards-unnumbered/page-07.png and the old-numbered composed preview workflow/review/page-06.png (accepted art now used for 07-1 to 07-4). I did not open the SVGs or the character sheets. All PNGs loaded.",
-    "Unnumbered scan: top wide panel with no faces: teal heading 'SPECIALITY-SPECIFIC TREATMENT PLANNER' at top left (x40-679, y40-114), then three tile labels on one band, left to right: 'Dentist: odontogram', 'Eye doctor: eye markers', 'Paediatrician: growth scales · vaccines'. Bottom panel: Ananya's balloon 'We'll go through your concerns and decide the right next steps together.' at upper right (y684-822), tail down to the ananya box (x524-634, y928-1058). Ravi's box is at right (x784-894). Teal 'PLAN OF CARE: intelligent prescribing · summary · drug interactions · labs · referrals' is at lower left (x40-469, y1088-1258). This matches source page 6 and the user's section order (planner, then plan of care).",
-    "r18-06 issue (06-1 not anchored to the consultation) is resolved in the plan. The scene now keeps the dark bezel, the top edge with the camera dot and the hinge, the window frame and a plant leaf at top right, the wooden desk edge along the bottom, and Ananya's right hand on the trackpad at lower right. The top-right window corner is clear of the heading label (which ends at x679).",
-    "First-reader concern 1 (panel 1 has no place, person or device): answered by the anchored close-up above. The empty placeholder cannot show it, but the scene text does.",
-    "First-reader concern 2 (06-2 balloon high right, label low left; backwards reading): the balloon top is y684 and the label top is y1088. The balloon clearly reads first, and the label sits over the laptop in the left-foreground zone (left 45%, lower two-thirds), the same staging as 05-1. The small leftward return is unambiguous. Resolved.",
-    "First-reader concern 3 ('your concerns' / 'We'll' unresolved on this page): the reader said it depends on page 5. 05-3 has Ravi's 'I've been feeling tired lately.' and 05-4 shows Ananya listening, so 'your concerns' refers back to it and 'we' is doctor and patient. Resolved across the spread.",
-    "First-reader concern 4 (Ravi silent, no reaction): the 06-2 plan has Ravi nodding, relaxed, both hands on his knees. That is an art matter, not a layout problem.",
-    "First-reader concern 5 (why dentist/eye/paediatric tools for a general consultation): the three example tiles are the user's explicit confirmed decision. The heading plus 'Dentist: / Eye doctor: / Paediatrician:' reads as examples of how the planner adapts, not as tools used on Ravi. Acceptable.",
-    "First-reader concern 6 (tail close to Ananya's box): the tail ends at the top edge of her box and does not cross Ravi. Recheck against the real head after generation.",
-    "First-reader concern 7 (empty space, uneven bottom row): the empty middle of 06-1 is where the tiles will be drawn, and the lower third of 06-2 is the laptop and desk. The three-line Paediatrician label ends at y632, 12 px above the panel bottom (644). That is a cosmetic margin for lettering.",
-    "Carry-forward to lettering, not blocking: the scene puts Ananya's anchoring hand 'at the lower right', and the storyboard's tallest label (Paediatrician, x724-968, y494-632) also sits at lower right. The scene reserves a plain band at the bottom of each tile for the labels, so after generation the labels should be re-measured onto the tile bands and must not cover her hand or the hinge. It would help to tell the generator to keep the hand below the screen edge.",
-    "Reading-flow warnings for 06-1 (2→3, 3→4) are false positives: the three tile labels share one horizontal band and read left to right in tile order."
+    "Reviewer identity: task is null because the runtime gave me no task ID. The parent must record the real Agent ID.",
+    "What I read: this request (page-06 script, 05 boundary context, transitions, first reading), source/original.txt in full and REVISION-2026-11-11.md from Request 3 onward. Text file I read: storyboards-unnumbered/page-06.svg. Images I opened with Read and looked at: storyboards-unnumbered/page-06.png, storyboards/page-06.png, workflow/review/page-06.png, workflow/review/page-05.png and workflow/review/page-07.png. I did not open storyboards/page-06.svg, the reading-flow files or the individual assets/panels/06-*.png files. I did not compute any hashes.",
+    "BLOCKING. Both storyboard PNGs for page 06 show the old layout from before the refit and do not match storyboards-unnumbered/page-06.svg or the script. In the PNG, 06-1 has the planner header at about 40,40 and the tile labels at about 74, 404 and 724 (y about 494); the SVG and script have the header at 138,106 and the tiles at 193, 421 and 624 (y388). In the PNG, 06-2 has ananya at about 524,928, the balloon at about 464,684 and the PLAN OF CARE label at about 40,1088; the SVG and script have ananya at 278,861, the balloon at 304,684 and the label at 40,1108. The PNGs were not re-exported after the refit.",
+    "The recorded first reading (378322c6…) therefore describes the stale layout: the header at the top-left corner of an empty panel, and the balloon tail to an ananya placed centre-right. No image-only first reading exists for the current refitted storyboard, so this comparison cannot pass.",
+    "Judging the current layout on its merits (SVG plus composed preview): in 06-1 the header label sits on the drawn teal header bar inside the laptop screen. The three tile labels sit on the bottom bands of the tooth chart, eye diagram and growth chart tiles. Reading order is header, then left to right. Minor lettering item: the Paediatrician label (y388-526) runs slightly past the screen's bottom edge onto the bezel. It stays clear of the protected hand region (y544 and below).",
+    "First-reader concern 1 (no scene cue for 06-1): settled by the accepted art. The laptop bezel with its camera dot, the wooden desk, the window and plant at the top right, and Ananya's hand in a white-coat sleeve with a teal cuff on the trackpad place it in the same consultation. The concern that the dentist, eye and paediatric tiles do not fit Ravi's tiredness is acceptable. This is the user's requested walkthrough of the doctor's screen (Request 3 and the 'add page if needed' follow-up), and the header 'SPECIALITY-SPECIFIC TREATMENT PLANNER' frames the tiles as the product adapting to each speciality, not as Ravi's care.",
+    "First-reader concern 2 (empty middle of 06-1): filled by the tile art. This was a placeholder artifact.",
+    "First-reader concern 3 (the cutaway separates complaint and response; Ravi does not react): acceptable. 05-4 already shows Ananya listening. 'We'll go through your concerns…' reads as her summing up after the screen tour, and in the preview Ravi's relaxed smile and hands on his knees serve as his silent reaction.",
+    "First-reader concern 4 (caption lower-left, balloon upper-right): in the current layout the balloon (y684) is far above the PLAN OF CARE label (y1108), and the label sits on the drawn laptop screen, so the balloon is read first. In the preview the tail ends at Ananya's mouth. Ananya is on the left and Ravi on the right, as in 05-1 and 05-2."
   ],
-  "issues": [],
+  "issues": [
+    {
+      "problem": "storyboards-unnumbered/page-06.png and storyboards/page-06.png are stale pre-refit exports that do not match the refitted page-06 SVG and script in this request. The recorded image-only first reading was made on that stale layout. Re-export both PNGs from the current SVGs, run a fresh prepare-reading and record-reading on the new unnumbered PNG, then prepare a new comparison request.",
+      "location": "page 06 (06-1, 06-2), workflow/storyboards-unnumbered/page-06.png, workflow/storyboards/page-06.png, first-reading storyboard-06-378322c6…",
+      "resolved": false
+    }
+  ],
   "readingReview": {
     "withoutGuides": true,
-    "firstReadingHash": "5383ed50b88272ce5e0fc5b8c74b309952e907bed0382c60ea2b8c6c4a078d0b",
-    "comparison": "My order matches the first reader's (heading, three tile labels left to right, balloon, PLAN OF CARE label), with no skips. Their main concern, the unanchored panel 1, is fixed in the revised scene, which closes r18-06. The backwards-reading concern is settled by the 400 px height difference and the screen placement. 'Your concerns' resolves against 05-3. The speciality tiles are a user decision.",
+    "firstReadingHash": "c16eb7268b78bb8864c69aa7cbbd7fae239a2b20c9284cba56a99883ec27e34e",
+    "comparison": "The first reader's order (header, then the three tiles left to right; balloon, then PLAN OF CARE) matches the script, and I find the same order in the current SVG and preview. But the first reading was made on the stale PNG. Its positional observations (header in an empty panel corner, Ananya centre-right, label at y1088) do not describe the current storyboard. The predicted order below is from the current SVG and preview, not an image-only reading. A new first reading is required.",
     "predictedOrder": [
       {
         "panel": "06-1",
@@ -46,27 +48,27 @@
       }
     ],
     "observations": [
-      "06-1: the heading at top left opens the panel, and the eye sweeps the tiles to their labels left to right, then exits at lower right toward 06-2.",
-      "06-2: entry at the empty upper left, then the balloon at upper right, down to Ananya and Ravi, back to the screen label at lower left, then out of the page."
+      "Current SVG, 06-1: the header (y106) is above three tile labels that share one row (y388) at x 193, 421 and 624, so the order is header first, then left to right.",
+      "Current SVG, 06-2: the balloon at top centre (y684) comes clearly before the label at lower left (y1108). The tail reaches Ananya's anchor at 418,913."
     ],
     "transitions": [
       {
         "from": "05-4",
         "to": "06-1",
-        "observation": "Page turn from Ananya listening, hands folded, to a close-up of the same laptop with her hand now on the trackpad. The bezel, desk edge and window/plant corner keep it in the consultation. The time step is small and implied."
+        "observation": "From Ananya listening, with the mic glowing on the laptop at the left, to a close-up of the same laptop on the planner section. The bezel, desk, window and plant, and her sleeved hand on the trackpad keep the place."
       },
       {
         "from": "06-1",
         "to": "06-2",
-        "observation": "From the planner close-up back out to the 05-1 two-shot past the laptop, now on the plan of care. Ananya's line closes the concern Ravi raised in 05-3, and Ravi's planned nod gives the reaction."
+        "observation": "Pull back to the two-shot past the laptop, matching 05-1's staging. The screen now shows plan-of-care cards and Ananya sums up while Ravi relaxes, bag on the floor."
       },
       {
         "from": "06-2",
         "to": "07-1",
-        "observation": "From the consultation room (Ravi seated, bag on the floor) to reception. In the accepted art (old-numbered review/page-06.png, top panel) Meera is at the desk monitor, waiting chairs with patients are behind, and Ravi stands with his bag back on his shoulder and his blue phone out. It reads as the same visit on his way out. This matches 06-2 production.after ('Ravi picks up his bag and returns to reception'). No caption needed."
+        "observation": "From the seated consultation to the reception desk in review/page-07.png. Ravi now has his bag on his shoulder and his phone out, and Meera is at the monitor. It reads as the end of the same visit."
       }
     ]
   },
-  "fingerprint": "a1501506555d019f4e51cab699e9d025e421519a166be35c315743c42b254588",
-  "recordedAt": "2026-11-12T10:44:01.728Z"
+  "fingerprint": "6a878c6df180e7eff0c1ab8ec92130d3e43d8f2ab00ebded1d717d942db04330",
+  "recordedAt": "2026-11-12T11:12:21.588Z"
 }

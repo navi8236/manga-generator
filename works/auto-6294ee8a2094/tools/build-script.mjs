@@ -784,7 +784,7 @@ const pages = [];
           props: [
             prop('vitals-kit', 'on the side table', 'cuff on Ravi’s left upper arm, oximeter on his left index finger', 'removed after the check', 'nurse.right'),
             prop('ravi-phone', 'in his pocket', 'in his trouser pocket, not visible', 'in his pocket', 'none'),
-            prop('shoulder-bag', 'on his shoulder', 'on the floor beside his chair', 'back on his shoulder as he walks in (05-1)', 'none'),
+            prop('shoulder-bag', 'on his shoulder', 'on the floor beside his chair', 'carried into the consultation and set beside his chair (05-1); back on his shoulder at reception (07-1)', 'none'),
           ],
         },
         speakers: {
