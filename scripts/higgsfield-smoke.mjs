@@ -19,6 +19,7 @@ if (mode === 'dry-run') {
   console.log('DRY RUN PASSED. No authentication request or image generation was made. No credits used.');
   process.exit(0);
 }
+throw new Error('Paid generation disabled: the configured model was rejected with model_not_found in run #3. Verify a supported Higgsfield API model and pricing before enabling this path.');
 if (process.env.CONFIRM_PAID_GENERATION !== 'YES_ONE_IMAGE') {
   throw new Error('Paid generation requires explicit CONFIRM_PAID_GENERATION=YES_ONE_IMAGE');
 }
