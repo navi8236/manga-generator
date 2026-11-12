@@ -1,26 +1,25 @@
 {
-  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/script-all-e2a963a30b57ab7306c4c8841311fa86d21e1a910700e7ac8d4c40eb298efcdd.json",
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/script-all-3d1df87c4964d845542fb78a8773b14e565304d77e974e32c4258b658c18ac10.json",
   "reviewer": {
     "role": "subagent",
-    "task": "claude-code-agent:manga-reviewer:a64d428f23bad899b",
+    "task": "claude-code-agent:manga-reviewer:a05cd5c0a06fcb13e",
     "reportedTask": null,
     "taskSource": "Agent ID returned by the Claude Code Agent tool to the parent."
   },
   "status": "pass",
   "observations": [
-    "Reviewer identity: the runtime did not give me a task ID, so reviewer.task is null.",
-    "What I read: AGENTS.md (in the system context), docs/REVISION-AND-REVIEWS.md and docs/PROMPTS.md. I read the whole current request, script-all-e2a963a3....json, in four parts (lines 1-150, 150-549, 549-1048, 1048-1928). Its fingerprint is e2a963a30b57ab7306c4c8841311fa86d21e1a910700e7ac8d4c40eb298efcdd. Its entries are original.txt a18ff7eb... and source-coverage.json 990b9b71.... I also read source/original.txt in full (60 lines), all of source/REVISION-2026-11-11.md (Request 3 and its two follow-ups, 'add page if needed' and 'AI voice consent'), and all of workflow/source-coverage.json (31 spans, sourceHash a18ff7eb..., which matches the request entry). For background only, I read script-all-r32.json. I judged the current request independently. A script request has no images, and I did not view or claim to inspect any image.",
-    "Reading order: I read the source first. I then re-read only the lettered lines (balloons, captions and labels) in panel order. For each one I checked that its question, pronoun or connective is resolved by lettering shown earlier in the comic, not by my knowledge of the source.",
-    "Panel count: 3+4+5+3+4+2+4+4 = 29 panels. All 29 are in dialogueReview.",
-    "Changed record, 04-2 shoulder-bag (request line 1008): 'after' now reads 'carried into the consultation and set beside his chair (05-1); back on his shoulder at reception (07-1)'. The old request, script-all-082f6b02....json line 1008, reads 'back on his shoulder as he walks in (05-1)'.",
-    "Consistency with 05-1: the new 04-2 wording matches 05-1. The 05-1 scene says Ravi 'sits down in the patient chair, smiling, his shoulder bag set on the floor beside the chair'. The 05-1 shoulder-bag prop reads before 'on Ravi’s shoulder', during 'set down on the floor beside his chair', after 'beside his chair'. His hands are on the armrest and his knee, so he is not holding the bag. 'Carried into the consultation' also fills the gap between the 04-2 floor position and the 05-1 'before' value 'on Ravi’s shoulder': he picked the bag up after the vitals and set it down in the consultation room. The old wording ('back on his shoulder as he walks in (05-1)') contradicted this seated, bag-on-floor staging.",
-    "Consistency with 06-2: the 06-2 scene has 'his bag on the floor beside the chair'. The 06-2 prop reads before 'beside his chair', during 'on the floor beside his chair', after 'back on his shoulder as he leaves (07-1)'. Ravi's hands are both on his knees, and production.after says 'Ravi picks up his bag and returns to reception (page 7)'. This agrees with both halves of the new 04-2 wording.",
-    "Consistency with 07-1: the 07-1 prop reads before 'on Ravi’s shoulder', during 'on his shoulder', after 'on his shoulder', heldBy 'none'. Ravi's hands are on the desk edge and holding ravi-phone, so neither holds the bag. This matches 'back on his shoulder at reception (07-1)'. The 07-4 prop ('on his shoulder as he walks out') and the 07-4 scene ('his bag on his shoulder') continue the chain. Over the whole comic, the bag goes: on his left shoulder (03-3), on his lap (03-5), back on his shoulder (04-1), on the floor at vitals (04-2), on the floor in the consultation (05-1, 06-2), back on his shoulder (07-1, 07-4). I found no contradiction.",
-    "Minor note, not blocking: 05-2, 05-3, 05-4 and 06-1 have no shoulder-bag prop record. In 05-4 Ravi's hands are out of frame, and he is not shown in 06-1. Nothing in those panels contradicts the bag being on the floor. The 07-1 scene sentence does not mention the bag, which appears only in the prop record. The artwork and lettering reviews should check that the drawn 07-1 matches the record. This is not a dialogue defect.",
-    "No-other-change check (method): both requests have 1928 lines, the same 'files' list and the same entry hashes (original.txt a18ff7eb..., source-coverage.json 990b9b71...). I grepped '\"text\": ' in both files. All 49 matches, including the decision text and every balloon, caption and label, are identical and on the same line numbers. I grepped 'shoulder' in both files. Every match is identical except line 1008. The textColumns-style array elements match the same pattern 151 times in each file. Limitation: I had no diff tool, so these checks show that the lettered text and the shoulder-bag records are unchanged. They are not a byte-level proof that every other field is identical. The fingerprint changed (082f6b02... to e2a963a3...), which is expected for a one-field edit.",
-    "Text rejoin: I rejoined the textColumns of every balloon, caption and label in all 29 panels against its text field. Each rejoins exactly. Examples: 05-1 'PATIENT DETAILS: ' through 'lab reports' (7 columns), 05-3 'SOAP NOTES: ' through 'the conversation' (8 columns), and 06-2 'PLAN OF CARE: ' through 'labs · referrals' (6 columns). Each text matches original.txt lines 14-56 verbatim. The four supplement labels are 'WELBUK PRACTICE for the clinic', 'WELBUK CARE for clinic staff', 'WELBUK HEALTH for patients' and the repeated 08-3 'WELBUK VISION'. All four are recorded in source-coverage.json. The spelling choices 'odontogram', 'growth scales', 'Paediatrician' and 'summarise' are recorded in REVISION.",
-    "Dialogue dependencies from the lettering alone: in 01-3, 'the rest' refers to Meera's 01-2 list. 02-3 'And our team...' directly follows Ananya's 02-2 line. In 04-3, 'he' means Ravi, who is named in 03-3 and 04-2. The 05-1 question 'Tell me what brings you in.' is answered by 05-3 'I've been feeling tired lately.'. Between them sits only the self-contained 05-2 consent exchange, where the question is answered at once by 'Yes, I agree.'. In 06-2, 'your concerns' refers back to 05-3 across the wordless 06-1 planner insert. 07-2 'So I can...' builds on 07-1, and 07-3 'That's the idea.' answers 07-2. No turn is merged across an intervening speaker.",
-    "Causality and safeguards: the consent card (05-2) comes before the glowing mic (05-3, 05-4), and the 05-1 toggle is drawn OFF, as the REVISION AI-voice-consent follow-up requires. No diagnosis, readings or treatment advice appear. Pages 5-6 follow the user's section order: patient details, SOAP notes, speciality planner, plan of care. 08-2 and 08-3 carry the 'WELBUK VISION' label and the vignette, and 08-1 uses the conditional 'may', as original.txt line 4 requires."
+    "Reviewer identity: the runtime gave me no task or agent ID, so reviewer.task is null.",
+    "What I read: AGENTS.md (in the system context), docs/REVISION-AND-REVIEWS.md and docs/PROMPTS.md. I read the whole request (2321 lines, fingerprint 3d1df87c...) in parts: lines 1-200, 200-600, 600-1200, 1200-1800 and 1800-2321. Its entries are original.txt 0201d6ee... and source-coverage.json 2f7f5045.... I also read in full source/original.txt, source/original-v3.txt, source/REVISION-2026-11-11.md, workflow/source-coverage.json and, as background only, responses/script-all-r34-superseded.json. A script request has no images, and I did not view or claim to inspect any image. I did not recompute any file hashes.",
+    "Reading order: I read the source and the r34 background before the script. I then re-read only the lettered text in panel order. For each pronoun, definite article, question and promise, I checked that earlier lettering resolves it, and that it is not filled in by my knowledge of the source.",
+    "Panel count: 3+4+5+3+4+2+4+6+4 = 35 panels. All 35 are in dialogueReview.",
+    "Text rejoin: I joined the textColumns of every balloon, caption and label in all 35 panels and compared each with its text field. Every one rejoins exactly, with no missing or doubled spaces or characters. Every text matches original.txt verbatim. The exceptions are the supplement labels 'WELBUK PRACTICE for the clinic', 'WELBUK CARE for clinic staff', 'WELBUK HEALTH for patients' and the repeated 09-3 'WELBUK VISION'. All four are recorded in source-coverage.json.",
+    "Change 1 verified (08-3 line breaks): the labtech balloon textColumns are now 'All done, Ravi! ' / 'We'll let you know when ' / 'your results are ready.'. They rejoin to 'All done, Ravi! We'll let you know when your results are ready.', which matches both its text field and original.txt line 56 word for word. r34's columns were 'All done, Ravi! We'll let you ' / 'know when your results ' / 'are ready.', so only the breaks changed. The new break after the exclamation puts the greeting on its own line. Scope limit: this script request has no balloon coordinates or face positions, so I could not verify the reported position and face changes. They belong to the storyboard and lettering reviews.",
+    "Change 2 verified (page 07 expectation): page 07's expectation now reads 'What happens after the visit?', and page 08 keeps 'Where could connected care go next?'. This resolves r34 non-blocking note (a). The question now leads into the after-visit page 8.",
+    "Change 3 verified (doctor-tablet note): the consultation section's doctor-tablet note now reads 'from 05-1 to the end of the visit it is put away in the desk drawer and must not appear (it returns days later in 08-5, results section)'. This is consistent with 04-3 (tablet after: put away before 05-1), with 05-1 (put away, not visible), and with the results section's own doctor-tablet object and 08-5 props. This resolves r34 note (b).",
+    "No other lettering differences: I compared all other panel texts with r34's dialogueReview quotes and original-v3.txt. Pages 1-7 and 9 are unchanged in wording, and page 8 is unchanged apart from the 08-3 line breaks.",
+    "Page 8 dependency chain from the lettering alone: 06-2's plan-of-care label ('intelligent prescribing · ... · labs') and the 'next steps' line come before 08-1 'Meanwhile, the pharmacy is notified and fills the prescription.' plus 'NEW PRESCRIPTION'. 'the prescription' has no explicit lettered antecedent, but it is an acceptable shortening that stands on its own. 08-2 'The lab is notified.' and 'LAB ORDER: samples to collect' set up 08-3. 08-3 'Later that day' explains why Ravi is back after his 07-4 exit. The technician's promise is paid off in 08-4, 08-5 and 08-6. 'Welbuk Care' and 'Welbuk Practice' were introduced on page 2. No turn is merged across an intervening speaker.",
+    "Safety: no drug names, test names, values or diagnosis appear in any lettering or object description. The sample tube has a blank label and no needle is shown.",
+    "Non-blocking notes carried forward for the storyboard and artwork stages: (c) 08-4's caption 'Results ready: Ravi is notified.' still carries no lettered 'some days later'. The time skip relies on the home and evening art and on the technician's 'when your results are ready', so the storyboard first reading should confirm that it reads as a later day. (d) Ravi wears the same light green shirt at home in the results section. This is a recognisability supplement, not a source requirement. (e) 08-3 sample-tube 'before: empty in the rack' differs slightly from 08-2 'after: ready for Ravi' (picked up by the technician). This is prop metadata only and affects no lettering."
   ],
   "issues": [],
   "dialogueReview": {
@@ -28,122 +27,146 @@
     "panels": [
       {
         "panel": "01-1",
-        "observation": "The caption 'A busy day at Dr. Ananya's clinic.' is verbatim with original.txt line 14, and its two columns rejoin exactly. It opens the comic with no dependency, and it names Ananya before her first balloon in 01-3."
+        "observation": "The caption 'A busy day at Dr. Ananya's clinic.' is verbatim from original.txt line 15, and its 2 columns rejoin. It opens the comic and names Ananya before her first balloon (01-3). No dependency."
       },
       {
         "panel": "01-2",
-        "observation": "Line 15 is kept verbatim as two consecutive Meera balloons split at the ellipsis: 'Appointments, patient details, follow-ups...' and 'I wish everything were easier to manage!'. No other speaker comes between them. The list sets up the pain point that 01-3 answers."
+        "observation": "Line 16 is kept verbatim as two consecutive Meera balloons split at the ellipsis, with no other speaker between them. Both rejoin. The list (appointments, patient details, follow-ups) is the premise for 01-3."
       },
       {
         "panel": "01-3",
-        "observation": "'Our time belongs with patients. Let's make the rest simpler.' is verbatim with line 16 in one balloon. 'the rest' refers to the paperwork Meera lists in 01-2, the panel directly before. Ananya watches the desk, as the source directs."
+        "observation": "'Our time belongs with patients. Let's make the rest simpler.' is verbatim from line 17, and its 4 columns rejoin. 'the rest' refers to Meera's list directly before it in 01-2. Ananya's motive is set here."
       },
       {
         "panel": "02-1",
-        "observation": "The caption 'The clinic begins its Welbuk onboarding.' is verbatim with line 19. The supplement label 'WELBUK PRACTICE for the clinic' names the source's laptop product. The evening time change is carried by the caption and the window light."
+        "observation": "The caption is verbatim from line 20. The supplement label 'WELBUK PRACTICE for the clinic' (recorded in coverage) is the referent for 08-6 'notified on Welbuk Practice'. Both rejoin."
       },
       {
         "panel": "02-2",
-        "observation": "'We can organise our clinic workflow here.' is verbatim with line 20. 'here' refers to the laptop introduced in 02-1, and her finger at her chin acts out 'considers team roles'."
+        "observation": "'We can organise our clinic workflow here.' is verbatim from line 21. 'here' points to the laptop onboarding shown in 02-1."
       },
       {
         "panel": "02-3",
-        "observation": "'And our team can use tools suited to each staff role.' is verbatim with line 21. 'And' directly continues Ananya's 02-2 line, with no intervening speaker. The label 'WELBUK CARE for clinic staff' names the staff app."
+        "observation": "'And our team can use tools suited to each staff role.' is verbatim from line 22. 'And' continues Ananya's 02-2 line directly. The label 'WELBUK CARE for clinic staff' is the referent for 08-5."
       },
       {
         "panel": "02-4",
-        "observation": "'One team. Better coordination.' is verbatim with line 22. It sums up 02-2 (the clinic) and 02-3 (the staff), and Meera answers with a silent nod."
+        "observation": "'One team. Better coordination.' is verbatim from line 23. It sums up 02-2 and 02-3, and Meera answers with a nod, not a line."
       },
       {
         "panel": "03-1",
-        "observation": "The caption 'A later morning: patients can always check in at the front desk.' is verbatim with line 25 (the r13 wording in REVISION). It gives the time cue and introduces 'check in' before 03-2."
+        "observation": "The caption is verbatim from line 26. 'A later morning' gives the time cue after the evening onboarding, and 'check in' is introduced here before 03-2 and 03-5."
       },
       {
         "panel": "03-2",
-        "observation": "The caption 'Some check in ahead on the Welbuk Health app.' is verbatim with line 26. 'Some' contrasts with the front-desk route in 03-1. This is the first mention of Welbuk Health, ahead of page 7."
+        "observation": "The caption is verbatim from line 27. 'Some' contrasts with the front-desk patients in 03-1. The Welbuk Health app is named before 07-1 and 08-4."
       },
       {
         "panel": "03-3",
-        "observation": "The caption 'Ravi scans the QR code at the door.' is verbatim with line 27. It names Ravi before 'Hi, Ravi!' (04-2) and 'Hello, Ravi.' (05-1). The bag is recorded on his left shoulder, which starts the bag chain."
+        "observation": "The caption is verbatim from line 28 and names Ravi before any pronoun refers to him."
       },
       {
         "panel": "03-4",
-        "observation": "The caption 'A short form on his own phone, shared with consent.' is verbatim with line 28. 'his' refers to Ravi from 03-3. This form consent is worded differently from the 05-2 AI voice consent, so the two do not blur."
+        "observation": "The caption is verbatim from line 29, and its 3 columns rejoin. 'his' refers to Ravi from 03-3."
       },
       {
         "panel": "03-5",
-        "observation": "The caption 'Every check-in gets a slot on the screen.' and the label 'A-10 · A-11 · A-12' are verbatim with line 29. The three slots match the three routes just shown."
+        "observation": "The caption and the TV label 'A-10 · A-11 · A-12' are verbatim from line 30. 'Every check-in' gathers the three routes from 03-1 to 03-4."
       },
       {
         "panel": "04-1",
-        "observation": "The caption 'Soon, his slot comes up.' and the label 'NOW · A-12' are verbatim with line 32. 'his' refers to Ravi, the third patient. The empty chairs explain why A-10 and A-11 were called first."
+        "observation": "The caption 'Soon, his slot comes up.' and the label 'NOW · A-12' are verbatim from line 33. 'his slot' continues from Ravi in 03-5 and the A-12 position on the screen."
       },
       {
         "panel": "04-2",
-        "observation": "The caption 'A quick vitals check first.' and the nurse's 'Hi, Ravi! Just relax your arm for me.' are verbatim with line 33. 'your arm' matches the cuff on his left upper arm. Only the shoulder-bag 'after' field changed since r32, and it now agrees with 05-1, 06-2 and 07-1. The lettering is unchanged."
+        "observation": "The caption and the nurse line 'Hi, Ravi! Just relax your arm for me.' are verbatim from line 34. The caption explains the action, so the line does not repeat it."
       },
       {
         "panel": "04-3",
-        "observation": "The caption 'Dr. Ananya is notified when he's ready.' and the label 'RAVI · READY' are verbatim with line 34. 'he' refers to Ravi in 04-2. The closed laptop sets up its opening in 05-1."
+        "observation": "The caption 'Dr. Ananya is notified when he's ready.' and the label 'RAVI · READY' are verbatim from line 35. 'he' is Ravi from 04-2. The tablet notification motif recurs in 08-5, and the tablet note now matches it."
       },
       {
         "panel": "05-1",
-        "observation": "'Hello, Ravi. Tell me what brings you in.' and the PATIENT DETAILS label are verbatim with line 37, and the seven columns rejoin exactly. The mic toggle is drawn OFF. The open question is answered in 05-3. The bag is on the floor beside his chair, which matches the corrected 04-2 'after'."
+        "observation": "'Hello, Ravi. Tell me what brings you in.' and the 7-column PATIENT DETAILS label are verbatim from line 38, and both rejoin. The question is answered in 05-3, and the only exchange between them is the self-contained consent exchange in 05-2."
       },
       {
         "panel": "05-2",
-        "observation": "'May the AI listen and save notes of our talk?', 'Yes, I agree.' and the AI VOICE CONSENT label are verbatim with line 38. The answer follows its question directly. This exchange is the consent step the REVISION follow-up asks for."
+        "observation": "Ananya asks 'May the AI listen and save notes of our talk?' and Ravi answers at once 'Yes, I agree.', both verbatim from line 39. The consent label rejoins and comes before the listening mic in 05-3."
       },
       {
         "panel": "05-3",
-        "observation": "'I've been feeling tired lately.' and the SOAP NOTES label are verbatim with line 39, and the eight columns rejoin exactly. The line answers the 05-1 question across the self-contained consent exchange. The mic glows only after consent, and no diagnosis is given."
+        "observation": "'I've been feeling tired lately.' answers the 05-1 question. The 8-column SOAP label rejoins and is verbatim from line 40. It is a routine concern with no diagnosis."
       },
       {
         "panel": "05-4",
-        "observation": "The caption 'Technology supports the workflow. The conversation stays human.' is verbatim with line 40. 'The conversation' refers to the 05-3 exchange. Ananya listens with eye contact and does not look at the laptop."
+        "observation": "The caption is verbatim from line 41, and its 4 columns rejoin. It is a silent listening reaction after Ravi's line."
       },
       {
         "panel": "06-1",
-        "observation": "'SPECIALITY-SPECIFIC TREATMENT PLANNER', 'Dentist: odontogram', 'Eye doctor: eye markers' and 'Paediatrician: growth scales · vaccines' are verbatim with line 43. The spelling choices are recorded in REVISION. This wordless insert has no dialogue dependency, and her hand and the bezel keep it in the same consultation."
+        "observation": "The four planner labels are verbatim from line 44 (spellings recorded in REVISION), and all rejoin. It is a wordless screen insert, and it does not break the 05-3 to 06-2 dialogue link."
       },
       {
         "panel": "06-2",
-        "observation": "'We'll go through your concerns and decide the right next steps together.' and the PLAN OF CARE label are verbatim with line 44. 'your concerns' refers to 05-3. The bag stays on the floor beside the chair until 07-1, consistent with the 04-2 and 05-1 records. No specific treatment advice is given."
+        "observation": "'We'll go through your concerns and decide the right next steps together.' is verbatim from line 45. 'your concerns' refers back to 05-3. The 6-column PLAN OF CARE label rejoins. Its 'intelligent prescribing' and 'labs' are the premise for 08-1 and 08-2."
       },
       {
         "panel": "07-1",
-        "observation": "'Welbuk Health is designed to help patients stay connected with their care.' is verbatim with line 47. It introduces the app named in 03-2. The phone comes out of the pocket it went into in 04-1. The bag is back on his shoulder at reception, matching the corrected 04-2 wording."
+        "observation": "Meera's line is verbatim from line 48, and its 5 columns rejoin. It names Welbuk Health for Ravi, which 08-4's channel label relies on."
       },
       {
         "panel": "07-2",
-        "observation": "'So I can keep useful information in one place?' is verbatim with line 48. 'So' builds directly on 07-1. The label 'WELBUK HEALTH for patients' names the third product."
+        "observation": "'So I can keep useful information in one place?' is verbatim from line 49 and builds on 07-1. 'WELBUK HEALTH for patients' is a recorded supplement label."
       },
       {
         "panel": "07-3",
-        "observation": "'That's the idea. Let's walk through what is available to you.' is verbatim with line 49. 'That's the idea.' answers 07-2 immediately, and 'what is available to you' avoids implying unlaunched features."
+        "observation": "'That's the idea. Let's walk through what is available to you.' is verbatim from line 50 and answers the 07-2 question directly."
       },
       {
         "panel": "07-4",
-        "observation": "The caption 'A smoother visit. A more connected experience.' is verbatim with line 50. The silent wave closes the visit that began on page 3, with the bag still on his shoulder."
+        "observation": "The caption is verbatim from line 51. Ravi's exit is the premise for 08-1 'Meanwhile' and 08-3 'Later that day'. Page 07's expectation 'What happens after the visit?' now leads into page 8."
       },
       {
         "panel": "08-1",
-        "observation": "The caption 'Tomorrow, care may take us beyond our hometown.' is verbatim with line 53. The conditional 'may' and the train window mark a hypothetical time change."
+        "observation": "The caption 'Meanwhile, the pharmacy is notified and fills the prescription.' and the label 'NEW PRESCRIPTION' are verbatim from line 54. They are agent-drafted, as REVISION records, and they cover the user's 'pharmacy gets notified and they fill prescriptions'. 'the prescription' follows from 06-2 and the label, an acceptable shortening. No drug names."
       },
       {
         "panel": "08-2",
-        "observation": "The 'WELBUK VISION' label and the caption 'The vision: trusted connections between clinics, specialists, and patients across locations.' are verbatim with line 54. With the vignette, they satisfy line 4's instruction to mark the vision."
+        "observation": "The caption 'The lab is notified.' and the label 'LAB ORDER: samples to collect' are verbatim from line 55. They cover 'lab gets notified on what needs to be taken' without naming any test, and they set up 08-3."
       },
       {
         "panel": "08-3",
-        "observation": "The caption 'One connected ecosystem for care and family wellness.' is verbatim with line 55. The repeated 'WELBUK VISION' label is a supplement recorded in source-coverage.json and keeps the scene symbolic."
+        "observation": "The caption 'Later that day, Ravi gives his samples at the clinic lab.' rejoins from 2 columns. The labtech balloon has new breaks: 'All done, Ravi! ' / 'We'll let you know when ' / 'your results are ready.'. It rejoins exactly to its text and to line 56, with the words unchanged. 'Later that day' matches the confirmed same-day clinic-lab decision. The promise sets up 08-4 to 08-6. Single speaker, no merged turns."
       },
       {
         "panel": "08-4",
-        "observation": "'Welbuk Practice • Welbuk Care • Welbuk Health' and 'Welbuk — Building a connected healthcare ecosystem.' are verbatim with line 56, with the bullets and em dash preserved. The panel closes the three-people, three-products framing."
+        "observation": "The caption 'Results ready: Ravi is notified.' and the label 'Welbuk Health app · email · WhatsApp' are verbatim from line 57. They fulfil the 08-3 promise and cover 'notified on mobile app/email/whats app'. The 'some days later' skip is carried by the art only (non-blocking)."
+      },
+      {
+        "panel": "08-5",
+        "observation": "The caption 'Dr. Ananya is notified on Welbuk Care.' and the label 'RESULTS READY' are verbatim from line 58. They cover 'doctor gets notified on the care app'. Welbuk Care comes from 02-3. The tablet returns here, as the updated consultation doctor-tablet note now states."
+      },
+      {
+        "panel": "08-6",
+        "observation": "The caption 'The clinic is notified on Welbuk Practice.' and the label 'RESULTS READY' are verbatim from line 59. They cover 'clinic via practice' (Welbuk Practice from 02-1) and close the after-visit flow."
+      },
+      {
+        "panel": "09-1",
+        "observation": "The caption 'Tomorrow, care may take us beyond our hometown.' is verbatim from line 62 (old page 8 panel 1, wording unchanged), and its 4 columns rejoin. The conditional 'may' is kept."
+      },
+      {
+        "panel": "09-2",
+        "observation": "'WELBUK VISION' and the vision caption are verbatim from line 63. Continuity names 09-2 as a vision panel with a vignette."
+      },
+      {
+        "panel": "09-3",
+        "observation": "The caption is verbatim from line 64. The repeated 'WELBUK VISION' label is a recorded supplement, and continuity names 09-3 as vision."
+      },
+      {
+        "panel": "09-4",
+        "observation": "The product label and the final caption are verbatim from line 65, and both rejoin. It returns to the present and ties Practice, Care and Health to the three people whose notifications page 8 just showed."
       }
     ]
   },
-  "fingerprint": "e2a963a30b57ab7306c4c8841311fa86d21e1a910700e7ac8d4c40eb298efcdd",
-  "recordedAt": "2026-11-12T11:16:00.477Z"
+  "fingerprint": "3d1df87c4964d845542fb78a8773b14e565304d77e974e32c4258b658c18ac10",
+  "recordedAt": "2026-11-12T12:27:34.221Z"
 }
