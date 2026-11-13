@@ -55,9 +55,16 @@ assert.ok(
 
 const hash = (value) => crypto.createHash('sha256').update(value).digest('hex');
 
-const { tailGeometry, balloon: brandedBalloon, balloonMask } = createLettering(cast, config.brand || null);
+const {
+  tailGeometry,
+  balloon: brandedBalloon,
+  balloonMask,
+} = createLettering(cast, config.brand || null);
 // Pages marked "brand": false (e.g. a before-the-product page) use the unthemed lettering.
-const plainBalloon = createLettering(cast, config.brand?.fontFamily ? { fontFamily: config.brand.fontFamily } : null).balloon;
+const plainBalloon = createLettering(
+  cast,
+  config.brand?.fontFamily ? { fontFamily: config.brand.fontFamily } : null,
+).balloon;
 let balloon = brandedBalloon;
 const stateFor = (page, p) => resolveStoryState(config, page, p, local);
 const { prompt, job, panelJob, layoutReference } = createGenerationJobs({
@@ -363,9 +370,7 @@ function svg(page, art, rough = false, layer = 'all', guides = true) {
           : '')
       );
     })
-    .join(
-      '',
-    )}${layer === 'artwork' ? '' : pageFooter(page)}</svg>`;
+    .join('')}${layer === 'artwork' ? '' : pageFooter(page)}</svg>`;
 }
 
 // Page number, or with workflow.json "brand.footer" a branded footer: two accent rules, the
@@ -928,6 +933,7 @@ if (command === 'layout') {
         ),
         'utf8',
       )
+      .replaceAll('\r\n', '\n') // LF output on any checkout line endings
       .replaceAll('{{TITLE}}', xml(config.title))
       .replaceAll('{{AUTHOR}}', xml(config.author || ''))
       .replace(
