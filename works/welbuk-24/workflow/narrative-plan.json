@@ -1620,6 +1620,51 @@
           "layoutRow": null
         }
       ]
+    },
+    {
+      "page": "25",
+      "feeling": "Feature summary: every Welbuk capability named in the storyboard, with release status.",
+      "questionForNextPage": "End of the comic.",
+      "intent": {
+        "emotion": "Feature summary: every Welbuk capability named in the storyboard, with release status.",
+        "revealOrder": null,
+        "peakPanel": null,
+        "turnQuestion": "End of the comic.",
+        "turnAnswer": null
+      },
+      "showcase": null,
+      "diagnostics": {
+        "showcaseExists": true,
+        "areaRange": [
+          333544,
+          1041120
+        ],
+        "strengthsEqual": false
+      },
+      "panels": [
+        {
+          "id": "25-1",
+          "beat": "Everything Welbuk does",
+          "area": 1041120,
+          "strength": 1,
+          "showcase": false,
+          "information": null,
+          "pause": null,
+          "readingGroups": null,
+          "layoutRow": null
+        },
+        {
+          "id": "25-2",
+          "beat": "Deployment and looking ahead",
+          "area": 333544,
+          "strength": 0.32,
+          "showcase": false,
+          "information": null,
+          "pause": null,
+          "readingGroups": null,
+          "layoutRow": null
+        }
+      ]
     }
   ],
   "transitions": [
@@ -6171,6 +6216,102 @@
         "readerMustKnow": null,
         "anchor": null,
         "anchorEvidencePanel": "24-4",
+        "axisBefore": null,
+        "axisAfter": null,
+        "resetCue": null,
+        "retainedObjects": [],
+        "changedObjects": [],
+        "actionBefore": null,
+        "actionAfter": null,
+        "sourceBasis": null,
+        "supplementBasis": null
+      },
+      "bridge": null,
+      "settingBasis": null,
+      "warnings": []
+    },
+    {
+      "from": "24-4",
+      "to": "25-1",
+      "pageBoundary": true,
+      "layoutBoundary": true,
+      "kind": "continuation",
+      "before": {
+        "section": "main",
+        "setting": {
+          "summary": "Dr. Ananya's neighbourhood clinic in Tamil Nadu before and after adopting Welbuk; specialty clinics, pharmacy, lab, home and a future vision (storyboard v3.0).",
+          "location": "The clinic and its rooms; specialist clinics; Ravi's home; another city (vision).",
+          "costumes": {},
+          "objects": {}
+        },
+        "scene": "Final full-width scene in front of the clinic: Dr. Ananya welcoming a patient, staff in the doorway, Ravi with his partner and child smiling. Keep the upper third as clean sky for the logo."
+      },
+      "after": {
+        "section": "main",
+        "setting": {
+          "summary": "Dr. Ananya's neighbourhood clinic in Tamil Nadu before and after adopting Welbuk; specialty clinics, pharmacy, lab, home and a future vision (storyboard v3.0).",
+          "location": "The clinic and its rooms; specialist clinics; Ravi's home; another city (vision).",
+          "costumes": {},
+          "objects": {}
+        },
+        "scene": "Typeset title and feature list grouped by workflow (eight cards)."
+      },
+      "ledger": {
+        "timeBefore": null,
+        "timeAfter": null,
+        "locationBefore": "The clinic and its rooms; specialist clinics; Ravi's home; another city (vision).",
+        "locationAfter": "The clinic and its rooms; specialist clinics; Ravi's home; another city (vision).",
+        "readerMustKnow": null,
+        "anchor": null,
+        "anchorEvidencePanel": "25-1",
+        "axisBefore": null,
+        "axisAfter": null,
+        "resetCue": null,
+        "retainedObjects": [],
+        "changedObjects": [],
+        "actionBefore": null,
+        "actionAfter": null,
+        "sourceBasis": null,
+        "supplementBasis": null
+      },
+      "bridge": null,
+      "settingBasis": null,
+      "warnings": []
+    },
+    {
+      "from": "25-1",
+      "to": "25-2",
+      "pageBoundary": false,
+      "layoutBoundary": false,
+      "kind": "continuation",
+      "before": {
+        "section": "main",
+        "setting": {
+          "summary": "Dr. Ananya's neighbourhood clinic in Tamil Nadu before and after adopting Welbuk; specialty clinics, pharmacy, lab, home and a future vision (storyboard v3.0).",
+          "location": "The clinic and its rooms; specialist clinics; Ravi's home; another city (vision).",
+          "costumes": {},
+          "objects": {}
+        },
+        "scene": "Typeset title and feature list grouped by workflow (eight cards)."
+      },
+      "after": {
+        "section": "main",
+        "setting": {
+          "summary": "Dr. Ananya's neighbourhood clinic in Tamil Nadu before and after adopting Welbuk; specialty clinics, pharmacy, lab, home and a future vision (storyboard v3.0).",
+          "location": "The clinic and its rooms; specialist clinics; Ravi's home; another city (vision).",
+          "costumes": {},
+          "objects": {}
+        },
+        "scene": "Deployment status chips (Welbuk Cloud available; on-premises, hybrid, air-gapped AI work in progress), a LOOKING AHEAD box and a closing note."
+      },
+      "ledger": {
+        "timeBefore": null,
+        "timeAfter": null,
+        "locationBefore": "The clinic and its rooms; specialist clinics; Ravi's home; another city (vision).",
+        "locationAfter": "The clinic and its rooms; specialist clinics; Ravi's home; another city (vision).",
+        "readerMustKnow": null,
+        "anchor": null,
+        "anchorEvidencePanel": "25-2",
         "axisBefore": null,
         "axisAfter": null,
         "resetCue": null,

@@ -118,9 +118,9 @@ const D = {
   '19': [[S('admin', "We're expanding. Can one platform support our locations?")], [L('CLOUD — AVAILABLE'), N('Welbuk Cloud is available today.')], [S('admin', 'What if a hospital needs a different deployment model?', { fontSize: 22 }), N('On-premises and hybrid solutions are work in progress.', { fontSize: 22 }), L('ON-PREMISES — WORK IN PROGRESS', { fontSize: 20, cols: ['ON-PREMISES —', 'WORK IN PROGRESS'] }), L('HYBRID — WORK IN PROGRESS', { fontSize: 20, cols: ['HYBRID —', 'WORK IN PROGRESS'] })], [L('AIR-GAPPED AI — WORK IN PROGRESS'), N('Air-gapped AI solutions are also a work in progress.')]],
   '20': [[N('Good care depends on the people behind it.')], [S('nurse', 'My attendance is recorded.')], [S('admin', 'I can review staff records and requests here.')], [N('Every role has its responsibilities and appropriate access.')]],
   '21': [[S('ravi', 'I can keep track of my visit details.')], [N('Relevant health information can remain accessible to the patient.')], [S('ravi', 'I almost forgot my follow-up!')], [S('ananya', "Welcome back, Ravi. Let's review your progress.")]],
-  '22': [[S('ravi', "Healthcare isn't just about my appointments.")], [S('partner', 'Each of us has different health needs.')], [N("Family and children's wellness features are part of Welbuk Health.")], [L('WELBUK VISION'), N('The vision: a more complete way to manage family wellness.')]],
-  '23': [[L('WELBUK VISION'), N("Life doesn't always happen in one city.")], [S('ravi', 'What if I could find trusted connected care here too?')], [N('The vision is to enable appropriate record sharing with patient permission.')], [S('specialist', "Let's continue your care with the information you've chosen to share.")]],
-  '24': [[N('Behind every patient visit is an entire care team.')], [N('Welbuk Practice — Clinic and hospital operations.', { fontSize: 20 }), N('Welbuk Care — Role-based tools for healthcare staff.', { fontSize: 20 }), N('Welbuk Health — Connected patient and family care.', { fontSize: 20 })], [L('WELBUK VISION'), N('Our vision is a trusted, connected healthcare ecosystem.', { fontSize: 20, cols: ['Our vision is a trusted,', 'connected healthcare ecosystem.'] })], [L('Building a Connected Healthcare Ecosystem', { fontSize: 22 }), N('Technology supports the work. People deliver the care.'), L('Better workflows. Better coordination. More time for care.', { fontSize: 20 }), L('welbuk.com', { fontSize: 20 })]],
+  '22': [[S('ravi', "Healthcare isn't just about my appointments.")], [S('partner', 'Each of us has different health needs.')], [N("Family and children's wellness features are part of Welbuk Health.")], [L('LOOKING AHEAD'), N('Next: a more complete way to manage family wellness.')]],
+  '23': [[L('LOOKING AHEAD'), N("Life doesn't always happen in one city.")], [S('ravi', 'What if I could find trusted connected care here too?')], [N('The goal: appropriate record sharing with patient permission.')], [S('specialist', "Let's continue your care with the information you've chosen to share.")]],
+  '24': [[N('Behind every patient visit is an entire care team.')], [N('Welbuk Practice — Clinic and hospital operations.', { fontSize: 20 }), N('Welbuk Care — Role-based tools for healthcare staff.', { fontSize: 20 }), N('Welbuk Health — Connected patient and family care.', { fontSize: 20 })], [L('LOOKING AHEAD'), N('Our goal is a trusted, connected healthcare ecosystem.', { fontSize: 20, cols: ['Our goal is a trusted,', 'connected healthcare ecosystem.'] })], [L('Building a Connected Healthcare Ecosystem', { fontSize: 22 }), N('Technology supports the work. People deliver the care.'), L('Better workflows. Better coordination. More time for care.', { fontSize: 20 }), L('welbuk.com', { fontSize: 20 })]],
 };
 // Manual placement overrides: OV[page][panel][index] = { x, dy } (panel-local), set after inspection.
 // Busyness per 8 px cell of the composed page (tools/busy-map.py). A cell counts as busy if it or a
@@ -264,6 +264,18 @@ for (const art of artPages) {
   if (pid === '01') page.brand = false;
   pages.push(page);
 }
+// Page 25 (user request 2026-11-13: "as 25th page lets list all our features"): a typeset feature
+// summary (tools/page25.html, rendered by tools/render-page25.cjs), one full panel, no lettering.
+pages.push({
+  id: '25', section: 'main', purpose: 'Feature summary: every Welbuk capability named in the storyboard, with release status.',
+  expectation: 'End of the comic.',
+  panels: [
+    { id: '25-1', order: 1, role: '提示', beat: 'Everything Welbuk does', rect: [30, 16, 964, 1080],
+      scene: 'Typeset title and feature list grouped by workflow (eight cards).', speakers: {}, dialogue: [] },
+    { id: '25-2', order: 2, role: '余韻', beat: 'Deployment and looking ahead', rect: [30, 1110, 964, 346],
+      scene: 'Deployment status chips (Welbuk Cloud available; on-premises, hybrid, air-gapped AI work in progress), a LOOKING AHEAD box and a closing note.', speakers: {}, dialogue: [] },
+  ],
+});
 assert(pages.every((p) => p.panels.every((q) => ROLES.includes(q.role))));
 function assert(v) { if (!v) throw new Error('assertion failed'); }
 
