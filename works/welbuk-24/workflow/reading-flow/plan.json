@@ -4145,31 +4145,31 @@
           {
             "number": 2,
             "speaker": "narration",
-            "text": "On-premises and hybrid solutions are work in progress.",
+            "text": "Need on-premises or hybrid? Let's talk.",
             "rect": [
-              237,
+              225,
               597,
-              397,
-              74
+              458,
+              47
             ],
             "center": [
-              435.5,
-              634
+              454,
+              620.5
             ],
             "mouth": null
           },
           {
             "number": 3,
             "speaker": "label",
-            "text": "ON-PREMISES — WORK IN PROGRESS",
+            "text": "ON-PREMISES — LET'S TALK",
             "rect": [
               109,
               796,
-              225,
+              201,
               70
             ],
             "center": [
-              221.5,
+              209.5,
               831
             ],
             "mouth": null
@@ -4177,15 +4177,15 @@
           {
             "number": 4,
             "speaker": "label",
-            "text": "HYBRID — WORK IN PROGRESS",
+            "text": "HYBRID — LET'S TALK",
             "rect": [
               467,
               796,
-              225,
+              150,
               70
             ],
             "center": [
-              579.5,
+              542,
               831
             ],
             "mouth": null
@@ -4228,15 +4228,15 @@
           {
             "number": 1,
             "speaker": "label",
-            "text": "AIR-GAPPED AI — WORK IN PROGRESS",
+            "text": "AIR-GAPPED AI — LET'S TALK",
             "rect": [
               51,
               934,
-              431,
+              352,
               46
             ],
             "center": [
-              266.5,
+              227,
               957
             ],
             "mouth": null
@@ -4244,16 +4244,16 @@
           {
             "number": 2,
             "speaker": "narration",
-            "text": "Air-gapped AI solutions are also a work in progress.",
+            "text": "Need AI that stays inside your walls? Let's talk.",
             "rect": [
-              51,
-              1354,
-              573,
+              411,
+              934,
+              511,
               46
             ],
             "center": [
-              337.5,
-              1377
+              666.5,
+              957
             ],
             "mouth": null
           }
@@ -4262,7 +4262,13 @@
         "protected": [],
         "intent": null,
         "groups": null,
-        "warnings": []
+        "warnings": [
+          {
+            "from": 1,
+            "to": 2,
+            "reason": "左から右へ戻る移動と縦方向の範囲が重なる。段差・余白・人物の配置を目視で検討する。"
+          }
+        ]
       }
     ],
     "checklist": [

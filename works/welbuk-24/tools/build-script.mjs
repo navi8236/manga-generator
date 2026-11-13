@@ -115,7 +115,7 @@ const D = {
   '16': [[S('ananya', "I'd like a specialist to review your case.")], [N('Welbuk supports structured referral workflows.')], [S('ananya', "This helps us track the referral's progress.")], [N('The goal is better coordination between care providers.')]],
   '17': [[S('meera', 'Your consultation bill is ready.')], [N('Billing information is organized in one place.')], [S('ravi', "I'll pay by QR.")], [S('meera', "Payment received. Here's your receipt.")]],
   '18': [[N("It's the end of another busy day.")], [S('meera', "Today's collections and balances are ready for review.")], [N('Clinic finances are easier to track and reconcile.')], [S('ananya', 'A much better way to end the day.')]],
-  '19': [[S('admin', "We're expanding. Can one platform support our locations?")], [L('CLOUD — AVAILABLE'), N('Welbuk Cloud is available today.')], [S('admin', 'What if a hospital needs a different deployment model?', { fontSize: 22 }), N('On-premises and hybrid solutions are work in progress.', { fontSize: 22 }), L('ON-PREMISES — WORK IN PROGRESS', { fontSize: 20, cols: ['ON-PREMISES —', 'WORK IN PROGRESS'] }), L('HYBRID — WORK IN PROGRESS', { fontSize: 20, cols: ['HYBRID —', 'WORK IN PROGRESS'] })], [L('AIR-GAPPED AI — WORK IN PROGRESS'), N('Air-gapped AI solutions are also a work in progress.')]],
+  '19': [[S('admin', "We're expanding. Can one platform support our locations?")], [L('CLOUD — AVAILABLE'), N('Welbuk Cloud is available today.')], [S('admin', 'What if a hospital needs a different deployment model?', { fontSize: 22 }), N("Need on-premises or hybrid? Let's talk.", { fontSize: 22 }), L("ON-PREMISES — LET'S TALK", { fontSize: 20, cols: ['ON-PREMISES —', "LET'S TALK"] }), L("HYBRID — LET'S TALK", { fontSize: 20, cols: ['HYBRID —', "LET'S TALK"] })], [L("AIR-GAPPED AI — LET'S TALK"), N("Need AI that stays inside your walls? Let's talk.")]],
   '20': [[N('Good care depends on the people behind it.')], [S('nurse', 'My attendance is recorded.')], [S('admin', 'I can review staff records and requests here.')], [N('Every role has its responsibilities and appropriate access.')]],
   '21': [[S('ravi', 'I can keep track of my visit details.')], [N('Relevant health information can remain accessible to the patient.')], [S('ravi', 'I almost forgot my follow-up!')], [S('ananya', "Welcome back, Ravi. Let's review your progress.")]],
   '22': [[S('ravi', "Healthcare isn't just about my appointments.")], [S('partner', 'Each of us has different health needs.')], [N("Family and children's wellness features are part of Welbuk Health.")], [L('LOOKING AHEAD'), N('Next: a more complete way to manage family wellness.')]],
@@ -273,7 +273,7 @@ pages.push({
     { id: '25-1', order: 1, role: '提示', beat: 'Everything Welbuk does', rect: [30, 16, 964, 1080],
       scene: 'Typeset title and feature list grouped by workflow (eight cards).', speakers: {}, dialogue: [] },
     { id: '25-2', order: 2, role: '余韻', beat: 'Deployment and looking ahead', rect: [30, 1110, 964, 346],
-      scene: 'Deployment status chips (Welbuk Cloud available; on-premises, hybrid, air-gapped AI work in progress), a LOOKING AHEAD box and a closing note.', speakers: {}, dialogue: [] },
+      scene: 'Deployment status chips (Welbuk Cloud available; on-premises, hybrid, air-gapped AI: let's talk), a LOOKING AHEAD box and a closing note.', speakers: {}, dialogue: [] },
   ],
 });
 assert(pages.every((p) => p.panels.every((q) => ROLES.includes(q.role))));
