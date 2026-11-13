@@ -1,0 +1,22 @@
+{
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/source-all-c40579e67920b88fd1cb06e43e472188d55bb9b72c674bb45e272329d96936dc.json",
+  "reviewer": {
+    "role": "subagent",
+    "task": "claude-code-agent:manga-reviewer:a19d3ed8e881012f5",
+    "reportedTask": "UNAVAILABLE",
+    "taskSource": "Agent ID returned by the Claude Code Agent tool to the parent."
+  },
+  "status": "pass",
+  "observations": [
+    "Read: the prepared request (fingerprint c40579e6..., stage source, target all) and all 48 lines of works/auto-6294ee8a2094/source/original.txt. Also read docs/REVISION-AND-REVIEWS.md and AGENTS.md. A search of docs/PROMPTS.md for 'source' found nothing. No images apply to this stage. The runtime did not give me a subagent/task identity, so the task field is UNAVAILABLE. The parent must not invent one.",
+    "Not story material: line 1 is the title 'A BETTER WAY TO CARE'. Line 2 is a production brief (six pages, English, for Welbuk). Line 4 is a disclaimer: fictional onboarding journey, and future referral-network experiences must be marked as vision. Lines 6-9 are the CAST list and lines 46-47 are ART DIRECTION. None of these should become dialogue. Pages 1-6 (lines 11-44) are the story, with dialogue and captions written verbatim.",
+    "Cause and order: paper registers and a phone burden reception (P1) -> Ananya decides to simplify -> the clinic onboards Welbuk Practice/Care (P2) -> Ravi registers with consent (P3) -> consultation (P4) -> Meera introduces the patient app (P5) -> future vision (P6). The time order is linear. The cause for P6-1 (Ravi travelling to another city) is only implied by the caption 'Tomorrow, care may take us beyond our hometown', and the source gives no reason for the trip. This is acceptable because the panel is a conceptual transition.",
+    "Ending: P6-4 is a group smile with the three product labels and the final caption 'Welbuk — Building a connected healthcare ecosystem.' There is no reader-facing thank-you that would need removing. The ending ties back to P2-4 'One team. Better coordination.'",
+    "Vision vs current features: P6-2 must visibly carry the 'WELBUK VISION' label, and its caption says 'The vision:'. P5 is written carefully: Health is 'designed to help', the screen is 'conceptual', and Meera says 'what is available to you'. Ambiguity to carry into the script: the family wellness ecosystem in P6-3 has no explicit vision label. The only safeguard is the art-direction rule against showing future vision as launched. The script should present it as vision (it sits on the 'BIGGER WELBUK VISION' page) and not as a current feature. The same caution applies to the claim behind the P6-4 product trio.",
+    "Medical and data limits: P3-3 says to show only sample details, not real identifying data, and P3-2 shows consent being asked. P4-2's 'I've been feeling tired lately' is a routine concern with no diagnosis, and P4-4 explicitly avoids specific treatment advice. P2-1 uses generic setup fields. Every UI screen (laptop P2-1, staff phone P2-3, app P5-2, family app P6-3) must use placeholder, non-sensitive content.",
+    "Production carry-forwards (they do not change the source): (a) the in-scene 'WELBUK VISION' label in P6-2 and the product labels in P6-4 conflict with the rule that panel art is text-free (line 47). The shared CLI should composite them as text, or they must be planned as deliberate signage. (b) Ravi's partner and child in P6-3 are not in CAST. They need cast entries marked as additions made for the comic. (c) Reading order is Western left-to-right. (d) The recorded decision to use the Higgsfield renderer (gpt_image_2_6, text-free) is noted and does not affect the source."
+  ],
+  "issues": [],
+  "fingerprint": "c40579e67920b88fd1cb06e43e472188d55bb9b72c674bb45e272329d96936dc",
+  "recordedAt": "2026-11-11T07:16:13.052Z"
+}

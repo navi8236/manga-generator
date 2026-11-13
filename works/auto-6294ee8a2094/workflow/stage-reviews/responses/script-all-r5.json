@@ -1,0 +1,123 @@
+{
+ "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/script-all-6a51158e03a86f7b970171b333f2b9b1c48216b8dcf53dbd16f6fbd8f18cfae5.json",
+ "reviewer": {
+  "role": "subagent",
+  "task": "claude-code-agent:manga-reviewer:aca5e57591ec214e3",
+  "reportedTask": "UNAVAILABLE - the runtime did not give this reviewer a task/agent ID. The parent must record the real ID of this subagent invocation from its own launch result and must not invent one.",
+  "taskSource": "Agent ID returned by the Claude Code Agent tool to the parent."
+ },
+ "status": "changes-requested",
+ "observations": [
+  "What I read: the full prepared request (base.script with 23 panels 01-1..06-4, decisions, dialoguePolicy/dialogueInstructions), works/auto-6294ee8a2094/source/original.txt in full, works/auto-6294ee8a2094/workflow/source-coverage.json, AGENTS.md (supplied as project instructions) and docs/REVISION-AND-REVIEWS.md. I only searched docs/PROMPTS.md for its script-related lines and did not read it in full. No artwork exists for this stage and I saw no images. Everything is file contents nothing was unreadable. Order: I read only the lettered lines in panel order first, then compared them with the original.",
+  "Reading the lettering alone, every exchange holds up without help from the source. 'the rest' (01-3) points back to Meera's list in 01-2. Meera's 'And our team...' (02-3) continues Ananya's line in 02-2, with no speaker in between. Each question is answered in the next panel: 03-1 to 03-2 ('Of course'), 03-2 to 03-3 ('Yes, please'), 04-1 to 04-2, and 05-2 to 05-3 ('That's the idea'). Every line and caption matches the source word for word. The only change is 01-2, where one line is split into two balloons by the same speaker at the ellipsis. No turns are merged across other speakers.",
+  "The stethoscope supplements make no medical claim. A stethoscope worn around the neck is just a sign that someone is a doctor. No panel shows it being used, and nothing shows an examination, a test result, a diagnosis or a prescription. 04-2 keeps the source's routine 'feeling tired', and 04-4 keeps 'decide the right next steps together' without treatment advice. The specialist's stethoscope only appears inside the vision vignette (06-2) and adds no feature claim. However, the costume instructions conflict with each other (see issue).",
+  "The product roles match the source. Practice is shown on a laptop for the clinic (02-1), Care on a staff phone (02-3) and Health on Ravi's phone for patients (05-1/05-2), and all three come together in 06-4. The added labels are manga supplements that name products the source already describes. Each is recorded in the coverage file.",
+  "The vision panels are kept separate from current features. Only 06-2 and 06-3 carry the 'WELBUK VISION' label and the pale-blue vignette. 06-1 keeps the conditional 'may', and 06-4 is explicitly back in the present with no vignette. Screens show only abstract blocks and icons (calendar, heart, profile circles), with no readable text or personal data. 03-3 bans ID cards and papers with writing, as the source's 'no actual identifying data' requires.",
+  "Props and hands are consistent in the script. Ravi's bag is strap-held in 03-1 and 03-4, set on the floor in 04-1 and 04-4, and back on his shoulder in 05-1 and 05-4. His phone goes from pocket to right hand (05-1), both hands (05-2), left hand (05-4) and left hand in his lap (06-1). Meera holds the staff phone in her right hand in 02-3, 02-4 and 06-4. No hand is given two tasks at once.",
+  "Screen direction holds within each scene: Ravi left and Meera right on page 3, Ananya left and Ravi right in 04-1, 04-2, 04-3 and 04-4, and Meera left and Ravi right in 05-1, 05-2 and 05-3. Pages 3 and 5 put the pair on opposite sides. That is acceptable in the script, because page 4 comes between them and 05-1 is a fresh establishing shot from the desk corner, but the storyboard and lettering reviews should confirm it reads naturally."
+ ],
+ "issues": [
+  {
+   "problem": "The stethoscope instructions contradict each other, which risks inconsistent artwork. They are not a medical claim. cast.ananya.description says she wears a stethoscope 'in clinic scenes', but none of the section costumes for clinic-morning, onboarding, reception, consultation or closing mention one. Panel 04-4's scene says 'No prescriptions, no instruments', so a renderer given both texts may show the stethoscope in 04-1 to 04-3 and drop it in 04-4. It is also unclear whether the after-hours office (onboarding) or the street-side closing (06-4) count as 'clinic scenes'. Likewise, cast.specialist.description includes a stethoscope that sections.vision.costumes.specialist leaves out. Fix: state in each section costume whether the stethoscope is worn, and reword 04-4 to something like 'no prescriptions, no instruments in use (stethoscope worn around neck only)'.",
+   "location": "cast.ananya.description and cast.specialist.description vs sections.*.costumes (clinic-morning, onboarding, reception, consultation, vision, closing), and panel 04-4 scene",
+   "resolved": false
+  }
+ ],
+ "dialogueReview": {
+  "sourceCompared": true,
+  "panels": [
+   {
+    "panel": "01-1",
+    "observation": "The source caption 'A busy day at Dr. Ananya's clinic.' is kept word for word. It introduces Ananya by name and sets up the 'busy' premise that Meera's complaint in 01-2 depends on."
+   },
+   {
+    "panel": "01-2",
+    "observation": "Meera's single source line is split at the ellipsis into two balloons by the same speaker, with nothing in between. The list (appointments, details, follow-ups) gives 'everything' a concrete referent."
+   },
+   {
+    "panel": "01-3",
+    "observation": "Ananya's line is word for word. 'the rest' depends on the paperwork list in 01-2 directly before it, and her watching the desk shows why she decides to act."
+   },
+   {
+    "panel": "02-1",
+    "observation": "The onboarding caption is word for word, and the time change is shown by evening light. The added Practice label names the source's 'laptop view of Welbuk Practice' and makes no feature claim."
+   },
+   {
+    "panel": "02-2",
+    "observation": "'We can organise our clinic workflow here' is word for word. 'here' refers to the laptop setup shown in 02-1, and considering team roles sets up the staff tools in 02-3."
+   },
+   {
+    "panel": "02-3",
+    "observation": "Meera's 'And our team...' is word for word and directly continues Ananya's 02-2 line with no other speaker between them. The Care label matches the source's 'staff phone displaying Welbuk Care'."
+   },
+   {
+    "panel": "02-4",
+    "observation": "'One team. Better coordination.' is word for word and sums up 02-2 and 02-3. Meera's silent nod is a reaction added for the manga, not a dropped line."
+   },
+   {
+    "panel": "03-1",
+    "observation": "Ravi's greeting and request are word for word. The request to see the doctor is what Meera's 'Of course' in 03-2 answers."
+   },
+   {
+    "panel": "03-2",
+    "observation": "'Of course. May I register your details for today's appointment?' is word for word. It answers 03-1 and asks the consent question that 03-3 replies to, keeping consent before data entry."
+   },
+   {
+    "panel": "03-3",
+    "observation": "'Yes, please.' answers the consent question in 03-2 directly. Meera types only into blank fields, with no ID cards or written papers, as the source's 'no actual identifying data' requires."
+   },
+   {
+    "panel": "03-4",
+    "observation": "'You're all set, Ravi. Please have a seat.' is word for word. Using his name follows naturally from the registration, and the gesture to the chairs leads into his being called in on page 4."
+   },
+   {
+    "panel": "04-1",
+    "observation": "Ananya's greeting is word for word, and the move to the consultation room is shown with the same costumes. 'Tell me what brings you in' is the question 04-2 answers."
+   },
+   {
+    "panel": "04-2",
+    "observation": "'I've been feeling tired lately.' answers 04-1 word for word as a routine concern. No diagnosis or advice is written or drawn, as the source requires."
+   },
+   {
+    "panel": "04-3",
+    "observation": "The caption is word for word and is shown by a closed laptop and an attentive listener. It comments on the exchange in 04-1 and 04-2 without adding any medical content."
+   },
+   {
+    "panel": "04-4",
+    "observation": "The 'next steps together' line is word for word, and 'your concerns' refers back to 04-2. No treatment advice appears, but the scene's 'no instruments' conflicts with the stethoscope in the cast description (see issue)."
+   },
+   {
+    "panel": "05-1",
+    "observation": "Meera's Welbuk Health line is word for word and keeps the source's careful 'designed to help'. The return to reception lets this follow the consultation in time."
+   },
+   {
+    "panel": "05-2",
+    "observation": "Ravi's question is word for word and depends on Meera's explanation in 05-1. The abstract calendar and heart cards match the source's 'appointments and health information' with no data shown, and the Health label completes the three products."
+   },
+   {
+    "panel": "05-3",
+    "observation": "'That's the idea' answers the question in 05-2 directly. 'what is available to you' is kept word for word, so no unlaunched feature is implied."
+   },
+   {
+    "panel": "05-4",
+    "observation": "The caption is word for word. Ravi leaving with his phone and bag shows the 'reassured' from the source and closes the visit begun in 03-1."
+   },
+   {
+    "panel": "06-1",
+    "observation": "The caption is word for word and keeps the conditional 'may'. The train window makes the time and place change and leads into the vision without labelling it as current."
+   },
+   {
+    "panel": "06-2",
+    "observation": "The 'WELBUK VISION' label the source asks for and the caption are word for word inside the vignette. The specialist and the dotted links are symbolic and do not suggest a launched referral feature."
+   },
+   {
+    "panel": "06-3",
+    "observation": "The caption is word for word. The repeated vision label and the vignette keep the family wellness app conceptual, and the tablet shows only abstract icons."
+   },
+   {
+    "panel": "06-4",
+    "observation": "The three product labels and the final caption are word for word. The present-day group portrait with no vignette ties Practice, Care and Health back to Ananya, Meera and Ravi as set up in 02-1, 02-3 and 05-2."
+   }
+  ]
+ }
+}

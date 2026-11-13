@@ -1,0 +1,366 @@
+{
+  "version": 3,
+  "page": "09",
+  "status": "planning-guide-not-reviewed",
+  "direction": "left-to-right, top-to-bottom",
+  "panels": [
+    {
+      "id": "09-1",
+      "rect": [
+        24,
+        24,
+        476,
+        420
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "narration",
+          "text": "Welbuk Practice sends Ravi's follow-up reminder on WhatsApp. No calls from the front desk.",
+          "rect": [
+            32,
+            28,
+            465,
+            138
+          ],
+          "center": [
+            264.5,
+            97
+          ],
+          "mouth": null
+        },
+        {
+          "number": 2,
+          "speaker": "label",
+          "text": "FOLLOW-UP REMINDER",
+          "rect": [
+            32,
+            174,
+            203,
+            106
+          ],
+          "center": [
+            133.5,
+            227
+          ],
+          "mouth": null
+        }
+      ],
+      "faces": {
+        "ravi": {
+          "anchor": [
+            324,
+            320
+          ],
+          "face": [
+            274,
+            224,
+            100,
+            120
+          ]
+        }
+      },
+      "protected": [],
+      "intent": {
+        "entry": [
+          40,
+          40
+        ],
+        "exit": [
+          490,
+          430
+        ]
+      },
+      "groups": null,
+      "warnings": []
+    },
+    {
+      "id": "09-2",
+      "rect": [
+        524,
+        24,
+        476,
+        420
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "narration",
+          "text": "On the day, Ravi arrives empty-handed. No files to find, no reports to re-enter: Welbuk already has them.",
+          "rect": [
+            532,
+            28,
+            438,
+            170
+          ],
+          "center": [
+            751,
+            113
+          ],
+          "mouth": null
+        }
+      ],
+      "faces": {
+        "ravi": {
+          "anchor": [
+            759,
+            292
+          ],
+          "face": [
+            724,
+            224,
+            70,
+            85
+          ]
+        }
+      },
+      "protected": [],
+      "intent": {
+        "entry": [
+          540,
+          40
+        ],
+        "exit": [
+          990,
+          430
+        ]
+      },
+      "groups": null,
+      "warnings": []
+    },
+    {
+      "id": "09-3",
+      "rect": [
+        24,
+        468,
+        476,
+        420
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "narration",
+          "text": "He checks in himself. No queue at the desk.",
+          "rect": [
+            32,
+            472,
+            316,
+            106
+          ],
+          "center": [
+            190,
+            525
+          ],
+          "mouth": null
+        }
+      ],
+      "faces": {
+        "ravi": {
+          "anchor": [
+            339,
+            712
+          ],
+          "face": [
+            294,
+            628,
+            90,
+            105
+          ]
+        },
+        "meera": {
+          "anchor": [
+            104,
+            736
+          ],
+          "face": [
+            84,
+            698,
+            40,
+            48
+          ]
+        }
+      },
+      "protected": [],
+      "intent": {
+        "entry": [
+          40,
+          484
+        ],
+        "exit": [
+          490,
+          880
+        ]
+      },
+      "groups": null,
+      "warnings": []
+    },
+    {
+      "id": "09-4",
+      "rect": [
+        524,
+        468,
+        476,
+        420
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "narration",
+          "text": "As usual, his slot comes up on the screen.",
+          "rect": [
+            532,
+            472,
+            342,
+            106
+          ],
+          "center": [
+            703,
+            525
+          ],
+          "mouth": null
+        },
+        {
+          "number": 2,
+          "speaker": "label",
+          "text": "NOW · A-31",
+          "rect": [
+            794,
+            588,
+            190,
+            74
+          ],
+          "center": [
+            889,
+            625
+          ],
+          "mouth": null
+        }
+      ],
+      "faces": {
+        "ravi": {
+          "anchor": [
+            739,
+            786
+          ],
+          "face": [
+            704,
+            718,
+            70,
+            85
+          ]
+        }
+      },
+      "protected": [],
+      "intent": {
+        "entry": [
+          540,
+          484
+        ],
+        "exit": [
+          990,
+          880
+        ]
+      },
+      "groups": null,
+      "warnings": []
+    },
+    {
+      "id": "09-5",
+      "rect": [
+        24,
+        912,
+        976,
+        552
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "ananya",
+          "text": "Welcome back, Ravi. Your results are already here.",
+          "rect": [
+            144,
+            928,
+            433,
+            106
+          ],
+          "center": [
+            360.5,
+            981
+          ],
+          "mouth": [
+            379,
+            1196
+          ]
+        },
+        {
+          "number": 2,
+          "speaker": "narration",
+          "text": "Fewer missed follow-ups, shorter visits, less paperwork. The clinic's time goes to patients.",
+          "rect": [
+            40,
+            1352,
+            780,
+            106
+          ],
+          "center": [
+            430,
+            1405
+          ],
+          "mouth": null
+        }
+      ],
+      "faces": {
+        "ananya": {
+          "anchor": [
+            379,
+            1196
+          ],
+          "face": [
+            324,
+            1092,
+            110,
+            130
+          ]
+        },
+        "ravi": {
+          "anchor": [
+            734,
+            1208
+          ],
+          "face": [
+            684,
+            1112,
+            100,
+            120
+          ]
+        }
+      },
+      "protected": [],
+      "intent": {
+        "entry": [
+          40,
+          928
+        ],
+        "exit": [
+          990,
+          1455
+        ]
+      },
+      "groups": null,
+      "warnings": []
+    }
+  ],
+  "checklist": [
+    "番号と誘導線を隠した画像を先に読み、予測した発話順を記録する",
+    "最初のセリフへ上・左から入れるか",
+    "近い非連続の吹き出しを一組と誤認して返答を飛ばさないか",
+    "前の会話のまとまりを読み終えてから次のまとまりへ進めるか",
+    "返答へ自然に移り、視線が大きく逆戻りしないか",
+    "顔の向き・視線・手や小道具の動作と読順がつながるか",
+    "話者への尾が別人物や重要物を横切らないか",
+    "場所・時間・回想の切替と物の移動を直前直後から理解できるか",
+    "最後のセリフ・反応から次のコマへ移れるか",
+    "大きなコマ・余白・情報公開の順がページの感情の狙いに合うか",
+    "話題の境界と段・ページ境界が一致し、不要な読み戻りを誘わないか"
+  ]
+}

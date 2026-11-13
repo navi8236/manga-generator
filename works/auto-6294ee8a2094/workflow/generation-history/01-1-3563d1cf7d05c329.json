@@ -1,0 +1,28 @@
+{
+  "promptVersion": 2,
+  "panel": "01-1",
+  "project": "works/auto-6294ee8a2094/workflow.json",
+  "fingerprint": "fb50075d251ea5da0464674a6423640fb0e3e482b694983bd0e5ba64ab78399f",
+  "operation": "edit",
+  "sourceHash": "6294ee8a20944646ae8401695eeb8ea6cab68725127d488e11e4dae584d40adb",
+  "prompt": "TASK: Edit image 1. This is a local revision of the supplied artwork.\nINPUT IMAGES (in supplied order):\nImage 1: edit-target. Base image to edit; requested changes take precedence over preservation.\nCHANGE REQUEST:\nChange only the clinic building so it matches the same clinic's entrance seen later in the comic: a clean single-storey white-walled clinic with a flat teal fabric awning over a wide glass double-door entrance with slim grey aluminium frames, and a large glass window with grey frames to the right of the door, light concrete planters with leafy shrubs at the base of the walls. Replace the blue corrugated tin awning, the blue wooden door frame and the louvred blue window with these. Keep everything else exactly as it is: Dr. Ananya standing in the doorway in the same pose, position and size, welcoming the elderly woman in the lilac sari seen from behind, the two waiting patients on perforated metal chairs at right, the reception desk with registers and a desk phone visible inside the doorway, the hibiscus and potted plants at left, the street, palm trees, the yellow flowering tree branches at top, the morning sunlight, and the plain white area at the top-left corner. No signage, no text, no logos.\nPRESERVE: retain all areas, identity traits, acting, clothing, composition and lettering space outside the requested change. The change request overrides preservation where necessary; repair connected anatomy, contact objects and occlusion together. Supporting images supply only their stated roles. Do not copy their entire scene or pose.\nOUTPUT: one edited image matching the target aspect. Do not add text, guide marks or a global style filter. Re-measure faces and mouths and inspect lettering space after adoption.",
+  "promptHash": "97e10ed0a3d2fa1ea72a0859387b5e4c62135fb0846078d22e4a69480f754297",
+  "references": [
+    {
+      "file": "works/auto-6294ee8a2094/workflow/generation-inputs/01-1-457d485d0a307b5d/reference-0.png",
+      "hash": "bcd2f691235e99960fc087ac74da0d642a33a10a882ffea8e88672a7beca91d8",
+      "original": "works/auto-6294ee8a2094/assets/generated/01-1-bcd2f691235e9996.png",
+      "index": 1,
+      "kind": "edit-target",
+      "role": "Base image to edit; requested changes take precedence over preservation."
+    }
+  ],
+  "renderer": "Higgsfield gpt_image_2_6",
+  "model": "gpt_image_2_6",
+  "seed": null,
+  "imageHash": "3563d1cf7d05c3294164b92d33b618d077ea650e8d6a168a7bbc9f0ba3c2c844",
+  "image": "works/auto-6294ee8a2094/assets/generated/01-1-3563d1cf7d05c329.png",
+  "generatedSourceFile": "/home/user/manga-generator/works/auto-6294ee8a2094/assets/candidates/01-1/1bc70e69-1865-4436-85e2-a134d5b12b82.png",
+  "recordedAt": "2026-11-11T09:22:24.826Z",
+  "note": "Actual tool prompt and snapshots; acceptedJob after later layout changes may differ from this generation plan."
+}

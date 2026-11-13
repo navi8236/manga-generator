@@ -1,0 +1,77 @@
+{
+  "panel": "05-2",
+  "fingerprint": "dd6a8991c5af74d118975c0b61dbb817f93802fa6da077dbca9b9279d7366fda",
+  "observation": "Wide consent beat: Ananya asks and ticks the consent box; Ravi agrees with a raised open hand. Inspected at 25% (contact sheet), 100% (full panel) and 200% (face crops), and on the composed page.",
+  "views": {
+    "thumbnail": true,
+    "native": true,
+    "detail": true
+  },
+  "checks": {
+    "anatomy": {
+      "result": "pass",
+      "note": "Small figures but readable: Ananya's open left hand and right fingertip on the trackpad; Ravi's raised right hand and left hand on his knee correct at 200%."
+    },
+    "contact": {
+      "result": "pass",
+      "note": "Ananya's fingertip touches the trackpad; Ravi's hand rests on his knee."
+    },
+    "objects": {
+      "result": "pass",
+      "note": "Consent card with mic icon, shield icon, ticked check box and grey/teal buttons; no text. Bag strap removed by edit (Ravi's bag is on the floor from 05-1)."
+    },
+    "faces": {
+      "result": "pass",
+      "note": "Faces match the sheets at 200%; see faceIdentity."
+    },
+    "linework": {
+      "result": "pass",
+      "note": "Consistent with page 5 after two edits; no seams."
+    },
+    "background": {
+      "result": "pass",
+      "note": "Window at far left and a broad plain wall used for lettering."
+    },
+    "continuity": {
+      "result": "pass",
+      "note": "Costumes and watch on left wrist match; no bag on Ravi (continuity with 05-1 and 06-2)."
+    },
+    "lettering": {
+      "result": "pass",
+      "note": "Two balloons and the AI VOICE CONSENT label share the top wall, left to right; tails reach both mouths without crossing faces or the label."
+    }
+  },
+  "issues": [
+    {
+      "category": "continuity",
+      "description": "First result showed Ravi still wearing his shoulder bag; strap removed by edit 26abe345.",
+      "status": "resolved"
+    },
+    {
+      "category": "lettering",
+      "description": "Large figures left no room for two balloons and the label in the 330px strip; zoomed out by edit 7fa19961. Faces are now small (wide beat).",
+      "status": "resolved"
+    }
+  ],
+  "faceIdentity": {
+    "ananya": {
+      "reference": "works/auto-6294ee8a2094/assets/characters/main-cast.png",
+      "traits": [
+        "almond eyes with slightly heavy lids and gentle downward outer corners visible",
+        "soft level medium brows present",
+        "oval face with pointed chin and small rounded nose; low bun and gold stud match the sheet"
+      ],
+      "expression": "Polite smiling question (small in frame; traits checked at 200%)"
+    },
+    "ravi": {
+      "reference": "works/auto-6294ee8a2094/assets/characters/main-cast.png",
+      "traits": [
+        "narrow warm eyes creasing at the corners",
+        "thick straight dark brows close to the eyes",
+        "square jaw with short trimmed beard and broad nose"
+      ],
+      "expression": "Agreeable small smile (small in frame; traits checked at 200%)"
+    }
+  },
+  "reviewedAt": "2026-11-12T15:11:12.580Z"
+}

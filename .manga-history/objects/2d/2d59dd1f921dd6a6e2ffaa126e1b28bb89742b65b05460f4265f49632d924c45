@@ -1,0 +1,646 @@
+{
+  "base": {
+    "stage": "artwork",
+    "target": "03-2",
+    "sourceFile": "works/auto-6294ee8a2094/source/original.txt",
+    "decisions": [
+      {
+        "id": "renderer-higgsfield",
+        "kind": "preference",
+        "text": "Generate all images with Higgsfield model gpt_image_2_6 (quality high, PNG). Character sheets and panels are text-free; lettering is composited by the shared CLI.",
+        "reason": "User instruction on 2026-11-10 ('sure') approving Higgsfield after the declared ComfyUI renderer was unreachable in this session."
+      }
+    ],
+    "script": {
+      "title": "A Better Way to Care — Welbuk",
+      "cast": {
+        "ananya": {
+          "name": "Dr. Ananya",
+          "description": "Indian woman in her late 30s, clinic owner and doctor. Calm, confident and caring. Teal kurta beneath an open white coat (source). Shoulder-length black hair tied in a low bun with a few loose strands, slim build, small gold stud earrings, a stethoscope worn around her neck (never in use) in every scene where she wears the white coat (manga supplement, from the accepted reference sheet).",
+          "faceDesign": {
+            "traits": [
+              "Calm almond-shaped eyes with slightly heavy upper lids and a gentle downward outer corner",
+              "Soft, straight medium-thick eyebrows set fairly level",
+              "Oval face with a defined, slightly pointed chin and a small bindi-free forehead; small nose with a rounded tip"
+            ],
+            "reference": "works/auto-6294ee8a2094/assets/characters/main-cast.png",
+            "settingBasis": "Source: Indian female clinic owner, late 30s, calm, confident, caring; teal kurta beneath white coat. Manga supplement: the three face traits, low bun hairstyle and gold studs, chosen to separate her from Meera."
+          }
+        },
+        "meera": {
+          "name": "Meera",
+          "description": "Indian woman in her late 20s, clinic receptionist. Friendly and capable. Blue kurta (source). Long black hair in a single side braid over her left shoulder, round face, slim build, a thin silver bangle on the right wrist (manga supplement).",
+          "faceDesign": {
+            "traits": [
+              "Large, round bright eyes with clearly visible lower lash line",
+              "Thin, gently arched eyebrows set high above the eyes",
+              "Round face with full cheeks and a short soft chin; small dimple on the left cheek when smiling"
+            ],
+            "reference": "works/auto-6294ee8a2094/assets/characters/main-cast.png",
+            "settingBasis": "Source: Indian female receptionist, late 20s, friendly and capable, blue kurta. Manga supplement: the three face traits, side braid and silver bangle."
+          }
+        },
+        "ravi": {
+          "name": "Ravi",
+          "description": "Indian man in his mid-30s, patient. Warm and approachable. Light green shirt (source). Short neat black hair with a side part, trimmed short beard, medium build, dark trousers, a simple wristwatch on the left wrist, small dark-brown shoulder bag (manga supplement).",
+          "faceDesign": {
+            "traits": [
+              "Warm, slightly narrow eyes that crease at the outer corners when he smiles",
+              "Thick, straight dark eyebrows close to the eyes",
+              "Square jaw framed by a short trimmed beard and a broad nose"
+            ],
+            "reference": "works/auto-6294ee8a2094/assets/characters/main-cast.png",
+            "settingBasis": "Source: Indian male patient, mid-30s, warm, approachable, light green shirt. Manga supplement: the three face traits, beard, side part and wristwatch."
+          }
+        },
+        "specialist": {
+          "name": "Specialist (vision)",
+          "description": "Symbolic specialist doctor in a future-vision clinic in another city. Indian man in his 50s with greying temples, rimless glasses, light grey blazer over a pale blue shirt, stethoscope around his neck (manga supplement; the source only says \"specialist\").",
+          "faceDesign": {
+            "traits": [
+              "Kind eyes behind thin rimless rectangular glasses",
+              "Bushy salt-and-pepper eyebrows",
+              "Long face with deep smile lines and a neat grey moustache"
+            ],
+            "reference": "works/auto-6294ee8a2094/assets/characters/vision-cast.png",
+            "settingBasis": "Source: \"a conceptual Welbuk-connected clinic and specialist\". Every visual detail is a manga supplement."
+          }
+        },
+        "partner": {
+          "name": "Ravi's partner",
+          "description": "Symbolic family member in the vision scene. Indian woman in her early 30s, shoulder-length wavy hair, mustard-yellow kurta (manga supplement; the source only says 'partner').",
+          "faceDesign": {
+            "traits": [
+              "Wide-set eyes with a soft, lively expression",
+              "Medium eyebrows with a high gentle arch",
+              "Heart-shaped face with a narrow chin and a small mole under the right eye"
+            ],
+            "reference": "works/auto-6294ee8a2094/assets/characters/vision-cast.png",
+            "settingBasis": "Source: \"symbolic family scene with Ravi, partner, and child\". Appearance is a manga supplement."
+          }
+        },
+        "child": {
+          "name": "Ravi's child",
+          "description": "Symbolic family member in the vision scene. Child of about seven, short hair, orange T-shirt (manga supplement; the source only says 'child').",
+          "faceDesign": {
+            "traits": [
+              "Big round curious eyes",
+              "Short, light eyebrows",
+              "Round chubby cheeks and a small upturned nose"
+            ],
+            "reference": "works/auto-6294ee8a2094/assets/characters/vision-cast.png",
+            "settingBasis": "Source: \"symbolic family scene with Ravi, partner, and child\". Appearance is a manga supplement."
+          }
+        },
+        "narration": {
+          "kind": "caption",
+          "name": "Caption"
+        },
+        "label": {
+          "kind": "caption",
+          "variant": "label",
+          "name": "Product / vision label"
+        }
+      },
+      "style": "Full-colour, approachable Indian slice-of-life manga. Clean confident line art with varied line weight, soft flat cel shading, warm natural daylight, restrained blue and teal accents, simple readable backgrounds. Expressive but natural faces, precise hands. No photorealism, no glossy gradients, no surface microtexture. Absolutely no text, letters, logos, numbers, speech bubbles or captions inside the artwork; device screens show only abstract blank blocks and simple icons.",
+      "continuity": "Keep Dr. Ananya, Meera and Ravi identical to their canonical reference sheets in face traits, hair, build, skin tone and clothing for the whole comic. Device screens never show readable text or real personal data. Pages 6 panels 2-3 are a future vision: soft pale-blue vignette border and lighter, airy palette so they never read as current features.",
+      "sections": {
+        "clinic-morning": {
+          "summary": "A weekday morning at Dr. Ananya’s friendly neighbourhood clinic in Tamil Nadu, before Welbuk: busy reception, paper registers, ringing phone, queue.",
+          "location": "Small neighbourhood clinic in Tamil Nadu: whitewashed entrance with potted plants and a simple awning, reception desk with paper registers and a desk phone, waiting chairs (setting is source; furniture details are manga supplement).",
+          "costumes": {
+            "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
+            "meera": "Blue kurta with white churidar, silver bangle on right wrist."
+          },
+          "objects": {
+            "registers": "Stack of paper appointment registers with blank pages (no legible writing).",
+            "desk-phone": "Corded beige desk phone on the reception desk."
+          }
+        },
+        "onboarding": {
+          "summary": "Later the same week, after hours: the clinic sets up Welbuk. Ananya configures Welbuk Practice on a laptop; Meera tries Welbuk Care on a staff phone.",
+          "location": "Dr. Ananya’s small office beside reception, desk with a laptop, window with evening light (manga supplement).",
+          "costumes": {
+            "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
+            "meera": "Blue kurta with white churidar, silver bangle on right wrist."
+          },
+          "objects": {
+            "laptop": "Silver laptop; screen shows only a generic setup form of blank fields and simple blocks, no text.",
+            "staff-phone": "Meera’s smartphone; screen shows abstract blocks and a simple calendar icon, no text."
+          }
+        },
+        "reception": {
+          "summary": "A later morning: the clinic now runs with Welbuk. Ravi visits as a patient and registers at reception with consent.",
+          "location": "The same reception desk, now tidy with a desktop monitor angled toward Meera; waiting chairs with a few seated figures seen from behind.",
+          "costumes": {
+            "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
+            "meera": "Blue kurta with white churidar, silver bangle on right wrist.",
+            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
+          },
+          "objects": {
+            "monitor": "Reception desktop monitor and keyboard; screen faces Meera, only blank fields visible if seen.",
+            "reception-mobile": "A navy smartphone lying on the reception desk beside Meera’s keyboard in 03-1 (the reception’s own phone). Supplement recorded from the generated art; it is not Ravi’s phone.",
+            "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 5 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
+          }
+        },
+        "consultation": {
+          "summary": "The same visit: Ravi talks with Dr. Ananya in the consultation room.",
+          "location": "Bright, simple consultation room: desk, two chairs, a closed laptop pushed aside, window with plant. No medical charts with text.",
+          "costumes": {
+            "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
+            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
+          },
+          "objects": {
+            "closed-laptop": "Laptop closed and pushed to the side of the desk."
+          }
+        },
+        "departure": {
+          "summary": "The end of the same visit: Ravi leaves the clinic reassured.",
+          "location": "Clinic entrance from the street side, morning sun.",
+          "costumes": {
+            "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
+            "meera": "Blue kurta with white churidar, silver bangle on right wrist.",
+            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
+          },
+          "objects": {}
+        },
+        "travel": {
+          "summary": "A possible tomorrow: Ravi travels to another Indian city by train. Hypothetical framing (\"care may take us beyond our hometown\").",
+          "location": "Indian Railways-style train seat by a window, passing city skyline (no signage).",
+          "costumes": {
+            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
+          },
+          "objects": {}
+        },
+        "vision": {
+          "summary": "WELBUK VISION — not a launched feature. A conceptual future of connected clinics, specialists and family wellness, drawn inside a soft pale-blue vignette.",
+          "location": "Idealised, airy spaces: a modern clinic in another city linked by faint dotted lines to small clinic silhouettes; a family living room. Lighter palette and rounded vignette border.",
+          "costumes": {
+            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist.",
+            "specialist": "Light grey blazer over a pale blue shirt, rimless glasses, stethoscope worn around his neck (not in use).",
+            "partner": "Mustard-yellow kurta.",
+            "child": "Orange T-shirt and shorts."
+          },
+          "objects": {
+            "family-tablet": "Tablet showing an abstract family wellness app: three simple profile circles and a heart icon, no text."
+          }
+        },
+        "closing": {
+          "summary": "Symbolic closing group portrait in front of the clinic, tying the three Welbuk products to the three people.",
+          "location": "Clinic entrance with awning and plants, warm morning light.",
+          "costumes": {
+            "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
+            "meera": "Blue kurta with white churidar, silver bangle on right wrist.",
+            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
+          },
+          "objects": {}
+        }
+      },
+      "pages": [
+        {
+          "id": "03",
+          "section": "reception",
+          "purpose": "Introduce Ravi and show respectful, consent-based registration at reception.",
+          "expectation": "What happens in Ravi’s consultation?",
+          "panels": [
+            {
+              "id": "03-1",
+              "order": 1,
+              "role": "提示",
+              "beat": "Ravi arrives",
+              "rect": [
+                24,
+                24,
+                580,
+                560
+              ],
+              "scene": "Ravi walks in through the clinic door toward reception, smiling and raising his right hand in a friendly wave; left hand holds the strap of a small shoulder bag. Morning light from the doorway behind him. Camera from behind the reception desk: Meera sits in the left foreground, seen over her shoulder, typing on the keyboard and looking up at him; the monitor faces the reader showing only abstract icons and blank blocks; a navy reception mobile phone lies on the desk beside her keyboard. Background: waiting chairs with patients seen from behind.",
+              "action": "Ravi waves as he approaches the desk.",
+              "emotion": "Warm, approachable.",
+              "camera": "Medium-full shot from the reception side, slight low angle.",
+              "information": "New character: Ravi, a patient, on a later morning.",
+              "transition": {
+                "kind": "time-change",
+                "bridge": "Morning light and a new arrival at the now-tidy reception desk.",
+                "settingBasis": "Source: \"Ravi arrives at reception.\" Later-morning timing is a manga supplement."
+              },
+              "readingFlow": {
+                "entry": [
+                  40,
+                  40
+                ],
+                "exit": [
+                  600,
+                  560
+                ]
+              },
+              "production": {
+                "moment": "Ravi mid-wave, greeting Meera.",
+                "before": "He walked in through the clinic door.",
+                "after": "Meera answers him from behind the desk (03-2).",
+                "hands": {
+                  "ravi": {
+                    "left": "holding the strap of his shoulder-bag",
+                    "right": "raised in a friendly wave"
+                  },
+                  "meera": {
+                    "left": "hidden behind her body, not visible",
+                    "right": "typing on the keyboard"
+                  }
+                },
+                "props": [
+                  {
+                    "id": "shoulder-bag",
+                    "before": "on Ravi’s shoulder",
+                    "during": "on his shoulder, strap held",
+                    "after": "on his shoulder",
+                    "heldBy": "ravi.left"
+                  },
+                  {
+                    "id": "reception-mobile",
+                    "before": "on the reception desk",
+                    "during": "lying on the desk beside Meera’s keyboard",
+                    "after": "on the desk",
+                    "heldBy": "none"
+                  }
+                ]
+              },
+              "speakers": {
+                "ravi": {
+                  "face": [
+                    405,
+                    62,
+                    78,
+                    90
+                  ],
+                  "anchor": [
+                    445,
+                    118
+                  ]
+                },
+                "meera": {
+                  "face": [
+                    92,
+                    222,
+                    68,
+                    100
+                  ],
+                  "anchor": [
+                    148,
+                    300
+                  ]
+                }
+              },
+              "dialogue": [
+                {
+                  "speaker": "ravi",
+                  "text": "Good morning! I'd like to see the doctor.",
+                  "textColumns": [
+                    "Good morning! I'd like ",
+                    "to see the doctor."
+                  ],
+                  "textDirection": "horizontal",
+                  "side": "left",
+                  "x": 4,
+                  "dy": 4
+                }
+              ]
+            },
+            {
+              "id": "03-2",
+              "order": 2,
+              "role": "始動",
+              "beat": "Meera asks for consent to register",
+              "rect": [
+                628,
+                24,
+                372,
+                560
+              ],
+              "scene": "Meera behind the tidy reception desk (desktop monitor at her side, screen angled away), gentle smile, left palm open in an explanatory gesture to screen-right as she asks; right hand resting on the desk. Ravi in the left foreground, seen over his shoulder (beard edge, green shirt; his bag hangs at his hip from the far shoulder), his right hand holding his dark-blue phone low at the desk edge.",
+              "action": "Meera asks politely, leaning slightly forward.",
+              "emotion": "Friendly, respectful.",
+              "camera": "Tall medium shot, slightly from the left.",
+              "transition": {
+                "kind": "reverse-angle",
+                "bridge": "Deliberate reverse over-the-shoulder cut from 03-1: 03-1 looks past Meera (left foreground) toward Ravi at the door; 03-2 looks past Ravi (left foreground: green shirt, bag strap, phone) toward Meera behind the same desk and monitor. From 03-2 onward Ravi stays left and Meera right (03-3, 03-4).",
+                "settingBasis": "Staging decision recorded after script review r12. The same desk, monitor, costumes and the over-shoulder framing carry the space across the flip; storyboard readingReview must confirm it reads clearly."
+              },
+              "information": "Registration starts with Ravi’s permission.",
+              "readingFlow": {
+                "entry": [
+                  644,
+                  40
+                ],
+                "exit": [
+                  990,
+                  570
+                ]
+              },
+              "production": {
+                "moment": "Meera asks for permission to register Ravi’s details.",
+                "before": "Ravi greeted her and asked to see the doctor.",
+                "after": "Ravi agrees (03-3).",
+                "hands": {
+                  "meera": {
+                    "left": "open palm in an explanatory gesture to screen-right",
+                    "right": "resting flat on the desk"
+                  },
+                  "ravi": {
+                    "left": "out of frame",
+                    "right": "holding ravi-phone low at the desk (foreground)"
+                  }
+                },
+                "props": [
+                  {
+                    "id": "monitor",
+                    "before": "on the desk",
+                    "during": "on the desk, screen angled away",
+                    "after": "on the desk",
+                    "heldBy": "none"
+                  },
+                  {
+                    "id": "ravi-phone",
+                    "before": "in Ravi’s pocket as he arrives (not visible in 03-1)",
+                    "during": "held low at the desk in the foreground",
+                    "after": "set down on the desk",
+                    "heldBy": "ravi.right"
+                  },
+                  {
+                    "id": "shoulder-bag",
+                    "before": "on Ravi’s left shoulder",
+                    "during": "hanging at his hip from his far left shoulder",
+                    "after": "on his left shoulder",
+                    "heldBy": "none"
+                  }
+                ]
+              },
+              "speakers": {
+                "meera": {
+                  "face": [
+                    782,
+                    230,
+                    67,
+                    76
+                  ],
+                  "anchor": [
+                    809,
+                    287
+                  ]
+                },
+                "ravi": {
+                  "face": [
+                    645,
+                    217,
+                    49,
+                    81
+                  ],
+                  "anchor": [
+                    683,
+                    291
+                  ]
+                }
+              },
+              "dialogue": [
+                {
+                  "speaker": "meera",
+                  "text": "Of course. May I register your details for today's appointment?",
+                  "textColumns": [
+                    "Of course. May I ",
+                    "register your details ",
+                    "for today's ",
+                    "appointment?"
+                  ],
+                  "textDirection": "horizontal",
+                  "side": "left",
+                  "x": 16,
+                  "dy": 12
+                }
+              ]
+            },
+            {
+              "id": "03-3",
+              "order": 3,
+              "role": "反応",
+              "beat": "Ravi agrees; Meera enters essential details",
+              "rect": [
+                24,
+                608,
+                976,
+                460
+              ],
+              "scene": "Wide two-shot across the reception desk: Ravi (left), bag strap over his far left shoulder, nods with a smile, both hands on the desk edge and his dark-blue phone lying on the desk in front of him; Meera (right) types on the keyboard, Meera has turned the monitor toward the front of the desk so Ravi can see that only blank fields are being filled in; she glances at it from the side as she types. No papers with writing, no ID cards.",
+              "action": "Ravi nods; Meera begins typing.",
+              "emotion": "Trusting, easy.",
+              "camera": "Medium-wide two-shot, eye level, desk across the lower third.",
+              "information": "Only essential sample details are entered, with consent.",
+              "readingFlow": {
+                "entry": [
+                  40,
+                  625
+                ],
+                "exit": [
+                  990,
+                  1060
+                ]
+              },
+              "production": {
+                "moment": "Ravi says yes while Meera’s fingers touch the keys.",
+                "before": "Meera asked for consent.",
+                "after": "Meera confirms the appointment (03-4).",
+                "hands": {
+                  "ravi": {
+                    "left": "resting on the desk edge",
+                    "right": "resting on the desk edge"
+                  },
+                  "meera": {
+                    "left": "typing on the keyboard",
+                    "right": "typing on the keyboard"
+                  }
+                },
+                "props": [
+                  {
+                    "id": "shoulder-bag",
+                    "before": "on Ravi’s shoulder",
+                    "during": "on his shoulder",
+                    "after": "on his shoulder",
+                    "heldBy": "none"
+                  },
+                  {
+                    "id": "monitor",
+                    "before": "facing Meera on the desk",
+                    "during": "turned by Meera toward the desk front so Ravi sees only blank fields",
+                    "after": "turned back toward Meera (03-4)",
+                    "heldBy": "none"
+                  },
+                  {
+                    "id": "ravi-phone",
+                    "before": "held low at the desk",
+                    "during": "lying on the desk in front of Ravi",
+                    "after": "picked up again after registration",
+                    "heldBy": "none"
+                  }
+                ]
+              },
+              "speakers": {
+                "ravi": {
+                  "face": [
+                    238,
+                    668,
+                    95,
+                    120
+                  ],
+                  "anchor": [
+                    285,
+                    770
+                  ]
+                },
+                "meera": {
+                  "face": [
+                    752,
+                    688,
+                    85,
+                    100
+                  ],
+                  "anchor": [
+                    790,
+                    770
+                  ]
+                }
+              },
+              "dialogue": [
+                {
+                  "speaker": "ravi",
+                  "text": "Yes, please.",
+                  "textColumns": [
+                    "Yes, please."
+                  ],
+                  "textDirection": "horizontal",
+                  "side": "left",
+                  "x": 8,
+                  "dy": 16
+                }
+              ]
+            },
+            {
+              "id": "03-4",
+              "order": 4,
+              "role": "決定",
+              "beat": "Appointment confirmed",
+              "rect": [
+                24,
+                1092,
+                976,
+                372
+              ],
+              "scene": "Same staging as 03-3: Ravi (left) on the patient side of the desk turns toward the waiting chairs behind him (far left), smiling, a hand on his bag strap; Meera (right) behind the desk smiles and gestures with her right hand toward the chairs.",
+              "action": "Meera indicates the seats; Ravi heads there.",
+              "emotion": "Smooth, reassuring.",
+              "camera": "Medium two-shot, eye level.",
+              "information": "Registration is done quickly; Ravi waits to see the doctor.",
+              "readingFlow": {
+                "entry": [
+                  40,
+                  1110
+                ],
+                "exit": [
+                  990,
+                  1505
+                ]
+              },
+              "production": {
+                "moment": "Meera confirms and points to the seats.",
+                "before": "She finished entering the essential details.",
+                "after": "Ravi sits and is later called into the consultation room (page 4).",
+                "hands": {
+                  "meera": {
+                    "left": "resting on the desk",
+                    "right": "open hand gesturing toward the waiting chairs"
+                  },
+                  "ravi": {
+                    "left": "holding his shoulder-bag strap",
+                    "right": "relaxed at his side, empty"
+                  }
+                },
+                "props": [
+                  {
+                    "id": "shoulder-bag",
+                    "before": "on Ravi’s shoulder",
+                    "during": "strap held",
+                    "after": "on his shoulder",
+                    "heldBy": "ravi.left"
+                  },
+                  {
+                    "id": "ravi-phone",
+                    "before": "picked up from the desk after registration",
+                    "during": "put away in Ravi’s pocket, not visible",
+                    "after": "in his pocket",
+                    "heldBy": "none"
+                  }
+                ]
+              },
+              "speakers": {
+                "ravi": {
+                  "face": [
+                    255,
+                    1108,
+                    92,
+                    112
+                  ],
+                  "anchor": [
+                    300,
+                    1200
+                  ]
+                },
+                "meera": {
+                  "face": [
+                    762,
+                    1212,
+                    75,
+                    82
+                  ],
+                  "anchor": [
+                    795,
+                    1280
+                  ]
+                }
+              },
+              "dialogue": [
+                {
+                  "speaker": "meera",
+                  "text": "You're all set, Ravi. Please have a seat.",
+                  "textColumns": [
+                    "You're all set, Ravi. ",
+                    "Please have a seat."
+                  ],
+                  "textDirection": "horizontal",
+                  "side": "left",
+                  "x": 440,
+                  "dy": 8
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "productionMode": "quality"
+  },
+  "files": [
+    "works/auto-6294ee8a2094/source/original.txt",
+    "works/auto-6294ee8a2094/assets/characters/main-cast.png",
+    "works/auto-6294ee8a2094/assets/characters/vision-cast.png",
+    "works/auto-6294ee8a2094/workflow/storyboards/page-03.svg",
+    "works/auto-6294ee8a2094/assets/panels/03-2.png"
+  ],
+  "optionalFiles": [],
+  "configFile": "works/auto-6294ee8a2094/workflow.json",
+  "entries": {
+    "works/auto-6294ee8a2094/source/original.txt": "6294ee8a20944646ae8401695eeb8ea6cab68725127d488e11e4dae584d40adb",
+    "works/auto-6294ee8a2094/assets/characters/main-cast.png": "4f607444611f6b74f81feafda5d76c867e62af84dc0c18d05c5e975e45bfb11b",
+    "works/auto-6294ee8a2094/assets/characters/vision-cast.png": "c20f9ad67a643ba8356fff59ec1b5013d5a4a526184103fde0aa247b15781086",
+    "works/auto-6294ee8a2094/workflow/storyboards/page-03.svg": "bbe431ab15bac963872cfb5653772ffb7ff4ddf74b5bf0429d497311b680bdc2",
+    "works/auto-6294ee8a2094/assets/panels/03-2.png": "dd705fe1a89e0adffb6860de3b8d8c02218b67672af2c7965a148de75b1e50bf"
+  },
+  "fingerprint": "0fc466c2c573151e17d2893cd309658f0a1628fcc9259ee67afc1fe71c8c3ed4"
+}

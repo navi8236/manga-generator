@@ -1,0 +1,114 @@
+[
+ {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-09-1-3ef8214a95293b75009be77fba11f41317b9e467c0803fb43b8a227904c5c818.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Reviewer identity: the runtime gave me no task ID, so reviewer.task is null. The parent must supply the real Agent ID before recording; I have not invented one. What I opened with Read: AGENTS.md (via CLAUDE.md), docs/REVISION-AND-REVIEWS.md, docs/PROMPTS.md and this request in full. I viewed assets/panels/09-1.png, assets/characters/main-cast.png, assets/panels/07-1.png, 08-5.png and 03-1.png, and workflow/review/page-09.png. I also read the pad record assets/generated/09-1-pad-a7d75256076b0ce5.json (topPx 420, sidePx 151/151). I did not hash any PNG myself. The request lists 09-1.png as a7d75256..., which matches the sha256 in the pad record.",
+   "Ravi matches the sheet: short black hair with a side part, thick straight brows, eyes that crease as he smiles, short trimmed beard, square jaw, light green shirt with rolled sleeves. He sits at a small round wooden table and holds his dark-blue phone up in his RIGHT hand on the viewer's left. His LEFT hand rests beside the tea cup on a coaster, and the watch is on that left wrist. This matches production.hands and heldBy ravi.right. His expression is a pleased, easy smile, as the scene asks.",
+   "Phone screen: one green chat-bubble card with a calendar icon, plus a tiny abstract status bar. There is no readable text, logo or number.",
+   "Padding: the side strips show no visible seam. The floor, baseboard and table read as continuous. The top wall has a very faint band of vertical streaking where the 420 px extension meets the original image (about 280-330 px down in the displayed image). On page-09.png this band falls entirely under the caption box, so readers cannot see it.",
+   "Lettering on page-09.png: the caption covers only plain wall. The FOLLOW-UP REMINDER label ends just above the phone. The phone, hand, face and hair are all clear.",
+   "Style: the line weight and flat cel shading are close to 07-1 and 08-5. Ravi's face has a few more fine wrinkle lines than on earlier pages, but it stays within the established look."
+  ],
+  "issues": []
+ },
+ {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-09-2-93a00379d246515f7935d8b761319ea27115cbfb846581482f9456bff959b0bc.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Reviewer identity: no runtime task ID was given, so reviewer.task is null and the parent must supply it. I viewed assets/panels/09-2.png (not padded) alongside main-cast.png, 07-1.png, 03-1.png and page-09.png. I checked this request's target and that it lists 09-2.png as b8f3cf29.... I did not compute the hash myself.",
+   "Empty-handed requirement met: both of Ravi's hands hang relaxed and open at his sides, holding nothing. There is no shoulder bag, strap, file, folder or paper anywhere in the panel. A dark-blue phone sits in his chest pocket. The watch is on his LEFT wrist (viewer's right). His face matches the sheet: side part, beard, thick brows, smile. He wears light green shirt, dark trousers and brown shoes, and walks in through open glass sliding doors under a teal awning.",
+   "Spatial note, not blocking: the camera is inside the lobby (blue waiting chairs on the left, reception desk on the right), yet open sky fills the top of the image where an interior ceiling would be. In page-09.png the caption box covers almost all of the sky. Only the teal canopy with its recessed lights and a thin sky sliver at the far right stay visible, so the composed panel reads as the entrance canopy.",
+   "There are no screens and no readable signage. The surfaces are slightly glossier than on pages 3-7 (shiny floor reflections), but the line art and palette stay consistent.",
+   "Lettering on page-09.png: the caption covers sky and the top of the awning only. Ravi's face, hair, both hands and the pocket phone are all clear."
+  ],
+  "issues": []
+ },
+ {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-09-3-11dfc05dcc88d2d32688ce608b42361e0f127a62ac8b03257831e093bf080486.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "changes-requested",
+  "observations": [
+   "Reviewer identity: no runtime task ID was given, so reviewer.task is null and the parent must supply it. I viewed assets/panels/09-3.png alongside main-cast.png, 03-1.png (the earlier QR stand), 07-1.png and page-09.png. I read assets/panels/09-3.json (sourceFile 09-3-pad-fc5e7c84...) and the pad record 09-3-pad-fc5e7c84a94afd4a.json (topPx 600, bottomCropPx 479, edge-pixel repetition). Its sha256 fc5e7c84... matches the hash in this request. I did not compute it myself.",
+   "Meera matches the sheet: round face, large eyes, high thin brows, soft smile. Her braid falls over her LEFT shoulder with a teal tie, and a silver bangle shows on her RIGHT wrist. She wears the blue block-print kurta. She sits alone behind the reception desk with her hands lowered to the keyboard behind the monitor. Nobody stands in front of the desk, so there is no queue, as the request requires.",
+   "Ravi: profile view facing right. His near (RIGHT) arm reaches out and holds the phone to the stand, matching heldBy ravi.right. The phone shows a scan frame and a check mark, with no text. His left arm and the watch are out of view on the far side, which is acceptable for this angle. His face matches the sheet: beard, thick brows, creased eye, smile.",
+   "Pad seam: the 600 px top extension is not clean. A band about 430-515 px down in the displayed image has faint vertical streaks across the wall. Above the window on the right, edge repetition has produced irregular pale rectangles, and the window frame stops abruptly at a flat line. On page-09.png the caption covers most of the band, but its lowest part (about page y 658-670, above the window at x 355-495) still shows below the caption as a flat cut across the top of the window.",
+   "QR stand: the stand shows teal bracket marks in a white frame on a pole. No characters are readable. It does not look like the stand in 03-1, which is a white stand with grey QR squares and a teal strip, by the entrance on the other side. The section says 'the same small check-in stand'.",
+   "Lettering on page-09.png: the caption covers wall only. Both faces, Meera's braid, Ravi's hand, the phone and the stand are clear."
+  ],
+  "issues": [
+   {
+    "problem": "The edge-repeated top extension leaves visible vertical streaks and pale rectangles above the window, and the window frame ends in a hard flat line. The bottom of this band shows below the caption on page-09.png. Re-pad with a clean flat wall fill (or a soft blend) and finish or soften the top of the window, then re-check.",
+    "location": "09-3.png, displayed y about 430-515 (original about 500-600 px), strongest at the right above the window; page-09 about x 355-495, y 658-670",
+    "resolved": false
+   },
+   {
+    "problem": "The check-in stand design (teal frame with bracket glyphs) does not match the stand established in 03-1 (white stand with grey QR squares and a teal strip). The section requires the same stand. Either bring it in line, or record a deliberate continuity decision and have the parent confirm it.",
+    "location": "09-3.png right edge, QR stand",
+    "resolved": false
+   }
+  ]
+ },
+ {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-09-4-5fb5fa4bb9f453e2cd1aa77a3915a9ba949b88fe55ca45b9bd635193c6113810.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "changes-requested",
+  "observations": [
+   "Reviewer identity: no runtime task ID was given, so reviewer.task is null and the parent must supply it. I viewed assets/panels/09-4.png alongside main-cast.png, 03-1.png (the earlier waiting-room TV), 07-1.png and page-09.png. I read assets/panels/09-4.json and the pad record 09-4-pad-b492258fd3b3ebd6.json (topPx 600, bottomCropPx 479). Its sha256 b492258f... matches this request. I did not compute it myself.",
+   "Ravi matches the sheet: side part, thick brows, beard, creased eye. He sits in a blue waiting chair and looks up toward the TV with a small calm smile. The TV shows a teal screen with one empty white strip and no text or numbers, consistent with the teal TV in 03-1. Two other patients are seen from behind: a grey-haired man in a cream shirt on the left, and a woman with a low bun, gold hoop earring and mustard-yellow top on the right.",
+   "Hands and props: the bottom crop removed everything below Ravi's chest. His phone, both hands and the watch are not visible. production.hands (left on chair arm, right holding the phone in his lap) and the scene line 'phone in his lap' cannot be confirmed in the image.",
+   "Pad seam: the original image's top edge cuts through the top of the TV. The bezel has a flat top with an odd sheared slope on its left part (displayed about x 1190-1490, y 515-545). Faint vertical streaks run up from the TV into the extended wall (around displayed x 1370 and 1880, y 420-515). On page-09.png the NOW · A-31 label covers the TV screen, which is intended, but the sheared teal top of the TV still shows above the label (about page x 808-965, y 670-692).",
+   "Background patient on the right: a low bun with a gold earring is Ananya's identifying hairstyle, and the mustard kurta is the costume of Ravi's partner from the vision sheet. Seen from behind, a reader could mistake her for one of them. This is not blocking, but worth simplifying if the panel is regenerated.",
+   "Lettering on page-09.png: the caption covers wall only. The label covers the TV screen as intended. Ravi's face and hair and the two background heads are clear."
+  ],
+  "issues": [
+   {
+    "problem": "The pad shows a visible seam: the TV's top bezel is truncated and sheared where the original image ended, and faint vertical streaks rise from it. The sheared top shows above the NOW · A-31 label on page-09.png. Rebuild the TV top (or choose a crop and pad that keeps the whole TV) and use a clean flat wall fill.",
+    "location": "09-4.png, TV top edge and wall above it (displayed y about 420-545); page-09 about x 808-965, y 670-692",
+    "resolved": false
+   },
+   {
+    "problem": "The phone and both of Ravi's hands are cropped out, so production.hands and the scene line 'phone in his lap' do not describe the visible image. Update the production and scene records to say the hands and phone are out of frame, or adjust the crop so they are visible.",
+    "location": "09-4 production.hands.ravi / props ravi-phone",
+    "resolved": false
+   }
+  ]
+ },
+ {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-09-5-9e9eaf71226d89b975385575d9d684cc4749d97948ca5aca0d2ac504099eeca5.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "changes-requested",
+  "observations": [
+   "Reviewer identity: no runtime task ID was given, so reviewer.task is null and the parent must supply it. I viewed assets/panels/09-5.png alongside main-cast.png, 08-5.png (Ananya with tablet, earlier renderer), 07-1.png and page-09.png. The request lists 09-5.png as 7cc1204c..., which matches the name of the 09-5-pad-7cc1204cabad88d8.json record. I did not open that record or compute the hash.",
+   "Ananya matches the sheet and 08-5: dark hair in a LOW BUN with loose strands, gold stud earring, almond eyes, level brows, open white coat over a teal kurta, stethoscope around her neck and not in use. She smiles as she speaks and holds the tablet toward the reader by both edges. The screen shows a timeline of three cards, each with a test-tube icon, grey placeholder bars and a check mark. There is no readable text or values.",
+   "Ravi's reaction meets the request: he smiles openly at Ananya and the tablet, with his eyes creased and a relaxed posture. His hands are empty and the watch is on his LEFT wrist (viewer's right). However, BOTH forearms rest on the desk with his hands loosely together on the desktop. production.hands says the left hand rests on his knee and the right on the chair arm, and the scene line says 'hands resting on his knee and the chair arm'. The protected box (674,1292,150,50) does cover his hands where they actually are on the desk.",
+   "Possible minor discrepancy: Ananya seems to have a small dark dot on her right cheek (viewer's left). The sheet shows no mole. Please check it at 200%; if it is a mole, consider removing it.",
+   "Top crop: the window and plant at the top-left end at the panel edge. I saw no seam, streak or repeated pixels. Style is consistent with 08-5: the same face design, coat and line weight.",
+   "Lettering on page-09.png: the balloon sits between the two heads and clears Ananya's hair and Ravi's hair. Its tail points to Ananya's mouth. The bottom caption covers only the front of the desk and ends just below Ravi's hands and the tablet. Faces, hands, tablet and stethoscope are clear."
+  ],
+  "issues": [
+   {
+    "problem": "production.hands.ravi (left on knee, right on chair arm) and the scene text do not match the image: both of Ravi's forearms and hands rest on the desktop. Correct the production and scene records to match the image (no regeneration needed for this), then re-accept and re-review through the normal procedure.",
+    "location": "09-5 production.hands.ravi and scene",
+    "resolved": false
+   }
+  ]
+ }
+]

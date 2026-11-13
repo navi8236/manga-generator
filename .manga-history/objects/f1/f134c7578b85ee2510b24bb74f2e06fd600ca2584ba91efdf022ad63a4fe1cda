@@ -1,0 +1,71 @@
+{
+ "panel": "09-5",
+ "fingerprint": "38ade02ad6208f74c7edcc8c7818fdcf2ac3cd8df28042dc72bbb5436bb839b5",
+ "observation": "Dr. Ananya greets Ravi with his history open on her tablet; he smiles back with empty hands on the desk. Inspected at 25% (contact sheet), 100% (full panel) and 200% (face crops), and on the composed page.",
+ "views": {
+  "thumbnail": true,
+  "native": true,
+  "detail": true
+ },
+ "checks": {
+  "anatomy": {
+   "result": "pass",
+   "note": "Ananya holds both tablet edges; Ravi's forearms rest on the desk with hands clasped loosely."
+  },
+  "contact": {
+   "result": "pass",
+   "note": "Tablet in both of her hands; his forearms on the desk top."
+  },
+  "objects": {
+   "result": "pass",
+   "note": "Tablet shows three test-tube cards with check marks, no text or values."
+  },
+  "faces": {
+   "result": "pass",
+   "note": "Faces match the sheets at 200%; see faceIdentity."
+  },
+  "linework": {
+   "result": "pass",
+   "note": "Consistent."
+  },
+  "background": {
+   "result": "pass",
+   "note": "Consultation room with window and plant; top wall trimmed so the art fills the panel width. One small off-model dot under Ananya's right eye was filled with skin colour (tools/spot-remove.py)."
+  },
+  "continuity": {
+   "result": "pass",
+   "note": "Ananya low bun, gold stud, teal kurta, white coat, stethoscope; Ravi no bag."
+  },
+  "lettering": {
+   "result": "pass",
+   "note": "Balloon in the wall gap between their heads with its tail to Ananya; closing caption on the plain desk front below his hands."
+  }
+ },
+ "issues": [
+  {
+   "category": "faces",
+   "description": "Earlier takes gave Ananya a Meera-like braid, one returned an unrelated group, and two put heads or hands inside the lettering areas; retake 4 fixed these.",
+   "status": "resolved"
+  }
+ ],
+ "faceIdentity": {
+  "ananya": {
+   "reference": "works/auto-6294ee8a2094/assets/characters/main-cast.png",
+   "traits": [
+    "almond eyes with slightly heavy lids and gentle downward outer corners visible",
+    "soft level medium brows present",
+    "oval face with pointed chin and small rounded nose; low bun and gold stud match the sheet"
+   ],
+   "expression": "Warm, welcoming smile while speaking"
+  },
+  "ravi": {
+   "reference": "works/auto-6294ee8a2094/assets/characters/main-cast.png",
+   "traits": [
+    "narrow warm eyes creasing at the corners",
+    "thick straight dark brows close to the eyes",
+    "square jaw with short trimmed beard and broad nose"
+   ],
+   "expression": "Relaxed, reassured smile"
+  }
+ }
+}

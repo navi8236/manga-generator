@@ -48,6 +48,22 @@ export function speechColumns(speech) {
   );
   return speech.textColumns;
 }
+// Estimated horizontal advance at the 26px lettering size. Full-width (CJK)
+// characters keep the original 26px cell, so Japanese layouts are unchanged;
+// half-width Latin text (English dialogue) is measured proportionally so that
+// balloons fit their words instead of reserving a full-width cell per letter.
+export function horizontalAdvance(text) {
+  let total = 0;
+  for (const c of text) {
+    const code = c.codePointAt(0);
+    if (code >= 0x1100) total += 26;
+    else if (c === ' ') total += 8;
+    else if (/[.,:;'!|ijlIt]/.test(c)) total += 8;
+    else if (/[A-Z0-9mwMW@&%]/.test(c)) total += 18;
+    else total += 15;
+  }
+  return total;
+}
 export function box(panel, speech) {
   const lines = speechColumns(speech);
   validateTextSizeRanges(speech);
@@ -58,8 +74,18 @@ export function box(panel, speech) {
   );
   const horizontal = speech.textDirection === 'horizontal';
   const longest = Math.max(...lines.map((s) => [...s].length));
-  const width = horizontal ? longest * 26 + 36 : lines.length * 28 + 36;
-  const height = horizontal ? lines.length * 32 + 42 : longest * 27 + 42;
+  const widest = Math.max(...lines.map(horizontalAdvance));
+  // Optional speech.fontSize (20-26, horizontal only) scales the box with the text; 26 is the default.
+  const fs = fontSizeOf(speech);
+  const step = Math.round((32 * fs) / 26);
+  // Optional speech.compact (horizontal only) uses tighter padding so balloons fit narrow bands.
+  const compact = horizontal && speech.compact === true;
+  const width = horizontal
+    ? Math.ceil((widest * fs) / 26) + (compact ? 26 : 36)
+    : lines.length * 28 + 36;
+  const height = horizontal
+    ? lines.length * step + (compact ? 20 : 42 - (26 - fs))
+    : longest * 27 + 42;
   const [x, y, w] = panel.rect;
   return [
     speech.x === undefined
@@ -71,6 +97,20 @@ export function box(panel, speech) {
     width,
     height,
   ];
+}
+export function fontSizeOf(speech) {
+  if (speech.fontSize === undefined) return 26;
+  assert.ok(
+    Number.isInteger(speech.fontSize) &&
+      speech.fontSize >= 20 &&
+      speech.fontSize <= 26,
+    'fontSize must be an integer from 20 to 26',
+  );
+  assert.ok(
+    speech.textDirection === 'horizontal',
+    'fontSize is only supported for horizontal text',
+  );
+  return speech.fontSize;
 }
 export function validateTextSizeRanges(speech) {
   if (speech.textSizeRanges === undefined) return;
@@ -150,7 +190,9 @@ export function segmentEntry(a, b, rect) {
   }
   return low;
 }
-export function createLettering(cast) {
+// theme (optional, from workflow.json "brand"): { accent, labelFill, captionBar, fontFamily }.
+// Without a theme the output is unchanged (teal labels, plain captions).
+export function createLettering(cast, theme = null) {
   const caption = (id) => cast[id]?.kind === 'caption';
   function tailGeometry(panel, d) {
     const speaker = panel.speakers?.[d.speaker];
@@ -209,7 +251,16 @@ export function createLettering(cast) {
     const tail = t
       ? `<path data-speaker="${d.speaker}" d="M ${t.a.join(' ')} L ${t.tip.join(' ')} L ${t.b.join(' ')}" fill="white" stroke="black" stroke-width="2"/>`
       : '';
-    const shape = `<rect x="${x}" y="${y}" width="${w}" height="${h}" ${isCaption ? '' : `rx="${Math.min(34, w / 3)}"`} fill="white" stroke="black" stroke-width="2"/>`;
+    // cast.variant "label" (opt-in) marks typeset signage/product labels so they
+    // read differently from narration captions.
+    const label = isCaption && cast[d.speaker]?.variant === 'label';
+    const accent = theme?.accent;
+    const shape = label
+      ? `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="10" fill="${accent ? theme.labelFill || 'white' : '#e6f4f3'}" stroke="${accent || '#1d6f6a'}" stroke-width="3"/>`
+      : `<rect x="${x}" y="${y}" width="${w}" height="${h}" ${isCaption ? '' : `rx="${Math.min(34, w / 3)}"`} fill="white" stroke="black" stroke-width="2"/>` +
+        (isCaption && accent && theme.captionBar
+          ? `<rect x="${x + 8}" y="${y + 10}" width="5" height="${h - 20}" fill="${accent}"/>`
+          : '');
     let offset = 0;
     const content = lines.map((text) => {
       const result = sizedText(text, d, offset);
@@ -223,7 +274,7 @@ export function createLettering(cast) {
         lines
           .map(
             (text, i) =>
-              `<text x="${x + 18}" y="${y + 34 + i * 32}" font-family="Meiryo,MS Gothic,sans-serif" font-size="26" fill="black">${content[i]}</text>`,
+              `<text x="${x + (d.compact === true ? 13 : 18)}" y="${(d.compact === true ? y + 8 + Math.round(fontSizeOf(d) * 0.95) : y + 34 - (26 - fontSizeOf(d))) + i * Math.round((32 * fontSizeOf(d)) / 26)}" font-family="${theme?.fontFamily || 'Meiryo,MS Gothic,sans-serif'}" font-size="${fontSizeOf(d)}" fill="black">${content[i]}</text>`,
           )
           .join('')
       );

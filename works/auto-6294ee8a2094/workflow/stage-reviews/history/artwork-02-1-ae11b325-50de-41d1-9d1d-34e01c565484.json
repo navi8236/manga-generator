@@ -1,0 +1,26 @@
+{
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-02-1-ff34790b27d0f9a1ae025b358666c3abac5e3651f0ccb990367dda161aaaf602.json",
+  "reviewer": {
+    "role": "subagent",
+    "task": "claude-code-agent:manga-reviewer:ac5448902aae9ac15",
+    "reportedTask": null,
+    "taskSource": "Agent ID returned by the Claude Code Agent tool to the parent."
+  },
+  "status": "changes-requested",
+  "observations": [
+    "Opened assets/panels/02-1.png: Dr. Ananya seen from behind and to the side, facing image right toward a silver laptop. Visible: low bun, gold stud on the near ear, calm profile, white coat with teal cuffs. This matches main-cast.png.",
+    "Both hands type on the keyboard. The near arm, whose teal cuff is at lower right, is her right arm, and the far hand is her left. This matches production.hands (both typing).",
+    "The laptop screen shows a three-dot progress bar, blank rounded fields, blue blocks and a teal button. The only mark is a text-cursor bar in the first field. Nothing is readable and there are no logos. A mug sits on a cork coaster, and the window shows evening sky with trees. This matches the scene and the time-change transition.",
+    "Hard-edged plain white blocks were painted top-left and top-right in the raw art. In page-02.png the narration box and the 'WELBUK PRACTICE for the clinic' label box cover them fully.",
+    "Camera side: because her face points image right and her near arm is her right arm, this is an over-the-right-shoulder view. The scene and camera text say 'from behind Dr. Ananya's left shoulder'."
+  ],
+  "issues": [
+    {
+      "problem": "The scene/camera record says the shot is from behind Ananya's left shoulder, but the accepted art is over her right shoulder: her face points image right and the near typing arm with the teal cuff is her right arm. Correct the record to match the art, or regenerate.",
+      "location": "02-1 scene and camera fields vs assets/panels/02-1.png",
+      "resolved": false
+    }
+  ],
+  "fingerprint": "ff34790b27d0f9a1ae025b358666c3abac5e3651f0ccb990367dda161aaaf602",
+  "recordedAt": "2026-11-11T08:34:50.246Z"
+}

@@ -1,0 +1,29 @@
+{
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/source-all-db59b23a856da9558967de1d98d06166912b675dcb0f6f83f08e31b3582c8f87.json",
+  "reviewer": {
+    "role": "subagent",
+    "task": "claude-code-agent:manga-reviewer:adbc035f4890e23e5",
+    "reportedTask": null,
+    "taskSource": "Agent ID returned by the Claude Code Agent tool to the parent."
+  },
+  "status": "changes-requested",
+  "observations": [
+    "Reviewer identity: the runtime gave me no task ID, so task is null. The parent must not invent one.",
+    "What I read: CLAUDE.md/AGENTS.md (in context), docs/REVISION-AND-REVIEWS.md, docs/PROMPTS.md, this request in full (25 lines; one file, original.txt, entry 705eb2cf...), source/original.txt in full (60 lines), source/REVISION-2026-11-11.md in full (66 lines, including 'Follow-up (2026-11-12): AI voice consent'), workflow/source-coverage.json in full, the previous pass source-all-r7.json in full, and workflow.json lines 1825-2074 plus a grep for 05-2/05-3/05-4/AI mic/consent. This is a source-stage request with no images, so I inspected no images.",
+    "Structure and timeline are unchanged apart from page 5. Line 2 still says eight pages. PAGE 5 now has four panels: greeting with patient details, then first-time AI voice consent, then Ravi's line with SOAP notes, then the listening caption. There is no afterword or reader thanks.",
+    "Consent beat against the user's note ('in actuals there is a consent check for first time for ai voice save'). Line 38 says 'Before the AI mic records anything', and the label reads 'AI VOICE CONSENT: asked at the first visit, before any voice is saved'. Both conditions in the note are covered: first time only, and before saving. The REVISION follow-up correctly says the two lines and the label were drafted by the production agent from the user's note. The source never states that this is Ravi's first visit. The label states the policy, and readers can infer the rest from the QR/form check-in. This does not block.",
+    "Screen-section order is still the user's order: patient details (5-1), then SOAP notes (5-3), then the planner (6-1), then plan of care (6-2). The consent card (5-2) sits between the first two sections, which is where the user's note puts it.",
+    "Internal tension (issue): the 5-1 label, which is shown before consent, still lists 'AI mic on'. The user originally wrote 'ai mic on option', and r7 recorded that 'option' was dropped. Line 38 now says consent comes 'Before the AI mic records anything'. So a reader sees 'AI mic on' during the greeting, before Ravi has agreed. That undercuts the consent beat the user asked for. Restoring the user's own word fixes it, e.g. 'AI mic option'. Another fix: state in the 5-1 description that the mic toggle is off until consent.",
+    "Safety notes are kept: line 4 disclaimer, 'abstract cards only, no real data' (5-1), 'no diagnosis or medical advice' (5-3), 'without giving specific treatment advice' (6-2), and the ART DIRECTION prohibitions.",
+    "Coverage: the sourceHash matches the request entry. The spans run from 0 to 7105 with no gaps, in panel order. The new 05-2 span is 3779-4119 (340). Every later span is shifted by exactly +340 from r7: 05-3 4119-4446 equals the old 4106-4259 shifted by +340? No. The old SOAP span was 3779-4106 (327), and the new 05-3 is 4119-4446 (327). The new 05-4 is 4446-4599 (153), equal to the old 4106-4259. The new 06-1 is 4599-5052 (453), equal to the old 4259-4712. The end moved from 6765 to 7105. The shift is internally consistent with one inserted line of about 340 characters. I did not check exact character offsets with a tool."
+  ],
+  "issues": [
+    {
+      "problem": "The PAGE 5 Panel 1 label lists 'AI mic on' (with the user's word 'option' dropped), and it appears before the first-time consent in Panel 2. That contradicts 'Before the AI mic records anything' and the 'before any voice is saved' consent label. Restore 'AI mic option' (the user's wording) or otherwise show the mic as off until consent, and record the change in REVISION.",
+      "location": "source/original.txt line 37 (PAGE 5 Panel 1 label) vs line 38",
+      "resolved": false
+    }
+  ],
+  "fingerprint": "db59b23a856da9558967de1d98d06166912b675dcb0f6f83f08e31b3582c8f87",
+  "recordedAt": "2026-11-12T10:33:01.127Z"
+}

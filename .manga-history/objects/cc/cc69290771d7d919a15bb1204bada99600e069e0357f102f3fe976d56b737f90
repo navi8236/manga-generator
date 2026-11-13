@@ -1,0 +1,51 @@
+"""Replace the drawn (unscannable) QR code on the supplied back cover with a real QR code, recorded.
+
+Usage: SCRATCH_VENV/bin/python -I works/welbuk-24/tools/fix-cover-qr.py URL
+(needs segno and opencv-python-headless, installed in a scratch venv, not in the repository)
+
+The user-supplied back cover (source/cover/back-supplied.webp) shows a QR-like pattern that
+OpenCV detects but cannot decode, so it would not scan. Its exact bounds are found from the dark
+pixels inside the QR area, the area is cleared to white, and a real QR code for URL (error
+correction M, quiet zone 1 module) is drawn in the same square. The result is decoded again to
+prove it scans. Writes source/cover/back.png and back.json; the supplied file is kept unchanged.
+"""
+import hashlib
+import json
+import sys
+
+import cv2
+import numpy as np
+import segno
+from PIL import Image
+
+url = sys.argv[1]
+W = 'works/welbuk-24/source/cover'
+src = f'{W}/back-supplied.webp'
+im = Image.open(src).convert('RGB')
+a = np.asarray(im).copy()
+# Search window around the drawn code (supplied art is 1055x1491).
+x0, y0, x1, y1 = 130, 1255, 285, 1395
+dark = a[y0:y1, x0:x1].min(axis=2) < 90
+ys, xs = np.where(dark)
+qx0, qy0, qx1, qy1 = x0 + xs.min(), y0 + ys.min(), x0 + xs.max() + 1, y0 + ys.max() + 1
+side = max(qx1 - qx0, qy1 - qy0)
+pad = 4
+a[qy0 - pad:qy0 + side + pad, qx0 - pad:qx0 + side + pad] = 255
+qr = segno.make(url, error='m')
+m = np.array([[1 if v else 0 for v in row] for row in qr.matrix], np.uint8)
+m = np.pad(m, 1)
+tile = Image.fromarray(((1 - m) * 255).astype(np.uint8)).resize((side, side), Image.NEAREST).convert('RGB')
+a[qy0:qy0 + side, qx0:qx0 + side] = np.asarray(tile)
+out = Image.fromarray(a)
+dest = f'{W}/back.png'
+out.save(dest)
+check = cv2.imread(dest)
+val, _, _ = cv2.QRCodeDetector().detectAndDecode(check[qy0 - 30:qy0 + side + 30, qx0 - 30:qx0 + side + 30])
+assert val == url, f'replacement does not decode: {val!r}'
+json.dump({
+    'operation': 'replace the unscannable drawn QR pattern with a real QR code; rest of the supplied cover unchanged',
+    'source': src, 'sourceSha256': hashlib.sha256(open(src, 'rb').read()).hexdigest(),
+    'qrBox': [int(qx0), int(qy0), int(side), int(side)], 'url': url, 'decodedAfter': val,
+    'sha256': hashlib.sha256(open(dest, 'rb').read()).hexdigest(),
+}, open(f'{W}/back.json', 'w'), indent=1)
+print(dest, [int(qx0), int(qy0), int(side)], 'decodes to', val)

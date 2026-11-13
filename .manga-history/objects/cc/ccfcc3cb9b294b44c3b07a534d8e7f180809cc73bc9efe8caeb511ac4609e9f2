@@ -1,0 +1,16 @@
+{
+  "fingerprint": "2e8b43a97bc92df882b8cca1c07158441237d89c3b581d688d46793ec2df63f3",
+  "reviewer": {
+    "role": "subagent",
+    "task": "claude-code-agent:manga-reviewer:ae45aa4db5ed55b5f",
+    "reportedTask": null,
+    "taskSource": "Agent ID returned by the Claude Code Agent tool to the parent."
+  },
+  "pages": [
+    {
+      "page": "04",
+      "scan": "I opened works/auto-6294ee8a2094/workflow/storyboards-unnumbered/page-04.png with Read and it loaded as a storyboard page with page number 4. It has three panels: one wide panel on top, then a large bottom-left panel and a narrower bottom-right panel. My natural reading order: (1) Top wide panel. Caption at top-left: 'Soon, his slot comes up.' One placeholder, ravi, left of centre. A teal screen box at top-right: 'NOW · A-12'. (2) Bottom-left panel. Caption at top-left: 'A quick vitals check first.' Then a speech balloon at upper right: 'Hi, Ravi! Just relax your arm for me.' Its long tail points down to the nurse placeholder on the right. Ravi's placeholder is lower-left. (3) Bottom-right panel. Caption: 'Dr. Ananya is notified when he's ready.' Placeholder ananya in the middle, with a teal screen box below her: 'RAVI · READY'.",
+      "observation": "Reading order is clear: top panel, then bottom-left (caption before balloon, because the caption sits higher and further left), then bottom-right. The balloon tail goes cleanly to the nurse and does not cross Ravi's face, and no caption or box overlaps a face placeholder. Concrete issues: (a) In panel 1, 'his' and 'A-12' only identify Ravi if page 03 has made Ravi = A-12 visible (see the 03 note). Read on its own, the caption pronoun relies only on Ravi being the single figure. (b) Between panel 1 (waiting area with screen) and panel 2 (vitals) there is an unmarked change of place. The art needs to set up the vitals station so the move from waiting to being called in does not read as a jump. Ravi standing up or walking in is not shown. (c) The nurse has no name or introduction, which is acceptable for a minor role, but the costume needs to read clearly as a nurse. The long empty tail (about 160 px) suggests the art should bring the nurse closer to the balloon. (d) Ravi has no response or reaction on this page. The nurse speaks to him and he says nothing, and panel 3 jumps to the doctor's side. Consider a small nod or reply, or a silent reaction beat, so the greeting is not left hanging. (e) In panel 3, 'when he's ready' could briefly be read as referring to the doctor. 'RAVI · READY' on the screen resolves it, so the screen must be clearly visible and readable in the final art. (f) The top panel and the lower part of panel 3 have a lot of empty space; the art should use it for the waiting-room screen relationship and the doctor's workspace. Verdict: no reading-order or balloon-placement failure. The location transition (b) and Ravi's missing reaction (d) are unresolved narrative-flow issues; I recommend changes-requested or an explicit justification before passing."
+    }
+  ]
+}

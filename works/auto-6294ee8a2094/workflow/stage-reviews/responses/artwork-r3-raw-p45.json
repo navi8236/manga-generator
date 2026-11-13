@@ -1,0 +1,161 @@
+{
+ "04-1": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-04-1-5c03d409b4d322300546bfcd5e7fe3c9a4259e04e7137063c0169f3356145675.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Before reviewing I read AGENTS.md (provided as context), docs/REVISION-AND-REVIEWS.md, docs/PROMPTS.md, docs/ART-QUALITY.md, source/original.txt and this request JSON. I opened these with Read and looked at them: assets/characters/main-cast.png, assets/characters/vision-cast.png, assets/panels/04-1.png and workflow/review/page-04.png. I did not open workflow/storyboards/page-04.svg.",
+   "Identity matches main-cast.png. Ananya has calm almond eyes with heavy lids, level brows, a low bun with loose strands, a gold stud, an open white coat over a teal kurta, dark leggings and a stethoscope around her neck. Ravi has a side part, a trimmed beard, thick straight brows, a light green shirt with rolled sleeves and dark trousers.",
+   "The acting fits a welcome. Ananya sits at the desk on the left, turned to screen-right, smiling with her mouth open. Her extended open palm is the arm on her screen-right side, which is her left as she faces three-quarter. Her right hand rests on the desk. This matches production.hands.ananya.",
+   "Ravi is on the right in a blue chair with wooden arms. His hand on the screen-right armrest wears the wristwatch, so it is his left, matching 'on the chair armrest'. His right hand rests on his knee. This matches the record.",
+   "Props: a closed laptop is pushed to the left edge of the desk. A brown shoulder bag sits on the floor beside the chair at the right. The window and potted plant are behind. No text appears anywhere in the art.",
+   "Lettering on page-04.png: Ananya's bubble sits between the two heads, with its tail to her mouth from the right side. It covers only window and plant. Both faces stay clear."
+  ],
+  "issues": []
+ },
+ "04-2": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-04-2-dcb853a3db5c183ad09d2aad04d712a9562bae247c17567c45448f30d63bfff6.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "I opened assets/panels/04-2.png, main-cast.png and page-04.png with Read. The request's page 04 script and production record are the same as in the other page 04 requests.",
+   "Ravi's face matches the sheet: beard, thick brows close to the eyes, eyes creased in a sheepish half-smile, open mouth as he speaks. His expression reads as 'mildly tired, honest'.",
+   "The raised arm rubbing the back of his neck is on his screen-left side as he faces three-quarter toward screen-left, so it is his right. The hand on his knee wears the wristwatch, so it is his left. Both match production.hands.ravi.",
+   "In the left foreground is the back of the doctor's head, with low bun, gold stud and white-coat shoulder. This matches the 'head' speaker kind and the reverse-shot set-up.",
+   "No text appears in the art.",
+   "Non-blocking continuity note: here Ravi sits in a blue office chair with dark plastic armrests. In 04-1 and 04-4 his chair has wooden or blue arms. The background behind him also shows a window, a plant and a desk with a closed laptop, where the scene asks for a plain wall. Putting the laptop on a desk behind Ravi slightly blurs the room layout. At page scale it does not stop the beat from reading.",
+   "Lettering on page-04.png: Ravi's bubble is top-left with its tail to his mouth. It sits over the plain wall and clears his face and hand."
+  ],
+  "issues": []
+ },
+ "04-3": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-04-3-7a44791a617c9c76dffa9f9df92a2aced03ea6d08eb303fad817ba01c74b9548.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "changes-requested",
+  "observations": [
+   "I opened assets/panels/04-3.png twice with Read. I also opened main-cast.png and page-04.png, and read responses/artwork-r2-04-3.json.",
+   "Ananya faces screen-right with a closed-mouth soft smile and gentle eye contact. Nod marks beside her head fit 'listening, mid-nod'. Bun, gold stud, coat, teal kurta and stethoscope match the sheet.",
+   "In the right foreground are the back of Ravi's head, his beard edge and his green shoulder, which keeps Ananya-left / Ravi-right from 04-1. A closed laptop corner sits at the lower left of the desk. The pen cup and binder carry no lettering, and no text is visible.",
+   "The current record says production.hands.ananya left is 'folded over the right hand' and right is 'folded under the left hand'. This follows the previous reviewer's reading.",
+   "My reading of which hand is on top is different. At the resolution I can see, the upper hand shows its back and knuckle line from about x 360 to 500, with fingertips curling down at the screen-right end (about x 480-500, y 900-935). That suggests its wrist enters from her right forearm on the screen-left side. The curled fingers of the lower hand point down-left at about x 370-470, y 935-980, which suggests the lower hand belongs to her left forearm on the screen-right side. On that reading her right hand is on top, the opposite of the current record. This is inferred from finger direction at panel scale only. I could not view the image at 200%.",
+   "Earlier issue (r2: hand order record): the record was changed to match the previous reviewer. Because my independent reading disagrees, I cannot confirm it is resolved.",
+   "Lettering on page-04.png: the narration box covers only wall and window above Ananya. Its right edge just reaches the top of Ravi's hair. Her face stays clear."
+  ],
+  "issues": [
+   {
+    "problem": "Two reviewers disagree on whether Ananya's left or right hand is on top. The current record says left over right. My reading of the fingertip direction suggests right over left. docs/ART-QUALITY.md requires that, when reviewers' left/right judgements conflict, a separate check of the actual image settles it, looking at which face of the hand is visible and the forearm-to-wrist path, before the record can pass. Two ways to resolve it: (a) confirm at 200% in quality-plan, tracing each wrist to its sleeve, and keep or flip the record with that reason saved; or (b) since the hand order carries no story meaning, make the record neutral ('both hands folded together on the desk, overlap order not specified') and record why.",
+    "location": "04-3: Ananya's folded hands, around x 340-520, y 860-985 of the panel PNG / production.hands.ananya",
+    "resolved": false
+   }
+  ]
+ },
+ "04-4": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-04-4-8ed7de35e2414ec6cdf3cdc0863ef1769aa0a65b5fbf4498ca202c2ad71e2686.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "I opened assets/panels/04-4.png, main-cast.png and page-04.png with Read.",
+   "Ananya is on the left with her mouth open, speaking warmly. Her reassuring open palm is on her screen-right side, which is her left. Her right hand rests on the desk. Stethoscope, bun, gold stud, teal kurta and coat match the sheet.",
+   "Ravi is on the right in a blue chair, smiling and relaxed, with nod marks beside his head. Both hands rest on his knees. The watch is on the screen-right hand, which is his left. His bag is on the floor beside the chair at the right.",
+   "A closed laptop sits on the desk. No prescription or instrument is in use. The art matches production.hands and the shoulder-bag prop record.",
+   "No text appears in the art. The composition is close to 04-1, which works as a bookend. The nod and reassurance acting tells the two beats apart.",
+   "Lettering on page-04.png: Ananya's bubble is centred between them, with its tail to her mouth. It overlaps only window and plant and leaves both faces clear."
+  ],
+  "issues": []
+ },
+ "05-1": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-05-1-14b71c1abc79570fdcf393555a63b429e6d66ee60275ec4679fb104b245ab92f.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "I opened assets/panels/05-1.png, main-cast.png and page-05.png with Read. I read the page 05 script and production record in the 05-2 request, which shares the same page block, and confirmed the 05-1 target and file list in its own request.",
+   "Meera matches the sheet. She has large round eyes with a lower lash line, high thin brows and a round face. Her braid falls over her left shoulder (screen-right of her face). She wears a blue kurta with a white motif and a silver bangle.",
+   "Meera points at the phone with the bangled hand, which is her right. Her right arm crosses forward, while her left hand (sleeve from the screen-right side) rests on the desk. This matches production.hands.meera.",
+   "Ravi holds a dark navy phone in his right hand (his screen-left side). His left hand, wearing the wristwatch, rests on the desk edge. His bag strap is on his shoulder and the bag hangs at his side. This matches the hands record and the ravi-phone and shoulder-bag props. The phone shows its back, so no screen content is visible, as the scene specifies.",
+   "The reception monitor and keyboard (blank, back-side view) and a plant are in the left foreground. Waiting patients are seen from behind. No text appears.",
+   "The top-left of the art has a flat white area, read as pale wall. On page-05.png Meera's bubble covers most of it, with its tail to her mouth. The bubble clears both faces and her pointing hand."
+  ],
+  "issues": []
+ },
+ "05-2": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-05-2-b3824bb2346c39d167d73b98fbacbc0de467f99b0d8352ae06bac3861b36e6bd.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "I opened assets/panels/05-2.png, main-cast.png and page-05.png with Read, and read responses/artwork-r2-05-2.json.",
+   "Ravi's identity matches the sheet: beard, thick brows, side part, green shirt and bag strap. His expression is curious and hopeful, with an open-mouth smile.",
+   "The phone is held at chest height with the screen toward the reader. The screen shows a calendar icon card, a heart icon card and blank colour blocks. There is no readable text or data.",
+   "Grip at panel scale: on the viewer-left edge, four fingertips with nails showing curl around the left edge onto the front. That is consistent with his right hand wrapping from behind, which is what the updated record says ('fingers wrapped around the left edge'). The viewer-right hand wears the wristwatch, so it is his left. It supports the lower right corner with the thumb on the screen edge, matching the record. I did not view the image at 200%.",
+   "The scene now records the camera as eye level, which matches the art. The monitor and plant are in the left foreground.",
+   "Earlier issue 1 (r2 eyeline): the image is unchanged and Ravi still glances up to screen-right. It is now recorded as a deliberate thinking glance, with Meera off-panel left. I find this acceptable for readers. His raised eyes and half-smile read as musing aloud rather than addressing someone on the right. The bubble's tail goes to his mouth, so the speaker is clear. On the page the glance also leads toward 05-3, where Meera answers, so the exchange still reads as one conversation. The screen direction is slightly off from 05-3, where he faces left, but it does not cause misreading.",
+   "Earlier issue 2 (r2 grip and record): resolved. The record now names the hand on each edge in Ravi's own left and right, and what I can see is consistent with the fingers wrapping from behind rather than a hand sitting flat in front of the phone.",
+   "Non-blocking record note: the prop's heldBy is 'ravi.right' while 'during' says both hands. If the field allows only one value this is tolerable, but it slightly understates the two-handed hold.",
+   "Lettering on page-05.png: the bubble at top-left has its tail to Ravi's mouth and clears his face. The WELBUK HEALTH label sits at bottom-left over the desk and ends just short of his right fingers. The phone screen stays clear."
+  ],
+  "issues": [
+   {
+    "problem": "(r2) Ravi's eyeline to screen-right did not match the scene, since Meera is screen-left.",
+    "location": "05-2: Ravi's eyes and head turn",
+    "resolved": true
+   },
+   {
+    "problem": "(r2) Possible grip error in the right hand, and the hands record was not stated in Ravi's own left and right.",
+    "location": "05-2: phone grip / production.hands.ravi",
+    "resolved": true
+   }
+  ]
+ },
+ "05-3": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-05-3-9776ec5e2506c1175292f9c8fa0120a5dad4a49b288c11b077ba009ddba80d3f.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "I opened assets/panels/05-3.png, main-cast.png and page-05.png with Read.",
+   "Meera faces screen-right with a warm open-mouth smile. Her round eyes, high brows, braid over her left shoulder, blue kurta and silver bangle match the sheet.",
+   "Her open hand gesturing toward Ravi's phone wears the bangle, so it is her right. Her left hand rests on the desk. This matches production.hands.meera.",
+   "Ravi is seen from behind in the right foreground: the back of his head, his beard edge and his green shoulder. He holds the phone in the hand with the wristwatch, which is his left, with the screen toward Meera. This matches production.hands.ravi and the ravi-phone record, and keeps Meera-left / Ravi-right from 05-1.",
+   "The phone screen shows a calendar card and a person-icon card, with grey placeholder bars. There are no letters or readable data. Non-blocking: the cards differ from the calendar and heart shown in 05-2, which can read as a different app view during the walkthrough.",
+   "The reception background is tidy, with the monitor and keyboard (backs and keys only) and waiting patients from behind. The top of the art is blank white space reserved for lettering.",
+   "Lettering on page-05.png: the bubble fills the top white area, with its tail down to Meera's mouth. It clears her face and does not cover Ravi's head."
+  ],
+  "issues": []
+ },
+ "05-4": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-05-4-32299ba0a2ebf5e5f59bb6763740dd77ddfac9ebf676e329ae6c4ade87e6b0ec.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "I opened assets/panels/05-4.png, main-cast.png and page-05.png with Read.",
+   "Ravi steps out toward screen-right in sunlight, smiling. His raised waving hand is on his screen-left side, which is his right. His left hand, wearing the watch, holds the dark phone low at his side. His bag hangs from a shoulder strap. This matches production.hands.ravi and the ravi-phone and shoulder-bag props.",
+   "Ananya and Meera stand in the glass doorway at left, under a teal awning. Ananya (coat, stethoscope, teal kurta, tied hair) waves with her right hand, with her left hand at her side. Meera (braid, blue kurta) waves with her left hand, with her right at her side. Both match the record, and their faces match the sheet at this small scale.",
+   "The street, trees and planters are drawn simply. There is no signage or text.",
+   "Non-blocking continuity note: here the bag hangs at Ravi's right hip with the strap over his left shoulder. In 05-1 it hangs at his left side, and the cast sheet shows it on his right shoulder. The carry side is not consistent across the comic, but it does not affect this beat.",
+   "Lettering on page-05.png: the art has a hard-edged white rectangle across the top-left, which cuts off the wall's shadow pattern. The caption box covers most of it. A narrow white band is left below and to the left of the caption, which at page scale reads as caption margin. Non-blocking, but avoid leaving the straight cut edge visible if the panel is ever regenerated."
+  ],
+  "issues": []
+ }
+}

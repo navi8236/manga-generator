@@ -1,0 +1,480 @@
+{
+ "01": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/lettering-01-c3f590c80a4565ee197aecbe0a8288a8cea8c98759c8bcb9a89df91ab04437d5.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Identity: the runtime did not give me a task or agent ID. reviewer.task is null; the parent must fill it from the Agent tool result and must not invent one.",
+   "What I read: AGENTS.md (from the system context), docs/REVISION-AND-REVIEWS.md, docs/NARRATIVE-FLOW.md, docs/PROMPTS.md, source/original.txt and this whole request. I opened workflow/review/page-01.png with Read and looked at it; it was readable. I did not open the storyboards, the separate panel PNGs or the cast sheets listed in files[].",
+   "Every text matches the approved script word for word. 01-1 caption: 'A busy day at Dr. Ananya's clinic.' 01-2 balloons: 'Appointments, patient details, follow-ups...' and 'I wish everything were easier to manage!' 01-3 balloon: 'Our time belongs with patients. Let's make the rest simpler.' The page shows apostrophes as typographic marks, which is only a typeface difference.",
+   "01-1: the caption sits in the top-left over the wall and awning. It does not touch Ananya's face or her open gesturing hand.",
+   "01-2: both tails end at Meera's head. The second, shorter balloon sits right of and lower than the first, so it reads as her continuing thought. The phone receiver, the pen hand, the register and the stack are all clear of the lettering.",
+   "01-3: the tail ends at Ananya's head beside her hand at her chin. The balloon is in empty wall space and does not cover the small background Meera.",
+   "The first reading raised no concerns that needed fixing. Its note that one speaker has two balloons in 01-2 is confirmed and is acceptable."
+  ],
+  "issues": [],
+  "readingReview": {
+   "withoutGuides": true,
+   "firstReadingHash": "86d62d1492b7829f566aaf302154b55f53f8a64d7e63fe71d73e4e3840d027c4",
+   "predictedOrder": [
+    {
+     "panel": "01-1",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "01-2",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "01-3",
+     "dialogue": [
+      1
+     ]
+    }
+   ],
+   "observations": [
+    "I read the page left to right and top to bottom, as the source's Western order requires: caption, then 01-2 top-left balloon, then 01-2 lower-right balloon, then the 01-3 balloon.",
+    "The 01-2 lower-right balloon is closer to the 01-3 balloon than to the first 01-2 balloon, but the panel gutter and the tail down to Meera keep it inside 01-2. I did not jump ahead to Ananya."
+   ],
+   "transitions": [
+    {
+     "from": "01-1",
+     "to": "01-2",
+     "observation": "The 01-1 background shows the reception desk with a phone and registers. 01-2 cuts inside to that same busy desk on the same morning, now with Meera and the queue."
+    },
+    {
+     "from": "01-2",
+     "to": "01-3",
+     "observation": "01-3 puts Meera, still on the phone and writing, in the background of Ananya's panel. Ananya's line clearly answers Meera's wish."
+    },
+    {
+     "from": "01-3",
+     "to": "02-1",
+     "observation": "Time skip. The sunset window, the office laptop and the caption 'The clinic begins its Welbuk onboarding.' show this is later, and they answer Ananya's resolve to 'make the rest simpler'."
+    }
+   ],
+   "comparison": "My reading matches the first reading's order exactly. The first reading had no outstanding concerns, and nothing has changed."
+  }
+ },
+ "02": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/lettering-02-6cc7ed7e14f58ee675462a3316acf7044ecd715544768ca1b43f24b3dedc8970.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "changes-requested",
+  "observations": [
+   "Identity: the runtime did not give me a task ID. reviewer.task is null.",
+   "What I read: this request's requiredTransitions, the page-02 plan, firstReading and files/entries. I only skimmed the repeated cast and section data and the boundary context through search. I opened workflow/review/page-02.png with Read and looked at it; it was readable. I also used page-01.png and page-03.png from those reviews to check the page boundaries.",
+   "Every text matches the script word for word: 'The clinic begins its Welbuk onboarding.', 'WELBUK PRACTICE for the clinic', 'We can organise our clinic workflow here.', 'And our team can use tools suited to each staff role.', 'WELBUK CARE for clinic staff', 'One team. Better coordination.'",
+   "Tails: the 02-2 tail ends at Ananya's ear and temple rather than her mouth. She is the only person in the panel, so this is acceptable. The 02-3 tail drops to Meera's head. The 02-4 tail reaches Ananya's mouth, and the balloon sits between her and Meera without touching Meera's face.",
+   "Coverage: no lettering covers a face. The 'WELBUK CARE' label covers the background laptop and Meera's lower dress, but the protected phone and her hand stay clear. The 02-1 caption sits above Ananya's hair; the profile face is small but clear.",
+   "Hands: Meera holds the phone in her right hand in 02-3 and 02-4, Ananya raises her right fist in 02-4, and both hands type in 02-1. All match the production plan.",
+   "Not blocking: the cast note says Ananya wears a stethoscope in every white-coat scene. In 02-1, seen over her shoulder, no tubing shows at the back of her collar, while it is visible in 02-2 and 02-4. The first reading noted this. Readers will probably not notice from this angle."
+  ],
+  "issues": [
+   {
+    "problem": "The first reading's time and place concern is still unresolved. 02-1 to 02-3 are clearly the evening office: sunset window with a roller blind, warm light. 02-4 is evenly lit daytime with blue curtains, a framed print and a different-looking room behind, and nothing tells the reader it is the same session. Per NARRATIVE-FLOW, a reader can take 02-4 as a different room or the next day, which contradicts the 'onboarding' section (after hours, same office). Lettering cannot fix this. Fix it in the art: re-light or edit 02-4 to the same warm evening office (window and blind matching 02-2 and 02-3), or record a deliberate time change with an on-page cue. Then re-review.",
+    "location": "02-4 (02-3 to 02-4 boundary)",
+    "resolved": false
+   }
+  ],
+  "readingReview": {
+   "withoutGuides": true,
+   "firstReadingHash": "f4d24b1d82c45ac1a9614cde39ff7ee3e903338119fff64324d0b46f13653b45",
+   "predictedOrder": [
+    {
+     "panel": "02-1",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "02-2",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "02-3",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "02-4",
+     "dialogue": [
+      1
+     ]
+    }
+   ],
+   "observations": [
+    "In 02-1 I read the top-left caption first and the top-right teal label second, which is the intended order.",
+    "In 02-3 the balloon comes first and the label at the bottom of the panel second. The label sits apart from the balloon and reads as a product tag, not speech.",
+    "No two out-of-order balloons sit close together. Reading order is clear across all three tiers."
+   ],
+   "transitions": [
+    {
+     "from": "01-3",
+     "to": "02-1",
+     "observation": "The caption and the sunset office laptop show a time change from the busy morning and answer Ananya's resolve."
+    },
+    {
+     "from": "02-1",
+     "to": "02-2",
+     "observation": "Same evening office: sunset window, laptop and white coat. The camera moves from over her shoulder to a front three-quarter view as she pauses to think."
+    },
+    {
+     "from": "02-2",
+     "to": "02-3",
+     "observation": "Same sunset window and roller blind, with the laptop on the desk beside Meera. Her 'And our team...' continues Ananya's line naturally."
+    },
+    {
+     "from": "02-3",
+     "to": "02-4",
+     "observation": "Discontinuity. The lighting changes from warm evening to neutral daytime, and the décor changes to blue curtains and a framed print. The people and props carry over (Meera's phone in her right hand, open laptop), but time and place read as changed without any cue."
+    },
+    {
+     "from": "02-4",
+     "to": "03-1",
+     "observation": "A new morning at the tidy reception with a monitor, and a new arrival, Ravi. The bright light and the changed desk carry the time change without a caption, and it reads acceptably."
+    }
+   ],
+   "comparison": "My reading order matches the first reading. Its concern that 02-4 is a different, daytime room with no time or place cue is still present in the current image, so this page is changes-requested. Its stethoscope note for 02-1 also still applies, but I treat it as minor."
+  }
+ },
+ "03": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/lettering-03-5deeb22abb17ea822fe6613c207226a4a365918fb19bb5a10cadafde6f6f6960.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Identity: the runtime did not give me a task ID. reviewer.task is null.",
+   "What I read: this request's requiredTransitions, the page-03 plan (including the reverse-angle note on 03-2) and firstReading. I opened workflow/review/page-03.png with Read and looked at it; it was readable.",
+   "Every text matches the script word for word: 'Good morning! I'd like to see the doctor.', 'Of course. May I register your details for today's appointment?', 'Yes, please.', 'You're all set, Ravi. Please have a seat.'",
+   "Tails: 03-1 runs right to Ravi's face, not to Meera in the left foreground. 03-2 drops to Meera's head. 03-3 reaches Ravi's ear and cheek. 03-4 reaches Meera on the right.",
+   "Coverage: no lettering covers a face, hand, phone or monitor. The 03-1 tail passes beside Ravi's raised waving hand without crossing it. The 03-2 balloon's lower edge stops above Meera's hair.",
+   "Hands match the plan. Ravi waves with his right hand in 03-1 and holds the bag strap with his watch-wearing left hand in 03-1 and 03-4. Meera gestures toward the chairs with her right hand, the one with the bangle.",
+   "First-reading concern (a), the phone: the plan records a navy reception phone on the desk in 03-1 and Ravi's dark-blue phone in 03-2 and 03-3. On the page the two look almost the same, so a reader may think it is one phone. It does not affect the dialogue, so I am not blocking on it.",
+   "First-reading concerns (b) and (c): the reverse angle at 03-2 reads, because the same desk, monitor and kurta carry across and 03-3 re-establishes Ravi on the left and Meera on the right. Meera calling him 'Ravi' is explained by the registration in 03-2 and 03-3. Both accepted."
+  ],
+  "issues": [],
+  "readingReview": {
+   "withoutGuides": true,
+   "firstReadingHash": "ea5226ca9458efa0a95e037f9fc54dc70c85990bce4dd5d1121de288a7b8b282",
+   "predictedOrder": [
+    {
+     "panel": "03-1",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "03-2",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "03-3",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "03-4",
+     "dialogue": [
+      1
+     ]
+    }
+   ],
+   "observations": [
+    "There is one balloon per panel, so the order follows the panels: 03-1, 03-2, 03-3, 03-4. There is no pull to read ahead.",
+    "03-3 shows Ravi's 'Yes, please.' with his eyes closed in a nod while Meera types, which shows the consent and the response in the same beat."
+   ],
+   "transitions": [
+    {
+     "from": "02-4",
+     "to": "03-1",
+     "observation": "A new morning at the reception, now with a monitor, and Ravi arriving through a glass door. The time change reads from the setting and the newcomer."
+    },
+    {
+     "from": "03-1",
+     "to": "03-2",
+     "observation": "Reverse over-the-shoulder shot across the same desk and monitor. Meera (blue kurta, braid) now faces us and Ravi is a cropped green-shirt foreground. It reads, though the switch is noticeable."
+    },
+    {
+     "from": "03-2",
+     "to": "03-3",
+     "observation": "A wide two-shot re-establishes Ravi on the left and Meera on the right. Ravi's phone is now on the desk and Meera types. Her question is answered right away."
+    },
+    {
+     "from": "03-3",
+     "to": "03-4",
+     "observation": "Same staging. The phone is no longer visible (pocketed, per the plan) and Meera gestures toward the waiting chairs on the left. Registration is finished."
+    },
+    {
+     "from": "03-4",
+     "to": "04-1",
+     "observation": "Place change to the consultation room with no caption. The doctor's desk, the window and Ravi sitting with his bag on the floor make 'called in after waiting' clear."
+    }
+   ],
+   "comparison": "My reading order is the same as the first reading's. I checked its concerns (phone, reverse angle, name) against the plan. None blocks the lettering; the phone look-alike stays a minor note."
+  }
+ },
+ "04": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/lettering-04-73e80a41c4a33fa60462642570b7f04746f61efd15588e02dddb7e909a089b95.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Identity: the runtime did not give me a task ID. reviewer.task is null.",
+   "What I read: this request's requiredTransitions, the page-04 plan and firstReading. I opened workflow/review/page-04.png with Read and looked at it; it was readable.",
+   "Every text matches the script word for word: 'Hello, Ravi. Tell me what brings you in.', 'I've been feeling tired lately.', caption 'Technology supports the workflow. The conversation stays human.', 'We'll go through your concerns and decide the right next steps together.'",
+   "Tails: 04-1 points left to Ananya's mouth. 04-2 reaches Ravi's face. 04-4 points left to Ananya and clearly not to Ravi, whose head is just right of the balloon.",
+   "Known point, 04-3: the caption's right edge (about x=933) comes right up to the hair of Ravi's back-of-head at the panel's right edge, at most touching it. That area is a back-of-head 'head' region, not a face, and Ananya's face, folded hands and stethoscope are all clear. Acceptable.",
+   "Hands and props match the plan. Ravi rubs his neck with his right hand while his watch-wearing left hand rests on his knee (04-2). The laptop stays closed and pushed aside. The bag stays on the floor beside the chair in 04-1 and 04-4.",
+   "First-reading concern (a): the 04-3 caption comes straight from the source's panel 3. Placed over the listening panel, it reads as a pause before her reply. Accepted. Concern (b): her generic reply is the source text and avoids medical advice. Accepted. Concern (c): the transition reads from the setting."
+  ],
+  "issues": [],
+  "readingReview": {
+   "withoutGuides": true,
+   "firstReadingHash": "ae1b07e7e09655685ee529eead5c94884a9e8c306d1fad0cc2c6c7886d07597f",
+   "predictedOrder": [
+    {
+     "panel": "04-1",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "04-2",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "04-3",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "04-4",
+     "dialogue": [
+      1
+     ]
+    }
+   ],
+   "observations": [
+    "Order: top tier, middle-left, middle-right, bottom tier. The middle-right caption is clearly a box with no tail and does not compete with Ravi's balloon.",
+    "The 04-4 balloon is close to Ravi's head, but its tail points left, so I read it as Ananya's line."
+   ],
+   "transitions": [
+    {
+     "from": "03-4",
+     "to": "04-1",
+     "observation": "Cut from the reception to the consultation room. Ravi is seated with his bag on the floor and Ananya greets him at her desk, so it reads as the same visit."
+    },
+    {
+     "from": "04-1",
+     "to": "04-2",
+     "observation": "Over-the-shoulder shot with Ananya's bun at left in the foreground and Ravi in the same blue chair answering. The left/right axis is kept."
+    },
+    {
+     "from": "04-2",
+     "to": "04-3",
+     "observation": "Reverse shot with Ravi's back at right and Ananya listening at left, so the screen direction is kept. The caption works as a pause."
+    },
+    {
+     "from": "04-3",
+     "to": "04-4",
+     "observation": "The two-shot returns to the 04-1 staging with the bag on the floor. Her reply follows the listening beat."
+    },
+    {
+     "from": "04-4",
+     "to": "05-1",
+     "observation": "Back at the reception desk with Ravi's bag on his shoulder and his phone out. Leaving after the visit is clear without a caption."
+    }
+   ],
+   "comparison": "My reading order is the same as the first reading's. Its 04-3 caption-edge point is confirmed: the caption touches only the back-of-head hair, so it is acceptable. Its dialogue concerns follow the source and are accepted."
+  }
+ },
+ "05": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/lettering-05-0bd04db4009424b331f3c591753fbd3041a76250cf3ce2bcbb9e2275e8f95da2.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Identity: the runtime did not give me a task ID. reviewer.task is null.",
+   "What I read: this request's requiredTransitions, the page-05 plan and firstReading. I opened workflow/review/page-05.png with Read and looked at it; it was readable.",
+   "Every text matches the script word for word: 'Welbuk Health is designed to help patients stay connected with their care.', 'So I can keep useful information in one place?', 'WELBUK HEALTH for patients', 'That's the idea. Let's walk through what is available to you.', 'A smoother visit. A more connected experience.'",
+   "Tails: 05-1 goes to Meera's face. 05-2 goes to the side of Ravi's face. The 05-3 tail drops to Meera's head; it is long but unambiguous.",
+   "05-2: the label's top-right corner sits just below and left of Ravi's right hand wrapped around the phone and stays outside the protected phone-and-hands area. The gap is small but nothing is covered.",
+   "05-3: the balloon's lower-right corner reaches the edge of Ravi's back-of-head hair at the panel's right edge. That is a 'head' region; the protected phone and hand are clear.",
+   "Known point, 05-4: the caption's right end (about x=688) stops just above and left of Ravi's raised waving fingers without covering them, and it clears Ananya's and Meera's heads and their waving hands. Tight but acceptable.",
+   "Hands match the plan. Ravi holds the phone in his right hand in 05-1, in both hands in 05-2 with the watch on the left, and in his left hand in 05-3 and 05-4. Meera points with her right hand (bangle). In 05-4 Ananya waves with her right hand and Meera with her left.",
+   "First-reading note: the jump from 'walk through' to Ravi leaving is carried by the caption and follows the source's panel 4. Accepted."
+  ],
+  "issues": [],
+  "readingReview": {
+   "withoutGuides": true,
+   "firstReadingHash": "697996f5104317301e5fee807b8b696f35577eae0793626ab2bcb7878076c03b",
+   "predictedOrder": [
+    {
+     "panel": "05-1",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "05-2",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "05-3",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "05-4",
+     "dialogue": [
+      1
+     ]
+    }
+   ],
+   "observations": [
+    "In 05-2 the balloon comes first, at top-left, and the teal label second, at bottom-left. The label reads as a product tag tied to the phone screen.",
+    "The 05-3 balloon starts right of the 05-2 balloon at the same height, and Meera's answer follows Ravi's question naturally. Nothing is skipped."
+   ],
+   "transitions": [
+    {
+     "from": "04-4",
+     "to": "05-1",
+     "observation": "Back at the reception after the consultation. Ravi has his bag on his shoulder and his phone in his right hand, and Meera leans over to point at it."
+    },
+    {
+     "from": "05-1",
+     "to": "05-2",
+     "observation": "Close-up on the same dark-blue phone, now in both hands with the screen toward the reader. The question follows Meera's introduction."
+    },
+    {
+     "from": "05-2",
+     "to": "05-3",
+     "observation": "Meera on the left and Ravi's back on the right with the phone in his left hand keep the 05-1 axis. Her answer directly follows his question."
+    },
+    {
+     "from": "05-3",
+     "to": "05-4",
+     "observation": "Time skip to the street-side entrance, carried by the caption. Ravi waves goodbye with his phone in his left hand and Ananya and Meera wave from the doorway."
+    },
+    {
+     "from": "05-4",
+     "to": "06-1",
+     "observation": "Change to the train, with the caption 'Tomorrow, care may take us beyond our hometown.' Ravi wears the same shirt and carries the same bag and phone, which links the two scenes."
+    }
+   ],
+   "comparison": "My reading order matches the first reading. I confirmed its close calls (05-2 label near the hand, 05-3 balloon corner at the back of Ravi's head, 05-4 caption beside the waving hand) at page size. None covers a face, hand or protected prop. The time skip is accepted as source-faithful."
+  }
+ },
+ "06": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/lettering-06-bf4ca65bdb0164dca59f9c775eb5e8cf3735fe9868eb7e6c81295892bb475164.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Identity: the runtime did not give me a task ID. reviewer.task is null.",
+   "What I read: this request's requiredTransitions, the page-06 plan and firstReading. I opened workflow/review/page-06.png with Read and looked at it; it was readable.",
+   "Every text matches the script word for word: 'Tomorrow, care may take us beyond our hometown.', 'WELBUK VISION' (twice), 'The vision: trusted connections between clinics, specialists, and patients across locations.', 'One connected ecosystem for care and family wellness.', 'Welbuk Practice • Welbuk Care • Welbuk Health', 'Welbuk — Building a connected healthcare ecosystem.' The page has no balloons or tails.",
+   "06-2: the caption starts below the specialist's gesturing hand (protected area clear) and below his stethoscope chest piece. The 'WELBUK VISION' label and the rounded pale-blue vignette mark it as vision, as the source requires.",
+   "06-3: the caption's right edge touches the edge of Ravi's sleeve and shoulder. His pointing hand, the tablet (protected) and all three faces are clear.",
+   "Known point, 06-4 label: the label box sits right next to Ravi's head, roughly touching his hair edge and the top of his shoulder, but his face and waving hand are clear. Acceptable.",
+   "Known point, 06-4 closing caption: it hides Meera's feet and lower shins and slightly overlaps the edge of Ananya's left shin. These are not faces, hands or protected props, and the figures still read. It does crop only Meera in a full-figure closing portrait. As an optional improvement, the caption could move to the free pavement and planter area left of Meera (about x 24-290). Not blocking.",
+   "Hands match the plan. Ravi holds the phone in his watch-wearing left hand on the train and waves with his right hand in 06-4. Meera holds the staff phone in her right hand. Ananya's hands are clasped.",
+   "First-reading notes: the specialist, partner and child are unnamed, as in the source, which describes them only as symbolic. The repeated 'WELBUK VISION' labels and the vignette frame them as a montage. Accepted."
+  ],
+  "issues": [],
+  "readingReview": {
+   "withoutGuides": true,
+   "firstReadingHash": "05318318a7c457c8560d44c79edfdfafb857f073b2697c3b8f72c09bd5a17ec5",
+   "predictedOrder": [
+    {
+     "panel": "06-1",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "06-2",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "06-3",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "06-4",
+     "dialogue": [
+      1,
+      2
+     ]
+    }
+   ],
+   "observations": [
+    "In 06-2 and 06-3 I read the label first, then the caption.",
+    "In 06-4 I read the top-right product label before the bottom-left closing caption. The top-to-bottom position overrides left-to-right here, and that matches the intended order, with the closing statement read last."
+   ],
+   "transitions": [
+    {
+     "from": "05-4",
+     "to": "06-1",
+     "observation": "The train window, the moving skyline and the 'Tomorrow... may' caption mark a possible future. Ravi's same clothes, bag and phone link it to the departure."
+    },
+    {
+     "from": "06-1",
+     "to": "06-2",
+     "observation": "The label, the vignette frame and the lighter palette mark the shift into vision. The 'another city' clinic follows from the train ride."
+    },
+    {
+     "from": "06-2",
+     "to": "06-3",
+     "observation": "The same 'WELBUK VISION' label and the rounded vignette continue the vision, now widening to Ravi's family."
+    },
+    {
+     "from": "06-3",
+     "to": "06-4",
+     "observation": "The vignette ends and full colour returns at the familiar clinic entrance with the three main characters, which reads as a return to the present for the close."
+    }
+   ],
+   "comparison": "My reading order matches the first reading. Its overlap notes are confirmed. The closing caption cropping Meera's feet and Ananya's shin is still there; I judge it non-blocking and suggest an optional placement fix. The montage and unnamed vision characters are accepted as faithful to the source."
+  }
+ }
+}

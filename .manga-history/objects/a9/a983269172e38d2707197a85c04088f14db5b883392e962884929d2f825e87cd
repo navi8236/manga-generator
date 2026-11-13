@@ -1,0 +1,208 @@
+{
+ "_note_to_parent": "The runtime did not give me a subagent or task identity, so reviewer.task is null in every entry. Fill it with the agent ID that your Agent tool returned, or record that it is unavailable. Do not invent one. I could read every file I needed. Read with my own eyes: AGENTS.md (supplied as project instructions), docs/REVISION-AND-REVIEWS.md, docs/PROMPTS.md, docs/ART-QUALITY.md, source/original.txt, the full 02-1 request JSON, the 03-1 request JSON from line 195 to the end (the page 03 script and the request's file list and hashes), the r2 responses for 02-1, 02-3, 02-4, 03-1, 03-2, 03-3 and 03-4, main-cast.png, vision-cast.png, the panel PNGs 02-1 to 02-4 and 03-1 to 03-4, page-02.png and page-03.png. Assumption, not checked: I treated the 02-1 request as containing the same page 02 script as the 02-2, 02-3 and 02-4 requests, and the 03-1 request as the same page 03 script as the 03-2, 03-3 and 03-4 requests. I did not open those six request files and did not compare their content or fingerprints. I looked at the PNGs only at the size they display; I did not zoom. I did not open the storyboard SVGs.",
+ "02-1": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-02-1-53dcb883cd52387257f3b848708bdbb435ac2104f69146d23c2c8e6f2b8f5e94.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "I opened assets/panels/02-1.png. Dr. Ananya is seen from behind and slightly to her right, facing image right toward a silver laptop. I can see a low bun with loose strands, a gold stud on the near (right) ear, a calm smiling profile, and a white coat with teal cuffs. This matches main-cast.png.",
+   "Both hands type on the keyboard. The near hand has its teal cuff at about x650 (her right). The far hand has its cuff at about x900 (her left). This matches production.hands.ananya, which has both hands typing.",
+   "Screen: a three-step progress dot bar, blank rounded fields with a cursor bar in the first one, light blue blocks and a teal button. Nothing on it is readable and there are no logos. A mug sits on a cork coaster, and the window shows an evening sky with trees. This fits the scene and the time-change transition, and the laptop prop is open with a blank setup form.",
+   "The record now reads 'from behind Dr. Ananya's right shoulder', which matches the art.",
+   "The raw art has hard-edged white blocks at top-left and top-right. In page-02.png they are fully covered by the narration box and the 'WELBUK PRACTICE for the clinic' label, and neither box covers her face.",
+   "Minor, not blocking: the stethoscope is not visible from behind. The coat collar could plausibly hide the tubing at the nape. It is present in 02-2 and 02-4."
+  ],
+  "issues": [
+   {
+    "problem": "Earlier r2 issue: the record said the shot was over her left shoulder, but the art is over her right shoulder. The scene and camera text now say right shoulder, which matches the art.",
+    "location": "02-1 scene/camera vs assets/panels/02-1.png",
+    "resolved": true
+   }
+  ]
+ },
+ "02-2": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-02-2-47167816d3b33c06a3b6a5123c8b0c37a64c2c8fc99929fb0fd600d604efac3a.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "I opened assets/panels/02-2.png. Ananya is seated, three-quarter front. Her almond eyes with heavy lids, level brows, oval face and pointed chin match main-cast.png. She also has the low bun, the gold stud, the stethoscope around her neck and a teal kurta under the white coat.",
+   "Her left hand (image right) rests its index finger at her chin. Her right hand (image left) rests on the laptop trackpad. This matches production.hands. The laptop screen is angled away, so no screen content shows. A notebook and pen are on the desk.",
+   "Acting: she looks up and to image right with a small smile, which fits 'focused, quietly pleased'. The window has a roller blind and evening sky, which is consistent with 02-1's evening light.",
+   "page-02.png: the balloon 'We can organise our clinic workflow here.' sits on the empty upper-left wall. Its tail points to her face side and does not cover her face or hand."
+  ],
+  "issues": []
+ },
+ "02-3": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-02-3-f8f67d14972aaba5cdb6d47db3e64adacd540c8bbe12daad4064a17db657b948.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "I opened assets/panels/02-3.png. Meera now fills the lower roughly 70% of the tall frame, with her head at about y370-560 of 1232. She matches main-cast.png: large round eyes, high thin brows, round face, braid over her left shoulder (image right), blue leaf-motif kurta and white churidar.",
+   "Her right hand (image left, silver bangle on that wrist) holds the phone at upper-chest height, screen toward the reader. The screen shows a teal bar, a calendar icon and blocks, with no text. Her left hand (image right) hangs relaxed by an empty black office chair. This matches production.hands.meera and the staff-phone heldBy meera.right.",
+   "Acting: open-mouthed bright smile, eyes looking up. This fits 'relieved, excited'. At the size I viewed, I see no dark mole dot on her cheek.",
+   "Setting: a wooden-top desk with an open laptop showing a blank abstract form, a pen cup, a plant, a roller-blind window with evening sky (as in 02-2), and an empty second chair. Ananya is not in the panel. That fits the scene record ('Dr. Ananya sits at the desk off-panel left'). The layout also matches 02-4, where Ananya sits left of a laptop that faces the reader and Meera stands to its right.",
+   "page-02.png: the balloon fills the upper wall and its tail reaches Meera's head. The 'WELBUK CARE for clinic staff' label box (about x663-897, y968-1075) covers her lower kurta and legs but not her face, the phone (the protected area) or her relaxed left hand, which sits just right of the box. Her face is still small on the page (about 51x66 px), but the expression reads at page scale."
+  ],
+  "issues": [
+   {
+    "problem": "Earlier r2 issue 1: the spatial continuity break (empty desk, different office, grey tiles). Resolved: the background now has a wooden desk, the roller-blind window from 02-2, no tiles, and an off-panel-left Ananya that is consistent with the 02-4 layout. The second chair is black mesh rather than fabric, a small drift that does not block.",
+    "location": "assets/panels/02-3.png background",
+    "resolved": true
+   },
+   {
+    "problem": "Earlier r2 issue 2: Meera was too small and the label crowded her hand. Resolved enough to pass: she is reframed larger as a tall medium shot, and the label no longer touches her relaxed hand. It still covers her lower kurta and legs, which is acceptable.",
+    "location": "page-02.png panel 02-3",
+    "resolved": true
+   },
+   {
+    "problem": "Earlier r2 issue 3: a mole-like dot on her left cheek. Resolved as far as I can see: at the size viewed, no dark dot is visible.",
+    "location": "assets/panels/02-3.png Meera's cheek",
+    "resolved": true
+   }
+  ]
+ },
+ "02-4": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-02-4-59e8d683909eb70a6ece707cb26f8cbe286066930341fd239196eeacac13fbce.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "I opened assets/panels/02-4.png. Ananya is seated at left, turned toward Meera, with an open-mouth smile. She has the bun, stud, stethoscope, and white coat over teal. Meera stands at right with a warm smile, eyes toward Ananya, braid over her left shoulder and blue kurta. Both match main-cast.png.",
+   "Ananya's right hand (image left) is raised in a small fist at her chest, in front of the stethoscope tubing without gripping it. Her left hand rests on the desk beside the laptop. Meera's right hand (bangle on that wrist) holds the phone at hip level; its screen shows a calendar icon and blocks with no text. Her left hand hangs at the bottom edge of the frame. This matches production.hands and the staff-phone heldBy meera.right.",
+   "The laptop screen faces the reader and shows only grey bars and a button, nothing readable. The scene and props record now say the screen is turned toward Meera and the reader, which matches the art.",
+   "The top-left hard-edged white rectangle is gone. The bookshelf now runs to the top edge.",
+   "Minor decor drift, not blocking: a blue curtain, a framed leaf print and a doorway to a reception area appear here. The window top is cropped, so a rolled-up blind as in 02-2 and 02-3 is not contradicted.",
+   "page-02.png: the balloon 'One team. Better coordination.' sits between the two figures, with its tail to Ananya's mouth side. It covers neither face nor the phone."
+  ],
+  "issues": [
+   {
+    "problem": "Earlier r2 issue 1: the visible blank white rectangle at top-left. Resolved: the area is now painted bookshelf and wall.",
+    "location": "assets/panels/02-4.png top-left",
+    "resolved": true
+   },
+   {
+    "problem": "Earlier r2 issue 2: the record said 'screen not visible' while the art showed the screen. Resolved: the scene and props now describe the screen turned toward Meera and the reader with blank fields, which matches the art.",
+    "location": "02-4 scene/props vs art",
+    "resolved": true
+   }
+  ]
+ },
+ "03-1": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-03-1-cafdb74dbeb6b08bb26ce5dc5621a2def568fb40b7bf3d14304c52d6c54ff796.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "I opened assets/panels/03-1.png. Ravi matches main-cast.png: short side-parted black hair, trimmed beard, square jaw, light green shirt with rolled sleeves, dark trousers, brown shoulder bag. His raised waving hand is on image left, which is his right. His left hand, with the wristwatch, grips the bag strap at his chest, and the bag hangs from his left shoulder to his left hip. This matches production.hands.ravi and the shoulder-bag heldBy ravi.left. His acting is a warm open smile mid-stride.",
+   "Meera is in the left foreground, seen over her shoulder from behind, face in profile looking up at Ravi with an open-mouth smile. Her near (right) hand, with the silver bangle, types on the keyboard. Her other hand is not visible. The record now says 'left: hidden behind her body, not visible', which matches.",
+   "Her braid now hangs down her back behind her head (lower left), not over the near right shoulder. That no longer contradicts the left-shoulder braid in 03-2 to 03-4.",
+   "The monitor faces the reader and shows a calendar icon, a person icon, a check circle and blank blocks, with no text. A navy phone lies beside the keyboard, matching reception-mobile. The background has waiting chairs with two patients from behind, a plant, a glass door and morning light.",
+   "page-03.png: the balloon 'Good morning! I'd like to see the doctor.' is on the blank upper-left wall, with its tail to Ravi's mouth. It covers no face."
+  ],
+  "issues": [
+   {
+    "problem": "Earlier r2 issue 1: the record said Meera's left hand was typing although it is not visible. Resolved in the record: it now says hidden or not visible.",
+    "location": "03-1 production.hands.meera.left",
+    "resolved": true
+   },
+   {
+    "problem": "Earlier r2 issue 2: the braid was over her near right shoulder. Resolved in the image: the braid now falls down her back.",
+    "location": "03-1 Meera hair, left foreground",
+    "resolved": true
+   }
+  ]
+ },
+ "03-2": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-03-2-0fc466c2c573151e17d2893cd309658f0a1628fcc9259ee67afc1fe71c8c3ed4.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "I opened assets/panels/03-2.png. Meera stands behind the reception desk, leaning slightly forward with a bright open-mouth smile. The face matches main-cast.png, and the braid is over her left shoulder (image right). Her right hand (image left, bangle) lies flat on the desk. Her left hand is open palm-up toward image right, toward the monitor and waiting area. The record now says 'open palm in an explanatory gesture to screen-right', which matches. Read as explaining the registration it is acceptable acting, though it is not directed at Ravi.",
+   "Ravi is in the left foreground, seen over his shoulder: right-side profile with beard and ear, green shirt. His near right hand holds a dark-blue phone low at the desk edge, and the phone back shows only a camera bump. No strap crosses his near shoulder. The only bag visible is a brown edge at the lower-left frame edge, consistent with a bag at his far left hip seen past his back. This matches the record that the bag hangs from his far left shoulder.",
+   "The monitor's back and keyboard are at right with the screen angled away, so no content is visible. The background has waiting chairs with three patients from behind and a window with trees, which is consistent with 03-1.",
+   "Meera stands here but sits in 03-1, 03-3 and 03-4. Rising to greet and then sitting to type is plausible, so this does not block.",
+   "page-03.png: the four-line balloon sits on the empty upper wall, with its tail to the top of Meera's head. It does not cover her face."
+  ],
+  "issues": [
+   {
+    "problem": "Earlier r2 issue 1: the gesture direction did not match the record ('toward Ravi'). Resolved: the record now describes the gesture to screen-right, matching the art.",
+    "location": "03-2 production.hands.meera.left",
+    "resolved": true
+   },
+   {
+    "problem": "Earlier r2 issue 2: Ravi's bag strap was on his near right shoulder. Resolved in the image: no strap on the near shoulder, and the bag shows at the far-left hip edge.",
+    "location": "03-2 Ravi foreground",
+    "resolved": true
+   }
+  ]
+ },
+ "03-3": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-03-3-9b0319d0440d5f0a6b3090112b35dba10c825e67624920a47b406776f2e24717.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "changes-requested",
+  "observations": [
+   "I opened assets/panels/03-3.png. Ravi is at left, nodding with closed smiling eyes and small motion arcs. Both hands rest on the desk edge, the watch is on his left wrist (image right), and the bag strap now runs over his left shoulder with the bag behind his left forearm. The dark-blue phone lies on the desk in front of him. This matches production.hands.ravi and the ravi-phone heldBy none. Identity matches main-cast.png.",
+   "Meera is at right in a mesh chair, typing with both hands, eyes turned to image left toward the monitor, with a gentle smile. The silver bangle is now on her image-left hand, which is her right wrist because she faces the viewer. The braid is over her left shoulder.",
+   "The monitor faces image left, toward Ravi and the reader, and shows two blank pale fields with no text. The scene and props now say Meera turned it toward the desk front so Ravi can see only blank fields, and that it is turned back in 03-4. This matches the art and 03-4, where the monitor's back faces the reader. There are no ID cards or papers.",
+   "The desk is still a plain tan wooden-top desk. In 03-1, 03-2 and 03-4 on page-03.png the reception counter has a cream/white top, with a wood front strip in 03-1 and 03-2 and a teal front in 03-4.",
+   "page-03.png: 'Yes, please.' is at top left over the window, with its tail to Ravi's cheek and ear area. It covers no face."
+  ],
+  "issues": [
+   {
+    "problem": "Earlier r2 issue 1: the bangle was on Meera's left wrist. Resolved in the image: the bangle is now on her right (image-left) wrist.",
+    "location": "03-3 Meera hands on keyboard",
+    "resolved": true
+   },
+   {
+    "problem": "Earlier r2 issue 2: the monitor orientation did not match the record or continuity. Resolved: the record now says she turned the monitor toward the desk front for Ravi and turns it back for 03-4, which matches both images.",
+    "location": "03-3 monitor / production.props[monitor]",
+    "resolved": true
+   },
+   {
+    "problem": "Earlier r2 issue 3, part 1: Ravi's bag was on his right shoulder. Resolved: the strap and bag are now on his left side, consistent with 03-1, 03-2 and 03-4.",
+    "location": "03-3 Ravi strap",
+    "resolved": true
+   },
+   {
+    "problem": "Earlier r2 issue 3, part 2, still unresolved: the reception desk differs from the neighbouring panels. 03-3 shows a plain tan wood-top desk, while 03-1, 03-2 and 03-4 show the same counter with a cream/white top. The 03-2 transition note relies on 'the same desk, monitor' to carry the reverse angle. Repaint the desk top as the cream counter, matching the 03-2 and 03-4 counter top, or record and justify a different desk.",
+    "location": "assets/panels/03-3.png desk across the lower third; page-03.png about y980-1060",
+    "resolved": false
+   }
+  ]
+ },
+ "03-4": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-03-4-7aeefaa2b3dae699844b638688a77d489809334a22f21edff9b4e71ea90f2bff.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "I opened assets/panels/03-4.png. The prior r2 review of 03-4 passed with no issues. Ravi is at left: his left hand, with the watch, grips the bag strap at his chest, the bag hangs from his left shoulder to his left hip, and his right hand hangs empty at his side. No phone is visible, which is consistent with 'put away in his pocket'. Identity matches main-cast.png.",
+   "Ravi's body is angled toward the chair side, but his head and eyes are turned to image right toward Meera, with a smile. The scene says he turns toward the waiting chairs. Looking at Meera while she speaks reads as acknowledging her on his way to sit, so this is acceptable.",
+   "Meera is at right, seated behind a white curved counter with a teal front. Her right hand (bangle) is extended palm-up toward image left, toward Ravi and the chairs, and her left hand rests on the desk. The braid is over her left shoulder. This matches production.hands.meera. The monitor's back faces the reader, which is consistent with the 03-3 record that she turned it back.",
+   "The raw art has a hard-edged plain white block at upper right (about x775-1536, y0-245). On page-03.png the balloon 'You're all set, Ravi. Please have a seat.' covers its left part. The remaining right part reads as a near-white wall above the teal wainscot, with only a faint edge. I note it as minor and not blocking.",
+   "page-03.png: the balloon's tail points to Meera's mouth and does not cover her face or gesturing hand."
+  ],
+  "issues": []
+ }
+}

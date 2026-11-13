@@ -1,0 +1,20 @@
+{
+ "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-08-4-fcc4d1eeb21fa0b85c879bfbf2d6ac7f9c4aa279223a70e79a6ede8720cf2640.json",
+ "reviewer": {
+  "role": "subagent",
+  "task": "claude-code-agent:manga-reviewer:a212b7aa225bf0958",
+  "reportedTask": null,
+  "taskSource": "Agent ID returned by the Claude Code Agent tool to the parent."
+ },
+ "status": "pass",
+ "observations": [
+  "Reviewer identity: the runtime gave me no task ID, so reviewer.task is null. The parent must supply the real one. I opened these myself with Read: assets/panels/08-4.png (the current edited version, with the figure lowered), assets/characters/main-cast.png and workflow/review/page-08.png.",
+  "Ravi sits on a simple beige sofa with a teal cushion, beside a window with an evening sunset sky, a curtain with a leaf pattern and a potted plant. This matches 'at home, soft evening light, some days later'. His face matches the sheet: side-parted hair, short beard, thick straight brows, eyes creased in a gentle smile. He wears the light-green shirt and dark trousers.",
+  "Hands match production. His right hand (viewer's left) holds the phone in a dark-blue case, screen toward the reader. His left hand rests on his knee with the wristwatch on that wrist. The fingers on the phone read correctly.",
+  "The phone screen shows one green check-mark card and three small icons: an app grid, an envelope and a chat bubble. There are no logos, letters or values. A plain wall fills the upper half for lettering.",
+  "From 08-3 to 08-4: the cut moves from the lab to home with a light change from daylight to evening, which supports the time jump to the results day. His costume stays the same, which matches the sections and continuity fields.",
+  "Lettering on page-08.png: the caption (about page x 165-402, y 862-965) and the label (about x 115-406, y 985-1088) sit on the wall and curtain above his head, which starts at about y 1130. His face, the phone screen, his left hand and the watch are all uncovered."
+ ],
+ "issues": [],
+ "fingerprint": "fcc4d1eeb21fa0b85c879bfbf2d6ac7f9c4aa279223a70e79a6ede8720cf2640"
+}

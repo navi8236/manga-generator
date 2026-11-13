@@ -1,0 +1,330 @@
+{
+ "01": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-01-2d183aa26dc42915aaa742933a3b8705fdbc8f069695b30622de161a13699f62.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Identity: the runtime did not give me a subagent or task identity, so task is null. The parent must record the real Agent ID and must not invent one.",
+   "What I read: AGENTS.md (supplied in context), docs/REVISION-AND-REVIEWS.md, docs/PROMPTS.md, this request JSON (script, the page-02 boundary context and the recorded first reading, firstReadingHash 3a9d778a...), source/original.txt (all of it), reading-flow/page-01.json (one warning on 01-2, step 1 to 2) and storyboard-r18-01.json as a reference. I read the request JSON before opening the images. This is a comparison request, not a first reading. I did not open the SVGs listed in the request or the reading-flow SVG with its guide lines.",
+   "Images I opened with Read and looked at: storyboards-unnumbered/page-01.png, storyboards/page-01.png (numbered), review/page-01.png (composed preview from the previous build) and review/page-02.png for the boundary. Every file loaded. I did not check that the numbered PNG matches the hashed storyboards/page-01.svg.",
+   "Unnumbered PNG: a wide top panel, then a tall lower-left and a tall lower-right panel. My order: the caption 'A busy day at Dr. Ananya's clinic.'; Meera's 'Appointments, patient details, follow-ups...' then 'I wish everything were easier to manage!' (one step down and right, both tails to the meera box); Ananya's 'Our time belongs with patients. Let's make the rest simpler.' The numbered labels 1/2/3 match.",
+   "Composed 01-1: Ananya in white coat and teal kurta stands in the doorway under a teal awning and gestures with her open left hand toward an elderly woman in a lilac sari, seen from behind. Two patients wait on perforated metal chairs at the right, seen from behind. Through the glass door you can see a reception desk with registers and a desk phone.",
+   "Composed 01-2: Meera (blue kurta, side braid, bangle) holds the corded receiver to her left ear and writes in an open register with her right hand. Sweat drop and ring lines; a tall register stack at the left; the backs of a queue in the foreground. The first balloon's tail ends at the top-left of her head, the second just above her hair. Neither covers her face.",
+   "Composed 01-3: Ananya, right fingers at her chin and left hand at her coat, looks left toward the desk. There Meera, smaller in the background, is still on the phone and writing, with two people queuing. The balloon is in the empty wall above Ananya and its tail ends at her head.",
+   "Script against source: the caption and all three lines are verbatim from source PAGE 1. The source's single Meera line is split into two balloons at the ellipsis, in the same order and by the same speaker. No other speaker's exchange is merged.",
+   "Automatic warning on 01-2 (step 1 to 2): a normal step down and right from the upper-left balloon to the lower-right one. Both tails go to the same face, so it is not a backtrack."
+  ],
+  "issues": [],
+  "readingReview": {
+   "withoutGuides": true,
+   "predictedOrder": [
+    {
+     "panel": "01-1",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "01-2",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "01-3",
+     "dialogue": [
+      1
+     ]
+    }
+   ],
+   "observations": [
+    "01-1: the only text is the caption at the top left. In the art the eye goes right to Ananya's gesture and the patient stepping in, then leaves at the lower right past the waiting chairs.",
+    "01-2: two close balloons from one speaker form a stepped line from the upper left to the middle right. There is no second speaker, so nobody's reply can be skipped.",
+    "01-3: one balloon. Ananya's gaze leads left to Meera in the background, which makes her decision a reaction to what she has just seen."
+   ],
+   "transitions": [
+    {
+     "from": "01-1",
+     "to": "01-2",
+     "observation": "From the doorway to the reception desk. The desk, phone and registers are already visible through the door in 01-1, so the cut inside reads as the same morning."
+    },
+    {
+     "from": "01-2",
+     "to": "01-3",
+     "observation": "The same desk sits in the background of 01-3, with Meera still on the call and writing. Ananya looks toward her, so 01-3 answers 01-2."
+    },
+    {
+     "from": "01-3",
+     "to": "02-1",
+     "observation": "Page turn. 'Let's make the rest simpler' is followed by the caption 'The clinic begins its Welbuk onboarding.' over an office with a sunset window and Ananya typing on a laptop. The colour shift and the change of room make the time and place jump readable, and the caption answers 'how?'."
+    }
+   ],
+   "firstReadingHash": "3a9d778ad9c6e9aee5a491ffe915f39742b023bfd2ff01b054c855ea0ee76149",
+   "comparison": "My image-only order matches the first reader's and the script. The first reader's concerns: (1) Meera is not introduced and her role is unclear. The art resolves it: she sits behind the reception desk with the phone and registers, facing a patient queue, so she reads as the receptionist. Her name is not lettered on page 1, and the source does not letter it either. No line depends on her name, so I accept this. (2) Ananya is tiny in the establishing panel. In the art she is the clear focal figure in the doorway, in a white coat with a stethoscope, right under the caption that names Dr. Ananya. Resolved. (3) The first tail ends left of the meera box at about (297,940). In the art it lands at the top of her head and clearly belongs to her. Resolved. Nothing unresolved."
+  }
+ },
+ "02": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-02-6341abd99ccd6b9df7402d354bcc065e459b3494b96e9bf69f2095bd4037a94e.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Identity: the runtime did not give me a task identity, so task is null. The parent must record the real Agent ID.",
+   "What I read: this request JSON (script, the 01 and 03 boundary context and the first reading, firstReadingHash 840a45ab...), source PAGES 1-3 and the reading-flow/page-02.json warning on 02-1 (step 1 to 2: a left-to-right move that overlaps vertically). I did not open the SVGs.",
+   "Images I opened with Read and looked at: storyboards-unnumbered/page-02.png, storyboards/page-02.png, review/page-02.png, plus review/page-01.png and review/page-03.png for the boundaries. All loaded.",
+   "Unnumbered order: 'The clinic begins its Welbuk onboarding.' then the teal label 'WELBUK PRACTICE for the clinic'; Ananya's 'We can organise our clinic workflow here.'; Meera's 'And our team can use tools suited to each staff role.' then the label 'WELBUK CARE for clinic staff'; Ananya's 'One team. Better coordination.' The numbered labels 1-4 match.",
+   "Composed 02-1: an over-the-shoulder shot past Ananya's right shoulder (bun, gold stud, profile) as she types on a silver laptop. The screen has a step indicator, blank rounded fields and a teal button, with no text. A mug sits on a coaster and a sunset window is behind. The caption is at the top left and the PRACTICE label at the top right, over a wall and window with no face under them.",
+   "Composed 02-2: Ananya, seated behind the laptop with the screen angled away, rests her left index finger at her chin and her right hand on the trackpad, looking up and right. The balloon is at the upper left and its tail ends near her ear.",
+   "Composed 02-3: Meera stands at the right in front of an empty office chair. The staff phone is in her right hand with an abstract calendar screen, and the open laptop is on the desk at the left. The balloon is above her head and the CARE label at the lower left over the desk, clear of her face and the phone.",
+   "Composed 02-4: Ananya is seated at the left with her right hand in a small raised fist, and Meera stands at the right holding the phone at her side. The open laptop between them faces the reader with blank fields. The balloon sits between them, slightly above Ananya's face, and its short tail goes to her mouth area without covering either face.",
+   "Script against source: the caption and the three lines are verbatim from source PAGE 2. The product labels are a manga addition that names Welbuk Practice and Welbuk Care on the screens. Meera's 'And...' follows Ananya's 02-2 line directly, so no intervening speech is skipped.",
+   "Automatic warning on 02-1: the caption and label are on the same row, top left to top right, and the eye moves left to right. It is not a backtrack."
+  ],
+  "issues": [],
+  "readingReview": {
+   "withoutGuides": true,
+   "predictedOrder": [
+    {
+     "panel": "02-1",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "02-2",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "02-3",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "02-4",
+     "dialogue": [
+      1
+     ]
+    }
+   ],
+   "observations": [
+    "02-1: the caption is read first, then the label at the top right. Ananya's gaze and hands point to the laptop at the right, which supports the label.",
+    "02-2 then 02-3: Ananya looks up and right toward the next panel, where Meera stands. Meera's 'And our team...' extends Ananya's point, and the CARE label at the bottom is read last.",
+    "02-4: a single balloon. Its left edge is close to Ananya's face but does not cover it, and the tail leads clearly to her. Meera's smile at the right is the silent agreement."
+   ],
+   "transitions": [
+    {
+     "from": "01-3",
+     "to": "02-1",
+     "observation": "From the busy morning to an evening office with a laptop. The sunset light, the different room and the 'begins its Welbuk onboarding' caption mark the change of time and place. The art does not state how much time has passed, but the answer to 'make the rest simpler' is clear."
+    },
+    {
+     "from": "02-1",
+     "to": "02-2",
+     "observation": "The same office, desk, window light and laptop. The view moves from behind Ananya to a front three-quarter view of her considering the next step."
+    },
+    {
+     "from": "02-2",
+     "to": "02-3",
+     "observation": "Ananya looks up and right toward Meera. The 02-3 art shows the same desk with the open laptop and an empty chair, so Meera is beside the same desk."
+    },
+    {
+     "from": "02-3",
+     "to": "02-4",
+     "observation": "A two-shot with Meera still holding the same phone and Ananya seated at the laptop. Their shared smile closes the onboarding scene."
+    },
+    {
+     "from": "02-4",
+     "to": "03-1",
+     "observation": "Page turn. The evening office changes to a bright reception, and 'A later morning:' says the time has moved. The tidy desk, monitor and QR stand show the system now in use."
+    }
+   ],
+   "firstReadingHash": "840a45abf396bb9d4ff7679113b131482dd21031b3a1445841abb481f6793670",
+   "comparison": "My order matches the first reader's and the script. The first reader's concerns: (1) There is no transition from page 1, and it is unclear that Welbuk is software. Resolved by the art: Ananya typing a setup form on a laptop, the PRACTICE label on the screen side, and Meera's app phone with the CARE label make Welbuk read as software. The evening light marks the time change. (2) The 02-4 balloon runs into the ananya label and could crowd her face. In the composed art the balloon sits beside and above her face with a short tail to her mouth, and it covers neither face. Resolved. It is tight but readable. (3) The caption flush against the border and the label away from Ananya: the first reader called both fine, and I agree. Nothing unresolved."
+  }
+ },
+ "03": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-03-08787a8e793c22d2e462d857b7e0e09fd78330dc1343442d206f4b3bc9577ba1.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Identity: the runtime did not give me a task identity, so task is null. The parent must record the real Agent ID.",
+   "What I read: this request JSON (script, the 02 and 04 boundary context and the first reading, firstReadingHash 1c777480...), source PAGES 2-4 and the reading-flow/page-03.json warning on 03-5 (step 1 to 2). I did not open the SVGs.",
+   "Images I opened with Read and looked at: storyboards-unnumbered/page-03.png, storyboards/page-03.png, review/page-03.png, plus review/page-02.png and review/page-04.png for the boundaries. All loaded.",
+   "Unnumbered order (a 2+2+1 grid, captions only): 'A later morning: patients can always check in at the front desk.'; 'Some check in ahead on the Welbuk Health app.'; 'Ravi scans the QR code at the door.'; 'A short form on his own phone, shared with consent.'; 'Every check-in gets a slot on the screen.' then the TV label 'A-10 · A-11 · A-12'. The numbered labels 1-5 match.",
+   "Composed 03-1: Mr. Raman (round glasses, cream shirt, walking stick) stands at the counter and smiles at Meera, who types with the monitor angled toward her. Two waiting patients are seen from behind. A QR stand and a wall TV are visible, which plants both for later.",
+   "Composed 03-2: Priya (ponytail, coral kurti, crossbody bag) walks past the clinic's glass front under the teal awning and taps a phone screen with a calendar and check-mark card. The phone faces the reader.",
+   "Composed 03-3: just inside the entrance, Ravi (green shirt, beard, bag strap on his left shoulder) holds his phone with a scan frame up to the QR stand. Meera and two patients are in the background.",
+   "Composed 03-4: a close-up past Ravi's face of his phone held in both hands. His right thumb taps a check box with a tick beside blank fields and a teal button. The wristwatch is on the lower, left wrist.",
+   "Composed 03-5: Raman, Priya and Ravi sit left to right, looking up at a wall TV on the right that carries 'A-10 · A-11 · A-12' on its white strip. Ravi holds his phone in his right hand with the bag on his lap; Raman holds his stick and Priya her phone. The caption is at the top left, clear of faces.",
+   "Script against source: all five captions and the label are verbatim from source PAGE 3. The names Raman and Priya come from the script and are never lettered, which the source supports (an unnamed elderly man and young woman).",
+   "Automatic warning on 03-5: the caption at the top left and the TV label at the top right are on the same row and read left to right. The patients' upward gaze points to the label. It is not a backtrack."
+  ],
+  "issues": [],
+  "readingReview": {
+   "withoutGuides": true,
+   "predictedOrder": [
+    {
+     "panel": "03-1",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "03-2",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "03-3",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "03-4",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "03-5",
+     "dialogue": [
+      1,
+      2
+     ]
+    }
+   ],
+   "observations": [
+    "Each panel has one caption at the top left, so the grid order is unambiguous: Z row 1, Z row 2, then the full-width bottom panel.",
+    "03-3 to 03-4 is one action across the row, scanning and then the form. 'his own phone' resolves to Ravi, who is named one panel earlier and whose face appears in both.",
+    "03-5: the three people's left-to-right order matches the order of their check-ins on the page (desk, app, QR). Ravi sits nearest the TV and A-12, so he is A-12, which page 4 relies on."
+   ],
+   "transitions": [
+    {
+     "from": "02-4",
+     "to": "03-1",
+     "observation": "From the evening office to a bright morning reception. 'A later morning' names the jump, and the tidy desk now has a monitor and a QR stand in place of paper registers, which contrasts with page 1."
+    },
+    {
+     "from": "03-1",
+     "to": "03-2",
+     "observation": "From inside the desk to the street outside the same clinic. The teal awning and the glass front with the reception visible inside tie it to the same place. 'Some' frames this as a second check-in route."
+    },
+    {
+     "from": "03-2",
+     "to": "03-3",
+     "observation": "From outside to just inside the entrance. The QR stand seen in 03-1 is now in use, and Ravi is named as the third route."
+    },
+    {
+     "from": "03-3",
+     "to": "03-4",
+     "observation": "The same phone and the same man in a closer shot. The scan leads to the form, which is direct cause and effect."
+    },
+    {
+     "from": "03-4",
+     "to": "03-5",
+     "observation": "A wide pull-back to the waiting area. All three people from 03-1 to 03-3 sit together and see their slots, which brings the three routes together."
+    },
+    {
+     "from": "03-5",
+     "to": "04-1",
+     "observation": "Page turn. The same TV, blue chairs and room. Ravi, who was nearest the screen, now stands alone, the chairs at his side are empty, and the label reads 'NOW · A-12'."
+    }
+   ],
+   "firstReadingHash": "1c77748022e7cb8b41d0ae674f933a5c7dca3273c9400a6c135947d729a2a8b3",
+   "comparison": "My order matches the first reader's and the script. The first reader's concerns: (1) Raman and Priya are unnamed. I accept this: the source does not name them, and in the art they read as two patients identified by appearance (glasses and stick; ponytail and coral kurti), which stays the same from 03-1/03-2 to 03-5. (2) The Ravi = A-12 link needs to be visible. Resolved: the left-to-right seating follows the check-in order, Ravi sits nearest the TV, and in 04-1 he is the one who stands at 'NOW · A-12' beside empty chairs. (3) The page is all narration and reads like a feature walkthrough. The art carries the acting: Raman's and Meera's smiles, Priya's cheerful stride, Ravi's focused scan, and the three satisfied upward looks. This is the source's design, not a reading break. (4) 'his own phone' resolves to Ravi. Nothing unresolved."
+  }
+ },
+ "04": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-04-70aa61d9efd532c343d9b0e7c4bc48fe69f62e93801149652444885ca8947f6b.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Identity: the runtime did not give me a task identity, so task is null. The parent must record the real Agent ID.",
+   "What I read: this request JSON (script, the 03 and reworked 05 boundary context and the first reading, firstReadingHash 30466ee7...), source PAGES 3-5, the reading-flow/page-04.json warning on 04-1 (step 1 to 2) and storyboard-r18-04.json as a reference. I did not open the SVGs.",
+   "Images I opened with Read and looked at: storyboards-unnumbered/page-04.png, storyboards/page-04.png, review/page-04.png, review/page-03.png, storyboards/page-05.png (numbered page-5 plan) and assets/panels/05-1.png (see the hygiene note). All loaded.",
+   "Unnumbered order: 'Soon, his slot comes up.' then 'NOW · A-12'; 'A quick vitals check first.' then the nurse's 'Hi, Ravi! Just relax your arm for me.' with a short tail down to the nurse; 'Dr. Ananya is notified when he's ready.' then 'RAVI ·' / 'READY'. The numbered labels 1-3 match.",
+   "Composed 04-1: Ravi stands in the waiting area with his bag on his left shoulder, hand on the strap and right hand at his pocket, looking up and right at the wall TV that carries 'NOW · A-12'. The chairs at his side are empty, two seated figures are seen from behind, and a QR stand is at the left. A vitals cart with a cuff and monitor stands beside reception, and Meera types at the desk at the right, fully inside the frame.",
+   "Composed 04-2: Ravi is seated at the left, smiling, with the cuff on his arm, the oximeter on his finger and his watch on that wrist. His bag is on the floor. The nurse (wavy bob, lavender scrubs, lanyard with a blank card) holds the bulb and steadies the tube. A teal counter and chair are behind her. The balloon is above her and its tail ends at her hair. Neither face is covered.",
+   "Composed 04-3: Ananya at her desk holds the tablet in both hands with a small smile. The card on the screen has a check-mark and carries 'RAVI · READY'. A window with a plant is behind her and a closed silver laptop sits at the lower right. The caption is in the empty upper third.",
+   "Script against source: both captions, both labels and the nurse's line are verbatim from source PAGE 4.",
+   "Boundary plan (page 5 art not generated): the numbered storyboards/page-05.png shows 'Hello, Ravi. Tell me what brings you in.' at the top right above Ananya, with Ravi at the far right and the PATIENT DETAILS label over the laptop area at the left. 05-2 follows with the consent question at the left, 'Yes, I agree.' at the right and the consent label between them. 05-3 is Ravi's 'I've been feeling tired lately.' with the SOAP NOTES label, and 05-4 is the caption with Ananya listening. The 05-1 scene now says the laptop stands at a three-quarter angle she can still use, which settles the r18 note about the screen facing away from her.",
+   "Hygiene note, not a page-4 issue: assets/panels/05-1.png exists. I opened it: Ananya and Ravi in the consultation room with the laptop CLOSED at the lower left and no visible screen. That is old pre-rework greeting art and does not match the reworked 05-1 (laptop open on patient details). It must not be accepted or reused for the new 05-1. 05-2 to 05-4.png and a stray 04-4.png also exist, and page 4 has only three panels. I did not open those.",
+   "Cosmetic, not blocking: the 04-3 label wraps as 'RAVI ·' / 'READY' with the separator dot at the end of the first line. It still reads as one label on the tablet card."
+  ],
+  "issues": [],
+  "readingReview": {
+   "withoutGuides": true,
+   "predictedOrder": [
+    {
+     "panel": "04-1",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "04-2",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "04-3",
+     "dialogue": [
+      1,
+      2
+     ]
+    }
+   ],
+   "observations": [
+    "04-1: the automatic warning is a same-row move from the caption at the top left to the TV label at the top right. Ravi stands between them looking up and right at the TV, so his gaze carries the eye forward.",
+    "04-2: the caption leads to the single balloon and its tail down to the nurse. Ravi's smile at the lower left is the silent response. The zig-zag down to him is mild and acceptable. There is one balloon, so no reply can be skipped, and 'Hi, Ravi!' names him again right after 'his slot'.",
+    "04-3: the caption at the top leads down through Ananya's lowered gaze to the label on the tablet. The panel exits at the lower right of the page past the closed laptop, toward page 5."
+   ],
+   "transitions": [
+    {
+     "from": "03-5",
+     "to": "04-1",
+     "observation": "The same waiting area, TV and blue chairs. Ravi, who sat nearest the TV in 03-5, stands under 'NOW · A-12' with the neighbouring chairs empty. 'Soon' covers the short wait and the visual focus resolves 'his'."
+    },
+    {
+     "from": "04-1",
+     "to": "04-2",
+     "observation": "From the waiting area to the vitals corner. The vitals cart beside reception in 04-1, the teal counter and chair behind the nurse, and 'A quick vitals check first.' carry the move. The bag goes from his shoulder to the floor, which fits his sitting down."
+    },
+    {
+     "from": "04-2",
+     "to": "04-3",
+     "observation": "A cut to a different room (window, plant, desk, closed laptop) with Ananya alone holding the tablet. 'notified when he's ready' comes after the vitals, and 'he' can only mean Ravi. The card shows the alert."
+    },
+    {
+     "from": "04-3",
+     "to": "05-1",
+     "observation": "From the plan only, since page 5 art does not exist yet. The same consultation room (window and plant). The laptop that is closed in 04-3 is open on patient details, and the tablet is put away. Ravi has come in and sits at the right with his bag on the floor, and Ananya opens with 'Hello, Ravi. Tell me what brings you in.' After that, 05-2 asks for consent before the AI listens, 05-3 has Ravi state his concern under SOAP NOTES, and 05-4 shows Ananya listening. The walk-in is skipped, but the greeting by name and the notification just before make the page turn readable. The new art must actually show the laptop open at a usable three-quarter angle. The existing 05-1.png does not."
+    }
+   ],
+   "firstReadingHash": "30466ee7824bde6f2ac1a234b513abe306ae159b01d4d8e3927eaaf32f2fe420",
+   "comparison": "My order matches the first reader's and the script. The first reader's concerns: (1) 'his' across the page turn depends on the A-12 link. Resolved by the art: Ravi is the only standing figure and the focus of 04-1, under 'NOW · A-12', after sitting nearest the TV in 03-5, and the nurse names him in the next panel. (2) The nurse appears without introduction. The scrubs, lanyard and BP cuff show her role and the caption names the activity, as the first reader also judged. (3) The zig-zag in 04-2 from the balloon at the right down to Ravi at the left: he does not speak, so the order is unaffected. Accepted. (4) The large empty lower areas in 04-2 and 04-3: the art fills both tall panels (the seated vitals scene; Ananya with the tablet and laptop). Resolved. (5) 'RAVI · READY' read after her face: it sits on the tablet she is looking at. Fine. Nothing unresolved for page 4. The stale assets/panels/05-1.png is passed on for the page-5 work."
+  }
+ }
+}

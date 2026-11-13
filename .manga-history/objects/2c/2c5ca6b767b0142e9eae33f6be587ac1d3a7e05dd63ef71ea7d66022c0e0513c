@@ -1,0 +1,46 @@
+"""Extend a panel image's canvas by repeating its edge pixels (flat wall/floor), recorded.
+
+Usage: python3 -I pad-canvas.py SOURCE.png TOP_PX TARGET_ASPECT OUT_DIR
+
+Adds TOP_PX rows above the image by repeating the top row, then widens the canvas equally on
+both sides by repeating each row's edge pixel until width/height == TARGET_ASPECT. This only
+suits panels whose top and side edges are plain flat colour (empty wall), and is used to make
+room for lettering without regenerating. Writes OUT_DIR/<panel>-<hash16>.png and a .json
+provenance record (source path and hash, parameters, output hash). It does not add or change
+any drawn content.
+"""
+import hashlib
+import json
+import os
+import sys
+
+import numpy as np
+from PIL import Image
+
+src, top, aspect, out_dir = sys.argv[1], int(sys.argv[2]), float(sys.argv[3]), sys.argv[4]
+im = np.asarray(Image.open(src).convert('RGB'))
+im = np.pad(im, ((top, 0), (0, 0), (0, 0)), mode='edge')
+h, w = im.shape[:2]
+target_w = round(h * aspect)
+side = max(0, (target_w - w) // 2)
+im = np.pad(im, ((0, 0), (side, target_w - w - side), (0, 0)), mode='edge')
+out = Image.fromarray(im)
+panel = os.path.basename(src).split('-')[0] + '-' + os.path.basename(src).split('-')[1]
+tmp = os.path.join(out_dir, 'tmp-pad.png')
+out.save(tmp)
+data = open(tmp, 'rb').read()
+digest = hashlib.sha256(data).hexdigest()
+dest = os.path.join(out_dir, f'{panel}-pad-{digest[:16]}.png')
+os.replace(tmp, dest)
+record = {
+    'operation': 'canvas extension by edge-pixel repetition (no drawn content added)',
+    'source': os.path.relpath(src),
+    'sourceSha256': hashlib.sha256(open(src, 'rb').read()).hexdigest(),
+    'topPx': top,
+    'sidePx': [side, target_w - w - side],
+    'targetAspect': aspect,
+    'size': list(out.size),
+    'sha256': digest,
+}
+json.dump(record, open(dest[:-4] + '.json', 'w'), indent=1)
+print(dest, out.size)

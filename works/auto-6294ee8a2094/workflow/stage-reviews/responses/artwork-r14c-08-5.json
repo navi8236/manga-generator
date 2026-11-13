@@ -1,0 +1,20 @@
+{
+ "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-08-5-3f0cfcb00bf80260828cda70cb17d1b467ef3d53c227e29183170bd60acf6bb4.json",
+ "reviewer": {
+  "role": "subagent",
+  "task": "claude-code-agent:manga-reviewer:a212b7aa225bf0958",
+  "reportedTask": null,
+  "taskSource": "Agent ID returned by the Claude Code Agent tool to the parent."
+ },
+ "status": "pass",
+ "observations": [
+  "Reviewer identity: the runtime gave me no task ID, so reviewer.task is null. The parent must supply the real one. I opened these myself with Read: assets/panels/08-5.png, assets/characters/main-cast.png and workflow/review/page-08.png.",
+  "Dr. Ananya matches the sheet. She has calm almond eyes with heavy upper lids, soft level brows, an oval face with a pointed chin, a low bun with loose strands, a gold stud earring, a teal kurta under an open white coat, and a stethoscope around her neck that is not in use. She smiles attentively at the tablet.",
+  "Hands match production. Her right hand (viewer's left) holds the tablet's left edge and her left hand holds its right edge. Both hands read correctly. The screen faces the reader and shows one card with a test-tube icon and a green check mark. There are no letters or values.",
+  "Setting: a consultation desk, a window with a tree outside, and a potted plant at the right, consistent with the consultation room. On the desk are a pen holder and a closed blue book with a blank spine. There is no readable text anywhere.",
+  "From 08-4 to 08-5: the notification passes from Ravi at home to the doctor. The parallel framing of a person smiling at a screen card with a check mark makes the chain easy to follow.",
+  "Lettering on page-08.png: the caption (about page x 448-660, y 856-993) sits on the plain wall left of her face, which starts at about x 725. The 'RESULTS READY' label (about x 458-628, y 996-1102) stops just left of the tablet and of her right hand at about x 632, so the protected hand box [631,1075,40,56] is not covered. The tablet card stays fully visible."
+ ],
+ "issues": [],
+ "fingerprint": "3f0cfcb00bf80260828cda70cb17d1b467ef3d53c227e29183170bd60acf6bb4"
+}

@@ -1,0 +1,35 @@
+{
+ "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/source-all-b6f4384e9314e1a4a61b8986fa118bf2626e4e1b1922f1a796f956f8a0c58612.json",
+ "reviewer": {
+  "role": "subagent",
+  "task": "claude-code-agent:manga-reviewer:a3fae13e835cf551d",
+  "reportedTask": null,
+  "taskSource": "Agent ID returned by the Claude Code Agent tool to the parent."
+ },
+ "status": "changes-requested",
+ "observations": [
+  "What I read: AGENTS.md (from the project instructions), docs/REVISION-AND-REVIEWS.md, docs/PROMPTS.md, the prepared request (fingerprint b6f4384e..., stage source, target all, one file: original.txt, entry hash 878d54aa...), all 51 lines of works/auto-6294ee8a2094/source/original.txt, works/auto-6294ee8a2094/workflow/source-coverage.json (its sourceHash 878d54aa... matches the request entry), works/auto-6294ee8a2094/source/REVISION-2026-11-11.md, works/auto-6294ee8a2094/source/original-v1.txt (48 lines) and the previous review works/auto-6294ee8a2094/workflow/stage-reviews/responses/source-all-r2.json. All files were readable. This is a source-stage request, so no images were part of it and I did not view any. The runtime gave me no subagent or task identity, so reviewer.task is null and the parent must not fill one in.",
+  "Diff against v1: lines 1-9 are unchanged, line 10 adds the Nurse to CAST, and PAGE 3 changes from four panels (Meera's desk registration, Ravi's dialogue) to six panels (walk in, QR scan, phone form with consent, TV token, nurse takes vitals, tablet notification). Pages 1, 2, 4, 5, 6 and the art direction are word-for-word the same as v1. This matches what REVISION-2026-11-11.md says.",
+  "The new page 3 fits with the rest of the story. Page 1's paper registers and Meera's overload set up a reason for self check-in. Ravi is named before 04-1 in three places: the 03-1 caption 'Ravi arrives for his visit.', the nurse line in 03-5 'Let's check your vitals, Ravi.' and the 03-6 label 'RAVI · READY'. So 04-1 'Hello, Ravi.' still works. 03-6 ('notified when he's ready', consultation-room cut) leads straight into 04-1's consultation-room greeting. Pages 4-6 contain nothing that still refers to Meera registering Ravi at the desk. Page 5 has Meera introducing the patient app, which stands on its own without the old registration scene. Ravi has no spoken line on page 3 any more; his first line is now 04-2. That works.",
+  "Consent and data rules hold. 03-3 states consent and minimal sharing ('sharing only what the visit needs', 'shared with consent') and says no identifying data is shown. The TV and tablet labels are a sample token 'A-12' and a first-name status 'RAVI · READY', which is not real patient data. 03-5 says 'no readings shown', and the coverage note says the monitor is blank. No diagnosis or medical claim was added.",
+  "The doctor stays Dr. Ananya with 'her tablet' in 03-6, as the user confirmed, although the user's request said 'his tablet'. Cosmetic: REVISION-2026-11-11.md could say outright that the pronoun was changed for that reason.",
+  "Revision documentation is honest. It quotes the user's request word for word, lists the three confirmed decisions, says the page 3 caption, label and nurse wording was drafted by the production agent from the user's step list, and keeps the pre-revision text in original-v1.txt.",
+  "I checked coverage contiguity by counting characters by hand. Each span starts exactly where the previous one ends, from 0 to 4708. My counts land exactly on 617 (start of 'PAGE 1'), 799, 976, 1617, and every revised page 3 boundary: 1775, 1873, 2070, 2205, 2300, 2438. The em dash and '·' count as one character each, which is consistent. I also confirmed 2438-2577 for 04-1. I did not hand-count the unchanged spans after 2577 one by one. Their texts are identical to v1, and the final end of 4708 is consistent with the art-direction block starting at 4273.",
+  "Page 3 span-to-panel mapping is correct. 1617-1775 → 03-1, 1775-1873 → 03-2, 1873-2070 → 03-3, 2070-2205 → 03-4, 2205-2300 → 03-5, 2300-2438 → 03-6. Each has a concrete note: abstract QR with no real code, blank form fields with a consent tick-box, TV and tablet drawn blank with the label lettered on top, monitor without readings. Captions and the line are verbatim. The page 3 heading falls inside the 03-1 span.",
+  "Carry-forward (not a source defect): self QR check-in, the TV token and the tablet notification are shown as part of today's visit, not as vision. The disclaimer on line 4 covers this ('not a claim that every depicted feature is presently available'), and only referral-network experiences must be marked as vision. The script and final reviews should still check that nothing on page 3 claims these are launched Welbuk features.",
+  "Carry-forward (cosmetic): the PAGE 3 heading carries a production note, '(revised 2026-11-11 at the user's request: self check-in flow)'. Line 10 likewise has '(added in the 2026-11-11 revision)'. Neither must be lettered into the comic. Page 3 now has five captions, one balloon and two labels across six panels, so the storyboard and lettering reviews should check text area and face room.",
+  "Cosmetic coverage note: the art-direction span (4273-4708) lists 03-3 but not 03-4 or 03-6. Those panels also depend on the rule that panel art is text-free and on the no-real-data rule, through their blank screens with composited labels."
+ ],
+ "issues": [
+  {
+   "problem": "The revision record says the user confirmed 'each step carries a short caption', but 03-5 (nurse takes vitals) has no caption. That step is carried only by the Nurse's line 'Let's check your vitals, Ravi.' Either add a short caption to 03-5 in original.txt, or record in REVISION-2026-11-11.md that the nurse's line replaces the caption for this step, with the reason (it also names Ravi before 04-1), so the source matches the documented decision.",
+   "location": "works/auto-6294ee8a2094/source/original.txt line 28 (PAGE 3 Panel 5); works/auto-6294ee8a2094/source/REVISION-2026-11-11.md lines 7-8",
+   "resolved": false
+  },
+  {
+   "problem": "The cast span 0-617 maps to panels 01-1, 03-1, 06-2, 06-3, 06-4. It leaves out the first appearance of the Nurse, who was added in this revision (03-5), and Meera's first appearance (01-2). The adaptation note itself describes the Nurse's cast entry (lavender scrubs), so the span should list 03-5 (and 01-2) to show where the new cast material is used.",
+   "location": "works/auto-6294ee8a2094/workflow/source-coverage.json spans[0] (start 0, end 617)",
+   "resolved": false
+  }
+ ]
+}

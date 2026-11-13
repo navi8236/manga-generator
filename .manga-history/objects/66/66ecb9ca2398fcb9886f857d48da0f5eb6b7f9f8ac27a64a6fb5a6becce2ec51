@@ -1,0 +1,300 @@
+[
+ {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-08-dcecf43a8ba398b58baa5ea9ed1a21be4cc35532d8c5356528b54cd6c787ec8c.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null,
+   "reportedTask": null,
+   "taskSource": "The runtime gave this subagent no task ID. The parent must fill in the actual Agent ID returned by its Agent tool, or must not record this response."
+  },
+  "status": "pass",
+  "observations": [
+   "Reviewer identity: the runtime gave me no task ID, so reviewer.task is null.",
+   "What I read in this pass: the fresh request. Its first reading is the same as before (fingerprint 3dd0fe9c..., firstReadingHash bae172a8...). The listed hash of storyboards-unnumbered/page-08.png (4a90ec89...) is the same as in the earlier request. The new fingerprint comes from the refreshed page 09 boundary context. Earlier in this session I read all of original.txt, Requests 4 and 5, and the 08-x script. Everything was readable. I did not compute any hashes.",
+   "Images I opened with Read in this pass: storyboards-unnumbered/page-08.png. Earlier in this session I also opened storyboards/page-08.png, review/page-08.png and review/page-07.png. The unnumbered PNG looks the same as in my earlier pass. For the outgoing boundary I opened storyboards-unnumbered/page-09.png and storyboards/page-09.png again in this pass. Page 09 has no art yet, so I judged 09-1 from its plan only.",
+   "Script vs source: all page 08 text matches PAGE 8 of original.txt word for word. Page 08 is unchanged.",
+   "First-reader concerns, unchanged from my previous pass and still acceptable. 'Meanwhile' follows Ravi's departure in 07-4. 'The prescription' is set up by 'intelligent prescribing' on the 06-2 PLAN OF CARE label. Collecting the medicine was not part of Request 4. In 08-3 Ravi smiles at the lab technician, which is his reaction. The 'meera' overlap is a placeholder artefact; in review/page-08.png her face is clear of the label. The caption boxes flush with the top border are the deliberate corner tabs. Every notification panel has a reacting face.",
+   "The refreshed 09-1 plan only strengthens the boundary. The phone is now held up on the left with the FOLLOW-UP REMINDER label on the wall just above it. Together with the daylight table and the tea, this sets the reminder apart from 08-4, where the check-mark card is shown on the sofa in the evening."
+  ],
+  "issues": [],
+  "readingReview": {
+   "withoutGuides": true,
+   "firstReadingHash": "bae172a8c76139f7ab5364825041a4e57e132f31d204be2a248cdf0ba238d5d6",
+   "comparison": "The first reader's order (A, B, C caption then balloon, then D, E, F, each caption then label) matches 08-1 to 08-6, each [1,2]. The reader's concerns are explained by adjacent pages and the accepted art, as set out in the observations. No unresolved difference remains.",
+   "predictedOrder": [
+    {
+     "panel": "08-1",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "08-2",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "08-3",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "08-4",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "08-5",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "08-6",
+     "dialogue": [
+      1,
+      2
+     ]
+    }
+   ],
+   "observations": [
+    "The top row is read left to right, then the full-width 08-3. In the bottom tier the tall 08-4 is read before the right column, 08-5 above 08-6.",
+    "In 08-3 the caption at the top left comes before the lab technician's balloon at the top right, whose tail points down to her."
+   ],
+   "transitions": [
+    {
+     "from": "07-4",
+     "to": "08-1",
+     "observation": "Ravi walks away from the clinic. 'Meanwhile' moves to the pharmacy, and the NEW PRESCRIPTION card links back to the 06-2 plan of care."
+    },
+    {
+     "from": "08-1",
+     "to": "08-2",
+     "observation": "The pharmacy order is followed by the lab order: two parallel caption-plus-label panels side by side."
+    },
+    {
+     "from": "08-2",
+     "to": "08-3",
+     "observation": "The empty tubes in 08-2 become Ravi's filled tube in 08-3, in the same lab. 'Later that day' brings him back."
+    },
+    {
+     "from": "08-3",
+     "to": "08-4",
+     "observation": "'We'll let you know when your results are ready' is answered by 'Results ready: Ravi is notified', with Ravi at home in evening light."
+    },
+    {
+     "from": "08-4",
+     "to": "08-5",
+     "observation": "The same RESULTS READY moment, now on Ananya's tablet (test-tube icon and check mark)."
+    },
+    {
+     "from": "08-5",
+     "to": "08-6",
+     "observation": "The same notification on the reception monitor in front of Meera. This completes patient, doctor, clinic."
+    },
+    {
+     "from": "08-6",
+     "to": "09-1",
+     "observation": "Plan only, because page 09 has no art. The clinic is notified on Welbuk Practice, then 'Welbuk Practice sends Ravi's follow-up reminder', so the same system acts next. Ravi at a daylight table with tea, holding up the phone with a green chat card at the left under the label, is visibly different from 08-4. Artwork review must confirm this."
+    }
+   ]
+  }
+ },
+ {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-09-d18a75ee90569ec24ca1b90dfb828ae4bd6ec8687188dddcd1133aa5a82f000f.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null,
+   "reportedTask": null,
+   "taskSource": "The runtime gave this subagent no task ID. The parent must fill in the actual Agent ID returned by its Agent tool, or must not record this response."
+  },
+  "status": "pass",
+  "observations": [
+   "Reviewer identity: the runtime gave me no task ID, so reviewer.task is null.",
+   "What I read in this pass: the fresh request. This includes the new image-only first reading (fingerprint 467e150d..., firstReadingHash 725aa94a...), all five revised 09-x scene, emotion, production and dialogue entries, and the page 08 and page 10 boundary context. The listed hash of storyboards-unnumbered/page-09.png (21f5ad7f...) is the same as before, so the image is unchanged. Earlier in this session I read PAGE 9 and PAGE 10 of original.txt and Request 5. Everything was readable.",
+   "Images I opened with Read in this pass, in this order: storyboards-unnumbered/page-09.png, storyboards/page-09.png, storyboards-unnumbered/page-08.png and storyboards-unnumbered/page-10.png. Earlier in this session I also opened assets/panels/10-1.png to 10-4.png. Page 09 has no art. I judged its plan from the storyboard and the script only, and I certify no page 09 image.",
+   "Previous issue 1 (09-5, Ravi's reaction): resolved in the script. The scene now reads 'Ravi smiles back, relaxed and at ease, glancing at the history on her tablet, his empty hands resting on his knee and the chair arm'. The emotion field is 'Ananya warm and efficient; Ravi relaxed and reassured, smiling back', and production.moment adds 'Ravi smiles back and glances at his history'. These are drawable instructions for the silent reply the first reader asked for. His placeholder (684-784, y1152-1272) sits to the right of the balloon, and his glance towards Ananya's tablet at the left leads the eye back to her and then down to the bottom caption.",
+   "Previous issue 2 (09-3, Meera's role): resolved in the script. The scene now states 'the reception desk has no queue at all: nobody is waiting in front of it, and Meera, free of check-in work, types calmly at her monitor', and her production hands record typing. This illustrates the caption 'No queue at the desk' directly, and shows that staff time is freed, which fits the clinic-savings framing. Her small placeholder at the lower left (84,778) suits a background figure.",
+   "09-1 revision (artwork note): the phone is now 'held up in his right hand on the left side of the panel', with 'plain wall just above the phone for its FOLLOW-UP REMINDER label'. The label box (32-235, y206-312) is on the left, just above where the phone will be, so the label will read as the phone's message, matching the source's 'Label (on the phone)'. Holding the phone in his right hand on the viewer's left is consistent with Ravi facing the reader. His production hands (left by the tea cup with the watch, right holding the phone) agree.",
+   "The new first reading again gives a clear Z-order, says 'On the day' carries the time skip, notes that 'As usual' relies on page 04, and names Ravi's reaction and Meera's role as things the art must carry. All of these are now covered. 'As usual' is acceptable: 04-1's 'Soon, his slot comes up' with NOW · A-12 is the reference, and A-31 marks a new visit.",
+   "Completeness against Request 5 is unchanged and complete: WhatsApp reminder, a different day with free hands, digital self check-in, the token as usual, and the doctor visit with his history open and care continuing. The captions are framed around clinic savings, and 'Welbuk - The care that stays with you.' is not used. All page 09 text matches PAGE 9 of original.txt word for word.",
+   "Production caution outside this storyboard, repeated from my previous pass: assets/panels/09-1.png still holds the old vision train art, the same as 10-1.png, and 09-2.png to 09-4.png appear to be the old vision panels. workflow/review/page-09.png is the stale pre-Request-5 vision composite. Older artwork-09-*, lettering-09 and page-09.review.json records are probably stale as well. None of these may be treated as page 09 art or reviews. Replace or archive them through the proper CLI before generating page 09."
+  ],
+  "issues": [
+   {
+    "problem": "09-5 gave Ravi no visible reaction to Ananya's greeting.",
+    "location": "09-5 scene / emotion / production",
+    "resolved": true
+   },
+   {
+    "problem": "09-3 did not explain Meera's background role in a drawable way, or show that the desk had no queue.",
+    "location": "09-3 scene / production",
+    "resolved": true
+   }
+  ],
+  "readingReview": {
+   "withoutGuides": true,
+   "firstReadingHash": "725aa94a8648382a3b1fd72b6f88f132981be6a9ea20675557c257f3e024859c",
+   "comparison": "The new first reader's order is: A caption, FOLLOW-UP REMINDER, B caption, C caption, D caption, NOW · A-31, Ananya's balloon, bottom caption. This matches 09-1 [1,2], 09-2 [1], 09-3 [1], 09-4 [1,2] and 09-5 [1,2]. The reader's remaining points (Ravi's silent reaction and Meera's presence, which the art must carry) are now specified in the 09-5 and 09-3 scene, emotion and production fields. The time cues read as intended. No unresolved difference remains at the storyboard stage. The artwork review must confirm that the drawn acting matches these fields.",
+   "predictedOrder": [
+    {
+     "panel": "09-1",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "09-2",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "09-3",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "09-4",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "09-5",
+     "dialogue": [
+      1,
+      2
+     ]
+    }
+   ],
+   "observations": [
+    "Unnumbered storyboard: a 2x2 grid of equal panels, each opening with a caption at the top left, then a full-width closing tier. No two non-consecutive text items are close enough to be read out of turn.",
+    "09-1: the caption is read first, then the label below it at the left, which is where the phone is now planned. 09-4: the NOW · A-31 label at the upper right is read second, over the planned TV. 09-5: the balloon at the upper left with its tail to Ananya, then the bottom caption as the exit."
+   ],
+   "transitions": [
+    {
+     "from": "08-6",
+     "to": "09-1",
+     "observation": "Plan only. The clinic is notified on Welbuk Practice (08-6), then Welbuk Practice sends the follow-up reminder (09-1). The daylight table, the tea, and the phone held up at the left with a green chat card differ from the 08-4 sofa scene in the evening."
+    },
+    {
+     "from": "09-1",
+     "to": "09-2",
+     "observation": "Plan only. The reminder sets up the visit. 'On the day' plus the morning entrance marks the appointed day. The phone moves from his hand to his shirt pocket, and his hands are empty."
+    },
+    {
+     "from": "09-2",
+     "to": "09-3",
+     "observation": "Plan only. Through the glass entrance, then the QR stand just inside it. Continuous time, with Meera at her empty desk in the background."
+    },
+    {
+     "from": "09-3",
+     "to": "09-4",
+     "observation": "Plan only. The check-in is confirmed, then he waits under the TV. 'As usual' and the token label recall page 04."
+    },
+    {
+     "from": "09-4",
+     "to": "09-5",
+     "observation": "Plan only. The token is called, then the consultation room. 'Welcome back' and 'results are already here' pay off 08-5, and Ravi now visibly smiles back and glances at his history."
+    },
+    {
+     "from": "09-5",
+     "to": "10-1",
+     "observation": "Plan to the accepted 10-1 art. From the consultation room to Ravi at a train window with a city skyline. The conditional 'If Ravi travels' marks a possible later journey, and the phone in his hand links back to his app record."
+    }
+   ]
+  }
+ },
+ {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-10-1af26af7e6e422fb2b9247e7cba9212a718005d81825a9e2e32e5f6fe3decb8b.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null,
+   "reportedTask": null,
+   "taskSource": "The runtime gave this subagent no task ID. The parent must fill in the actual Agent ID returned by its Agent tool, or must not record this response."
+  },
+  "status": "pass",
+  "observations": [
+   "Reviewer identity: the runtime gave me no task ID, so reviewer.task is null.",
+   "What I read in this pass: the fresh request. Its first reading is the same as before (fingerprint cda0e1de..., firstReadingHash 3cf1bdf5...). The listed hash of storyboards-unnumbered/page-10.png (e4b9b6ab...) is the same as in the earlier request. The new fingerprint comes from the refreshed page 09 boundary context. Earlier in this session I read PAGE 10 of original.txt and Request 5. Everything was readable.",
+   "Images I opened with Read in this pass: storyboards-unnumbered/page-10.png and storyboards-unnumbered/page-09.png. Earlier in this session I also opened storyboards/page-10.png and the accepted art assets/panels/10-1.png to 10-4.png. Limitation, unchanged: there is no workflow/review/page-10.png. review/page-09.png is the stale pre-Request-5 vision composite, and I used it only to check box geometry over the same art. The revised page 10 must still be composed and checked at the lettering stage.",
+   "Script vs source: page 10 matches PAGE 10 of original.txt, including the two captions revised in Request 5.",
+   "10-1 'If Ravi travels, his record travels with him.' does not read as a launched cross-city capability. The sentence is conditional and says only that he carries his record. The phone in his hand in the 10-1 art ties the record to the Welbuk Health app already shown on page 7 and in 08-4. Every cross-clinic claim (clinics continuing his care, referred patients) appears only in 10-2, under the WELBUK VISION label inside the pale-blue vignette, which follows the Request 5 decision. The residual risk is that 10-1 is drawn in the normal palette. I accept that because its caption asserts no network capability.",
+   "The other first-reader concerns are still acceptable. The repeated WELBUK VISION label in 10-3 is deliberate, so that neither vision panel reads as current. The partner and child are introduced inside a labelled vision vignette with the family-wellness caption. The 10-2 corner tab is intentional. The 'rav' cut and the empty middle in 10-4 are placeholder artefacts; in the 10-4 art the label sits over the sky to the right of Ravi's face.",
+   "The refreshed 09-5 plan (Ravi smiling back and glancing at his history) improves the incoming boundary. The page ends on a settled reaction before the cut to the train."
+  ],
+  "issues": [],
+  "readingReview": {
+   "withoutGuides": true,
+   "firstReadingHash": "3cf1bdf510de452c50a9c355496e63549b162e67ae34e7cfd9c70163bf1d3663",
+   "comparison": "The first reader's order (A caption, B label, B caption, C label, C caption, D product label, D closing caption) matches 10-1 [1], 10-2 [1,2], 10-3 [1,2] and 10-4 [1,2]. The current-or-vision ambiguity of 10-1 is resolved by its conditional wording, the phone in the art, and the WELBUK VISION label and vignette that follow at once. The remaining concerns are deliberate labelling choices or placeholder artefacts. No unresolved difference remains. The composed page 10 preview does not exist yet and is outside this storyboard certification.",
+   "predictedOrder": [
+    {
+     "panel": "10-1",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "10-2",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "10-3",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "10-4",
+     "dialogue": [
+      1,
+      2
+     ]
+    }
+   ],
+   "observations": [
+    "Top row: the 10-1 caption at the top left first. Then the WELBUK VISION tab at the top-left corner of 10-2, before that panel's bottom caption, so the vision frame comes before the claim.",
+    "10-3: the tab and caption are stacked at the left, with the family to their right. 10-4: the product label at the upper right before the closing caption at the lower left, which ends the comic."
+   ],
+   "transitions": [
+    {
+     "from": "09-5",
+     "to": "10-1",
+     "observation": "From the page 09 plan (Ravi smiling back in the consultation room) to the accepted train-window art. 'If Ravi travels' marks a possible later journey, and the phone in his hand links back to his app record."
+    },
+    {
+     "from": "10-1",
+     "to": "10-2",
+     "observation": "From the train to the WELBUK VISION vignette: a specialist welcomes the reader at a clinic in another city, with dotted links between clinic silhouettes. 'his care' refers back to Ravi."
+    },
+    {
+     "from": "10-2",
+     "to": "10-3",
+     "observation": "Both panels are in the vision vignette. The dotted clinic links at the left of the 10-3 art carry the network motif into the family scene."
+    },
+    {
+     "from": "10-3",
+     "to": "10-4",
+     "observation": "The vignette disappears. The clinic entrance with its teal awning, in the full-colour palette, with the three main characters, marks the return to the present for the closing."
+    }
+   ]
+  }
+ }
+]

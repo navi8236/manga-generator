@@ -1,0 +1,62 @@
+{
+ "panel": "09-1",
+ "fingerprint": "05bc2204b01062a773d9d45bebad282dfb6e6cf6b19fb18e5319c645b763c862",
+ "observation": "Ravi at home in daylight reads the follow-up reminder: generic green chat card with a calendar icon on his phone. Inspected at 25% (contact sheet), 100% (full panel) and 200% (face crops), and on the composed page.",
+ "views": {
+  "thumbnail": true,
+  "native": true,
+  "detail": true
+ },
+ "checks": {
+  "anatomy": {
+   "result": "pass",
+   "note": "Right hand holds the phone upright with fingers around the case; left hand rests by the tea cup."
+  },
+  "contact": {
+   "result": "pass",
+   "note": "Seated at a round table; cup on a coaster; phone gripped in the right hand."
+  },
+  "objects": {
+   "result": "pass",
+   "note": "Phone shows only a chat bubble with a calendar icon; no logo or text."
+  },
+  "faces": {
+   "result": "pass",
+   "note": "Faces match the sheets at 200%; see faceIdentity."
+  },
+  "linework": {
+   "result": "pass",
+   "note": "Clean contours and flat cel shading close to the earlier pages (new renderer: Marketing Studio Image 2.5 Flare)."
+  },
+  "background": {
+   "result": "pass",
+   "note": "Plain wall; the upper part was extended with flat wall colour (tools/pad-canvas.py) for lettering."
+  },
+  "continuity": {
+   "result": "pass",
+   "note": "Green shirt, beard and wristwatch on the left wrist match; no shoulder bag at home; dark-blue phone."
+  },
+  "lettering": {
+   "result": "pass",
+   "note": "Three-line caption and the FOLLOW-UP REMINDER label on the empty wall above; the label ends above the phone and left of his head."
+  }
+ },
+ "issues": [
+  {
+   "category": "lettering",
+   "description": "First take filled the frame and showed his shoulder bag at home; retake 2 lowered the figure, and the canvas was extended with plain wall for the caption.",
+   "status": "resolved"
+  }
+ ],
+ "faceIdentity": {
+  "ravi": {
+   "reference": "works/auto-6294ee8a2094/assets/characters/main-cast.png",
+   "traits": [
+    "narrow warm eyes creasing at the corners",
+    "thick straight dark brows close to the eyes",
+    "square jaw with short trimmed beard and broad nose"
+   ],
+   "expression": "Pleased, relaxed smile"
+  }
+ }
+}

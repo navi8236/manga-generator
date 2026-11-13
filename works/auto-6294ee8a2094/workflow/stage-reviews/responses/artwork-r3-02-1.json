@@ -1,0 +1,25 @@
+{
+ "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-02-1-53dcb883cd52387257f3b848708bdbb435ac2104f69146d23c2c8e6f2b8f5e94.json",
+ "reviewer": {
+  "role": "subagent",
+  "task": "claude-code-agent:manga-reviewer:a28086c238afb6732",
+  "reportedTask": null,
+  "taskSource": "Agent ID returned by the Claude Code Agent tool to the parent."
+ },
+ "status": "pass",
+ "observations": [
+  "I opened assets/panels/02-1.png. Dr. Ananya is seen from behind and slightly to her right, facing image right toward a silver laptop. I can see a low bun with loose strands, a gold stud on the near (right) ear, a calm smiling profile, and a white coat with teal cuffs. This matches main-cast.png.",
+  "Both hands type on the keyboard. The near hand has its teal cuff at about x650 (her right). The far hand has its cuff at about x900 (her left). This matches production.hands.ananya, which has both hands typing.",
+  "Screen: a three-step progress dot bar, blank rounded fields with a cursor bar in the first one, light blue blocks and a teal button. Nothing on it is readable and there are no logos. A mug sits on a cork coaster, and the window shows an evening sky with trees. This fits the scene and the time-change transition, and the laptop prop is open with a blank setup form.",
+  "The record now reads 'from behind Dr. Ananya's right shoulder', which matches the art.",
+  "The raw art has hard-edged white blocks at top-left and top-right. In page-02.png they are fully covered by the narration box and the 'WELBUK PRACTICE for the clinic' label, and neither box covers her face.",
+  "Minor, not blocking: the stethoscope is not visible from behind. The coat collar could plausibly hide the tubing at the nape. It is present in 02-2 and 02-4."
+ ],
+ "issues": [
+  {
+   "problem": "Earlier r2 issue: the record said the shot was over her left shoulder, but the art is over her right shoulder. The scene and camera text now say right shoulder, which matches the art.",
+   "location": "02-1 scene/camera vs assets/panels/02-1.png",
+   "resolved": true
+  }
+ ]
+}

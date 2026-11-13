@@ -1,0 +1,127 @@
+{
+ "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-08-a10913b364a827173999a70803401bdda4ec7b852619f83e8d7d1997e9c89aaf.json",
+ "reviewer": {
+  "role": "subagent",
+  "task": "claude-code-agent:manga-reviewer:a2c25f20ddf16a6ec",
+  "reportedTask": null,
+  "taskSource": "Agent ID returned by the Claude Code Agent tool to the parent."
+ },
+ "status": "changes-requested",
+ "observations": [
+  "Reviewer identity: the runtime gave this subagent no task ID, so reviewer.task is null.",
+  "What I read: the refreshed request, including the script and the new first reading (fingerprint b507faeb..., hash 12e53d0c..., reviewer task a302f99db48a9ed10). I also read the current unnumbered page-08.svg in full, the 01-1 caption geometry in storyboards-unnumbered/page-01.svg, source/original.txt and Request 4. All were readable. I did not compute hashes.",
+  "Images I opened again with Read and looked at in this pass: storyboards-unnumbered/page-08.png, then storyboards/page-08.png, workflow/review/page-08.png, page-01.png, page-07.png and page-09.png. Earlier in this session I also opened assets/panels/08-1.png to 08-6.png.",
+  "Zoom limitation: the Read tool shows each PNG at one fixed size and has no 100% or 200% zoom. My edge judgement therefore combines what I saw at that size with exact box and text coordinates from the SVGs.",
+  "The PNGs now match the current SVG. Both re-exported storyboard PNGs show: the 08-1 caption at 28,26 and the NEW PRESCRIPTION label at 28,204. The 08-2 caption at 716,28 and its label at 792,106. The 08-3 caption at 32,460 and the balloon at 714,460 with its tail to 710,657. The 08-4 caption at 164,860 and its label at 114,984. The 08-5 caption at 448,856 and its label at 458,996. The 08-6 caption at 448,1174 and its label at 822,1174. workflow/review/page-08.png uses the same positions. My previous issues 1 and 2 (stale PNGs and the stale first reading) are resolved.",
+  "The new first reading describes this current layout: the label below the caption in panel 1, the caption at the top right in panel 2, and the label at the far right in panel 6. That reader also wrote that they saw no difference from an earlier image. Because their scan matches the current positions, I accept it as a reading of the current PNG.",
+  "Script vs source: all captions, labels and the lab technician's line match PAGE 8 in original.txt word for word. The six beats follow Request 4 in order. The screens show only a pill card, tube icons and check marks, with no drug names, tests, values or diagnosis.",
+  "08-1 after the label move: in page-08.png the label (28-260, y204-310) is directly under the caption. The tablet's pill card is visible below it at about y310-410, which ties the label to the tablet. The label's right edge at 260 stays clear of the pharmacist's hand (protected area from x265). The caption box sits only 2 px below the top frame, so the two lines nearly merge. That is minor and reads as a corner tab.",
+  "My earlier issue 3, the 08-4/08-5 caption row: resolved by the new reading. The new reader read the tall panel 4 before 5 and 6 and only mentioned that some readers might hesitate. In page-08.png the 08-4 label 'Welbuk Health app · email · WhatsApp' is inside 08-4's frame directly under its caption. Ravi's phone below shows matching app, envelope and chat icons, so the channels attach to Ravi and not to Ananya. The three notifications are parallel and all show the same check card, so even a reader who hesitates between 4 and 5 does not lose any meaning.",
+  "New-reader concern, nothing says the three notifications are simultaneous: acceptable. 'Results ready:' sets up the shared event, and 08-5 and 08-6 repeat 'is notified' with the same check card on the tablet and the monitor.",
+  "New-reader concern, Ravi does not react to 'All done' or to the notification: resolved by the art. In 08-3 he smiles at the lab technician while pressing the cotton pad, and in 08-4 he smiles at his phone.",
+  "New-reader concern, the labels are not tied to devices: resolved in page-08.png. 08-1: the label is directly above the tablet's pill card. 08-2: the label is above the monitor with tube icons. 08-4: the label matches the icons on the phone. 08-5: the label sits beside the tablet's check card. 08-6: the label overlaps the top of the monitor, while Meera's face (about 690-800) stays clear of it. The repeated 'RESULTS READY' is the source wording and shows the same event in two products.",
+  "New-reader concern, 'We' ll' looks spaced: acceptable. page-08.png shows the same apostrophe spacing as \"Ananya's\" and \"Let's\" on page-01.png and \"That's\" and \"Let's\" on page-07.png. It is the shared lettering font, not something specific to page 8.",
+  "New-reader concern, 'fills' close to the edge in 08-1: acceptable. The line 'notified and fills' (18 cells from x46) ends at about 280 in a box ending at 286, which is similar to the 8 px margin of 01-1.",
+  "New-reader concerns, 'Meanwhile', nobody shown writing the prescription, the time jump and no pharmacy follow-up: acceptable. Pages 6-7 show the plan of care with intelligent prescribing and labs, and Ravi leaving. Ravi's move home and 'Results ready:' mark the passage of time without claiming a turnaround. Request 4 asks only that the pharmacy 'fill prescriptions', not that pickup be shown.",
+  "New-reader concern, the page reads as a list of notifications: acceptable. The repeated 'is notified' comes from the user's Request 4 wording, and the art changes in every panel: pharmacy, lab, collection chair, home, consultation desk, reception.",
+  "My earlier issue 4, the final period at the box edge: page 8 differs measurably from 01-1. In page-01.svg the 01-1 box runs from 48 to 334 with text from x66. Its longest line, \"Dr. Ananya's clinic.\", is 20 cells (about 260 px) and ends near 326, leaving about 8 px. In page-01.png a gap is clearly visible before the border. On page 8, 'The lab is notified.' (20 cells from x734) ends near 994 in a box ending at 992, and 'Ravi is notified.' (17 cells from x182) ends near 403 in a box ending at 402. In both, the box appears to be clamped at the panel's right edge, so the box is about 9-10 px narrower than the 01-1 rule would give. In page-08.png the period ink stays inside the border but looks like it sits on it. The first reader also saw these two captions as slightly overflowing. This is not the same spacing as 01-1, so I list it as an issue (see issues)."
+ ],
+ "issues": [
+  {
+   "problem": "The right margins of the 08-2 caption 'The lab is notified.' (box 716-992) and the 08-4 caption 'Ravi is notified.' (box 164-402) are about 9-10 px tighter than the 01-1 caption. The box appears to be clamped at the panel edge, and in workflow/review/page-08.png the final period looks like it sits on the border; the first reader read it as overflow. Move each caption left about 10-12 px (for example 08-2 x:192 to about 180, 08-4 x:140 to about 128) or otherwise give the box its natural width. Then re-export the storyboards and the preview and check again. This changes page-08.svg, so the 07 and 09 boundary requests also need to be refreshed.",
+   "location": "page 08, 08-2 caption and 08-4 caption (workflow/review/page-08.png; workflow/storyboards-unnumbered/page-08.svg)",
+   "resolved": false
+  }
+ ],
+ "readingReview": {
+  "withoutGuides": true,
+  "firstReadingHash": "12e53d0cfb00928bae48479973aa28e23e34600e6005460b04ba052c5d2cefac",
+  "comparison": "The new first reader's order is 08-1 caption then label, 08-2 caption then label, 08-3 caption then the lab technician's balloon, then 08-4 caption and label, then 08-5, then 08-6. This matches the intended order. The single balloon's tail was correctly attributed to the lab technician. The reader's hesitation between panels 4 and 5 is judged harmless (see observations). Every other concern from that reading is resolved with evidence from page-08.png and pages 1-7, except the caption right-margin fit in 08-2 and 08-4, which remains open.",
+  "predictedOrder": [
+   {
+    "panel": "08-1",
+    "dialogue": [
+     1,
+     2
+    ]
+   },
+   {
+    "panel": "08-2",
+    "dialogue": [
+     1,
+     2
+    ]
+   },
+   {
+    "panel": "08-3",
+    "dialogue": [
+     1,
+     2
+    ]
+   },
+   {
+    "panel": "08-4",
+    "dialogue": [
+     1,
+     2
+    ]
+   },
+   {
+    "panel": "08-5",
+    "dialogue": [
+     1,
+     2
+    ]
+   },
+   {
+    "panel": "08-6",
+    "dialogue": [
+     1,
+     2
+    ]
+   }
+  ],
+  "observations": [
+   "In the unnumbered PNG and page-08.png, every caption is stacked directly above its own label inside the same frame, except in 08-6, where the label is at the far right of the panel and still inside its frame. So each panel reads caption first, then label.",
+   "In 08-3 the caption is at the far left and the balloon at the far right, with the tail down to the lab technician, who faces Ravi. Ravi's smile answers her line without words.",
+   "The bottom tier uses the usual layout of a tall left panel with two stacked panels to the right, and the new reader followed 4, then 5, then 6."
+  ],
+  "transitions": [
+   {
+    "from": "07-4",
+    "to": "08-1",
+    "observation": "Page turn after Ravi leaves, then 'Meanwhile' at the pharmacy. The pill card is now visible below the label and links back to the 06-2 plan of care."
+   },
+   {
+    "from": "08-1",
+    "to": "08-2",
+    "observation": "Parallel order: the lab technician holds an empty tube next to the monitor's order card with tube icons."
+   },
+   {
+    "from": "08-2",
+    "to": "08-3",
+    "observation": "'Later that day' and the same lab (blue chair, tube rack, monitor) show Ravi back after leaving in 07-4."
+   },
+   {
+    "from": "08-3",
+    "to": "08-4",
+    "observation": "'We'll let you know when your results are ready' pays off in 'Results ready: Ravi is notified.' at home, with a check card on his phone."
+   },
+   {
+    "from": "08-4",
+    "to": "08-5",
+    "observation": "The same check card on Ananya's tablet makes the parallel notifications clear."
+   },
+   {
+    "from": "08-5",
+    "to": "08-6",
+    "observation": "The same check card on the reception monitor, with Meera on-model, completes the patient, doctor and clinic sequence from Request 4."
+   },
+   {
+    "from": "08-6",
+    "to": "09-1",
+    "observation": "From the present-day notification to 'Tomorrow, care may take us beyond our hometown.' with Ravi on a train. The conditional caption and the setting mark the shift to the future."
+   }
+  ]
+ }
+}

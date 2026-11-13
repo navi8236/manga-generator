@@ -1,0 +1,185 @@
+[
+ {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-08-1-cacae92f48a1aa3e823db94340dee5cf2b6933438dd811040117b953792e6186.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "changes-requested",
+  "observations": [
+   "Reviewer identity: the runtime gave me no task or agent ID, so reviewer.task is null. The parent must supply the real Agent ID from its own tool result. It must not invent one. If none is available, this response cannot be recorded, because the CLI requires reviewer.task.",
+   "What I opened myself with Read: the request JSON for 08-1 (full scene, production and cast), assets/characters/pharmacy-lab.png, assets/characters/main-cast.png, assets/panels/07-4.png, assets/panels/08-1.png and workflow/review/page-08.png. I did not open workflow/storyboards/page-08.svg or source/original.txt, so this review does not cover them. Every file I opened was readable.",
+   "The Pharmacist matches pharmacy-lab.png. He has short wavy black hair with grey at the temples, kind hooded eyes with crow's feet, thick arched brows, a round face with a neat moustache and dimpled cheeks, a white coat over a light-blue collared shirt, and two blue pens in the breast pocket as on the sheet. He smiles in a careful, reassuring way, which fits the emotion field.",
+   "Hands match production. His right hand (viewer's left) holds a plain white unlabelled box and is slipping it into the bag. His left hand (viewer's right) holds the open white paper bag at its edge. The fingers read correctly. The box and bag carry no labels, logos or text. The shelf boxes behind him are plain white.",
+   "The tablet stands on its stand in the left foreground with the screen toward the reader. The screen shows one card with a teal capsule icon and two blank bars. There is no drug name, letter or number anywhere in the art. The top-left wall is plain, leaving room for the caption.",
+   "From 07-4 to 08-1: in 07-4 Ravi waves goodbye outside the clinic in morning sun. 08-1 is a new place, the pharmacy, and the caption 'Meanwhile' bridges the change. The daylight is consistent and the cut reads as a clear place change.",
+   "Lettering on page-08.png: the top-left caption ends just left of his hair (box right edge at about page x 286), so it does not cover his face. The box, bag and both hands are clear. However, the 'NEW PRESCRIPTION' label (about page x 30-262, y 316-420) covers almost the whole tablet. Only the top bezel shows, and the capsule card is hidden. The tablet is the key prop that shows the notification arrived, so the reader loses the visual link. On 08-2, 08-5 and 08-6 the order or results card stays visible next to its label."
+  ],
+  "issues": [
+   {
+    "problem": "In the composite, the 'NEW PRESCRIPTION' label hides almost the whole tablet, including the screen card with the capsule icon. Only the top bezel is visible, so the key prop that shows the notification cannot be read. Move or shrink the label, for example place it on the wall above the tablet or let it cover only the blank bars, so the screen card and the tablet stay readable. Then recheck the composite.",
+    "location": "08-1 label (dialogue[1], x 6, dy 292) on workflow/review/page-08.png, about page x 30-262, y 316-420",
+    "resolved": false
+   }
+  ],
+  "fingerprint": "cacae92f48a1aa3e823db94340dee5cf2b6933438dd811040117b953792e6186"
+ },
+ {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-08-2-bafd5bf64fb43588de86fea510908994ad8aa674570fb77e7d1e4d161dae9421.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Reviewer identity: the runtime gave me no task ID, so reviewer.task is null. The parent must supply the real one. I opened these myself with Read: assets/panels/08-2.png, assets/characters/pharmacy-lab.png and workflow/review/page-08.png. I also used the cast and production fields of the page-8 request. I did not open the storyboard SVG.",
+   "The Lab Technician matches the sheet. She has a neat high bun with loose strands, thin round glasses, large round eyes, thin straight brows, a narrow face with a sharp chin and freckles across the nose, a small stud earring, a light-blue lab coat over a navy top, and purple nitrile gloves.",
+   "Hands match production. Her right hand (sleeve from the viewer-left shoulder) holds up one empty purple-capped tube with a blank white label, just picked from the rack. Her left gloved hand rests flat on the counter. The finger count and grip on the tube are plausible.",
+   "The monitor in the right foreground is angled toward the reader. It shows one card with three tube icons and two blank bars, with no test names, letters or values. A rack of five empty capped tubes with blank labels stands in the left foreground. The spec places the rack 'beside the monitor', but here it is on the opposite side of the panel. This is minor and does not block. A blue sample-collection chair at the left sets up the room for 08-3. The top wall is plain for the caption.",
+   "Her gaze rests on the tube in her hand rather than on the monitor. That still reads as checking the order and picking a tube, which matches production.moment.",
+   "Lettering on page-08.png: the caption (about page x 716-990, y 28-100) and the 'LAB ORDER' label (about x 792-995, y 106-243) are right of her face, which ends at about x 750. They sit above the monitor, and the tube-icon card stays visible below them. The raised tube, both gloved hands and the rack are uncovered."
+  ],
+  "issues": [],
+  "fingerprint": "bafd5bf64fb43588de86fea510908994ad8aa674570fb77e7d1e4d161dae9421"
+ },
+ {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-08-3-e747dc64b396398081962a1a9c72a9958f70a46bc7a5f77bf8be802d72dbf236.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Reviewer identity: the runtime gave me no task ID, so reviewer.task is null. The parent must supply the real one. I opened these myself with Read: assets/panels/08-3.png (the current edited version, with the figures lowered), assets/panels/08-2.png, assets/characters/main-cast.png, assets/characters/pharmacy-lab.png and workflow/review/page-08.png.",
+   "On the left, Ravi sits in a blue sample-collection chair. His face matches main-cast.png: short side-parted black hair, trimmed beard, thick straight brows, narrow eyes creased in a smile. He wears the light-green shirt with rolled sleeves. His dark-brown shoulder bag is on his lap. His right hand presses a small white cotton pad to the inner side of his bent left arm near the elbow. His watch is on the left wrist. This matches production.hands. No needle appears anywhere.",
+   "On the right, the Lab Technician matches pharmacy-lab.png: bun, round glasses, light-blue coat over navy, purple gloves. She faces Ravi and smiles with her mouth open as she speaks. Her left hand (viewer's right) holds one capped tube with a white label. Her right hand presses a blank white sticker onto it. This matches the production entry 'labtech left holding / right pressing label'.",
+   "From 08-2 to 08-3: the room is the same lab. Both panels show the blue collection chair, white counters and cabinets, a tube rack and a monitor with a tube-icon card, so it reads as the same room. Minor note: in 08-2 she picked an empty purple-capped tube, but here the tube in her hand and the three tubes in the rack have red caps and dark-red contents. The monitor icons are red as well. A multi-tube draw makes this plausible, and at this panel size it does not break the reading. I record it as a non-blocking continuity note. The screen and the sticker carry no text, test names or values.",
+   "Composition after the edit: both figures sit in the lower half, with a plain wall across the upper half. The caption and balloon now fit above the heads, at the cost of small figures and an empty band of wall between the text and the heads. The faces are small but readable.",
+   "Lettering on page-08.png: the caption (about page x 32-448, y 460-565) and the balloon (about x 714-985, y 460-630) both sit above the figures. Ravi's face (about y 630-702) and the Technician's face (about y 600-680) are uncovered, as are both hands, the cotton pad and the tube. The balloon tail runs down-left from the balloon and ends just right of the Technician's head, at about page x 718, y 655. It points clearly at her and not at Ravi."
+  ],
+  "issues": [],
+  "fingerprint": "e747dc64b396398081962a1a9c72a9958f70a46bc7a5f77bf8be802d72dbf236"
+ },
+ {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-08-4-fcc4d1eeb21fa0b85c879bfbf2d6ac7f9c4aa279223a70e79a6ede8720cf2640.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Reviewer identity: the runtime gave me no task ID, so reviewer.task is null. The parent must supply the real one. I opened these myself with Read: assets/panels/08-4.png (the current edited version, with the figure lowered), assets/characters/main-cast.png and workflow/review/page-08.png.",
+   "Ravi sits on a simple beige sofa with a teal cushion, beside a window with an evening sunset sky, a curtain with a leaf pattern and a potted plant. This matches 'at home, soft evening light, some days later'. His face matches the sheet: side-parted hair, short beard, thick straight brows, eyes creased in a gentle smile. He wears the light-green shirt and dark trousers.",
+   "Hands match production. His right hand (viewer's left) holds the phone in a dark-blue case, screen toward the reader. His left hand rests on his knee with the wristwatch on that wrist. The fingers on the phone read correctly.",
+   "The phone screen shows one green check-mark card and three small icons: an app grid, an envelope and a chat bubble. There are no logos, letters or values. A plain wall fills the upper half for lettering.",
+   "From 08-3 to 08-4: the cut moves from the lab to home with a light change from daylight to evening, which supports the time jump to the results day. His costume stays the same, which matches the sections and continuity fields.",
+   "Lettering on page-08.png: the caption (about page x 165-402, y 862-965) and the label (about x 115-406, y 985-1088) sit on the wall and curtain above his head, which starts at about y 1130. His face, the phone screen, his left hand and the watch are all uncovered."
+  ],
+  "issues": [],
+  "fingerprint": "fcc4d1eeb21fa0b85c879bfbf2d6ac7f9c4aa279223a70e79a6ede8720cf2640"
+ },
+ {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-08-5-3f0cfcb00bf80260828cda70cb17d1b467ef3d53c227e29183170bd60acf6bb4.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Reviewer identity: the runtime gave me no task ID, so reviewer.task is null. The parent must supply the real one. I opened these myself with Read: assets/panels/08-5.png, assets/characters/main-cast.png and workflow/review/page-08.png.",
+   "Dr. Ananya matches the sheet. She has calm almond eyes with heavy upper lids, soft level brows, an oval face with a pointed chin, a low bun with loose strands, a gold stud earring, a teal kurta under an open white coat, and a stethoscope around her neck that is not in use. She smiles attentively at the tablet.",
+   "Hands match production. Her right hand (viewer's left) holds the tablet's left edge and her left hand holds its right edge. Both hands read correctly. The screen faces the reader and shows one card with a test-tube icon and a green check mark. There are no letters or values.",
+   "Setting: a consultation desk, a window with a tree outside, and a potted plant at the right, consistent with the consultation room. On the desk are a pen holder and a closed blue book with a blank spine. There is no readable text anywhere.",
+   "From 08-4 to 08-5: the notification passes from Ravi at home to the doctor. The parallel framing of a person smiling at a screen card with a check mark makes the chain easy to follow.",
+   "Lettering on page-08.png: the caption (about page x 448-660, y 856-993) sits on the plain wall left of her face, which starts at about x 725. The 'RESULTS READY' label (about x 458-628, y 996-1102) stops just left of the tablet and of her right hand at about x 632, so the protected hand box [631,1075,40,56] is not covered. The tablet card stays fully visible."
+  ],
+  "issues": [],
+  "fingerprint": "3f0cfcb00bf80260828cda70cb17d1b467ef3d53c227e29183170bd60acf6bb4"
+ },
+ {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-08-6-1e5a06a4f0eb3728fbf5457b6da052fe81bdd27170da84bc954dc07bd3fbe864.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Reviewer identity: the runtime gave me no task ID, so reviewer.task is null. The parent must supply the real one. I opened these myself with Read: assets/panels/08-6.png, assets/panels/09-1.png, assets/characters/main-cast.png, workflow/review/page-08.png and workflow/review/page-09.png.",
+   "Meera matches the sheet. She has large round eyes with a visible lower lash line, thin high arched brows, a round face with full cheeks, a single braid over her left shoulder (viewer's right) with a teal tie, a small silver hoop earring, and the blue kurta with white leaf motifs and embroidered neckline. Her smile is pleased.",
+   "Hands match production. Her right hand (viewer's left) is on the mouse, and the silver bangle is clearly visible on that wrist. Her left hand rests flat on the desk.",
+   "The reception monitor at the right is angled toward the reader. It shows one card with a green check mark and no text or values. Plants, a waiting chair and windows behind her suggest the reception area. A clear card holder on the desk is empty.",
+   "From 08-6 to 09-1: the page turns from the clinic's notification to Ravi on a train under the caption 'Tomorrow, care may take us beyond our hometown.' The caption carries the jump to the hypothetical future, and Ravi's costume stays consistent.",
+   "Lettering on page-08.png: the caption (about page x 448-622, y 1175-1343) sits on the wall and plant left of her face, which starts at about x 690. The 'RESULTS READY' label (about x 822-990, y 1175-1280) covers only the upper bezel of the monitor. The check-mark card below it (about y 1295-1350) stays visible, as do her face, both hands and the bangle."
+  ],
+  "issues": [],
+  "fingerprint": "1e5a06a4f0eb3728fbf5457b6da052fe81bdd27170da84bc954dc07bd3fbe864"
+ },
+ {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-09-1-0cc531f464105ecefa3bc6c42afaccf7c1563c109c0ae4b807f6ded3d2e68a75.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Reviewer identity: the runtime gave me no task ID, so reviewer.task is null. The parent must supply the real one. I opened these myself with Read: assets/panels/09-1.png, assets/characters/main-cast.png and workflow/review/page-09.png. I read the 09-1 scene and production through a search of its request. The art is unchanged from the old 08-1.",
+   "Ravi sits by a train window, looking out calmly with a slight smile. His face matches the sheet: side-parted hair, short beard, thick brows. He wears the light-green shirt, and the dark-brown bag strap crosses his chest. The city skyline outside, with a domed building and apartment blocks, carries no signage or text.",
+   "Hands match production. His right elbow rests on the window ledge with the hand at his chin. His left hand holds his dark-blue phone in his lap, with the wristwatch on that wrist (heldBy ravi.left). The phone screen faces away, so no content is shown.",
+   "Above the window rail, the upper-left part of the art is a flat white block with a hard horizontal edge. It is a reserved lettering area, like the one in 07-4. On page-09.png the caption box covers almost all of it, and the edge that remains reads as part of the window frame. It does not show as a defect at page size.",
+   "Lettering on page-09.png: the caption (about page x 40-300, y 40-210) sits left of his face, which starts at about x 305. The chin hand, the phone and the watch are uncovered."
+  ],
+  "issues": [],
+  "fingerprint": "0cc531f464105ecefa3bc6c42afaccf7c1563c109c0ae4b807f6ded3d2e68a75"
+ },
+ {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-09-2-048798d3248977fe29e71e2b7e244b983dc88dfb25bd83b42c375cec31ee9a5f.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Reviewer identity: the runtime gave me no task ID, so reviewer.task is null. The parent must supply the real one. I opened these myself with Read: assets/panels/09-2.png and workflow/review/page-09.png. I read the 09-2 scene and production through a search of a page-9 request. I did not open vision-cast.png, so I compared the specialist only against the request's text description and face traits.",
+   "The pale-blue rounded vignette border and the light, airy palette are present, so the panel reads as a vision and not a current feature. A modern glass clinic sits below three small clinic silhouettes linked by dotted lines in the sky. There are no signs, logos or text.",
+   "The specialist matches the description. He has greying salt-and-pepper hair, rimless rectangular glasses, bushy brows, a long face with smile lines and a grey moustache, a light-grey blazer over a pale-blue shirt, and a stethoscope around his neck that is not in use.",
+   "Hands match production. His right hand (viewer's left) is extended with an open, welcoming palm. His left hand hangs relaxed and empty at his side.",
+   "Lettering on page-09.png: the 'WELBUK VISION' label sits top-left over the sky. The bottom caption (about page x 522-963, y 322-460) covers his lower body, his relaxed left hand and the clinic steps. His face and the open welcoming hand, which ends at about y 310, stay above it, and so do the dotted connection lines."
+  ],
+  "issues": [],
+  "fingerprint": "048798d3248977fe29e71e2b7e244b983dc88dfb25bd83b42c375cec31ee9a5f"
+ },
+ {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-09-3-35ca4b274a335aaa75945d7d6b7471e619993996d0e638e1fa077b1a97c839a8.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Reviewer identity: the runtime gave me no task ID, so reviewer.task is null. The parent must supply the real one. I opened these myself with Read: assets/panels/09-3.png, assets/characters/main-cast.png and workflow/review/page-09.png. I did not open vision-cast.png, so I checked the partner and child against the request text only.",
+   "The panel is inside the same pale-blue vignette, with clinic buildings joined by dotted lines on the left. On the sofa, Ravi sits at the left, matching the sheet in face, beard and green shirt. The partner sits in the centre: wavy shoulder-length hair, mustard-yellow kurta, and the mole under her right eye (viewer's left). The child sits at the right: short hair, orange T-shirt, round cheeks. All three smile.",
+   "Hands match production. Ravi's right hand points at the tablet. His left arm runs along the sofa back behind the partner, and his hand with the wristwatch rests on the sofa back behind the child. The partner holds the tablet's two edges. The child has one hand on her arm and the other on the sofa cushion.",
+   "The tablet shows three profile circles and a heart, with no text.",
+   "Lettering on page-09.png: the label and the caption (about page x 40-405, y 505-725) cover the left vignette area with its clinic and dotted network, which is background. Ravi's pointing hand (about x 520-570), all three faces and the tablet are uncovered."
+  ],
+  "issues": [],
+  "fingerprint": "35ca4b274a335aaa75945d7d6b7471e619993996d0e638e1fa077b1a97c839a8"
+ },
+ {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-09-4-81f13aec09e466fc019db283d2399d441b74b8d84a0f5e1052c3ff59917d8452.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Reviewer identity: the runtime gave me no task ID, so reviewer.task is null. The parent must supply the real one. I opened these myself with Read: assets/panels/09-4.png, assets/characters/main-cast.png and workflow/review/page-09.png.",
+   "The panel is back in the present, with a normal palette and no vignette. The three stand in front of the clinic under the teal awning in morning light. Meera (left) has her braid, blue kurta and white churidar. Dr. Ananya (centre) has a white coat over a teal kurta, a stethoscope, leggings and sandals. Ravi (right) has the green shirt, dark trousers, brown shoes and the shoulder bag. Their faces match the sheet.",
+   "Hands match production. Meera's right hand holds her staff phone at her side, with the silver bangle on that wrist, and her left hand is relaxed and empty. Ananya's hands are clasped in front. Ravi raises his right hand in a small wave, and his left hand hangs relaxed with the watch on that wrist.",
+   "There are no signs or readable text on the building or the phone. A framed picture inside the lobby is blank.",
+   "Lettering on page-09.png: the top-right label (about page x 705-985, y 872-1008) ends just right of Ravi's face, which ends at about x 700. The bottom caption (about x 48-480, y 1342-1448) covers Meera's lower legs and feet, which are not key. All faces, the waving hand, Meera's phone and Ananya's clasped hands are uncovered."
+  ],
+  "issues": [],
+  "fingerprint": "81f13aec09e466fc019db283d2399d441b74b8d84a0f5e1052c3ff59917d8452"
+ }
+]

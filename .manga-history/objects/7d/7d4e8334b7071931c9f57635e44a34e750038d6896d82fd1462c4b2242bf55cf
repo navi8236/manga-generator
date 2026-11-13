@@ -1,0 +1,206 @@
+{
+  "version": 3,
+  "page": "06",
+  "status": "planning-guide-not-reviewed",
+  "direction": "left-to-right, top-to-bottom",
+  "panels": [
+    {
+      "id": "06-1",
+      "rect": [
+        24,
+        24,
+        976,
+        620
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "label",
+          "text": "SPECIALITY-SPECIFIC TREATMENT PLANNER",
+          "rect": [
+            40,
+            40,
+            639,
+            74
+          ],
+          "center": [
+            359.5,
+            77
+          ],
+          "mouth": null
+        },
+        {
+          "number": 2,
+          "speaker": "label",
+          "text": "Dentist: odontogram",
+          "rect": [
+            74,
+            494,
+            182,
+            106
+          ],
+          "center": [
+            165,
+            547
+          ],
+          "mouth": null
+        },
+        {
+          "number": 3,
+          "speaker": "label",
+          "text": "Eye doctor: eye markers",
+          "rect": [
+            404,
+            494,
+            197,
+            106
+          ],
+          "center": [
+            502.5,
+            547
+          ],
+          "mouth": null
+        },
+        {
+          "number": 4,
+          "speaker": "label",
+          "text": "Paediatrician: growth scales · vaccines",
+          "rect": [
+            724,
+            494,
+            244,
+            138
+          ],
+          "center": [
+            846,
+            563
+          ],
+          "mouth": null
+        }
+      ],
+      "faces": {},
+      "protected": [],
+      "intent": {
+        "entry": [
+          40,
+          40
+        ],
+        "exit": [
+          990,
+          640
+        ]
+      },
+      "groups": null,
+      "warnings": [
+        {
+          "from": 2,
+          "to": 3,
+          "reason": "左から右へ戻る移動と縦方向の範囲が重なる。段差・余白・人物の配置を目視で検討する。"
+        },
+        {
+          "from": 3,
+          "to": 4,
+          "reason": "左から右へ戻る移動と縦方向の範囲が重なる。段差・余白・人物の配置を目視で検討する。"
+        }
+      ]
+    },
+    {
+      "id": "06-2",
+      "rect": [
+        24,
+        668,
+        976,
+        796
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "ananya",
+          "text": "We'll go through your concerns and decide the right next steps together.",
+          "rect": [
+            84,
+            684,
+            441,
+            138
+          ],
+          "center": [
+            304.5,
+            753
+          ],
+          "mouth": [
+            249,
+            1032
+          ]
+        },
+        {
+          "number": 2,
+          "speaker": "label",
+          "text": "PLAN OF CARE: intelligent prescribing · summary · drug interactions · labs · referrals",
+          "rect": [
+            564,
+            1088,
+            429,
+            170
+          ],
+          "center": [
+            778.5,
+            1173
+          ],
+          "mouth": null
+        }
+      ],
+      "faces": {
+        "ananya": {
+          "anchor": [
+            249,
+            1032
+          ],
+          "face": [
+            194,
+            928,
+            110,
+            130
+          ]
+        },
+        "ravi": {
+          "anchor": [
+            499,
+            1052
+          ],
+          "face": [
+            444,
+            948,
+            110,
+            130
+          ]
+        }
+      },
+      "protected": [],
+      "intent": {
+        "entry": [
+          40,
+          684
+        ],
+        "exit": [
+          990,
+          1460
+        ]
+      },
+      "groups": null,
+      "warnings": []
+    }
+  ],
+  "checklist": [
+    "番号と誘導線を隠した画像を先に読み、予測した発話順を記録する",
+    "最初のセリフへ上・左から入れるか",
+    "近い非連続の吹き出しを一組と誤認して返答を飛ばさないか",
+    "前の会話のまとまりを読み終えてから次のまとまりへ進めるか",
+    "返答へ自然に移り、視線が大きく逆戻りしないか",
+    "顔の向き・視線・手や小道具の動作と読順がつながるか",
+    "話者への尾が別人物や重要物を横切らないか",
+    "場所・時間・回想の切替と物の移動を直前直後から理解できるか",
+    "最後のセリフ・反応から次のコマへ移れるか",
+    "大きなコマ・余白・情報公開の順がページの感情の狙いに合うか",
+    "話題の境界と段・ページ境界が一致し、不要な読み戻りを誘わないか"
+  ]
+}

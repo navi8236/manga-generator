@@ -1,0 +1,463 @@
+{
+ "01": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-01-a776f3795c491105f17f1db96988f748c4fd66acf8096f6c48b04984d190d629.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Reviewer identity: the runtime gave me no subagent or task ID, so task is null for all six pages. The parent must supply the real Agent ID returned by its Agent tool, or record that it is unavailable. Do not invent one.",
+   "Order of what I read, for all pages: AGENTS.md (in context), docs/REVISION-AND-REVIEWS.md, docs/NARRATIVE-FLOW.md and docs/PROMPTS.md. Next, all six storyboards-unnumbered/page-NN.png with Read, before any request, source or script. Then each request JSON, source/original.txt, storyboards/page-NN.png and workflow/review/page-NN.png. Every PNG was readable. I did not open the SVGs or the reading-flow JSON as text. This is a comparison review, not a blind first reading.",
+   "Reading direction is left to right, as the source's ART DIRECTION specifies, and the layout follows it on every page.",
+   "01-1 (wide establishing panel): the caption at top left is read first. The art shows a whitewashed clinic, Ananya in a white coat waving an elderly patient inside, and two more patients waiting on metal chairs. A 'busy day' is visible, so the panel's large size carries real information.",
+   "01-2: the two Meera balloons read left to right, the list first and then the wish. Both tails reach Meera's open mouth. The phone, pen, open register, stack of registers and queue show her receptionist role without needing a caption.",
+   "01-3: Ananya stands at right with her hand to her chin, and Meera is seen still on the phone at the desk behind her. Her line answers Meera's wish. 'The rest' clearly refers back to Meera's list in 01-2.",
+   "Matches source page 1: caption, Meera's line split into two balloons in source order, and Ananya's resolve."
+  ],
+  "issues": [],
+  "readingReview": {
+   "withoutGuides": true,
+   "firstReadingHash": "7c53f5ee434d92fee08abcdb480e6feb7c23dba5ec3a7b48dfe8e12c4969d9c9",
+   "predictedOrder": [
+    {
+     "panel": "01-1",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "01-2",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "01-3",
+     "dialogue": [
+      1
+     ]
+    }
+   ],
+   "observations": [
+    "On the unnumbered storyboard and on the composite, I read: caption, then 'Appointments, patient details, follow-ups...', then 'I wish everything were easier to manage!', then 'Our time belongs with patients...'. Nothing is skipped and no reply is jumped.",
+    "In 01-2 the second balloon sits lower and to the right of the first, so the first balloon is finished before the eye moves on. In 01-3 the single balloon sits above Ananya's face and leads down to her."
+   ],
+   "transitions": [
+    {
+     "from": "01-1",
+     "to": "01-2",
+     "observation": "Same morning, same clinic. 01-1 shows the reception desk with registers and a phone through the doorway, and 01-2 cuts inside to that desk with Meera on the phone and patients queuing. It reads as moving from the door into reception."
+    },
+    {
+     "from": "01-2",
+     "to": "01-3",
+     "observation": "Continuous moment. 01-3 shows Meera still on the phone at the same desk in the background while Ananya watches from the side, so her line clearly responds to what we just saw."
+    },
+    {
+     "from": "01-3",
+     "to": "02-1",
+     "observation": "Time and place change. Ananya's resolve to 'make the rest simpler' ends page 1, and page 2 opens on the caption 'The clinic begins its Welbuk onboarding.', a laptop and an evening window. The resolve leads straight into the action, and the evening light marks the time jump."
+    }
+   ],
+   "comparison": "The first reader followed the same order and found no left-right conflict. Concern (a), that Meera's role is never shown, is resolved by the art: she sits behind the reception desk with registers, phone and queue. Concern (b), the large panel holding only a lone Ananya, is resolved because the composite 01-1 shows waiting patients and a welcome at the door. Concern (c), no answer yet to what will simplify things, works as the intended page-turn hook and is answered by 02-1. Nothing is left unresolved."
+  }
+ },
+ "02": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-02-7b32473d8c4e0090a5da0247f230052127a181da99a6b399bdc8afc631c0f9f5.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "02-1: I read the white caption at top left first, then the teal label 'WELBUK PRACTICE for the clinic' at top right. The over-the-shoulder art of Ananya typing into a blank setup form, with a sunset window behind, ties the product label to the laptop.",
+   "02-2: the balloon sits at upper left and its tail reaches Ananya's mouth. She has her finger at her chin and looks up and to the right, which leads the eye toward 02-3.",
+   "02-3 (reframed): Meera stands beside the same wooden desk, with the open laptop, pen cup and plant at left and an empty office chair and a window with a roller blind at right. She holds the staff phone up in her right hand, showing a calendar icon. The balloon is at top and its tail reaches her face. The teal 'WELBUK CARE for clinic staff' label sits at the lower left and covers the laptop and the desk edge, but not Meera's face, the phone or her hand. It reads as the last item in the panel. The reframe makes it clear that she is in the same office next to Ananya's desk.",
+   "02-4: the 'One team. Better coordination.' balloon has a short tail. In the art, though, it sits right next to Ananya's open, speaking mouth, and Meera at right has her mouth closed and is smiling. The speaker reads unambiguously as Ananya.",
+   "Teal boxes are used consistently for product labels and white boxes for narration. Once the label sits beside the laptop or phone, it reads as a product tag.",
+   "Matches source page 2: all four panels, with the lines in source order."
+  ],
+  "issues": [],
+  "readingReview": {
+   "withoutGuides": true,
+   "firstReadingHash": "672c637de510c43dc78c95fe822193687174e9282038c44b23c03e51c88088ac",
+   "predictedOrder": [
+    {
+     "panel": "02-1",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "02-2",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "02-3",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "02-4",
+     "dialogue": [
+      1
+     ]
+    }
+   ],
+   "observations": [
+    "Without guides I read: caption, then the WELBUK PRACTICE label, then Ananya's 'We can organise...', then Meera's 'And our team...', then the WELBUK CARE label, then 'One team. Better coordination.'",
+    "Meera's 'And our team...' finishes Ananya's thought from 02-2, and the two panels sit side by side on the same row, so the exchange reads as one continuous turn.",
+    "In 02-3 the balloon is at the top and the label at the bottom, so the eye cannot jump to the label before reading the line."
+   ],
+   "transitions": [
+    {
+     "from": "01-3",
+     "to": "02-1",
+     "observation": "From the busy morning reception to an evening office laptop. The caption announces onboarding, and the sunset window and the change of room carry the time jump."
+    },
+    {
+     "from": "02-1",
+     "to": "02-2",
+     "observation": "Same desk, same laptop and the same evening window. The camera moves from behind Ananya's shoulder to a front three-quarter view as she pauses to think. Continuous."
+    },
+    {
+     "from": "02-2",
+     "to": "02-3",
+     "observation": "Same office. The 02-3 reframe shows the same desk with the open laptop and an empty chair beside Meera. Ananya is off-panel left, consistent with where she sits in 02-2. Meera's 'And...' continues Ananya's line."
+    },
+    {
+     "from": "02-3",
+     "to": "02-4",
+     "observation": "The two-shot puts Ananya seated at left and Meera standing at right with the same staff phone at her side and the laptop between them. Both characters keep their sides from the previous panels."
+    },
+    {
+     "from": "02-4",
+     "to": "03-1",
+     "observation": "From the evening office to a new morning at a now-tidy reception with a monitor, and a new character, Ravi, waving at the door. The setup is finished, and page 3 answers the expectation of what changes for patients."
+    }
+   ],
+   "comparison": "The first reader followed the same order. Concern 1 (the short tail in 02-4, which could be given to Meera) is resolved in the composed art: the balloon sits immediately beside Ananya's speaking mouth and Meera is silent. Concern 3 (unclear teal boxes) is resolved by placing the labels next to the laptop and the phone. Concern 4 (roles) is resolved by the white coat and stethoscope, and by Meera's reception role established on page 1. Concern 5 (empty establishing panel) is resolved by the 02-1 art. Nothing is left unresolved."
+  }
+ },
+ "03": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-03-26f66943982365a38808c6603d2b2a2989131be6e8d2e4af368de1cc8205d5b4.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Reverse angle from 03-1 to 03-2, checked on the composite: it reads clearly. In 03-1, Meera is in the left foreground (back and side view, blue kurta, braid) at the monitor, and Ravi waves from the glass door. In 03-2, the green shirt, the beard edge and Ravi's hand holding a phone fill the left foreground, and Meera faces him from behind the same desk with a monitor and keyboard at right. The over-the-shoulder framing and the costumes make the flip read as a camera turn, not as a jump across the line. From 03-2 to 03-4, Ravi stays left and Meera right.",
+   "Minor art note for the artwork reviewers, not breaking the reading: in 03-2 the waiting chairs with seated patients appear behind Meera, although 03-1 puts the waiting area on Ravi's door side. 03-3 and 03-4 put the chairs behind Ravi again. The reverse still reads correctly because the foreground figure and the desk carry it.",
+   "Minor prop note for the artwork reviewers: the navy reception phone on the desk in 03-1 looks similar to Ravi's dark-blue phone in 03-2 and 03-3. A careful reader might wonder whether Ravi picked it up. The reading order is not affected.",
+   "03-3: 'Yes, please.' sits at top left and its tail reaches Ravi as he nods with his eyes closed. Meera types at the monitor, which shows blank fields. Registration is now visible, so the step from 'Yes' to 'all set' is not skipped.",
+   "03-4: the balloon is at upper centre-right and its tail reaches Meera as she gestures toward the chairs, which sit behind Ravi at left. 'Please have a seat' matches that gesture.",
+   "Matches source page 3. 'Today's appointment' is the source wording and naturally means the appointment being booked for today."
+  ],
+  "issues": [],
+  "readingReview": {
+   "withoutGuides": true,
+   "firstReadingHash": "60a613e2feabb60311a5b57df1e10d0c4b22b6cda40696f24f167da52ab0fc71",
+   "predictedOrder": [
+    {
+     "panel": "03-1",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "03-2",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "03-3",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "03-4",
+     "dialogue": [
+      1
+     ]
+    }
+   ],
+   "observations": [
+    "Without guides I read: 'Good morning! I'd like to see the doctor.', then 'Of course. May I register...?', then 'Yes, please.', then 'You're all set, Ravi. Please have a seat.' There is one balloon per panel, and each tail goes to the correct face.",
+    "In 03-1 the balloon sits at top left and its tail runs right to Ravi's face at the door. The eye then drops to Meera looking up at him and exits right toward her close-up in 03-2."
+   ],
+   "transitions": [
+    {
+     "from": "02-4",
+     "to": "03-1",
+     "observation": "From the evening office to a later morning at reception. The new tidy monitor, the morning light through the glass door, waiting patients and the new arrival Ravi make the change clear."
+    },
+    {
+     "from": "03-1",
+     "to": "03-2",
+     "observation": "A deliberate reverse over-the-shoulder shot at the same desk. Ravi's green shirt and beard in the foreground and Meera's blue kurta, braid and monitor carry the space. It reads clearly; see the art note about the waiting chairs behind Meera."
+    },
+    {
+     "from": "03-2",
+     "to": "03-3",
+     "observation": "Same desk, wider shot. Ravi left and Meera right as in 03-2. His phone now lies on the desk in front of him, and the monitor is turned so its blank fields show. His agreement follows her question directly."
+    },
+    {
+     "from": "03-3",
+     "to": "03-4",
+     "observation": "Same staging and sides. Ravi stands with his bag strap and Meera gestures toward the waiting chairs behind him. Registration is complete."
+    },
+    {
+     "from": "03-4",
+     "to": "04-1",
+     "observation": "Place change to the consultation room: a doctor's desk, a window with a plant, and Ananya in a white coat greeting Ravi, who wears the same green shirt and has the same bag. 'Please have a seat' leads into him being seen by 'the doctor' he asked for in 03-1."
+    }
+   ],
+   "comparison": "The first reader followed the same order. Concern 1 (the sides swap with no visible camera change) is resolved in the art by the over-the-shoulder reverse, which I confirmed reads clearly. Concern 2 (registration not shown) is resolved by Meera typing at the monitor in 03-3. Concern 3 ('today's appointment') is acceptable source wording. Concern 5 (no cue for location or time) is resolved by the reception desk, the waiting chairs and the morning light. Two minor art notes, the waiting area behind Meera in 03-2 and the similar phones, are passed on to the artwork reviewers. They do not break the reading."
+  }
+ },
+ "04": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-04-6d4947405873e00a4b44a92a0e4104a2c4bfa0c0347a81d3c517585d6c7e775c.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "04-1 (wide): the consultation room is established by Ananya's desk, the closed laptop, a window with a plant, and Ravi seated with his bag on the floor. The balloon sits right of Ananya's face, and its tail reaches her mouth without covering her face.",
+   "04-2: the balloon is at upper left and its tail reaches Ravi as he rubs his neck. The back of Ananya's head in the left foreground keeps her on the left.",
+   "04-3: the caption across the top sits just above Ananya's head. She listens with her hands folded, with Ravi's shoulder in the right foreground and the closed laptop at the lower-left edge of the desk. The laptop gives a visible referent for 'Technology', set aside.",
+   "04-4: the balloon sits between Ananya and Ravi and its tail reaches Ananya's open mouth. Ravi nods with a small motion mark. The speaker is clear.",
+   "Ananya stays left and Ravi right in all four panels.",
+   "Matches source page 4, with no diagnosis or advice added."
+  ],
+  "issues": [],
+  "readingReview": {
+   "withoutGuides": true,
+   "firstReadingHash": "5f661aa37bc884874cae3b8e5b9ab16609aac6bad7008adb5f137d39b6860679",
+   "predictedOrder": [
+    {
+     "panel": "04-1",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "04-2",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "04-3",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "04-4",
+     "dialogue": [
+      1
+     ]
+    }
+   ],
+   "observations": [
+    "Without guides I read: 'Hello, Ravi. Tell me what brings you in.', then 'I've been feeling tired lately.', then the caption 'Technology supports the workflow...', then 'We'll go through your concerns...'.",
+    "The caption in 04-3 works as a pause for listening between Ravi's concern and Ananya's reply. It does not read as a skipped spoken line."
+   ],
+   "transitions": [
+    {
+     "from": "03-4",
+     "to": "04-1",
+     "observation": "From reception to the consultation room. Ravi wears the same shirt and has the same bag, now set down beside the chair, which reads as the same visit after he was called in."
+    },
+    {
+     "from": "04-1",
+     "to": "04-2",
+     "observation": "Her question leads to his answer. The camera moves closer to Ravi, with the back of Ananya's head on the left keeping the screen direction."
+    },
+    {
+     "from": "04-2",
+     "to": "04-3",
+     "observation": "A reverse shot to Ananya listening, with Ravi's shoulder on the right. Sides are kept, and the laptop is still closed on the same desk."
+    },
+    {
+     "from": "04-3",
+     "to": "04-4",
+     "observation": "Back to the two-shot from 04-1, same sides and chairs. Ravi's bag is still on the floor. Her reply follows her listening."
+    },
+    {
+     "from": "04-4",
+     "to": "05-1",
+     "observation": "Back at reception: the monitor, the waiting chairs and Meera. Ravi has his bag on his shoulder and his phone in hand, so the consultation is over and he is on his way out."
+    }
+   ],
+   "comparison": "The first reader followed the same order. Concern 1 (no establishing cue for the consultation room, doctor role only inferred) is resolved by the room and the white coat in 04-1. Concern 3 (the reply is generic) follows the source, which forbids specific advice, and still answers 'what brings you in' as shared next steps. Concern 4 ('Technology' has no referent) is resolved by the closed laptop pushed aside in 04-1, 04-3 and 04-4. Concern 5 (balloons may cover faces) does not happen in the art. Nothing is left unresolved."
+  }
+ },
+ "05": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-05-e264f583415fca09d89145cf8f3235da8f06de29f00f00fa6a5733c9ebc31be3.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "05-1: the balloon is at upper left and its tail reaches Meera as she points at Ravi's phone across the desk. The reception monitor, the waiting chairs and Ravi's bag on his shoulder mark the place and the 'after the consultation' moment.",
+   "05-2: Ravi holds the phone toward the reader, showing calendar and heart cards. His balloon is at upper left and its short tail reaches his mouth. Showing the screen makes his 'So I can keep useful information in one place?' a reaction to what he sees, not only to Meera's words. The teal 'WELBUK HEALTH for patients' label at the lower left is read after his line.",
+   "05-2 glance: Ravi looks up and to the right while Meera is off-panel left. This is recorded as a thinking glance. In left-to-right reading it leads the eye into 05-3, so it does not misdirect.",
+   "05-3: the balloon is at top and its tail reaches Meera. Ravi is in the right foreground with his phone, keeping Meera left and Ravi right from 05-1.",
+   "05-4: the caption runs across the top. Ravi waves on the street at right, and Ananya and Meera wave back from the glass doorway at left. It reads clearly as Ravi leaving.",
+   "Matches source page 5."
+  ],
+  "issues": [],
+  "readingReview": {
+   "withoutGuides": true,
+   "firstReadingHash": "2a96d285c6eb8cb0f5a44d24bbd51ea4230f63ce6fa35aaf4a709163fb4e4076",
+   "predictedOrder": [
+    {
+     "panel": "05-1",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "05-2",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "05-3",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "05-4",
+     "dialogue": [
+      1
+     ]
+    }
+   ],
+   "observations": [
+    "Without guides I read: Meera's 'Welbuk Health is designed...', then Ravi's question, then the WELBUK HEALTH label, then Meera's 'That's the idea...', then the caption 'A smoother visit...'.",
+    "05-2 and 05-3 sit side by side on one row, so the question and the answer read as a pair."
+   ],
+   "transitions": [
+    {
+     "from": "04-4",
+     "to": "05-1",
+     "observation": "From the consultation room back to reception: the same monitor and waiting chairs as page 3. Ravi has his bag on his shoulder again, so he is back at the desk after the consultation."
+    },
+    {
+     "from": "05-1",
+     "to": "05-2",
+     "observation": "A closer shot on the same phone. In 05-1 he holds it and Meera points at it. In 05-2 he holds it with both hands, screen toward us, with the reception monitor at left."
+    },
+    {
+     "from": "05-2",
+     "to": "05-3",
+     "observation": "His question is followed by her answer. Meera is left and Ravi is in the right foreground with the same phone. The waiting area in the background is the same."
+    },
+    {
+     "from": "05-3",
+     "to": "05-4",
+     "observation": "Place change to the clinic entrance, outside. Ravi walks away waving with the same bag and his phone, and both staff wave from the door. It reads as the end of the visit."
+    },
+    {
+     "from": "05-4",
+     "to": "06-1",
+     "observation": "From the clinic street to a train window with a city skyline. The caption 'Tomorrow, care may take us beyond our hometown' marks a hypothetical later time, and Ravi wears the same shirt and has the same bag."
+    }
+   ],
+   "comparison": "The first reader followed the same order. Concern 1 (no time or place cue for the return to Meera) is resolved by the reception monitor, the waiting chairs and the bag on Ravi's shoulder. Concern 2 (the 'So' inference feels skipped) is softened by 05-2 showing the app screen with calendar and health cards, and the line is source text. Concerns 4 and 5 were placeholder label artifacts and are resolved in the art, where 05-4 clearly shows Ravi leaving with both staff waving. The caption is source narration. Nothing is left unresolved."
+  }
+ },
+ "06": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-06-333cec1edb721d14b5fad4a17e440d8274312981a62623c910caf8201f117e78.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "06-1: the caption at top left sits beside Ravi at the train window, with a city skyline outside. The conditional 'may' together with the travel image reads as narration of a possible future.",
+   "06-2 (rearranged lettering): the teal 'WELBUK VISION' label at top left is read first. The eye then passes across the clinic silhouettes linked by dotted lines and the specialist's welcoming hand, and ends on the caption along the bottom band. The caption begins just below the specialist's open palm and covers only his lower torso and the clinic base, not his face or hand. The order (label, image, caption) is clear, and the pale rounded vignette marks it as vision.",
+   "06-3: the 'WELBUK VISION' label, then the caption at left, then the family to the right (Ravi pointing, the partner holding a tablet with profile circles and a heart, the child leaning in). The repeated label is justified because each vision panel must be labelled as not launched. The partner and child are introduced only by this symbolic scene, which the source specifies and the vision framing contains.",
+   "06-4: the vignette is gone, and normal colour in front of the clinic entrance returns to the present. I read the teal product list at top right first, then the closing caption at bottom left. The teal box ends just right of Ravi's face and does not cover his face or his waving hand.",
+   "Matches source page 6, including the 'WELBUK VISION' marking required by the source."
+  ],
+  "issues": [],
+  "readingReview": {
+   "withoutGuides": true,
+   "firstReadingHash": "9e8c5fab87e5d6911d3151a360bace7a413ab1b3447dfac2c39460867e5c4a74",
+   "predictedOrder": [
+    {
+     "panel": "06-1",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "06-2",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "06-3",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "06-4",
+     "dialogue": [
+      1,
+      2
+     ]
+    }
+   ],
+   "observations": [
+    "Without guides I read: 'Tomorrow, care may take us beyond our hometown.', then the 06-2 label, then the 06-2 caption, then the 06-3 label, then the 06-3 caption, then the product list, then 'Welbuk — Building a connected healthcare ecosystem.'",
+    "In 06-2 the label sits at top left and the caption at the bottom, so the eye takes in the specialist between them and nothing is read out of order. In 06-4 the product list at top right comes before the bottom caption, which suits a closing tagline."
+   ],
+   "transitions": [
+    {
+     "from": "05-4",
+     "to": "06-1",
+     "observation": "From the clinic street to a train interior. The 'Tomorrow' caption and the moving skyline mark a hypothetical future trip, and Ravi's costume, bag and phone carry over."
+    },
+    {
+     "from": "06-1",
+     "to": "06-2",
+     "observation": "Ravi gazes out of the window toward a city, and the next panel opens into the pale vignette of a clinic in another city with a specialist. The 'WELBUK VISION' label marks the shift into vision."
+    },
+    {
+     "from": "06-2",
+     "to": "06-3",
+     "observation": "The same pale rounded vignette and the repeated label keep the reader in the vision. The idea widens from clinics to Ravi's family. Ravi's green shirt links back to 06-1."
+    },
+    {
+     "from": "06-3",
+     "to": "06-4",
+     "observation": "The vignette is gone and full colour returns at the familiar clinic entrance and awning, with all three main characters in their present-day costumes. It reads clearly as a return to the present for the closing."
+    }
+   ],
+   "comparison": "The first reader followed the same order. Concern 1 ('Tomorrow' ambiguous, unclear speaker) is source wording, and 'may' plus the travel image reads as narration about a possible future. Concern 2 (partner and child not introduced) is acceptable inside the labelled symbolic vision panel. Concern 3 (the specialist's location not shown) is resolved by the city clinic and the dotted links between clinics in 06-2. Concern 4 (repeated label) is justified by the requirement to mark each vision panel. Concern 5 (the teal box over Ravi) does not happen in the art. Concern 6 (an advertising ending) follows the source's closing design. The recently rearranged 06-2 lettering reads in a natural order. Nothing is left unresolved."
+  }
+ }
+}

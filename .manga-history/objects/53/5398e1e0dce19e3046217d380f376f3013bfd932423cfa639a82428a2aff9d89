@@ -1,0 +1,23 @@
+{
+  "promptVersion": 2,
+  "panel": "01-3",
+  "project": "works/auto-6294ee8a2094/workflow.json",
+  "fingerprint": "77157c64bdac7975470ea4e6dacb46255884087b7767cc484cf147aacd5a6029",
+  "operation": "edit",
+  "sourceHash": "6294ee8a20944646ae8401695eeb8ea6cab68725127d488e11e4dae584d40adb",
+  "prompt": "TASK: Edit image 1. This is a local revision of the supplied artwork.\nINPUT IMAGES (in supplied order):\nImage 1: edit-target. Base image to edit; requested changes take precedence over preservation.\nCHANGE REQUEST:\nRemove the man in the light green shirt with the shoulder bag (and any other extra man) from the background behind the reception desk; fill that area with plain wall and the window, keeping Meera at the desk and the two waiting women. Turn Dr. Ananya's head and eyes to look toward the reception desk on the left side of the image (screen-left), with a thoughtful, resolved expression. Keep her pose, right hand at her chin, left hand holding the edge of her white coat, stethoscope, costume, the white empty upper area and everything else unchanged. No text.\nPRESERVE: retain all areas, identity traits, acting, clothing, composition and lettering space outside the requested change. The change request overrides preservation where necessary; repair connected anatomy, contact objects and occlusion together. Supporting images supply only their stated roles. Do not copy their entire scene or pose.\nOUTPUT: one edited image matching the target aspect. Do not add text, guide marks or a global style filter. Re-measure faces and mouths and inspect lettering space after adoption.",
+  "promptHash": "4149f34fab7ac5e230a31d783afc8953148693cae52c2066b4b9cf185c1f4aa9",
+  "references": [
+    {
+      "file": "works/auto-6294ee8a2094/workflow/generation-inputs/01-3-78e7f86d7c0e163f/reference-0.png",
+      "hash": "571e34b40d708f35a83be5b1b9a226515690d56e3abd7af74fcdc26b954b0d40",
+      "original": "works/auto-6294ee8a2094/assets/generated/01-3-571e34b40d708f35.png",
+      "index": 1,
+      "kind": "edit-target",
+      "role": "Base image to edit; requested changes take precedence over preservation."
+    }
+  ],
+  "renderer": "Higgsfield gpt_image_2_6",
+  "model": "gpt_image_2_6",
+  "seed": null
+}

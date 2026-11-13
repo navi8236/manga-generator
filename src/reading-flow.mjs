@@ -1,6 +1,11 @@
 import { mergeNarrativeState } from './story-state.mjs';
 // Diagnostic guides are planning aids, never a claim of visual inspection.
-export function readingFlow(page, balloonBox) {
+export function readingFlow(
+  page,
+  balloonBox,
+  direction = 'right-to-left, top-to-bottom',
+) {
+  const leftToRight = direction.startsWith('left-to-right');
   const panels = page.panels.map((panel) => {
     const steps = panel.dialogue.map((dialogue, index) => {
       const rect = balloonBox(panel, dialogue);
@@ -96,11 +101,13 @@ export function readingFlow(page, balloonBox) {
     version: 3,
     page: page.id,
     status: 'planning-guide-not-reviewed',
-    direction: 'right-to-left, top-to-bottom',
+    direction,
     panels,
     checklist: [
       '番号と誘導線を隠した画像を先に読み、予測した発話順を記録する',
-      '最初のセリフへ上・右から入れるか',
+      leftToRight
+        ? '最初のセリフへ上・左から入れるか'
+        : '最初のセリフへ上・右から入れるか',
       '近い非連続の吹き出しを一組と誤認して返答を飛ばさないか',
       '前の会話のまとまりを読み終えてから次のまとまりへ進めるか',
       '返答へ自然に移り、視線が大きく逆戻りしないか',

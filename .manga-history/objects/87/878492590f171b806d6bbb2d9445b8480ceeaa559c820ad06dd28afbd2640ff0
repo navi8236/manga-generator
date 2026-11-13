@@ -1,0 +1,238 @@
+{
+  "version": 3,
+  "page": "22",
+  "status": "planning-guide-not-reviewed",
+  "direction": "left-to-right, top-to-bottom",
+  "panels": [
+    {
+      "id": "22-1",
+      "rect": [
+        44,
+        27,
+        462,
+        494
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "ravi",
+          "text": "Healthcare isn't just about my appointments.",
+          "rect": [
+            52,
+            35,
+            333,
+            72
+          ],
+          "center": [
+            218.5,
+            71
+          ],
+          "mouth": [
+            199,
+            251
+          ]
+        }
+      ],
+      "faces": {
+        "ravi": {
+          "face": [
+            144,
+            152,
+            112,
+            143
+          ],
+          "anchor": [
+            199,
+            251
+          ]
+        },
+        "partner": {
+          "face": [
+            316,
+            185,
+            110,
+            134
+          ],
+          "anchor": [
+            371,
+            277
+          ]
+        }
+      },
+      "protected": [],
+      "intent": null,
+      "groups": null,
+      "warnings": []
+    },
+    {
+      "id": "22-2",
+      "rect": [
+        518,
+        27,
+        462,
+        494
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "partner",
+          "text": "Each of us has different health needs.",
+          "rect": [
+            526,
+            71,
+            427,
+            46
+          ],
+          "center": [
+            739.5,
+            94
+          ],
+          "mouth": [
+            608,
+            304
+          ]
+        }
+      ],
+      "faces": {
+        "partner": {
+          "face": [
+            518,
+            132,
+            121,
+            389
+          ],
+          "anchor": [
+            608,
+            304
+          ],
+          "kind": "head"
+        }
+      },
+      "protected": [],
+      "intent": null,
+      "groups": null,
+      "warnings": []
+    },
+    {
+      "id": "22-3",
+      "rect": [
+        44,
+        532,
+        936,
+        372
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "label",
+          "text": "STAGING",
+          "rect": [
+            472,
+            540,
+            120,
+            46
+          ],
+          "center": [
+            532,
+            563
+          ],
+          "mouth": null
+        },
+        {
+          "number": 2,
+          "speaker": "narration",
+          "text": "New family and children's wellness capabilities are being developed.",
+          "rect": [
+            664,
+            540,
+            298,
+            98
+          ],
+          "center": [
+            813,
+            589
+          ],
+          "mouth": null
+        }
+      ],
+      "faces": {},
+      "protected": [],
+      "intent": null,
+      "groups": null,
+      "warnings": [
+        {
+          "from": 1,
+          "to": 2,
+          "reason": "左から右へ戻る移動と縦方向の範囲が重なる。段差・余白・人物の配置を目視で検討する。"
+        }
+      ]
+    },
+    {
+      "id": "22-4",
+      "rect": [
+        44,
+        915,
+        936,
+        534
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "label",
+          "text": "WELBUK VISION",
+          "rect": [
+            52,
+            923,
+            191,
+            46
+          ],
+          "center": [
+            147.5,
+            946
+          ],
+          "mouth": null
+        },
+        {
+          "number": 2,
+          "speaker": "narration",
+          "text": "The vision: a more complete way to manage family wellness.",
+          "rect": [
+            496,
+            923,
+            468,
+            72
+          ],
+          "center": [
+            730,
+            959
+          ],
+          "mouth": null
+        }
+      ],
+      "faces": {},
+      "protected": [],
+      "intent": null,
+      "groups": null,
+      "warnings": [
+        {
+          "from": 1,
+          "to": 2,
+          "reason": "左から右へ戻る移動と縦方向の範囲が重なる。段差・余白・人物の配置を目視で検討する。"
+        }
+      ]
+    }
+  ],
+  "checklist": [
+    "番号と誘導線を隠した画像を先に読み、予測した発話順を記録する",
+    "最初のセリフへ上・左から入れるか",
+    "近い非連続の吹き出しを一組と誤認して返答を飛ばさないか",
+    "前の会話のまとまりを読み終えてから次のまとまりへ進めるか",
+    "返答へ自然に移り、視線が大きく逆戻りしないか",
+    "顔の向き・視線・手や小道具の動作と読順がつながるか",
+    "話者への尾が別人物や重要物を横切らないか",
+    "場所・時間・回想の切替と物の移動を直前直後から理解できるか",
+    "最後のセリフ・反応から次のコマへ移れるか",
+    "大きなコマ・余白・情報公開の順がページの感情の狙いに合うか",
+    "話題の境界と段・ページ境界が一致し、不要な読み戻りを誘わないか"
+  ]
+}
