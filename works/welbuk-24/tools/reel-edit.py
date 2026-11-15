@@ -1,12 +1,13 @@
 """Edit the 60-second Welbuk demo reel (1280x720, 24 fps) from animated clips, still panels and cards.
 
-Usage (repository root): python3 -I works/welbuk-24/tools/reel-edit.py [VOICEOVER.wav|mp3]
+Usage (repository root): python3 -I works/welbuk-24/tools/reel-edit.py [VOICEOVER.wav [MUSIC.mp3]]
 
 Segments are listed in SEGMENTS below. Animated shots use the newest clip in reel/clips/ for that
 shot; still shots are slow zooms over a 16:9 crop of the panel (tools/reel-frame.py), so no image
 model is used for them. Captions (the voiceover script, reel/voiceover.txt) are drawn as overlays
 with the comic's pink caption bar. Cards use the real logo file. Without a voiceover the reel has a
-silent audio track; with one, it is mixed in from the start. Writes reel/welbuk-demo-reel.mp4 and
+silent audio track; with one, it starts after the cover; with music too, the music is ducked
+under the voice and the mix is loudness-normalised. Writes reel/welbuk-demo-reel.mp4 and
 reel/edit.json (segments, sources and their SHA-256).
 """
 import glob
@@ -29,25 +30,30 @@ F_BOLD = '/usr/share/fonts/opentype/inter/Inter-Bold.otf'
 F_REG = '/usr/share/fonts/opentype/inter/Inter-Regular.otf'
 LOGO = f'{W}/source/brand/welbuk-logo-pink-transparent.png'
 
-# kind: clip (shot id) | still (page, panel, focus) | card (name) | cover
+# kind: clip (shot id) | still (page, panel) | card (name) | cover. Durations are cut points
+# measured on the voiceover (reel/audio/vo-*.wav): each cut falls in a pause between phrases, and
+# the voice starts VO_DELAY seconds in, at the end of the cover. fade: seconds of fade at each end.
+VO_DELAY = 2.5
 SEGMENTS = [
     {'kind': 'cover', 'dur': 2.5},
-    {'kind': 'clip', 'shot': 's01', 'dur': 5.0, 'cap': 'Every clinic knows this feeling. Appointments, files, follow-ups… and the day never really ends.'},
-    {'kind': 'clip', 'shot': 's02', 'dur': 5.0, 'cap': "Then Dr. Ananya's clinic found a better way. Welbuk."},
-    {'kind': 'clip', 'shot': 's03', 'dur': 4.5, 'cap': 'Patients book online, or check in with a QR code.'},
-    {'kind': 'still', 'page': '04', 'panel': 2, 'dur': 3.5, 'cap': 'Walk-ins and emergencies find their place in the queue.'},
-    {'kind': 'still', 'page': '06', 'panel': 2, 'dur': 3.0, 'cap': 'Nurses record vitals.'},
-    {'kind': 'clip', 'shot': 's06', 'dur': 4.5, 'cap': 'Doctors see the full history before the patient sits down,'},
-    {'kind': 'still', 'page': '08', 'panel': 3, 'dur': 4.0, 'cap': 'and can draft notes by voice, with consent, reviewing every word.'},
-    {'kind': 'still', 'page': '14', 'panel': 2, 'dur': 2.0, 'cap': 'Prescriptions, pharmacy stock,'},
-    {'kind': 'still', 'page': '15', 'panel': 3, 'dur': 2.0, 'cap': 'lab orders,'},
-    {'kind': 'still', 'page': '17', 'panel': 3, 'dur': 2.0, 'cap': 'billing'},
-    {'kind': 'still', 'page': '18', 'panel': 2, 'dur': 2.0, 'cap': 'and day-end accounts: all connected.'},
-    {'kind': 'still', 'page': '21', 'panel': 3, 'dur': 3.0, 'cap': 'And care continues at home, with reminders'},
-    {'kind': 'clip', 'shot': 's13', 'dur': 4.5, 'cap': 'and records for the whole family.'},
-    {'kind': 'card', 'name': 'products', 'dur': 4.0},
-    {'kind': 'clip', 'shot': 's14', 'dur': 5.0, 'cap': 'Technology supports the work. People deliver the care.'},
-    {'kind': 'card', 'name': 'end', 'dur': 4.5},
+    {'kind': 'still', 'page': '01', 'panel': 2, 'dur': 5.0, 'cap': 'Every clinic knows this feeling. Appointments, files,'},
+    {'kind': 'clip', 'shot': 's01', 'dur': 4.32, 'cap': 'follow-ups… and the day never really ends.'},
+    {'kind': 'clip', 'shot': 's02', 'dur': 4.54, 'cap': "Then Dr. Ananya's clinic found a better way. Welbuk."},
+    {'kind': 'clip', 'shot': 's03', 'dur': 3.64, 'cap': 'Patients book online, or check in with a QR code.'},
+    {'kind': 'still', 'page': '04', 'panel': 2, 'dur': 3.41, 'cap': 'Walk-ins and emergencies find their place in the queue.'},
+    {'kind': 'still', 'page': '06', 'panel': 2, 'dur': 1.94, 'cap': 'Nurses record vitals.'},
+    {'kind': 'clip', 'shot': 's06', 'dur': 3.36, 'cap': 'Doctors see the full history before the patient sits down,'},
+    {'kind': 'still', 'page': '08', 'panel': 1, 'dur': 2.13, 'cap': 'and can draft notes by voice,'},
+    {'kind': 'still', 'page': '08', 'panel': 3, 'dur': 3.20, 'cap': 'with consent, reviewing every word.'},
+    {'kind': 'still', 'page': '14', 'panel': 2, 'dur': 2.16, 'fade': 0.08, 'cap': 'Prescriptions, pharmacy stock,'},
+    {'kind': 'still', 'page': '15', 'panel': 3, 'dur': 0.95, 'fade': 0, 'cap': 'lab orders,'},
+    {'kind': 'still', 'page': '17', 'panel': 3, 'dur': 1.78, 'fade': 0, 'cap': 'billing and day-end accounts:'},
+    {'kind': 'still', 'page': '18', 'panel': 2, 'dur': 1.51, 'fade': 0.08, 'cap': 'all connected.'},
+    {'kind': 'still', 'page': '21', 'panel': 3, 'dur': 2.24, 'cap': 'And care continues at home,'},
+    {'kind': 'clip', 'shot': 's13', 'dur': 3.11, 'cap': 'with reminders and records for the whole family.'},
+    {'kind': 'card', 'name': 'products', 'dur': 4.78},
+    {'kind': 'clip', 'shot': 's14', 'dur': 4.87, 'cap': 'Technology supports the work. People deliver the care.'},
+    {'kind': 'card', 'name': 'end', 'dur': 5.56},
 ]
 
 
@@ -160,7 +166,8 @@ for i, s in enumerate(SEGMENTS):
         inputs += ['-loop', '1', '-i', cap]
         fc = base.replace('[v]', '[b]') + f';[1:v]format=rgba[c];[b][c]overlay=0:0:shortest=1,format=yuv420p[v]'
     # short fades between segments
-    fc += f';[v]fade=t=in:st=0:d=0.25,fade=t=out:st={s["dur"] - 0.25}:d=0.25[o]'
+    fd = s.get('fade', 0.2)
+    fc += f';[v]fade=t=in:st=0:d={fd},fade=t=out:st={s["dur"] - fd}:d={fd}[o]' if fd else ';[v]null[o]'
     run([*inputs, '-filter_complex', fc, '-map', '[o]', '-frames:v', str(n), '-r', str(FPS), '-c:v', 'libx264', '-preset', 'medium', '-crf', '18', '-an', out])
     parts.append(out)
     record.append({**s, 'source': os.path.relpath(src), 'sourceSha256': hashlib.sha256(open(src, 'rb').read()).hexdigest()})
@@ -172,11 +179,24 @@ run(['-f', 'concat', '-safe', '0', '-i', lst, '-c', 'copy', video])
 total = sum(s['dur'] for s in SEGMENTS)
 out = f'{R}/welbuk-demo-reel.mp4'
 vo = sys.argv[1] if len(sys.argv) > 1 else None
-if vo:
-    run(['-i', video, '-i', vo, '-filter_complex', f'[1:a]adelay=2500|2500,apad,atrim=0:{total}[a]', '-map', '0:v', '-map', '[a]',
+music = sys.argv[2] if len(sys.argv) > 2 else None
+if vo and music:
+    # Music bed ducked under the voice (sidechain), voice delayed to start after the cover, then
+    # loudness-normalised to about -14 LUFS for web playback.
+    d = int(VO_DELAY * 1000)
+    fc = (f'[1:a]aresample=48000,aformat=channel_layouts=stereo,adelay={d}|{d},apad,atrim=0:{total},asplit[v1][v2];'
+          f'[2:a]aresample=48000,aformat=channel_layouts=stereo,atrim=0:{total},volume=0.55,'
+          f'afade=t=in:st=0:d=0.6,afade=t=out:st={total - 3}:d=3[m];'
+          f'[m][v1]sidechaincompress=threshold=0.02:ratio=10:attack=40:release=600:makeup=1[md];'
+          f'[md][v2]amix=inputs=2:duration=first:normalize=0,loudnorm=I=-14:TP=-1.5:LRA=11[a]')
+    run(['-i', video, '-i', vo, '-i', music, '-filter_complex', fc, '-map', '0:v', '-map', '[a]',
+         '-c:v', 'copy', '-c:a', 'aac', '-b:a', '192k', '-ar', '48000', '-shortest', out])
+elif vo:
+    run(['-i', video, '-i', vo, '-filter_complex', f'[1:a]adelay={int(VO_DELAY*1000)}|{int(VO_DELAY*1000)},apad,atrim=0:{total}[a]', '-map', '0:v', '-map', '[a]',
          '-c:v', 'copy', '-c:a', 'aac', '-b:a', '192k', '-shortest', out])
 else:
     run(['-i', video, '-f', 'lavfi', '-i', 'anullsrc=r=48000:cl=stereo', '-map', '0:v', '-map', '1:a', '-c:v', 'copy', '-c:a', 'aac', '-shortest', out])
-json.dump({'output': os.path.relpath(out), 'durationSeconds': total, 'voiceover': vo, 'segments': record,
+audio = {k: {'file': os.path.relpath(f), 'sha256': hashlib.sha256(open(f, 'rb').read()).hexdigest()} for k, f in (('voiceover', vo), ('music', music)) if f}
+json.dump({'output': os.path.relpath(out), 'durationSeconds': total, 'audio': audio, 'voDelaySeconds': VO_DELAY, 'segments': record,
            'sha256': hashlib.sha256(open(out, 'rb').read()).hexdigest()}, open(f'{R}/edit.json', 'w'), indent=1)
 print(out, f'{total:.1f}s')
