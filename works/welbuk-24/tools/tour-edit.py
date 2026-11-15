@@ -36,6 +36,7 @@ TAIL = 3.6
 TOTAL = round(VO['durationSeconds'] + LEAD + TAIL - 0.75, 2)
 
 LAP, TAB, PHO = 'laptop', 'tablet', 'phone'
+DEVICES['laptop'].update(scale=0.84, top=54)  # leave room for the chapter label
 # chapter -> visuals. bg: clip shot id | ('page', page, panel). ui: device, in (s after chapter
 # start), screens [(screen, start, end, speed)]. label shown top left.
 CH = {
@@ -115,15 +116,17 @@ def trio(dur, out, beats):
     os.makedirs(fdir, exist_ok=True)
     scr = [('laptop', 'dashboard', 2.4), ('tablet', 'careteam', 2.9), ('phone', 'healthrec', 2.9)]
     names = ['Welbuk Practice', 'Welbuk Care', 'Welbuk Health']
-    sc = {'laptop': 0.5, 'tablet': 0.45, 'phone': 0.5}
-    xs = [300, 680, 1050]
+    sc = {'laptop': 0.34, 'tablet': 0.33, 'phone': 0.40}
+    xs = [245, 655, 1045]
     for i in range(round(dur * FPS)):
         t = i / FPS
-        im = Image.new('RGB', (SW, SH), (255, 250, 252)).convert('RGBA')
-        d = ImageDraw.Draw(im)
+        im = Image.new('RGB', (SW, SH), (255, 252, 253))
+        d = ImageDraw.Draw(im, 'RGBA')
         for r in range(6):
-            d.ellipse((-300 + r * 40, 420 + r * 30, 500 - r * 40, 1100 - r * 30), fill=(253, 0, 106, 7))
-            d.ellipse((900 + r * 40, -380 + r * 30, 1700 - r * 40, 300 - r * 30), fill=(253, 0, 106, 7))
+            d.ellipse((-300 + r * 40, 420 + r * 30, 500 - r * 40, 1100 - r * 30), fill=(253, 0, 106, 6))
+            d.ellipse((900 + r * 40, -380 + r * 30, 1700 - r * 40, 300 - r * 30), fill=(253, 0, 106, 6))
+        im = im.convert('RGBA')
+        d = ImageDraw.Draw(im)
         # logo: centred and large, then moves up as the products arrive
         up = ease(min(1, max(0, (t - beats[0] + 0.6) / 0.8)))
         a = ease_out(t / 0.6)
@@ -143,14 +146,14 @@ def trio(dur, out, beats):
             if p <= 0:
                 continue
             DEVICES[kind]['scale'], keep = sc[kind], DEVICES[kind]['scale']
-            dev = device(kind, ui_frame(s, min(tl, (t - beats[j]) * 0.9)))
+            dev = device(kind, ui_frame(s, min(tl, (t - beats[j]) * 0.9 + (1.5 if kind == 'phone' else 0))))
             DEVICES[kind]['scale'] = keep
             dev.putalpha(dev.getchannel('A').point(lambda v: int(v * p)))
-            im.alpha_composite(dev, (int(xs[j] - dev.width / 2), int(560 - dev.height + 40 * (1 - p))))
+            im.alpha_composite(dev, (int(xs[j] - dev.width / 2), int(520 - dev.height + 40 * (1 - p))))
             nf = ImageFont.truetype(F_BOLD, 28)
             tw = d.textlength(names[j], font=nf)
             lay = Image.new('RGBA', (SW, SH), (0, 0, 0, 0))
-            ImageDraw.Draw(lay).text((xs[j] - tw / 2, 585), names[j], font=nf, fill=PINK + (int(255 * p),))
+            ImageDraw.Draw(lay).text((xs[j] - tw / 2, 535), names[j], font=nf, fill=PINK + (int(255 * p),))
             im.alpha_composite(lay)
         im.convert('RGB').save(f'{fdir}/{i:04d}.png')
     frames_to_mp4(fdir, round(dur * FPS), out)
@@ -170,7 +173,7 @@ def add_label(mp4, text):
     lab = f'{TMP}/label-{abs(hash(text))}.png'
     li = label_img(text)
     canvas = Image.new('RGBA', (SW, SH), (0, 0, 0, 0))
-    canvas.alpha_composite(li, (22, 18))
+    canvas.alpha_composite(li, (22, 10))
     canvas.save(lab)
     tmp = mp4[:-4] + '-l.mp4'
     run(['-i', mp4, '-loop', '1', '-i', lab, '-filter_complex', '[1:v]format=rgba,fade=t=in:st=0.15:d=0.4:alpha=1[l];'
