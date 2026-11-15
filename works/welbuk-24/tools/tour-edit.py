@@ -192,8 +192,11 @@ starts.append(TOTAL)
 XF = 0.35  # cross-fade between chapters
 
 # ---- render chapters ----
+import sys  # noqa: E402
+
+ONLY_CAPS = '--captions-only' in sys.argv and os.path.exists(f'{TMP}/video.mp4')
 parts, record = [], []
-for i, n in enumerate(names):
+for i, n in enumerate([] if ONLY_CAPS else names):
     c = CH[n]
     dur = starts[i + 1] - starts[i]
     full = dur + (XF if i < len(names) - 1 else 0)
@@ -242,32 +245,50 @@ for i in range(1, len(parts)):
     fc.append(f'{last}[{i}:v]xfade=transition=fade:duration={XF}:offset={starts[i]:.3f}[x{i}]')
     last = f'[x{i}]'
 video = f'{TMP}/video.mp4'
-run([*inputs, '-filter_complex', ';'.join(fc), '-map', last, '-t', f'{TOTAL}', '-c:v', 'libx264', '-crf', '17',
-     '-preset', 'medium', '-pix_fmt', 'yuv420p', video])
+if ONLY_CAPS:
+    record = json.load(open(f'{TOUR}/edit.json'))['chapters']
+else:
+    run([*inputs, '-filter_complex', ';'.join(fc), '-map', last, '-t', f'{TOTAL}', '-c:v', 'libx264', '-crf', '17',
+         '-preset', 'medium', '-pix_fmt', 'yuv420p', video])
 
 # ---- captions: script sentences timed by word count against the transcription chunks ----
 script = open(f'{TOUR}/script.txt').read().split('\n')
 sentences = [s.strip() for para in script for s in re.split(r'(?<=[.!?])\s+', para) if s.strip()]
-chunks = []
+import difflib  # noqa: E402
+
+norm = lambda w: re.sub(r'[^a-z0-9]', '', w.lower()).replace('wellbook', 'welbuk')  # noqa: E731
+asr_words, asr_t = [], []
 for line in open(f'{TOUR}/audio/vo-tight-asr.txt'):
     m = re.match(r'\s*([\d.]+)-\s*([\d.]+)\s+(.*)', line)
-    if m and m.group(3).strip() and not m.group(3).startswith('['):
-        chunks.append((float(m.group(1)), float(m.group(2)), len(m.group(3).split())))
-# word-time line: each chunk's words spread evenly over its time
-wt = []
-for a, b, nw in chunks:
-    for j in range(nw):
-        wt.append(a + (b - a) * j / max(1, nw))
-wt.append(chunks[-1][1])
+    if not m or m.group(3).strip().startswith('['):
+        continue
+    a, b, ws = float(m.group(1)), float(m.group(2)), m.group(3).split()
+    for j, w in enumerate(ws):
+        asr_words.append(norm(w))
+        asr_t.append(a + (b - a) * j / max(1, len(ws)))
+script_words = [norm(w) for s_ in sentences for w in s_.split()]
+# map script word index -> time via matching blocks, linear between anchors
+anchors = [(0, asr_t[0])]
+for blk in difflib.SequenceMatcher(None, script_words, asr_words, autojunk=False).get_matching_blocks():
+    for k in range(blk.size):
+        anchors.append((blk.a + k, asr_t[blk.b + k]))
+anchors.append((len(script_words), float(VO['durationSeconds'])))
+anchors.sort()
+
+
+def t_of(i):
+    for (i0, t0), (i1, t1) in zip(anchors, anchors[1:]):
+        if i0 <= i <= i1:
+            return t0 if i1 == i0 else t0 + (t1 - t0) * (i - i0) / (i1 - i0)
+    return anchors[-1][1]
+
+
 caps, wi = [], 0
-total_words = sum(len(s.split()) for s in sentences)
-scale = (len(wt) - 1) / total_words
-for s in sentences:
-    n = len(s.split())
-    a = wt[min(len(wt) - 1, round(wi * scale))]
+for s_ in sentences:
+    n = len(s_.split())
+    caps.append((t_of(wi) + LEAD - 0.1, t_of(wi + n) + LEAD - 0.05, s_))
     wi += n
-    b = wt[min(len(wt) - 1, round(wi * scale))]
-    caps.append((a + LEAD, b + LEAD - 0.05, s))
+caps = [(a, min(b, caps[j + 1][0] - 0.02) if j + 1 < len(caps) else b, s_) for j, (a, b, s_) in enumerate(caps)]
 cin, cfc, last = ['-i', video], [], '[0:v]'
 for j, (a, b, text) in enumerate(caps):
     path = f'{TMP}/cap{j:02d}.png'
