@@ -205,32 +205,34 @@ def card(name, dur, beats, out):
             lg = logo(130)
             lg.putalpha(lg.getchannel('A').point(lambda v: int(v * a)))
             im.paste(lg, (575, 40 + int(20 * (1 - a))), lg)
-            items = [('Welbuk Practice', 'Clinic and hospital operations'),
-                     ('Welbuk Care', 'Role-based tools for healthcare staff'),
-                     ('Welbuk Health', 'Connected patient and family care')]
-            for j, (ti, sub) in enumerate(items):
+            # each product appears on its own device as it is named: Practice on a PC, Care on a
+            # tablet, Health on a phone (illustrative screens from reel/ui)
+            items = [('Welbuk Practice', 'Clinic and hospital operations', 'laptop', 'dashboard', 0.34, 245),
+                     ('Welbuk Care', 'Role-based tools for healthcare staff', 'tablet', 'careteam', 0.33, 655),
+                     ('Welbuk Health', 'Connected patient and family care', 'phone', 'healthrec', 0.40, 1045)]
+            f1, f2 = ImageFont.truetype(F_BOLD, 32), ImageFont.truetype(F_REG, 21)
+            im = im.convert('RGBA')
+            for j, (ti, sub, kind, scr_name, scale, cx) in enumerate(items):
                 p = ease_out((t - beats[j]) / 0.45)
                 if p <= 0:
                     continue
-                x = 70 + j * 390
-                yo = int(60 * (1 - p))
+                keep = DEVICES[kind]['scale']
+                DEVICES[kind]['scale'] = scale
+                dev = device(kind, ui_frame(scr_name, max(0, t - beats[j]) * 0.9 + (1.5 if kind == 'phone' else 0)))
+                DEVICES[kind]['scale'] = keep
+                dev.putalpha(dev.getchannel('A').point(lambda v: int(v * p)))
+                yo = int(50 * (1 - p))
+                im.alpha_composite(dev, (int(cx - dev.width / 2), int(500 - dev.height + yo)))
+                lay = Image.new('RGBA', (SW, SH), (0, 0, 0, 0))
+                ld = ImageDraw.Draw(lay)
                 al = int(255 * p)
-                d.rounded_rectangle((x, 230 + yo, x + 360, 520 + yo), 22, outline=PINK + (al,), width=4,
-                                    fill=(255, 244, 249, al))
-                f1, f2 = ImageFont.truetype(F_BOLD, 36), ImageFont.truetype(F_REG, 24)
-                tw = d.textlength(ti, font=f1)
-                d.text((x + 180 - tw / 2, 310 + yo), ti, font=f1, fill=PINK + (al,))
-                words, lines, cur = sub.split(), [], ''
-                for w in words:
-                    s = (cur + ' ' + w).strip()
-                    if cur and d.textlength(s, font=f2) > 300:
-                        lines.append(cur)
-                        cur = w
-                    else:
-                        cur = s
-                for k, line in enumerate(lines + [cur]):
-                    lw = d.textlength(line, font=f2)
-                    d.text((x + 180 - lw / 2, 380 + yo + k * 34), line, font=f2, fill=(50, 45, 60, al))
+                ld.text((cx - ld.textlength(ti, font=f1) / 2, 520 + yo), ti, font=f1, fill=PINK + (al,))
+                ld.text((cx - ld.textlength(sub, font=f2) / 2, 565 + yo), sub, font=f2, fill=(70, 64, 80, al))
+                im.alpha_composite(lay)
+            tg = tag_img()
+            im.alpha_composite(tg, (SW - tg.width - 18, 16))
+            im = im.convert('RGB')
+            d = ImageDraw.Draw(im, 'RGBA')
         else:
             p = ease_out((t - beats[0] + 0.35) / 0.6)
             sz = int(260 * (0.6 + 0.4 * p))
@@ -287,8 +289,8 @@ def device(kind, scr):
     im = Image.new('RGBA', (sw + 2 * b + (80 if kind == 'laptop' else 0), sh + 2 * b + base + 30), (0, 0, 0, 0))
     ox = 40 if kind == 'laptop' else 0
     sh_l = Image.new('RGBA', im.size, (0, 0, 0, 0))
-    ImageDraw.Draw(sh_l).rounded_rectangle((ox + 10, 24, ox + sw + 2 * b - 10, sh + 2 * b + base + 14), d['rad'], fill=(20, 10, 30, 110))
-    im = Image.alpha_composite(im, sh_l.filter(ImageFilter.GaussianBlur(14)))
+    ImageDraw.Draw(sh_l).rounded_rectangle((ox + 16, 30, ox + sw + 2 * b - 16, sh + 2 * b + base + 4), d['rad'], fill=(20, 10, 30, 60))
+    im = Image.alpha_composite(im, sh_l.filter(ImageFilter.GaussianBlur(10)))
     dr = ImageDraw.Draw(im)
     dr.rounded_rectangle((ox, 0, ox + sw + 2 * b, sh + 2 * b), d['rad'], fill=(28, 26, 34, 255))
     if kind == 'laptop':
