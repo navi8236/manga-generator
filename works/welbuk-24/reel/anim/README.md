@@ -28,7 +28,7 @@ Each product beat shows the software: the scene blurs back and a laptop, tablet 
 with an animated Welbuk screen (Practice on desktop, Care on the nurse's tablet, Health on the
 patient's phone). The screens are illustrative, built in `../ui/screens.html` with fictional data
 and labelled "Illustrative screens · fictional data" on screen, as the storyboard requires when
-real product UI references are not supplied. Render them before editing:
+real product UI references are not supplied. The rendered frames are committed so the edit rebuilds as is; re-render after changing the HTML:
 
     node works/welbuk-24/tools/render-ui.cjs
 
