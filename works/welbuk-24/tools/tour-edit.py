@@ -134,7 +134,9 @@ def trio(dur, out, beats):
         tf = ImageFont.truetype(F_BOLD, 40)
         if up < 1:
             ta = Image.new('RGBA', (SW, SH), (0, 0, 0, 0))
-            text_c(ImageDraw.Draw(ta), 340, 'One connected platform for clinics and hospitals', tf, INK + (int(255 * a * (1 - up)),))
+            text_c(ImageDraw.Draw(ta), 335, 'The Clinic-First Operating System', tf, INK + (int(255 * a * (1 - up)),))
+            text_c(ImageDraw.Draw(ta), 395, 'One record. One identity. One connected ecosystem.', ImageFont.truetype(F_SEMI, 26),
+                   PINK + (int(255 * a * (1 - up)),))
             im.alpha_composite(ta)
         for j, (kind, s, tl) in enumerate(scr):
             p = ease_out((t - beats[j]) / 0.5)
@@ -204,7 +206,7 @@ for i, n in enumerate(names):
         clip_part = P['close'][0] + 4.9 - starts[i]
         a_mp4, b_mp4 = f'{TMP}/close-a.mp4', f'{TMP}/close-b.mp4'
         src = clip_seg('a10', clip_part + 0.4, a_mp4)
-        card('end', full - clip_part, [0.25, 0.5], b_mp4)
+        card('end', full - clip_part, [0.25, 0.45], b_mp4)
         run(['-i', a_mp4, '-i', b_mp4, '-filter_complex', f'[0:v][1:v]xfade=transition=fade:duration=0.4:offset={clip_part}[o]',
              '-map', '[o]', '-c:v', 'libx264', '-crf', '17', '-preset', 'medium', out])
     else:

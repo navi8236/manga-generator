@@ -208,8 +208,8 @@ def card(name, dur, beats, out):
             # each product appears on its own device as it is named: Practice on a PC, Care on a
             # tablet, Health on a phone (illustrative screens from reel/ui)
             items = [('Welbuk Practice', 'Clinic and hospital operations', 'laptop', 'dashboard', 0.34, 245),
-                     ('Welbuk Care', 'Role-based tools for healthcare staff', 'tablet', 'careteam', 0.33, 655),
-                     ('Welbuk Health', 'Connected patient and family care', 'phone', 'healthrec', 0.40, 1045)]
+                     ('Welbuk Care', 'Tablet-based, role-based work screens for staff', 'tablet', 'careteam', 0.33, 655),
+                     ('Welbuk Health', 'Patient and family care app', 'phone', 'healthrec', 0.40, 1045)]
             f1, f2 = ImageFont.truetype(F_BOLD, 32), ImageFont.truetype(F_REG, 21)
             im = im.convert('RGBA')
             for j, (ti, sub, kind, scr_name, scale, cx) in enumerate(items):
@@ -235,21 +235,49 @@ def card(name, dur, beats, out):
             d = ImageDraw.Draw(im, 'RGBA')
         else:
             p = ease_out((t - beats[0] + 0.35) / 0.6)
-            sz = int(260 * (0.6 + 0.4 * p))
+            sz = int(150 * (0.6 + 0.4 * p))
             if p > 0:
                 lg = logo(sz)
                 lg.putalpha(lg.getchannel('A').point(lambda v: int(v * min(1, p * 1.5))))
-                im.paste(lg, ((SW - sz) // 2, 190 - sz // 2), lg)
-            for k, (s, f, y, c) in enumerate([
-                ('Building a Connected Healthcare Ecosystem', ImageFont.truetype(F_BOLD, 46), 370, INK),
-                ('Better workflows. Better coordination. More time for care.', ImageFont.truetype(F_REG, 30), 445, (80, 75, 90)),
-                ('www.welbuk.com', ImageFont.truetype(F_SEMI, 32), 560, PINK),
-            ]):
-                q = ease_out((t - beats[1] - k * 0.45) / 0.5)
+                im.paste(lg, ((SW - sz) // 2, 105 - sz // 2), lg)
+            rows = [
+                ('The Clinic-First Operating System', ImageFont.truetype(F_BOLD, 44), 185, INK),
+                ('Doctors care for patients. Welbuk cares for doctors.', ImageFont.truetype(F_SEMI, 27), 248, PINK),
+            ]
+            for k, (s_, f, y, c) in enumerate(rows):
+                q = ease_out((t - beats[1] - k * 0.35) / 0.5)
                 if q <= 0:
                     continue
                 layer = Image.new('RGBA', (SW, SH), (0, 0, 0, 0))
-                text_c(ImageDraw.Draw(layer), y + int(18 * (1 - q)), s, f, c + (int(255 * q),))
+                text_c(ImageDraw.Draw(layer), y + int(16 * (1 - q)), s_, f, c + (int(255 * q),))
+                im.paste(layer, (0, 0), layer)
+            bens = [('Save costs', 'Less paperwork, fewer errors'), ('Make staff life easier', 'Automate routine work'),
+                    ('Deliver better care', 'Faster, more accurate service')]
+            fb, fs = ImageFont.truetype(F_BOLD, 24), ImageFont.truetype(F_REG, 19)
+            for j, (h, sub) in enumerate(bens):
+                q = ease_out((t - beats[1] - 0.8 - j * 0.2) / 0.45)
+                if q <= 0:
+                    continue
+                layer = Image.new('RGBA', (SW, SH), (0, 0, 0, 0))
+                ld = ImageDraw.Draw(layer)
+                x = 130 + j * 350
+                y = 320 + int(20 * (1 - q))
+                ld.rounded_rectangle((x, y, x + 320, y + 92), 18, fill=(255, 240, 246, int(255 * q)), outline=PINK + (int(200 * q),), width=2)
+                ld.text((x + 160 - ld.textlength(h, font=fb) / 2, y + 18), h, font=fb, fill=PINK + (int(255 * q),))
+                ld.text((x + 160 - ld.textlength(sub, font=fs) / 2, y + 54), sub, font=fs, fill=(80, 75, 90, int(255 * q)))
+                im.paste(layer, (0, 0), layer)
+            q = ease_out((t - beats[1] - 1.6) / 0.5)
+            if q > 0:
+                layer = Image.new('RGBA', (SW, SH), (0, 0, 0, 0))
+                ld = ImageDraw.Draw(layer)
+                fcta = ImageFont.truetype(F_BOLD, 28)
+                cta = 'Book a free demo  ·  www.welbuk.com'
+                w = ld.textlength(cta, font=fcta) + 60
+                ld.rounded_rectangle(((SW - w) / 2, 460, (SW + w) / 2, 516), 28, fill=PINK + (int(255 * q),))
+                ld.text(((SW - w) / 2 + 30, 471), cta, font=fcta, fill=(255, 255, 255, int(255 * q)))
+                text_c(ld, 545, 'support@welbuk.com', ImageFont.truetype(F_SEMI, 22), (80, 75, 90, int(255 * q)))
+                text_c(ld, 600, 'Built with security and privacy in mind  ·  Powered by Codagam', ImageFont.truetype(F_REG, 19),
+                       (110, 104, 120, int(255 * q)))
                 im.paste(layer, (0, 0), layer)
         fade_out = name == 'end' and t > dur - 0.6
         if fade_out:

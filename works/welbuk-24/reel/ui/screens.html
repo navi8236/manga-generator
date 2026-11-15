@@ -97,7 +97,7 @@ R.vitals=t=>{const f=[['Blood pressure','122/80','mmHg',.25],['Pulse','76','bpm'
  <div class="btn" style="${t>1.45?'background:var(--ok)':''}">${t>1.45?'✓ Saved · Dr. Ananya notified':'Save vitals'}</div></div></div>`};
 
 R.emr=t=>{const sc=k(t,1.4,.9)*0;return `<div class="app">${side(2)}<div class="main">
- <div class="top"><div style="display:flex;gap:14px;align-items:center"><span class="av" style="width:54px;height:54px;font-size:19px">RM</span><div><div class="h1" style="font-size:26px">Ravi Menon</div><div class="sub">34 · M · Patient since 2024</div></div></div><span class="pill p-red" style="opacity:${k(t,.2)}">⚠ Allergy: Penicillin</span></div>
+ <div class="top"><div style="display:flex;gap:14px;align-items:center"><span class="av" style="width:54px;height:54px;font-size:19px">RM</span><div><div class="h1" style="font-size:26px">Ravi Menon</div><div class="sub">34 · M · Patient since 2024</div></div></div><div style="display:flex;gap:8px"><span class="pill p-ok" style="opacity:${k(t,.1)}">✓ ABHA linked</span><span class="pill p-red" style="opacity:${k(t,.2)}">⚠ Allergy: Penicillin</span></div></div>
  <div style="display:grid;grid-template-columns:1.1fr 1fr;gap:14px;flex:1">
  <div class="card"><div class="lbl">Visit history</div>${[['12 Oct','Neck pain · physiotherapy advised'],['03 Aug','Viral fever · recovered'],['21 May','Annual check-up · normal']].map((r,i)=>`<div class="row" style="opacity:${k(t,.35+i*.15)}"><span class="t" style="width:72px">${r[0]}</span><span class="grow">${r[1]}</span></div>`).join('')}</div>
  <div style="display:flex;flex-direction:column;gap:14px">
@@ -172,8 +172,8 @@ R.consent=t=>{const c1=t>.9,c2=t>1.3,done=t>2.0;
  if(t>2.0) return R.booking(2.3+(t-2.0));
  return `<div class="phone">${status}
  <div style="display:flex;align-items:center;gap:10px"><img src="${LOGO}" style="width:34px"><b style="font-size:18px">Registration</b></div>
- <div class="lbl">Scanned at Ananya Clinic</div>
- ${[['Full name','Ravi Menon'],['Mobile','+91 98••• ••210'],['Date of birth','12 Mar 1991']].map(([kk,v],i)=>`<div class="field" style="padding:8px 12px"><div class="k">${kk}</div><div style="font-size:18px;font-weight:600">${typed(v,t,.1+i*.25,30)}</div></div>`).join('')}
+ <div style="display:flex;justify-content:space-between;align-items:center"><span class="lbl">Scanned at clinic</span><span class="pill p-ok" style="font-size:12px;white-space:nowrap;opacity:${k(t,.8)}">✓ ABHA linked</span></div>
+ ${[['Full name','Ravi Menon'],['Mobile','+91 98••• ••210'],['ABHA number','91-4021-••••-7788']].map(([kk,v],i)=>`<div class="field" style="padding:8px 12px"><div class="k">${kk}</div><div style="font-size:18px;font-weight:600">${typed(v,t,.1+i*.25,30)}</div></div>`).join('')}
  <div class="card" style="padding:12px 14px"><div class="lbl">Consent</div>
  ${[['I consent to treatment and record keeping',c1],['Share my records with my treating doctors',c2]].map(([l,on])=>`<div style="display:flex;gap:10px;align-items:center;margin-top:10px;font-size:15px"><span style="width:24px;height:24px;border-radius:7px;flex:none;display:flex;align-items:center;justify-content:center;color:#fff;font-size:15px;background:${on?'var(--pink)':'#fff'};box-shadow:inset 0 0 0 2px ${on?'var(--pink)':'#D5CDD9'}">${on?'✓':''}</span>${l}</div>`).join('')}</div>
  <div class="btn" style="margin-top:auto">Check in</div>${tapAt(46,396,t,.8)}${tapAt(46,444,t,1.2)}${tapAt(180,716,t,1.7)}</div>`};
@@ -181,7 +181,7 @@ R.consent=t=>{const c1=t>.9,c2=t>1.3,done=t>2.0;
 R.careteam=t=>{const notes=[['Vitals recorded','A-07 Ravi Menon · by Nurse Asha',.5,'p-ok'],['Lab result ready','CBC · Priya Sharma',1.3,'p-pink'],['Patient checked in','A-08 Anita Kapoor',2.1,'p-grey']];
  return `<div class="app"><div class="main" style="padding:20px 24px">
  <div class="top"><div><div class="h1" style="font-size:26px">Consultation queue</div><div class="sub">Welbuk Care · Dr. Ananya</div></div>
- <div style="display:flex;gap:6px">${['Doctor','Nurse','Front desk'].map((r,i)=>`<span class="pill ${i===0?'p-pink':'p-grey'}">${r}</span>`).join('')}</div></div>
+ <div style="display:flex;gap:6px">${['Doctor','Nurse','Reception','Pharmacy','Lab'].map((r,i)=>`<span class="pill ${i===0?'p-pink':'p-grey'}" style="font-size:13px">${r}</span>`).join('')}</div></div>
  <div style="display:grid;grid-template-columns:1.2fr 1fr;gap:14px;flex:1">
  <div class="card">${[['A-05','Priya Sharma','In consultation','p-pink'],['A-06','Anita Kapoor','Vitals done','p-ok'],['A-07','Ravi Menon','Vitals done','p-ok'],['W-02','Mohan Das','Waiting','p-warn']].map(r=>`<div class="row" style="font-size:16px;padding:9px 2px"><b style="width:52px">${r[0]}</b><span class="grow">${r[1]}</span><span class="pill ${r[3]}" style="font-size:13px">${r[2]}</span></div>`).join('')}</div>
  <div style="display:flex;flex-direction:column;gap:10px"><div class="lbl">Notifications</div>${notes.map(([h,b,a,c])=>`<div class="card" style="padding:10px 12px;opacity:${k(t,a)};transform:translateX(${(1-k(t,a))*40}px)"><span class="pill ${c}" style="font-size:12px">${h}</span><div style="font-size:14px;margin-top:5px;color:var(--mut)">${b}</div></div>`).join('')}</div>
