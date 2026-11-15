@@ -138,6 +138,17 @@
    "panel": 1,
    "dive": 1.1,
    "dur": 4.54,
+   "ui": {
+    "device": "laptop",
+    "in": 2.3,
+    "screens": [
+     [
+      "dashboard",
+      2.3,
+      null
+     ]
+    ]
+   },
    "tin": [
     "slideleft",
     0.3
@@ -150,6 +161,17 @@
    "kind": "clip",
    "shot": "a03",
    "dur": 3.64,
+   "ui": {
+    "device": "phone",
+    "in": 1.0,
+    "screens": [
+     [
+      "booking",
+      0.25,
+      null
+     ]
+    ]
+   },
    "tin": [
     "slideleft",
     0.3
@@ -162,6 +184,17 @@
    "kind": "clip",
    "shot": "a04",
    "dur": 3.41,
+   "ui": {
+    "device": "laptop",
+    "in": 0.8,
+    "screens": [
+     [
+      "queue",
+      0.8,
+      null
+     ]
+    ]
+   },
    "tin": [
     "slideup",
     0.3
@@ -174,6 +207,17 @@
    "kind": "clip",
    "shot": "a05a",
    "dur": 1.94,
+   "ui": {
+    "device": "tablet",
+    "in": 0.3,
+    "screens": [
+     [
+      "vitals",
+      0.3,
+      null
+     ]
+    ]
+   },
    "tin": [
     "slideleft",
     0.3
@@ -186,6 +230,17 @@
    "kind": "clip",
    "shot": "a05b",
    "dur": 3.36,
+   "ui": {
+    "device": "laptop",
+    "in": 1.1,
+    "screens": [
+     [
+      "emr",
+      1.1,
+      null
+     ]
+    ]
+   },
    "tin": [
     "fade",
     0.3
@@ -198,6 +253,17 @@
    "kind": "clip",
    "shot": "a06",
    "dur": 5.33,
+   "ui": {
+    "device": "laptop",
+    "in": 0.9,
+    "screens": [
+     [
+      "scribe",
+      0.9,
+      null
+     ]
+    ]
+   },
    "tin": [
     "fadewhite",
     0.15
@@ -212,9 +278,25 @@
    "dur": 2.16,
    "inpt": 0.2,
    "tin": [
-    "fadewhite",
-    0.12
+    "fade",
+    0.1
    ],
+   "ui": {
+    "device": "laptop",
+    "in": 0.15,
+    "screens": [
+     [
+      "rx",
+      0.15,
+      1.15
+     ],
+     [
+      "stock",
+      1.15,
+      null
+     ]
+    ]
+   },
    "cap": "Prescriptions, pharmacy stock,",
    "source": "works/welbuk-24/reel/anim/clips/a07a-d1c0eca6.mp4",
    "sourceSha256": "df114655ee9bb62ef44a52fed25fdb7d968a0c59dce15b2d179270204f22f591"
@@ -225,9 +307,21 @@
    "dur": 0.95,
    "inpt": 0.1,
    "tin": [
-    "fadewhite",
-    0.12
+    "fade",
+    0.1
    ],
+   "ui": {
+    "device": "laptop",
+    "in": 0,
+    "slide": false,
+    "screens": [
+     [
+      "lab",
+      0,
+      null
+     ]
+    ]
+   },
    "cap": "lab orders,",
    "source": "works/welbuk-24/reel/anim/clips/a07b-80296134.mp4",
    "sourceSha256": "e4fbed55d224c10780621926c081766509182660eec6f1db06ca39654ea4c745"
@@ -239,8 +333,25 @@
    "inpt": 0.1,
    "tin": [
     "fadewhite",
-    0.12
+    0.2
    ],
+   "ui": {
+    "device": "laptop",
+    "in": 0,
+    "slide": false,
+    "screens": [
+     [
+      "invoice",
+      0,
+      0.9
+     ],
+     [
+      "dayend",
+      0.9,
+      null
+     ]
+    ]
+   },
    "cap": "billing and day-end accounts:",
    "source": "works/welbuk-24/reel/anim/clips/a07c-43cf66fa.mp4",
    "sourceSha256": "6262b47d4ad24e558fc2dbc4229b117c897e0dd52a084afff045c94f295e907e"
@@ -269,6 +380,17 @@
     "fade",
     0.4
    ],
+   "ui": {
+    "device": "phone",
+    "in": 1.15,
+    "screens": [
+     [
+      "reminder",
+      1.15,
+      null
+     ]
+    ]
+   },
    "cap": "And care continues at home,",
    "source": "works/welbuk-24/reel/anim/clips/a08a-2daa7288.mp4",
    "sourceSha256": "b9e3b35422db44bc74eb9782a8919fd7439f00984b3b3e641df389c4b195567b"
@@ -277,6 +399,17 @@
    "kind": "clip",
    "shot": "a08b",
    "dur": 3.11,
+   "ui": {
+    "device": "phone",
+    "in": 1.3,
+    "screens": [
+     [
+      "family",
+      1.3,
+      null
+     ]
+    ]
+   },
    "tin": [
     "fade",
     0.4
@@ -321,5 +454,5 @@
    ]
   }
  ],
- "sha256": "36e19a04111905cb5fc8c47f5647ef2ee744bf32c7d73cf47b6712f152a062d9"
+ "sha256": "69c00625ef259505c994d36bfb360260d4f20997da22676f29b4d284b337d9a8"
 }

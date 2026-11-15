@@ -21,3 +21,15 @@ Rebuild (repository root):
     python3 -I works/welbuk-24/tools/reel-anim.py works/welbuk-24/reel/audio/vo-2e453c1b.wav works/welbuk-24/reel/audio/music-fbdba503.mp3
 
 The edit is reproducible from the saved clips; the AI generations themselves are not.
+
+## Software screens
+
+Each product beat shows the software: the scene blurs back and a laptop, tablet or phone slides in
+with an animated Welbuk screen (Practice on desktop, Care on the nurse's tablet, Health on the
+patient's phone). The screens are illustrative, built in `../ui/screens.html` with fictional data
+and labelled "Illustrative screens · fictional data" on screen, as the storyboard requires when
+real product UI references are not supplied. Render them before editing:
+
+    node works/welbuk-24/tools/render-ui.cjs
+
+Swap in real screenshots by replacing a screen's frames in `../ui/frames/<screen>/`.

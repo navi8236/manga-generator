@@ -4,7 +4,9 @@ Usage (repository root):
   python3 -I works/welbuk-24/tools/reel-anim.py VOICEOVER.wav MUSIC.mp3
 
 Every story beat is a fully animated shot (reel/anim/clips/<shot>-*.mp4, Seedance image-to-video
-from a 16:9 keyframe drawn from the manga panel; see reel/anim/README.md). At the start of each
+from a 16:9 keyframe drawn from the manga panel; see reel/anim/README.md). In each product beat the
+scene blurs back and a device slides in with the matching illustrative Welbuk screen, animated
+(reel/ui/screens.html, rendered by tools/render-ui.cjs; fictional data, labelled as illustrative). At the start of each
 act the camera dives from the real lettered comic page into the panel, which dissolves into the
 animated shot. Cuts use manga-style wipes and white flashes. The product and end cards are drawn
 here and animated in time with the voiceover. Segment durations are cut points measured on the
@@ -44,26 +46,37 @@ SEGMENTS = [
     {'kind': 'clip', 'shot': 'a01b', 'dur': 4.32, 'tin': ('fadewhite', 0.3),
      'cap': 'follow-ups… and the day never really ends.'},
     {'kind': 'dive', 'shot': 'a02', 'page': '02', 'panel': 1, 'dive': 1.1, 'dur': 4.54,
+     'ui': {'device': 'laptop', 'in': 2.3, 'screens': [('dashboard', 2.3, None)]},
      'tin': ('slideleft', 0.3), 'cap': "Then Dr. Ananya's clinic found a better way. Welbuk."},
-    {'kind': 'clip', 'shot': 'a03', 'dur': 3.64, 'tin': ('slideleft', 0.3),
+    {'kind': 'clip', 'shot': 'a03', 'dur': 3.64,
+     'ui': {'device': 'phone', 'in': 1.0, 'screens': [('booking', 0.25, None)]}, 'tin': ('slideleft', 0.3),
      'cap': 'Patients book online, or check in with a QR code.'},
-    {'kind': 'clip', 'shot': 'a04', 'dur': 3.41, 'tin': ('slideup', 0.3),
+    {'kind': 'clip', 'shot': 'a04', 'dur': 3.41,
+     'ui': {'device': 'laptop', 'in': 0.8, 'screens': [('queue', 0.8, None)]}, 'tin': ('slideup', 0.3),
      'cap': 'Walk-ins and emergencies find their place in the queue.'},
-    {'kind': 'clip', 'shot': 'a05a', 'dur': 1.94, 'tin': ('slideleft', 0.3), 'cap': 'Nurses record vitals.'},
-    {'kind': 'clip', 'shot': 'a05b', 'dur': 3.36, 'tin': ('fade', 0.3),
+    {'kind': 'clip', 'shot': 'a05a', 'dur': 1.94,
+     'ui': {'device': 'tablet', 'in': 0.3, 'screens': [('vitals', 0.3, None)]}, 'tin': ('slideleft', 0.3), 'cap': 'Nurses record vitals.'},
+    {'kind': 'clip', 'shot': 'a05b', 'dur': 3.36,
+     'ui': {'device': 'laptop', 'in': 1.1, 'screens': [('emr', 1.1, None)]}, 'tin': ('fade', 0.3),
      'cap': 'Doctors see the full history before the patient sits down,'},
-    {'kind': 'clip', 'shot': 'a06', 'dur': 5.33, 'tin': ('fadewhite', 0.15),
+    {'kind': 'clip', 'shot': 'a06', 'dur': 5.33,
+     'ui': {'device': 'laptop', 'in': 0.9, 'screens': [('scribe', 0.9, None)]}, 'tin': ('fadewhite', 0.15),
      'cap': 'and can draft notes by voice, with consent, reviewing every word.',
      'caps': [(0, 2.13, 'and can draft notes by voice,'), (2.13, 5.33, 'with consent, reviewing every word.')]},
-    {'kind': 'clip', 'shot': 'a07a', 'dur': 2.16, 'inpt': 0.2, 'tin': ('fadewhite', 0.12),
+    {'kind': 'clip', 'shot': 'a07a', 'dur': 2.16, 'inpt': 0.2, 'tin': ('fade', 0.1),
+     'ui': {'device': 'laptop', 'in': 0.15, 'screens': [('rx', 0.15, 1.15), ('stock', 1.15, None)]},
      'cap': 'Prescriptions, pharmacy stock,'},
-    {'kind': 'clip', 'shot': 'a07b', 'dur': 0.95, 'inpt': 0.1, 'tin': ('fadewhite', 0.12), 'cap': 'lab orders,'},
-    {'kind': 'clip', 'shot': 'a07c', 'dur': 1.78, 'inpt': 0.1, 'tin': ('fadewhite', 0.12),
+    {'kind': 'clip', 'shot': 'a07b', 'dur': 0.95, 'inpt': 0.1, 'tin': ('fade', 0.1),
+     'ui': {'device': 'laptop', 'in': 0, 'slide': False, 'screens': [('lab', 0, None)]}, 'cap': 'lab orders,'},
+    {'kind': 'clip', 'shot': 'a07c', 'dur': 1.78, 'inpt': 0.1, 'tin': ('fadewhite', 0.2),
+     'ui': {'device': 'laptop', 'in': 0, 'slide': False, 'screens': [('invoice', 0, 0.9), ('dayend', 0.9, None)]},
      'cap': 'billing and day-end accounts:'},
     {'kind': 'clip', 'shot': 'a07d', 'dur': 1.51, 'inpt': 1.7, 'tin': ('fade', 0.3), 'cap': 'all connected.'},
     {'kind': 'dive', 'shot': 'a08a', 'page': '21', 'panel': 1, 'dive': 0.9, 'dur': 2.24, 'tin': ('fade', 0.4),
+     'ui': {'device': 'phone', 'in': 1.15, 'screens': [('reminder', 1.15, None)]},
      'cap': 'And care continues at home,'},
-    {'kind': 'clip', 'shot': 'a08b', 'dur': 3.11, 'tin': ('fade', 0.4),
+    {'kind': 'clip', 'shot': 'a08b', 'dur': 3.11,
+     'ui': {'device': 'phone', 'in': 1.3, 'screens': [('family', 1.3, None)]}, 'tin': ('fade', 0.4),
      'cap': 'with reminders and records for the whole family.'},
     {'kind': 'card', 'name': 'products', 'dur': 4.78, 'beats': [0.34, 1.68, 3.05], 'tin': ('fade', 0.4)},
     {'kind': 'clip', 'shot': 'a10', 'dur': 4.87, 'tin': ('fade', 0.5),
@@ -243,6 +256,118 @@ def card(name, dur, beats, out):
     frames_to_mp4(fdir, n, out)
 
 
+UI = f'{W}/reel/ui/frames'
+DEVICES = {  # screen render size -> display scale, bezel, corner radius, centre x
+    'laptop': {'scale': 0.88, 'bez': 16, 'rad': 18, 'cx': 640, 'top': 26},
+    'tablet': {'scale': 0.86, 'bez': 20, 'rad': 30, 'cx': 640, 'top': 90},
+    'phone': {'scale': 0.72, 'bez': 11, 'rad': 42, 'cx': 880, 'top': 34},
+}
+_ui_cache = {}
+
+
+def ui_frame(screen, t):
+    fs = sorted(glob.glob(f'{UI}/{screen}/*.png'))
+    if not fs:
+        raise SystemExit('render the screens first: node works/welbuk-24/tools/render-ui.cjs')
+    i = min(len(fs) - 1, max(0, int(t * FPS)))
+    key = (screen, i)
+    if key not in _ui_cache:
+        _ui_cache.clear() if len(_ui_cache) > 400 else None
+        _ui_cache[key] = Image.open(fs[i]).convert('RGB')
+    return _ui_cache[key]
+
+
+def device(kind, scr):
+    """Draw a flat device around a screen image; returns RGBA image and screen offset."""
+    d = DEVICES[kind]
+    sw, sh = round(scr.width * d['scale']), round(scr.height * d['scale'])
+    scr = scr.resize((sw, sh), Image.LANCZOS)
+    b = d['bez']
+    base = 26 if kind == 'laptop' else 0
+    im = Image.new('RGBA', (sw + 2 * b + (80 if kind == 'laptop' else 0), sh + 2 * b + base + 30), (0, 0, 0, 0))
+    ox = 40 if kind == 'laptop' else 0
+    sh_l = Image.new('RGBA', im.size, (0, 0, 0, 0))
+    ImageDraw.Draw(sh_l).rounded_rectangle((ox + 10, 24, ox + sw + 2 * b - 10, sh + 2 * b + base + 14), d['rad'], fill=(20, 10, 30, 110))
+    im = Image.alpha_composite(im, sh_l.filter(ImageFilter.GaussianBlur(14)))
+    dr = ImageDraw.Draw(im)
+    dr.rounded_rectangle((ox, 0, ox + sw + 2 * b, sh + 2 * b), d['rad'], fill=(28, 26, 34, 255))
+    if kind == 'laptop':
+        dr.rounded_rectangle((0, sh + 2 * b - 2, im.width, sh + 2 * b + base), 10, fill=(206, 202, 212, 255))
+        dr.rounded_rectangle((im.width / 2 - 70, sh + 2 * b - 2, im.width / 2 + 70, sh + 2 * b + 8), 5, fill=(176, 171, 184, 255))
+    mask = Image.new('L', (sw, sh), 0)
+    ImageDraw.Draw(mask).rounded_rectangle((0, 0, sw, sh), max(4, d['rad'] - b), fill=255)
+    im.paste(scr, (ox + b, b), mask)
+    if kind == 'phone':
+        dr.rounded_rectangle((ox + b + sw / 2 - 40, b + 6, ox + b + sw / 2 + 40, b + 24), 9, fill=(28, 26, 34, 255))
+    return im
+
+
+TAG = None
+
+
+def tag_img():
+    global TAG
+    if TAG is None:
+        f = ImageFont.truetype(F_SEMI, 17)
+        s = 'Illustrative screens · fictional data'
+        w = int(ImageDraw.Draw(Image.new('RGB', (1, 1))).textlength(s, font=f)) + 28
+        TAG = Image.new('RGBA', (w, 32), (0, 0, 0, 0))
+        dd = ImageDraw.Draw(TAG)
+        dd.rounded_rectangle((0, 0, w - 1, 31), 16, fill=(255, 255, 255, 215))
+        dd.text((14, 6), s, font=f, fill=(90, 84, 100, 255))
+    return TAG
+
+
+def ui_composite(seg_mp4, spec, total):
+    """Overlay a device with animated Welbuk screens on a rendered segment.
+
+    spec: {'device': kind, 'in': t, 'slide': bool, 'screens': [(screen, t_from, t_to_or_None)]}
+    The scene blurs back and the device slides up at spec['in'] (or is already there if slide is False).
+    """
+    fdir = f'{TMP}/ui-{os.path.basename(seg_mp4)[:-4]}'
+    os.makedirs(fdir, exist_ok=True)
+    for f in glob.glob(f'{fdir}/*.png'):
+        os.remove(f)
+    run(['-i', seg_mp4, f'{fdir}/%04d.png'])
+    frames = sorted(glob.glob(f'{fdir}/*.png'))
+    d = DEVICES[spec['device']]
+    t_in, slide = spec['in'], spec.get('slide', True)
+    for i, fp in enumerate(frames):
+        t = i / FPS
+        p = (ease_out((t - t_in) / 0.4) if slide else 1.0) if t >= t_in else 0.0
+        if p <= 0:
+            continue
+        bg = Image.open(fp).convert('RGB')
+        bl = bg.filter(ImageFilter.GaussianBlur(9 * p))
+        bl = Image.blend(bl, Image.new('RGB', bl.size, (250, 246, 250)), 0.22 * p)
+        # pick the screen for this moment (cross-fade 0.15 s between screens)
+        scr = None
+        for j, (name, a, b) in enumerate(spec['screens']):
+            if t >= a and (b is None or t < b):
+                scr = ui_frame(name, t - a)
+                if j > 0 and t - a < 0.15:
+                    prev = spec['screens'][j - 1]
+                    scr = Image.blend(ui_frame(prev[0], t - prev[1]).resize(scr.size), scr, (t - a) / 0.15)
+                break
+        if scr is None:
+            scr = ui_frame(spec['screens'][0][0], 0)
+        dev = device(spec['device'], scr)
+        x = int(d['cx'] - dev.width / 2)
+        y = int(d['top'] + 50 * (1 - p))
+        if p < 1:
+            dev.putalpha(dev.getchannel('A').point(lambda v: int(v * p)))
+        bl = bl.convert('RGBA')
+        bl.alpha_composite(dev, (x, y))
+        tg = tag_img().copy()
+        tg.putalpha(tg.getchannel('A').point(lambda v: int(v * p)))
+        bl.alpha_composite(tg, (SW - tg.width - 18, 16))
+        bl.convert('RGB').save(fp)
+    out = seg_mp4[:-4] + '-ui.mp4'
+    run(['-framerate', str(FPS), '-i', f'{fdir}/%04d.png', '-frames:v', str(len(frames)), '-c:v', 'libx264',
+         '-preset', 'medium', '-crf', '17', '-pix_fmt', 'yuv420p', out])
+    os.replace(out, seg_mp4)
+
+
 def wrap(d, text, font, maxw):
     words, lines, cur = text.split(), [], ''
     for w in words:
@@ -303,6 +428,8 @@ for i, s in enumerate(SEGMENTS):
             fc = f'[0:v]trim=start={inp},setpts=PTS-STARTPTS,tpad=stop_mode=clone:stop_duration={pad},{norm}[o]'
             run(['-i', src, '-filter_complex', fc, '-map', '[o]', '-frames:v', str(n),
                  '-c:v', 'libx264', '-crf', '17', '-preset', 'medium', '-an', out])
+    if s.get('ui'):
+        ui_composite(out, s['ui'], full)
     parts.append(out)
     rec = {k: v for k, v in s.items() if k != 'caps'}
     if src:

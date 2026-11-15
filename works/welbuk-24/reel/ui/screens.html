@@ -1,0 +1,164 @@
+<!doctype html>
+<!-- Illustrative Welbuk screens for the demo reel. Fictional data. Not production UI.
+     Open with ?s=<screen> and call window.render(t) to set the animation state at time t (s). -->
+<html><head><meta charset="utf-8">
+<style>
+:root{--pink:#FD006A;--pink2:#FF4D94;--pinkbg:#FFF0F6;--ink:#1F1B2B;--mut:#6B6478;--line:#ECE6EE;--bg:#F7F5F8;--ok:#14A06B;--okbg:#E5F7EF;--warn:#E8A20C;--warnbg:#FFF6E0;--red:#E5303B;--redbg:#FDECEE}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:100%;height:100%;overflow:hidden;font-family:Inter,'DejaVu Sans',sans-serif;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased}
+.app{display:flex;height:100%}
+.side{width:88px;background:#fff;border-right:1px solid var(--line);display:flex;flex-direction:column;align-items:center;padding:18px 0;gap:18px}
+.side img{width:48px}
+.side i{width:40px;height:40px;border-radius:12px;background:var(--bg);display:block}
+.side i.on{background:var(--pinkbg);box-shadow:inset 0 0 0 2px var(--pink)}
+.main{flex:1;padding:24px 28px;display:flex;flex-direction:column;gap:16px;overflow:hidden}
+.top{display:flex;align-items:center;justify-content:space-between}
+.h1{font-size:28px;font-weight:700}
+.sub{font-size:16px;color:var(--mut);margin-top:2px}
+.pill{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:99px;font-size:15px;font-weight:600}
+.p-pink{background:var(--pinkbg);color:var(--pink)}.p-ok{background:var(--okbg);color:var(--ok)}.p-warn{background:var(--warnbg);color:#A66F00}.p-red{background:var(--redbg);color:var(--red)}.p-grey{background:#F0EDF2;color:var(--mut)}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 18px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.kpi .v{font-size:34px;font-weight:700;margin-top:4px}.kpi .l{font-size:15px;color:var(--mut)}
+.row{display:flex;align-items:center;gap:14px;padding:12px 4px;border-bottom:1px solid var(--line);font-size:18px}
+.row:last-child{border-bottom:0}
+.av{width:38px;height:38px;border-radius:50%;background:var(--pinkbg);color:var(--pink);font-weight:700;display:flex;align-items:center;justify-content:center;font-size:15px;flex:none}
+.t{color:var(--mut);width:64px;font-variant-numeric:tabular-nums}
+.grow{flex:1}
+.btn{background:var(--pink);color:#fff;border-radius:12px;padding:12px 18px;font-weight:700;font-size:18px;text-align:center}
+.btn.ghost{background:#fff;color:var(--pink);box-shadow:inset 0 0 0 2px var(--pink)}
+.tap{position:absolute;width:56px;height:56px;margin:-28px 0 0 -28px;border-radius:50%;background:rgba(253,0,106,.25);box-shadow:0 0 0 3px rgba(253,0,106,.5);pointer-events:none;opacity:0}
+.lbl{font-size:14px;color:var(--mut);text-transform:uppercase;letter-spacing:.06em;font-weight:600}
+.phone{padding:18px 18px;display:flex;flex-direction:column;gap:14px;height:100%;background:#fff}
+.status{width:100%;display:flex;justify-content:space-between;font-size:14px;font-weight:600;color:var(--ink);padding:0 4px}
+.toast{position:absolute;left:50%;transform:translateX(-50%);bottom:24px;background:var(--ink);color:#fff;padding:12px 20px;border-radius:14px;font-size:17px;font-weight:600;opacity:0;white-space:nowrap}
+.field{border:1.5px solid var(--line);border-radius:12px;padding:10px 14px;background:#fff}
+.field .k{font-size:14px;color:var(--mut)}.field .val{font-size:26px;font-weight:700;min-height:32px;font-variant-numeric:tabular-nums}
+.field.on{border-color:var(--pink);box-shadow:0 0 0 3px var(--pinkbg)}
+table{width:100%;border-collapse:collapse;font-size:17px}
+th{text-align:left;font-size:14px;color:var(--mut);font-weight:600;padding:8px 10px;border-bottom:1px solid var(--line)}
+td{padding:11px 10px;border-bottom:1px solid var(--line)}
+.bar{height:12px;border-radius:6px;background:var(--pink)}
+</style></head><body><div id="root" style="position:relative;width:100%;height:100%"></div>
+<script>
+const LOGO='../../source/brand/welbuk-logo-pink-transparent.png';
+const S=new URLSearchParams(location.search).get('s');
+const root=document.getElementById('root');
+const cl=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+const k=(t,a,d=.35)=>{const x=cl((t-a)/d);return 1-Math.pow(1-x,3)};          // ease-out progress
+const typed=(s,t,a,cps=14)=>s.slice(0,Math.max(0,Math.floor((t-a)*cps)));
+const side=(on)=>`<div class="side"><img src="${LOGO}">${[0,1,2,3,4,5].map(i=>`<i class="${i===on?'on':''}"></i>`).join('')}</div>`;
+const tapAt=(x,y,t,a)=>{const p=cl((t-a)/.45);return `<div class="tap" style="left:${x}px;top:${y}px;opacity:${p>0&&p<1?1-p:0};transform:scale(${.6+p*.8})"></div>`};
+const status=`<div class="status"><span>10:24</span><span>●●● ▮</span></div>`;
+const R={};
+
+R.dashboard=t=>`<div class="app">${side(0)}<div class="main">
+ <div class="top"><div><div class="h1">Good morning, Dr. Ananya</div><div class="sub">Welbuk Practice · Today, Mon 16 Nov</div></div><span class="pill p-pink">Clinic open</span></div>
+ <div class="kpis">${[['Appointments today',28],['Checked in',11],['In queue',6],['Follow-ups due',4]].map(([l,v],i)=>`<div class="card kpi" style="opacity:${k(t,.15+i*.12)};transform:translateY(${(1-k(t,.15+i*.12))*14}px)"><div class="l">${l}</div><div class="v">${Math.round(v*k(t,.2+i*.12,.8))}</div></div>`).join('')}</div>
+ <div class="card" style="flex:1"><div class="lbl">Today's schedule</div>
+ ${[['09:30','RM','Ravi Menon','Follow-up','p-ok','Checked in'],['09:45','PS','Priya Sharma','New patient','p-ok','Checked in'],['10:00','RI','Raman Iyer','Review','p-warn','Waiting'],['10:15','AK','Anita Kapoor','Consultation','p-grey','Booked'],['10:30','SN','Suresh Nair','Online booking','p-grey','Booked']].map((r,i)=>`<div class="row" style="opacity:${k(t,.6+i*.1)}"><span class="t">${r[0]}</span><span class="av">${r[1]}</span><span class="grow"><b>${r[2]}</b> <span style="color:var(--mut)">· ${r[3]}</span></span><span class="pill ${r[4]}">${r[5]}</span></div>`).join('')}
+ </div></div></div>`;
+
+R.booking=t=>{const picked=t>1.0, booked=t>1.55, checked=t>2.3;
+ if(!checked) return `<div class="phone">${status}
+ <div style="display:flex;align-items:center;gap:10px"><img src="${LOGO}" style="width:34px"><b style="font-size:18px">Welbuk Health</b></div>
+ <div class="h1" style="font-size:26px">Book a visit</div>
+ <div class="card" style="display:flex;gap:12px;align-items:center"><span class="av">A</span><div><b style="font-size:17px">Dr. Ananya</b><div class="sub" style="font-size:14px">General physician</div></div></div>
+ <div style="display:flex;gap:8px">${['Sun 15','Mon 16','Tue 17','Wed 18'].map((d,i)=>`<div style="flex:1;text-align:center;padding:9px 0;border-radius:12px;font-size:14px;font-weight:600;${i===1?'background:var(--pink);color:#fff':'background:var(--bg)'}">${d}</div>`).join('')}</div>
+ <div class="lbl">Available slots</div>
+ <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px">${['09:30','10:00','10:30','11:00','11:30','12:00'].map((s,i)=>`<div style="text-align:center;padding:12px 0;border-radius:12px;font-size:17px;font-weight:600;${i===2&&picked?'background:var(--pink);color:#fff':'border:1.5px solid var(--line)'}">${s}</div>`).join('')}</div>
+ <div class="btn" style="margin-top:auto;${booked?'background:var(--ok)':''}">${booked?'✓ Booked · Mon 16, 10:30':'Confirm booking'}</div>
+ ${tapAt(290,330,t,.85)}${tapAt(180,716,t,1.35)}</div>`;
+ return `<div class="phone" style="align-items:center;text-align:center">${status}
+ <div class="lbl" style="margin-top:20px">Clinic check-in</div>
+ <div style="width:150px;height:150px;border-radius:50%;background:var(--okbg);display:flex;align-items:center;justify-content:center;margin-top:24px;transform:scale(${.6+.4*k(t,2.3,.4)})"><div style="width:96px;height:96px;border-radius:50%;background:var(--ok);color:#fff;font-size:58px;font-weight:700;line-height:96px">✓</div></div>
+ <div class="h1" style="font-size:28px;margin-top:10px">You're checked in</div>
+ <div class="sub" style="font-size:17px">Dr. Ananya · Mon 16 Nov, 10:30</div>
+ <div class="card" style="margin-top:14px;width:100%;opacity:${k(t,2.55)}"><div class="lbl">Your token</div><div style="font-size:52px;font-weight:800;color:var(--pink)">A-07</div><div class="sub" style="font-size:16px">3 patients ahead of you</div></div></div>`};
+
+R.queue=t=>{const m=k(t,1.0,.6);
+ const rows=[['A-05','Priya Sharma','Prior','p-pink','6 min'],['A-06','Anita Kapoor','Prior','p-pink','9 min'],['W-02','Mohan Das','Walk-in','p-warn','14 min'],['A-07','Ravi Menon','Prior','p-pink','18 min']];
+ const em=['E-01','Raman Iyer','Emergency','p-red','Now'];
+ const H=58, emY=(1-m)*rows.length*H;
+ return `<div class="app">${side(1)}<div class="main">
+ <div class="top"><div><div class="h1">Live queue</div><div class="sub">Dr. Ananya · Room 1</div></div><div style="display:flex;gap:8px"><span class="pill p-pink">Prior 4</span><span class="pill p-warn">Walk-in 1</span><span class="pill p-red" style="opacity:${k(t,.6)}">Emergency 1</span></div></div>
+ <div class="card" style="flex:1;position:relative;padding:8px 14px">
+ <div style="display:flex;font-size:14px;color:var(--mut);font-weight:600;padding:8px 6px;border-bottom:1px solid var(--line)"><span style="width:80px">Token</span><span class="grow">Patient</span><span style="width:150px">Category</span><span style="width:80px">Wait</span></div>
+ <div style="position:relative;height:${(rows.length+1)*H}px">
+ ${rows.map((r,i)=>`<div class="row" style="position:absolute;left:0;right:0;top:${(i+m)*H}px;height:${H}px"><b style="width:80px">${r[0]}</b><span class="grow">${r[1]}</span><span style="width:150px"><span class="pill ${r[3]}">${r[2]}</span></span><span style="width:80px;color:var(--mut)">${r[4]}</span></div>`).join('')}
+ <div class="row" style="position:absolute;left:-8px;right:-8px;top:${emY}px;height:${H}px;padding-left:12px;background:var(--redbg);border-radius:12px;opacity:${k(t,.5)};border:0"><b style="width:80px;color:var(--red)">${em[0]}</b><span class="grow"><b>${em[1]}</b></span><span style="width:150px"><span class="pill p-red">● ${em[2]}</span></span><span style="width:80px;color:var(--red);font-weight:700">${em[4]}</span></div>
+ </div></div>
+ <div class="sub" style="opacity:${k(t,1.6)}">Emergency prioritised · queue updated for all staff</div></div></div>`};
+
+R.vitals=t=>{const f=[['Blood pressure','122/80','mmHg',.25],['Pulse','76','bpm',.6],['SpO₂','98','%',.85],['Temperature','98.4','°F',1.1]];
+ return `<div class="app"><div class="main" style="padding:22px 26px">
+ <div class="top"><div style="display:flex;gap:14px;align-items:center"><span class="av" style="width:52px;height:52px;font-size:18px">RM</span><div><div class="h1" style="font-size:26px">Ravi Menon</div><div class="sub">34 · M · Token A-07</div></div></div><span class="pill p-pink">Welbuk Care · Vitals</span></div>
+ <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">${f.map(([n,v,u,a])=>{const on=t>a&&t<a+.45;const val=typed(v,t,a,16);return `<div class="field ${on?'on':''}"><div class="k">${n}</div><div class="val">${val}${val.length===v.length?` <span style="font-size:16px;color:var(--mut);font-weight:500">${u}</span>`:''}</div></div>`}).join('')}</div>
+ <div class="btn" style="${t>1.45?'background:var(--ok)':''}">${t>1.45?'✓ Saved · Dr. Ananya notified':'Save vitals'}</div></div></div>`};
+
+R.emr=t=>{const sc=k(t,1.4,.9)*0;return `<div class="app">${side(2)}<div class="main">
+ <div class="top"><div style="display:flex;gap:14px;align-items:center"><span class="av" style="width:54px;height:54px;font-size:19px">RM</span><div><div class="h1" style="font-size:26px">Ravi Menon</div><div class="sub">34 · M · Patient since 2024</div></div></div><span class="pill p-red" style="opacity:${k(t,.2)}">⚠ Allergy: Penicillin</span></div>
+ <div style="display:grid;grid-template-columns:1.1fr 1fr;gap:14px;flex:1">
+ <div class="card"><div class="lbl">Visit history</div>${[['12 Oct','Neck pain · physiotherapy advised'],['03 Aug','Viral fever · recovered'],['21 May','Annual check-up · normal']].map((r,i)=>`<div class="row" style="opacity:${k(t,.35+i*.15)}"><span class="t" style="width:72px">${r[0]}</span><span class="grow">${r[1]}</span></div>`).join('')}</div>
+ <div style="display:flex;flex-direction:column;gap:14px">
+ <div class="card" style="opacity:${k(t,.5)}"><div class="lbl">Today's vitals · from nurse</div><div style="display:flex;gap:18px;margin-top:8px;font-size:20px;font-weight:700"><span>122/80</span><span>76 bpm</span><span>98%</span></div></div>
+ <div class="card" style="opacity:${k(t,.7)};flex:1"><div class="lbl">BP trend</div><svg viewBox="0 0 300 90" style="width:100%;height:90px;margin-top:6px"><polyline fill="none" stroke="#FD006A" stroke-width="4" stroke-linecap="round" stroke-dasharray="400" stroke-dashoffset="${400*(1-k(t,.8,.8))}" points="5,40 60,52 115,35 170,46 225,30 290,38"/></svg></div>
+ </div></div></div></div>`};
+
+R.scribe=t=>{const consent=t>.75;const rec=t>1.05;
+ const lines=[['Doctor','How long has the neck pain been there?',1.2],['Patient','About two weeks. It is worse in the morning.',1.75],['Doctor','Any numbness in the arms?',2.35],['Patient','No, none.',2.75]];
+ const soap=[['S','Neck pain × 2 weeks, worse mornings; no numbness.'],['O','BP 122/80, pulse 76. Mild paraspinal tenderness.'],['A','Mechanical neck pain.'],['P','Posture advice, physiotherapy, review in 1 week.']];
+ const signed=t>3.85;
+ return `<div class="app">${side(3)}<div class="main" style="gap:12px">
+ <div class="top"><div><div class="h1" style="font-size:26px">Care Scribe</div><div class="sub">Ravi Menon · Consultation</div></div>
+ <div style="display:flex;gap:8px;align-items:center"><span class="pill ${consent?'p-ok':'p-grey'}">${consent?'✓ Patient consent recorded':'○ Patient consent'}</span><span class="pill ${rec?'p-pink':'p-grey'}">${rec?'● Recording':'Ready'}</span></div></div>
+ <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;flex:1">
+ <div class="card"><div class="lbl">Live transcript</div>
+ <svg viewBox="0 0 300 34" style="width:100%;height:34px;margin:6px 0">${Array.from({length:40},(_,i)=>{const h=rec?6+Math.abs(Math.sin(i*1.7+t*9))*24:4;return `<rect x="${i*7.5}" y="${17-h/2}" width="4" height="${h}" rx="2" fill="#FD006A" opacity=".8"/>`}).join('')}</svg>
+ ${lines.map(([w,s,a])=>t>a?`<div style="font-size:16px;margin:7px 0;line-height:1.35"><b style="color:${w==='Doctor'?'var(--pink)':'var(--ink)'}">${w}:</b> ${typed(s,t,a,40)}</div>`:'').join('')}</div>
+ <div class="card" style="position:relative"><div class="lbl">AI draft · SOAP note</div>
+ ${soap.map(([h,s],i)=>`<div style="display:flex;gap:10px;margin:9px 0;font-size:16px;line-height:1.35;opacity:${k(t,2.7+i*.2)}"><b style="color:var(--pink);width:18px">${h}</b><span>${s}</span></div>`).join('')}
+ <div class="btn" style="position:absolute;left:18px;right:18px;bottom:16px;opacity:${k(t,3.3)};${signed?'background:var(--ok)':''}">${signed?'✓ Reviewed & signed by Dr. Ananya':'Review & sign'}</div>
+ </div></div></div></div>`};
+
+R.rx=t=>`<div class="app">${side(4)}<div class="main">
+ <div class="top"><div><div class="h1" style="font-size:26px">Prescription</div><div class="sub">Ravi Menon · 16 Nov</div></div><span class="pill p-pink">Digital Rx</span></div>
+ <div class="card" style="flex:1">${[['Tab. Paracetamol 650 mg','1 – 0 – 1 · after food','5 days'],['Diclofenac gel 1%','Apply twice daily','7 days'],['Tab. Vitamin D3 60K','Once weekly','8 weeks']].map((r,i)=>`<div class="row" style="opacity:${k(t,.1+i*.15)}"><span class="av">${i+1}</span><span class="grow"><b>${r[0]}</b><div style="color:var(--mut);font-size:15px">${r[1]}</div></span><span class="pill p-grey">${r[2]}</span></div>`).join('')}</div>
+ <div class="btn" style="${t>.75?'background:var(--ok)':''}">${t>.75?'✓ Sent to pharmacy':'Send to pharmacy'}</div></div></div>`;
+
+R.stock=t=>{const q=t>.45?118:120;return `<div class="app">${side(4)}<div class="main">
+ <div class="top"><div><div class="h1" style="font-size:26px">Pharmacy stock</div><div class="sub">Batches · expiry · FEFO</div></div><span class="pill p-ok">Dispensed for A-07</span></div>
+ <div class="card" style="flex:1;padding:6px 12px"><table><tr><th>Medicine</th><th>Batch</th><th>Expiry</th><th>Qty</th><th></th></tr>
+ <tr style="background:${t>.4?'var(--pinkbg)':'transparent'}"><td><b>Paracetamol 650</b></td><td>PC2311</td><td>Feb 2027</td><td><b>${q}</b></td><td><span class="pill p-pink">FEFO next</span></td></tr>
+ <tr><td>Paracetamol 650</td><td>PC2402</td><td>Sep 2027</td><td>300</td><td></td></tr>
+ <tr><td>Diclofenac gel</td><td>DG1187</td><td>Jan 2027</td><td>42</td><td><span class="pill p-warn">Low</span></td></tr>
+ <tr><td>Vitamin D3 60K</td><td>VD0931</td><td>Dec 2027</td><td>86</td><td></td></tr></table></div></div></div>`};
+
+R.lab=t=>{const st=t>.35?2:1;return `<div class="app">${side(5)}<div class="main">
+ <div class="top"><div><div class="h1" style="font-size:26px">Lab orders</div><div class="sub">Ravi Menon · ordered by Dr. Ananya</div></div><span class="pill p-pink">2 tests</span></div>
+ <div class="card"><div style="display:flex;align-items:center;gap:10px;font-size:17px;font-weight:600">${['Ordered','Sample collected','Result'].map((s,i)=>`<span style="display:flex;align-items:center;gap:8px;color:${i<=st-0?'var(--ink)':'var(--mut)'}"><span style="width:30px;height:30px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;color:#fff;background:${i<st?'var(--ok)':i===st?'var(--pink)':'#DDD6E0'}">${i<st?'✓':i+1}</span>${s}</span>${i<2?'<span style="flex:1;height:3px;background:var(--line)"></span>':''}`).join('')}</div></div>
+ <div class="card" style="flex:1">${[['Complete blood count (CBC)',st>=2?'Sample collected':'Ordered',st>=2?'p-ok':'p-grey'],['Vitamin D (25-OH)','Pending','p-warn']].map(r=>`<div class="row"><span class="grow"><b>${r[0]}</b></span><span class="pill ${r[2]}">${r[1]}</span></div>`).join('')}</div></div></div>`};
+
+R.invoice=t=>`<div class="app">${side(5)}<div class="main">
+ <div class="top"><div><div class="h1" style="font-size:26px">Invoice INV-1043</div><div class="sub">Ravi Menon · 16 Nov</div></div><span class="pill ${t>.55?'p-ok':'p-warn'}">${t>.55?'✓ Paid · UPI':'Due'}</span></div>
+ <div class="card" style="flex:1">${[['Consultation','₹500'],['Lab · CBC','₹350'],['Medicines','₹210'],['GST (as applicable)','₹25']].map(r=>`<div class="row"><span class="grow">${r[0]}</span><b>${r[1]}</b></div>`).join('')}<div class="row" style="font-size:22px"><b class="grow">Total</b><b style="color:var(--pink)">₹1,085</b></div></div></div></div>`;
+
+R.dayend=t=>`<div class="app">${side(5)}<div class="main">
+ <div class="top"><div><div class="h1" style="font-size:26px">Day-end summary</div><div class="sub">Mon 16 Nov · all payments reconciled</div></div><span class="pill p-ok" style="opacity:${k(t,.5)}">✓ Reconciled</span></div>
+ <div class="kpis" style="grid-template-columns:repeat(3,1fr)">${[['Collections','₹'+Math.round(48250*k(t,0,.7)).toLocaleString('en-IN')],['Patients seen','27'],['Refunds','₹0']].map(([l,v])=>`<div class="card kpi"><div class="l">${l}</div><div class="v" style="font-size:30px">${v}</div></div>`).join('')}</div>
+ <div class="card" style="flex:1"><div class="lbl">Payment methods</div>${[['UPI',.62],['Card',.23],['Cash',.15]].map(([l,p])=>`<div style="display:flex;align-items:center;gap:12px;margin:12px 0;font-size:17px"><span style="width:56px">${l}</span><div style="flex:1;background:var(--bg);border-radius:6px"><div class="bar" style="width:${p*100*k(t,.15,.6)}%"></div></div><span style="width:44px;text-align:right;color:var(--mut)">${Math.round(p*100)}%</span></div>`).join('')}</div></div></div>`;
+
+R.reminder=t=>`<div class="phone" style="background:linear-gradient(160deg,#3B2A4A,#1C1626);color:#fff">${status.replace('var(--ink)','#fff')}
+ <div style="text-align:center;margin-top:30px;font-size:64px;font-weight:300">7:42</div><div style="text-align:center;font-size:16px;opacity:.8">Monday, 16 November</div>
+ <div style="background:rgba(255,255,255,.95);color:var(--ink);border-radius:20px;padding:14px 16px;margin-top:40px;transform:translateY(${(1-k(t,.15,.45))*-60}px);opacity:${k(t,.15)}">
+ <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--mut)"><img src="${LOGO}" style="width:22px"> WELBUK HEALTH · now</div>
+ <div style="font-weight:700;font-size:17px;margin-top:6px">Follow-up reminder</div><div style="font-size:15px;margin-top:2px">Mon 23 Nov, 10:30 with Dr. Ananya. Your prescription and reports are in the app.</div></div></div>`;
+
+R.family=t=>`<div class="phone">${status}
+ <div style="display:flex;align-items:center;gap:10px"><img src="${LOGO}" style="width:34px"><b style="font-size:18px">Welbuk Health</b></div>
+ <div class="h1" style="font-size:26px">My family</div>
+ ${[['RM','Ravi','Me · 4 visits'],['DM','Divya','Spouse · 2 visits'],['AM','Arjun, 7','Son · vaccination due 2 Dec'],['LM','Lakshmi','Mother · BP review'],['KM','Krishnan','Father · reports ready']].map((r,i)=>`<div class="card" style="display:flex;gap:12px;align-items:center;padding:11px 14px;opacity:${k(t,.1+i*.12)};transform:translateX(${(1-k(t,.1+i*.12))*30}px)"><span class="av">${r[0]}</span><div class="grow"><b style="font-size:17px">${r[1]}</b><div class="sub" style="font-size:14px">${r[2]}</div></div><span style="color:var(--pink);font-size:20px">›</span></div>`).join('')}</div>`;
+
+window.render=t=>{root.innerHTML=R[S](t)};
+window.render(0);
+</script></body></html>
