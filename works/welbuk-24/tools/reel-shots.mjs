@@ -19,4 +19,6 @@ export const shots = [
   { id: 's12', page: '21', panel: 4, prompt: P('The doctor welcomes the patient back with a warm smile and an open-hand gesture.') },
   { id: 's13', page: '22', panel: 4, prompt: P('A warm family moment: three generations smile and lean together. Soft light, slow push-in.') },
   { id: 's14', page: '24', panel: 4, prompt: P('The doctor welcomes a patient at the clinic entrance; staff and the family smile. Slow pull-back.') },
+  // Tour: dermatology (keyframe drawn from page 11 panel 3; animated through the API when the MCP credits ran out)
+  { id: 'a23', image: 'works/welbuk-24/reel/anim/keys/k23-b96b4269.png', prompt: P('The dermatologist steadies the tablet and takes a photo of the small mark on the patient\'s forearm, the tablet gives a soft flash; she lowers it, glances at the screen and smiles reassuringly; the patient smiles and nods. Slight push-in.') },
 ];

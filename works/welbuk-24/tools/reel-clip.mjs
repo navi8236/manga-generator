@@ -33,8 +33,10 @@ async function api(method, url, body, tries = 5) {
 fs.mkdirSync(`${W}/reel/frames`, { recursive: true });
 fs.mkdirSync(`${W}/reel/clips`, { recursive: true });
 // 1. Crop the panel (16:9) from the full-resolution candidate behind the accepted page.
+// A shot either crops a comic panel (page/panel) or uses a prepared 16:9 keyframe (image), scaled to 1280x720.
 const frame = `${W}/reel/frames/${id}.png`;
-execFileSync('python3', ['-I', `${W}/tools/reel-frame.py`, shot.page, String(shot.panel), frame, JSON.stringify(shot.focus || null)]);
+if (shot.image) execFileSync('python3', ['-I', '-c', 'import sys;from PIL import Image;Image.open(sys.argv[1]).convert("RGB").resize((1280,720),Image.LANCZOS).save(sys.argv[2])', shot.image, frame]);
+else execFileSync('python3', ['-I', `${W}/tools/reel-frame.py`, shot.page, String(shot.panel), frame, JSON.stringify(shot.focus || null)]);
 const data = fs.readFileSync(frame);
 const frameHash = crypto.createHash('sha256').update(data).digest('hex');
 let sub;
@@ -60,7 +62,7 @@ if (st.status !== 'completed' || !url) {
   process.exit(1);
 }
 const vid = Buffer.from(await (await fetch(url)).arrayBuffer());
-const out = `${W}/reel/clips/${id}-${sub.request_id}.mp4`;
+const out = `${W}/reel/${shot.image ? 'anim/clips' : 'clips'}/${id}-${sub.request_id.slice(0, 8)}.mp4`;
 fs.writeFileSync(out, vid);
 fs.writeFileSync(out.replace(/\.mp4$/, '.json'), JSON.stringify({
   shot: id, model: MODEL, requestId: sub.request_id, resultUrl: url, params: PARAMS, prompt: shot.prompt,
