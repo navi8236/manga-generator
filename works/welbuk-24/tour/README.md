@@ -36,8 +36,7 @@ LOOKING AHEAD and worded as a goal. No staging labels.
 
 Screens are illustrative (`../reel/ui/screens.html`, fictional data) and labelled on screen.
 Scenes are the animated clips in `../reel/anim/clips/` (provenance in `../reel/anim/shots.json`);
-the dermatology chapter uses its keyframe with a slow push-in because the credits ran out before
-that clip could be generated. Referrals, multi-facility and HRMS open with a dive into the comic page.
+the dermatology clip was animated through the Higgsfield API (Seedance 2.5) after the MCP credits ran out. Referrals, multi-facility and HRMS open with a dive into the comic page.
 
 Audio: `script.txt` read in two halves by Seed Audio, cloned from the short reel's narrator
 (`audio/sources.json`); `tools/tour-vo.py` shortens pauses and joins the halves

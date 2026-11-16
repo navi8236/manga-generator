@@ -704,8 +704,19 @@
     ],
     "prompt": "Widescreen 16:9 anime key frame in exactly the same hand-drawn manga illustration style, line weight, soft colours and character designs as the reference images. Dermatology clinic: the dermatologist (white coat over purple top, black hair tied back, blue gloves) holds a tablet to photograph a small mark on the forearm of a smiling middle-aged woman patient (grey-streaked hair in a bun, green sari) seated beside her; the tablet screen shows only abstract pink shapes. Medium shot, full heads in frame, room for movement. No text, letters, numbers, logos or speech bubbles anywhere. No panel borders."
    },
-   "clip": null,
-   "note": "Not animated: the Higgsfield credits ran out. The tour uses this keyframe with a slow push-in."
+   "clip": {
+    "model": "bytedance/seedance-2.5/image-to-video (Higgsfield API)",
+    "params": {
+     "duration": 5,
+     "resolution": "720p",
+     "generate_audio": false
+    },
+    "jobId": "01a1e5a3-9e6c-77a4-be91-489eb5339d18",
+    "file": "clips/a23-01a1e5a3.mp4",
+    "sha256": "77a2915783fc83cd4711205bb097cd1e0c94a7b7980275e3bf2b63467979198a",
+    "prompt": "The dermatologist steadies the tablet and takes a photo of the small mark on the patient's forearm, the tablet gives a soft flash; she lowers it, glances at the screen and smiles reassuringly; the patient smiles and nods. Slight push-in. Keep the exact hand-drawn anime/manga illustration style, colours, characters and composition of the image. Gentle, natural motion only; steady camera. Do not add any text, letters, numbers, logos or new objects. Screens keep their simple abstract shapes.",
+    "startFrame": "works/welbuk-24/reel/frames/a23.png"
+   }
   },
   {
    "shot": "a24",
