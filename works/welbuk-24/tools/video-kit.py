@@ -19,8 +19,8 @@ import subprocess
 
 W = 'works/welbuk-24'
 KIT = f'{W}/video-kit'
-NAMES = {'en': 'English', 'ta': 'தமிழ் (Tamil)', 'hi': 'हिन्दी (Hindi)', 'te': 'తెలుగు (Telugu)', 'kn': 'ಕನ್ನಡ (Kannada)'}
-ISO3 = {'en': 'eng', 'ta': 'tam', 'hi': 'hin', 'te': 'tel', 'kn': 'kan'}
+NAMES = {'en': 'English', 'ta': 'தமிழ் (Tamil)', 'ta-v': 'தமிழ் (Tamil, video wording)', 'hi': 'हिन्दी (Hindi)', 'te': 'తెలుగు (Telugu)', 'kn': 'ಕನ್ನಡ (Kannada)'}
+ISO3 = {'en': 'eng', 'ta': 'tam', 'ta-v': 'tam', 'hi': 'hin', 'te': 'tel', 'kn': 'kan'}
 
 
 def run(args):
@@ -55,7 +55,7 @@ def write_caps(caps, base):
 def langs_found(film):
     """English from the finished edit; other languages from works/welbuk-24/lang/<code>/<film>/ when built."""
     out = {'en': FILMS[film]['en']}
-    for code in ('ta', 'hi', 'te', 'kn'):
+    for code in ('ta', 'ta-v', 'hi', 'te', 'kn'):
         d = f'{W}/lang/{code}/{film}'
         if os.path.exists(f'{d}/mix.wav') and os.path.exists(f'{d}/captions.json'):
             out[code] = {'audio': f'{d}/mix.wav', 'captions': f'{d}/captions.json'}

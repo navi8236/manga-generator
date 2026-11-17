@@ -10,5 +10,5 @@ Per film (`reel/`, `tour/`):
 `player/index.html`: a static web page (works from disk or any web server) with a film switch, an audio language
 menu, a CC on/off button and a separate caption language menu. Copy the whole `player/` folder to host it.
 
-Languages so far: English, Tamil. Screens in the films are illustrative, with fictional data.
+Languages so far: English; Tamil (flyer wording, default) and Tamil (video wording), both voiced with Sarvam AI by the client. The earlier Eleven v4 Tamil take is archived in lang/archive/ta-eleven-v4. Screens in the films are illustrative, with fictional data.
 Rebuild: `python3 -I works/welbuk-24/tools/video-kit.py` (repository root).
