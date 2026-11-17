@@ -1,0 +1,102 @@
+<!doctype html>
+<!-- Welbuk video player: one silent master video, an audio track per language, captions per language.
+     Built by tools/video-kit.py, which fills MEDIA below and copies the files into ./media. -->
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Welbuk videos</title>
+<style>
+:root{--pink:#FD006A;--ink:#1F1B2B;--mut:#6B6478;--bg:#FFF7FA;--card:#fff;--line:#F0E3EA}
+@media (prefers-color-scheme:dark){:root{--ink:#F4EEF3;--mut:#B5ABB9;--bg:#16121A;--card:#211B26;--line:#33293A}}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI","Noto Sans","Noto Sans Tamil","Noto Sans Devanagari","Noto Sans Telugu","Noto Sans Kannada",sans-serif;background:var(--bg);color:var(--ink)}
+main{max-width:1040px;margin:0 auto;padding:20px 16px 40px}
+h1{font-size:22px;margin:0 0 4px}p.sub{margin:0 0 16px;color:var(--mut);font-size:14px}
+.tabs{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap}
+.tabs button{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:8px 16px;font:inherit;font-size:14px;cursor:pointer}
+.tabs button[aria-pressed=true]{background:var(--pink);border-color:var(--pink);color:#fff}
+.stage{position:relative;background:#000;border-radius:14px;overflow:hidden;aspect-ratio:16/9}
+video{width:100%;height:100%;display:block}
+video::cue{font-size:clamp(14px,2.4vw,24px);background:rgba(20,16,26,.78);color:#fff;line-height:1.4}
+.bar{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-top:12px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 14px}
+label{font-size:14px;color:var(--mut);display:flex;gap:8px;align-items:center}
+select{font:inherit;font-size:14px;padding:6px 8px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+.cc{border:2px solid var(--ink);background:transparent;color:var(--ink);border-radius:6px;font-weight:700;padding:3px 8px;cursor:pointer;font:inherit;font-size:13px}
+.cc[aria-pressed=true]{background:var(--pink);border-color:var(--pink);color:#fff}
+.note{font-size:12px;color:var(--mut);margin-top:10px}
+</style></head><body><main>
+<h1>Welbuk</h1><p class="sub">Choose a film, a language and captions.</p>
+<div class="tabs" id="films"></div>
+<div class="stage"><video id="v" controls playsinline preload="metadata" muted></video></div>
+<audio id="a" preload="auto"></audio>
+<div class="bar">
+ <label>Audio <select id="lang"></select></label>
+ <button class="cc" id="cc" aria-pressed="true" title="Captions on/off">CC</button>
+ <label>Captions <select id="clang"></select></label>
+</div>
+<p class="note">Screens shown in the videos are illustrative, with fictional data.</p>
+</main>
+<script>
+const MEDIA = /*MEDIA*/{};
+const v = document.getElementById('v'), a = document.getElementById('a');
+const sel = document.getElementById('lang'), csel = document.getElementById('clang'), cc = document.getElementById('cc');
+let film = Object.keys(MEDIA.films)[0];
+const pref = (k, d) => { try { return localStorage.getItem(k) || d } catch (e) { return d } };
+const save = (k, x) => { try { localStorage.setItem(k, x) } catch (e) {} };
+
+function opts(el, list, val) {
+  el.innerHTML = list.map(([c, n]) => `<option value="${c}">${n}</option>`).join('');
+  el.value = list.some(([c]) => c === val) ? val : list[0][0];
+}
+function load(name) {
+  film = name;
+  const f = MEDIA.films[film];
+  document.querySelectorAll('#films button').forEach(b => b.setAttribute('aria-pressed', b.dataset.f === film));
+  v.pause(); a.pause();
+  v.src = 'media/' + f.master;
+  // captions are embedded as cues so the page also works opened straight from disk
+  [...v.textTracks].forEach(t => { t.mode = 'disabled'; t.wb = false });
+  f.languages.forEach(l => {
+    let t = [...v.textTracks].find(x => x.language === l.code && x.label === film + ':' + l.code);
+    if (!t) {
+      t = v.addTextTrack('captions', film + ':' + l.code, l.code);
+      l.cues.forEach(([s, e, txt]) => t.addCue(new VTTCue(s, e, txt)));
+    }
+    t.wb = true;
+  });
+  const audios = f.languages.map(l => [l.code, l.name]).concat([['music', 'Music only']]);
+  opts(sel, audios, pref('wb-lang', 'en'));
+  opts(csel, f.languages.map(l => [l.code, l.name]), pref('wb-clang', sel.value === 'music' ? 'en' : sel.value));
+  setAudio(); setCaptions();
+}
+function setAudio() {
+  const f = MEDIA.films[film];
+  const l = f.languages.find(x => x.code === sel.value);
+  const t = v.currentTime, playing = !v.paused;
+  a.src = 'media/' + (l ? l.audio : f.musicOnly);
+  a.currentTime = t;
+  if (playing) a.play().catch(() => {});
+  save('wb-lang', sel.value);
+}
+function setCaptions() {
+  const on = cc.getAttribute('aria-pressed') === 'true';
+  [...v.textTracks].forEach(t => { t.mode = on && t.wb && t.language === csel.value ? 'showing' : 'disabled' });
+  save('wb-clang', csel.value); save('wb-cc', on ? '1' : '0');
+}
+// keep the language track locked to the picture
+v.addEventListener('play', () => { a.currentTime = v.currentTime; a.play().catch(() => {}) });
+v.addEventListener('pause', () => a.pause());
+v.addEventListener('seeking', () => { a.currentTime = v.currentTime });
+v.addEventListener('ratechange', () => { a.playbackRate = v.playbackRate });
+v.addEventListener('volumechange', () => { a.volume = v.volume; a.muted = false; if (v.muted === false) v.muted = true });
+v.addEventListener('ended', () => a.pause());
+setInterval(() => { if (!v.paused && Math.abs(a.currentTime - v.currentTime) > 0.12) a.currentTime = v.currentTime }, 500);
+sel.addEventListener('change', () => {
+  setAudio();
+  if (sel.value !== 'music' && MEDIA.films[film].languages.some(l => l.code === sel.value)) { csel.value = sel.value; setCaptions() }
+});
+csel.addEventListener('change', setCaptions);
+cc.addEventListener('click', () => { cc.setAttribute('aria-pressed', cc.getAttribute('aria-pressed') !== 'true'); setCaptions() });
+cc.setAttribute('aria-pressed', pref('wb-cc', '1') === '1');
+document.getElementById('films').innerHTML = Object.entries(MEDIA.films)
+  .map(([k, f]) => `<button data-f="${k}" aria-pressed="false">${f.title}</button>`).join('');
+document.querySelectorAll('#films button').forEach(b => b.addEventListener('click', () => load(b.dataset.f)));
+load(film);
+</script></body></html>
