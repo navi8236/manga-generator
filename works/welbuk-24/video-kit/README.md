@@ -12,3 +12,12 @@ menu, a CC on/off button and a separate caption language menu. Copy the whole `p
 
 Languages so far: English; Tamil (flyer wording, default) and Tamil (video wording), both voiced with Sarvam AI by the client. The earlier Eleven v4 Tamil take is archived in lang/archive/ta-eleven-v4. Screens in the films are illustrative, with fictional data.
 Rebuild: `python3 -I works/welbuk-24/tools/video-kit.py` (repository root).
+
+## Single-language files (play in any player)
+
+Many players (phones, browsers, chat previews) only play the first audio track of a multi-track file. For those,
+`tamil/` holds plain files with Tamil as the only audio:
+- `<film>-tamil.mp4`: Tamil audio (flyer wording), no captions.
+- `<film>-tamil-captions.mp4`: the same with Tamil captions burned in (rendered with Chromium for correct Tamil
+  shaping: `tools/burn-captions.py FILM ta OUT.mp4`).
+- `<film>-tamil-video-wording.mp4`: Tamil audio following the English narration line by line.
