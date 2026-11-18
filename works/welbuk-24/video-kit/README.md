@@ -21,3 +21,5 @@ Many players (phones, browsers, chat previews) only play the first audio track o
 - `<film>-tamil-captions.mp4`: the same with Tamil captions burned in (rendered with Chromium for correct Tamil
   shaping: `tools/burn-captions.py FILM ta OUT.mp4`).
 - `<film>-tamil-video-wording.mp4`: Tamil audio following the English narration line by line.
+- `<film>-tamil-english-captions.mp4`: Tamil audio with English captions burned in (the English of each Tamil line,
+  timed to the Tamil voice; `tools/lang-en-captions.py ta FILM`); the same captions as `.srt` / `.vtt`.

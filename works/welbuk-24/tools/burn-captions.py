@@ -1,6 +1,6 @@
 """Burn one language's captions into a single-language MP4 (picture + that language's audio).
 
-Usage (repository root): python3 -I works/welbuk-24/tools/burn-captions.py FILM LANG OUT.mp4
+Usage (repository root): python3 -I works/welbuk-24/tools/burn-captions.py FILM LANG OUT.mp4 [CAPTIONS.json]
 Captions are rendered by tools/caption-pngs.cjs (Chromium, correct Indic shaping) and overlaid in time.
 """
 import json
@@ -10,8 +10,9 @@ import sys
 import tempfile
 
 film, lang, out = sys.argv[1:4]
+cap_src = sys.argv[4] if len(sys.argv) > 4 else None
 K = 'works/welbuk-24/video-kit'
-caps = json.load(open(f'works/welbuk-24/lang/{lang}/{film}/captions.json' if lang != 'en' else
+caps = json.load(open(cap_src or f'works/welbuk-24/lang/{lang}/{film}/captions.json' if cap_src or lang != 'en' else
                       (f'works/welbuk-24/tour/edit.json' if film == 'tour' else 'works/welbuk-24/reel/anim/edit.json')))
 caps = caps['captions'] if isinstance(caps, dict) else caps
 tmp = tempfile.mkdtemp()
