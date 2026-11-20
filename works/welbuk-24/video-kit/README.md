@@ -23,3 +23,10 @@ Many players (phones, browsers, chat previews) only play the first audio track o
 - `<film>-tamil-video-wording.mp4`: Tamil audio following the English narration line by line.
 - `<film>-tamil-english-captions.mp4`: Tamil audio with English captions burned in (the English of each Tamil line,
   timed to the Tamil voice; `tools/lang-en-captions.py ta FILM`); the same captions as `.srt` / `.vtt`.
+
+## 1080p (Full HD)
+
+`hd/`: 1920x1080 H.264 (High profile, level 4.1) versions: `<film>-english-1080p.mp4` (English voice and captions)
+and `<film>-tamil-english-captions-1080p.mp4` (Tamil voice, English captions). The picture is the 720p edit upscaled
+(Lanczos + light sharpening); captions are rendered natively at 1080p.
+Rebuild: `python3 -I works/welbuk-24/tools/burn-captions.py FILM LANG OUT.mp4 [CAPTIONS.json] --1080`.
