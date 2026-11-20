@@ -1,0 +1,210 @@
+{
+  "version": 3,
+  "page": "11",
+  "status": "planning-guide-not-reviewed",
+  "direction": "left-to-right, top-to-bottom",
+  "panels": [
+    {
+      "id": "11-1",
+      "rect": [
+        43,
+        28,
+        937,
+        460
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "dermpt",
+          "text": "This patch looks different from my last visit.",
+          "rect": [
+            447,
+            72,
+            489,
+            46
+          ],
+          "center": [
+            691.5,
+            95
+          ],
+          "mouth": [
+            691,
+            264
+          ]
+        }
+      ],
+      "faces": {
+        "derm": {
+          "face": [
+            293,
+            146,
+            110,
+            151
+          ],
+          "anchor": [
+            348,
+            248
+          ]
+        },
+        "dermpt": {
+          "face": [
+            656,
+            165,
+            110,
+            142
+          ],
+          "anchor": [
+            691,
+            264
+          ]
+        }
+      },
+      "protected": [],
+      "intent": null,
+      "groups": null,
+      "warnings": []
+    },
+    {
+      "id": "11-2",
+      "rect": [
+        44,
+        496,
+        463,
+        459
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "derm",
+          "text": "Let's record the exact location.",
+          "rect": [
+            232,
+            582,
+            262,
+            72
+          ],
+          "center": [
+            363,
+            618
+          ],
+          "mouth": [
+            177,
+            686
+          ]
+        }
+      ],
+      "faces": {
+        "derm": {
+          "face": [
+            44,
+            502,
+            175,
+            320
+          ],
+          "anchor": [
+            177,
+            686
+          ],
+          "kind": "head"
+        }
+      },
+      "protected": [],
+      "intent": null,
+      "groups": null,
+      "warnings": []
+    },
+    {
+      "id": "11-3",
+      "rect": [
+        517,
+        496,
+        464,
+        459
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "narration",
+          "text": "Images can help document the finding when clinically appropriate.",
+          "rect": [
+            525,
+            504,
+            412,
+            72
+          ],
+          "center": [
+            731,
+            540
+          ],
+          "mouth": null
+        }
+      ],
+      "faces": {},
+      "protected": [],
+      "intent": null,
+      "groups": null,
+      "warnings": []
+    },
+    {
+      "id": "11-4",
+      "rect": [
+        43,
+        965,
+        937,
+        480
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "derm",
+          "text": "Now we can review how it has changed.",
+          "rect": [
+            417,
+            973,
+            425,
+            46
+          ],
+          "center": [
+            629.5,
+            996
+          ],
+          "mouth": [
+            335,
+            1148
+          ]
+        }
+      ],
+      "faces": {
+        "derm": {
+          "face": [
+            214,
+            1016,
+            190,
+            194
+          ],
+          "anchor": [
+            335,
+            1148
+          ]
+        }
+      },
+      "protected": [],
+      "intent": null,
+      "groups": null,
+      "warnings": []
+    }
+  ],
+  "checklist": [
+    "番号と誘導線を隠した画像を先に読み、予測した発話順を記録する",
+    "最初のセリフへ上・左から入れるか",
+    "近い非連続の吹き出しを一組と誤認して返答を飛ばさないか",
+    "前の会話のまとまりを読み終えてから次のまとまりへ進めるか",
+    "返答へ自然に移り、視線が大きく逆戻りしないか",
+    "顔の向き・視線・手や小道具の動作と読順がつながるか",
+    "話者への尾が別人物や重要物を横切らないか",
+    "場所・時間・回想の切替と物の移動を直前直後から理解できるか",
+    "最後のセリフ・反応から次のコマへ移れるか",
+    "大きなコマ・余白・情報公開の順がページの感情の狙いに合うか",
+    "話題の境界と段・ページ境界が一致し、不要な読み戻りを誘わないか"
+  ]
+}

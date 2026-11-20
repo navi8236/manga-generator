@@ -1,0 +1,142 @@
+{
+ "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-08-d31c2bfd07e2a4244d9c9b475efa708965f8ee6efe630a02b9f252c1f25a0c43.json",
+ "reviewer": {
+  "role": "subagent",
+  "task": "claude-code-agent:manga-reviewer:a2c25f20ddf16a6ec",
+  "reportedTask": null,
+  "taskSource": "Agent ID returned by the Claude Code Agent tool to the parent."
+ },
+ "status": "changes-requested",
+ "observations": [
+  "Reviewer identity: the runtime gave this subagent no task ID, so reviewer.task is null.",
+  "What I read: the request JSON, including the full script, the boundary pages and the first reading. I also read first-reading/storyboard-08-74c3ae6d...json, the unnumbered and numbered page-08 SVGs in full, source/original.txt and source/REVISION-2026-11-11.md (Request 4). All were readable.",
+  "Images I opened with Read and looked at: storyboards-unnumbered/page-08.png, storyboards/page-08.png, workflow/review/page-07.png, page-08.png and page-09.png, and assets/panels/08-1.png to 08-6.png. I did not compute hashes because no shell was available.",
+  "The PNGs do not match the current SVGs. The current storyboards-unnumbered/page-08.svg and storyboards/page-08.svg contain the refitted lettering. For example: the 08-1 caption box is at 28,28 (258x170) with four lines starting 'Meanwhile, the'. The 08-2 caption is at 716,28 and its label at 792,106. The 08-3 balloon is at 714,460 (271x170) with four lines and its tail to 710,657. The 08-4 caption is at 164,860 and its label at 114,984. The 08-5 label is at 458,996. The 08-6 caption is at 448,1174 (four lines) and its label at 822,1174. Both page-08 PNGs still show the old layout. The 08-1 caption is at about 40,40 in three lines. The 08-2 caption is at about 540,40 and its label at about 664,274 below the labtech. The 08-3 balloon is at about 494,468 in three lines. The 08-4 label is at the bottom, about 40,1322. The 08-6 label is at about 500,1360. The script in the request (for example the 08-2 caption at x:192, the 08-3 balloon at x:690, the 08-6 label at x:382) matches the SVGs, not the PNGs.",
+  "Because of this, the recorded image-only first reading (fingerprint 74c3ae6d..., hash f5a29e07...) describes the pre-refit layout: the label 'below the labtech placeholder', the balloon 'at top right' in three lines, and the 08-4 label 'at the bottom'. It is not a reading of the current storyboard. Under docs/PROMPTS.md and REVISION-AND-REVIEWS.md, a changed input needs a new image-only observation and a new request. I cannot pass a comparison against a first reading of a superseded layout.",
+  "workflow/review/page-08.png does match the current SVG positions listed above, so the art and lettering preview is current.",
+  "Script vs source: every caption, label and the lab technician's line match PAGE 8 in original.txt word for word. The six beats follow Request 4 in order: pharmacy notified and filling; lab notified; samples at the clinic lab the same day; Ravi notified by app, email or WhatsApp; the doctor on Welbuk Care; the clinic on Welbuk Practice. No drug, test, value or diagnosis appears in the text or on the screens in 08-1 to 08-6. The screens show only a pill card, test-tube icons and check marks.",
+  "Art vs script, from the panel PNGs and the preview. 08-1: the pharmacist (moustache, grey temples, white coat over a blue shirt) puts a plain box into a paper bag with his right hand while holding the bag with his left, next to a tablet on a stand showing a pill card. 08-2: the lab technician (high bun, round glasses, freckles, purple gloves) holds a capped tube and looks at the monitor, which shows three tube icons. 08-3: Ravi sits in the collection chair with his bag on his lap, pressing cotton to the inside of his left elbow with his right hand, watch on his left wrist, and smiles at the lab technician. She is labelling a red-capped tube and speaks toward him. 08-4: Ravi on a sofa at dusk, phone in his right hand showing a check card with app, envelope and chat icons, watch on his left wrist. 08-5: Ananya at her desk, holding the tablet in both hands, with tube and check icons, stethoscope, window and plant. 08-6: Meera (braid, bangle on her right hand on the mouse) smiles at a monitor turned toward the reader, which shows a check card.",
+  "First-reader concern, 'Meanwhile' with no clear referent: acceptable when read in sequence. Page 6 (06-2) shows PLAN OF CARE: intelligent prescribing · labs, and page 7 ends with Ravi leaving the clinic. 'Meanwhile' then reads as during or just after the visit, and the 08-1 tablet shows a pill card for the prescription.",
+  "First-reader concern, who sends the notifications: acceptable. Pages 2 and 5-7 set up Welbuk Practice, Welbuk Care and Welbuk Health. The device screens and the product names in 08-5 and 08-6 attribute the notifications to the Welbuk system. The passive 'is notified' is the user's own wording in Request 4.",
+  "First-reader concern, Meera appears without introduction in 08-6: acceptable. Meera is introduced on pages 1, 3 and 7 and is drawn on-model in 08-6 with her braid, blue kurta and bangle at the reception desk.",
+  "First-reader concern, Ravi has no visible reaction to 'All done, Ravi!': resolved by the art. In 08-3 Ravi smiles toward the lab technician while pressing the cotton pad, and she speaks toward him.",
+  "First-reader concern, the empty tall panel 08-4: resolved by the art. The window at sunset, the curtain, the sofa and Ravi fill the panel.",
+  "First-reader concern, the time jump from 'Later that day' to 'Results ready': acceptable. The location changes to Ravi's home and the caption opens with the state 'Results ready:'. The comic makes no claim about turnaround, so it does not need to give an exact interval. Note that the dusk light could be read as the same evening. The source's 'Some days later' is a stage direction, not caption text.",
+  "First-reader concern, 'notified' five times: acceptable. It is a deliberate parallel structure taken from the user's own 'gets notified' phrasing in Request 4. The art changes in every panel: pharmacy, lab, collection, home, consultation desk, reception.",
+  "First-reader concern, NEW PRESCRIPTION is far from the pharmacist and not tied to a device: largely resolved in the preview. The label at 30,316 now covers the tablet itself, with only its top bezel visible above the label, so it reads as the tablet's screen text. The cost is that the drawn pill card is hidden. The 08-6 label overlaps the top of the monitor, and the 08-5 label sits right beside the tablet. The 08-2 label is above the monitor, near it but not on it. Acceptable.",
+  "First-reader concern, text touching box edges: most cases were storyboard font artefacts, but two still appear to touch in the preview (see issues)."
+ ],
+ "issues": [
+  {
+   "problem": "Both page-08 storyboard PNGs are stale. They show the pre-refit lettering layout, while the current SVGs and the request's script contain the refitted positions and line breaks. Re-export storyboards-unnumbered/page-08.png and storyboards/page-08.png from the current SVGs.",
+   "location": "works/auto-6294ee8a2094/workflow/storyboards-unnumbered/page-08.png; works/auto-6294ee8a2094/workflow/storyboards/page-08.png",
+   "resolved": false
+  },
+  {
+   "problem": "The recorded image-only first reading (74c3ae6d..., hash f5a29e07...) observed the superseded layout. After re-export, record a new image-only first reading of the current unnumbered page-08.png, then prepare a new storyboard request and redo this comparison. Do not reuse or relabel the old first reading.",
+   "location": "works/auto-6294ee8a2094/workflow/stage-reviews/first-reading/storyboard-08-74c3ae6d2bd683d4f319c18e4f98a662cb1f22d46b30e5b164ddba585b80e308.json",
+   "resolved": false
+  },
+  {
+   "problem": "This new layout risk has not been checked by any first reading. The 08-4 caption now sits at the top right of the tall panel (164-402, y860-966), level with the 08-5 caption (448-660, y856-994) across the gutter. A reader could go from 'Results ready: Ravi is notified.' straight to 'Dr. Ananya is notified on Welbuk Care.' before reading the 08-4 label 'Welbuk Health app · email · WhatsApp', and then attach those channels to Ananya. The new first reading must confirm the order, or the 08-4 caption or label must be moved.",
+   "location": "page 08, 08-4 / 08-5 caption row (workflow/review/page-08.png)",
+   "resolved": false
+  },
+  {
+   "problem": "In workflow/review/page-08.png the final 'notified.' of the 08-2 caption 'The lab is notified.' (box 716-992) appears to touch the caption box's right border. 'Ravi is notified.' in 08-4 (box right edge at 402) is also very tight. Check at 100% and 200% and widen the boxes if the text touches.",
+   "location": "page 08, 08-2 caption and 08-4 caption",
+   "resolved": false
+  }
+ ],
+ "readingReview": {
+  "withoutGuides": true,
+  "firstReadingHash": "f5a29e0712b0ae847f31d91ffdf769afe9d1fee1386141ce0dd384b9c8e940a4",
+  "comparison": "The recorded first reading follows the intended panel and dialogue order. Its continuity, identity and repetition concerns are judged acceptable above, with evidence from pages 1-7 and the art. However, that reading was made on a PNG that no longer matches the current SVG and script: the captions, balloon and labels in 08-1 to 08-6 were moved and re-broken. So it cannot stand as the first reading for this request. The predicted order below is my own reading of the current SVG and the composed page-08.png. It is not a replacement for the required new image-only first reading.",
+  "predictedOrder": [
+   {
+    "panel": "08-1",
+    "dialogue": [
+     1,
+     2
+    ]
+   },
+   {
+    "panel": "08-2",
+    "dialogue": [
+     1,
+     2
+    ]
+   },
+   {
+    "panel": "08-3",
+    "dialogue": [
+     1,
+     2
+    ]
+   },
+   {
+    "panel": "08-4",
+    "dialogue": [
+     1,
+     2
+    ]
+   },
+   {
+    "panel": "08-5",
+    "dialogue": [
+     1,
+     2
+    ]
+   },
+   {
+    "panel": "08-6",
+    "dialogue": [
+     1,
+     2
+    ]
+   }
+  ],
+  "observations": [
+   "In page-08.png, 08-3 has the caption at the top left and the balloon at the far right, with its tail down to the lab technician's mouth. There is only one speaker, so the balloon cannot be misattributed.",
+   "In 08-2 the caption and label are stacked at the top right above the monitor, and the lab technician's gaze goes right toward the monitor. Reading caption, then label, then the gaze leads out to the right edge, which is correct.",
+   "In the bottom tier, the caption row across 08-4 and 08-5 is the proximity risk listed in the issues."
+  ],
+  "transitions": [
+   {
+    "from": "07-4",
+    "to": "08-1",
+    "observation": "Page turn after Ravi leaves, then 'Meanwhile' at the pharmacy, with a pill card on the tablet tying it to the 06-2 plan of care. Acceptable."
+   },
+   {
+    "from": "08-1",
+    "to": "08-2",
+    "observation": "Parallel order receipt: 'The lab is notified.' and the lab technician picks up an empty tube by the monitor's order card. Acceptable."
+   },
+   {
+    "from": "08-2",
+    "to": "08-3",
+    "observation": "The caption 'Later that day' and the same lab (blue collection chair, tube rack, monitor with tube icons) show Ravi returning after he left in 07-4. Acceptable."
+   },
+   {
+    "from": "08-3",
+    "to": "08-4",
+    "observation": "'We'll let you know when your results are ready' is paid off by 'Results ready: Ravi is notified.' at home, with a check card on his phone. The promise and its payoff are clear. The interval is not stated (see observations)."
+   },
+   {
+    "from": "08-4",
+    "to": "08-5",
+    "observation": "The same check-mark card appears on Ananya's tablet. The parallel structure is clear, but see the caption-row proximity issue."
+   },
+   {
+    "from": "08-5",
+    "to": "08-6",
+    "observation": "The same check card appears on the reception monitor, with Meera on-model. This completes the patient, doctor and clinic sequence from Request 4."
+   },
+   {
+    "from": "08-6",
+    "to": "09-1",
+    "observation": "From the present-day notification to 'Tomorrow, care may take us beyond our hometown.' with Ravi on a train. The conditional caption and the train setting mark the shift to the future. Acceptable."
+   }
+  ]
+ }
+}

@@ -1,0 +1,36 @@
+{
+ "01-1": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-01-1-480fe98b2ad3a3d8a29fe39f891ad97ac0c26b313610478d4f5a66329757d812.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Reviewer identity: the runtime gave me no subagent or task ID, so task is null. The parent must add the real task name from the Agent tool, or record that it is unavailable. Do not make one up.",
+   "What I read: AGENTS.md (in the system context), docs/REVISION-AND-REVIEWS.md, docs/PROMPTS.md, docs/ART-QUALITY.md, the request JSON, the r6 response artwork-r6-01-1.json and source/original.txt.",
+   "Images I viewed with Read: assets/panels/01-1.png, assets/characters/main-cast.png, assets/characters/vision-cast.png, workflow/review/page-01.png, assets/panels/01-2.png, 01-3.png, 05-4.png and 06-4.png. I did not view workflow/storyboards/page-01.svg as an image. I only searched its text: it holds speaker labels (ananya near 433,222), panel beat captions and a page number. I did not check any file hashes against the request entries.",
+   "Door and depth (r6 issue 1): the left glass leaf now stands open. It is swung outward on hinges at the left jamb (hinge plates visible at about panel x 405, y 280 and y 420) and seen almost edge-on, handle facing the viewer. Ananya stands in the open bay. Her sandals rest on the threshold step in front of the frame, with no rail across them. Her raised left hand reaches the left stile of the closed right leaf (about x 680-690) and passes in front of it, which fits someone standing in the opening, slightly forward of the door plane. She no longer reads as behind closed glass, so the contradiction is resolved.",
+   "Patient and moment (r6 issue 2): Ananya is now visibly in an open doorway, so the elderly patient (grey bun, lilac sari with an orange border, brown shoulder bag, gold bangle, seen from behind) reads as being welcomed in, as production.moment requires. Minor, not blocking: the patient is lined up with the closed right leaf, not the open left bay, so she must step slightly left to enter. Ananya's palm points toward her, so the 'come in' gesture still reads.",
+   "Identity against main-cast.png: low bun with loose strands at the temples, open white coat over a knee-length teal kurta, stethoscope round her neck and not in use, dark leggings, flat dark thong sandals, slim build. All match. Her face is small at this scale. Almond eyes, level brows and an oval face with a smallish chin are readable. Gold studs and the finer eyelid detail cannot be confirmed at this size. Her open smile and slight forward lean read as warm and welcoming.",
+   "Hands (production.hands): she faces the viewer, so the raised open palm on image right is her LEFT hand, gesturing toward the patient and the interior. That matches 'open palm gesturing the patient inside'. Her RIGHT hand hangs relaxed and empty by the coat pocket, which also matches. The wrist connection and finger count look plausible at 100%.",
+   "Scene against source and panel.scene: morning sun (dappled leaf shadows, blue sky, palms and a street at left), whitewashed entrance, a simple teal awning on diagonal struts, terracotta pots with hibiscus and a croton at left, a planter box at right, and two patients seen from behind on grey perforated metal chairs with no detailed faces. A Tamil Nadu feel comes from the yellow flowering tree, the sari and the jasmine in the hair. Inside: a wooden desk, a beige desk phone, a stack of red registers, binders and a teal curtain. This matches 'Morning at a friendly neighbourhood Tamil Nadu clinic. Dr. Ananya welcomes patients.'",
+   "No readable text or signage: the picture frames are blank, the binder spines carry no lettering, the phone has no legible digits and the facade has no sign.",
+   "Exterior continuity: the teal fabric awning on diagonal metal struts, white rendered walls, aluminium-framed glass doors and concrete planter match 05-4 (same strut style) and 06-4 (teal awning, glass front, planters). 01-1 reads as a closer, partial view of the same facade. The vision-cast characters do not appear in this panel.",
+   "Caption placement on page-01.png: the narration box sits top-left (about page x 48-333, y 48-153) over the blank white upper-left area and the top of the tree. It covers no face, hand or patient. Its right edge nearly touches the left end of the awning and the top of the left strut (near-tangency), but the entrance stays readable. Acceptable. Small note: the panel's upper-left corner (panel x 0-175, y 0-170) is a flat white block above the sky, rather than the empty sky band the camera note asked for. The caption box hides most of it, so it reads as caption margin. Not blocking.",
+   "Striped awning in 01-2 and 01-3 (outside this request's scope; reported at the parent's request): in both panels a blue-and-white scalloped awning hangs at the very top edge of the reception window, mounted tight against the frame with foliage behind it. It reads as an awning fixed to this clinic over that window, not as a neighbouring building across the street. There is no gap, street, facade or second building between the window and the awning. It therefore contradicts 01-1, where the only awning is teal over the entrance and the side window has none. The contradiction sits on the same page, directly under the teal-awning establishing panel. It does not block 01-1's artwork pass. I recommend fixing it before page-01 lettering or final passes, by editing the window in 01-2 and 01-3 to remove the awning or make it plain teal, and opening a separate artwork review for those panels."
+  ],
+  "issues": [
+   {
+    "problem": "r6: Ananya appeared to stand behind a closed glass door while her hand and feet overlapped the door frame.",
+    "location": "01-1, Ananya and the double glass door, left-centre",
+    "resolved": true
+   },
+   {
+    "problem": "r6: the patient appeared to walk toward a closed glass door, weakening the welcome moment.",
+    "location": "01-1, elderly patient at the door, centre-right",
+    "resolved": true
+   }
+  ]
+ }
+}

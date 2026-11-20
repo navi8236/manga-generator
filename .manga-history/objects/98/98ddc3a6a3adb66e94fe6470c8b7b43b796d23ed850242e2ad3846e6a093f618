@@ -1,0 +1,321 @@
+[
+ {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-04-1233845027555924fef042ed93f81c267b48829bd5cb41fe9dec925335fa58f4.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Reviewer identity: task is null because the runtime gave me no task ID. The parent must record the real Agent ID.",
+   "What I read: docs/REVISION-AND-REVIEWS.md, docs/PROMPTS.md, this request (page-04 script, the 03 and 05 boundary context, transitions, first reading), source/original.txt in full, and source/REVISION-2026-11-11.md from Request 3 to the end. I also read cli/stage-review.mjs lines 100-209 for the response format. Text files I read: storyboards/page-04.svg, storyboards-unnumbered/page-05.svg and storyboards/page-05.svg. Images I opened with Read and looked at: storyboards-unnumbered/page-04.png, storyboards/page-04.png, workflow/review/page-04.png and workflow/review/page-05.png. I did not open the reading-flow files, the page-03 SVGs, the character sheets or the individual assets/panels PNGs. I did not compute any hashes.",
+   "The unnumbered and numbered page-04 PNGs match storyboards/page-04.svg, including the ravi box at 577,71, the nurse box at 389,739, the ananya box at 730,834 and RAVI · READY at 790,1202. The captions, nurse line and both labels match source page 4 word for word.",
+   "First-reader concern 1 ('his' at the top of the page points back across the page turn): 03-5 ends with Ravi seated under 'A-10 · A-11 · A-12'. In the composed 04-1 Ravi is the only foreground figure, standing and looking up at the TV that reads NOW · A-12. 'his' attaches to him without trouble. Acceptable.",
+   "First-reader concern 2 (the nurse appears with no introduction): the caption 'A quick vitals check first.' and the drawn lavender scrubs, cuff bulb and lanyard make her role clear. Acceptable.",
+   "First-reader concern 3 (zig-zag in 04-2): in the composed page the nurse stands right under her balloon and Ravi sits lower left with the cuff on. The eye goes caption, balloon, nurse, Ravi, then exits low toward 04-3. Acceptable.",
+   "First-reader concern 4 (large empty areas in 04-2 and 04-3): in review/page-04.png the vitals table, Ravi's legs, the bag, Ananya's tablet and the closed laptop fill these areas. This was a placeholder artifact.",
+   "First-reader concern 5 (RAVI · READY under Ananya's face): the label sits on the drawn tablet screen below her face and does not cover it. Acceptable.",
+   "The page changed only because of its neighbours. For 04-3 to 05-1 I checked the refitted page-05 SVG and review/page-05.png. Both show the same window-and-plant room, the tablet gone and the laptop open, which continues the closed laptop at the lower right of 04-3. Limitation: storyboards-unnumbered/page-05.png and storyboards/page-05.png are stale pre-refit exports (see the page-05 response). This request lists only the page-05 SVGs, which are current, so the staleness does not affect this page."
+  ],
+  "issues": [],
+  "readingReview": {
+   "withoutGuides": true,
+   "firstReadingHash": "30466ee7824bde6f2ac1a234b513abe306ae159b01d4d8e3927eaaf32f2fe420",
+   "comparison": "My order matches the first reader's and the script: caption then label in 04-1, caption then the nurse's line in 04-2, caption then the tablet label in 04-3. Nothing is skipped. The five ambiguities the first reader raised are settled by the composed art (Ravi as the only foreground figure under NOW · A-12, the nurse's costume and props, art filling the empty areas) or are acceptable as drawn.",
+   "predictedOrder": [
+    {
+     "panel": "04-1",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "04-2",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "04-3",
+     "dialogue": [
+      1,
+      2
+     ]
+    }
+   ],
+   "observations": [
+    "Each panel opens with a caption box at its top-left corner. The second text element sits lower or further right (the TV label at top right, the nurse balloon at mid-right, the tablet label at the bottom), so reading top-left first is unambiguous.",
+    "In 04-1 the label NOW · A-12 is level with the caption but at the far right, inside the drawn TV. It reads as the screen content after the caption."
+   ],
+   "transitions": [
+    {
+     "from": "03-5",
+     "to": "04-1",
+     "observation": "Same waiting area. In 03-5 three patients sit under A-10 · A-11 · A-12. In 04-1 the two chairs are empty and Ravi stands with his bag on his shoulder under NOW · A-12, which marks a short time skip in the same place."
+    },
+    {
+     "from": "04-1",
+     "to": "04-2",
+     "observation": "From the waiting area to the vitals corner. The caption 'A quick vitals check first.' and, in the art, the reception counter and teal chair behind the nurse carry the move. Ravi's bag moves from his shoulder to the floor."
+    },
+    {
+     "from": "04-2",
+     "to": "04-3",
+     "observation": "Cut to the consultation room. The caption 'Dr. Ananya is notified when he's ready.' and the RAVI · READY tablet link it to the end of the vitals check."
+    },
+    {
+     "from": "04-3",
+     "to": "05-1",
+     "observation": "Page turn into the same room (window and plant). In the refitted 05-1 SVG and preview, Ravi sits down, Ananya greets him, the tablet is gone and the laptop that was closed in 04-3 is open on PATIENT DETAILS."
+    }
+   ]
+  }
+ },
+ {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-05-258e17a17c96eb0912019593b0c54a2c556af2a07aeba81f86a288d3c07499ef.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "changes-requested",
+  "observations": [
+   "Reviewer identity: task is null because the runtime gave me no task ID. The parent must record the real Agent ID.",
+   "What I read: this request (page-05 script, 04 and 06 boundary context, transitions, first reading), source/original.txt in full, and REVISION-2026-11-11.md from Request 3 through the AI-voice-consent follow-up. Text files I read: storyboards-unnumbered/page-05.svg and storyboards/page-05.svg. Images I opened with Read and looked at: storyboards-unnumbered/page-05.png, storyboards/page-05.png, workflow/review/page-05.png and workflow/review/page-06.png. I did not open the reading-flow files, the character sheets or the individual assets/panels/05-*.png files. I did not compute any hashes.",
+   "BLOCKING. Both storyboard PNGs for page 05 (storyboards-unnumbered/page-05.png and storyboards/page-05.png) show the old layout from before the refit. They do not match the SVGs or the script in this request. In the PNG, 05-1 has the ananya box at about 584,254, the balloon at about 624,40 and the PATIENT DETAILS label at about 40,294. The SVG and script have ananya at 392,117, the balloon at 514,40 and the label at 34,224. In the PNG, 05-2 has 'Yes, I agree.' at the far right (about 724,584) and the consent label in the lower centre (about 354,738). The SVG has 'Yes, I agree.' at 400,572, directly beside the question, and the label at the right of the top row (625,572). In the PNG, 05-3 has ravi at about 354,1062; the SVG has 393,979. In the PNG, 05-4 has ananya at about 718,1172 and the ravi dot at about 937,1351; the SVG has 762,1161 and 957,1193. The PNGs were not re-exported after the refit.",
+   "As a result, the recorded first reading (0d3c38a9…) describes the stale PNG layout: 'Yes, I agree.' at upper right, the consent caption between question and answer, and the ravi dot in the 05-4 corner. No image-only first reading exists for the current refitted storyboard. I cannot pass a comparison whose first reading looked at a different image from the one under review.",
+   "Judging the current layout on its own merits (SVG plus composed preview), it looks sound. In 05-1 the greeting balloon is the top element (y40) and the PATIENT DETAILS label sits lower (y224) on the drawn laptop screen, so it reads greeting first and screen content second. The balloon tail reaches Ananya's mouth, and Ravi sits smiling on the right with his bag on the floor, as scripted.",
+   "In 05-2 the question, the answer and the consent label now run left to right in a single top row. 'Yes, I agree.' follows the question directly, which settles first-reader concern 3 for the current layout. Minor lettering item: in review/page-05.png the long tail from 'Yes, I agree.' to Ravi passes within a few pixels of the consent label's lower-left corner (at x=625 the tail is at about y713; the label's bottom edge is at y710). Check this at the lettering stage. Also, unlike 05-1 and 05-3, this label sits on the wall instead of over the laptop screen. It still reads as screen information because of its teal style, and the drawn consent card (mic, shield, check box) stays visible.",
+   "First-reader concern 2 (the consent question interrupts 'Tell me what brings you in.'): acceptable. Source page 5 (lines 37-39) and the user's 2026-11-12 consent follow-up put the consent before the AI listens and before Ravi's answer. The consent exchange answers itself within one panel, and the art shows Ananya gesturing to the consent card. 05-3's 'I've been feeling tired lately.' plainly answers the opening question, and 'Yes, I agree.' cannot be read as an answer to it because it sits right beside the AI question.",
+   "First-reader concern 4 (Ananya absent from 05-3, long tail): in the preview the tail is short and reaches Ravi's mouth. 05-4 shows Ananya listening right after, so the listener is shown one panel later. Acceptable.",
+   "First-reader concern 5 (the ravi dot in 05-4 with no box): Ravi is a scripted 'head' (anchor 957,1193). The accepted art shows the back of his head and his shoulder at the lower right, which settles the concern.",
+   "First-reader concern 7 (labels take up a large share): in the preview the 05-1 label covers only the laptop screen. The 05-3 label covers the left part of the screen and leaves the glowing mic, Ravi's face and his hands clear. Acceptable."
+  ],
+  "issues": [
+   {
+    "problem": "storyboards-unnumbered/page-05.png and storyboards/page-05.png are stale pre-refit exports that do not match the refitted page-05 SVGs and script in this request. The recorded image-only first reading was made on that stale layout, so the current storyboard has had no first reading. Re-export both PNGs from the current SVGs, run a fresh prepare-reading and record-reading on the new unnumbered PNG, then prepare a new comparison request.",
+    "location": "page 05 (all panels), workflow/storyboards-unnumbered/page-05.png, workflow/storyboards/page-05.png, first-reading storyboard-05-0d3c38a9…",
+    "resolved": false
+   }
+  ],
+  "readingReview": {
+   "withoutGuides": true,
+   "firstReadingHash": "a6790c5bc8f404b345e2a96c8af96eef4c94a20ea6544810ee3de0ec976db986",
+   "comparison": "The first reading describes the stale PNG layout, not the current SVG and script. Its speaker order (greeting, consent question, agreement, complaint, closing caption) matches the script. But its spatial observations ('Yes, I agree.' at upper right, the consent caption between question and answer, the ravi dot in the 05-4 corner) are about positions that no longer exist. In the current layout the 05-2 answer sits next to the question and the label comes last in the row. The predicted order below is from the current SVG and preview, not from an image-only reading. A new first reading on a re-exported PNG is required before this comparison can pass.",
+   "predictedOrder": [
+    {
+     "panel": "05-1",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "05-2",
+     "dialogue": [
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "panel": "05-3",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "05-4",
+     "dialogue": [
+      1
+     ]
+    }
+   ],
+   "observations": [
+    "Current SVG, 05-2: the three text boxes share the top band (y572) and run left to right: question at 64-396, answer at 400-599, label at 625-994. Question and answer form one adjacent pair.",
+    "Current SVG, 05-1 and 05-3: the balloon is the highest element, and the teal label sits lower-left on the laptop screen, so it is read second."
+   ],
+   "transitions": [
+    {
+     "from": "04-3",
+     "to": "05-1",
+     "observation": "Same consultation room, with window and plant. In review/page-05.png the tablet from 04-3 is gone, the laptop closed in 04-3 is open on patient details, and Ravi has arrived and sits on the right with his bag on the floor."
+    },
+    {
+     "from": "05-1",
+     "to": "05-2",
+     "observation": "Same two-shot widened. The laptop now shows the consent card (mic, shield, check box) as Ananya asks before the AI listens."
+    },
+    {
+     "from": "05-2",
+     "to": "05-3",
+     "observation": "Ravi, having consented, answers the opening question ('I've been feeling tired lately.'). The laptop shows SOAP notes with the mic glowing, so the consent comes before the listening."
+    },
+    {
+     "from": "05-3",
+     "to": "05-4",
+     "observation": "Reverse angle over Ravi's shoulder. Ananya listens, looking at him and not at the laptop, while the mic glows at the left. The caption sums up."
+    },
+    {
+     "from": "05-4",
+     "to": "06-1",
+     "observation": "Page turn to a laptop close-up. In review/page-06.png the bezel, desk edge, window and plant at the top right, and Ananya's coat-sleeved hand on the trackpad keep it in the same consultation."
+    }
+   ]
+  }
+ },
+ {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-06-6a878c6df180e7eff0c1ab8ec92130d3e43d8f2ab00ebded1d717d942db04330.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "changes-requested",
+  "observations": [
+   "Reviewer identity: task is null because the runtime gave me no task ID. The parent must record the real Agent ID.",
+   "What I read: this request (page-06 script, 05 boundary context, transitions, first reading), source/original.txt in full and REVISION-2026-11-11.md from Request 3 onward. Text file I read: storyboards-unnumbered/page-06.svg. Images I opened with Read and looked at: storyboards-unnumbered/page-06.png, storyboards/page-06.png, workflow/review/page-06.png, workflow/review/page-05.png and workflow/review/page-07.png. I did not open storyboards/page-06.svg, the reading-flow files or the individual assets/panels/06-*.png files. I did not compute any hashes.",
+   "BLOCKING. Both storyboard PNGs for page 06 show the old layout from before the refit and do not match storyboards-unnumbered/page-06.svg or the script. In the PNG, 06-1 has the planner header at about 40,40 and the tile labels at about 74, 404 and 724 (y about 494); the SVG and script have the header at 138,106 and the tiles at 193, 421 and 624 (y388). In the PNG, 06-2 has ananya at about 524,928, the balloon at about 464,684 and the PLAN OF CARE label at about 40,1088; the SVG and script have ananya at 278,861, the balloon at 304,684 and the label at 40,1108. The PNGs were not re-exported after the refit.",
+   "The recorded first reading (378322c6…) therefore describes the stale layout: the header at the top-left corner of an empty panel, and the balloon tail to an ananya placed centre-right. No image-only first reading exists for the current refitted storyboard, so this comparison cannot pass.",
+   "Judging the current layout on its merits (SVG plus composed preview): in 06-1 the header label sits on the drawn teal header bar inside the laptop screen. The three tile labels sit on the bottom bands of the tooth chart, eye diagram and growth chart tiles. Reading order is header, then left to right. Minor lettering item: the Paediatrician label (y388-526) runs slightly past the screen's bottom edge onto the bezel. It stays clear of the protected hand region (y544 and below).",
+   "First-reader concern 1 (no scene cue for 06-1): settled by the accepted art. The laptop bezel with its camera dot, the wooden desk, the window and plant at the top right, and Ananya's hand in a white-coat sleeve with a teal cuff on the trackpad place it in the same consultation. The concern that the dentist, eye and paediatric tiles do not fit Ravi's tiredness is acceptable. This is the user's requested walkthrough of the doctor's screen (Request 3 and the 'add page if needed' follow-up), and the header 'SPECIALITY-SPECIFIC TREATMENT PLANNER' frames the tiles as the product adapting to each speciality, not as Ravi's care.",
+   "First-reader concern 2 (empty middle of 06-1): filled by the tile art. This was a placeholder artifact.",
+   "First-reader concern 3 (the cutaway separates complaint and response; Ravi does not react): acceptable. 05-4 already shows Ananya listening. 'We'll go through your concerns…' reads as her summing up after the screen tour, and in the preview Ravi's relaxed smile and hands on his knees serve as his silent reaction.",
+   "First-reader concern 4 (caption lower-left, balloon upper-right): in the current layout the balloon (y684) is far above the PLAN OF CARE label (y1108), and the label sits on the drawn laptop screen, so the balloon is read first. In the preview the tail ends at Ananya's mouth. Ananya is on the left and Ravi on the right, as in 05-1 and 05-2."
+  ],
+  "issues": [
+   {
+    "problem": "storyboards-unnumbered/page-06.png and storyboards/page-06.png are stale pre-refit exports that do not match the refitted page-06 SVG and script in this request. The recorded image-only first reading was made on that stale layout. Re-export both PNGs from the current SVGs, run a fresh prepare-reading and record-reading on the new unnumbered PNG, then prepare a new comparison request.",
+    "location": "page 06 (06-1, 06-2), workflow/storyboards-unnumbered/page-06.png, workflow/storyboards/page-06.png, first-reading storyboard-06-378322c6…",
+    "resolved": false
+   }
+  ],
+  "readingReview": {
+   "withoutGuides": true,
+   "firstReadingHash": "c16eb7268b78bb8864c69aa7cbbd7fae239a2b20c9284cba56a99883ec27e34e",
+   "comparison": "The first reader's order (header, then the three tiles left to right; balloon, then PLAN OF CARE) matches the script, and I find the same order in the current SVG and preview. But the first reading was made on the stale PNG. Its positional observations (header in an empty panel corner, Ananya centre-right, label at y1088) do not describe the current storyboard. The predicted order below is from the current SVG and preview, not an image-only reading. A new first reading is required.",
+   "predictedOrder": [
+    {
+     "panel": "06-1",
+     "dialogue": [
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    {
+     "panel": "06-2",
+     "dialogue": [
+      1,
+      2
+     ]
+    }
+   ],
+   "observations": [
+    "Current SVG, 06-1: the header (y106) is above three tile labels that share one row (y388) at x 193, 421 and 624, so the order is header first, then left to right.",
+    "Current SVG, 06-2: the balloon at top centre (y684) comes clearly before the label at lower left (y1108). The tail reaches Ananya's anchor at 418,913."
+   ],
+   "transitions": [
+    {
+     "from": "05-4",
+     "to": "06-1",
+     "observation": "From Ananya listening, with the mic glowing on the laptop at the left, to a close-up of the same laptop on the planner section. The bezel, desk, window and plant, and her sleeved hand on the trackpad keep the place."
+    },
+    {
+     "from": "06-1",
+     "to": "06-2",
+     "observation": "Pull back to the two-shot past the laptop, matching 05-1's staging. The screen now shows plan-of-care cards and Ananya sums up while Ravi relaxes, bag on the floor."
+    },
+    {
+     "from": "06-2",
+     "to": "07-1",
+     "observation": "From the seated consultation to the reception desk in review/page-07.png. Ravi now has his bag on his shoulder and his phone out, and Meera is at the monitor. It reads as the end of the same visit."
+    }
+   ]
+  }
+ },
+ {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-07-622c5dd053686fd8d35b6034be884d32ddda649418264a6f6913cec6964eef58.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Reviewer identity: task is null because the runtime gave me no task ID. The parent must record the real Agent ID.",
+   "What I read: this request's transitions, the dialogue lines and the 'head' entry for 07-1 to 07-4 and the 06/08 boundary context, plus the first reading (377e1cd1…), source/original.txt in full, and the earlier page-07 history record storyboard-07-69600f8b… for comparison. Text file I read: storyboards-unnumbered/page-07.svg. Images I opened with Read and looked at: storyboards-unnumbered/page-07.png, storyboards/page-07.png, workflow/review/page-07.png, workflow/review/page-06.png and workflow/review/page-08.png. I did not open storyboards/page-07.svg, the page-08 SVGs, the reading-flow files or the individual assets/panels PNGs. I did not compute any hashes.",
+   "The unnumbered page-07 PNG matches storyboards-unnumbered/page-07.svg: meera at 367,128, ravi at 572,114, the 07-2 ravi box at 369,614, the 07-3 meera box at 691,741 with the ravi head dot at 970,760, and the 07-4 boxes at 291, 370 and 755. All four text items match source page 7 word for word.",
+   "First-reader concern 1 (no cue for the change from the consultation to Meera): the accepted 07-1 art shows the reception desk, monitor, waiting chairs with seated patients, and Ravi with his bag on his shoulder and phone in hand. The preceding panel is the current 06-2 consultation two-shot, and the cut reads as the end of the same visit. Acceptable.",
+   "First-reader concern 2 ('Let's walk through what is available to you' is never shown): this is source text and structure (source page 7, panels 3-4). The 07-4 caption closes the visit. Not a storyboard defect.",
+   "First-reader concern 3 (the ravi label crosses the 07-3 right border): Ravi is a scripted 'head' registration. review/page-07.png shows the side and back of his head and his phone hand in the right foreground, inside the frame. Placeholder artifact.",
+   "First-reader concern 4 (the 07-4 ananya and meera boxes nearly touch, 'anany' clipped): in the preview they are two separate figures waving in the doorway below the caption band, with no crowding. Placeholder artifact.",
+   "This page changed only because page 06 was inserted before it. The incoming boundary is now the refitted 06-2. I checked it with review/page-06.png and the 06 boundary context, not with the stale page-06 storyboard PNGs (see the page-06 response). This request lists only the page-06 SVGs, which are current."
+  ],
+  "issues": [],
+  "readingReview": {
+   "withoutGuides": true,
+   "firstReadingHash": "08fe0e094350b4f608c853022fc4adc3e9fc148f82d710a4d69e8c0914bbfee6",
+   "comparison": "My order matches the first reader's with no skips: Meera's explanation, Ravi's question and the WELBUK HEALTH label, Meera's answer, then the closing caption. The scene-change concern is settled by the accepted 07-1 art following the current 06-2. The unshown walkthrough comes from the source. The border and clipped-name points are placeholder artifacts, and the composed art shows they cause no problem.",
+   "predictedOrder": [
+    {
+     "panel": "07-1",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "07-2",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "07-3",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "07-4",
+     "dialogue": [
+      1
+     ]
+    }
+   ],
+   "observations": [
+    "Explanation, question and answer alternate at top left, middle left and middle right. Each reply sits right after the line it answers.",
+    "The 07-2 WELBUK HEALTH label sits at the bottom of the middle-left panel. It is read after Ravi's question and before Meera's answer in 07-3, and it does not break up the question-and-answer pair."
+   ],
+   "transitions": [
+    {
+     "from": "06-2",
+     "to": "07-1",
+     "observation": "From the consultation two-shot ('…decide the right next steps together.') with Ravi seated and his bag on the floor, to the reception desk. In the art Ravi has his bag on his shoulder and his phone out, and Meera is at the monitor. Same visit, at its end."
+    },
+    {
+     "from": "07-1",
+     "to": "07-2",
+     "observation": "Close-up on the phone Ravi held in 07-1. His question follows Meera's explanation."
+    },
+    {
+     "from": "07-2",
+     "to": "07-3",
+     "observation": "Reverse angle: Meera on the left faces Ravi's head and phone in the right foreground, consistent with 07-1. She answers his question."
+    },
+    {
+     "from": "07-3",
+     "to": "07-4",
+     "observation": "From the desk to the street. Ravi waves back, Ananya and Meera wave from the doorway, and the caption sums up the visit."
+    },
+    {
+     "from": "07-4",
+     "to": "08-1",
+     "observation": "From the clinic street to a train window in review/page-08.png. 'Tomorrow, care may take us beyond our hometown.' marks a hypothetical time jump, and Ravi keeps the same shirt, bag and phone."
+    }
+   ]
+  }
+ }
+]

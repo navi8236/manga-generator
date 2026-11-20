@@ -10,6 +10,8 @@
 
 メモなどを横書きで引用する場合は、セリフへ `textDirection: "horizontal"` と `textColumns: ["一行目", "二行目"]` を指定する。配列は表示行の順番で、結合した内容は改行を除いた `text` と完全一致する必要がある。省略時または `vertical` は従来の縦書き。横書きも顔・手・小道具・尾・読順の検査対象で、文字を変えずに向きを変更した場合も `plan`、ネーム、採用・合成・独立レビューを更新する。
 
+英語など左から右へ読む作品は、workflow.json に `readingDirection: "left-to-right"` を指定する。コマの行内順序と同一コマ内の吹き出し順を左→右で検査し、`narrativeDesign.direction` の読順計画、英語の読書画面（`templates/reader-ltr.html`、→キーで次ページ）と一覧ページを使う。省略時または `right-to-left` は従来どおり。横書きの幅は全角文字を26px、半角英字を字幅に応じて見積もるため、英語のセリフも `textDirection: "horizontal"` と `textColumns` で行を指定する（区切りの空白は前の行の末尾に含める）。カラー作品は `colorMode: "color"` で生成指示の monochrome を full-colour に替える。製品名・看板などの組版ラベルは `cast` に `{"kind": "caption", "variant": "label"}` の話者を作り、地の文と異なる角丸の枠で表示する。いずれも指定しない既存作品の出力は変わらない。
+
 scriptの合格には全コマの `dialogueReview` が必要です。原作の問い返答や指示対象を復元してからネームと画像編集へ進みます。OCRの一致は脚本の自然さの証明ではありません。詳細は[工程レビュー](docs/REVISION-AND-REVIEWS.md)を参照してください。
 
 ネーム設計は [読順・場面転換・時間と感情](docs/NARRATIVE-FLOW.md) に従う。原作の情報公開順と感情の変化を先に設計し、`workflow plan` が保存する `workflow/narrative-plan.json` と `workflow/reading-flow/` で全コマの接続を検討する。番号なしの実読レビューを先に行い、番号付き経路と照合する。配置が合わないときは人物配置・構図・コマ分割へ戻る。共通処理変更後の既存ロックは、新基準の検品・再現検証を通してから改訂版を固定する。

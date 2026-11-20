@@ -1,0 +1,23 @@
+{
+  "promptVersion": 2,
+  "panel": "03-1",
+  "project": "works/auto-6294ee8a2094/workflow.json",
+  "fingerprint": "871dd6f5626c50121739ca67be3eaff0c08b85ce8f8143acc11553fa0a85f4da",
+  "operation": "edit",
+  "sourceHash": "78b77a0f8272fd38c6bc6f4b8cf2ef3bb3c7d7d97112ea3f540dcd482913144a",
+  "prompt": "TASK: Edit image 1. This is a local revision of the supplied artwork.\nINPUT IMAGES (in supplied order):\nImage 1: edit-target. Base image to edit; requested changes take precedence over preservation.\nCHANGE REQUEST:\nRecolour only the two background patients seen from behind in the waiting chairs: the man with short black hair currently in a light green shirt now wears a plain grey shirt, and the woman with a bun in lilac now wears a plain dark-brown kurti. Keep everything else exactly as it is: Mr. Raman with glasses, cream shirt and walking stick in his right hand at the counter, Meera in her blue kurta with her braid and bangle typing at the keyboard, the desktop monitor, the wall TV with its empty white strip, the QR stand by the glass door, the vitals cart, the plant, the lighting and the plain white area at the top-left. No text, numbers or logos anywhere.\nPRESERVE: retain all areas, identity traits, acting, clothing, composition and lettering space outside the requested change. The change request overrides preservation where necessary; repair connected anatomy, contact objects and occlusion together. Supporting images supply only their stated roles. Do not copy their entire scene or pose.\nOUTPUT: one edited image matching the target aspect. Do not add text, guide marks or a global style filter. Re-measure faces and mouths and inspect lettering space after adoption.",
+  "promptHash": "5316ac629dcf4850a4cfde6812dc3e21e9c5af9721c3ac80726592dd6e42b614",
+  "references": [
+    {
+      "file": "works/auto-6294ee8a2094/workflow/generation-inputs/03-1-17e104d382298afc/reference-0.png",
+      "hash": "2db5b751525dd73e41fee266a4d62cff4e3a6212c9d15b4eee7c76461586cef1",
+      "original": "works/auto-6294ee8a2094/assets/panels/03-1.png",
+      "index": 1,
+      "kind": "edit-target",
+      "role": "Base image to edit; requested changes take precedence over preservation."
+    }
+  ],
+  "renderer": "Higgsfield gpt_image_2_6",
+  "model": "gpt_image_2_6",
+  "seed": null
+}

@@ -1,0 +1,3298 @@
+{
+  "base": {
+    "stage": "final",
+    "target": "all",
+    "sourceFile": "works/auto-6294ee8a2094/source/original.txt",
+    "decisions": [
+      {
+        "id": "renderer-higgsfield",
+        "kind": "preference",
+        "text": "Generate all images with Higgsfield model gpt_image_2_6 (quality high, PNG). Character sheets and panels are text-free; lettering is composited by the shared CLI.",
+        "reason": "User instruction on 2026-11-10 ('sure') approving Higgsfield after the declared ComfyUI renderer was unreachable in this session."
+      }
+    ],
+    "readingPolicy": "unnumbered-proximity-and-scene-transitions-v2",
+    "requiredTransitions": [
+      {
+        "from": "01-1",
+        "to": "01-2"
+      },
+      {
+        "from": "01-2",
+        "to": "01-3"
+      },
+      {
+        "from": "01-3",
+        "to": "02-1"
+      },
+      {
+        "from": "02-1",
+        "to": "02-2"
+      },
+      {
+        "from": "02-2",
+        "to": "02-3"
+      },
+      {
+        "from": "02-3",
+        "to": "02-4"
+      },
+      {
+        "from": "02-4",
+        "to": "03-1"
+      },
+      {
+        "from": "03-1",
+        "to": "03-2"
+      },
+      {
+        "from": "03-2",
+        "to": "03-3"
+      },
+      {
+        "from": "03-3",
+        "to": "03-4"
+      },
+      {
+        "from": "03-4",
+        "to": "03-5"
+      },
+      {
+        "from": "03-5",
+        "to": "04-1"
+      },
+      {
+        "from": "04-1",
+        "to": "04-2"
+      },
+      {
+        "from": "04-2",
+        "to": "04-3"
+      },
+      {
+        "from": "04-3",
+        "to": "05-1"
+      },
+      {
+        "from": "05-1",
+        "to": "05-2"
+      },
+      {
+        "from": "05-2",
+        "to": "05-3"
+      },
+      {
+        "from": "05-3",
+        "to": "05-4"
+      },
+      {
+        "from": "05-4",
+        "to": "06-1"
+      },
+      {
+        "from": "06-1",
+        "to": "06-2"
+      },
+      {
+        "from": "06-2",
+        "to": "06-3"
+      },
+      {
+        "from": "06-3",
+        "to": "06-4"
+      },
+      {
+        "from": "06-4",
+        "to": "07-1"
+      },
+      {
+        "from": "07-1",
+        "to": "07-2"
+      },
+      {
+        "from": "07-2",
+        "to": "07-3"
+      },
+      {
+        "from": "07-3",
+        "to": "07-4"
+      }
+    ],
+    "script": {
+      "title": "A Better Way to Care — Welbuk",
+      "cast": {
+        "ananya": {
+          "name": "Dr. Ananya",
+          "description": "Indian woman in her late 30s, clinic owner and doctor. Calm, confident and caring. Teal kurta beneath an open white coat (source). Shoulder-length black hair tied in a low bun with a few loose strands, slim build, small gold stud earrings, a stethoscope worn around her neck (never in use) in every scene where she wears the white coat (manga supplement, from the accepted reference sheet).",
+          "faceDesign": {
+            "traits": [
+              "Calm almond-shaped eyes with slightly heavy upper lids and a gentle downward outer corner",
+              "Soft, straight medium-thick eyebrows set fairly level",
+              "Oval face with a defined, slightly pointed chin and a small bindi-free forehead; small nose with a rounded tip"
+            ],
+            "reference": "works/auto-6294ee8a2094/assets/characters/main-cast.png",
+            "settingBasis": "Source: Indian female clinic owner, late 30s, calm, confident, caring; teal kurta beneath white coat. Manga supplement: the three face traits, low bun hairstyle and gold studs, chosen to separate her from Meera."
+          }
+        },
+        "meera": {
+          "name": "Meera",
+          "description": "Indian woman in her late 20s, clinic receptionist. Friendly and capable. Blue kurta (source). Long black hair in a single side braid over her left shoulder, round face, slim build, a thin silver bangle on the right wrist (manga supplement).",
+          "faceDesign": {
+            "traits": [
+              "Large, round bright eyes with clearly visible lower lash line",
+              "Thin, gently arched eyebrows set high above the eyes",
+              "Round face with full cheeks and a short soft chin; small dimple on the left cheek when smiling"
+            ],
+            "reference": "works/auto-6294ee8a2094/assets/characters/main-cast.png",
+            "settingBasis": "Source: Indian female receptionist, late 20s, friendly and capable, blue kurta. Manga supplement: the three face traits, side braid and silver bangle."
+          }
+        },
+        "ravi": {
+          "name": "Ravi",
+          "description": "Indian man in his mid-30s, patient. Warm and approachable. Light green shirt (source). Short neat black hair with a side part, trimmed short beard, medium build, dark trousers, a simple wristwatch on the left wrist, small dark-brown shoulder bag (manga supplement).",
+          "faceDesign": {
+            "traits": [
+              "Warm, slightly narrow eyes that crease at the outer corners when he smiles",
+              "Thick, straight dark eyebrows close to the eyes",
+              "Square jaw framed by a short trimmed beard and a broad nose"
+            ],
+            "reference": "works/auto-6294ee8a2094/assets/characters/main-cast.png",
+            "settingBasis": "Source: Indian male patient, mid-30s, warm, approachable, light green shirt. Manga supplement: the three face traits, beard, side part and wristwatch."
+          }
+        },
+        "specialist": {
+          "name": "Specialist (vision)",
+          "description": "Symbolic specialist doctor in a future-vision clinic in another city. Indian man in his 50s with greying temples, rimless glasses, light grey blazer over a pale blue shirt, stethoscope around his neck (manga supplement; the source only says \"specialist\").",
+          "faceDesign": {
+            "traits": [
+              "Kind eyes behind thin rimless rectangular glasses",
+              "Bushy salt-and-pepper eyebrows",
+              "Long face with deep smile lines and a neat grey moustache"
+            ],
+            "reference": "works/auto-6294ee8a2094/assets/characters/vision-cast.png",
+            "settingBasis": "Source: \"a conceptual Welbuk-connected clinic and specialist\". Every visual detail is a manga supplement."
+          }
+        },
+        "partner": {
+          "name": "Ravi's partner",
+          "description": "Symbolic family member in the vision scene. Indian woman in her early 30s, shoulder-length wavy hair, mustard-yellow kurta (manga supplement; the source only says 'partner').",
+          "faceDesign": {
+            "traits": [
+              "Wide-set eyes with a soft, lively expression",
+              "Medium eyebrows with a high gentle arch",
+              "Heart-shaped face with a narrow chin and a small mole under the right eye"
+            ],
+            "reference": "works/auto-6294ee8a2094/assets/characters/vision-cast.png",
+            "settingBasis": "Source: \"symbolic family scene with Ravi, partner, and child\". Appearance is a manga supplement."
+          }
+        },
+        "child": {
+          "name": "Ravi's child",
+          "description": "Symbolic family member in the vision scene. Child of about seven, short hair, orange T-shirt (manga supplement; the source only says 'child').",
+          "faceDesign": {
+            "traits": [
+              "Big round curious eyes",
+              "Short, light eyebrows",
+              "Round chubby cheeks and a small upturned nose"
+            ],
+            "reference": "works/auto-6294ee8a2094/assets/characters/vision-cast.png",
+            "settingBasis": "Source: \"symbolic family scene with Ravi, partner, and child\". Appearance is a manga supplement."
+          }
+        },
+        "nurse": {
+          "name": "Nurse",
+          "description": "Indian woman in her early 30s, clinic nurse. Friendly and efficient (revised source). Plain lavender scrub top and trousers, white clinic shoes, a plain lavender lanyard with a blank card, small wristwatch on her left wrist; chin-length wavy black bob with a side part tucked behind her right ear (manga supplement, from the accepted nurse sheet).",
+          "faceDesign": {
+            "traits": [
+              "Wide-set bright eyes with slightly lifted outer corners",
+              "Thick straight eyebrows",
+              "Heart-shaped face with a small cleft (dimpled) chin and a small straight nose"
+            ],
+            "reference": "works/auto-6294ee8a2094/assets/characters/nurse.png",
+            "settingBasis": "Revised source (2026-11-11): Indian female clinic nurse, friendly and efficient. Manga supplement: the three face traits, bob haircut and lavender scrubs, chosen to separate her from Ananya and Meera."
+          }
+        },
+        "raman": {
+          "name": "Mr. Raman",
+          "description": "Indian man in his early 70s, a regular patient (revised source: elderly man who checks in at the front desk). Cream half-sleeve shirt, grey trousers, brown sandals, round reading glasses, wooden walking stick in his right hand, short white hair (manga supplement, from the accepted check-in patients sheet).",
+          "faceDesign": {
+            "traits": [
+              "Deep-set gentle eyes with smile lines",
+              "Bushy white eyebrows",
+              "Long oval face with prominent ears"
+            ],
+            "reference": "works/auto-6294ee8a2094/assets/characters/checkin-patients.png",
+            "settingBasis": "Revised source (2026-11-11): an elderly man who checks in at the front desk. Name and appearance are manga supplements."
+          }
+        },
+        "priya": {
+          "name": "Priya",
+          "description": "Indian woman in her mid-20s, a patient (revised source: young woman who checks in on the Welbuk Health app). Coral-pink kurti over blue jeans, white sneakers, small crossbody bag, high ponytail (manga supplement, from the accepted check-in patients sheet).",
+          "faceDesign": {
+            "traits": [
+              "Large almond eyes with winged lashes",
+              "Short straight eyebrows",
+              "Small pointed chin with a beauty spot above the left lip"
+            ],
+            "reference": "works/auto-6294ee8a2094/assets/characters/checkin-patients.png",
+            "settingBasis": "Revised source (2026-11-11): a young woman who checks in on the Welbuk Health app. Name and appearance are manga supplements."
+          }
+        },
+        "narration": {
+          "kind": "caption",
+          "name": "Caption"
+        },
+        "label": {
+          "kind": "caption",
+          "variant": "label",
+          "name": "Product / vision label"
+        }
+      },
+      "style": "Full-colour, approachable Indian slice-of-life manga. Clean confident line art with varied line weight, soft flat cel shading, warm natural daylight, restrained blue and teal accents, simple readable backgrounds. Expressive but natural faces, precise hands. No photorealism, no glossy gradients, no surface microtexture. Absolutely no text, letters, logos, numbers, speech bubbles or captions inside the artwork; device screens show only abstract blank blocks and simple icons.",
+      "continuity": "Keep Dr. Ananya, Meera, Ravi, the Nurse, Mr. Raman and Priya identical to their canonical reference sheets in face traits, hair, build, skin tone and clothing for the whole comic. Device screens never show readable text or real personal data. Page 7 panels 2-3 (07-2, 07-3) are a future vision: soft pale-blue vignette border and lighter, airy palette so they never read as current features.",
+      "sections": {
+        "clinic-morning": {
+          "summary": "A weekday morning at Dr. Ananya’s friendly neighbourhood clinic in Tamil Nadu, before Welbuk: busy reception, paper registers, ringing phone, queue.",
+          "location": "Small neighbourhood clinic in Tamil Nadu: whitewashed entrance with potted plants and a simple awning, reception desk with paper registers and a desk phone, waiting chairs (setting is source; furniture details are manga supplement).",
+          "costumes": {
+            "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
+            "meera": "Blue kurta with white churidar, silver bangle on right wrist."
+          },
+          "objects": {
+            "registers": "Stack of paper appointment registers with blank pages (no legible writing).",
+            "desk-phone": "Corded beige desk phone on the reception desk."
+          }
+        },
+        "onboarding": {
+          "summary": "Later the same week, after hours: the clinic sets up Welbuk. Ananya configures Welbuk Practice on a laptop; Meera tries Welbuk Care on a staff phone.",
+          "location": "Dr. Ananya’s small office beside reception, desk with a laptop, window with evening light (manga supplement).",
+          "costumes": {
+            "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
+            "meera": "Blue kurta with white churidar, silver bangle on right wrist."
+          },
+          "objects": {
+            "laptop": "Silver laptop; screen shows only a generic setup form of blank fields and simple blocks, no text.",
+            "staff-phone": "Meera’s smartphone; screen shows abstract blocks and a simple calendar icon, no text."
+          }
+        },
+        "reception": {
+          "summary": "A later morning: the clinic now runs with Welbuk. Patients check in at the front desk, ahead on the Welbuk Health app, or with the QR code at the door; slots appear on the waiting-room TV; the nurse takes Ravi’s vitals.",
+          "location": "The same clinic reception, now tidy: a QR check-in stand just inside the glass entrance, a wall-mounted waiting-room TV, waiting chairs with a few seated figures seen from behind, the reception desk with a desktop monitor angled toward Meera, and a small vitals corner beside reception.",
+          "costumes": {
+            "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
+            "meera": "Blue kurta with white churidar, silver bangle on right wrist.",
+            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist.",
+            "nurse": "Plain lavender scrubs, white clinic shoes, blank lavender lanyard card, wristwatch on left wrist.",
+            "raman": "Cream half-sleeve shirt, grey trousers, brown sandals, round reading glasses, wooden walking stick.",
+            "priya": "Coral-pink kurti over blue jeans, white sneakers, small crossbody bag."
+          },
+          "objects": {
+            "monitor": "Reception desktop monitor and keyboard; screen faces Meera, only blank fields visible if seen.",
+            "qr-stand": "Small check-in stand just inside the entrance with a square abstract QR-like pattern (not a real code, no text).",
+            "waiting-tv": "Wall-mounted waiting-room TV; teal screen with an empty white token area; the token number is lettered, never drawn.",
+            "walking-stick": "Mr. Raman’s simple wooden walking stick.",
+            "priya-phone": "Priya’s smartphone; app screen shows only a calendar icon and a check-mark card, no text.",
+            "vitals-kit": "Blood-pressure cuff with a hand bulb, fingertip pulse oximeter and a small monitor showing abstract shapes only (no readings).",
+            "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 6 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
+          }
+        },
+        "consultation": {
+          "summary": "The same visit: Ravi talks with Dr. Ananya in the consultation room.",
+          "location": "Bright, simple consultation room: desk, two chairs, a closed laptop pushed aside, window with plant. No medical charts with text.",
+          "costumes": {
+            "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
+            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
+          },
+          "objects": {
+            "closed-laptop": "Laptop closed and pushed to the side of the desk.",
+            "doctor-tablet": "Dr. Ananya’s tablet. Shown only in 04-3 (a simple notification card with a blank strip; the alert text is lettered, never drawn); from 05-1 on it is put away in the desk drawer and must not appear."
+          }
+        },
+        "departure": {
+          "summary": "The end of the same visit: Ravi leaves the clinic reassured.",
+          "location": "Clinic entrance from the street side, morning sun.",
+          "costumes": {
+            "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
+            "meera": "Blue kurta with white churidar, silver bangle on right wrist.",
+            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
+          },
+          "objects": {}
+        },
+        "travel": {
+          "summary": "A possible tomorrow: Ravi travels to another Indian city by train. Hypothetical framing (\"care may take us beyond our hometown\").",
+          "location": "Indian Railways-style train seat by a window, passing city skyline (no signage).",
+          "costumes": {
+            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
+          },
+          "objects": {}
+        },
+        "vision": {
+          "summary": "WELBUK VISION — not a launched feature. A conceptual future of connected clinics, specialists and family wellness, drawn inside a soft pale-blue vignette.",
+          "location": "Idealised, airy spaces: a modern clinic in another city linked by faint dotted lines to small clinic silhouettes; a family living room. Lighter palette and rounded vignette border.",
+          "costumes": {
+            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist.",
+            "specialist": "Light grey blazer over a pale blue shirt, rimless glasses, stethoscope worn around his neck (not in use).",
+            "partner": "Mustard-yellow kurta.",
+            "child": "Orange T-shirt and shorts."
+          },
+          "objects": {
+            "family-tablet": "Tablet showing an abstract family wellness app: three simple profile circles and a heart icon, no text."
+          }
+        },
+        "closing": {
+          "summary": "Symbolic closing group portrait in front of the clinic, tying the three Welbuk products to the three people.",
+          "location": "Clinic entrance with awning and plants, warm morning light.",
+          "costumes": {
+            "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
+            "meera": "Blue kurta with white churidar, silver bangle on right wrist.",
+            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
+          },
+          "objects": {}
+        }
+      },
+      "pages": [
+        {
+          "id": "01",
+          "section": "clinic-morning",
+          "purpose": "Introduce Dr. Ananya’s warm clinic and the paperwork pressure that motivates change.",
+          "expectation": "How will Dr. Ananya make the busy work simpler?",
+          "panels": [
+            {
+              "id": "01-1",
+              "order": 1,
+              "role": "提示",
+              "beat": "A warm, busy morning at the clinic",
+              "rect": [
+                24,
+                24,
+                976,
+                600
+              ],
+              "scene": "Wide establishing shot of a friendly neighbourhood clinic in Tamil Nadu in morning sun: whitewashed entrance, simple awning, potted plants. Dr. Ananya stands in the doorway left of centre, smiling and welcoming an elderly patient seen from behind; two more patients wait on perforated metal chairs at right, seen from behind or in small side view without detailed faces.",
+              "action": "Ananya gestures the patient inside with an open left hand.",
+              "emotion": "Warm, welcoming, energetic morning.",
+              "camera": "Wide, eye level, slight high angle; empty sky band at top-left for the caption.",
+              "information": "Who Dr. Ananya is and that her clinic is busy and caring.",
+              "readingFlow": {
+                "entry": [
+                  40,
+                  40
+                ],
+                "exit": [
+                  990,
+                  620
+                ]
+              },
+              "production": {
+                "moment": "Ananya mid-greeting as the first patient steps toward the door.",
+                "before": "Patients arrive and line up outside the clinic.",
+                "after": "The patient walks in; Ananya follows to start the day.",
+                "hands": {
+                  "ananya": {
+                    "left": "open palm gesturing the patient inside",
+                    "right": "resting at her side, empty"
+                  }
+                },
+                "props": []
+              },
+              "speakers": {
+                "ananya": {
+                  "face": [
+                    398,
+                    170,
+                    52,
+                    64
+                  ],
+                  "anchor": [
+                    423,
+                    222
+                  ]
+                }
+              },
+              "dialogue": [
+                {
+                  "speaker": "narration",
+                  "text": "A busy day at Dr. Ananya's clinic.",
+                  "textColumns": [
+                    "A busy day at ",
+                    "Dr. Ananya's clinic."
+                  ],
+                  "textDirection": "horizontal",
+                  "side": "left",
+                  "x": 24,
+                  "dy": 24
+                }
+              ]
+            },
+            {
+              "id": "01-2",
+              "order": 2,
+              "role": "始動",
+              "beat": "Meera is overwhelmed by paper registers and calls",
+              "rect": [
+                24,
+                648,
+                560,
+                816
+              ],
+              "scene": "Reception desk, medium shot. Meera behind the desk holds a ringing corded desk phone receiver to her ear with her left hand while writing in an open paper register with a pen in her right hand. A tall stack of paper registers beside her; a queue of patients (backs only) in front of the desk. Small motion lines show the phone ringing.",
+              "action": "Meera juggles the call and the register, eyebrows raised, a sweat drop.",
+              "emotion": "Flustered but still friendly and capable.",
+              "camera": "Medium shot from the waiting-area side, tall framing to show the stack of registers.",
+              "information": "The specific pain points: appointments, patient details, follow-ups.",
+              "readingFlow": {
+                "entry": [
+                  44,
+                  680
+                ],
+                "exit": [
+                  560,
+                  1490
+                ]
+              },
+              "production": {
+                "moment": "Meera pauses writing mid-call and sighs her wish aloud.",
+                "before": "The phone rang while she was registering the next patient in the queue.",
+                "after": "She keeps going with the call and the queue.",
+                "hands": {
+                  "meera": {
+                    "left": "holding desk-phone receiver to her left ear",
+                    "right": "holding a pen over the open register"
+                  }
+                },
+                "props": [
+                  {
+                    "id": "desk-phone",
+                    "before": "ringing on the desk",
+                    "during": "receiver held to Meera’s ear",
+                    "after": "still in use",
+                    "heldBy": "meera.left"
+                  },
+                  {
+                    "id": "registers",
+                    "before": "stacked on the desk",
+                    "during": "one open under her pen, the rest stacked high",
+                    "after": "unchanged",
+                    "heldBy": "none"
+                  },
+                  {
+                    "id": "pen",
+                    "before": "in Meera’s hand",
+                    "during": "writing in the register",
+                    "after": "in Meera’s hand",
+                    "heldBy": "meera.right"
+                  }
+                ]
+              },
+              "speakers": {
+                "meera": {
+                  "face": [
+                    318,
+                    945,
+                    85,
+                    100
+                  ],
+                  "anchor": [
+                    358,
+                    1028
+                  ]
+                }
+              },
+              "dialogue": [
+                {
+                  "speaker": "meera",
+                  "text": "Appointments, patient details, follow-ups...",
+                  "textColumns": [
+                    "Appointments, ",
+                    "patient details, ",
+                    "follow-ups..."
+                  ],
+                  "textDirection": "horizontal",
+                  "side": "left",
+                  "x": 20,
+                  "dy": 24
+                },
+                {
+                  "speaker": "meera",
+                  "text": "I wish everything were easier to manage!",
+                  "textColumns": [
+                    "I wish everything ",
+                    "were easier ",
+                    "to manage!"
+                  ],
+                  "textDirection": "horizontal",
+                  "side": "left",
+                  "x": 280,
+                  "dy": 120
+                }
+              ]
+            },
+            {
+              "id": "01-3",
+              "order": 3,
+              "role": "決定",
+              "beat": "Ananya resolves to simplify the clinic’s work",
+              "rect": [
+                608,
+                648,
+                392,
+                816
+              ],
+              "scene": "Dr. Ananya stands at the side of the reception area, looking thoughtfully toward the busy desk in the background at frame left, where Meera is still on the phone writing in the register. Right hand lightly at her chin, left hand loosely at the front of her white coat. Simple background: wall, doorway, waiting chairs.",
+              "action": "Ananya watches Meera, then speaks with quiet determination.",
+              "emotion": "Thoughtful, then resolved and kind.",
+              "camera": "Tall medium-full shot, slight low angle, empty wall above her for the balloon.",
+              "information": "Ananya’s motive: time belongs with patients.",
+              "readingFlow": {
+                "entry": [
+                  630,
+                  680
+                ],
+                "exit": [
+                  990,
+                  1500
+                ]
+              },
+              "production": {
+                "moment": "Ananya decides, eyes on the reception desk.",
+                "before": "She has just seen Meera juggling the call and the registers.",
+                "after": "She will look for a better system (page 2).",
+                "hands": {
+                  "ananya": {
+                    "left": "loosely closed at the front of her white coat",
+                    "right": "fingers lightly at her chin"
+                  },
+                  "meera": {
+                    "left": "holding the desk-phone receiver to her ear (background)",
+                    "right": "writing in the register (background)"
+                  }
+                },
+                "props": []
+              },
+              "speakers": {
+                "ananya": {
+                  "face": [
+                    855,
+                    945,
+                    72,
+                    90
+                  ],
+                  "anchor": [
+                    882,
+                    1022
+                  ]
+                },
+                "meera": {
+                  "face": [
+                    680,
+                    1080,
+                    45,
+                    55
+                  ],
+                  "anchor": [
+                    703,
+                    1125
+                  ]
+                }
+              },
+              "dialogue": [
+                {
+                  "speaker": "ananya",
+                  "text": "Our time belongs with patients. Let's make the rest simpler.",
+                  "textColumns": [
+                    "Our time belongs ",
+                    "with patients. ",
+                    "Let's make the ",
+                    "rest simpler."
+                  ],
+                  "textDirection": "horizontal",
+                  "side": "left",
+                  "x": 18,
+                  "dy": 24
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "02",
+          "section": "onboarding",
+          "purpose": "Show onboarding with Welbuk Practice and Welbuk Care, establishing two of the three product roles.",
+          "expectation": "What changes for patients once the clinic is set up?",
+          "panels": [
+            {
+              "id": "02-1",
+              "order": 1,
+              "role": "転換",
+              "beat": "Onboarding begins on a laptop",
+              "rect": [
+                24,
+                24,
+                976,
+                520
+              ],
+              "scene": "Over-the-shoulder shot from behind Dr. Ananya’s right shoulder (she faces screen-right; her bun, gold stud and calm profile visible) at a desk: a clean silver laptop with a generic setup form of blank rounded fields and simple blocks (no text, no logos). Both her hands (teal sleeves under white coat cuffs) type on the keyboard. A mug on a coaster. Evening window light. Clear empty areas at top-left and top-right for labels.",
+              "action": "Fingers typing into the blank setup fields.",
+              "emotion": "Calm, fresh start.",
+              "camera": "Over-the-shoulder shot from behind Ananya’s right shoulder, laptop at three-quarter view.",
+              "information": "Time and place change: the clinic is now onboarding to Welbuk Practice.",
+              "transition": {
+                "kind": "time-change",
+                "bridge": "Office with evening light and the laptop replaces the busy morning desk.",
+                "settingBasis": "Source: \"The clinic begins its Welbuk onboarding.\" Evening timing is a manga supplement."
+              },
+              "readingFlow": {
+                "entry": [
+                  40,
+                  40
+                ],
+                "exit": [
+                  990,
+                  540
+                ]
+              },
+              "production": {
+                "moment": "Ananya fills in the first generic clinic field.",
+                "before": "She opened the laptop to begin onboarding.",
+                "after": "She pauses to think about team roles (02-2).",
+                "hands": {
+                  "ananya": {
+                    "left": "typing on the laptop keyboard",
+                    "right": "typing on the laptop keyboard"
+                  }
+                },
+                "props": [
+                  {
+                    "id": "laptop",
+                    "before": "closed on the desk",
+                    "during": "open, generic blank setup form on screen",
+                    "after": "open",
+                    "heldBy": "none"
+                  }
+                ]
+              },
+              "speakers": {
+                "ananya": {
+                  "face": [
+                    300,
+                    165,
+                    110,
+                    145
+                  ],
+                  "anchor": [
+                    372,
+                    290
+                  ]
+                }
+              },
+              "dialogue": [
+                {
+                  "speaker": "narration",
+                  "text": "The clinic begins its Welbuk onboarding.",
+                  "textColumns": [
+                    "The clinic begins its ",
+                    "Welbuk ",
+                    "onboarding."
+                  ],
+                  "textDirection": "horizontal",
+                  "side": "left",
+                  "x": 0,
+                  "dy": 0
+                },
+                {
+                  "speaker": "label",
+                  "text": "WELBUK PRACTICE for the clinic",
+                  "textColumns": [
+                    "WELBUK PRACTICE ",
+                    "for the ",
+                    "clinic"
+                  ],
+                  "textDirection": "horizontal",
+                  "side": "left",
+                  "x": 682,
+                  "dy": 0
+                }
+              ]
+            },
+            {
+              "id": "02-2",
+              "order": 2,
+              "role": "始動",
+              "beat": "Ananya organises clinic information and roles",
+              "rect": [
+                24,
+                568,
+                600,
+                520
+              ],
+              "scene": "Dr. Ananya seated at the desk in front of the laptop (screen angled away from the reader), right hand on the trackpad, left index finger resting at her chin as she considers team roles. Window behind her with soft evening light.",
+              "action": "Ananya looks from the screen up and to the right, planning.",
+              "emotion": "Focused, quietly pleased.",
+              "camera": "Medium shot, three-quarter front view, empty wall at upper left for the balloon.",
+              "information": "Welbuk Practice organises the clinic’s workflow.",
+              "readingFlow": {
+                "entry": [
+                  44,
+                  590
+                ],
+                "exit": [
+                  620,
+                  1080
+                ]
+              },
+              "production": {
+                "moment": "Ananya speaks while considering staff roles.",
+                "before": "She entered the clinic information.",
+                "after": "Meera joins with a staff phone (02-3).",
+                "hands": {
+                  "ananya": {
+                    "left": "index finger resting at her chin",
+                    "right": "resting on the laptop trackpad"
+                  }
+                },
+                "props": [
+                  {
+                    "id": "laptop",
+                    "before": "open on the desk",
+                    "during": "open, screen angled away",
+                    "after": "open",
+                    "heldBy": "none"
+                  }
+                ]
+              },
+              "speakers": {
+                "ananya": {
+                  "face": [
+                    365,
+                    655,
+                    105,
+                    115
+                  ],
+                  "anchor": [
+                    425,
+                    752
+                  ]
+                }
+              },
+              "dialogue": [
+                {
+                  "speaker": "ananya",
+                  "text": "We can organise our clinic workflow here.",
+                  "textColumns": [
+                    "We can organise our ",
+                    "clinic workflow here."
+                  ],
+                  "textDirection": "horizontal",
+                  "side": "left",
+                  "x": 20,
+                  "dy": 20
+                }
+              ]
+            },
+            {
+              "id": "02-3",
+              "order": 3,
+              "role": "始動",
+              "beat": "Meera discovers Welbuk Care for staff",
+              "rect": [
+                648,
+                568,
+                352,
+                520
+              ],
+              "scene": "Tall medium shot in the same evening office: Meera stands beside the wooden desk (open laptop with blank abstract form, pen cup, plant; an empty second office chair beside her (Dr. Ananya sits at the desk off-panel left); window with a roller blind and evening sky at right), holding a staff smartphone in her right hand at upper-chest height, screen toward the reader showing only abstract blocks and a simple calendar icon (no text). Left hand relaxed at her side. She looks up from the phone with a bright smile.",
+              "action": "Meera looks up from the phone with a bright smile.",
+              "emotion": "Relieved, excited.",
+              "camera": "Tall medium shot, slightly from her right.",
+              "information": "Welbuk Care gives staff role-specific tools.",
+              "readingFlow": {
+                "entry": [
+                  664,
+                  590
+                ],
+                "exit": [
+                  990,
+                  1080
+                ]
+              },
+              "production": {
+                "moment": "Meera holds up the staff phone and speaks.",
+                "before": "Meera picked up the staff phone from the desk to try the staff app.",
+                "after": "Both share a confident look (02-4).",
+                "hands": {
+                  "meera": {
+                    "left": "relaxed at her side, empty",
+                    "right": "holding staff-phone at upper chest"
+                  }
+                },
+                "props": [
+                  {
+                    "id": "staff-phone",
+                    "before": "on the desk",
+                    "during": "in Meera’s right hand, abstract staff screen",
+                    "after": "in Meera’s hand",
+                    "heldBy": "meera.right"
+                  },
+                  {
+                    "id": "laptop",
+                    "before": "open on the desk",
+                    "during": "open on the desk beside Meera, blank abstract form",
+                    "after": "open",
+                    "heldBy": "none"
+                  }
+                ]
+              },
+              "speakers": {
+                "meera": {
+                  "face": [
+                    851,
+                    739,
+                    51,
+                    66
+                  ],
+                  "anchor": [
+                    873,
+                    788
+                  ]
+                }
+              },
+              "dialogue": [
+                {
+                  "speaker": "meera",
+                  "text": "And our team can use tools suited to each staff role.",
+                  "textColumns": [
+                    "And our team can ",
+                    "use tools suited ",
+                    "to each staff role."
+                  ],
+                  "textDirection": "horizontal",
+                  "side": "left",
+                  "x": 16,
+                  "dy": 16
+                },
+                {
+                  "speaker": "label",
+                  "text": "WELBUK CARE for clinic staff",
+                  "textColumns": [
+                    "WELBUK CARE ",
+                    "for clinic staff"
+                  ],
+                  "textDirection": "horizontal",
+                  "side": "left",
+                  "x": 16,
+                  "dy": 400
+                }
+              ],
+              "protected": [
+                [
+                  794,
+                  794,
+                  40,
+                  61
+                ]
+              ]
+            },
+            {
+              "id": "02-4",
+              "order": 4,
+              "role": "余韻",
+              "beat": "One team, better coordination",
+              "rect": [
+                24,
+                1112,
+                976,
+                352
+              ],
+              "scene": "Friendly two-shot in the office: Dr. Ananya (left) seated, turning to Meera (right) who stands holding the staff phone at her side; they share a warm, confident smile. Laptop open on the desk between them, its screen turned toward the reader showing only blank abstract fields (no text).",
+              "action": "Ananya says the line; Meera nods.",
+              "emotion": "Confident teamwork.",
+              "camera": "Medium two-shot, eye level, wide horizontal framing.",
+              "information": "Coordination is the shared benefit.",
+              "readingFlow": {
+                "entry": [
+                  40,
+                  1130
+                ],
+                "exit": [
+                  990,
+                  1505
+                ]
+              },
+              "production": {
+                "moment": "Ananya and Meera smile at each other as Ananya speaks.",
+                "before": "Meera tried Welbuk Care.",
+                "after": "The clinic is ready to see patients with Welbuk (page 3).",
+                "hands": {
+                  "ananya": {
+                    "left": "resting on the desk beside the laptop",
+                    "right": "raised in a small encouraging fist"
+                  },
+                  "meera": {
+                    "left": "relaxed at her side, empty",
+                    "right": "holding staff-phone at her side"
+                  }
+                },
+                "props": [
+                  {
+                    "id": "laptop",
+                    "before": "open on the desk",
+                    "during": "open on the desk, Ananya has turned its screen toward Meera and the reader (blank fields only)",
+                    "after": "open",
+                    "heldBy": "none"
+                  },
+                  {
+                    "id": "staff-phone",
+                    "before": "in Meera’s right hand",
+                    "during": "held at her side",
+                    "after": "in Meera’s hand",
+                    "heldBy": "meera.right"
+                  }
+                ]
+              },
+              "speakers": {
+                "ananya": {
+                  "face": [
+                    325,
+                    1170,
+                    72,
+                    90
+                  ],
+                  "anchor": [
+                    367,
+                    1245
+                  ]
+                },
+                "meera": {
+                  "face": [
+                    700,
+                    1130,
+                    70,
+                    88
+                  ],
+                  "anchor": [
+                    737,
+                    1200
+                  ]
+                }
+              },
+              "dialogue": [
+                {
+                  "speaker": "ananya",
+                  "text": "One team. Better coordination.",
+                  "textColumns": [
+                    "One team. ",
+                    "Better ",
+                    "coordination."
+                  ],
+                  "textDirection": "horizontal",
+                  "side": "left",
+                  "x": 400,
+                  "dy": 20
+                }
+              ],
+              "protected": [
+                [
+                  668,
+                  1365,
+                  62,
+                  80
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "id": "03",
+          "section": "reception",
+          "purpose": "Show that patients can check in three ways — at the front desk (always an option), ahead on the Welbuk Health app, or with the QR code at the door — and that every check-in gets a slot on the waiting-room screen.",
+          "expectation": "When is Ravi’s turn, and what happens next?",
+          "panels": [
+            {
+              "id": "03-1",
+              "order": 1,
+              "role": "提示",
+              "beat": "Front-desk check-in with Meera",
+              "rect": [
+                24,
+                24,
+                488,
+                440
+              ],
+              "scene": "The tidy reception desk on a bright morning: Mr. Raman (elderly patient from the check-in patients sheet: round reading glasses, cream shirt, wooden walking stick in his right hand) stands at the counter, smiling; Meera behind the desk greets him warmly and types on the keyboard, the desktop monitor angled toward her (screen not visible). Two other waiting patients seen from behind in muted grey and dark-brown clothes. Plain wall at the upper left for a caption.",
+              "action": "Meera checks Mr. Raman in at the desk.",
+              "emotion": "Warm, unhurried.",
+              "camera": "Medium two-shot across the counter, eye level.",
+              "information": "The front desk is still there for anyone who prefers it.",
+              "transition": {
+                "kind": "time-change",
+                "bridge": "Morning light at the now-tidy reception after the evening onboarding on page 2.",
+                "settingBasis": "Revised source: \"An elderly patient checks in at the front desk with Meera.\" Later-morning timing is a manga supplement."
+              },
+              "readingFlow": {
+                "entry": [
+                  40,
+                  40
+                ],
+                "exit": [
+                  508,
+                  460
+                ]
+              },
+              "production": {
+                "moment": "Meera smiles at Mr. Raman while typing his check-in.",
+                "before": "Mr. Raman walked up to the desk.",
+                "after": "He takes a seat to wait; his slot appears on the screen (03-5).",
+                "hands": {
+                  "meera": {
+                    "left": "typing on the keyboard",
+                    "right": "typing on the keyboard"
+                  },
+                  "raman": {
+                    "left": "resting on the counter",
+                    "right": "holding the walking-stick"
+                  }
+                },
+                "props": [
+                  {
+                    "id": "monitor",
+                    "before": "on the desk",
+                    "during": "on the desk, angled toward Meera, screen not visible",
+                    "after": "on the desk",
+                    "heldBy": "none"
+                  },
+                  {
+                    "id": "walking-stick",
+                    "before": "in Mr. Raman’s hand",
+                    "during": "held in his right hand",
+                    "after": "in his hand",
+                    "heldBy": "raman.right"
+                  }
+                ]
+              },
+              "speakers": {
+                "raman": {
+                  "face": [
+                    156,
+                    189,
+                    50,
+                    64
+                  ],
+                  "anchor": [
+                    183,
+                    246
+                  ]
+                },
+                "meera": {
+                  "face": [
+                    333,
+                    207,
+                    50,
+                    66
+                  ],
+                  "anchor": [
+                    354,
+                    262
+                  ]
+                }
+              },
+              "dialogue": [
+                {
+                  "speaker": "narration",
+                  "text": "A later morning: patients can always check in at the front desk.",
+                  "textColumns": [
+                    "A later morning: ",
+                    "patients can always check ",
+                    "in at the front desk."
+                  ],
+                  "textDirection": "horizontal",
+                  "side": "left",
+                  "x": 16,
+                  "dy": 16
+                }
+              ]
+            },
+            {
+              "id": "03-2",
+              "order": 2,
+              "role": "提示",
+              "beat": "Priya checks in ahead on the Welbuk Health app",
+              "rect": [
+                536,
+                24,
+                464,
+                440
+              ],
+              "scene": "Priya (young patient from the check-in patients sheet: high ponytail, coral-pink kurti, crossbody bag) walks along a sunny street toward the clinic’s teal awning, smiling at her phone held in her left hand; the phone screen faces the reader and shows a simple app card with a calendar icon and a check-mark icon (no text). Plain sky at the upper left for a caption.",
+              "action": "Priya taps check-in on the app on her way.",
+              "emotion": "Brisk, cheerful.",
+              "camera": "Medium shot on the street, slight low angle.",
+              "information": "Patients can check in ahead on the Welbuk Health app.",
+              "readingFlow": {
+                "entry": [
+                  552,
+                  40
+                ],
+                "exit": [
+                  996,
+                  460
+                ]
+              },
+              "production": {
+                "moment": "Priya taps the check-in card on her phone.",
+                "before": "She was walking to her appointment.",
+                "after": "She arrives and takes a seat; her slot appears on the screen (03-5).",
+                "hands": {
+                  "priya": {
+                    "left": "holding priya-phone",
+                    "right": "index finger tapping the check-in card on priya-phone"
+                  }
+                },
+                "props": [
+                  {
+                    "id": "priya-phone",
+                    "before": "in Priya’s hand",
+                    "during": "held in her left hand, check-in card on screen",
+                    "after": "in her hand",
+                    "heldBy": "priya.left"
+                  }
+                ]
+              },
+              "speakers": {
+                "priya": {
+                  "face": [
+                    728,
+                    153,
+                    76,
+                    80
+                  ],
+                  "anchor": [
+                    766,
+                    219
+                  ]
+                }
+              },
+              "dialogue": [
+                {
+                  "speaker": "narration",
+                  "text": "Some check in ahead on the Welbuk Health app.",
+                  "textColumns": [
+                    "Some check in ahead ",
+                    "on the Welbuk Health app."
+                  ],
+                  "textDirection": "horizontal",
+                  "side": "left",
+                  "x": 16,
+                  "dy": 16
+                }
+              ],
+              "protected": [
+                [
+                  801,
+                  215,
+                  49,
+                  77
+                ]
+              ]
+            },
+            {
+              "id": "03-3",
+              "order": 3,
+              "role": "始動",
+              "beat": "Ravi scans the QR code at the door",
+              "rect": [
+                24,
+                488,
+                464,
+                440
+              ],
+              "scene": "Just inside the clinic’s glass entrance, Ravi holds his phone up to a small check-in stand with a square QR-like pattern (abstract, not a real code, no text); a simple scan frame glows on his phone. His face in three-quarter view, focused and pleased; his left hand on the shoulder-bag strap. Plain wall at the upper left for a caption.",
+              "action": "Ravi scans the code.",
+              "emotion": "Focused, easy.",
+              "camera": "Medium close-up from the side of the stand.",
+              "information": "Ravi, a patient, uses the QR code at the door.",
+              "readingFlow": {
+                "entry": [
+                  40,
+                  504
+                ],
+                "exit": [
+                  484,
+                  924
+                ]
+              },
+              "production": {
+                "moment": "The phone camera frames the QR pattern.",
+                "before": "Ravi walked in through the glass entrance.",
+                "after": "A short form opens on his phone (03-4).",
+                "hands": {
+                  "ravi": {
+                    "left": "resting on the shoulder-bag strap",
+                    "right": "holding ravi-phone up to the QR stand"
+                  }
+                },
+                "props": [
+                  {
+                    "id": "ravi-phone",
+                    "before": "in Ravi’s hand as he arrives",
+                    "during": "held up to the QR pattern, scan frame on screen",
+                    "after": "shows the check-in form (03-4)",
+                    "heldBy": "ravi.right"
+                  },
+                  {
+                    "id": "qr-stand",
+                    "before": "inside the entrance",
+                    "during": "in front of the phone",
+                    "after": "in place",
+                    "heldBy": "none"
+                  },
+                  {
+                    "id": "shoulder-bag",
+                    "before": "on Ravi’s left shoulder",
+                    "during": "on his left shoulder",
+                    "after": "on his left shoulder",
+                    "heldBy": "none"
+                  }
+                ]
+              },
+              "speakers": {
+                "ravi": {
+                  "face": [
+                    287,
+                    612,
+                    94,
+                    100
+                  ],
+                  "anchor": [
+                    327,
+                    685
+                  ]
+                }
+              },
+              "dialogue": [
+                {
+                  "speaker": "narration",
+                  "text": "Ravi scans the QR code at the door.",
+                  "textColumns": [
+                    "Ravi scans the QR ",
+                    "code at the door."
+                  ],
+                  "textDirection": "horizontal",
+                  "side": "left",
+                  "x": 16,
+                  "dy": 16
+                }
+              ],
+              "protected": [
+                [
+                  127,
+                  747,
+                  71,
+                  111
+                ]
+              ]
+            },
+            {
+              "id": "03-4",
+              "order": 4,
+              "role": "始動",
+              "beat": "He fills a short form on his phone",
+              "rect": [
+                512,
+                488,
+                488,
+                440
+              ],
+              "scene": "Close-up over Ravi’s shoulder of his phone held in both hands: a simple check-in form of blank rounded fields, a large tick-box being tapped by his right thumb for consent, and a teal submit button (abstract, no letters or numbers, no personal data). His green shirt sleeve and the wristwatch on his left wrist are visible. Plain light background at the upper left for a caption.",
+              "action": "Ravi taps the consent tick-box.",
+              "emotion": "Calm, in control.",
+              "camera": "Over-the-shoulder close-up of the phone.",
+              "information": "He shares only what the visit needs, with consent.",
+              "readingFlow": {
+                "entry": [
+                  528,
+                  504
+                ],
+                "exit": [
+                  996,
+                  924
+                ]
+              },
+              "production": {
+                "moment": "His thumb taps the consent tick-box.",
+                "before": "The form opened after the scan (03-3).",
+                "after": "His slot appears on the waiting-room screen (03-5).",
+                "hands": {
+                  "ravi": {
+                    "left": "holding ravi-phone from below (wristwatch on this wrist)",
+                    "right": "thumb tapping the consent tick-box on ravi-phone"
+                  }
+                },
+                "props": [
+                  {
+                    "id": "ravi-phone",
+                    "before": "showing the check-in form",
+                    "during": "held in both hands, blank fields and tick-box on screen",
+                    "after": "in his hand as he sits to wait (03-5)",
+                    "heldBy": "ravi.left"
+                  }
+                ]
+              },
+              "speakers": {
+                "ravi": {
+                  "face": [
+                    844,
+                    580,
+                    91,
+                    180
+                  ],
+                  "anchor": [
+                    876,
+                    692
+                  ]
+                }
+              },
+              "dialogue": [
+                {
+                  "speaker": "narration",
+                  "text": "A short form on his own phone, shared with consent.",
+                  "textColumns": [
+                    "A short form on ",
+                    "his own phone, ",
+                    "shared with consent."
+                  ],
+                  "textDirection": "horizontal",
+                  "side": "left",
+                  "x": 16,
+                  "dy": 16
+                }
+              ],
+              "protected": [
+                [
+                  635,
+                  648,
+                  145,
+                  206
+                ]
+              ]
+            },
+            {
+              "id": "03-5",
+              "order": 5,
+              "role": "反応",
+              "beat": "All three get slots on the screen",
+              "rect": [
+                24,
+                952,
+                976,
+                512
+              ],
+              "scene": "Wide view of the waiting area: a wall-mounted TV in the upper-right corner of the panel (its screen filling roughly the right third of the width and the top quarter of the height) shows a plain light-teal screen with ONE wide, clean, empty white strip across it where the slot list will be lettered in a single line (draw NO text or numbers on the screen). Below it, from screen-left to screen-right, Mr. Raman (glasses, walking stick), Priya (ponytail, coral kurti) and Ravi (green shirt, shoulder bag on his lap, phone in his right hand) sit side by side on waiting chairs, all looking up at the screen with small satisfied smiles. Plain wall at the upper left for a caption.",
+              "action": "The three patients see their slots appear.",
+              "emotion": "Calm, reassured.",
+              "camera": "Wide shot of the waiting area, slight low angle toward the TV.",
+              "information": "Every check-in route ends in the same queue on the screen.",
+              "readingFlow": {
+                "entry": [
+                  40,
+                  968
+                ],
+                "exit": [
+                  996,
+                  1456
+                ]
+              },
+              "production": {
+                "moment": "Three slots appear on the TV and the patients look up.",
+                "before": "Each checked in their own way (03-1, 03-2, 03-4).",
+                "after": "Ravi’s slot comes up (04-1).",
+                "hands": {
+                  "raman": {
+                    "left": "resting on his knee",
+                    "right": "holding the walking-stick"
+                  },
+                  "priya": {
+                    "left": "holding priya-phone in her lap",
+                    "right": "resting on the armrest"
+                  },
+                  "ravi": {
+                    "left": "resting on the shoulder-bag on his lap",
+                    "right": "holding ravi-phone"
+                  }
+                },
+                "props": [
+                  {
+                    "id": "waiting-tv",
+                    "before": "on the wall",
+                    "during": "teal screen with one wide empty white strip for the lettered slot list",
+                    "after": "on the wall",
+                    "heldBy": "none"
+                  },
+                  {
+                    "id": "ravi-phone",
+                    "before": "in his hand",
+                    "during": "held in his right hand",
+                    "after": "put away in his pocket (04-1)",
+                    "heldBy": "ravi.right"
+                  },
+                  {
+                    "id": "shoulder-bag",
+                    "before": "on his left shoulder",
+                    "during": "resting on his lap",
+                    "after": "back on his shoulder as he stands (04-1)",
+                    "heldBy": "none"
+                  },
+                  {
+                    "id": "walking-stick",
+                    "before": "in his hand",
+                    "during": "held upright beside his knee",
+                    "after": "in his hand",
+                    "heldBy": "raman.right"
+                  },
+                  {
+                    "id": "priya-phone",
+                    "before": "in her hand",
+                    "during": "held in her lap",
+                    "after": "in her lap",
+                    "heldBy": "priya.left"
+                  }
+                ]
+              },
+              "speakers": {
+                "raman": {
+                  "face": [
+                    166,
+                    1129,
+                    97,
+                    97
+                  ],
+                  "anchor": [
+                    235,
+                    1206
+                  ]
+                },
+                "priya": {
+                  "face": [
+                    384,
+                    1150,
+                    90,
+                    90
+                  ],
+                  "anchor": [
+                    447,
+                    1220
+                  ]
+                },
+                "ravi": {
+                  "face": [
+                    561,
+                    1129,
+                    94,
+                    97
+                  ],
+                  "anchor": [
+                    634,
+                    1199
+                  ]
+                }
+              },
+              "dialogue": [
+                {
+                  "speaker": "narration",
+                  "text": "Every check-in gets a slot on the screen.",
+                  "textColumns": [
+                    "Every check-in gets ",
+                    "a slot on the screen."
+                  ],
+                  "textDirection": "horizontal",
+                  "side": "left",
+                  "x": 16,
+                  "dy": 16
+                },
+                {
+                  "speaker": "label",
+                  "text": "A-10 · A-11 · A-12",
+                  "textColumns": [
+                    "A-10 · A-11 · A-12"
+                  ],
+                  "textDirection": "horizontal",
+                  "side": "left",
+                  "x": 640,
+                  "dy": 60
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "04",
+          "section": "reception",
+          "purpose": "Ravi’s turn: his slot comes up, the nurse takes his vitals, and Dr. Ananya is notified on her tablet that he is ready.",
+          "expectation": "What happens in Ravi’s consultation?",
+          "panels": [
+            {
+              "id": "04-1",
+              "order": 1,
+              "role": "転換",
+              "beat": "Ravi’s slot comes up",
+              "rect": [
+                24,
+                24,
+                976,
+                420
+              ],
+              "scene": "Waiting area, wide: Ravi rises from his chair with the shoulder bag back on his left shoulder, looking up at the wall-mounted TV in the upper-right part of the panel, whose light-teal screen shows one clean, empty white highlighted strip where his slot will be lettered (draw NO text or numbers). The two waiting chairs at screen-left of him (on his right), where Mr. Raman and Priya sat in 03-5, are now empty: their slots (A-10, A-11) were called before his. Meera types at the reception desk in the background at the right; any other seated figures are seen from behind in grey or brown. Plain wall at the upper left for a caption.",
+              "action": "Ravi stands as his slot comes up.",
+              "emotion": "Ready, pleased.",
+              "camera": "Wide shot of the waiting area, eye level.",
+              "information": "Ravi is called by the screen, not by a raised voice.",
+              "transition": {
+                "kind": "time-change",
+                "bridge": "A short wait later in the same waiting area; the screen now highlights his slot.",
+                "settingBasis": "Revised source: \"Ravi's slot comes up on the waiting-room TV and he stands.\""
+              },
+              "readingFlow": {
+                "entry": [
+                  40,
+                  40
+                ],
+                "exit": [
+                  996,
+                  440
+                ]
+              },
+              "production": {
+                "moment": "Ravi stands as the screen highlights his slot.",
+                "before": "He waited after his slot appeared (03-5); Mr. Raman (A-10) and Priya (A-11) were called in before him.",
+                "after": "The nurse takes his vitals (04-2).",
+                "hands": {
+                  "ravi": {
+                    "left": "holding the shoulder-bag strap",
+                    "right": "tucking ravi-phone into his trouser pocket"
+                  },
+                  "meera": {
+                    "left": "typing at the reception keyboard (background)",
+                    "right": "typing at the reception keyboard (background)"
+                  }
+                },
+                "props": [
+                  {
+                    "id": "waiting-tv",
+                    "before": "one strip listing the three slots (03-5)",
+                    "during": "one highlighted empty strip for the called slot",
+                    "after": "on the wall",
+                    "heldBy": "none"
+                  },
+                  {
+                    "id": "ravi-phone",
+                    "before": "in his hand",
+                    "during": "being tucked into his trouser pocket",
+                    "after": "in his pocket",
+                    "heldBy": "ravi.right"
+                  },
+                  {
+                    "id": "shoulder-bag",
+                    "before": "on his lap",
+                    "during": "back on his left shoulder",
+                    "after": "on his shoulder",
+                    "heldBy": "ravi.left"
+                  }
+                ]
+              },
+              "speakers": {
+                "ravi": {
+                  "face": [
+                    577,
+                    71,
+                    72,
+                    72
+                  ],
+                  "anchor": [
+                    631,
+                    130
+                  ]
+                },
+                "meera": {
+                  "face": [
+                    908,
+                    205,
+                    44,
+                    50
+                  ],
+                  "anchor": [
+                    935,
+                    246
+                  ]
+                }
+              },
+              "dialogue": [
+                {
+                  "speaker": "narration",
+                  "text": "Soon, his slot comes up.",
+                  "textColumns": [
+                    "Soon, his slot ",
+                    "comes up."
+                  ],
+                  "textDirection": "horizontal",
+                  "side": "left",
+                  "x": 16,
+                  "dy": 16
+                },
+                {
+                  "speaker": "label",
+                  "text": "NOW · A-12",
+                  "textColumns": [
+                    "NOW · A-12"
+                  ],
+                  "textDirection": "horizontal",
+                  "side": "left",
+                  "x": 762,
+                  "dy": 40
+                }
+              ]
+            },
+            {
+              "id": "04-2",
+              "order": 2,
+              "role": "始動",
+              "beat": "The nurse takes his vitals",
+              "rect": [
+                24,
+                468,
+                560,
+                996
+              ],
+              "scene": "Small vitals corner beside reception, tall framing: Ravi sits at the lower left in a chair, relaxed, his left arm resting on a little side table with a blood-pressure cuff on his upper arm and a fingertip pulse oximeter on his left index finger (wristwatch still visible on that wrist); his shoulder bag on the floor beside his chair. The nurse (from the nurse sheet: chin-length wavy bob, lavender scrubs, blank lanyard card) stands at the right holding the cuff’s hand bulb, speaking kindly to him; Ravi smiles and nods back at her. A small monitor on the table shows only abstract shapes, no numbers. Behind the nurse, at mid-height on the right, a glimpse of the same white reception counter with its teal front and a corner of a teal waiting chair, showing the vitals corner is just beside reception and the waiting area. Plain wall in the upper third for a caption and a balloon.",
+              "action": "The nurse begins the vitals check.",
+              "emotion": "Friendly, efficient; Ravi at ease.",
+              "camera": "Tall medium two-shot, eye level.",
+              "information": "Routine vitals before the consultation; no readings shown.",
+              "transition": {
+                "kind": "place-change",
+                "bridge": "From the waiting area (04-1) to the small vitals corner beside reception; the caption \"A quick vitals check first.\" and the reception counter edge in the background carry the move.",
+                "settingBasis": "Revised source: \"A nurse takes his vitals.\" The vitals corner beside reception is a manga supplement."
+              },
+              "readingFlow": {
+                "entry": [
+                  40,
+                  484
+                ],
+                "exit": [
+                  580,
+                  1456
+                ]
+              },
+              "production": {
+                "moment": "The nurse is about to squeeze the cuff bulb and smiles at Ravi.",
+                "before": "His slot came up (04-1).",
+                "after": "Dr. Ananya is notified that he is ready (04-3).",
+                "hands": {
+                  "ravi": {
+                    "left": "resting on the side table with the vitals-kit cuff on the upper arm and the oximeter on the index finger",
+                    "right": "resting on his knee"
+                  },
+                  "nurse": {
+                    "left": "lightly steadying the cuff tube",
+                    "right": "holding the vitals-kit cuff bulb"
+                  }
+                },
+                "props": [
+                  {
+                    "id": "vitals-kit",
+                    "before": "on the side table",
+                    "during": "cuff on Ravi’s left upper arm, oximeter on his left index finger",
+                    "after": "removed after the check",
+                    "heldBy": "nurse.right"
+                  },
+                  {
+                    "id": "ravi-phone",
+                    "before": "in his pocket",
+                    "during": "in his trouser pocket, not visible",
+                    "after": "in his pocket",
+                    "heldBy": "none"
+                  },
+                  {
+                    "id": "shoulder-bag",
+                    "before": "on his shoulder",
+                    "during": "on the floor beside his chair",
+                    "after": "back on his shoulder as he walks in (05-1)",
+                    "heldBy": "none"
+                  }
+                ]
+              },
+              "speakers": {
+                "ravi": {
+                  "face": [
+                    93,
+                    842,
+                    95,
+                    110
+                  ],
+                  "anchor": [
+                    163,
+                    937
+                  ]
+                },
+                "nurse": {
+                  "face": [
+                    389,
+                    739,
+                    102,
+                    110
+                  ],
+                  "anchor": [
+                    440,
+                    827
+                  ]
+                }
+              },
+              "dialogue": [
+                {
+                  "speaker": "narration",
+                  "text": "A quick vitals check first.",
+                  "textColumns": [
+                    "A quick vitals ",
+                    "check first."
+                  ],
+                  "textDirection": "horizontal",
+                  "side": "left",
+                  "x": 16,
+                  "dy": 16
+                },
+                {
+                  "speaker": "nurse",
+                  "text": "Hi, Ravi! Just relax your arm for me.",
+                  "textColumns": [
+                    "Hi, Ravi! Just relax ",
+                    "your arm for me."
+                  ],
+                  "textDirection": "horizontal",
+                  "side": "left",
+                  "x": 250,
+                  "dy": 150
+                }
+              ],
+              "protected": [
+                [
+                  199,
+                  1047,
+                  204,
+                  109
+                ],
+                [
+                  327,
+                  955,
+                  105,
+                  99
+                ]
+              ]
+            },
+            {
+              "id": "04-3",
+              "order": 3,
+              "role": "期待",
+              "beat": "Dr. Ananya is notified on her tablet",
+              "section": "consultation",
+              "rect": [
+                608,
+                468,
+                392,
+                996
+              ],
+              "scene": "Tall framing in the consultation room (window with a plant behind, closed laptop pushed aside on the desk): Dr. Ananya sits at her desk and looks down at a tablet held in both hands with a small smile; the tablet screen, angled toward the reader, shows a simple notification card with a blank white strip in its centre (draw NO text or numbers). Plain wall in the upper third for a caption.",
+              "action": "Ananya reads the notification.",
+              "emotion": "Ready, attentive.",
+              "camera": "Tall medium shot, slightly from above the tablet.",
+              "information": "The doctor knows the patient is ready without anyone walking over.",
+              "transition": {
+                "kind": "place-change",
+                "bridge": "Cut from the vitals corner to the consultation room, where the alert arrives on Ananya’s tablet.",
+                "settingBasis": "Revised source: \"Dr. Ananya is notified on her tablet.\""
+              },
+              "readingFlow": {
+                "entry": [
+                  624,
+                  484
+                ],
+                "exit": [
+                  996,
+                  1456
+                ]
+              },
+              "production": {
+                "moment": "The notification card appears on her tablet.",
+                "before": "The nurse finished Ravi’s vitals (04-2).",
+                "after": "She puts the tablet away and greets Ravi (05-1).",
+                "hands": {
+                  "ananya": {
+                    "left": "holding the doctor-tablet left edge",
+                    "right": "holding the doctor-tablet right edge"
+                  }
+                },
+                "props": [
+                  {
+                    "id": "doctor-tablet",
+                    "before": "on the desk",
+                    "during": "held in both hands, blank notification card on screen",
+                    "after": "put away in the desk drawer before Ravi comes in (05-1)",
+                    "heldBy": "ananya.left"
+                  },
+                  {
+                    "id": "closed-laptop",
+                    "before": "on the desk",
+                    "during": "closed and pushed aside",
+                    "after": "closed",
+                    "heldBy": "none"
+                  }
+                ]
+              },
+              "speakers": {
+                "ananya": {
+                  "face": [
+                    730,
+                    834,
+                    116,
+                    150
+                  ],
+                  "anchor": [
+                    786,
+                    975
+                  ]
+                }
+              },
+              "dialogue": [
+                {
+                  "speaker": "narration",
+                  "text": "Dr. Ananya is notified when he's ready.",
+                  "textColumns": [
+                    "Dr. Ananya is ",
+                    "notified when ",
+                    "he's ready."
+                  ],
+                  "textDirection": "horizontal",
+                  "side": "left",
+                  "x": 16,
+                  "dy": 16
+                },
+                {
+                  "speaker": "label",
+                  "text": "RAVI · READY",
+                  "textColumns": [
+                    "RAVI · ",
+                    "READY"
+                  ],
+                  "textDirection": "horizontal",
+                  "side": "left",
+                  "x": 182,
+                  "dy": 734
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "05",
+          "section": "consultation",
+          "purpose": "Show that the consultation stays human and unhurried; no diagnosis or medical claim.",
+          "expectation": "How does care continue after the visit?",
+          "panels": [
+            {
+              "id": "05-1",
+              "order": 1,
+              "role": "転換",
+              "beat": "Ananya greets Ravi in the consultation room",
+              "rect": [
+                24,
+                24,
+                976,
+                500
+              ],
+              "scene": "Bright simple consultation room. Dr. Ananya (left) seated at her desk, turned toward Ravi with an open-hand welcoming gesture; Ravi (right) sitting down in the patient chair, smiling, his shoulder bag set on the floor beside the chair. Laptop closed and pushed aside on the desk. Window with a plant behind.",
+              "action": "Ananya welcomes Ravi as he sits.",
+              "emotion": "Warm and attentive.",
+              "camera": "Medium-wide two-shot, eye level.",
+              "information": "Ravi enters the consultation room introduced in 04-3; same visit.",
+              "transition": {
+                "kind": "place-change",
+                "bridge": "Ravi walks into the consultation room the reader saw in 04-3 and sits down; Ananya has put her tablet away after the alert; same costumes show it is the same visit.",
+                "settingBasis": "Source: \"Dr. Ananya greets Ravi in a consultation room.\""
+              },
+              "readingFlow": {
+                "entry": [
+                  40,
+                  40
+                ],
+                "exit": [
+                  990,
+                  520
+                ]
+              },
+              "production": {
+                "moment": "Ananya greets Ravi as he settles into the chair.",
+                "before": "Ananya was notified that Ravi was ready (04-3).",
+                "after": "Ravi explains why he came (05-2).",
+                "hands": {
+                  "ananya": {
+                    "left": "open palm welcoming Ravi",
+                    "right": "resting on the desk"
+                  },
+                  "ravi": {
+                    "left": "on the chair armrest as he sits",
+                    "right": "resting on his knee"
+                  }
+                },
+                "props": [
+                  {
+                    "id": "closed-laptop",
+                    "before": "closed on the desk",
+                    "during": "closed, pushed aside",
+                    "after": "closed",
+                    "heldBy": "none"
+                  },
+                  {
+                    "id": "doctor-tablet",
+                    "before": "read after the alert (04-3)",
+                    "during": "put away in the desk drawer, not visible",
+                    "after": "put away",
+                    "heldBy": "none"
+                  },
+                  {
+                    "id": "shoulder-bag",
+                    "before": "on Ravi’s shoulder",
+                    "during": "set down on the floor beside his chair",
+                    "after": "beside his chair",
+                    "heldBy": "none"
+                  }
+                ]
+              },
+              "speakers": {
+                "ananya": {
+                  "face": [
+                    252,
+                    62,
+                    70,
+                    90
+                  ],
+                  "anchor": [
+                    283,
+                    140
+                  ]
+                },
+                "ravi": {
+                  "face": [
+                    733,
+                    55,
+                    75,
+                    92
+                  ],
+                  "anchor": [
+                    770,
+                    130
+                  ]
+                }
+              },
+              "dialogue": [
+                {
+                  "speaker": "ananya",
+                  "text": "Hello, Ravi. Tell me what brings you in.",
+                  "textColumns": [
+                    "Hello, Ravi. ",
+                    "Tell me what ",
+                    "brings you in."
+                  ],
+                  "textDirection": "horizontal",
+                  "side": "left",
+                  "x": 330,
+                  "dy": 16
+                }
+              ]
+            },
+            {
+              "id": "05-2",
+              "order": 2,
+              "role": "始動",
+              "beat": "Ravi shares a routine concern",
+              "rect": [
+                24,
+                548,
+                480,
+                520
+              ],
+              "scene": "Medium shot of Ravi in the patient chair, turned toward the doctor, whose back of head (low bun, gold stud, white-coat shoulder) is in the left foreground, rubbing the back of his neck with his right hand, a slightly tired but candid expression; left hand resting on his knee. Plain wall behind.",
+              "action": "Ravi explains, a little sheepish.",
+              "emotion": "Mildly tired, honest.",
+              "camera": "Medium shot from the doctor’s side, Ravi facing screen-left, his knees in frame.",
+              "information": "A routine concern only; no diagnosis is shown.",
+              "readingFlow": {
+                "entry": [
+                  44,
+                  570
+                ],
+                "exit": [
+                  500,
+                  1060
+                ]
+              },
+              "production": {
+                "moment": "Ravi describes feeling tired.",
+                "before": "The doctor asked what brings him in.",
+                "after": "The doctor listens (05-3).",
+                "hands": {
+                  "ravi": {
+                    "left": "resting on his knee",
+                    "right": "rubbing the back of his neck"
+                  },
+                  "ananya": {
+                    "left": "out of frame",
+                    "right": "out of frame"
+                  }
+                },
+                "props": []
+              },
+              "speakers": {
+                "ravi": {
+                  "face": [
+                    330,
+                    628,
+                    95,
+                    135
+                  ],
+                  "anchor": [
+                    380,
+                    735
+                  ]
+                },
+                "ananya": {
+                  "kind": "head",
+                  "anchor": [
+                    60,
+                    720
+                  ]
+                }
+              },
+              "dialogue": [
+                {
+                  "speaker": "ravi",
+                  "text": "I've been feeling tired lately.",
+                  "textColumns": [
+                    "I've been feeling ",
+                    "tired lately."
+                  ],
+                  "textDirection": "horizontal",
+                  "side": "left",
+                  "x": 20,
+                  "dy": 20
+                }
+              ]
+            },
+            {
+              "id": "05-3",
+              "order": 3,
+              "role": "反応",
+              "beat": "The doctor listens; technology stays in the background",
+              "rect": [
+                528,
+                548,
+                472,
+                520
+              ],
+              "scene": "Dr. Ananya leans slightly forward at her desk, hands folded, listening with full attention and gentle eye contact toward Ravi, whose back of head and green-shirted shoulder are in the right foreground, keeping Ananya-left / Ravi-right screen direction from 05-1. The closed laptop sits pushed aside at the edge of the desk.",
+              "action": "Ananya nods slowly while listening.",
+              "emotion": "Attentive, compassionate.",
+              "camera": "Medium close-up from Ravi’s side, Ananya facing screen-right.",
+              "information": "Technology supports workflow; the conversation is human.",
+              "readingFlow": {
+                "entry": [
+                  544,
+                  570
+                ],
+                "exit": [
+                  990,
+                  1060
+                ]
+              },
+              "production": {
+                "moment": "Ananya listening, mid-nod.",
+                "before": "Ravi described his tiredness.",
+                "after": "She suggests going through his concerns together (05-4).",
+                "hands": {
+                  "ananya": {
+                    "left": "folded under the right hand on the desk (her left forearm enters from screen-right)",
+                    "right": "folded over the left hand on the desk (her right forearm enters from screen-left)"
+                  },
+                  "ravi": {
+                    "left": "out of frame",
+                    "right": "out of frame"
+                  }
+                },
+                "props": [
+                  {
+                    "id": "closed-laptop",
+                    "before": "closed on the desk",
+                    "during": "closed at the desk edge",
+                    "after": "closed",
+                    "heldBy": "none"
+                  }
+                ]
+              },
+              "speakers": {
+                "ananya": {
+                  "face": [
+                    645,
+                    738,
+                    115,
+                    100
+                  ],
+                  "anchor": [
+                    705,
+                    820
+                  ]
+                },
+                "ravi": {
+                  "kind": "head",
+                  "anchor": [
+                    950,
+                    720
+                  ]
+                }
+              },
+              "dialogue": [
+                {
+                  "speaker": "narration",
+                  "text": "Technology supports the workflow. The conversation stays human.",
+                  "textColumns": [
+                    "Technology supports the ",
+                    "workflow. The conversation ",
+                    "stays human."
+                  ],
+                  "textDirection": "horizontal",
+                  "side": "left",
+                  "x": 4,
+                  "dy": 4
+                }
+              ]
+            },
+            {
+              "id": "05-4",
+              "order": 4,
+              "role": "決定",
+              "beat": "They will decide next steps together",
+              "rect": [
+                24,
+                1092,
+                976,
+                372
+              ],
+              "scene": "Two-shot: Dr. Ananya (left) speaks warmly with a reassuring open hand; Ravi (right) nods, relaxed, both hands resting on his knees, his bag on the floor beside the chair. No prescriptions and no instruments in use (Ananya’s stethoscope stays around her neck).",
+              "action": "Ananya reassures; Ravi relaxes.",
+              "emotion": "Reassured, collaborative.",
+              "camera": "Medium two-shot, eye level.",
+              "information": "Shared decision-making; no specific treatment advice.",
+              "readingFlow": {
+                "entry": [
+                  40,
+                  1110
+                ],
+                "exit": [
+                  990,
+                  1505
+                ]
+              },
+              "production": {
+                "moment": "Ananya finishes her sentence; Ravi nods.",
+                "before": "She listened to Ravi’s concern.",
+                "after": "Ravi picks up his bag and returns to reception (page 6).",
+                "hands": {
+                  "ananya": {
+                    "left": "open reassuring gesture toward Ravi",
+                    "right": "resting on the desk"
+                  },
+                  "ravi": {
+                    "left": "resting on his knee",
+                    "right": "resting on his knee"
+                  }
+                },
+                "props": [
+                  {
+                    "id": "shoulder-bag",
+                    "before": "beside his chair",
+                    "during": "on the floor beside his chair",
+                    "after": "back on his shoulder as he leaves",
+                    "heldBy": "none"
+                  }
+                ]
+              },
+              "speakers": {
+                "ananya": {
+                  "face": [
+                    297,
+                    1140,
+                    62,
+                    90
+                  ],
+                  "anchor": [
+                    327,
+                    1212
+                  ]
+                },
+                "ravi": {
+                  "face": [
+                    723,
+                    1132,
+                    66,
+                    90
+                  ],
+                  "anchor": [
+                    757,
+                    1205
+                  ]
+                }
+              },
+              "dialogue": [
+                {
+                  "speaker": "ananya",
+                  "text": "We'll go through your concerns and decide the right next steps together.",
+                  "textColumns": [
+                    "We'll go through ",
+                    "your concerns and ",
+                    "decide the right ",
+                    "next steps together."
+                  ],
+                  "textDirection": "horizontal",
+                  "side": "left",
+                  "x": 380,
+                  "dy": 8
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "06",
+          "section": "reception",
+          "purpose": "Introduce Welbuk Health for patients, framed carefully as what is available, without invented features.",
+          "expectation": "Where could connected care go next?",
+          "panels": [
+            {
+              "id": "06-1",
+              "order": 1,
+              "role": "提示",
+              "beat": "Meera introduces Welbuk Health",
+              "rect": [
+                24,
+                24,
+                976,
+                500
+              ],
+              "scene": "Back at reception after the consultation. Ravi (right) holds his own smartphone (dark blue case) in his right hand; Meera (left) leans over the desk and points helpfully at its screen with her right index finger. Screen content not visible from this angle.",
+              "action": "Meera points to Ravi’s phone while explaining; Ravi leans closer.",
+              "emotion": "Helpful, curious.",
+              "camera": "Medium-wide two-shot across the desk corner.",
+              "information": "Welbuk Health is the patient app.",
+              "transition": {
+                "kind": "place-change",
+                "bridge": "Reception desk again, Ravi now on the way out.",
+                "settingBasis": "Source: \"Meera helps Ravi learn about the Welbuk Health patient app.\""
+              },
+              "readingFlow": {
+                "entry": [
+                  40,
+                  40
+                ],
+                "exit": [
+                  990,
+                  520
+                ]
+              },
+              "production": {
+                "moment": "Meera points at Ravi’s phone and explains.",
+                "before": "Ravi came back to reception after the consultation and took his phone out again.",
+                "after": "Ravi brings the phone closer to look at the app (06-2).",
+                "hands": {
+                  "meera": {
+                    "left": "resting on the desk",
+                    "right": "index finger pointing at ravi-phone"
+                  },
+                  "ravi": {
+                    "left": "resting on the desk edge",
+                    "right": "holding ravi-phone"
+                  }
+                },
+                "props": [
+                  {
+                    "id": "ravi-phone",
+                    "before": "in his pocket since his slot was called (04-1)",
+                    "during": "in Ravi’s right hand, Meera pointing at it",
+                    "after": "held by Ravi",
+                    "heldBy": "ravi.right"
+                  },
+                  {
+                    "id": "shoulder-bag",
+                    "before": "on Ravi’s shoulder",
+                    "during": "on his shoulder",
+                    "after": "on his shoulder",
+                    "heldBy": "none"
+                  }
+                ]
+              },
+              "speakers": {
+                "meera": {
+                  "face": [
+                    367,
+                    128,
+                    96,
+                    111
+                  ],
+                  "anchor": [
+                    428,
+                    232
+                  ]
+                },
+                "ravi": {
+                  "face": [
+                    572,
+                    114,
+                    131,
+                    118
+                  ],
+                  "anchor": [
+                    641,
+                    191
+                  ]
+                }
+              },
+              "dialogue": [
+                {
+                  "speaker": "meera",
+                  "text": "Welbuk Health is designed to help patients stay connected with their care.",
+                  "textColumns": [
+                    "Welbuk Health is ",
+                    "designed to help ",
+                    "patients stay ",
+                    "connected with ",
+                    "their care."
+                  ],
+                  "textDirection": "horizontal",
+                  "side": "left",
+                  "x": 24,
+                  "dy": 20
+                }
+              ],
+              "protected": [
+                [
+                  528,
+                  277,
+                  66,
+                  94
+                ]
+              ]
+            },
+            {
+              "id": "06-2",
+              "order": 2,
+              "role": "期待",
+              "beat": "Ravi sees a conceptual app screen",
+              "rect": [
+                24,
+                548,
+                560,
+                560
+              ],
+              "scene": "Ravi holds his own phone (dark blue case) in both hands at chest height, screen toward the reader: a friendly conceptual app screen with simple rounded cards, a calendar icon and a heart icon, no text and no personal data. Ravi’s curious, hopeful face above it, glancing up and away to screen-right as he thinks the question aloud (deliberate thinking glance; Meera is off-panel left).",
+              "action": "Ravi studies the screen and looks up with a question.",
+              "emotion": "Curious, hopeful.",
+              "camera": "Medium close-up at eye level, the reception monitor and plant in the left foreground.",
+              "information": "Conceptual view: appointments and health information in one place.",
+              "readingFlow": {
+                "entry": [
+                  44,
+                  570
+                ],
+                "exit": [
+                  580,
+                  1100
+                ]
+              },
+              "production": {
+                "moment": "Ravi asks while holding the phone.",
+                "before": "Meera pointed at the app on his phone.",
+                "after": "Meera answers and offers a walkthrough (06-3); Ravi keeps his phone.",
+                "hands": {
+                  "ravi": {
+                    "left": "supporting the lower right corner of ravi-phone, thumb on the screen edge (wristwatch on this wrist)",
+                    "right": "fingers wrapped around the left edge of ravi-phone"
+                  }
+                },
+                "props": [
+                  {
+                    "id": "ravi-phone",
+                    "before": "in Ravi’s right hand",
+                    "during": "held in both of Ravi’s hands, conceptual screen",
+                    "after": "held by Ravi",
+                    "heldBy": "ravi.right"
+                  }
+                ]
+              },
+              "speakers": {
+                "ravi": {
+                  "face": [
+                    369,
+                    614,
+                    147,
+                    169
+                  ],
+                  "anchor": [
+                    423,
+                    739
+                  ]
+                }
+              },
+              "dialogue": [
+                {
+                  "speaker": "ravi",
+                  "text": "So I can keep useful information in one place?",
+                  "textColumns": [
+                    "So I can keep useful ",
+                    "information in ",
+                    "one place?"
+                  ],
+                  "textDirection": "horizontal",
+                  "side": "left",
+                  "x": 20,
+                  "dy": 20
+                },
+                {
+                  "speaker": "label",
+                  "text": "WELBUK HEALTH for patients",
+                  "textColumns": [
+                    "WELBUK HEALTH ",
+                    "for patients"
+                  ],
+                  "textDirection": "horizontal",
+                  "side": "left",
+                  "x": 0,
+                  "dy": 440
+                }
+              ],
+              "protected": [
+                [
+                  297,
+                  805,
+                  115,
+                  208
+                ]
+              ]
+            },
+            {
+              "id": "06-3",
+              "order": 3,
+              "role": "反応",
+              "beat": "Meera offers a walkthrough of what is available",
+              "rect": [
+                608,
+                548,
+                392,
+                560
+              ],
+              "scene": "Meera smiles warmly, facing screen-right toward Ravi, who is seen from behind in the right foreground holding his phone in his left hand (keeping Meera-left / Ravi-right from 06-1). Meera’s right hand gestures toward his phone; her left hand rests on the desk. Tidy reception background.",
+              "action": "Meera answers and offers to walk him through.",
+              "emotion": "Warm, honest, helpful.",
+              "camera": "Tall medium shot.",
+              "information": "Only what is available to Ravi is shown; no invented features.",
+              "readingFlow": {
+                "entry": [
+                  624,
+                  570
+                ],
+                "exit": [
+                  990,
+                  1100
+                ]
+              },
+              "production": {
+                "moment": "Meera answers Ravi’s question.",
+                "before": "Ravi asked about keeping information in one place.",
+                "after": "After the walkthrough Ravi leaves with his phone (06-4).",
+                "hands": {
+                  "meera": {
+                    "left": "resting on the desk",
+                    "right": "open hand gesturing toward Ravi’s phone"
+                  },
+                  "ravi": {
+                    "left": "holding ravi-phone (foreground right)",
+                    "right": "out of frame"
+                  }
+                },
+                "props": [
+                  {
+                    "id": "ravi-phone",
+                    "before": "held by Ravi",
+                    "during": "held in Ravi’s left hand in the foreground, screen toward Meera",
+                    "after": "held by Ravi",
+                    "heldBy": "ravi.left"
+                  }
+                ]
+              },
+              "speakers": {
+                "meera": {
+                  "face": [
+                    691,
+                    741,
+                    111,
+                    125
+                  ],
+                  "anchor": [
+                    761,
+                    838
+                  ]
+                },
+                "ravi": {
+                  "kind": "head",
+                  "anchor": [
+                    970,
+                    760
+                  ]
+                }
+              },
+              "dialogue": [
+                {
+                  "speaker": "meera",
+                  "text": "That's the idea. Let's walk through what is available to you.",
+                  "textColumns": [
+                    "That's the idea. ",
+                    "Let's walk through what ",
+                    "is available to you."
+                  ],
+                  "textDirection": "horizontal",
+                  "side": "left",
+                  "x": 8,
+                  "dy": 8
+                }
+              ],
+              "protected": [
+                [
+                  890,
+                  898,
+                  79,
+                  120
+                ]
+              ]
+            },
+            {
+              "id": "06-4",
+              "order": 4,
+              "section": "departure",
+              "role": "余韻",
+              "beat": "Ravi leaves, reassured",
+              "rect": [
+                24,
+                1132,
+                976,
+                332
+              ],
+              "scene": "Outside the clinic entrance in morning sun: Ravi steps out onto the street, smiling and waving back toward the door with his right hand; his phone is in his left hand at his side and his bag on his shoulder. Dr. Ananya and Meera wave back from the glass doorway at left. Simple street and teal awning.",
+              "action": "Ravi waves goodbye while walking.",
+              "emotion": "Reassured, light.",
+              "camera": "Wide shot from the street, eye level.",
+              "information": "A smoother, more connected visit.",
+              "readingFlow": {
+                "entry": [
+                  40,
+                  1150
+                ],
+                "exit": [
+                  990,
+                  1505
+                ]
+              },
+              "production": {
+                "moment": "Ravi mid-step, waving back.",
+                "before": "Meera walked him through what is available.",
+                "after": "He heads home; the story looks toward tomorrow (page 7).",
+                "hands": {
+                  "ravi": {
+                    "left": "holding his own ravi-phone at his side",
+                    "right": "raised, waving back"
+                  },
+                  "ananya": {
+                    "left": "relaxed at her side",
+                    "right": "raised, waving from the doorway"
+                  },
+                  "meera": {
+                    "left": "raised, waving from the doorway",
+                    "right": "relaxed at her side"
+                  }
+                },
+                "props": [
+                  {
+                    "id": "ravi-phone",
+                    "before": "in his hand after the walkthrough",
+                    "during": "in his left hand at his side",
+                    "after": "in his hand",
+                    "heldBy": "ravi.left"
+                  },
+                  {
+                    "id": "shoulder-bag",
+                    "before": "on his shoulder",
+                    "during": "on his shoulder as he walks out",
+                    "after": "on his shoulder",
+                    "heldBy": "none"
+                  }
+                ]
+              },
+              "speakers": {
+                "ravi": {
+                  "face": [
+                    755,
+                    1164,
+                    70,
+                    85
+                  ],
+                  "anchor": [
+                    786,
+                    1229
+                  ]
+                },
+                "ananya": {
+                  "face": [
+                    291,
+                    1239,
+                    51,
+                    52
+                  ],
+                  "anchor": [
+                    316,
+                    1282
+                  ]
+                },
+                "meera": {
+                  "face": [
+                    370,
+                    1255,
+                    45,
+                    49
+                  ],
+                  "anchor": [
+                    392,
+                    1296
+                  ]
+                }
+              },
+              "dialogue": [
+                {
+                  "speaker": "narration",
+                  "text": "A smoother visit. A more connected experience.",
+                  "textColumns": [
+                    "A smoother visit. A more connected experience."
+                  ],
+                  "textDirection": "horizontal",
+                  "side": "left",
+                  "x": 24,
+                  "dy": 10
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "07",
+          "section": "vision",
+          "purpose": "Present the bigger Welbuk vision, clearly labelled as vision, then close on the three products and the three people.",
+          "expectation": "Closing: Welbuk is building a connected healthcare ecosystem.",
+          "panels": [
+            {
+              "id": "07-1",
+              "order": 1,
+              "role": "転換",
+              "beat": "Ravi travels to another city (hypothetical tomorrow)",
+              "rect": [
+                24,
+                24,
+                470,
+                440
+              ],
+              "scene": "Ravi sits by a train window, looking out calmly; a different Indian city skyline blurs past outside (no signs or text). His left hand holds his phone in his lap; right elbow on the window ledge.",
+              "action": "Ravi gazes out of the window.",
+              "emotion": "Calm, thoughtful.",
+              "camera": "Medium shot from across the aisle.",
+              "information": "A possible tomorrow beyond his hometown.",
+              "section": "travel",
+              "transition": {
+                "kind": "time-change",
+                "bridge": "Train window and moving skyline; conditional caption (\"may\").",
+                "settingBasis": "Source: \"Ravi travels to another Indian city; simple train-window transition.\""
+              },
+              "readingFlow": {
+                "entry": [
+                  40,
+                  40
+                ],
+                "exit": [
+                  490,
+                  460
+                ]
+              },
+              "production": {
+                "moment": "Ravi watching the city pass.",
+                "before": "He boarded the train.",
+                "after": "The page moves into the vision (07-2).",
+                "hands": {
+                  "ravi": {
+                    "left": "holding his own ravi-phone in his lap",
+                    "right": "elbow on the window ledge, hand near his chin"
+                  }
+                },
+                "props": [
+                  {
+                    "id": "ravi-phone",
+                    "before": "in his hand",
+                    "during": "in his lap",
+                    "after": "in his lap",
+                    "heldBy": "ravi.left"
+                  }
+                ]
+              },
+              "speakers": {
+                "ravi": {
+                  "face": [
+                    313,
+                    105,
+                    94,
+                    108
+                  ],
+                  "anchor": [
+                    349,
+                    195
+                  ]
+                }
+              },
+              "dialogue": [
+                {
+                  "speaker": "narration",
+                  "text": "Tomorrow, care may take us beyond our hometown.",
+                  "textColumns": [
+                    "Tomorrow, ",
+                    "care may take us ",
+                    "beyond our ",
+                    "hometown."
+                  ],
+                  "textDirection": "horizontal",
+                  "side": "left",
+                  "x": 16,
+                  "dy": 16
+                }
+              ]
+            },
+            {
+              "id": "07-2",
+              "order": 2,
+              "role": "期待",
+              "beat": "WELBUK VISION: connected clinics and specialists",
+              "rect": [
+                518,
+                24,
+                482,
+                440
+              ],
+              "scene": "Inside a soft pale-blue rounded vignette border: a symbolic modern clinic in another city; a friendly specialist doctor stands at its entrance with a welcoming open hand. Faint dotted lines float in the sky linking small simple clinic silhouettes, suggesting connection. Airy, lighter palette. No text or logos anywhere.",
+              "action": "The specialist welcomes the viewer.",
+              "emotion": "Hopeful, aspirational.",
+              "camera": "Medium-wide shot, eye level.",
+              "information": "Vision only: trusted connections across locations — not a launched feature.",
+              "readingFlow": {
+                "entry": [
+                  534,
+                  40
+                ],
+                "exit": [
+                  990,
+                  460
+                ]
+              },
+              "production": {
+                "moment": "The specialist welcomes, dotted connection lines above.",
+                "before": "Ravi’s journey hints at care beyond his hometown.",
+                "after": "The vision widens to the family (07-3).",
+                "hands": {
+                  "specialist": {
+                    "left": "relaxed at his side, empty",
+                    "right": "open palm in a welcoming gesture"
+                  }
+                },
+                "props": []
+              },
+              "speakers": {
+                "specialist": {
+                  "face": [
+                    819,
+                    132,
+                    73,
+                    81
+                  ],
+                  "anchor": [
+                    865,
+                    195
+                  ]
+                }
+              },
+              "dialogue": [
+                {
+                  "speaker": "label",
+                  "text": "WELBUK VISION",
+                  "textColumns": [
+                    "WELBUK VISION"
+                  ],
+                  "textDirection": "horizontal",
+                  "side": "left",
+                  "x": 0,
+                  "dy": 0
+                },
+                {
+                  "speaker": "narration",
+                  "text": "The vision: trusted connections between clinics, specialists, and patients across locations.",
+                  "textColumns": [
+                    "The vision: trusted connections ",
+                    "between clinics, specialists, ",
+                    "and patients across locations."
+                  ],
+                  "textDirection": "horizontal",
+                  "side": "left",
+                  "x": 4,
+                  "dy": 298
+                }
+              ],
+              "protected": [
+                [
+                  672,
+                  262,
+                  74,
+                  54
+                ]
+              ]
+            },
+            {
+              "id": "07-3",
+              "order": 3,
+              "role": "期待",
+              "beat": "A family wellness ecosystem (vision)",
+              "rect": [
+                24,
+                488,
+                976,
+                340
+              ],
+              "scene": "Inside the same soft pale-blue vignette: symbolic family scene on a sofa. Ravi (left), his partner (centre) holding a tablet with an abstract family wellness app (three profile circles and a heart icon, no text), and their child (right) leaning in, all smiling.",
+              "action": "The family looks at the tablet together.",
+              "emotion": "Warm, secure.",
+              "camera": "Medium-wide shot, slight high angle.",
+              "information": "Vision: one connected ecosystem including family wellness.",
+              "readingFlow": {
+                "entry": [
+                  40,
+                  505
+                ],
+                "exit": [
+                  990,
+                  820
+                ]
+              },
+              "production": {
+                "moment": "The family shares the tablet, smiling.",
+                "before": "Vision of connected clinics.",
+                "after": "Return to the present-day closing (07-4).",
+                "hands": {
+                  "ravi": {
+                    "left": "arm along the back of the sofa behind his partner, hand resting on the sofa back behind the child",
+                    "right": "pointing gently at the tablet"
+                  },
+                  "partner": {
+                    "left": "holding family-tablet, left edge",
+                    "right": "holding family-tablet, right edge"
+                  },
+                  "child": {
+                    "left": "resting on the partner’s arm",
+                    "right": "resting on the sofa cushion"
+                  }
+                },
+                "props": [
+                  {
+                    "id": "family-tablet",
+                    "before": "on the table",
+                    "during": "held by the partner in both hands",
+                    "after": "held by the partner",
+                    "heldBy": "partner.left"
+                  }
+                ]
+              },
+              "speakers": {
+                "ravi": {
+                  "face": [
+                    462,
+                    501,
+                    115,
+                    129
+                  ],
+                  "anchor": [
+                    526,
+                    610
+                  ]
+                },
+                "partner": {
+                  "face": [
+                    609,
+                    514,
+                    108,
+                    122
+                  ],
+                  "anchor": [
+                    666,
+                    617
+                  ]
+                },
+                "child": {
+                  "face": [
+                    742,
+                    585,
+                    89,
+                    96
+                  ],
+                  "anchor": [
+                    786,
+                    662
+                  ]
+                }
+              },
+              "dialogue": [
+                {
+                  "speaker": "label",
+                  "text": "WELBUK VISION",
+                  "textColumns": [
+                    "WELBUK VISION"
+                  ],
+                  "textDirection": "horizontal",
+                  "side": "left",
+                  "x": 16,
+                  "dy": 16
+                },
+                {
+                  "speaker": "narration",
+                  "text": "One connected ecosystem for care and family wellness.",
+                  "textColumns": [
+                    "One connected ecosystem ",
+                    "for care and ",
+                    "family wellness."
+                  ],
+                  "textDirection": "horizontal",
+                  "side": "left",
+                  "x": 16,
+                  "dy": 100
+                }
+              ],
+              "protected": [
+                [
+                  583,
+                  681,
+                  159,
+                  103
+                ]
+              ]
+            },
+            {
+              "id": "07-4",
+              "order": 4,
+              "role": "余韻",
+              "beat": "The three people and the three Welbuk products",
+              "rect": [
+                24,
+                852,
+                976,
+                612
+              ],
+              "scene": "Large closing panel back in the present, in front of the clinic entrance in warm morning light: Meera (left), Dr. Ananya (centre) and Ravi (right) stand together smiling at the reader. Ananya’s hands clasped in front, Meera holds her staff phone at her side, Ravi gives a small wave. Clear sky band at top and empty pavement band at bottom for captions. Normal full-colour palette, no vignette.",
+              "action": "All three smile toward the reader.",
+              "emotion": "Warm, optimistic, trustworthy.",
+              "camera": "Medium-full group shot, eye level, symmetrical.",
+              "information": "Practice for the clinic, Care for staff, Health for patients.",
+              "section": "closing",
+              "transition": {
+                "kind": "return",
+                "bridge": "Vignette disappears; familiar clinic entrance and present-day costumes.",
+                "settingBasis": "Source: \"Dr. Ananya, Meera and Ravi smile, with three product labels\" (large closing panel)."
+              },
+              "readingFlow": {
+                "entry": [
+                  40,
+                  870
+                ],
+                "exit": [
+                  990,
+                  1505
+                ]
+              },
+              "production": {
+                "moment": "Group smile for the closing.",
+                "before": "The vision scenes.",
+                "after": "End of the comic.",
+                "hands": {
+                  "meera": {
+                    "left": "relaxed at her side, empty",
+                    "right": "holding staff-phone at her side"
+                  },
+                  "ananya": {
+                    "left": "clasped in front of her",
+                    "right": "clasped in front of her"
+                  },
+                  "ravi": {
+                    "left": "relaxed at his side, empty",
+                    "right": "raised in a small wave"
+                  }
+                },
+                "props": [
+                  {
+                    "id": "staff-phone",
+                    "before": "in Meera’s hand",
+                    "during": "held at her side",
+                    "after": "held at her side",
+                    "heldBy": "meera.right"
+                  }
+                ]
+              },
+              "speakers": {
+                "meera": {
+                  "face": [
+                    344,
+                    925,
+                    54,
+                    68
+                  ],
+                  "anchor": [
+                    371,
+                    980
+                  ]
+                },
+                "ananya": {
+                  "face": [
+                    481,
+                    906,
+                    62,
+                    76
+                  ],
+                  "anchor": [
+                    512,
+                    968
+                  ]
+                },
+                "ravi": {
+                  "face": [
+                    638,
+                    894,
+                    61,
+                    73
+                  ],
+                  "anchor": [
+                    668,
+                    955
+                  ]
+                }
+              },
+              "dialogue": [
+                {
+                  "speaker": "label",
+                  "text": "Welbuk Practice • Welbuk Care • Welbuk Health",
+                  "textColumns": [
+                    "Welbuk Practice • ",
+                    "Welbuk Care • ",
+                    "Welbuk Health"
+                  ],
+                  "textDirection": "horizontal",
+                  "side": "left",
+                  "x": 680,
+                  "dy": 20
+                },
+                {
+                  "speaker": "narration",
+                  "text": "Welbuk — Building a connected healthcare ecosystem.",
+                  "textColumns": [
+                    "Welbuk — Building a connected ",
+                    "healthcare ecosystem."
+                  ],
+                  "textDirection": "horizontal",
+                  "side": "left",
+                  "x": 24,
+                  "dy": 490
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "productionMode": "quality",
+    "readingProtocol": "two-phase-v1",
+    "firstReading": {
+      "fingerprint": "683da8e5ea96ea345ce7995555ca831e6dcf8e70f7b4ce3833520256d283a72a",
+      "reviewer": {
+        "role": "subagent",
+        "task": "claude-code-agent:manga-reviewer:a1a1595a4f8aa5dbf",
+        "reportedTask": null,
+        "taskSource": "Agent ID returned by the Claude Code Agent tool to the parent."
+      },
+      "pages": [
+        {
+          "page": "01",
+          "scan": "Opened /home/user/manga-generator/works/auto-6294ee8a2094/output/page-01.png. It loaded and I looked at it. Layout: one wide panel on top, two panels below (left, then right).",
+          "observation": "Reading order: P1 caption 'A busy day at Dr. Ananya's clinic.' (doctor in a white coat and teal kurta waves an elderly woman in a sari through the door; a man and a woman wait on chairs). P2, receptionist in a blue kurta with a braid, on the phone and writing in a ledger: 'Appointments, patient details, follow-ups...' (top-left balloon) and then 'I wish everything were easier to manage!' (balloon lower right). Both tails point to the receptionist, and the order top-left then right is natural. P3, the doctor, hand to chin: 'Our time belongs with patients. Let's make the rest simpler.' The tail points to the doctor, and the line reads as a reply to the receptionist's wish. No balloon covers a face, hand or prop. Small ambiguity: the receptionist is holding the phone while she says these lines, so it is not clear whether she is talking to the caller, to herself or to the doctor. The doctor's reply suggests the doctor overheard her, which still reads fine. The doctor is named only in the caption, but her coat makes her easy to identify."
+        },
+        {
+          "page": "02",
+          "scan": "Opened /home/user/manga-generator/works/auto-6294ee8a2094/output/page-02.png. It loaded and I looked at it. Layout: one wide panel on top, two panels in the middle (left, then right), one wide panel at the bottom.",
+          "observation": "Reading order: P1 caption 'The clinic begins its Welbuk onboarding.', then the teal label 'WELBUK PRACTICE for the clinic' (doctor typing on a laptop; the screen shows a generic setup form with no text, and nothing covers it). P2, doctor: 'We can organise our clinic workflow here.' The tail points to the doctor. P3, receptionist holding a phone: 'And our team can use tools suited to each staff role.' The tail points to the receptionist. The label 'WELBUK CARE for clinic staff' sits at the bottom left and overlaps the lower part of the receptionist's kurta and the desk area. It does not cover her face, the phone or the hand holding it. P4, doctor (seated, laptop) and receptionist (standing, phone): 'One team. Better coordination.' The tail points left to the doctor, and the balloon sits between the two faces without covering either. Time and place: the windows show a sunset with no time caption, so the page reads as the evening of the same busy day in the doctor's office. That works, but it is only implied. Continuity of clothes, braid and stethoscope with page 1 is fine."
+        },
+        {
+          "page": "03",
+          "scan": "Opened /home/user/manga-generator/works/auto-6294ee8a2094/output/page-03.png. It loaded and I looked at it. Layout: two panels on top (left, then right), two in the middle (left, then right), one wide panel at the bottom.",
+          "observation": "There are captions only and no balloons. Reading order: P1 'A later morning: patients can always check in at the front desk.' (an elderly man with a cane at the desk, the receptionist at a computer). The time jump is clearly marked, although 'A later morning' is slightly awkward wording. P2 'Some check in ahead on the Welbuk Health app.' (a young woman in a pink kurta outside the clinic, tapping her phone). P3 'Ravi scans the QR code at the door.' (Ravi, bearded, green shirt, satchel, scans a QR stand). Ravi is introduced by name here, which is clear. The stand is drawn inside near the reception chairs rather than at the door, which is minor. P4 'A short form on his own phone, shared with consent.' (close-up of the phone form; the caption does not cover the screen or his hands). P5 'Every check-in gets a slot on the screen.' The wall screen shows 'A-10 · A-11 · A-12', and the elderly man, the woman in pink and Ravi sit in a row. The order of the three people suggests Ravi is A-12, but that is only inferred. Continuity: in P2 the woman in pink has her hair down, and in P5 it is in a tied ponytail with a scrunchie. This is a small hair mismatch. Ravi's watch (left wrist) and bag stay consistent."
+        },
+        {
+          "page": "04",
+          "scan": "Opened /home/user/manga-generator/works/auto-6294ee8a2094/output/page-04.png. It loaded and I looked at it. Layout: one wide panel on top, two tall panels below (left, then right).",
+          "observation": "Reading order: P1 caption 'Soon, his slot comes up.' The screen label 'NOW · A-12' sits top right; Ravi stands up from the waiting chairs and the receptionist is at the desk. P2 caption 'A quick vitals check first.', then a nurse in purple scrubs with a lanyard: 'Hi, Ravi! Just relax your arm for me.' The tail points down to the nurse. The nurse is new and unnamed but easy to identify by her role. The BP cuff, the pulse oximeter and the bag on the floor are clear and not covered. The nurse squeezes a manual bulb next to a digital monitor, which is a minor oddity in the drawing. P3 caption 'Dr. Ananya is notified when he's ready.', with the doctor holding a tablet labelled 'RAVI · READY'. The label sits on the tablet screen and does not cover her hands. The sequence is clear."
+        },
+        {
+          "page": "05",
+          "scan": "Opened /home/user/manga-generator/works/auto-6294ee8a2094/output/page-05.png. It loaded and I looked at it. Layout: one wide panel on top, two panels in the middle (left, then right), one wide panel at the bottom.",
+          "observation": "Reading order: P1, doctor at her desk: 'Hello, Ravi. Tell me what brings you in.' The tail points left to the doctor, and the balloon sits between the two faces without covering either. Ravi sits across from her. P2, Ravi, hand on his neck: 'I've been feeling tired lately.' The tail points to Ravi, and the doctor is seen from behind on the left. P3, narration caption 'Technology supports the workflow. The conversation stays human.' (the doctor listens; Ravi is seen from behind on the right). The caption sits above her head and is clear of her face. P4, doctor: 'We'll go through your concerns and decide the right next steps together.' The tail points left to the doctor, and Ravi nods (motion marks). The question-and-answer exchange is complete, with no skipped reply. There is no lettering over faces or hands."
+        },
+        {
+          "page": "06",
+          "scan": "Opened /home/user/manga-generator/works/auto-6294ee8a2094/output/page-06.png. It loaded and I looked at it. Layout: one wide panel on top, two panels in the middle (left, then right), one wide panel at the bottom.",
+          "observation": "Reading order: P1, receptionist pointing at Ravi's phone at the front desk: 'Welbuk Health is designed to help patients stay connected with their care.' The tail points to the receptionist. The scene moves from the consultation room back to reception with no caption, but the desk and waiting area make the place clear and the order reads as after the consultation. P2, Ravi holding up his phone: 'So I can keep useful information in one place?' The tail points to Ravi. The label 'WELBUK HEALTH for patients' at the bottom left sits close to his left hand and the phone but does not seem to cover the screen; its right edge is very close to his fingers. P3, receptionist: 'That's the idea. Let's walk through what is available to you.' The tail points to the receptionist, and Ravi's phone is visible at the right. P4 caption 'A smoother visit. A more connected experience.' Ravi leaves, waving, while the doctor and receptionist wave from the doorway. Small jump: 'Let's walk through...' leads straight to him leaving and the walkthrough is never shown. This is acceptable as an ellipsis, but it is noticeable. There are no wrong tails."
+        },
+        {
+          "page": "07",
+          "scan": "Opened /home/user/manga-generator/works/auto-6294ee8a2094/output/page-07.png. It loaded and I looked at it. Layout: two panels on top (left, then right), one wide panel in the middle, one wide panel at the bottom.",
+          "observation": "There are captions and labels only. Reading order: P1 'Tomorrow, care may take us beyond our hometown.' (Ravi on a train, looking out). It is unclear who speaks this caption: 'us/our' could be Ravi's inner voice or a brand narrator. 'Tomorrow' could also be read as literally the next day rather than 'in the future'. P2, the label 'WELBUK VISION', then 'The vision: trusted connections between clinics, specialists, and patients across locations.' (a new, unnamed grey-haired doctor gestures at a clinic with dotted links to other clinics). He can be read as a 'specialist', but he is not identified. P3, the label 'WELBUK VISION', then 'One connected ecosystem for care and family wellness.' (Ravi with a woman in a yellow kurta and a boy, looking at a tablet). The woman and the child have not appeared before and are not introduced, so readers will assume they are his wife and son. The repeated 'WELBUK VISION' label marks the speculative or vision mode reasonably well. P4, the receptionist, the doctor and Ravi stand in front of the clinic. The label 'Welbuk Practice • Welbuk Care • Welbuk Health' sits top right and is clear of Ravi's raised hand and face. The closing caption 'Welbuk — Building a connected healthcare ecosystem.' sits bottom left, and its right edge slightly overlaps the doctor's left lower leg; faces and hands are clear. The final group shot has no time caption, so it reads as a closing tagline image rather than a story moment, which is acceptable."
+        }
+      ]
+    },
+    "firstReadingHash": "cda6906f965a0b1037850d3c9b6c08c570d2c7b782d3ef7b335805ca22f01580"
+  },
+  "files": [
+    "works/auto-6294ee8a2094/source/original.txt",
+    "works/auto-6294ee8a2094/assets/characters/main-cast.png",
+    "works/auto-6294ee8a2094/assets/characters/vision-cast.png",
+    "works/auto-6294ee8a2094/assets/characters/nurse.png",
+    "works/auto-6294ee8a2094/assets/characters/checkin-patients.png",
+    "works/auto-6294ee8a2094/workflow/storyboards/page-01.svg",
+    "works/auto-6294ee8a2094/assets/panels/01-1.png",
+    "works/auto-6294ee8a2094/assets/panels/01-2.png",
+    "works/auto-6294ee8a2094/assets/panels/01-3.png",
+    "works/auto-6294ee8a2094/workflow/review/page-01.png",
+    "works/auto-6294ee8a2094/workflow/storyboards/page-02.svg",
+    "works/auto-6294ee8a2094/assets/panels/02-1.png",
+    "works/auto-6294ee8a2094/assets/panels/02-2.png",
+    "works/auto-6294ee8a2094/assets/panels/02-3.png",
+    "works/auto-6294ee8a2094/assets/panels/02-4.png",
+    "works/auto-6294ee8a2094/workflow/review/page-02.png",
+    "works/auto-6294ee8a2094/workflow/storyboards/page-03.svg",
+    "works/auto-6294ee8a2094/assets/panels/03-1.png",
+    "works/auto-6294ee8a2094/assets/panels/03-2.png",
+    "works/auto-6294ee8a2094/assets/panels/03-3.png",
+    "works/auto-6294ee8a2094/assets/panels/03-4.png",
+    "works/auto-6294ee8a2094/assets/panels/03-5.png",
+    "works/auto-6294ee8a2094/workflow/review/page-03.png",
+    "works/auto-6294ee8a2094/workflow/storyboards/page-04.svg",
+    "works/auto-6294ee8a2094/assets/panels/04-1.png",
+    "works/auto-6294ee8a2094/assets/panels/04-2.png",
+    "works/auto-6294ee8a2094/assets/panels/04-3.png",
+    "works/auto-6294ee8a2094/workflow/review/page-04.png",
+    "works/auto-6294ee8a2094/workflow/storyboards/page-05.svg",
+    "works/auto-6294ee8a2094/assets/panels/05-1.png",
+    "works/auto-6294ee8a2094/assets/panels/05-2.png",
+    "works/auto-6294ee8a2094/assets/panels/05-3.png",
+    "works/auto-6294ee8a2094/assets/panels/05-4.png",
+    "works/auto-6294ee8a2094/workflow/review/page-05.png",
+    "works/auto-6294ee8a2094/workflow/storyboards/page-06.svg",
+    "works/auto-6294ee8a2094/assets/panels/06-1.png",
+    "works/auto-6294ee8a2094/assets/panels/06-2.png",
+    "works/auto-6294ee8a2094/assets/panels/06-3.png",
+    "works/auto-6294ee8a2094/assets/panels/06-4.png",
+    "works/auto-6294ee8a2094/workflow/review/page-06.png",
+    "works/auto-6294ee8a2094/workflow/storyboards/page-07.svg",
+    "works/auto-6294ee8a2094/assets/panels/07-1.png",
+    "works/auto-6294ee8a2094/assets/panels/07-2.png",
+    "works/auto-6294ee8a2094/assets/panels/07-3.png",
+    "works/auto-6294ee8a2094/assets/panels/07-4.png",
+    "works/auto-6294ee8a2094/workflow/review/page-07.png",
+    "works/auto-6294ee8a2094/output/reader.html",
+    "works/auto-6294ee8a2094/output/pdf/manga.pdf",
+    "works/auto-6294ee8a2094/workflow/stage-reviews/first-reading/final-all-683da8e5ea96ea345ce7995555ca831e6dcf8e70f7b4ce3833520256d283a72a.json",
+    "works/auto-6294ee8a2094/output/page-01.png",
+    "works/auto-6294ee8a2094/output/page-02.png",
+    "works/auto-6294ee8a2094/output/page-03.png",
+    "works/auto-6294ee8a2094/output/page-04.png",
+    "works/auto-6294ee8a2094/output/page-05.png",
+    "works/auto-6294ee8a2094/output/page-06.png",
+    "works/auto-6294ee8a2094/output/page-07.png"
+  ],
+  "optionalFiles": [],
+  "configFile": "works/auto-6294ee8a2094/workflow.json",
+  "entries": {
+    "works/auto-6294ee8a2094/source/original.txt": "78b77a0f8272fd38c6bc6f4b8cf2ef3bb3c7d7d97112ea3f540dcd482913144a",
+    "works/auto-6294ee8a2094/assets/characters/main-cast.png": "4f607444611f6b74f81feafda5d76c867e62af84dc0c18d05c5e975e45bfb11b",
+    "works/auto-6294ee8a2094/assets/characters/vision-cast.png": "c20f9ad67a643ba8356fff59ec1b5013d5a4a526184103fde0aa247b15781086",
+    "works/auto-6294ee8a2094/assets/characters/nurse.png": "ac47509a83dcf45b5d446b8350bf4704a754076c266006266f3a4cdf24d01d82",
+    "works/auto-6294ee8a2094/assets/characters/checkin-patients.png": "d8409881393a019ef555cebce4f63d07cd38938aa329a860ad283f277acd0763",
+    "works/auto-6294ee8a2094/workflow/storyboards/page-01.svg": "5735c6dfd59994db58eb28fdbcc19d6ebfb10ceec39843146f5251db0a2db7bc",
+    "works/auto-6294ee8a2094/assets/panels/01-1.png": "914d3e3fe701aa8d71785aaf15d7c7e99024882c8d947341a949e29b48dfe023",
+    "works/auto-6294ee8a2094/assets/panels/01-2.png": "5cf2c02e80ee4394a31b9cfd3bc64f11b0e4791fd5bdad367a45508acf6d1e2f",
+    "works/auto-6294ee8a2094/assets/panels/01-3.png": "e91142661a72b348b4d2518904474a5c8b36f46a99dd63041ce980c1d4b25da7",
+    "works/auto-6294ee8a2094/workflow/review/page-01.png": "8fc86b5a17ed0eddf4b5bdf07dc05a58d806ac618f93c91a0e6f0abb59eebd2a",
+    "works/auto-6294ee8a2094/workflow/storyboards/page-02.svg": "8c891dd400b85116882f517de1220690f0e16ec7d283e5cc5c90fff838005a20",
+    "works/auto-6294ee8a2094/assets/panels/02-1.png": "9fbf329c49433212a8a90deef6237493709f0bfff376d1920e15bf7fe45953bc",
+    "works/auto-6294ee8a2094/assets/panels/02-2.png": "4b62d55e2fd3e172527b04efe33570ef841ee43566d745e44daec208c23f2160",
+    "works/auto-6294ee8a2094/assets/panels/02-3.png": "7ed9831e9be62889b0e87b1322447b8559bf376233e59c92a021035079371193",
+    "works/auto-6294ee8a2094/assets/panels/02-4.png": "4caed0b704f29d6e7084beb931fcf4c4f5637d6d2b02c553f2471a903887f908",
+    "works/auto-6294ee8a2094/workflow/review/page-02.png": "73ae95d530656a811aaf03d4c0b94f16b0cfdf9b65ad6003579630177f4cfe87",
+    "works/auto-6294ee8a2094/workflow/storyboards/page-03.svg": "ba73b731da31b0bde7db4c1bcd410ee2a96955f4f4d9609a708016d02d1303a1",
+    "works/auto-6294ee8a2094/assets/panels/03-1.png": "6dab121ecc1b7de2a944d4bf50ca346dddc726a56eca55bd2b3a06542140fbe4",
+    "works/auto-6294ee8a2094/assets/panels/03-2.png": "f1388d130ddc9e10554243aa23d6687e1a99e368b17be76d95efc618b0814bb3",
+    "works/auto-6294ee8a2094/assets/panels/03-3.png": "f25650939311cf9dbabfae98d210e93ed504cedbce2877d15a4d744167c96876",
+    "works/auto-6294ee8a2094/assets/panels/03-4.png": "aad220f7cb4787573a102cbd9cb321fcc607f939a49d1594c5959b5a126c2797",
+    "works/auto-6294ee8a2094/assets/panels/03-5.png": "80954233845cf8f4889856c09f8046cef0d978ebcc51615c1f7bfbb5e7f40b37",
+    "works/auto-6294ee8a2094/workflow/review/page-03.png": "0fd09f26ece46044b95cd2ba70650e6bf54fb43f513874659647377f651f4523",
+    "works/auto-6294ee8a2094/workflow/storyboards/page-04.svg": "19198790f64a6b0c70e8ffcd7b999ba89cdb36cad77925adbeb0c23dbe5fe292",
+    "works/auto-6294ee8a2094/assets/panels/04-1.png": "b1f7132d119b8e4e94a357458edebad61259583ca38b80bbadcca98a8121a71a",
+    "works/auto-6294ee8a2094/assets/panels/04-2.png": "405fafb7219eb66f3a10236144a6fde1621fa30fb51a9e1e9a6a0e9c85658182",
+    "works/auto-6294ee8a2094/assets/panels/04-3.png": "91e48d463e011ba1431a2c9910041c1febe9d31bb9680ffbd3232325baa9fced",
+    "works/auto-6294ee8a2094/workflow/review/page-04.png": "85bac9fde7faab81c0f54c23f7f8a3090246cfc72785da7988b518da9841f620",
+    "works/auto-6294ee8a2094/workflow/storyboards/page-05.svg": "f2dc33a7053d86d3766401ef15f0d5f607eafc92651c772938472a7b26d4347a",
+    "works/auto-6294ee8a2094/assets/panels/05-1.png": "211a6d1fc2f8685ea54cc12dda2f4a4171fe2f0e749acf6135cc99c482a57e6d",
+    "works/auto-6294ee8a2094/assets/panels/05-2.png": "7678f59e10ed986c85830844b68214786767d11e4baf78e6a9421624e1486f32",
+    "works/auto-6294ee8a2094/assets/panels/05-3.png": "2238f4e3b11344c3fbd867c69c36473736343bf56d3063903cc0a9d6b8323c82",
+    "works/auto-6294ee8a2094/assets/panels/05-4.png": "874e1f22649f4f9d80443ceeb420249b614deee51c3a0b175bcc0cac050036a3",
+    "works/auto-6294ee8a2094/workflow/review/page-05.png": "b2588f925fac3a7ff87a3710a7bff498bdc80e2699f71707afa43d23420a7824",
+    "works/auto-6294ee8a2094/workflow/storyboards/page-06.svg": "0ac2c68f96899e4d68bbd377a1cd504e39f535a379e09697de7327318300a494",
+    "works/auto-6294ee8a2094/assets/panels/06-1.png": "442e0d608a1032de1f193437c7c2e8aa9ea2991a2e88bac61d6d0b82dc7408ee",
+    "works/auto-6294ee8a2094/assets/panels/06-2.png": "f752ec6a841fc003933366bd4968e7312783bffb8670f587c06cb16c221efbbb",
+    "works/auto-6294ee8a2094/assets/panels/06-3.png": "0b9a65d86358cb9c640b6859ab612a65e2185c891b871a00661a2d7aa0df3877",
+    "works/auto-6294ee8a2094/assets/panels/06-4.png": "f9d79f2f8e8b58c8d52562025d74c11fc817ba6633767fac559f66412e8b143d",
+    "works/auto-6294ee8a2094/workflow/review/page-06.png": "be2d8a771477a5b05a164a49a3c07494a257bb1ae053cff20139f35f4bb44493",
+    "works/auto-6294ee8a2094/workflow/storyboards/page-07.svg": "7d5e63ae92983f5837fe9f3f5f76b1d0b873b210846783ce5a641c115f7ddfc0",
+    "works/auto-6294ee8a2094/assets/panels/07-1.png": "aa948536b41a068cabc74724c6a3ff51ea51c53c717a7ec969e9615b8df12840",
+    "works/auto-6294ee8a2094/assets/panels/07-2.png": "ffb8ceb500e3ea52782351363cdecbb27e2ebedda36832a2e2928b6039107781",
+    "works/auto-6294ee8a2094/assets/panels/07-3.png": "5882494aa082281651efd8fe55283bddcfb876f72723a456de1f8a35ecdc10be",
+    "works/auto-6294ee8a2094/assets/panels/07-4.png": "57c0237bd755620349e5d2949bec1fe4778dd025d63cbfd10acaaa6f73bb44c9",
+    "works/auto-6294ee8a2094/workflow/review/page-07.png": "08955352b33a67dc6c9b16a97f9d8109de6ecde157edad7f9e0a06d2f68f86d6",
+    "works/auto-6294ee8a2094/output/reader.html": "1109ad4270232c8cd460dce24a4901d72172323ed2afd1f8814c187759fc04d4",
+    "works/auto-6294ee8a2094/output/pdf/manga.pdf": "bb79a17ee2c3d75a61fe812cd60fadebf6a1b8e0d00dfbd809192a6c9c9d9057",
+    "works/auto-6294ee8a2094/workflow/stage-reviews/first-reading/final-all-683da8e5ea96ea345ce7995555ca831e6dcf8e70f7b4ce3833520256d283a72a.json": "cda6906f965a0b1037850d3c9b6c08c570d2c7b782d3ef7b335805ca22f01580",
+    "works/auto-6294ee8a2094/output/page-01.png": "8fc86b5a17ed0eddf4b5bdf07dc05a58d806ac618f93c91a0e6f0abb59eebd2a",
+    "works/auto-6294ee8a2094/output/page-02.png": "73ae95d530656a811aaf03d4c0b94f16b0cfdf9b65ad6003579630177f4cfe87",
+    "works/auto-6294ee8a2094/output/page-03.png": "0fd09f26ece46044b95cd2ba70650e6bf54fb43f513874659647377f651f4523",
+    "works/auto-6294ee8a2094/output/page-04.png": "85bac9fde7faab81c0f54c23f7f8a3090246cfc72785da7988b518da9841f620",
+    "works/auto-6294ee8a2094/output/page-05.png": "b2588f925fac3a7ff87a3710a7bff498bdc80e2699f71707afa43d23420a7824",
+    "works/auto-6294ee8a2094/output/page-06.png": "be2d8a771477a5b05a164a49a3c07494a257bb1ae053cff20139f35f4bb44493",
+    "works/auto-6294ee8a2094/output/page-07.png": "08955352b33a67dc6c9b16a97f9d8109de6ecde157edad7f9e0a06d2f68f86d6"
+  },
+  "fingerprint": "98f3e6747daaa649461823176a3645dd5fa9535905ffe8b1a2b860f1987869d2"
+}

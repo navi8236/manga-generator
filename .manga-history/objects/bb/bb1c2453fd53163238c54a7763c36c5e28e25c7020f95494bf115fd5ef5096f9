@@ -1,0 +1,2282 @@
+[
+  {
+    "version": 3,
+    "page": "01",
+    "status": "planning-guide-not-reviewed",
+    "direction": "left-to-right, top-to-bottom",
+    "panels": [
+      {
+        "id": "01-1",
+        "rect": [
+          24,
+          24,
+          976,
+          600
+        ],
+        "steps": [
+          {
+            "number": 1,
+            "speaker": "narration",
+            "text": "A busy day at Dr. Ananya's clinic.",
+            "rect": [
+              48,
+              48,
+              286,
+              106
+            ],
+            "center": [
+              191,
+              101
+            ],
+            "mouth": null
+          }
+        ],
+        "faces": {
+          "ananya": {
+            "face": [
+              398,
+              170,
+              52,
+              64
+            ],
+            "anchor": [
+              423,
+              222
+            ]
+          }
+        },
+        "protected": [],
+        "intent": {
+          "entry": [
+            40,
+            40
+          ],
+          "exit": [
+            990,
+            620
+          ]
+        },
+        "groups": null,
+        "warnings": []
+      },
+      {
+        "id": "01-2",
+        "rect": [
+          24,
+          648,
+          560,
+          816
+        ],
+        "steps": [
+          {
+            "number": 1,
+            "speaker": "meera",
+            "text": "Appointments, patient details, follow-ups...",
+            "rect": [
+              44,
+              672,
+              228,
+              138
+            ],
+            "center": [
+              158,
+              741
+            ],
+            "mouth": [
+              358,
+              1028
+            ]
+          },
+          {
+            "number": 2,
+            "speaker": "meera",
+            "text": "I wish everything were easier to manage!",
+            "rect": [
+              304,
+              768,
+              260,
+              138
+            ],
+            "center": [
+              434,
+              837
+            ],
+            "mouth": [
+              358,
+              1028
+            ]
+          }
+        ],
+        "faces": {
+          "meera": {
+            "face": [
+              318,
+              945,
+              85,
+              100
+            ],
+            "anchor": [
+              358,
+              1028
+            ]
+          }
+        },
+        "protected": [],
+        "intent": {
+          "entry": [
+            44,
+            680
+          ],
+          "exit": [
+            560,
+            1490
+          ]
+        },
+        "groups": null,
+        "warnings": [
+          {
+            "from": 1,
+            "to": 2,
+            "reason": "左から右へ戻る移動と縦方向の範囲が重なる。段差・余白・人物の配置を目視で検討する。"
+          }
+        ]
+      },
+      {
+        "id": "01-3",
+        "rect": [
+          608,
+          648,
+          392,
+          816
+        ],
+        "steps": [
+          {
+            "number": 1,
+            "speaker": "ananya",
+            "text": "Our time belongs with patients. Let's make the rest simpler.",
+            "rect": [
+              626,
+              672,
+              255,
+              170
+            ],
+            "center": [
+              753.5,
+              757
+            ],
+            "mouth": [
+              882,
+              1022
+            ]
+          }
+        ],
+        "faces": {
+          "ananya": {
+            "face": [
+              855,
+              945,
+              72,
+              90
+            ],
+            "anchor": [
+              882,
+              1022
+            ]
+          },
+          "meera": {
+            "face": [
+              680,
+              1080,
+              45,
+              55
+            ],
+            "anchor": [
+              703,
+              1125
+            ]
+          }
+        },
+        "protected": [],
+        "intent": {
+          "entry": [
+            630,
+            680
+          ],
+          "exit": [
+            990,
+            1500
+          ]
+        },
+        "groups": null,
+        "warnings": []
+      }
+    ],
+    "checklist": [
+      "番号と誘導線を隠した画像を先に読み、予測した発話順を記録する",
+      "最初のセリフへ上・左から入れるか",
+      "近い非連続の吹き出しを一組と誤認して返答を飛ばさないか",
+      "前の会話のまとまりを読み終えてから次のまとまりへ進めるか",
+      "返答へ自然に移り、視線が大きく逆戻りしないか",
+      "顔の向き・視線・手や小道具の動作と読順がつながるか",
+      "話者への尾が別人物や重要物を横切らないか",
+      "場所・時間・回想の切替と物の移動を直前直後から理解できるか",
+      "最後のセリフ・反応から次のコマへ移れるか",
+      "大きなコマ・余白・情報公開の順がページの感情の狙いに合うか",
+      "話題の境界と段・ページ境界が一致し、不要な読み戻りを誘わないか"
+    ]
+  },
+  {
+    "version": 3,
+    "page": "02",
+    "status": "planning-guide-not-reviewed",
+    "direction": "left-to-right, top-to-bottom",
+    "panels": [
+      {
+        "id": "02-1",
+        "rect": [
+          24,
+          24,
+          976,
+          520
+        ],
+        "steps": [
+          {
+            "number": 1,
+            "speaker": "narration",
+            "text": "The clinic begins its Welbuk onboarding.",
+            "rect": [
+              24,
+              24,
+              299,
+              138
+            ],
+            "center": [
+              173.5,
+              93
+            ],
+            "mouth": null
+          },
+          {
+            "number": 2,
+            "speaker": "label",
+            "text": "WELBUK PRACTICE for the clinic",
+            "rect": [
+              706,
+              24,
+              294,
+              138
+            ],
+            "center": [
+              853,
+              93
+            ],
+            "mouth": null
+          }
+        ],
+        "faces": {
+          "ananya": {
+            "face": [
+              300,
+              165,
+              110,
+              145
+            ],
+            "anchor": [
+              372,
+              290
+            ]
+          }
+        },
+        "protected": [],
+        "intent": {
+          "entry": [
+            40,
+            40
+          ],
+          "exit": [
+            990,
+            540
+          ]
+        },
+        "groups": null,
+        "warnings": [
+          {
+            "from": 1,
+            "to": 2,
+            "reason": "左から右へ戻る移動と縦方向の範囲が重なる。段差・余白・人物の配置を目視で検討する。"
+          }
+        ]
+      },
+      {
+        "id": "02-2",
+        "rect": [
+          24,
+          568,
+          600,
+          520
+        ],
+        "steps": [
+          {
+            "number": 1,
+            "speaker": "ananya",
+            "text": "We can organise our clinic workflow here.",
+            "rect": [
+              44,
+              588,
+              308,
+              106
+            ],
+            "center": [
+              198,
+              641
+            ],
+            "mouth": [
+              425,
+              752
+            ]
+          }
+        ],
+        "faces": {
+          "ananya": {
+            "face": [
+              365,
+              655,
+              105,
+              115
+            ],
+            "anchor": [
+              425,
+              752
+            ]
+          }
+        },
+        "protected": [],
+        "intent": {
+          "entry": [
+            44,
+            590
+          ],
+          "exit": [
+            620,
+            1080
+          ]
+        },
+        "groups": null,
+        "warnings": []
+      },
+      {
+        "id": "02-3",
+        "rect": [
+          648,
+          568,
+          352,
+          520
+        ],
+        "steps": [
+          {
+            "number": 1,
+            "speaker": "meera",
+            "text": "And our team can use tools suited to each staff role.",
+            "rect": [
+              664,
+              584,
+              272,
+              138
+            ],
+            "center": [
+              800,
+              653
+            ],
+            "mouth": [
+              873,
+              788
+            ]
+          },
+          {
+            "number": 2,
+            "speaker": "label",
+            "text": "WELBUK CARE for clinic staff",
+            "rect": [
+              664,
+              968,
+              234,
+              106
+            ],
+            "center": [
+              781,
+              1021
+            ],
+            "mouth": null
+          }
+        ],
+        "faces": {
+          "meera": {
+            "face": [
+              851,
+              739,
+              51,
+              66
+            ],
+            "anchor": [
+              873,
+              788
+            ]
+          }
+        },
+        "protected": [
+          [
+            794,
+            794,
+            40,
+            61
+          ]
+        ],
+        "intent": {
+          "entry": [
+            664,
+            590
+          ],
+          "exit": [
+            990,
+            1080
+          ]
+        },
+        "groups": null,
+        "warnings": []
+      },
+      {
+        "id": "02-4",
+        "rect": [
+          24,
+          1112,
+          976,
+          352
+        ],
+        "steps": [
+          {
+            "number": 1,
+            "speaker": "ananya",
+            "text": "One team. Better coordination.",
+            "rect": [
+              424,
+              1132,
+              203,
+              138
+            ],
+            "center": [
+              525.5,
+              1201
+            ],
+            "mouth": [
+              367,
+              1245
+            ]
+          }
+        ],
+        "faces": {
+          "ananya": {
+            "face": [
+              325,
+              1170,
+              72,
+              90
+            ],
+            "anchor": [
+              367,
+              1245
+            ]
+          },
+          "meera": {
+            "face": [
+              700,
+              1130,
+              70,
+              88
+            ],
+            "anchor": [
+              737,
+              1200
+            ]
+          }
+        },
+        "protected": [
+          [
+            668,
+            1365,
+            62,
+            80
+          ]
+        ],
+        "intent": {
+          "entry": [
+            40,
+            1130
+          ],
+          "exit": [
+            990,
+            1505
+          ]
+        },
+        "groups": null,
+        "warnings": []
+      }
+    ],
+    "checklist": [
+      "番号と誘導線を隠した画像を先に読み、予測した発話順を記録する",
+      "最初のセリフへ上・左から入れるか",
+      "近い非連続の吹き出しを一組と誤認して返答を飛ばさないか",
+      "前の会話のまとまりを読み終えてから次のまとまりへ進めるか",
+      "返答へ自然に移り、視線が大きく逆戻りしないか",
+      "顔の向き・視線・手や小道具の動作と読順がつながるか",
+      "話者への尾が別人物や重要物を横切らないか",
+      "場所・時間・回想の切替と物の移動を直前直後から理解できるか",
+      "最後のセリフ・反応から次のコマへ移れるか",
+      "大きなコマ・余白・情報公開の順がページの感情の狙いに合うか",
+      "話題の境界と段・ページ境界が一致し、不要な読み戻りを誘わないか"
+    ]
+  },
+  {
+    "version": 3,
+    "page": "03",
+    "status": "planning-guide-not-reviewed",
+    "direction": "left-to-right, top-to-bottom",
+    "panels": [
+      {
+        "id": "03-1",
+        "rect": [
+          24,
+          24,
+          488,
+          440
+        ],
+        "steps": [
+          {
+            "number": 1,
+            "speaker": "narration",
+            "text": "A later morning: patients can always check in at the front desk.",
+            "rect": [
+              40,
+              40,
+              373,
+              138
+            ],
+            "center": [
+              226.5,
+              109
+            ],
+            "mouth": null
+          }
+        ],
+        "faces": {
+          "raman": {
+            "face": [
+              156,
+              189,
+              50,
+              64
+            ],
+            "anchor": [
+              183,
+              246
+            ]
+          },
+          "meera": {
+            "face": [
+              333,
+              207,
+              50,
+              66
+            ],
+            "anchor": [
+              354,
+              262
+            ]
+          }
+        },
+        "protected": [],
+        "intent": {
+          "entry": [
+            40,
+            40
+          ],
+          "exit": [
+            508,
+            460
+          ]
+        },
+        "groups": null,
+        "warnings": []
+      },
+      {
+        "id": "03-2",
+        "rect": [
+          536,
+          24,
+          464,
+          440
+        ],
+        "steps": [
+          {
+            "number": 1,
+            "speaker": "narration",
+            "text": "Some check in ahead on the Welbuk Health app.",
+            "rect": [
+              552,
+              40,
+              354,
+              106
+            ],
+            "center": [
+              729,
+              93
+            ],
+            "mouth": null
+          }
+        ],
+        "faces": {
+          "priya": {
+            "face": [
+              728,
+              153,
+              76,
+              80
+            ],
+            "anchor": [
+              766,
+              219
+            ]
+          }
+        },
+        "protected": [
+          [
+            801,
+            215,
+            49,
+            77
+          ]
+        ],
+        "intent": {
+          "entry": [
+            552,
+            40
+          ],
+          "exit": [
+            996,
+            460
+          ]
+        },
+        "groups": null,
+        "warnings": []
+      },
+      {
+        "id": "03-3",
+        "rect": [
+          24,
+          488,
+          464,
+          440
+        ],
+        "steps": [
+          {
+            "number": 1,
+            "speaker": "narration",
+            "text": "Ravi scans the QR code at the door.",
+            "rect": [
+              40,
+              504,
+              273,
+              106
+            ],
+            "center": [
+              176.5,
+              557
+            ],
+            "mouth": null
+          }
+        ],
+        "faces": {
+          "ravi": {
+            "face": [
+              287,
+              612,
+              94,
+              100
+            ],
+            "anchor": [
+              327,
+              685
+            ]
+          }
+        },
+        "protected": [
+          [
+            127,
+            747,
+            71,
+            111
+          ]
+        ],
+        "intent": {
+          "entry": [
+            40,
+            504
+          ],
+          "exit": [
+            484,
+            924
+          ]
+        },
+        "groups": null,
+        "warnings": []
+      },
+      {
+        "id": "03-4",
+        "rect": [
+          512,
+          488,
+          488,
+          440
+        ],
+        "steps": [
+          {
+            "number": 1,
+            "speaker": "narration",
+            "text": "A short form on his own phone, shared with consent.",
+            "rect": [
+              528,
+              504,
+              297,
+              138
+            ],
+            "center": [
+              676.5,
+              573
+            ],
+            "mouth": null
+          }
+        ],
+        "faces": {
+          "ravi": {
+            "face": [
+              844,
+              580,
+              91,
+              180
+            ],
+            "anchor": [
+              876,
+              692
+            ]
+          }
+        },
+        "protected": [
+          [
+            635,
+            648,
+            145,
+            206
+          ]
+        ],
+        "intent": {
+          "entry": [
+            528,
+            504
+          ],
+          "exit": [
+            996,
+            924
+          ]
+        },
+        "groups": null,
+        "warnings": []
+      },
+      {
+        "id": "03-5",
+        "rect": [
+          24,
+          952,
+          976,
+          512
+        ],
+        "steps": [
+          {
+            "number": 1,
+            "speaker": "narration",
+            "text": "Every check-in gets a slot on the screen.",
+            "rect": [
+              40,
+              968,
+              304,
+              106
+            ],
+            "center": [
+              192,
+              1021
+            ],
+            "mouth": null
+          },
+          {
+            "number": 2,
+            "speaker": "label",
+            "text": "A-10 · A-11 · A-12",
+            "rect": [
+              664,
+              1012,
+              305,
+              74
+            ],
+            "center": [
+              816.5,
+              1049
+            ],
+            "mouth": null
+          }
+        ],
+        "faces": {
+          "raman": {
+            "face": [
+              166,
+              1129,
+              97,
+              97
+            ],
+            "anchor": [
+              235,
+              1206
+            ]
+          },
+          "priya": {
+            "face": [
+              384,
+              1150,
+              90,
+              90
+            ],
+            "anchor": [
+              447,
+              1220
+            ]
+          },
+          "ravi": {
+            "face": [
+              561,
+              1129,
+              94,
+              97
+            ],
+            "anchor": [
+              634,
+              1199
+            ]
+          }
+        },
+        "protected": [],
+        "intent": {
+          "entry": [
+            40,
+            968
+          ],
+          "exit": [
+            996,
+            1456
+          ]
+        },
+        "groups": null,
+        "warnings": [
+          {
+            "from": 1,
+            "to": 2,
+            "reason": "左から右へ戻る移動と縦方向の範囲が重なる。段差・余白・人物の配置を目視で検討する。"
+          }
+        ]
+      }
+    ],
+    "checklist": [
+      "番号と誘導線を隠した画像を先に読み、予測した発話順を記録する",
+      "最初のセリフへ上・左から入れるか",
+      "近い非連続の吹き出しを一組と誤認して返答を飛ばさないか",
+      "前の会話のまとまりを読み終えてから次のまとまりへ進めるか",
+      "返答へ自然に移り、視線が大きく逆戻りしないか",
+      "顔の向き・視線・手や小道具の動作と読順がつながるか",
+      "話者への尾が別人物や重要物を横切らないか",
+      "場所・時間・回想の切替と物の移動を直前直後から理解できるか",
+      "最後のセリフ・反応から次のコマへ移れるか",
+      "大きなコマ・余白・情報公開の順がページの感情の狙いに合うか",
+      "話題の境界と段・ページ境界が一致し、不要な読み戻りを誘わないか"
+    ]
+  },
+  {
+    "version": 3,
+    "page": "04",
+    "status": "planning-guide-not-reviewed",
+    "direction": "left-to-right, top-to-bottom",
+    "panels": [
+      {
+        "id": "04-1",
+        "rect": [
+          24,
+          24,
+          976,
+          420
+        ],
+        "steps": [
+          {
+            "number": 1,
+            "speaker": "narration",
+            "text": "Soon, his slot comes up.",
+            "rect": [
+              40,
+              40,
+              215,
+              106
+            ],
+            "center": [
+              147.5,
+              93
+            ],
+            "mouth": null
+          },
+          {
+            "number": 2,
+            "speaker": "label",
+            "text": "NOW · A-12",
+            "rect": [
+              786,
+              64,
+              190,
+              74
+            ],
+            "center": [
+              881,
+              101
+            ],
+            "mouth": null
+          }
+        ],
+        "faces": {
+          "ravi": {
+            "face": [
+              577,
+              71,
+              72,
+              72
+            ],
+            "anchor": [
+              631,
+              130
+            ]
+          },
+          "meera": {
+            "face": [
+              908,
+              205,
+              44,
+              50
+            ],
+            "anchor": [
+              935,
+              246
+            ]
+          }
+        },
+        "protected": [],
+        "intent": {
+          "entry": [
+            40,
+            40
+          ],
+          "exit": [
+            996,
+            440
+          ]
+        },
+        "groups": null,
+        "warnings": [
+          {
+            "from": 1,
+            "to": 2,
+            "reason": "左から右へ戻る移動と縦方向の範囲が重なる。段差・余白・人物の配置を目視で検討する。"
+          }
+        ]
+      },
+      {
+        "id": "04-2",
+        "rect": [
+          24,
+          468,
+          560,
+          996
+        ],
+        "steps": [
+          {
+            "number": 1,
+            "speaker": "narration",
+            "text": "A quick vitals check first.",
+            "rect": [
+              40,
+              484,
+              215,
+              106
+            ],
+            "center": [
+              147.5,
+              537
+            ],
+            "mouth": null
+          },
+          {
+            "number": 2,
+            "speaker": "nurse",
+            "text": "Hi, Ravi! Just relax your arm for me.",
+            "rect": [
+              274,
+              618,
+              290,
+              106
+            ],
+            "center": [
+              419,
+              671
+            ],
+            "mouth": [
+              440,
+              827
+            ]
+          }
+        ],
+        "faces": {
+          "ravi": {
+            "face": [
+              93,
+              842,
+              95,
+              110
+            ],
+            "anchor": [
+              163,
+              937
+            ]
+          },
+          "nurse": {
+            "face": [
+              389,
+              739,
+              102,
+              110
+            ],
+            "anchor": [
+              440,
+              827
+            ]
+          }
+        },
+        "protected": [
+          [
+            199,
+            1047,
+            204,
+            109
+          ],
+          [
+            327,
+            955,
+            105,
+            99
+          ]
+        ],
+        "intent": {
+          "entry": [
+            40,
+            484
+          ],
+          "exit": [
+            580,
+            1456
+          ]
+        },
+        "groups": null,
+        "warnings": []
+      },
+      {
+        "id": "04-3",
+        "rect": [
+          608,
+          468,
+          392,
+          996
+        ],
+        "steps": [
+          {
+            "number": 1,
+            "speaker": "narration",
+            "text": "Dr. Ananya is notified when he's ready.",
+            "rect": [
+              624,
+              484,
+              217,
+              138
+            ],
+            "center": [
+              732.5,
+              553
+            ],
+            "mouth": null
+          },
+          {
+            "number": 2,
+            "speaker": "label",
+            "text": "RAVI · READY",
+            "rect": [
+              790,
+              1202,
+              129,
+              106
+            ],
+            "center": [
+              854.5,
+              1255
+            ],
+            "mouth": null
+          }
+        ],
+        "faces": {
+          "ananya": {
+            "face": [
+              730,
+              834,
+              116,
+              150
+            ],
+            "anchor": [
+              786,
+              975
+            ]
+          }
+        },
+        "protected": [],
+        "intent": {
+          "entry": [
+            624,
+            484
+          ],
+          "exit": [
+            996,
+            1456
+          ]
+        },
+        "groups": null,
+        "warnings": []
+      }
+    ],
+    "checklist": [
+      "番号と誘導線を隠した画像を先に読み、予測した発話順を記録する",
+      "最初のセリフへ上・左から入れるか",
+      "近い非連続の吹き出しを一組と誤認して返答を飛ばさないか",
+      "前の会話のまとまりを読み終えてから次のまとまりへ進めるか",
+      "返答へ自然に移り、視線が大きく逆戻りしないか",
+      "顔の向き・視線・手や小道具の動作と読順がつながるか",
+      "話者への尾が別人物や重要物を横切らないか",
+      "場所・時間・回想の切替と物の移動を直前直後から理解できるか",
+      "最後のセリフ・反応から次のコマへ移れるか",
+      "大きなコマ・余白・情報公開の順がページの感情の狙いに合うか",
+      "話題の境界と段・ページ境界が一致し、不要な読み戻りを誘わないか"
+    ]
+  },
+  {
+    "version": 3,
+    "page": "05",
+    "status": "planning-guide-not-reviewed",
+    "direction": "left-to-right, top-to-bottom",
+    "panels": [
+      {
+        "id": "05-1",
+        "rect": [
+          24,
+          24,
+          976,
+          360
+        ],
+        "steps": [
+          {
+            "number": 1,
+            "speaker": "ananya",
+            "text": "Hello, Ravi. Tell me what brings you in.",
+            "rect": [
+              644,
+              32,
+              211,
+              138
+            ],
+            "center": [
+              749.5,
+              101
+            ],
+            "mouth": [
+              604,
+              270
+            ]
+          },
+          {
+            "number": 2,
+            "speaker": "label",
+            "text": "PATIENT DETAILS: vitals · history · allergies · AI mic · docs · lab reports",
+            "rect": [
+              40,
+              174,
+              403,
+              138
+            ],
+            "center": [
+              241.5,
+              243
+            ],
+            "mouth": null
+          }
+        ],
+        "faces": {
+          "ananya": {
+            "anchor": [
+              604,
+              270
+            ],
+            "face": [
+              564,
+              194,
+              80,
+              95
+            ]
+          },
+          "ravi": {
+            "anchor": [
+              864,
+              280
+            ],
+            "face": [
+              824,
+              204,
+              80,
+              95
+            ]
+          }
+        },
+        "protected": [],
+        "intent": {
+          "entry": [
+            40,
+            40
+          ],
+          "exit": [
+            990,
+            380
+          ]
+        },
+        "groups": null,
+        "warnings": []
+      },
+      {
+        "id": "05-2",
+        "rect": [
+          24,
+          408,
+          560,
+          380
+        ],
+        "steps": [
+          {
+            "number": 1,
+            "speaker": "ravi",
+            "text": "I've been feeling tired lately.",
+            "rect": [
+              40,
+              424,
+              257,
+              106
+            ],
+            "center": [
+              168.5,
+              477
+            ],
+            "mouth": [
+              489,
+              602
+            ]
+          },
+          {
+            "number": 2,
+            "speaker": "label",
+            "text": "SOAP NOTES: type, or AI listens and summarises · ICD / SNOMED codes",
+            "rect": [
+              40,
+              598,
+              302,
+              170
+            ],
+            "center": [
+              191,
+              683
+            ],
+            "mouth": null
+          }
+        ],
+        "faces": {
+          "ravi": {
+            "anchor": [
+              489,
+              602
+            ],
+            "face": [
+              444,
+              518,
+              90,
+              105
+            ]
+          }
+        },
+        "protected": [],
+        "intent": {
+          "entry": [
+            40,
+            424
+          ],
+          "exit": [
+            580,
+            784
+          ]
+        },
+        "groups": null,
+        "warnings": []
+      },
+      {
+        "id": "05-3",
+        "rect": [
+          608,
+          408,
+          392,
+          380
+        ],
+        "steps": [
+          {
+            "number": 1,
+            "speaker": "narration",
+            "text": "Technology supports the workflow. The conversation stays human.",
+            "rect": [
+              612,
+              412,
+              372,
+              138
+            ],
+            "center": [
+              798,
+              481
+            ],
+            "mouth": null
+          }
+        ],
+        "faces": {
+          "ananya": {
+            "anchor": [
+              803,
+              682
+            ],
+            "face": [
+              758,
+              598,
+              90,
+              105
+            ]
+          }
+        },
+        "protected": [],
+        "intent": {
+          "entry": [
+            624,
+            424
+          ],
+          "exit": [
+            990,
+            784
+          ]
+        },
+        "groups": null,
+        "warnings": []
+      },
+      {
+        "id": "05-4",
+        "rect": [
+          24,
+          812,
+          976,
+          300
+        ],
+        "steps": [
+          {
+            "number": 1,
+            "speaker": "label",
+            "text": "SPECIALITY PLANNER",
+            "rect": [
+              40,
+              824,
+              330,
+              74
+            ],
+            "center": [
+              205,
+              861
+            ],
+            "mouth": null
+          },
+          {
+            "number": 2,
+            "speaker": "label",
+            "text": "Dentist: odontogram",
+            "rect": [
+              64,
+              994,
+              182,
+              106
+            ],
+            "center": [
+              155,
+              1047
+            ],
+            "mouth": null
+          },
+          {
+            "number": 3,
+            "speaker": "label",
+            "text": "Eye doctor: eye markers",
+            "rect": [
+              394,
+              994,
+              197,
+              106
+            ],
+            "center": [
+              492.5,
+              1047
+            ],
+            "mouth": null
+          },
+          {
+            "number": 4,
+            "speaker": "label",
+            "text": "Paediatrics: scales · vaccines",
+            "rect": [
+              714,
+              994,
+              263,
+              106
+            ],
+            "center": [
+              845.5,
+              1047
+            ],
+            "mouth": null
+          }
+        ],
+        "faces": {},
+        "protected": [],
+        "intent": {
+          "entry": [
+            40,
+            828
+          ],
+          "exit": [
+            990,
+            1108
+          ]
+        },
+        "groups": null,
+        "warnings": [
+          {
+            "from": 2,
+            "to": 3,
+            "reason": "左から右へ戻る移動と縦方向の範囲が重なる。段差・余白・人物の配置を目視で検討する。"
+          },
+          {
+            "from": 3,
+            "to": 4,
+            "reason": "左から右へ戻る移動と縦方向の範囲が重なる。段差・余白・人物の配置を目視で検討する。"
+          }
+        ]
+      },
+      {
+        "id": "05-5",
+        "rect": [
+          24,
+          1136,
+          976,
+          328
+        ],
+        "steps": [
+          {
+            "number": 1,
+            "speaker": "ananya",
+            "text": "We'll go through your concerns and decide the right next steps together.",
+            "rect": [
+              254,
+              1140,
+              287,
+              170
+            ],
+            "center": [
+              397.5,
+              1225
+            ],
+            "mouth": [
+              184,
+              1392
+            ]
+          },
+          {
+            "number": 2,
+            "speaker": "label",
+            "text": "PLAN OF CARE: intelligent prescribing · summary · interactions · labs · referrals",
+            "rect": [
+              614,
+              1286,
+              361,
+              170
+            ],
+            "center": [
+              794.5,
+              1371
+            ],
+            "mouth": null
+          }
+        ],
+        "faces": {
+          "ananya": {
+            "anchor": [
+              184,
+              1392
+            ],
+            "face": [
+              144,
+              1316,
+              80,
+              95
+            ]
+          },
+          "ravi": {
+            "anchor": [
+              494,
+              1392
+            ],
+            "face": [
+              454,
+              1316,
+              80,
+              95
+            ]
+          }
+        },
+        "protected": [],
+        "intent": {
+          "entry": [
+            40,
+            1152
+          ],
+          "exit": [
+            990,
+            1460
+          ]
+        },
+        "groups": null,
+        "warnings": [
+          {
+            "from": 1,
+            "to": 2,
+            "reason": "左から右へ戻る移動と縦方向の範囲が重なる。段差・余白・人物の配置を目視で検討する。"
+          }
+        ]
+      }
+    ],
+    "checklist": [
+      "番号と誘導線を隠した画像を先に読み、予測した発話順を記録する",
+      "最初のセリフへ上・左から入れるか",
+      "近い非連続の吹き出しを一組と誤認して返答を飛ばさないか",
+      "前の会話のまとまりを読み終えてから次のまとまりへ進めるか",
+      "返答へ自然に移り、視線が大きく逆戻りしないか",
+      "顔の向き・視線・手や小道具の動作と読順がつながるか",
+      "話者への尾が別人物や重要物を横切らないか",
+      "場所・時間・回想の切替と物の移動を直前直後から理解できるか",
+      "最後のセリフ・反応から次のコマへ移れるか",
+      "大きなコマ・余白・情報公開の順がページの感情の狙いに合うか",
+      "話題の境界と段・ページ境界が一致し、不要な読み戻りを誘わないか"
+    ]
+  },
+  {
+    "version": 3,
+    "page": "06",
+    "status": "planning-guide-not-reviewed",
+    "direction": "left-to-right, top-to-bottom",
+    "panels": [
+      {
+        "id": "06-1",
+        "rect": [
+          24,
+          24,
+          976,
+          500
+        ],
+        "steps": [
+          {
+            "number": 1,
+            "speaker": "meera",
+            "text": "Welbuk Health is designed to help patients stay connected with their care.",
+            "rect": [
+              48,
+              44,
+              249,
+              202
+            ],
+            "center": [
+              172.5,
+              145
+            ],
+            "mouth": [
+              428,
+              232
+            ]
+          }
+        ],
+        "faces": {
+          "meera": {
+            "face": [
+              367,
+              128,
+              96,
+              111
+            ],
+            "anchor": [
+              428,
+              232
+            ]
+          },
+          "ravi": {
+            "face": [
+              572,
+              114,
+              131,
+              118
+            ],
+            "anchor": [
+              641,
+              191
+            ]
+          }
+        },
+        "protected": [
+          [
+            528,
+            277,
+            66,
+            94
+          ]
+        ],
+        "intent": {
+          "entry": [
+            40,
+            40
+          ],
+          "exit": [
+            990,
+            520
+          ]
+        },
+        "groups": null,
+        "warnings": []
+      },
+      {
+        "id": "06-2",
+        "rect": [
+          24,
+          548,
+          560,
+          560
+        ],
+        "steps": [
+          {
+            "number": 1,
+            "speaker": "ravi",
+            "text": "So I can keep useful information in one place?",
+            "rect": [
+              44,
+              568,
+              305,
+              138
+            ],
+            "center": [
+              196.5,
+              637
+            ],
+            "mouth": [
+              423,
+              739
+            ]
+          },
+          {
+            "number": 2,
+            "speaker": "label",
+            "text": "WELBUK HEALTH for patients",
+            "rect": [
+              24,
+              988,
+              268,
+              106
+            ],
+            "center": [
+              158,
+              1041
+            ],
+            "mouth": null
+          }
+        ],
+        "faces": {
+          "ravi": {
+            "face": [
+              369,
+              614,
+              147,
+              169
+            ],
+            "anchor": [
+              423,
+              739
+            ]
+          }
+        },
+        "protected": [
+          [
+            297,
+            805,
+            115,
+            208
+          ]
+        ],
+        "intent": {
+          "entry": [
+            44,
+            570
+          ],
+          "exit": [
+            580,
+            1100
+          ]
+        },
+        "groups": null,
+        "warnings": []
+      },
+      {
+        "id": "06-3",
+        "rect": [
+          608,
+          548,
+          392,
+          560
+        ],
+        "steps": [
+          {
+            "number": 1,
+            "speaker": "meera",
+            "text": "That's the idea. Let's walk through what is available to you.",
+            "rect": [
+              616,
+              556,
+              342,
+              138
+            ],
+            "center": [
+              787,
+              625
+            ],
+            "mouth": [
+              761,
+              838
+            ]
+          }
+        ],
+        "faces": {
+          "meera": {
+            "face": [
+              691,
+              741,
+              111,
+              125
+            ],
+            "anchor": [
+              761,
+              838
+            ]
+          },
+          "ravi": {
+            "kind": "head",
+            "anchor": [
+              970,
+              760
+            ]
+          }
+        },
+        "protected": [
+          [
+            890,
+            898,
+            79,
+            120
+          ]
+        ],
+        "intent": {
+          "entry": [
+            624,
+            570
+          ],
+          "exit": [
+            990,
+            1100
+          ]
+        },
+        "groups": null,
+        "warnings": []
+      },
+      {
+        "id": "06-4",
+        "rect": [
+          24,
+          1132,
+          976,
+          332
+        ],
+        "steps": [
+          {
+            "number": 1,
+            "speaker": "narration",
+            "text": "A smoother visit. A more connected experience.",
+            "rect": [
+              48,
+              1142,
+              640,
+              74
+            ],
+            "center": [
+              368,
+              1179
+            ],
+            "mouth": null
+          }
+        ],
+        "faces": {
+          "ravi": {
+            "face": [
+              755,
+              1164,
+              70,
+              85
+            ],
+            "anchor": [
+              786,
+              1229
+            ]
+          },
+          "ananya": {
+            "face": [
+              291,
+              1239,
+              51,
+              52
+            ],
+            "anchor": [
+              316,
+              1282
+            ]
+          },
+          "meera": {
+            "face": [
+              370,
+              1255,
+              45,
+              49
+            ],
+            "anchor": [
+              392,
+              1296
+            ]
+          }
+        },
+        "protected": [],
+        "intent": {
+          "entry": [
+            40,
+            1150
+          ],
+          "exit": [
+            990,
+            1505
+          ]
+        },
+        "groups": null,
+        "warnings": []
+      }
+    ],
+    "checklist": [
+      "番号と誘導線を隠した画像を先に読み、予測した発話順を記録する",
+      "最初のセリフへ上・左から入れるか",
+      "近い非連続の吹き出しを一組と誤認して返答を飛ばさないか",
+      "前の会話のまとまりを読み終えてから次のまとまりへ進めるか",
+      "返答へ自然に移り、視線が大きく逆戻りしないか",
+      "顔の向き・視線・手や小道具の動作と読順がつながるか",
+      "話者への尾が別人物や重要物を横切らないか",
+      "場所・時間・回想の切替と物の移動を直前直後から理解できるか",
+      "最後のセリフ・反応から次のコマへ移れるか",
+      "大きなコマ・余白・情報公開の順がページの感情の狙いに合うか",
+      "話題の境界と段・ページ境界が一致し、不要な読み戻りを誘わないか"
+    ]
+  },
+  {
+    "version": 3,
+    "page": "07",
+    "status": "planning-guide-not-reviewed",
+    "direction": "left-to-right, top-to-bottom",
+    "panels": [
+      {
+        "id": "07-1",
+        "rect": [
+          24,
+          24,
+          470,
+          440
+        ],
+        "steps": [
+          {
+            "number": 1,
+            "speaker": "narration",
+            "text": "Tomorrow, care may take us beyond our hometown.",
+            "rect": [
+              40,
+              40,
+              259,
+              170
+            ],
+            "center": [
+              169.5,
+              125
+            ],
+            "mouth": null
+          }
+        ],
+        "faces": {
+          "ravi": {
+            "face": [
+              313,
+              105,
+              94,
+              108
+            ],
+            "anchor": [
+              349,
+              195
+            ]
+          }
+        },
+        "protected": [],
+        "intent": {
+          "entry": [
+            40,
+            40
+          ],
+          "exit": [
+            490,
+            460
+          ]
+        },
+        "groups": null,
+        "warnings": []
+      },
+      {
+        "id": "07-2",
+        "rect": [
+          518,
+          24,
+          482,
+          440
+        ],
+        "steps": [
+          {
+            "number": 1,
+            "speaker": "label",
+            "text": "WELBUK VISION",
+            "rect": [
+              518,
+              24,
+              240,
+              74
+            ],
+            "center": [
+              638,
+              61
+            ],
+            "mouth": null
+          },
+          {
+            "number": 2,
+            "speaker": "narration",
+            "text": "The vision: trusted connections between clinics, specialists, and patients across locations.",
+            "rect": [
+              522,
+              322,
+              442,
+              138
+            ],
+            "center": [
+              743,
+              391
+            ],
+            "mouth": null
+          }
+        ],
+        "faces": {
+          "specialist": {
+            "face": [
+              819,
+              132,
+              73,
+              81
+            ],
+            "anchor": [
+              865,
+              195
+            ]
+          }
+        },
+        "protected": [
+          [
+            672,
+            262,
+            74,
+            54
+          ]
+        ],
+        "intent": {
+          "entry": [
+            534,
+            40
+          ],
+          "exit": [
+            990,
+            460
+          ]
+        },
+        "groups": null,
+        "warnings": []
+      },
+      {
+        "id": "07-3",
+        "rect": [
+          24,
+          488,
+          976,
+          340
+        ],
+        "steps": [
+          {
+            "number": 1,
+            "speaker": "label",
+            "text": "WELBUK VISION",
+            "rect": [
+              40,
+              504,
+              240,
+              74
+            ],
+            "center": [
+              160,
+              541
+            ],
+            "mouth": null
+          },
+          {
+            "number": 2,
+            "speaker": "narration",
+            "text": "One connected ecosystem for care and family wellness.",
+            "rect": [
+              40,
+              588,
+              367,
+              138
+            ],
+            "center": [
+              223.5,
+              657
+            ],
+            "mouth": null
+          }
+        ],
+        "faces": {
+          "ravi": {
+            "face": [
+              462,
+              501,
+              115,
+              129
+            ],
+            "anchor": [
+              526,
+              610
+            ]
+          },
+          "partner": {
+            "face": [
+              609,
+              514,
+              108,
+              122
+            ],
+            "anchor": [
+              666,
+              617
+            ]
+          },
+          "child": {
+            "face": [
+              742,
+              585,
+              89,
+              96
+            ],
+            "anchor": [
+              786,
+              662
+            ]
+          }
+        },
+        "protected": [
+          [
+            583,
+            681,
+            159,
+            103
+          ]
+        ],
+        "intent": {
+          "entry": [
+            40,
+            505
+          ],
+          "exit": [
+            990,
+            820
+          ]
+        },
+        "groups": null,
+        "warnings": []
+      },
+      {
+        "id": "07-4",
+        "rect": [
+          24,
+          852,
+          976,
+          612
+        ],
+        "steps": [
+          {
+            "number": 1,
+            "speaker": "label",
+            "text": "Welbuk Practice • Welbuk Care • Welbuk Health",
+            "rect": [
+              704,
+              872,
+              281,
+              138
+            ],
+            "center": [
+              844.5,
+              941
+            ],
+            "mouth": null
+          },
+          {
+            "number": 2,
+            "speaker": "narration",
+            "text": "Welbuk — Building a connected healthcare ecosystem.",
+            "rect": [
+              48,
+              1342,
+              433,
+              106
+            ],
+            "center": [
+              264.5,
+              1395
+            ],
+            "mouth": null
+          }
+        ],
+        "faces": {
+          "meera": {
+            "face": [
+              344,
+              925,
+              54,
+              68
+            ],
+            "anchor": [
+              371,
+              980
+            ]
+          },
+          "ananya": {
+            "face": [
+              481,
+              906,
+              62,
+              76
+            ],
+            "anchor": [
+              512,
+              968
+            ]
+          },
+          "ravi": {
+            "face": [
+              638,
+              894,
+              61,
+              73
+            ],
+            "anchor": [
+              668,
+              955
+            ]
+          }
+        },
+        "protected": [],
+        "intent": {
+          "entry": [
+            40,
+            870
+          ],
+          "exit": [
+            990,
+            1505
+          ]
+        },
+        "groups": null,
+        "warnings": []
+      }
+    ],
+    "checklist": [
+      "番号と誘導線を隠した画像を先に読み、予測した発話順を記録する",
+      "最初のセリフへ上・左から入れるか",
+      "近い非連続の吹き出しを一組と誤認して返答を飛ばさないか",
+      "前の会話のまとまりを読み終えてから次のまとまりへ進めるか",
+      "返答へ自然に移り、視線が大きく逆戻りしないか",
+      "顔の向き・視線・手や小道具の動作と読順がつながるか",
+      "話者への尾が別人物や重要物を横切らないか",
+      "場所・時間・回想の切替と物の移動を直前直後から理解できるか",
+      "最後のセリフ・反応から次のコマへ移れるか",
+      "大きなコマ・余白・情報公開の順がページの感情の狙いに合うか",
+      "話題の境界と段・ページ境界が一致し、不要な読み戻りを誘わないか"
+    ]
+  }
+]

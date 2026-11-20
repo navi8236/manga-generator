@@ -1,0 +1,284 @@
+{
+  "version": 3,
+  "page": "05",
+  "status": "planning-guide-not-reviewed",
+  "direction": "left-to-right, top-to-bottom",
+  "panels": [
+    {
+      "id": "05-1",
+      "rect": [
+        24,
+        24,
+        976,
+        500
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "ananya",
+          "text": "Hello, Ravi. Tell me what brings you in.",
+          "rect": [
+            354,
+            40,
+            211,
+            138
+          ],
+          "center": [
+            459.5,
+            109
+          ],
+          "mouth": [
+            283,
+            140
+          ]
+        }
+      ],
+      "faces": {
+        "ananya": {
+          "face": [
+            252,
+            62,
+            70,
+            90
+          ],
+          "anchor": [
+            283,
+            140
+          ]
+        },
+        "ravi": {
+          "face": [
+            733,
+            55,
+            75,
+            92
+          ],
+          "anchor": [
+            770,
+            130
+          ]
+        }
+      },
+      "protected": [],
+      "intent": {
+        "entry": [
+          40,
+          40
+        ],
+        "exit": [
+          990,
+          520
+        ]
+      },
+      "groups": null,
+      "warnings": []
+    },
+    {
+      "id": "05-2",
+      "rect": [
+        24,
+        548,
+        480,
+        520
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "ravi",
+          "text": "I've been feeling tired lately.",
+          "rect": [
+            44,
+            568,
+            257,
+            106
+          ],
+          "center": [
+            172.5,
+            621
+          ],
+          "mouth": [
+            380,
+            735
+          ]
+        }
+      ],
+      "faces": {
+        "ravi": {
+          "face": [
+            330,
+            628,
+            95,
+            135
+          ],
+          "anchor": [
+            380,
+            735
+          ]
+        },
+        "ananya": {
+          "kind": "head",
+          "anchor": [
+            60,
+            720
+          ]
+        }
+      },
+      "protected": [],
+      "intent": {
+        "entry": [
+          44,
+          570
+        ],
+        "exit": [
+          500,
+          1060
+        ]
+      },
+      "groups": null,
+      "warnings": []
+    },
+    {
+      "id": "05-3",
+      "rect": [
+        528,
+        548,
+        472,
+        520
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "narration",
+          "text": "Technology supports the workflow. The conversation stays human.",
+          "rect": [
+            532,
+            552,
+            401,
+            138
+          ],
+          "center": [
+            732.5,
+            621
+          ],
+          "mouth": null
+        }
+      ],
+      "faces": {
+        "ananya": {
+          "face": [
+            645,
+            738,
+            115,
+            100
+          ],
+          "anchor": [
+            705,
+            820
+          ]
+        },
+        "ravi": {
+          "kind": "head",
+          "anchor": [
+            950,
+            720
+          ]
+        }
+      },
+      "protected": [],
+      "intent": {
+        "entry": [
+          544,
+          570
+        ],
+        "exit": [
+          990,
+          1060
+        ]
+      },
+      "groups": null,
+      "warnings": []
+    },
+    {
+      "id": "05-4",
+      "rect": [
+        24,
+        1092,
+        976,
+        372
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "ananya",
+          "text": "We'll go through your concerns and decide the right next steps together.",
+          "rect": [
+            404,
+            1100,
+            287,
+            170
+          ],
+          "center": [
+            547.5,
+            1185
+          ],
+          "mouth": [
+            327,
+            1212
+          ]
+        }
+      ],
+      "faces": {
+        "ananya": {
+          "face": [
+            297,
+            1140,
+            62,
+            90
+          ],
+          "anchor": [
+            327,
+            1212
+          ]
+        },
+        "ravi": {
+          "face": [
+            723,
+            1132,
+            66,
+            90
+          ],
+          "anchor": [
+            757,
+            1205
+          ]
+        }
+      },
+      "protected": [],
+      "intent": {
+        "entry": [
+          40,
+          1110
+        ],
+        "exit": [
+          990,
+          1505
+        ]
+      },
+      "groups": null,
+      "warnings": []
+    }
+  ],
+  "checklist": [
+    "番号と誘導線を隠した画像を先に読み、予測した発話順を記録する",
+    "最初のセリフへ上・左から入れるか",
+    "近い非連続の吹き出しを一組と誤認して返答を飛ばさないか",
+    "前の会話のまとまりを読み終えてから次のまとまりへ進めるか",
+    "返答へ自然に移り、視線が大きく逆戻りしないか",
+    "顔の向き・視線・手や小道具の動作と読順がつながるか",
+    "話者への尾が別人物や重要物を横切らないか",
+    "場所・時間・回想の切替と物の移動を直前直後から理解できるか",
+    "最後のセリフ・反応から次のコマへ移れるか",
+    "大きなコマ・余白・情報公開の順がページの感情の狙いに合うか",
+    "話題の境界と段・ページ境界が一致し、不要な読み戻りを誘わないか"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-06-2-caafc36162b0e71e3fbc70270766b8376980c2e24c6d3f98b9dda9e6235b20a1.json",
+  "reviewer": {
+    "role": "subagent",
+    "task": "claude-code-agent:manga-reviewer:a6455e7d4cf6b3b5b",
+    "reportedTask": null,
+    "taskSource": "Agent ID returned by the Claude Code Agent tool to the parent."
+  },
+  "status": "changes-requested",
+  "observations": [
+    "Opened assets/panels/06-2.png. It has a soft pale-blue rounded-rectangle vignette and an airy, light palette. A modern glass-fronted clinic sits at left. Three small clinic silhouettes float in the sky, linked by white dotted lines. There is no text or logo.",
+    "The specialist matches vision-cast.png: greying temples, rimless rectangular glasses, bushy salt-and-pepper brows, grey moustache, long smiling face, light grey blazer over a pale blue shirt, stethoscope around his neck.",
+    "His right hand (viewer-left) is held out palm-up in welcome with five fingers clearly drawn. His left hand hangs empty at his side. This matches production.hands.specialist.",
+    "The art itself is acceptable for identity, acting and the vision framing."
+  ],
+  "issues": [
+    {
+      "problem": "Lettering hides the key acting. On page-06.png the 7-line narration box (around page x 533-778, y 120-388) completely covers the specialist's open welcoming hand and most of the clinic building, so his arm just vanishes behind the box. The WELBUK VISION label also covers the left clinic silhouette and part of the dotted links. The panel has no protected region for the hand. Add a protected region for the hand, then move or reshape the caption (for example a wider, shorter box in the sky band, or crop or reframe the art) so the hand and the clinic stay visible. Recheck the composite afterward.",
+      "location": "06-2 on page-06.png; request dialogue[1] (x 16, dy 98) and the missing protected region",
+      "resolved": false
+    }
+  ],
+  "fingerprint": "caafc36162b0e71e3fbc70270766b8376980c2e24c6d3f98b9dda9e6235b20a1",
+  "recordedAt": "2026-11-11T08:35:40.202Z"
+}

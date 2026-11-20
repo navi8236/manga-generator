@@ -1,0 +1,28 @@
+{
+  "promptVersion": 2,
+  "panel": "01-3",
+  "project": "works/auto-6294ee8a2094/workflow.json",
+  "fingerprint": "484929434b7a6163cc4b8cdd2d3275b8be5990b6cd9837ca980ed7fe7316f223",
+  "operation": "edit",
+  "sourceHash": "6294ee8a20944646ae8401695eeb8ea6cab68725127d488e11e4dae584d40adb",
+  "prompt": "TASK: Edit image 1. This is a local revision of the supplied artwork.\nINPUT IMAGES (in supplied order):\nImage 1: edit-target. Base image to edit; requested changes take precedence over preservation.\nCHANGE REQUEST:\nChange only the blue-and-white striped scalloped awning visible at the top of the window behind the reception: make it a plain solid teal fabric awning (the same teal as the clinic's entrance awning), with no stripes or scallops. Keep everything else exactly as it is: all people, faces, expressions, hands, the phone, pen, registers, desk, chairs, plants, the window view and the light. No text.\nPRESERVE: retain all areas, identity traits, acting, clothing, composition and lettering space outside the requested change. The change request overrides preservation where necessary; repair connected anatomy, contact objects and occlusion together. Supporting images supply only their stated roles. Do not copy their entire scene or pose.\nOUTPUT: one edited image matching the target aspect. Do not add text, guide marks or a global style filter. Re-measure faces and mouths and inspect lettering space after adoption.",
+  "promptHash": "40a53b00138f1c485c99549d3d6aa842a8e84af122bf81d2497448f50e0ab0ae",
+  "references": [
+    {
+      "file": "works/auto-6294ee8a2094/workflow/generation-inputs/01-3-8257ad588ceb4893/reference-0.png",
+      "hash": "afd374ae12af4f2f6ac4bf8521f73a402e47ced56975e9f9c692e850973bb04b",
+      "original": "works/auto-6294ee8a2094/assets/generated/01-3-afd374ae12af4f2f.png",
+      "index": 1,
+      "kind": "edit-target",
+      "role": "Base image to edit; requested changes take precedence over preservation."
+    }
+  ],
+  "renderer": "Higgsfield gpt_image_2_6",
+  "model": "gpt_image_2_6",
+  "seed": null,
+  "imageHash": "e91142661a72b348b4d2518904474a5c8b36f46a99dd63041ce980c1d4b25da7",
+  "image": "works/auto-6294ee8a2094/assets/generated/01-3-e91142661a72b348.png",
+  "generatedSourceFile": "/home/user/manga-generator/works/auto-6294ee8a2094/assets/candidates/01-3/ada86c80-3875-4604-a40c-fa6474e60e08.png",
+  "recordedAt": "2026-11-11T09:30:44.579Z",
+  "note": "Actual tool prompt and snapshots; acceptedJob after later layout changes may differ from this generation plan."
+}

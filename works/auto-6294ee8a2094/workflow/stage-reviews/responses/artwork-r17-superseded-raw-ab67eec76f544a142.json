@@ -1,0 +1,71 @@
+[
+ {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-07-1-d421a8e8f81667121baf0254093357f916411a739642bab56b0c20824b6dc63e.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Files actually read for this review: the request JSON, docs/REVISION-AND-REVIEWS.md, the page-7 and cast lines of source/original.txt (searched, not read in full), workflow/storyboards/page-07.svg (read as SVG text), and with Read I looked at assets/characters/main-cast.png, assets/panels/07-1.png, 07-2.png, 07-3.png, 07-4.png and workflow/review/page-07.png. I did not open vision-cast.png, nurse.png or checkin-patients.png because none of those characters appear on page 7. Every file I tried to open was readable.",
+   "Meera (left) matches main-cast. She has large round eyes with a visible lower lash line, thin high arched brows, a round face with full cheeks, a small silver hoop earring, and her long braid over her left shoulder with a teal hair tie. She wears the blue kurta with the white leaf print and white trim. She leans over the desk, smiling with her mouth open as she explains, which fits a helpful mood.",
+   "Meera's hands: the hand that points with the index finger at Ravi's phone wears the thin silver bangle, which marks it as her right hand per the cast. Her other hand rests flat on the desk. This matches production. The fingers have a plausible count and shape.",
+   "Ravi (right) matches main-cast. He has thick straight dark brows close to the eyes, slightly narrow eyes, a short trimmed beard on a square jaw, short black hair with a side part, and the light green shirt with rolled sleeves and a chest pocket. He leans in and looks down at the phone with a gentle smile, which reads as curious.",
+   "Ravi's hands and props: his right hand (screen-left) holds the dark-blue-cased phone upright with its back and camera toward the viewer, so the screen is not visible, as the scene asks. His left hand, with the silver-faced wristwatch on a brown strap, rests on the desk edge. The dark-brown shoulder bag hangs from a strap over his left shoulder, with the bag at his left hip behind the desk. This matches the shoulder-bag entry 'on his shoulder'.",
+   "Setting: the reception desk with the back of a monitor, a keyboard and a potted plant at the left; a framed picture with only an abstract blue image; a plant; a window with trees; waiting patients seen from behind on teal chairs. There is no readable text, logo or screen data anywhere. The monitor faces away and shows only its dark back.",
+   "Continuity into 07-2: phone (dark blue case), watch on his left wrist, bag strap on his left shoulder, shirt and hair all carry into the next panel."
+  ],
+  "issues": []
+ },
+ {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-07-2-a7ca868bc27aa7d49899e499bb6aca9bfbd6ab2370e803c95b379b196060c71d.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Files actually read: the request JSON, the source page-7 lines, page-07.svg as text, and with Read I looked at main-cast.png, assets/panels/07-2.png, the neighbouring panels 07-1 and 07-3, and workflow/review/page-07.png.",
+   "Ravi's identity matches main-cast: thick straight brows set close to the eyes, warm slightly narrow eyes, a trimmed beard on a square jaw, a broad nose, short black side-parted hair and the light green shirt. He looks curious and hopeful, mouth open mid-question, and his gaze goes up and away to screen-right. That is the deliberate thinking glance the scene asks for, with Meera off-panel left.",
+   "Hands match production. His left hand (screen-right, wristwatch on this wrist) supports the lower right corner of the phone with the thumb along the screen edge. His right hand (screen-left) grips the left edge with the fingers wrapped behind and the thumb on the front bezel. Both hands have plausible fingers and joints, and no fingers merge into the phone.",
+   "The phone in its dark blue case faces the reader at chest height. The screen shows only a teal header wave, a card with a calendar icon and a blank pale-blue block, a card with a red heart icon and a blank mint block, and a bottom wave. There is no readable text, number or personal data.",
+   "Continuity: the dark-brown bag strap is visible over his left shoulder (screen-right), continuing from 07-1. The reception monitor (dark back only), keyboard and plant are in the left foreground, as the camera note asks. The seated patients behind him are small background extras who differ slightly from 07-1 (a grey-haired figure, a woman in pink, a man in blue), and the chairs are a bluer teal. That is minor, non-blocking background drift.",
+   "Label check in workflow/review/page-07.png: the 'WELBUK HEALTH for patients' label now sits mid-left (the SVG box spans about x 24-292, y 764-870). Its bottom edge ends just above the top finger of Ravi's gripping right hand, which starts at about y 876 and is now protected as [250,876,50,145]. Its right edge ends just left of the phone's case (protected box starting at x 297). On the rendered page I saw a thin band of background between the label and both the hand and the phone. The label touches neither hand nor the phone, and it no longer cuts the base of the phone-holding hand. The label covers only the background monitor, seated extras and part of Ravi's screen-left sleeve and shoulder. The gap is narrow, about 5-6 px, but it does not overlap. Ravi's face, his gaze and the speech-bubble tail are not covered."
+  ],
+  "issues": []
+ },
+ {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-07-3-5ad363f134a0df1fd5a1821120a5ec3d2994994eb9c6a597a46066b0c715000c.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Files actually read: the request JSON, the source page-7 lines, page-07.svg as text, and with Read I looked at main-cast.png, assets/panels/07-3.png, the neighbouring panels 07-2 and 07-4, and workflow/review/page-07.png.",
+   "Meera matches main-cast: large round bright eyes with lower lashes, thin high arched brows, a round face with full cheeks, a small silver hoop earring, and her braid over her left shoulder. She wears the same blue leaf-print kurta. She sits behind the desk facing screen-right toward Ravi with a warm open-mouthed smile, which fits a warm, honest, helpful mood.",
+   "Meera's hands match production. Her right hand, with the silver bangle (consistent with the pointing hand in 07-1), is open palm-up, gesturing toward Ravi's phone. Her left hand rests flat on the desk. The fingers look plausible.",
+   "Ravi is in the right foreground from behind at three-quarters: we see his black hair, ear, beard edge and cheek, with no eye visible, so registering him as kind:head is reasonable. Meera stays left and Ravi right, as in 07-1. His left hand, wearing the brown-strapped watch, holds the dark-blue phone, matching heldBy ravi.left. His right hand is out of frame.",
+   "The phone screen shows only a calendar-icon card with blank grey line blocks, a person-avatar card with blank blocks, and a wave. There is no readable text or personal data. The screen is angled toward the reader as much as toward Meera, which is a minor difference from 'screen toward Meera' and does not affect the reading.",
+   "The bag strap is not visible because Ravi's shoulder is cropped at the right frame edge. This does not contradict the 'on his shoulder' continuity. The background shows the monitor back, a keyboard, plants, a window and patients from behind on teal chairs, with no readable text."
+  ],
+  "issues": []
+ },
+ {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-07-4-9a42f72fe91be744027fbcbd106a8ee559ebf62d0c4822c6bdec7a23fa588bcb.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Files actually read: the request JSON, the source page-7 lines, page-07.svg as text, and with Read I looked at main-cast.png, assets/panels/07-4.png, the neighbouring panel 07-3, and workflow/review/page-07.png.",
+   "Ravi matches main-cast: thick brows, smiling eyes creased at the outer corners, a trimmed beard on a square jaw, side-parted hair, the light green shirt with rolled sleeves, dark trousers and the brown bag. He walks out to screen-right on a sunny street while looking back toward the door with a relaxed smile. That reads as reassured and light, and his walking direction leads the eye to the panel exit.",
+   "Ravi's hands match production. His right hand (screen-left) is raised in an open-palm wave toward the doorway. His left hand, with the watch, hangs at his side holding the dark-blue phone. The fingers on both hands are plausible.",
+   "Bag continuity: the dark-brown bag is still on his shoulder, with the strap over his left shoulder. Here the strap crosses his chest and the bag rides at his right hip, while in 07-1 it hung on the same left side. That is a small change in how he carries it between the reception and street scenes. It is still 'on his shoulder', and a reader is unlikely to notice. Non-blocking.",
+   "In the glass doorway at left, Dr. Ananya matches main-cast: low bun, teal kurta, open white coat, stethoscope around her neck (not in use). She waves with her right hand, her left relaxed. Meera matches too: blue leaf-print kurta, white churidar, braid over her left shoulder. She waves with her left hand, her right relaxed. Both match production. Their faces are small but keep their eye and face shapes, and both smile.",
+   "Setting: a teal awning, glass doors, planters, dappled leaf shadows in morning sun, a street with trees and buildings. There is no signage, readable text or logo. The phone screen is not visible. Continuity from 07-3: Ravi leaves with his phone, as the 07-3 'after' note says."
+  ],
+  "issues": []
+ }
+]

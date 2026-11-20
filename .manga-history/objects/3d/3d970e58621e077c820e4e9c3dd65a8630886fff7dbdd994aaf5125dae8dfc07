@@ -1,0 +1,462 @@
+{
+  "version": 3,
+  "page": "08",
+  "status": "planning-guide-not-reviewed",
+  "direction": "left-to-right, top-to-bottom",
+  "panels": [
+    {
+      "id": "08-1",
+      "rect": [
+        24,
+        24,
+        476,
+        404
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "narration",
+          "text": "Meanwhile, the pharmacy is notified and fills the prescription.",
+          "rect": [
+            40,
+            40,
+            356,
+            138
+          ],
+          "center": [
+            218,
+            109
+          ],
+          "mouth": null
+        },
+        {
+          "number": 2,
+          "speaker": "label",
+          "text": "NEW PRESCRIPTION",
+          "rect": [
+            40,
+            314,
+            294,
+            74
+          ],
+          "center": [
+            187,
+            351
+          ],
+          "mouth": null
+        }
+      ],
+      "faces": {
+        "pharmacist": {
+          "anchor": [
+            392,
+            292
+          ],
+          "face": [
+            344,
+            204,
+            95,
+            110
+          ]
+        }
+      },
+      "protected": [],
+      "intent": {
+        "entry": [
+          40,
+          40
+        ],
+        "exit": [
+          490,
+          400
+        ]
+      },
+      "groups": null,
+      "warnings": []
+    },
+    {
+      "id": "08-2",
+      "rect": [
+        524,
+        24,
+        476,
+        404
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "narration",
+          "text": "The lab is notified.",
+          "rect": [
+            540,
+            40,
+            276,
+            74
+          ],
+          "center": [
+            678,
+            77
+          ],
+          "mouth": null
+        },
+        {
+          "number": 2,
+          "speaker": "label",
+          "text": "LAB ORDER: samples to collect",
+          "rect": [
+            664,
+            274,
+            260,
+            106
+          ],
+          "center": [
+            794,
+            327
+          ],
+          "mouth": null
+        }
+      ],
+      "faces": {
+        "labtech": {
+          "anchor": [
+            702,
+            232
+          ],
+          "face": [
+            654,
+            144,
+            95,
+            110
+          ]
+        }
+      },
+      "protected": [],
+      "intent": {
+        "entry": [
+          540,
+          40
+        ],
+        "exit": [
+          990,
+          400
+        ]
+      },
+      "groups": null,
+      "warnings": []
+    },
+    {
+      "id": "08-3",
+      "rect": [
+        24,
+        452,
+        976,
+        376
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "narration",
+          "text": "Later that day, Ravi gives his samples at the clinic lab.",
+          "rect": [
+            40,
+            468,
+            416,
+            106
+          ],
+          "center": [
+            248,
+            521
+          ],
+          "mouth": null
+        },
+        {
+          "number": 2,
+          "speaker": "labtech",
+          "text": "All done, Ravi! We'll let you know when your results are ready.",
+          "rect": [
+            484,
+            468,
+            383,
+            138
+          ],
+          "center": [
+            675.5,
+            537
+          ],
+          "mouth": [
+            714,
+            708
+          ]
+        }
+      ],
+      "faces": {
+        "ravi": {
+          "anchor": [
+            314,
+            698
+          ],
+          "face": [
+            264,
+            602,
+            100,
+            120
+          ]
+        },
+        "labtech": {
+          "anchor": [
+            714,
+            708
+          ],
+          "face": [
+            664,
+            612,
+            100,
+            120
+          ]
+        }
+      },
+      "protected": [],
+      "intent": {
+        "entry": [
+          40,
+          468
+        ],
+        "exit": [
+          990,
+          820
+        ]
+      },
+      "groups": null,
+      "warnings": [
+        {
+          "from": 1,
+          "to": 2,
+          "reason": "左から右へ戻る移動と縦方向の範囲が重なる。段差・余白・人物の配置を目視で検討する。"
+        }
+      ]
+    },
+    {
+      "id": "08-4",
+      "rect": [
+        24,
+        852,
+        392,
+        612
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "narration",
+          "text": "Results ready: Ravi is notified.",
+          "rect": [
+            40,
+            868,
+            238,
+            106
+          ],
+          "center": [
+            159,
+            921
+          ],
+          "mouth": null
+        },
+        {
+          "number": 2,
+          "speaker": "label",
+          "text": "Welbuk Health app · email · WhatsApp",
+          "rect": [
+            40,
+            1322,
+            293,
+            106
+          ],
+          "center": [
+            186.5,
+            1375
+          ],
+          "mouth": null
+        }
+      ],
+      "faces": {
+        "ravi": {
+          "anchor": [
+            224,
+            1178
+          ],
+          "face": [
+            174,
+            1082,
+            100,
+            120
+          ]
+        }
+      },
+      "protected": [],
+      "intent": {
+        "entry": [
+          40,
+          868
+        ],
+        "exit": [
+          410,
+          1460
+        ]
+      },
+      "groups": null,
+      "warnings": []
+    },
+    {
+      "id": "08-5",
+      "rect": [
+        440,
+        852,
+        560,
+        294
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "narration",
+          "text": "Dr. Ananya is notified on Welbuk Care.",
+          "rect": [
+            456,
+            868,
+            324,
+            106
+          ],
+          "center": [
+            618,
+            921
+          ],
+          "mouth": null
+        },
+        {
+          "number": 2,
+          "speaker": "label",
+          "text": "RESULTS READY",
+          "rect": [
+            500,
+            1042,
+            260,
+            74
+          ],
+          "center": [
+            630,
+            1079
+          ],
+          "mouth": null
+        }
+      ],
+      "faces": {
+        "ananya": {
+          "anchor": [
+            860,
+            998
+          ],
+          "face": [
+            820,
+            922,
+            80,
+            95
+          ]
+        }
+      },
+      "protected": [],
+      "intent": {
+        "entry": [
+          456,
+          868
+        ],
+        "exit": [
+          990,
+          1140
+        ]
+      },
+      "groups": null,
+      "warnings": []
+    },
+    {
+      "id": "08-6",
+      "rect": [
+        440,
+        1170,
+        560,
+        294
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "narration",
+          "text": "The clinic is notified on Welbuk Practice.",
+          "rect": [
+            456,
+            1186,
+            307,
+            106
+          ],
+          "center": [
+            609.5,
+            1239
+          ],
+          "mouth": null
+        },
+        {
+          "number": 2,
+          "speaker": "label",
+          "text": "RESULTS READY",
+          "rect": [
+            500,
+            1360,
+            260,
+            74
+          ],
+          "center": [
+            630,
+            1397
+          ],
+          "mouth": null
+        }
+      ],
+      "faces": {
+        "meera": {
+          "anchor": [
+            820,
+            1326
+          ],
+          "face": [
+            780,
+            1250,
+            80,
+            95
+          ]
+        }
+      },
+      "protected": [],
+      "intent": {
+        "entry": [
+          456,
+          1186
+        ],
+        "exit": [
+          990,
+          1460
+        ]
+      },
+      "groups": null,
+      "warnings": []
+    }
+  ],
+  "checklist": [
+    "番号と誘導線を隠した画像を先に読み、予測した発話順を記録する",
+    "最初のセリフへ上・左から入れるか",
+    "近い非連続の吹き出しを一組と誤認して返答を飛ばさないか",
+    "前の会話のまとまりを読み終えてから次のまとまりへ進めるか",
+    "返答へ自然に移り、視線が大きく逆戻りしないか",
+    "顔の向き・視線・手や小道具の動作と読順がつながるか",
+    "話者への尾が別人物や重要物を横切らないか",
+    "場所・時間・回想の切替と物の移動を直前直後から理解できるか",
+    "最後のセリフ・反応から次のコマへ移れるか",
+    "大きなコマ・余白・情報公開の順がページの感情の狙いに合うか",
+    "話題の境界と段・ページ境界が一致し、不要な読み戻りを誘わないか"
+  ]
+}

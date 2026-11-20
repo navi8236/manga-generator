@@ -1,0 +1,494 @@
+[
+ {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-02-492a546cfe0dfc1e09be50de9f64c3e11d8916edd1ee98a630a08055b23065eb.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null,
+   "reportedTask": null,
+   "taskSource": "The runtime gave this reviewer no subagent/task ID. The parent must supply the Agent ID returned by its Agent tool, or record that none is available."
+  },
+  "status": "pass",
+  "observations": [
+   "Files I read: AGENTS.md and CLAUDE.md (session context), docs/REVISION-AND-REVIEWS.md, docs/PROMPTS.md, this request in full (page-02 script, boundary pages 01 and 03, embedded first reading), source/original.txt and source/REVISION-2026-11-11.md. I checked panel and text geometry in storyboards-unnumbered/page-02.svg and the 01-3 text in storyboards-unnumbered/page-01.svg with Grep. Images I opened with Read and looked at myself: storyboards-unnumbered/page-02.png, storyboards/page-02.png, and for context review/page-01.png, review/page-02.png, review/page-03.png and assets/panels/02-1.png to 02-4.png. Every image was readable. I computed no hashes.",
+   "PNG against SVG, checked by eye against the coordinates from Grep: the panel frames (24,24,976x520; 24,568,600x520; 648,568,352x520; 24,1112,976x352), the caption at 24,24,299x138, the label at 706,24,294x138, the balloons at 44,588,308x106, 664,584,272x138 and 424,1132,203x138, the WELBUK CARE label at 664,968,234x106 and the face boxes all match what the unnumbered PNG shows. The numbered PNG has the same layout plus the four guide lines. Its guide '3 / Meera discovers Welbuk Care for staff' runs under the WELBUK CARE label, but guides are not output. Page 02 was not edited in this revision. Its storyboard is unchanged, and it changes only as page 03's neighbour.",
+   "The order follows the script and source PAGE 2: caption, then the WELBUK PRACTICE label (both on the same top line), Ananya's 'We can organise our clinic workflow here.', Meera's 'And our team can use tools suited to each staff role.' with the WELBUK CARE label below it, then Ananya's 'One team. Better coordination.' The words are the source's. The two labels are script supplements naming the product shown in each source panel.",
+   "Boundary with page 03: the 02-4 to 03-1 hand-off is unaffected by the 03-2 caption move. Only the 03-2 caption's y changed (rect 552,28,354x106 in the current page-03.svg)."
+  ],
+  "issues": [],
+  "readingReview": {
+   "withoutGuides": true,
+   "predictedOrder": [
+    {
+     "panel": "02-1",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "02-2",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "02-3",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "02-4",
+     "dialogue": [
+      1
+     ]
+    }
+   ],
+   "observations": [
+    "Unnumbered PNG: in 02-1 the caption and the label are level, so left-to-right puts the caption first. The 02-2 and 02-3 balloons sit at about the same height in neighbouring panels, separated by a gutter, so the reader takes Ananya's line before Meera's 'And...', which is the intended exchange. The 02-3 label is about 250 px below Meera's balloon and drawn as a teal label, so it is not read as speech.",
+    "02-4: the balloon's tail is short and points left. In the placeholder board, the balloon's left edge runs over the 'ananya' name text, but in the drawn page (review/page-02.png) the balloon starts right of her face and the tail ends at her mouth. Meera's face is clear to the right."
+   ],
+   "transitions": [
+    {
+     "from": "01-3",
+     "to": "02-1",
+     "observation": "01-3 ends with Ananya's 'Our time belongs with patients. Let's make the rest simpler.' (page-01.svg). 02-1 answers it with her setting up a laptop under 'The clinic begins its Welbuk onboarding.' In the art, a sunset window marks the time change."
+    },
+    {
+     "from": "02-1",
+     "to": "02-2",
+     "observation": "The same office and laptop. The over-the-shoulder typing becomes a front view of her pausing to think, which carries her first line."
+    },
+    {
+     "from": "02-2",
+     "to": "02-3",
+     "observation": "Meera's line begins with 'And', taking up Ananya's thought. In the art she stands by the same roller-blind window and desk with the laptop."
+    },
+    {
+     "from": "02-3",
+     "to": "02-4",
+     "observation": "The two-shot puts both women in one room, and Ananya's 'One team.' closes the exchange."
+    },
+    {
+     "from": "02-4",
+     "to": "03-1",
+     "observation": "From the evening office to the reception. The 03-1 caption 'A later morning: patients can always check in at the front desk.' states the time jump, and Meera at the desk keeps the place continuous."
+    }
+   ],
+   "firstReadingHash": "840a45abf396bb9d4ff7679113b131482dd21031b3a1445841abb481f6793670",
+   "comparison": "The first reader's order (caption, label, 02-2, 02-3, label, 02-4) matches the script. Their concerns: (1) The page 1 to 2 jump has no transition, and the caption does not say what Welbuk is. Acceptable: the caption is the source's own wording, 01-3's resolution supplies the motive, the drawn sunset light shows the time change, and the two product labels plus the spoken lines say what each product does. (2) In 02-4 the balloon runs into the 'ananya' name text and nearly touches the face box. This is only an artefact of the placeholder board. In the drawn page the balloon (x 424 onward) lies right of her face, the tail reaches her mouth, and nothing of Ananya or Meera is covered. Acceptable. (3) The 02-1 caption sits flush at the top-left. This is intended (x 0, dy 0), and the reader also found it fine. In the art it covers the plain wall and the top of her hair. Her bun, gold stud, profile and both typing hands stay visible. Nothing is unresolved."
+  },
+  "fingerprint": "492a546cfe0dfc1e09be50de9f64c3e11d8916edd1ee98a630a08055b23065eb"
+ },
+ {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-03-5a454a1e3e7774962bf488e53697c5e254f2b0cbaba11feed290a6ad69448237.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null,
+   "reportedTask": null,
+   "taskSource": "The runtime gave this reviewer no subagent/task ID. The parent must supply the Agent ID returned by its Agent tool, or record that none is available."
+  },
+  "status": "pass",
+  "observations": [
+   "Files I read: AGENTS.md and CLAUDE.md (session context), docs/REVISION-AND-REVIEWS.md, docs/PROMPTS.md, this request in full (page-03 script with the 03-2 caption at dy 4, boundary pages 02 and 04, embedded first reading), source/original.txt and source/REVISION-2026-11-11.md. I checked the 03-2 and 03-3 caption rects in storyboards-unnumbered/page-03.svg and storyboards/page-03.svg with Grep. Images I opened with Read and looked at myself: storyboards-unnumbered/page-03.png, storyboards/page-03.png, and for context review/page-03.png and assets/panels/03-1.png to 03-5.png. Every image was readable. I computed no hashes.",
+   "PNG against SVG: the unnumbered SVG draws the 03-2 caption at rect x 552, y 28, 354x106 (panel top 24 plus dy 4), with its text starting at 570,62. The 03-3 caption is at 40,504, 273x106. The numbered SVG has the same 03-2 rect and the guide '2 / Priya checks in ahead on the Welbuk Health app'. Both PNGs show the 03-2 box hugging the top border at y 28 and the 03-3 box at 504, so the PNGs are current. The numbered PNG differs from the unnumbered one only by the five guide lines.",
+   "The change is confined to 03-2. Its caption moved up 12 px. It still ends at y 134, about 19 px above the Priya face box (728,153,76x80), and still lies inside its own panel. The words 'Some check in ahead on the Welbuk Health app.' are unchanged. All other panels and texts match the earlier layout and source PAGE 3.",
+   "Fix verified in the drawn page (review/page-03.png against assets/panels/03-2.png): at the panel's scale of about 0.446, the art's blue scrunchie (about 430-470, 243-275) lands at about page y 132-146. The caption now ends at 134, so the scrunchie and the ponytail falling behind her head are visible. Only the top few pixels of the loop meet the box edge. She now reads as wearing a high ponytail tied with a blue scrunchie, matching 03-3 (seen from behind, ponytail with a blue tie) and 03-5 (ponytail with a blue scrunchie).",
+   "Side effect: the 03-2 box is now 4 px below the panel border, while the 03-1 caption is 16 px below its border. This makes a small difference in top margin across the top row. It is cosmetic and does not affect reading order."
+  ],
+  "issues": [],
+  "readingReview": {
+   "withoutGuides": true,
+   "predictedOrder": [
+    {
+     "panel": "03-1",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "03-2",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "03-3",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "03-4",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "03-5",
+     "dialogue": [
+      1,
+      2
+     ]
+    }
+   ],
+   "observations": [
+    "Unnumbered PNG: the grid is 2+2+1 and has no balloons. Each caption is the first element at the top of its panel. Raising the 03-2 box makes it a little higher than the 03-1 box (y 28 against 40), but they are in separate panels across a gutter, and left-to-right still puts 03-1 first. The 03-5 caption at the far left comes before the A-10 · A-11 · A-12 label at the right of the same band.",
+    "No caption overlaps a face box on the board. In the drawn page, the 03-3 caption's lower-right corner overlaps the upper-left of Ravi's hair, which I judge under lettering 03. His face box (287,612) starts below the caption's bottom at 610."
+   ],
+   "transitions": [
+    {
+     "from": "02-4",
+     "to": "03-1",
+     "observation": "'A later morning:' states the jump from the evening office to the reception, and Meera at the desk keeps the place continuous."
+    },
+    {
+     "from": "03-1",
+     "to": "03-2",
+     "observation": "A second check-in route. 'Some check in ahead...' contrasts with the front desk. In the art, the teal awning and the reception seen through the glass place Priya outside the same clinic."
+    },
+    {
+     "from": "03-2",
+     "to": "03-3",
+     "observation": "A third route. Ravi is named at his first appearance, and in the art Raman and Priya are already seated behind him. Priya's ponytail with its blue tie is now visible in both panels."
+    },
+    {
+     "from": "03-3",
+     "to": "03-4",
+     "observation": "A direct action cut to the same phone, now showing the form. 'his own phone' points back to Ravi."
+    },
+    {
+     "from": "03-4",
+     "to": "03-5",
+     "observation": "All three sit left to right in check-in order beneath the slot list A-10 · A-11 · A-12."
+    },
+    {
+     "from": "03-5",
+     "to": "04-1",
+     "observation": "The same TV now reads 'NOW · A-12'. The two seats beside Ravi are empty as he stands, and 'Soon, his slot comes up.' covers the wait."
+    }
+   ],
+   "firstReadingHash": "6136e87acad6bc358cf6ef836b3e6f4ebea37242aa41cbff66f93d74ebf1e204",
+   "comparison": "The first reader's order (one caption per panel, then the 03-5 label) matches the script exactly. Their concerns: (1) From the placeholders alone, it is not clear who is the patient and who works at the desk in 03-1. The art resolves it: Meera, in her blue kurta with her braid, types behind the desk, and Mr. Raman stands at the counter with his cane. (2) Slot ownership in 03-5 is unclear. The left-to-right seating matches the check-in order, and 04-1 confirms Ravi = A-12 ('NOW · A-12', the other two seats empty). Acceptable. (3) 'Some check in ahead' leaves its subject implied. It reads naturally after 03-1's 'patients', and it is the source's wording. They also noted that captions do not overlap placeholders. With the raised 03-2 box that is still true (19 px clear of the priya box). The revision moved only the 03-2 caption, and that move reveals Priya's scrunchie and ponytail. Nothing is unresolved."
+  },
+  "fingerprint": "5a454a1e3e7774962bf488e53697c5e254f2b0cbaba11feed290a6ad69448237"
+ },
+ {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-04-aff8195ea8e095977d9485d4a76195184809096f49d63529fe61d0122c3034f5.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null,
+   "reportedTask": null,
+   "taskSource": "The runtime gave this reviewer no subagent/task ID. The parent must supply the Agent ID returned by its Agent tool, or record that none is available."
+  },
+  "status": "pass",
+  "observations": [
+   "Files I read: AGENTS.md and CLAUDE.md (session context), docs/REVISION-AND-REVIEWS.md, docs/PROMPTS.md, this request in full (page-04 script, boundary pages 03 and 05, embedded first reading), source/original.txt and source/REVISION-2026-11-11.md. I checked rect geometry in storyboards-unnumbered/page-04.svg and the opening text in storyboards-unnumbered/page-05.svg with Grep. Images I opened with Read and looked at myself: storyboards-unnumbered/page-04.png, storyboards/page-04.png, and for context review/page-03.png, review/page-04.png, review/page-05.png and assets/panels/04-1.png to 04-3.png. Every image was readable. I computed no hashes.",
+   "PNG against SVG: the SVG's frames (24,24,976x420; 24,468,560x996; 608,468,392x996), captions (40,40,215x106; 40,484,215x106; 624,484,217x138), the nurse balloon at 274,618,290x106, the labels at 786,64,190x74 and 790,1202,129x106, and the face boxes (ravi 577,71; meera 908,205; ravi 93,842; nurse 389,739; ananya 730,834) all match the unnumbered PNG. The numbered PNG adds only the three guides. Page 04 is unchanged and appears here only as page 03's neighbour.",
+   "The order follows source PAGE 4 and the script: 'Soon, his slot comes up.', 'NOW · A-12', 'A quick vitals check first.', the nurse's 'Hi, Ravi! Just relax your arm for me.', 'Dr. Ananya is notified when he's ready.' and 'RAVI · READY'. The wording is identical to the source."
+  ],
+  "issues": [],
+  "readingReview": {
+   "withoutGuides": true,
+   "predictedOrder": [
+    {
+     "panel": "04-1",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "04-2",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "04-3",
+     "dialogue": [
+      1,
+      2
+     ]
+    }
+   ],
+   "observations": [
+    "Unnumbered PNG: 04-1's caption and label lie on the same top band, so the caption on the left is read first. In 04-2, the caption at the top left comes before the balloon lower right. The 04-3 caption (y 484-622) is higher than the 04-2 balloon (y 618-724), but the eye finishes the 04-2 column before crossing the gutter, so the nurse's line is not skipped.",
+    "The nurse balloon's tail is short and points straight down into the nurse box. The ravi box sits far to the lower left, and its silence reads as listening. 'RAVI · READY' sits low in 04-3 and is that panel's exit."
+   ],
+   "transitions": [
+    {
+     "from": "03-5",
+     "to": "04-1",
+     "observation": "The same waiting room and TV. 'A-10 · A-11 · A-12' becomes 'NOW · A-12', and 'Soon' covers the wait. The 03-2 caption move on page 03 does not affect this hand-off."
+    },
+    {
+     "from": "04-1",
+     "to": "04-2",
+     "observation": "From the waiting area to the vitals corner. The caption 'A quick vitals check first.' carries the move, and in the art the reception counter and a teal chair sit behind the nurse."
+    },
+    {
+     "from": "04-2",
+     "to": "04-3",
+     "observation": "A cut to the consultation room. The caption and the tablet label connect the finished vitals check to the doctor's alert."
+    },
+    {
+     "from": "04-3",
+     "to": "05-1",
+     "observation": "'RAVI · READY' leads to page 05's 'Hello, Ravi. Tell me what brings you in.' (page-05.svg). In review/page-05.png the laptop that was closed in 04-3 is open on PATIENT DETAILS, and the tablet is gone."
+    }
+   ],
+   "firstReadingHash": "6f32389be005f83524af95075c5feb90a21f96f23f71087b28f51062b86f4a19",
+   "comparison": "The first reader's order matches the script exactly. Their concerns: (1) It is unclear what displays 'NOW · A-12'. In the art the label sits on the wall TV established in 03-5. Resolved. (2) Meera is a tiny, unexplained box in 04-1. She has been introduced on pages 01 to 03, and here she is background at the reception desk (as scripted), so she needs no introduction. Acceptable. (3) Ravi does not answer the nurse. His smile and nod in the art are the response, and no reply is skipped. Acceptable. (4) The link between 'RAVI · READY' and Ananya depends on the art. The art shows her holding a tablet with a notification card under the label. Resolved. (5) The tall panels have empty space. The art fills them with full figures (the vitals scene, Ananya at her desk), and the plain upper third is the intended caption area. This is acceptable pacing for the two tall beats. Nothing is unresolved."
+  },
+  "fingerprint": "aff8195ea8e095977d9485d4a76195184809096f49d63529fe61d0122c3034f5"
+ },
+ {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/lettering-02-0104031ee61dd0778ba75eac0bac3005ee826724367aa81675b594cab14366e2.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null,
+   "reportedTask": null,
+   "taskSource": "The runtime gave this reviewer no subagent/task ID. The parent must supply the Agent ID returned by its Agent tool, or record that none is available."
+  },
+  "status": "pass",
+  "observations": [
+   "Files I read: AGENTS.md and CLAUDE.md (session context), docs/REVISION-AND-REVIEWS.md, docs/PROMPTS.md, this request in full (page-02 script, boundary pages 01 and 03, embedded first reading), source/original.txt and source/REVISION-2026-11-11.md. Images I opened with Read and looked at myself: workflow/review/page-02.png, assets/panels/02-1.png, 02-2.png, 02-3.png and 02-4.png, and the boundary images review/page-01.png, review/page-03.png and assets/panels/03-1.png to 03-5.png. Every image was readable. I did not open assets/panels/01-1.png to 01-3.png separately. For the boundary I used review/page-01.png.",
+   "The wording matches the script and source exactly: 'The clinic begins its Welbuk onboarding.', 'WELBUK PRACTICE for the clinic', 'We can organise our clinic workflow here.', 'And our team can use tools suited to each staff role.', 'WELBUK CARE for clinic staff' and 'One team. Better coordination.' Page 02 was not edited in this revision and is reviewed as page 03's neighbour.",
+   "Coverage: in 02-1 the caption box covers the plain wall and the top of Ananya's hair. Comparing with assets/panels/02-1.png, her bun at the nape, the gold stud, her profile and both typing hands are clear, and the label covers only the window frame. In 02-2 the balloon is on the wall and its tail ends at her hair by the ear. In 02-3 the balloon's tail points down to Meera's head. Her face, phone and bangle hand are clear, and the label covers only her lower kurta and the desk edge. In 02-4 the balloon lies between the women over the window. Its tail reaches Ananya's mouth, and Meera's face, the phone, the laptop and Ananya's raised fist are uncovered. All text is legible."
+  ],
+  "issues": [],
+  "readingReview": {
+   "withoutGuides": true,
+   "predictedOrder": [
+    {
+     "panel": "02-1",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "02-2",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "02-3",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "02-4",
+     "dialogue": [
+      1
+     ]
+    }
+   ],
+   "observations": [
+    "Scanning naturally: the 02-1 caption, then the level label to its right, then the 02-2 balloon, the 02-3 balloon, the 02-3 label at the bottom of that panel, and the 02-4 balloon. This is the script order.",
+    "The 02-2 and 02-3 balloons sit at about the same height across a gutter, and the reader takes them left then right, so Meera's 'And...' continues Ananya. Both tails point to the correct speakers."
+   ],
+   "transitions": [
+    {
+     "from": "01-3",
+     "to": "02-1",
+     "observation": "In review/page-01.png, 01-3 ends with Ananya's 'Let's make the rest simpler.' at the reception. 02-1 cuts to her setting up the laptop at sunset under the onboarding caption."
+    },
+    {
+     "from": "02-1",
+     "to": "02-2",
+     "observation": "The same office, the same sunset window and the same laptop. She pauses to think about roles."
+    },
+    {
+     "from": "02-2",
+     "to": "02-3",
+     "observation": "Meera stands by the same roller-blind window, beside the desk with the open laptop and pen cup. Her 'And' joins the thought."
+    },
+    {
+     "from": "02-3",
+     "to": "02-4",
+     "observation": "The two-shot confirms they share the room: a window with a roller blind, the laptop, and Meera's phone at her side."
+    },
+    {
+     "from": "02-4",
+     "to": "03-1",
+     "observation": "'A later morning:' marks the change of time and place. Meera, in the same blue kurta and braid, types at the reception in 03-1."
+    }
+   ],
+   "firstReadingHash": "555b0acaf50513318f1f6f4ae6f6c2493f2a3e0ec41d0a98cd77576e7c60eaff",
+   "comparison": "The first reader's order matches the script. Their concerns: (1) It is uncertain whether 02-3 is in the same room. The roller-blind window, the laptop and the pen cup repeat, and 02-4 settles it, as they noted. Acceptable. (2) The time jump is abrupt, and nothing says what Welbuk is. The caption is the source's, the sunset light marks the time, and the product labels and spoken lines explain the two products. Acceptable. (3) The WELBUK CARE label covers Meera's lower torso. Confirmed, but it covers no face, hand, phone or bangle. Acceptable. (4) Ananya's hair looks loose in 02-4. In assets/panels/02-4.png her hair is gathered at the nape in a low bun, with loose front strands and the gold stud. The bun is the same shape and position as in 02-2, so she reads as the same person. This is an artwork matter, and no lettering in 02-4 hides her hair. Not a defect. Nothing is unresolved."
+  },
+  "fingerprint": "0104031ee61dd0778ba75eac0bac3005ee826724367aa81675b594cab14366e2"
+ },
+ {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/lettering-03-bae6687281a77440ea38606e4217b1895bfd2342f03b5363ecfbcd275e38f7a1.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null,
+   "reportedTask": null,
+   "taskSource": "The runtime gave this reviewer no subagent/task ID. The parent must supply the Agent ID returned by its Agent tool, or record that none is available."
+  },
+  "status": "pass",
+  "observations": [
+   "Files I read: AGENTS.md and CLAUDE.md (session context), docs/REVISION-AND-REVIEWS.md, docs/PROMPTS.md, this request in full (page-03 script with the 03-2 caption at dy 4, boundary pages 02 and 04, embedded first reading), source/original.txt and source/REVISION-2026-11-11.md. Images I opened with Read and looked at myself: workflow/review/page-03.png, assets/panels/03-1.png, 03-2.png, 03-3.png, 03-4.png and 03-5.png, and the boundary images review/page-02.png, review/page-04.png, assets/panels/02-1.png to 02-4.png and 04-1.png to 04-3.png. Every image was readable.",
+   "Wording is unchanged and matches the source: 'A later morning: patients can always check in at the front desk.', 'Some check in ahead on the Welbuk Health app.', 'Ravi scans the QR code at the door.', 'A short form on his own phone, shared with consent.', 'Every check-in gets a slot on the screen.' and 'A-10 · A-11 · A-12'.",
+   "03-2 fix verified. The caption box now spans page y 28 to 134. Mapping assets/panels/03-2.png onto the panel (464x440 from 1040x992, scale about 0.446), the blue scrunchie (art about x 430-470, y 243-275) lands at page y about 132-146 and is visible just below the box. The dark ponytail falls behind her head and left shoulder, fully visible. Only the topmost few pixels of the ponytail loop meet the box edge. In review/page-03.png she clearly wears a high ponytail with a blue scrunchie. That matches 03-3, where she is seated from behind with a ponytail and blue tie, and 03-5, where she has a ponytail and blue scrunchie. The hair inconsistency the final reviewer reported between 03-2 and 03-3/03-5 is gone. Her face, earrings, tapping finger, phone with its calendar and check icons, and crossbody bag remain uncovered. The box now covers only sky, foliage and the top of the awning.",
+   "03-3 hair check. The caption box spans page x 40-313, y 504-610. Mapped onto assets/panels/03-3.png (scale about 0.446), that is art x below about 648 and y below about 273. Ravi's hair reaches into that area from about art x 522 to 648 and y 125 to 273. So the box's lower-right corner hides the upper-left part of his crown, roughly 55x50 page px, about a sixth of his hair silhouette. His forehead and hairline start at art y about 285-300, below the box (face box 287,612; box bottom 610). His eyebrows, eyes, beard, ear and the rest of his short dark hair are visible, so his hairstyle and identity do not change, unlike the 03-2 case where a hidden tie made the hair read as loose. I judge this an acceptable tuck-behind-caption overlap. Raising this caption to dy 4 would reduce the overlap by only 12 px and would not remove it, so I do not require a change.",
+   "Other coverage: in 03-1 the caption's right end overlaps the left edge of the blank background wall screen, and Mr. Raman's and Meera's faces and hands and the QR stand are clear. In 03-4 the caption sits left of Ravi's profile, and the form, tick box, thumb and watch are clear. In 03-5 the caption is on the plain wall, the label sits inside the TV's drawn strip, and all three faces, the cane, both phones and the bag are clear. There are no balloons or tails. All text is legible.",
+   "Cosmetic note: the 03-2 box now sits 4 px below its panel border, while the 03-1 box sits 16 px below, so the top row's caption margins differ. This does not affect reading or coverage."
+  ],
+  "issues": [],
+  "readingReview": {
+   "withoutGuides": true,
+   "predictedOrder": [
+    {
+     "panel": "03-1",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "03-2",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "03-3",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "03-4",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "03-5",
+     "dialogue": [
+      1,
+      2
+     ]
+    }
+   ],
+   "observations": [
+    "Scanning naturally, I follow a Z-path: the 03-1 caption, the 03-2 caption (a little higher now but in the next panel to the right), 03-3, 03-4, then the 03-5 caption and the TV label. This is the script order.",
+    "Each caption is alone at the top of its panel, separated from its neighbours by gutters, so nothing is read out of turn. The TV label sits lower and to the right of the 03-5 caption and reads as the result of the three check-ins."
+   ],
+   "transitions": [
+    {
+     "from": "02-4",
+     "to": "03-1",
+     "observation": "From the evening office to the bright reception. 'A later morning' states the jump, and Meera, in the same blue kurta and braid, anchors the clinic."
+    },
+    {
+     "from": "03-1",
+     "to": "03-2",
+     "observation": "A second route. Priya is outside the same clinic (teal awning, reception and TV through the glass). Her high ponytail and blue scrunchie are now visible."
+    },
+    {
+     "from": "03-2",
+     "to": "03-3",
+     "observation": "A third route. Ravi scans just inside the entrance, with Meera, Mr. Raman and Priya (ponytail with a blue tie, seen from behind) in the background, which now matches 03-2."
+    },
+    {
+     "from": "03-3",
+     "to": "03-4",
+     "observation": "A close-up of the same phone after the scan. The green sleeve and the watch continue."
+    },
+    {
+     "from": "03-4",
+     "to": "03-5",
+     "observation": "All three sit in check-in order under A-10 · A-11 · A-12. Priya's ponytail and scrunchie, Ravi's phone and the bag on his lap continue."
+    },
+    {
+     "from": "03-5",
+     "to": "04-1",
+     "observation": "The same room and TV. 'NOW · A-12', the empty seats beside Ravi, and 'Soon, his slot comes up.' bridge the page turn."
+    }
+   ],
+   "firstReadingHash": "77a5e1ee7d192c6890b57b6789bfa5acabd8849caf4c9c4003854e8f82202c07",
+   "comparison": "The first reader's Z-path order matches the script exactly. Their concerns: (1) The 03-1 caption overlaps the wall screen. Confirmed. The screen is blank background in that panel, so this is harmless. (2) In 03-2 the caption ends just above the ponytail with very little clearance but does not cover her. Confirmed, and this is the intended result of the dy 16 to 4 change: the scrunchie and ponytail are visible and consistent with 03-3 and 03-5. (3) The 03-3 caption may clip the top-left of Ravi's hair. Confirmed: it hides roughly the upper-left sixth of his hair. His face, hairline and identifying features are clear, and his hairstyle still reads, so this is acceptable (details above). (4) The QR code is said to be 'at the door', but the stand is drawn near the counter. In 03-3 the stand is beside the glass entrance and window, and the source says 'at the entrance', so this is acceptable. (5) Slot ownership is only implied by seating. 04-1 confirms it with 'NOW · A-12' as Ravi stands and the other two seats are empty. Acceptable. (6) The receptionist is not named on this page. She is Meera, established on pages 01 and 02, and the source does not name her on page 3. Acceptable. Nothing is unresolved."
+  },
+  "fingerprint": "bae6687281a77440ea38606e4217b1895bfd2342f03b5363ecfbcd275e38f7a1"
+ },
+ {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/lettering-04-0bb71dab4927b9f3ee0077a0872317bf922fbe4f987e780836e814da6120ab16.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null,
+   "reportedTask": null,
+   "taskSource": "The runtime gave this reviewer no subagent/task ID. The parent must supply the Agent ID returned by its Agent tool, or record that none is available."
+  },
+  "status": "pass",
+  "observations": [
+   "Files I read: AGENTS.md and CLAUDE.md (session context), docs/REVISION-AND-REVIEWS.md, docs/PROMPTS.md, this request in full (page-04 script, boundary pages 03 and 05, embedded first reading), source/original.txt and source/REVISION-2026-11-11.md. Images I opened with Read and looked at myself: workflow/review/page-04.png, assets/panels/04-1.png, 04-2.png and 04-3.png, and the boundary images review/page-03.png, assets/panels/03-1.png to 03-5.png and review/page-05.png. Every image was readable. I did not open assets/panels/05-1.png to 05-4.png separately. For the boundary I used review/page-05.png.",
+   "The wording matches the source exactly: 'Soon, his slot comes up.', 'NOW · A-12', 'A quick vitals check first.', 'Hi, Ravi! Just relax your arm for me.', 'Dr. Ananya is notified when he's ready.' and 'RAVI · READY'. Page 04 was not edited in this revision and is reviewed as page 03's neighbour.",
+   "Coverage: in 04-1 the caption is on the plain upper-left wall, and the label sits inside the TV screen. Ravi's face, the hand on his strap, the hand at his pocket, Meera's face and the QR stand are clear. In 04-2 the balloon is on the plain wall, and its short tail points down to the nurse's hair. Ravi's face, the cuff, the bulb, the oximeter, the watch, the monitor and the bag on the floor are clear. In 04-3 the caption is high on the plain wall, well above Ananya's face. The label covers the drawn notification card under the check icon. Mapped from assets/panels/04-3.png (scale about 0.61), the tablet screen ends at about page y 1289, and the label's bottom at 1308 reaches the lower bezel. The label stops short of her right-hand fingers and covers no face or hand."
+  ],
+  "issues": [],
+  "readingReview": {
+   "withoutGuides": true,
+   "predictedOrder": [
+    {
+     "panel": "04-1",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "04-2",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "04-3",
+     "dialogue": [
+      1,
+      2
+     ]
+    }
+   ],
+   "observations": [
+    "Scanning naturally: the 04-1 caption, then the TV label, the 04-2 caption, the nurse's balloon, the 04-3 caption, and finally the tablet label. This is the script order.",
+    "The 04-3 caption is higher than the 04-2 balloon, but the two are separated by a gutter, and the eye finishes 04-2's caption and balloon before moving across, so the nurse's line is not skipped."
+   ],
+   "transitions": [
+    {
+     "from": "03-5",
+     "to": "04-1",
+     "observation": "The same waiting room and TV. The slot list becomes 'NOW · A-12', the seats of Mr. Raman and Priya are empty, and Ravi stands with his bag back on his shoulder. The 03-2 caption move on page 03 does not affect this hand-off."
+    },
+    {
+     "from": "04-1",
+     "to": "04-2",
+     "observation": "To the vitals corner beside reception. The caption, plus the counter and teal chair behind the nurse, carry the move, and the bag now rests on the floor."
+    },
+    {
+     "from": "04-2",
+     "to": "04-3",
+     "observation": "A cut to the consultation room. 'Dr. Ananya is notified when he's ready.' and 'RAVI · READY' link the end of the vitals check to the doctor. The closed laptop at the lower right sets up page 05."
+    },
+    {
+     "from": "04-3",
+     "to": "05-1",
+     "observation": "In review/page-05.png, the same window and plant appear. The laptop is open on PATIENT DETAILS, the tablet is gone, Ravi sits opposite with his bag by his chair, and 'Hello, Ravi.' follows 'RAVI · READY'."
+    }
+   ],
+   "firstReadingHash": "4d6dc78739eb6da20704e4fcb89a433843f0795955ed76493c896462909cd697",
+   "comparison": "The first reader's order matches the script exactly. Their concerns: (1) The nurse is unintroduced. Her lavender scrubs, lanyard and the vitals equipment establish her role, and the source calls her only 'Nurse'. Acceptable. (2) 'Just relax your arm' comes after the cuff is on. The moment is just before she squeezes the bulb, so the line is natural, and it is the user-approved r13 wording. Acceptable. (3) The 'RAVI · READY' box extends onto the bezel and looks pasted on. Confirmed: its lower edge passes the screen by about 19 px. It sits on the drawn notification card under the check icon, is legible, and hides nothing. This is a minor style point, not a defect. (4) 'NOW · A-12' links back to page 03, as intended. Nothing is unresolved."
+  },
+  "fingerprint": "0bb71dab4927b9f3ee0077a0872317bf922fbe4f987e780836e814da6120ab16"
+ }
+]

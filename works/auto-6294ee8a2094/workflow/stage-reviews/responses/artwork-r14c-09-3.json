@@ -1,0 +1,19 @@
+{
+ "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-09-3-35ca4b274a335aaa75945d7d6b7471e619993996d0e638e1fa077b1a97c839a8.json",
+ "reviewer": {
+  "role": "subagent",
+  "task": "claude-code-agent:manga-reviewer:a212b7aa225bf0958",
+  "reportedTask": null,
+  "taskSource": "Agent ID returned by the Claude Code Agent tool to the parent."
+ },
+ "status": "pass",
+ "observations": [
+  "Reviewer identity: the runtime gave me no task ID, so reviewer.task is null. The parent must supply the real one. I opened these myself with Read: assets/panels/09-3.png, assets/characters/main-cast.png and workflow/review/page-09.png. I did not open vision-cast.png, so I checked the partner and child against the request text only.",
+  "The panel is inside the same pale-blue vignette, with clinic buildings joined by dotted lines on the left. On the sofa, Ravi sits at the left, matching the sheet in face, beard and green shirt. The partner sits in the centre: wavy shoulder-length hair, mustard-yellow kurta, and the mole under her right eye (viewer's left). The child sits at the right: short hair, orange T-shirt, round cheeks. All three smile.",
+  "Hands match production. Ravi's right hand points at the tablet. His left arm runs along the sofa back behind the partner, and his hand with the wristwatch rests on the sofa back behind the child. The partner holds the tablet's two edges. The child has one hand on her arm and the other on the sofa cushion.",
+  "The tablet shows three profile circles and a heart, with no text.",
+  "Lettering on page-09.png: the label and the caption (about page x 40-405, y 505-725) cover the left vignette area with its clinic and dotted network, which is background. Ravi's pointing hand (about x 520-570), all three faces and the tablet are uncovered."
+ ],
+ "issues": [],
+ "fingerprint": "35ca4b274a335aaa75945d7d6b7471e619993996d0e638e1fa077b1a97c839a8"
+}

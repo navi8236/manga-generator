@@ -1,0 +1,146 @@
+{
+ "_reviewerNotes": {
+  "taskIdentity": "The runtime did not give me a subagent/task identity, so reviewer.task is null in every entry. The parent must supply the real task name before running `stage-review record`. That command rejects a null task, and no name should be made up.",
+  "instructionsSource": "None of the eight request JSON files has an \"instructions\" field. I followed the artwork instructions printed by `prepare` in /home/user/manga-generator/cli/stage-review.mjs line 148: request, reviewer, status, observations, issues. Artwork is not a script, storyboard, lettering or final stage, so neither dialogueReview nor readingReview applies.",
+  "whatIRead": "Docs: docs/REVISION-AND-REVIEWS.md, docs/PROMPTS.md, source/REVISION-2026-11-11.md. Requests: I read artwork-03-1 (all of it, including the page-03 script) and artwork-04-1 (the page-04 script part, from line 245). Edit files: workflow/edits/03-1-edit-background.txt, 03-2-edit-qr-stand.txt, 04-1-edit-empty-chairs.txt. Images I opened with Read and looked at: assets/characters/main-cast.png, nurse.png, checkin-patients.png; assets/panels/03-1.png, 03-2.png, 03-3.png, 03-4.png, 03-5.png, 04-1.png, 04-2.png, 04-3.png. For the edit comparisons I also opened the pre-edit candidates assets/candidates/03-1/e884a73a-....png, 03-2/f0b1cbf5-....png and 04-1/63f36f2d-....png. A grep showed that the edit run.json imageHash values (03-1 d959f0d4 -> 6dab121e, 04-1 798dc18a -> 3104f55b, 03-2 21ceebe4 -> f1388d13) match the panel hashes pinned in the requests. I did not recompute file hashes myself.",
+  "notOpened": "Not opened: vision-cast.png (no vision characters appear in these panels), the storyboard SVGs page-03.svg and page-04.svg (not inspected visually), source/original.txt, and the 03-2 to 03-5, 04-2 and 04-3 request files. Those requests should carry the same page scripts as the 03-1 and 04-1 requests I read, but I did not check that file by file. Every file I tried to read opened without error."
+ },
+ "03-1": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-03-1-d97f1147437d4d1d7c6343aaf8643d595da12117649ec350d2eed766d4eac110.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Mr. Raman matches checkin-patients.png: short white hair, bushy white eyebrows, round wire glasses, prominent ears, long oval face with smile lines, cream half-sleeve shirt with chest pocket. He smiles warmly at Meera.",
+   "Hands match production. Raman's right hand (screen-left, lower) grips the curved top of the wooden walking stick, which is cut off by the bottom frame. His left hand rests flat on the counter. Meera has both hands on the keyboard, and the silver bangle is on her right wrist (screen-left).",
+   "Meera matches main-cast.png: long side braid over her left shoulder (screen-right) with a teal hair tie, blue block-print kurta, round face, large round eyes, high arched brows, small hoop earrings. She smiles while typing. There is a small dark dot on her right cheek (screen-left, near the eye) that the reference sheet does not have. The cast text lists only a left-cheek dimple. It is minor and present in the pre-edit candidate too. Noted, not blocking.",
+   "The reception desktop monitor in the right foreground faces Meera with its back to the reader, so no screen is shown. The wall TV shows teal with one empty white strip. The QR stand by the glass door shows only an abstract block pattern and a teal bar. The vitals monitor shows abstract blocks. There is no text, number or logo anywhere.",
+   "Edit check against pre-edit e884a73a: the only change is the two background patients' clothing. The man went from a light green shirt to plain grey and the woman from lilac to dark brown. Both are seen from behind, so they no longer read as Ravi or the nurse. Raman's face, glasses, hands and stick, Meera's face, braid, bangle and hands, the monitor, TV, QR stand, plant and vitals cart are unchanged. The upper-left white wall area for the caption is unchanged.",
+   "The speaker face boxes fit the art when scaled into the panel (about 2.197x). Raman's box covers his face at roughly x290-400, y362-503 in panel pixels, and Meera's covers hers at roughly x679-789, y402-547. The caption zone at the upper left (x16, dy16) is plain white wall.",
+   "Continuity: this is the first appearance of the QR stand. It is a portrait kiosk on a grey column with an abstract QR and a teal bar. In 03-3 the close-up stand is a grey housing with a teal frame. Palette and construction are similar enough at background scale. See the 04-1 issue for the stand that does not match."
+  ],
+  "issues": []
+ },
+ "03-2": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-03-2-b99191ba6d34249b8414346c00072ef4925ca71c0ae88515ef9b80d54717bdc2.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Priya matches checkin-patients.png: high ponytail with a blue scrunchie, small hoop earring, coral-pink block-print kurti, dark slate crossbody bag with its strap over her left shoulder and the bag at her right hip, large almond eyes with winged lashes. A small mark near her mouth agrees with the beauty spot. At this resolution I cannot tell for sure which side of the lip it is on. She smiles and walks briskly.",
+   "Hands: her left hand (screen-right) holds the phone. Her right index finger touches the green check-mark card on the screen, and the other fingers are curled. Finger count and contact look plausible. The screen faces the reader and shows only a calendar icon, a teal check card and small tap-spark strokes. There is no text.",
+   "The setting reads as a sunny street with the clinic's teal awning and glass entrance. Inside you can see the reception desk, a wall TV with an empty white strip, waiting chairs and a plant, which ties the shot to the clinic in 03-1 and 03-3. Plain sky at the upper left leaves room for the caption.",
+   "Edit check against pre-edit f0b1cbf5: the outdoor QR stand at the lower right is gone. The glass door, its reflections, the interior floor and the pavement are filled in cleanly with no ghosting. The interior doormat strip is also gone, which does no harm. Priya's face, hands, phone screen, bag, the awning, trees and sky are unchanged. Removing the stand avoids suggesting that the QR check-in happens outdoors.",
+   "Geometry: the face box (728,153,76,80) maps to her face at about x430-600, y289-468 in panel pixels. The protected box (801,215,49,77) covers the phone and both hands at about x594-704, y428-600."
+  ],
+  "issues": []
+ },
+ "03-3": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-03-3-cadee890a992764cdfbd55146668ee2a97d2036206a4a4cd37c1d85be4de61e4.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Ravi matches main-cast.png: short dark hair (a little more tousled than the sheet but still side-swept), thick straight brows close to slightly narrow eyes that crease at the corners, trimmed beard on a square jaw, light green shirt with chest pocket and rolled sleeves. Three-quarter view looking at his phone, with a focused, pleased half-smile.",
+   "Hands: his right hand (screen-left, forward) holds the dark navy phone up to the stand, and the four fingers and thumb wrap it believably. His left hand grips the dark-brown shoulder-bag strap on his left shoulder, and the wristwatch is on that wrist, as the cast specifies.",
+   "The phone screen shows a glowing scan frame around an abstract block pattern. The stand shows an abstract block QR pattern in a teal frame. There is no text or real code.",
+   "Background continuity: Meera types at the reception desk in her blue kurta and braid. Raman (cream shirt, white hair) and Priya (coral kurti, ponytail with blue scrunchie) sit in the teal waiting chairs seen from behind, which fits the order 03-1 -> 03-2 -> 03-3. Raman's walking stick is hidden by the chair, which is acceptable. The wall TV has an empty white strip.",
+   "The glass entrance with trees outside is at the right, so Ravi is just inside the door, as the script says. The upper-left wall and ceiling area is plain for the caption.",
+   "Geometry: the face box (287,612,94,100) covers his face at about x589-800, y278-502 in panel pixels. The protected box (127,747,71,111) covers the phone and his right hand at about x231-390, y580-829."
+  ],
+  "issues": []
+ },
+ "03-4": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-03-4-eee966574d309d3996711f5a5772b464a2af087809bd6cb1c72ef0c7336e7adc.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Over-the-shoulder close-up from behind Ravi's right shoulder. We see his right ear, a profile with a thick brow, a narrow eye, a trimmed beard and a slight smile, and his dark hair. The light green collar and shoulder agree with the sheet and with 03-3.",
+   "Hands: his left hand (screen-left) holds the phone from below and at the edge, and the brown-strap wristwatch with its round white face is on that wrist, as production specifies. His right thumb presses the tick-box, and the right hand's fingers wrap behind the phone's right edge. The thumb-to-box contact is clear.",
+   "The phone screen shows three blank rounded fields, a tick-box with a check mark and small tap-spark strokes, and a teal submit button. There are no letters, numbers or personal data. The phone case is dark navy, consistent with 03-3.",
+   "The background is plain off-white, and the whole upper-left area is free for the three-line caption. The shoulder bag is not visible because it is on his far (left) shoulder, which is consistent.",
+   "Geometry: the protected box (635,648,145,206) covers the phone and both hands at about x270-589, y351-804 in panel pixels. The face box (844,580,91,180) covers the profile at about x729-929, y202-597."
+  ],
+  "issues": []
+ },
+ "03-5": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-03-5-afc739de35a57c4a8c7813f6ff070f9b3b73f7ca3ded4a2038be29d443b42030.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "From screen-left to screen-right: Raman (glasses, bushy white brows, cream shirt), Priya (ponytail with blue scrunchie, hoop earring, coral kurti, crossbody bag, beauty spot below the lip on her left) and Ravi (green shirt, beard). All three look up at the TV with small satisfied smiles. The order and identities match the script and the reference sheets.",
+   "Hands: Raman's right hand holds the walking stick upright beside his knee and his left hand rests on his knee. Priya's left hand holds her phone in her lap, and her right hand, with a thin silver watch or bracelet on the wrist, rests by the armrest. Ravi's right hand holds his navy phone raised. His left hand, with the wristwatch, rests on the dark-brown shoulder bag on his lap. All of this matches production.",
+   "The wall TV is at the upper right with a light-teal screen and one wide empty white strip (about x930-1355, y87-185 in panel pixels). It has no text or numbers. The label at x640, dy60 maps to about x923, y87, at the left end of the strip. The lettering stage should confirm that 'A-10 · A-11 · A-12' fits inside the strip.",
+   "There is plain wall at the upper left for the caption. Two background figures seen from behind (a man in a light-blue shirt, a woman in mustard) are generic patients. They differ from the grey and brown figures in 03-1 and 04-1. That is acceptable for different patients and is noted for continuity only.",
+   "Geometry: the face boxes map to Raman at about x205-345, y255-395, Priya at about x519-649, y286-416, and Ravi at about x775-910, y255-395 (scale about 1.443). Each matches the drawn face."
+  ],
+  "issues": []
+ },
+ "04-1": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-04-1-5a10e15fa7bddacdf5c741740921bd6ee5db15cd1f0d90e88f762cccfa878eab.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "changes-requested",
+  "observations": [
+   "Ravi stands in front of the waiting chairs looking up at the wall TV with a pleased smile. Identity matches the sheet: beard, thick brows, side-swept dark hair, light green shirt, dark trousers. His left hand grips the dark-brown shoulder-bag strap on his left shoulder, with the wristwatch on that wrist. His right hand is pushed into his trouser pocket. The phone itself cannot be seen, so the 'tucking the phone away' beat reads only as a hand going into the pocket. Acceptable.",
+   "Edit check against pre-edit 63f36f2d: Raman and Priya are fully removed. The two front-left blue chairs are empty and fully drawn, with seat, back and armrests, and no remains of stick, phone, bag or limbs. The rear-row figures are recoloured to plain grey and dark brown. Ravi's pose, face, hands, bag and gaze, Meera at the desk, the vitals cart, the TV, the plant and the window are identical to the pre-edit image. The upper-left caption area is unchanged.",
+   "Meera at the right is in her blue kurta with her braid, typing, and is recognisable at small scale. The TV has a light-teal screen with one empty white strip (about x1238-1490, y90-155 in panel pixels) and no text. The label at x762, dy40 maps to about x1211, y64, which starts slightly left of the strip. The lettering stage should check 'NOW · A-12' sits inside the strip.",
+   "The empty chairs plus Ravi standing alone now support A-10 and A-11 having been called first, and they follow on from 03-5.",
+   "The upper-left caption area is a hard-edged white block. Its vertical edge at about x52 and its bottom edge at about y228 cut across the left window column. This was already in the pre-edit generation, so the edit did not cause it. It can read as wall above a lower window and will be partly covered by the caption, so it is noted and not blocking.",
+   "Geometry: the face boxes map to Ravi at about x879-994, y75-189 and Meera at about x1406-1476, y288-368 (scale about 1.59). Both match the drawn faces."
+  ],
+  "issues": [
+   {
+    "problem": "The QR check-in stand does not match the established prop. In 04-1 it is a flat white sign with a thin black frame on a thin black easel pole, with a small QR and no teal. In 03-1 and in the 03-3 close-up it is a grey kiosk housing on a grey column with a teal frame or bar around the abstract QR. The section defines a single qr-stand object, so the reader sees a different stand in the same entrance a short wait later. Edit the 04-1 stand to match the grey/teal kiosk from 03-1 and 03-3 without changing anything else.",
+    "location": "04-1, left, by the glass window, about x35-130, y295-580 in panel pixels (assets/panels/04-1.png)",
+    "resolved": false
+   }
+  ]
+ },
+ "04-2": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-04-2-057f7d47fa31e262ea5847671cc1dcf9b791dfe40650275bf24d9c2cd1fdf388.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "The nurse matches nurse.png: chin-length wavy dark bob, wide-set bright eyes, thick straight brows, heart-shaped face, plain lavender scrub top and trousers, white clinic shoes, purple lanyard with a blank white card, wristwatch on her left wrist. She speaks kindly with her mouth open. Her visible ear is the left one. The sheet tucks hair behind the right ear, but that side is hidden here, so this is not a conflict.",
+   "Ravi sits in a teal chair at the lower left, relaxed, smiling and nodding toward the nurse. Beard, brows, green shirt, dark trousers and brown shoes match the sheet. The dark-brown shoulder bag is on the floor beside the chair, as production specifies. No phone is visible.",
+   "Hands and props: Ravi's left arm rests on the small side table. The blood-pressure cuff is on his upper arm, the wristwatch on his wrist, and the pulse oximeter on his left index finger. His right hand rests on his knee. The nurse's right hand (upper) holds the hand bulb. Her left hand (lower, with the watch) steadies the tube, which runs down toward the cuff. The vitals monitor shows only abstract shapes and no readings.",
+   "Behind the nurse at the right, a white reception counter top with a teal front, a desk monitor, a plant and a teal waiting chair place the vitals corner beside reception. The upper third is plain wall for the caption and the nurse's balloon. The balloon at x250, dy150 maps to about x343, y206, inside the plain area.",
+   "Geometry: the face boxes map to Ravi at about x95-225, y513-664 and the nurse at about x500-640, y372-523 (scale about 1.371). The protected boxes cover the cuffed arm, oximeter and table edge (about x240-520, y794-944) and the nurse's bulb and tube hands (about x415-559, y668-804)."
+  ],
+  "issues": []
+ },
+ "04-3": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-04-3-b63cb67b4d77ef4e14ad11434a70f0283ea37c37f8b70ed8f132bf4f018fa673.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Dr. Ananya matches main-cast.png: dark hair in a low bun with loose strands, small gold stud earring, calm almond eyes with heavy upper lids, level medium-thick brows, oval face with a defined chin, teal kurta under an open white coat, stethoscope around her neck and not in use. She looks down at the tablet with a small smile, which fits 'ready, attentive'.",
+   "Hands: she holds the tablet by its left and right edges with both hands, fingers curled over the bezel. The grip is plausible and no extra fingers are visible. The tablet is angled toward the reader and shows a light card with a teal check icon, small spark strokes and one blank white strip (about x315-490, y1215-1265 in panel pixels). There is no text or numbers.",
+   "The consultation room setting is correct: window with a potted plant behind her and a closed silver laptop pushed to the lower right of the wooden desk. There are no charts with text. The upper third is plain white for the caption.",
+   "The label 'RAVI · READY' at x140, dy729 maps to about x229, y1190, slightly left of and above the strip's left end. The lettering stage should confirm it sits on the card strip.",
+   "Geometry: the face box (730,834,116,150) maps to about x199-388, y598-843 in panel pixels (scale about 1.633) and covers her face. Continuity with 04-2 works as a cut to another room, and the tablet appears only here, as the section requires."
+  ],
+  "issues": []
+ }
+}

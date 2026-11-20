@@ -1,0 +1,144 @@
+{
+ "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/script-all-fcb49eb94ff1cec6a1e07b895685d7a47659213be7e6f807652a51025f4bc47b.json",
+ "requestFingerprint": "fcb49eb94ff1cec6a1e07b895685d7a47659213be7e6f807652a51025f4bc47b",
+ "reviewer": {
+  "role": "subagent",
+  "task": "claude-code-agent:manga-reviewer:a26b468d1b56bb59f",
+  "reportedTask": null,
+  "taskSource": "Agent ID returned by the Claude Code Agent tool to the parent."
+ },
+ "reviewerIdentityNote": "The runtime did not give me a subagent or task identity, so task is null. The parent must not invent one.",
+ "status": "changes-requested",
+ "observations": [
+  "Files read in full: the request JSON (all 1730 lines, in two reads), source/original.txt (56 lines), workflow/source-coverage.json (28 spans) and source/REVISION-2026-11-11.md. I also read docs/REVISION-AND-REVIEWS.md and docs/PROMPTS.md. AGENTS.md came in as project instructions. No file was unreadable. This was a text-only script review. I did not open or inspect any image, and I make no visual claims.",
+  "Reading order: I read the source first, then the script. To compensate, I re-read only the lettered dialogue in panel order and checked that each line works without source knowledge. Each question has its answer next to it (05-1 asks, 05-2 answers; 06-2 asks, 06-3 answers with 'That's the idea'). Each pronoun has an earlier referent ('the rest' in 01-3 points to Meera's list in 01-2; 'here' in 02-2 points to the laptop and the WELBUK PRACTICE label in 02-1; 'his own phone' in 03-4 points to Ravi, named in 03-3; 'his slot' in 04-1 follows 03-5 and Ravi drawn standing; 'he's ready' in 04-3 follows the nurse's 'Hi, Ravi!' in 04-2).",
+  "Every caption, line and on-screen label in all 27 panels matches original.txt word for word, including punctuation such as the ellipsis in 01-2 and the em dash in 07-4. The only additions are the manga-supplement product labels in 02-1 ('WELBUK PRACTICE for the clinic'), 02-3 ('WELBUK CARE for clinic staff') and 06-2 ('WELBUK HEALTH for patients'), plus the repeated 'WELBUK VISION' on 07-3. source-coverage.json records all of these. None of them invents a feature.",
+  "Speakers match the source everywhere. No line merges turns from different speakers. The only split is Meera's 01-2 line, which becomes two balloons for the same speaker at the ellipsis, and the source has no turn in between.",
+  "Cause and effect hold together. Ananya's motive (01-3) leads to onboarding (page 2). The three check-in routes (03-1 to 03-4) lead to one queue on the TV (03-5). Ravi checked in last, so A-12 is his and matches 'NOW · A-12' in 04-1. The vitals check (04-2) leads to the tablet alert (04-3), and the 'RAVI · READY' alert explains why Ananya greets him by name in 05-1. The consultation is followed by the app walkthrough (page 6), departure (06-4), a hypothetical tomorrow (07-1), the vision (07-2, 07-3) and the return to the present (07-4).",
+  "Scene changes are marked: an evening time change at 02-1; 'A later morning:' in the 03-1 caption; a short wait at 04-1; a move to the consultation room at 04-3, re-entered at 05-1; a return to reception at 06-1; the departure section at 06-4; a train time change at 07-1; the vision vignette at 07-2 and 07-3; and a return without the vignette at 07-4.",
+  "The requested TV fix is consistent. The 03-5 scene and the waiting-tv prop now specify ONE wide empty white strip, with the TV in the upper-right corner, which fits the single-line label 'A-10 · A-11 · A-12'. In 04-1 the scene has the TV in the upper-right part of the panel with one highlighted empty strip. Its prop entry reads before 'one strip listing the three slots (03-5)' and during 'one highlighted empty strip for the called slot', which fits 'NOW · A-12'. The script no longer mentions 'three rows' anywhere. The section object for waiting-tv ('an empty white token area') says 'token' where the dialogue says 'slot'. That is harmless because the word never reaches the lettering.",
+  "Prop chains I checked and found consistent across panels: Ravi's phone (03-3 to 06-4 and 07-1), the shoulder bag (03-3 to 06-4), the doctor's tablet (04-3 in use, 05-1 and later in the drawer), the closed laptop (04-3 to 05-3), the staff phone (02-3, 02-4, 07-4), the onboarding laptop (02-1 to 02-4) and the vitals kit (04-2). Costumes follow the section entries, and Ananya keeps her stethoscope on in every white-coat scene.",
+  "Minor, non-blocking: in 06-2 the action says 'Ravi studies the screen', but the screen faces the reader and the scene has him glancing up and away. The scene text calls this a deliberate thinking glance, so it reads as presentation, not a contradiction. The artwork review should confirm it reads naturally.",
+  "Image-dependent points cannot be certified from the script alone: whether the single strip actually leaves room for the one-line label, how the TV sits in the upper right, and the reading order around the TV label and the caption."
+ ],
+ "issues": [
+  {
+   "problem": "Mr. Raman and Priya are visible in 04-1 ('Mr. Raman and Priya still seated nearby'), but production.hands records only Ravi, and production.props has no walking-stick or priya-phone entries. In 03-5 the walking-stick is in raman.right with after 'in his hand', and priya-phone is in priya.left with after 'in her lap'. 04-1 never picks either chain up again. AGENTS.md requires both hands of every visible person and the before/current/after/heldBy of important props, so this gap leaves the 04-1 generation unconstrained for those two characters' hands and props.",
+   "location": "script.pages[04].panels[04-1].production.hands / production.props",
+   "resolved": false
+  }
+ ],
+ "dialogueReview": {
+  "sourceCompared": true,
+  "panels": [
+   {
+    "panel": "01-1",
+    "observation": "Caption 'A busy day at Dr. Ananya's clinic.' matches source Page 1 Panel 1 word for word. It names Ananya first, so later readers know who she is. No dialogue depends on it."
+   },
+   {
+    "panel": "01-2",
+    "observation": "Meera's source line 'Appointments, patient details, follow-ups... I wish everything were easier to manage!' is kept word for word as two balloons for the same speaker, split at the ellipsis with no turn in between. The list sets up the wish."
+   },
+   {
+    "panel": "01-3",
+    "observation": "Ananya's 'Our time belongs with patients. Let's make the rest simpler.' is word for word. 'The rest' refers to the admin list Meera has just said in 01-2, so the referent comes first. It answers Meera's wish but is not a direct reply to her, as in the source."
+   },
+   {
+    "panel": "02-1",
+    "observation": "Caption 'The clinic begins its Welbuk onboarding.' is word for word. The supplementary label 'WELBUK PRACTICE for the clinic' names the source's laptop product and gives 'here' in 02-2 a referent. The evening time change is marked in the art and the transition entry."
+   },
+   {
+    "panel": "02-2",
+    "observation": "Ananya's 'We can organise our clinic workflow here.' is word for word. 'Here' refers to the laptop and the label in 02-1."
+   },
+   {
+    "panel": "02-3",
+    "observation": "Meera's 'And our team can use tools suited to each staff role.' is word for word, and the speaker matches the source. 'And' continues Ananya's 02-2 line from a different speaker, which is the same exchange in the source and is not merged. The 'WELBUK CARE for clinic staff' label names the staff app."
+   },
+   {
+    "panel": "02-4",
+    "observation": "Ananya's 'One team. Better coordination.' is word for word and sums up 02-2 and 02-3. Meera answers silently with a nod, as the coverage file records."
+   },
+   {
+    "panel": "03-1",
+    "observation": "Caption 'A later morning: patients can always check in at the front desk.' matches the revised source Page 3 Panel 1 word for word. It gives the time cue after the evening page and introduces 'check in' before 03-2 uses it, per the r13 change in REVISION-2026-11-11.md. Mr. Raman and Meera are silent."
+   },
+   {
+    "panel": "03-2",
+    "observation": "Caption 'Some check in ahead on the Welbuk Health app.' is word for word. 'Some' contrasts with 'patients can always check in at the front desk' in 03-1. Priya is silent."
+   },
+   {
+    "panel": "03-3",
+    "observation": "Caption 'Ravi scans the QR code at the door.' is word for word and is the first time the comic names Ravi."
+   },
+   {
+    "panel": "03-4",
+    "observation": "Caption 'A short form on his own phone, shared with consent.' is word for word. 'His' refers to Ravi in 03-3. The consent tick-box action carries 'shared with consent' with no data shown."
+   },
+   {
+    "panel": "03-5",
+    "observation": "Caption 'Every check-in gets a slot on the screen.' and label 'A-10 · A-11 · A-12' are word for word. The label is one line, and the revised scene and waiting-tv prop now describe ONE wide empty strip in the upper-right TV, so the text and art instructions agree. Check-in order (Raman, Priya, Ravi) makes A-12 Ravi's slot."
+   },
+   {
+    "panel": "04-1",
+    "observation": "Caption 'Soon, his slot comes up.' and label 'NOW · A-12' are word for word. 'His' points to Ravi, the person standing, and A-12 matches 03-5. The TV description (one highlighted empty strip, upper right) matches the label. The dialogue is fine. The production issue about Raman's and Priya's hands and props is listed separately."
+   },
+   {
+    "panel": "04-2",
+    "observation": "Caption 'A quick vitals check first.' and the nurse's 'Hi, Ravi! Just relax your arm for me.' are word for word, matching the r13 revision. The line no longer repeats the caption. It addresses Ravi by name, which sets up 04-3 and 05-1."
+   },
+   {
+    "panel": "04-3",
+    "observation": "Caption 'Dr. Ananya is notified when he's ready.' and label 'RAVI · READY' are word for word. 'He' refers to Ravi, named in 04-2 and on the label. This explains how Ananya knows his name in 05-1."
+   },
+   {
+    "panel": "05-1",
+    "observation": "Ananya's 'Hello, Ravi. Tell me what brings you in.' is word for word. Her request comes before Ravi's answer in 05-2. Knowing his name is set up by 04-3."
+   },
+   {
+    "panel": "05-2",
+    "observation": "Ravi's 'I've been feeling tired lately.' is word for word and directly answers 05-1. It is a routine concern with no diagnosis."
+   },
+   {
+    "panel": "05-3",
+    "observation": "Caption 'Technology supports the workflow. The conversation stays human.' is word for word. Ananya listens silently, which shows her reaction to 05-2, and the closed laptop backs up the caption."
+   },
+   {
+    "panel": "05-4",
+    "observation": "Ananya's 'We'll go through your concerns and decide the right next steps together.' is word for word. 'Your concerns' refers to 05-2. No treatment advice is given."
+   },
+   {
+    "panel": "06-1",
+    "observation": "Meera's 'Welbuk Health is designed to help patients stay connected with their care.' is word for word. It introduces the app before Ravi's question in 06-2."
+   },
+   {
+    "panel": "06-2",
+    "observation": "Ravi's 'So I can keep useful information in one place?' is word for word. 'So' follows Meera's explanation in 06-1. The 'WELBUK HEALTH for patients' label completes the three product roles."
+   },
+   {
+    "panel": "06-3",
+    "observation": "Meera's 'That's the idea. Let's walk through what is available to you.' is word for word. It answers the 06-2 question directly, and 'what is available to you' avoids implying unlaunched features."
+   },
+   {
+    "panel": "06-4",
+    "observation": "Caption 'A smoother visit. A more connected experience.' is word for word. Ravi leaves with his phone after the walkthrough offered in 06-3. The farewell is silent."
+   },
+   {
+    "panel": "07-1",
+    "observation": "Caption 'Tomorrow, care may take us beyond our hometown.' is word for word. The word 'may' keeps the train scene hypothetical."
+   },
+   {
+    "panel": "07-2",
+    "observation": "Label 'WELBUK VISION' and caption 'The vision: trusted connections between clinics, specialists, and patients across locations.' are word for word. The label and vignette mark this as vision, as the source disclaimer requires. The specialist is silent."
+   },
+   {
+    "panel": "07-3",
+    "observation": "Caption 'One connected ecosystem for care and family wellness.' is word for word. The repeated 'WELBUK VISION' label is a supplement that keeps the scene inside the vision. The family is silent."
+   },
+   {
+    "panel": "07-4",
+    "observation": "Label 'Welbuk Practice • Welbuk Care • Welbuk Health' and caption 'Welbuk — Building a connected healthcare ecosystem.' are word for word. The labels tie back to the product roles introduced in 02-1, 02-3 and 06-2, and the vignette ends here, returning to the present."
+   }
+  ]
+ }
+}

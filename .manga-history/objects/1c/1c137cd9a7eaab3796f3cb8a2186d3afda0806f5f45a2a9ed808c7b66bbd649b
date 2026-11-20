@@ -1,0 +1,223 @@
+{
+  "version": 3,
+  "page": "07",
+  "status": "planning-guide-not-reviewed",
+  "direction": "left-to-right, top-to-bottom",
+  "panels": [
+    {
+      "id": "07-1",
+      "rect": [
+        45,
+        28,
+        935,
+        442
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "ananya",
+          "text": "Hello, Ravi. What brings you in?",
+          "rect": [
+            335,
+            102,
+            396,
+            106
+          ],
+          "center": [
+            533,
+            155
+          ],
+          "mouth": [
+            295,
+            211
+          ]
+        }
+      ],
+      "faces": {
+        "ananya": {
+          "face": [
+            256,
+            132,
+            73,
+            86
+          ],
+          "anchor": [
+            295,
+            211
+          ]
+        }
+      },
+      "protected": [],
+      "intent": null,
+      "groups": null,
+      "warnings": []
+    },
+    {
+      "id": "07-2",
+      "rect": [
+        45,
+        480,
+        935,
+        408
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "ravi",
+          "text": "I've been feeling unusually tired lately.",
+          "rect": [
+            95,
+            704,
+            386,
+            106
+          ],
+          "center": [
+            288,
+            757
+          ],
+          "mouth": [
+            289,
+            686
+          ]
+        }
+      ],
+      "faces": {
+        "ravi": {
+          "face": [
+            223,
+            567,
+            106,
+            126
+          ],
+          "anchor": [
+            289,
+            686
+          ]
+        },
+        "ananya": {
+          "face": [
+            678,
+            581,
+            79,
+            92
+          ],
+          "anchor": [
+            718,
+            663
+          ]
+        }
+      },
+      "protected": [],
+      "intent": null,
+      "groups": null,
+      "warnings": []
+    },
+    {
+      "id": "07-3",
+      "rect": [
+        45,
+        898,
+        462,
+        549
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "ananya",
+          "text": "Let me review your medical history.",
+          "rect": [
+            53,
+            1146,
+            390,
+            106
+          ],
+          "center": [
+            248,
+            1199
+          ],
+          "mouth": [
+            164,
+            1082
+          ]
+        }
+      ],
+      "faces": {
+        "ananya": {
+          "face": [
+            52,
+            910,
+            119,
+            225
+          ],
+          "anchor": [
+            164,
+            1082
+          ],
+          "kind": "head"
+        }
+      },
+      "protected": [],
+      "intent": null,
+      "groups": null,
+      "warnings": []
+    },
+    {
+      "id": "07-4",
+      "rect": [
+        518,
+        898,
+        462,
+        549
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "narration",
+          "text": "Clinical information stays organized for the visit and future follow-ups.",
+          "rect": [
+            526,
+            1146,
+            386,
+            138
+          ],
+          "center": [
+            719,
+            1215
+          ],
+          "mouth": null
+        }
+      ],
+      "faces": {
+        "ananya": {
+          "face": [
+            626,
+            1042,
+            92,
+            93
+          ],
+          "anchor": [
+            671,
+            1128
+          ]
+        }
+      },
+      "protected": [],
+      "intent": null,
+      "groups": null,
+      "warnings": []
+    }
+  ],
+  "checklist": [
+    "番号と誘導線を隠した画像を先に読み、予測した発話順を記録する",
+    "最初のセリフへ上・左から入れるか",
+    "近い非連続の吹き出しを一組と誤認して返答を飛ばさないか",
+    "前の会話のまとまりを読み終えてから次のまとまりへ進めるか",
+    "返答へ自然に移り、視線が大きく逆戻りしないか",
+    "顔の向き・視線・手や小道具の動作と読順がつながるか",
+    "話者への尾が別人物や重要物を横切らないか",
+    "場所・時間・回想の切替と物の移動を直前直後から理解できるか",
+    "最後のセリフ・反応から次のコマへ移れるか",
+    "大きなコマ・余白・情報公開の順がページの感情の狙いに合うか",
+    "話題の境界と段・ページ境界が一致し、不要な読み戻りを誘わないか"
+  ]
+}

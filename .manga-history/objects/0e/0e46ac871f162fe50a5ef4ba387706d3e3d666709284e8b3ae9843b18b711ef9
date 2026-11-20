@@ -1,0 +1,70 @@
+{
+ "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-06-1567807c97479ed24857864960ff0cb0717a52be591f7d1f8e319750fa8fab6e.json",
+ "reviewer": {
+  "role": "subagent",
+  "task": "claude-code-agent:manga-reviewer:aca9274833ae880ae",
+  "reportedTask": null,
+  "taskSource": "Agent ID returned by the Claude Code Agent tool to the parent."
+ },
+ "status": "changes-requested",
+ "observations": [
+  "Reviewer identity: task is null because the runtime supplied no task ID. The parent must record the real Agent ID.",
+  "What I read: this request JSON (page 6 script, page 5 and page 7 boundary context, the recorded first reading), storyboards-unnumbered/page-06.png, storyboards/page-06.png, reading-flow/page-06.json, source page 6 and the REVISION follow-up. For the 06-2 to 07-1 boundary I also read storyboards-unnumbered/page-07.png and the old-numbered composed preview workflow/review/page-06.png. All PNGs loaded and I looked at them.",
+  "Unnumbered scan of page 06. Top wide panel with no faces: teal heading 'SPECIALITY-SPECIFIC TREATMENT PLANNER' at top left, then three teal tile labels along the bottom band, left to right: 'Dentist: odontogram', 'Eye doctor: eye markers', 'Paediatrician: growth scales · vaccines'. Bottom wide panel: Ananya's balloon 'We'll go through your concerns and decide the right next steps together.' at upper right with its tail down to her face box; Ravi's face box at right; teal 'PLAN OF CARE: intelligent prescribing · summary · drug interactions · labs · referrals' at lower left (x40-469, y1088-1258). This matches source page 6 and the user's section order (planner, then plan of care).",
+  "The reading-flow warnings for 06-1 steps 2→3 and 3→4 are false positives. The three tile labels share one horizontal band and read naturally left to right, which matches the tile order (tooth chart, eye diagram, growth/vaccine).",
+  "First-reader concern 1 (panel 1 breaks the scene and reads like an advert; why show dentist/eye/paediatric tools for a tired adult): the planner insert and its three example tiles are the user's explicit request, so the question is only whether they read clearly. The heading plus 'Dentist: / Eye doctor: / Paediatrician:' reads as examples of how the planner adapts, not as tools used on Ravi. That is acceptable. As scripted, though, the screen 'fills the panel' with nothing tying it to Ananya's laptop or the consultation room, which is the source of the 'inserted advert' and 'whose screen' reactions. See issue 1.",
+  "First-reader concern 2 (the reply to 'tired lately' is weakened by the page turn and the insert): Ananya's 06-2 line explicitly refers to 'your concerns', and 05-3 already showed her listening. The user requires this order. Acceptable once 06-1 is anchored in the scene.",
+  "First-reader concern 3 (Ravi has no reaction): the 06-2 plan has Ravi nodding, relaxed, with both hands on his knees. That will appear in the art. Not a layout problem.",
+  "First-reader concern 4 (balloon or label first in 06-2): the balloon's top is at y684 and the label's at y1088. The balloon is far higher and is read first, and the label sits over the laptop screen as on-screen text. Resolved.",
+  "First-reader concern 5 (whose screen shows PLAN OF CARE): 06-2 repeats the 05-1 staging, with the open laptop on Ananya's side in the left foreground. Once drawn, it is clearly her screen.",
+  "The 06-2 balloon (y684-822) clears both face boxes (Ananya y928+, Ravi y948+), and its tail does not cross Ravi. The PLAN OF CARE label sits inside the laptop zone (left 45%, lower two-thirds).",
+  "Cosmetic: the Paediatrician label ends at y632, only 12 px above the panel bottom (644). Check the margin at lettering."
+ ],
+ "issues": [
+  "06-1 close-up is not anchored to the consultation: the scene says 'Close-up of the same laptop screen filling the panel'. Generated full-bleed, this becomes a flat UI mock-up with no people, room or device edge, which is why the first reader saw a scene break and an inserted advert, and asked whose screen it is. Fix before generation, without adding text: keep the laptop's bezel/top edge and hinge visible around the screen, with a sliver of the consultation room (the window and plant seen in 05-1/05-3, or the desk edge, and optionally Ananya's hand at the trackpad) at the panel margins. Keep the top-left heading strip and the bottom label band clear, so the reader sees that this is Ananya's laptop mid-consultation."
+ ],
+ "readingReview": {
+  "withoutGuides": true,
+  "firstReadingHash": "957d81fd1d30210a7fda98d531c6b6f296c1575b996775f63851478478d21413",
+  "comparison": "My order matches the first reader's: heading, three tile labels left to right, Ananya's balloon, then the PLAN OF CARE label. There are no skips. Concerns 2 to 5 are resolved by the layout and the plan. Concern 1's 'advert' and 'whose screen' reaction comes from the unanchored full-bleed screen in the 06-1 plan and should be fixed before generation (issue 1). The planner content itself stays, as the user requested.",
+  "predictedOrder": [
+   {
+    "panel": "06-1",
+    "dialogue": [
+     1,
+     2,
+     3,
+     4
+    ]
+   },
+   {
+    "panel": "06-2",
+    "dialogue": [
+     1,
+     2
+    ]
+   }
+  ],
+  "observations": [
+   "06-1: the heading at top left starts the panel, and the eye sweeps the three tiles across the middle to their bottom labels, left to right, exiting at the lower right toward 06-2.",
+   "06-2: the eye enters at the empty upper left, moves to the balloon at upper right, down to Ananya and then Ravi, back left to the screen label, then off the page at the lower right. The label after the balloon is a small leftward return, but the height difference and the screen placement make it unambiguous."
+  ],
+  "transitions": [
+   {
+    "from": "05-3",
+    "to": "06-1",
+    "observation": "Page turn from Ananya listening to a close-up of her laptop on the next section. It reads as the same consultation only if the device and room edges are visible (issue 1)."
+   },
+   {
+    "from": "06-1",
+    "to": "06-2",
+    "observation": "From the planner close-up back out to the 05-1 two-shot past the laptop, now on the plan of care. Ananya's 'your concerns' line closes the exchange Ravi opened in 05-2."
+   },
+   {
+    "from": "06-2",
+    "to": "07-1",
+    "observation": "Consultation room (Ravi seated, bag on the floor) to reception. In the accepted 07-1 art (seen in the old-numbered preview review/page-06.png) Meera is at the desk with the monitor, teal waiting chairs with seated patients are behind, and Ravi has his bag back on his shoulder and his phone out. It reads as the same visit, on his way out. The source page 7 panel 1 supports this. No caption needed."
+   }
+  ]
+ }
+}

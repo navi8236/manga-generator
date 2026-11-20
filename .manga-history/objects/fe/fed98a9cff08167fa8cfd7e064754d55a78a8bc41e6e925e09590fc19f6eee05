@@ -1,0 +1,28 @@
+{
+  "promptVersion": 2,
+  "panel": "02-1",
+  "project": "works/auto-6294ee8a2094/workflow.json",
+  "fingerprint": "a0d5ad79153f34f6bd3f6aacdf3a31038757c63fd00f3a1389f8a51b155addcc",
+  "operation": "edit",
+  "sourceHash": "6294ee8a20944646ae8401695eeb8ea6cab68725127d488e11e4dae584d40adb",
+  "prompt": "TASK: Edit image 1. This is a local revision of the supplied artwork.\nINPUT IMAGES (in supplied order):\nImage 1: edit-target. Base image to edit; requested changes take precedence over preservation.\nCHANGE REQUEST:\nRemove the man in the light green shirt and the woman in the blue kurta holding the phone from the background; replace them with the office background only (window with evening sky, shelf with binders, plant). Keep Dr. Ananya seen from behind her right shoulder typing on the laptop, the laptop with its blank abstract setup form, the mug, the evening light, and the two white empty rectangles at top-left and top-right unchanged. No text, no logos.\nPRESERVE: retain all areas, identity traits, acting, clothing, composition and lettering space outside the requested change. The change request overrides preservation where necessary; repair connected anatomy, contact objects and occlusion together. Supporting images supply only their stated roles. Do not copy their entire scene or pose.\nOUTPUT: one edited image matching the target aspect. Do not add text, guide marks or a global style filter. Re-measure faces and mouths and inspect lettering space after adoption.",
+  "promptHash": "416cee6d1109e8ff63f0a6463af3bfc2eadbc9f89e677eb4d5bd54a4cd110616",
+  "references": [
+    {
+      "file": "works/auto-6294ee8a2094/workflow/generation-inputs/02-1-bf64a5e3c686c33d/reference-0.png",
+      "hash": "6a98eb9192cefbd44454434e8dace53218a4d803bce500c9413996f3a19beb74",
+      "original": "works/auto-6294ee8a2094/assets/generated/02-1-6a98eb9192cefbd4.png",
+      "index": 1,
+      "kind": "edit-target",
+      "role": "Base image to edit; requested changes take precedence over preservation."
+    }
+  ],
+  "renderer": "Higgsfield gpt_image_2_6",
+  "model": "gpt_image_2_6",
+  "seed": null,
+  "imageHash": "9fbf329c49433212a8a90deef6237493709f0bfff376d1920e15bf7fe45953bc",
+  "image": "works/auto-6294ee8a2094/assets/generated/02-1-9fbf329c49433212.png",
+  "generatedSourceFile": "/home/user/manga-generator/works/auto-6294ee8a2094/assets/candidates/02-1/afc6f3cb-7be0-4dbe-a04a-06636d5fc4a3.png",
+  "recordedAt": "2026-11-11T07:38:47.392Z",
+  "note": "Actual tool prompt and snapshots; acceptedJob after later layout changes may differ from this generation plan."
+}

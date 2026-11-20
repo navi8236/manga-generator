@@ -1,0 +1,325 @@
+{
+ "05": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-05-11ebbc6b3a2ccdc6ce03f362db52004f2dfbded1726c7e4b8031d72e51ad4170.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Reviewer identity: the runtime gave me no task ID, so task is null. The parent must record the real Agent ID returned by the Agent tool and must not invent one.",
+   "What I read: AGENTS.md and CLAUDE.md (in context), docs/REVISION-AND-REVIEWS.md, docs/PROMPTS.md, this request JSON in full (page 5 script, 04 and 06 boundary context, recorded first reading), source/REVISION-2026-11-11.md (Request 3, 'add page if needed', AI voice consent) and source/original.txt. Images I opened with Read and looked at: storyboards-unnumbered/page-05.png and page-04.png (for 04-3), then storyboards/page-05.png (numbered). I also read reading-flow/page-05.json (its warnings) and the earlier response responses/storyboard-r18-05.json. I did not open the SVG files or the character-sheet PNGs. I used the PNG exports of the same storyboards. All PNGs loaded.",
+   "Unnumbered scan (my own reading): top wide panel: Ananya's balloon 'Hello, Ravi. Tell me what brings you in.' at top right (about y40-178), tail down to the ananya box (x584-684), ravi box at far right. Then the teal 'PATIENT DETAILS: current vitals · prior health info · allergy panel · AI mic option · patient docs · lab reports' at left (about x40-403, y294-528). Second wide panel: 'May the AI listen and save notes of our talk?' top left (tail to ananya at x144-224), 'Yes, I agree.' top right (tail to ravi at x824-904), then teal 'AI VOICE CONSENT: asked at the first visit, before any voice is saved' lower centre (x354-723, y738-876). Bottom left: 'I've been feeling tired lately.' (tail to the ravi box at x354-464), then teal 'SOAP NOTES: fill in manually and choose ICD or SNOMED codes, or let AI listen and summarise the conversation' (x40-380, y1212-1446). Bottom right: caption 'Technology supports the workflow. The conversation stays human.' above the ananya box, with a ravi head dot at lower right. This matches source page 5 and the user's section order (patient details, then consent, then SOAP notes) word for word.",
+   "r18-05 issue 1 (05-2/05-3 gazes turned away from each other across the gutter) is resolved. The listening panel is now 05-4, an over-the-shoulder shot: the back of Ravi's head and his shoulder are in the lower-right foreground (registered as kind 'head'), and Ananya faces screen-right with eye contact. The eye contact sits inside the panel. Screen sides match 05-1 and 05-2 (Ananya left, Ravi right), and 05-3's Ravi faces screen-left toward the off-panel doctor, so there is no axis flip. Read side by side, 05-3 to 05-4 is a reverse shot, not two people back to back.",
+   "r18-05 issue 2 (mic icon possibly under the SOAP label) is resolved in the plan. The 05-3 scene puts the glowing mic with sound-wave arcs in the RIGHT third of the screen, away from the left part where the label sits. The label's right edge is about x380 and the panel spans x24-584, so the icon zone (about x400-584, lower half) is clear. The 05-1 mic toggle is now drawn OFF and the label reads 'AI mic option', so the AI is not shown listening before consent. Carry-forward, not blocking: after generation, measure the real icon and register it as protected in 05-3, as r18 suggested.",
+   "First-reader concern 1 (in 05-1, the left teal block or the balloon first): the balloon top (y40) is about 250 px above the label top (y294), so the balloon reads first. The label sits over the foreground laptop screen, where it reads as on-screen content. Resolved.",
+   "First-reader concern 2 (05-2 label between the two balloons could join the exchange; tool warning nonconsecutive-cluster 1→3): both balloons share the top band (y584), and the label is clearly in a lower row, in the teal screen style. Z-order is Ananya, then Ravi, then the label, and the first reader read it that way. Even if someone read the label before 'Yes, I agree.', the answer still follows the question with no skip of meaning. Not blocking.",
+   "First-reader concern 3 ('what brings you in' is answered only after the consent exchange): the question is asked, the consent check comes in, and Ravi answers in 05-3, the next panel in reading order. The consent beat is the user's own requirement ('consent check for first time for ai voice save'), and it must come before the AI listens. The reader carries the open question across one panel only. That reads as realistic clinic procedure. Acceptable. Optional script-stage polish, not required: a cue such as 'Before we start, ...' on the consent line.",
+   "First-reader concern 4 ('asked at the first visit': is this Ravi's first visit?): this is the user's wording ('first time'). Page 3 shows Ravi checking in by QR with a short consent form, which fits a first visit with this system. Not a storyboard defect.",
+   "First-reader concern 5 (reversed angle in the bottom-right panel; Ravi as a lone dot): intended. The dot is the 'head' registration for the over-the-shoulder shot. It reads correctly once drawn.",
+   "First-reader concern 6 (text-heavy teal labels): the user chose full wording and 'add page if needed' over shortening. Not a defect.",
+   "Props and costumes from 04-3 into page 5 are consistent: the tablet goes into the drawer, the closed laptop opens, and Ravi's bag is on the floor. 05-2 hands (Ananya gestures and ticks the box, Ravi's open hand agrees) and 05-3 hands (right hand rubbing his neck, watch on his left wrist) are coherent.",
+   "Cosmetic, numbered guide only: the 05-4 beat line runs past the right panel border ('...in the backgrour'). Readers never see it."
+  ],
+  "issues": [],
+  "readingReview": {
+   "withoutGuides": true,
+   "firstReadingHash": "f3d918827e195a15c6344a8067c0e3e0f47ddfc2551fd0bab6d01bf31fecb5ba",
+   "comparison": "My unnumbered order matches the first reader's exactly (balloon, label; balloon, balloon, label; balloon, label; caption), with no skips. Their label-versus-balloon concerns are settled by height and screen placement. The open-question carry-over and the 'first visit' wording follow the user's consent requirement. The reversed angle is intended. Both r18-05 issues (cross-gutter gaze, mic icon position) are fixed in the current plan.",
+   "predictedOrder": [
+    {
+     "panel": "05-1",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "05-2",
+     "dialogue": [
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "panel": "05-3",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "05-4",
+     "dialogue": [
+      1
+     ]
+    }
+   ],
+   "observations": [
+    "05-1: the eye enters at the empty upper left, moves to the high balloon over Ananya, drops left to the screen label over the laptop, then exits right past Ravi. The tail ends at Ananya's box and does not cross Ravi's.",
+    "05-2: question at top left, answer at top right on the same band, then the consent label on the centre-foreground laptop. Neither tail crosses the other speaker or the label.",
+    "05-3: Ravi's balloon at top left points to his face in the upper half, and the SOAP label sits on the left of the lower-half screen. The mic icon is planned for the uncovered right third.",
+    "05-4: one caption at the top, Ananya's face below it, and Ravi's head in the lower-right foreground. There is no ordering risk."
+   ],
+   "transitions": [
+    {
+     "from": "04-3",
+     "to": "05-1",
+     "observation": "04-3 ends in the consultation room (window, plant, closed laptop) with 'Dr. Ananya is notified when he's ready.' and 'RAVI · READY'. 05-1 is the same room: the tablet is gone, the laptop is open on patient details, Ravi sits down, and 'Hello, Ravi.' confirms the arrival. The place change is bridged by setting and greeting."
+    },
+    {
+     "from": "05-1",
+     "to": "05-2",
+     "observation": "Same staging and axis (Ananya left, Ravi right). The screen moves from patient details (mic toggle off) to the consent card, and the doctor asks before any recording. The open question from 05-1 is held for one panel."
+    },
+    {
+     "from": "05-2",
+     "to": "05-3",
+     "observation": "With consent given, Ravi answers the 05-1 question ('I've been feeling tired lately.') and the mic now glows in SOAP notes. Cause and order are explicit."
+    },
+    {
+     "from": "05-3",
+     "to": "05-4",
+     "observation": "Ravi faces screen-left as he speaks. The next panel is a reverse over-the-shoulder shot of Ananya listening with eye contact, and the caption sums it up. The r18 cross-gutter problem is gone."
+    },
+    {
+     "from": "05-4",
+     "to": "06-1",
+     "observation": "Page turn from Ananya listening to a close-up of the same laptop, now on the planner. The plan keeps the bezel, hinge, desk edge, window/plant corner and her hand in frame, so it stays in the consultation (see 06)."
+    }
+   ]
+  }
+ },
+ "06": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-06-a1501506555d019f4e51cab699e9d025e421519a166be35c315743c42b254588.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Reviewer identity: task is null because the runtime supplied no task ID. The parent must record the real Agent ID.",
+   "What I read: this request's header, page-6 first reading and file list (lines 1-50 and 1340-1403). I relied on the identical page-6 script carried as boundary context in the 05 request, and on 06 boundary data in the 07 request. I also read source page 6, the REVISION follow-ups, reading-flow/page-06.json (warnings) and responses/storyboard-r18-06.json. Images I opened with Read and looked at: storyboards-unnumbered/page-06.png, storyboards/page-06.png, storyboards-unnumbered/page-07.png and the old-numbered composed preview workflow/review/page-06.png (accepted art now used for 07-1 to 07-4). I did not open the SVGs or the character sheets. All PNGs loaded.",
+   "Unnumbered scan: top wide panel with no faces: teal heading 'SPECIALITY-SPECIFIC TREATMENT PLANNER' at top left (x40-679, y40-114), then three tile labels on one band, left to right: 'Dentist: odontogram', 'Eye doctor: eye markers', 'Paediatrician: growth scales · vaccines'. Bottom panel: Ananya's balloon 'We'll go through your concerns and decide the right next steps together.' at upper right (y684-822), tail down to the ananya box (x524-634, y928-1058). Ravi's box is at right (x784-894). Teal 'PLAN OF CARE: intelligent prescribing · summary · drug interactions · labs · referrals' is at lower left (x40-469, y1088-1258). This matches source page 6 and the user's section order (planner, then plan of care).",
+   "r18-06 issue (06-1 not anchored to the consultation) is resolved in the plan. The scene now keeps the dark bezel, the top edge with the camera dot and the hinge, the window frame and a plant leaf at top right, the wooden desk edge along the bottom, and Ananya's right hand on the trackpad at lower right. The top-right window corner is clear of the heading label (which ends at x679).",
+   "First-reader concern 1 (panel 1 has no place, person or device): answered by the anchored close-up above. The empty placeholder cannot show it, but the scene text does.",
+   "First-reader concern 2 (06-2 balloon high right, label low left; backwards reading): the balloon top is y684 and the label top is y1088. The balloon clearly reads first, and the label sits over the laptop in the left-foreground zone (left 45%, lower two-thirds), the same staging as 05-1. The small leftward return is unambiguous. Resolved.",
+   "First-reader concern 3 ('your concerns' / 'We'll' unresolved on this page): the reader said it depends on page 5. 05-3 has Ravi's 'I've been feeling tired lately.' and 05-4 shows Ananya listening, so 'your concerns' refers back to it and 'we' is doctor and patient. Resolved across the spread.",
+   "First-reader concern 4 (Ravi silent, no reaction): the 06-2 plan has Ravi nodding, relaxed, both hands on his knees. That is an art matter, not a layout problem.",
+   "First-reader concern 5 (why dentist/eye/paediatric tools for a general consultation): the three example tiles are the user's explicit confirmed decision. The heading plus 'Dentist: / Eye doctor: / Paediatrician:' reads as examples of how the planner adapts, not as tools used on Ravi. Acceptable.",
+   "First-reader concern 6 (tail close to Ananya's box): the tail ends at the top edge of her box and does not cross Ravi. Recheck against the real head after generation.",
+   "First-reader concern 7 (empty space, uneven bottom row): the empty middle of 06-1 is where the tiles will be drawn, and the lower third of 06-2 is the laptop and desk. The three-line Paediatrician label ends at y632, 12 px above the panel bottom (644). That is a cosmetic margin for lettering.",
+   "Carry-forward to lettering, not blocking: the scene puts Ananya's anchoring hand 'at the lower right', and the storyboard's tallest label (Paediatrician, x724-968, y494-632) also sits at lower right. The scene reserves a plain band at the bottom of each tile for the labels, so after generation the labels should be re-measured onto the tile bands and must not cover her hand or the hinge. It would help to tell the generator to keep the hand below the screen edge.",
+   "Reading-flow warnings for 06-1 (2→3, 3→4) are false positives: the three tile labels share one horizontal band and read left to right in tile order."
+  ],
+  "issues": [],
+  "readingReview": {
+   "withoutGuides": true,
+   "firstReadingHash": "5383ed50b88272ce5e0fc5b8c74b309952e907bed0382c60ea2b8c6c4a078d0b",
+   "comparison": "My order matches the first reader's (heading, three tile labels left to right, balloon, PLAN OF CARE label), with no skips. Their main concern, the unanchored panel 1, is fixed in the revised scene, which closes r18-06. The backwards-reading concern is settled by the 400 px height difference and the screen placement. 'Your concerns' resolves against 05-3. The speciality tiles are a user decision.",
+   "predictedOrder": [
+    {
+     "panel": "06-1",
+     "dialogue": [
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    {
+     "panel": "06-2",
+     "dialogue": [
+      1,
+      2
+     ]
+    }
+   ],
+   "observations": [
+    "06-1: the heading at top left opens the panel, and the eye sweeps the tiles to their labels left to right, then exits at lower right toward 06-2.",
+    "06-2: entry at the empty upper left, then the balloon at upper right, down to Ananya and Ravi, back to the screen label at lower left, then out of the page."
+   ],
+   "transitions": [
+    {
+     "from": "05-4",
+     "to": "06-1",
+     "observation": "Page turn from Ananya listening, hands folded, to a close-up of the same laptop with her hand now on the trackpad. The bezel, desk edge and window/plant corner keep it in the consultation. The time step is small and implied."
+    },
+    {
+     "from": "06-1",
+     "to": "06-2",
+     "observation": "From the planner close-up back out to the 05-1 two-shot past the laptop, now on the plan of care. Ananya's line closes the concern Ravi raised in 05-3, and Ravi's planned nod gives the reaction."
+    },
+    {
+     "from": "06-2",
+     "to": "07-1",
+     "observation": "From the consultation room (Ravi seated, bag on the floor) to reception. In the accepted art (old-numbered review/page-06.png, top panel) Meera is at the desk monitor, waiting chairs with patients are behind, and Ravi stands with his bag back on his shoulder and his blue phone out. It reads as the same visit on his way out. This matches 06-2 production.after ('Ravi picks up his bag and returns to reception'). No caption needed."
+    }
+   ]
+  }
+ },
+ "07": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-07-0d4ad7d2419a6d32871a1dcb2fdb629bd703ced09f5ffcd240a4fbe3bd08bb48.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Reviewer identity: task is null because the runtime supplied no task ID. The parent must record the real Agent ID.",
+   "What I read: this request's transitions, page-7 script (07-1 in full, plus the scene and dialogue lines of 07-2 to 07-4), the 06/08 boundary scene and dialogue lines, the first reading and the file list. Also source page 7, workflow/renumber-2026-11-12.json and responses/storyboard-r18-07.json. Images I opened with Read and looked at: storyboards-unnumbered/page-07.png, storyboards/page-07.png and workflow/review/page-06.png (composed preview of the same accepted art under the old number). I did not open the assets/panels or assets/generated PNGs individually, and I did not open the SVGs.",
+   "Unnumbered scan: Meera 'Welbuk Health is designed to help patients stay connected with their care.' (top left, tail to meera). Ravi 'So I can keep useful information in one place?' (middle left), then teal 'WELBUK HEALTH for patients' (lower left of that panel). Meera 'That's the idea. Let's walk through what is available to you.' (middle right). Caption 'A smoother visit. A more connected experience.' (bottom wide). This matches source page 7 word for word.",
+   "The placeholder balloon and caption positions match the lettering in review/page-06.png panel for panel. The renumber map maps 07-1 to 07-4 to the old 06-1 to 06-4 with the same source files, so this art is what the positions were measured on.",
+   "First-reader concern 1 (no cue for the scene change from the consultation to Meera): the accepted 07-1 art shows the reception desk, monitor, waiting chairs with seated patients, and Ravi standing with his bag on his shoulder. He is clearly leaving. With the new page 6, the preceding panel is 06-2 (consultation two-shot), and the cut still reads as the end of the same visit. Not blocking.",
+   "First-reader concern 2 ('walk through what is available' is promised but never shown): this is the source text and structure. 07-4's caption sums up the visit. Not a storyboard defect.",
+   "First-reader concern 3 (Ravi's name label crosses the 07-3 right border): he is the intended 'head' registration. The preview shows the back and side of his head and his phone hand in the right foreground. Placeholder artifact.",
+   "First-reader concern 4 (07-4 ananya and meera boxes nearly touch, 'anany' clipped): in the preview they are separate figures waving in the doorway, below the caption band. Placeholder artifact.",
+   "In the preview, Meera stays left and Ravi stays right across 07-1 to 07-3, and no balloon covers a face. The 07-2 label sits flush with the lower-left border, a cosmetic lettering item, as noted in r18-07."
+  ],
+  "issues": [],
+  "readingReview": {
+   "withoutGuides": true,
+   "firstReadingHash": "08fe0e094350b4f608c853022fc4adc3e9fc148f82d710a4d69e8c0914bbfee6",
+   "comparison": "My order matches the first reader's, with no skips. The scene-change concern is carried by the accepted 07-1 art, and the preceding panel is now the new 06-2, which still bridges to it. The border and clipped-name points are placeholder artifacts that the composed art shows to be fine. The unfulfilled walkthrough follows the source. This agrees with the r18-07 pass on the same art.",
+   "predictedOrder": [
+    {
+     "panel": "07-1",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "07-2",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "07-3",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "07-4",
+     "dialogue": [
+      1
+     ]
+    }
+   ],
+   "observations": [
+    "Explanation, question and answer alternate top left, middle left and middle right. Each reply sits directly after its question.",
+    "The 07-2 WELBUK HEALTH label is read after Ravi's balloon and before 07-3's balloon. It does not split the question from the answer."
+   ],
+   "transitions": [
+    {
+     "from": "06-2",
+     "to": "07-1",
+     "observation": "From the consultation two-shot with 'next steps together' and Ravi seated, bag on the floor, to the reception desk. In the accepted art Ravi now has his bag on his shoulder and his phone out, and Meera is at the monitor. Same visit, at its end. The bag and phone changes are implied and plausible."
+    },
+    {
+     "from": "07-1",
+     "to": "07-2",
+     "observation": "Close-up on the phone Ravi held in 07-1. His question follows Meera's explanation."
+    },
+    {
+     "from": "07-2",
+     "to": "07-3",
+     "observation": "Reverse angle: Meera on the left faces right toward Ravi's head in the right foreground, consistent with 07-1. She answers him."
+    },
+    {
+     "from": "07-3",
+     "to": "07-4",
+     "observation": "Desk to street. Ravi waves back, Ananya and Meera wave from the doorway, and the caption sums up the visit."
+    },
+    {
+     "from": "07-4",
+     "to": "08-1",
+     "observation": "Clinic street to a train window. 'Tomorrow, care may take us...' marks a hypothetical time jump, and Ravi keeps the same shirt, bag and phone in the accepted art."
+    }
+   ]
+  }
+ },
+ "08": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-08-f488c219294673caca4b9803cb03772ed320799a936e07cd5d7f9ccb01324018.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Reviewer identity: task is null because the runtime supplied no task ID. The parent must record the real Agent ID.",
+   "What I read: this request's transitions, first reading and file list. I took the page-8 scene and dialogue lines from the 07 request's boundary context, which carries the same page-8 script. Also source page 8, the renumber map and responses/storyboard-r18-08.json. Images I opened with Read and looked at: storyboards-unnumbered/page-08.png, storyboards/page-08.png and workflow/review/page-07.png (composed preview of the same accepted art under the old number). I did not open the assets PNGs individually, and I did not open the SVGs. Caveat: I did not read the 08 request's own script block line by line, only its header, transitions, first reading and files.",
+   "Unnumbered scan: 'Tomorrow, care may take us beyond our hometown.' (top left, beside ravi). 'WELBUK VISION', then 'The vision: trusted connections between clinics, specialists, and patients across locations.' (top right, specialist). 'WELBUK VISION', then 'One connected ecosystem for care and family wellness.' (middle wide, with ravi, partner and child). 'Welbuk Practice • Welbuk Care • Welbuk Health' (top right of the closing panel), then 'Welbuk — Building a connected healthcare ecosystem.' (bottom left). This matches source page 8. The placeholder positions match the lettering in review/page-07.png.",
+   "First-reader concern 1 (who 'us' is in 08-1): in the art Ravi sits by the train window with a thoughtful smile, so the conditional caption reads as a possible future for him and for patients generally. This is the source wording. Acceptable.",
+   "First-reader concern 2 (08-2 and 08-3 not marked as imagined): both carry the WELBUK VISION label and, in the preview, the pale-blue rounded vignette with a lighter palette. The source requires the vision to be marked. Resolved by the art.",
+   "First-reader concern 3 (specialist, partner and child appear without introduction): the source specifies symbolic figures. In the preview the family sits closely with Ravi around a tablet, so the relationship is readable. Acceptable.",
+   "First-reader concern 4 (WELBUK VISION repeated in consecutive panels): intentional compliance marking on each vision panel.",
+   "First-reader concern 5 (in 08-4 the product label butts against Ravi's face box, 'rav' clipped): in the preview the label's left edge reaches Ravi's raised hand and hair but does not cover his face. Lettering note: consider moving it slightly right or into the sky band. Not a storyboard blocker.",
+   "First-reader concerns 6 and 7 (empty middle of the closing panel; the ending reads as a brand tagline): in the preview the closing panel is filled by the three leads in front of the clinic. The tagline ending is the source structure."
+  ],
+  "issues": [],
+  "readingReview": {
+   "withoutGuides": true,
+   "firstReadingHash": "e101c960bf188058d97dc3c773bf35dac272f9a05b4418cafb11eead9d23218e",
+   "comparison": "My order matches the first reader's, with no skips. The face-overlap point is a near touch with Ravi's hand and hair, not his face, in the accepted art, so it stays a lettering note. The repeated vision label and the symbolic figures follow the source's vision-marking requirement. The empty-panel point is a placeholder artifact. This agrees with the r18-08 pass.",
+   "predictedOrder": [
+    {
+     "panel": "08-1",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "08-2",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "08-3",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "08-4",
+     "dialogue": [
+      1,
+      2
+     ]
+    }
+   ],
+   "observations": [
+    "In 08-2 and 08-3 the WELBUK VISION label at top left is read before each caption, which frames each caption as vision.",
+    "In 08-4 the eye goes from the top-right product list across the three faces to the bottom-left closing caption, a deliberate final sweep."
+   ],
+   "transitions": [
+    {
+     "from": "07-4",
+     "to": "08-1",
+     "observation": "From the clinic street in the present to a hypothetical train ride ('Tomorrow ... may'). Ravi's shirt, bag and phone carry over in the accepted art."
+    },
+    {
+     "from": "08-1",
+     "to": "08-2",
+     "observation": "Ravi gazes right, toward the vision panel. The vignette and the WELBUK VISION label mark the shift to the conceptual future."
+    },
+    {
+     "from": "08-2",
+     "to": "08-3",
+     "observation": "The vignette continues and the vision widens from connected clinics to family wellness, with Ravi present in both his real and vision panels."
+    },
+    {
+     "from": "08-3",
+     "to": "08-4",
+     "observation": "Back to the present: no vignette, the familiar clinic entrance, and the three leads in present-day costume."
+    }
+   ]
+  }
+ }
+}

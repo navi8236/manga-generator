@@ -1,0 +1,252 @@
+{
+  "version": 3,
+  "page": "04",
+  "status": "planning-guide-not-reviewed",
+  "direction": "left-to-right, top-to-bottom",
+  "panels": [
+    {
+      "id": "04-1",
+      "rect": [
+        42,
+        25,
+        941,
+        440
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "family",
+          "text": "He needs urgent medical attention!",
+          "rect": [
+            356,
+            33,
+            353,
+            106
+          ],
+          "center": [
+            532.5,
+            86
+          ],
+          "mouth": [
+            298,
+            198
+          ]
+        },
+        {
+          "number": 2,
+          "speaker": "meera",
+          "text": "I'll alert the clinical team immediately.",
+          "rect": [
+            506,
+            231,
+            355,
+            106
+          ],
+          "center": [
+            683.5,
+            284
+          ],
+          "mouth": [
+            681,
+            218
+          ]
+        }
+      ],
+      "faces": {
+        "family": {
+          "face": [
+            266,
+            126,
+            79,
+            85
+          ],
+          "anchor": [
+            298,
+            198
+          ]
+        },
+        "urgent": {
+          "face": [
+            167,
+            165,
+            72,
+            85
+          ],
+          "anchor": [
+            203,
+            238
+          ]
+        },
+        "meera": {
+          "face": [
+            635,
+            146,
+            72,
+            79
+          ],
+          "anchor": [
+            681,
+            218
+          ]
+        }
+      },
+      "protected": [],
+      "intent": null,
+      "groups": null,
+      "warnings": []
+    },
+    {
+      "id": "04-2",
+      "rect": [
+        42,
+        475,
+        464,
+        497
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "narration",
+          "text": "Welbuk supports emergency-priority queue management.",
+          "rect": [
+            50,
+            483,
+            379,
+            138
+          ],
+          "center": [
+            239.5,
+            552
+          ],
+          "mouth": null
+        }
+      ],
+      "faces": {},
+      "protected": [],
+      "intent": null,
+      "groups": null,
+      "warnings": []
+    },
+    {
+      "id": "04-3",
+      "rect": [
+        519,
+        475,
+        464,
+        497
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "ananya",
+          "text": "Bring him in for assessment.",
+          "rect": [
+            569,
+            513,
+            402,
+            74
+          ],
+          "center": [
+            770,
+            550
+          ],
+          "mouth": [
+            908,
+            653
+          ]
+        }
+      ],
+      "faces": {
+        "ananya": {
+          "face": [
+            879,
+            594,
+            52,
+            66
+          ],
+          "anchor": [
+            908,
+            653
+          ]
+        },
+        "nurse": {
+          "face": [
+            628,
+            601,
+            66,
+            72
+          ],
+          "anchor": [
+            658,
+            663
+          ]
+        }
+      },
+      "protected": [],
+      "intent": null,
+      "groups": null,
+      "warnings": []
+    },
+    {
+      "id": "04-4",
+      "rect": [
+        42,
+        981,
+        941,
+        468
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "meera",
+          "text": "The queue is updated, and everyone knows the next step.",
+          "rect": [
+            494,
+            1037,
+            373,
+            138
+          ],
+          "center": [
+            680.5,
+            1106
+          ],
+          "mouth": [
+            444,
+            1175
+          ]
+        }
+      ],
+      "faces": {
+        "meera": {
+          "face": [
+            404,
+            1089,
+            79,
+            99
+          ],
+          "anchor": [
+            444,
+            1175
+          ]
+        }
+      },
+      "protected": [],
+      "intent": null,
+      "groups": null,
+      "warnings": []
+    }
+  ],
+  "checklist": [
+    "番号と誘導線を隠した画像を先に読み、予測した発話順を記録する",
+    "最初のセリフへ上・左から入れるか",
+    "近い非連続の吹き出しを一組と誤認して返答を飛ばさないか",
+    "前の会話のまとまりを読み終えてから次のまとまりへ進めるか",
+    "返答へ自然に移り、視線が大きく逆戻りしないか",
+    "顔の向き・視線・手や小道具の動作と読順がつながるか",
+    "話者への尾が別人物や重要物を横切らないか",
+    "場所・時間・回想の切替と物の移動を直前直後から理解できるか",
+    "最後のセリフ・反応から次のコマへ移れるか",
+    "大きなコマ・余白・情報公開の順がページの感情の狙いに合うか",
+    "話題の境界と段・ページ境界が一致し、不要な読み戻りを誘わないか"
+  ]
+}

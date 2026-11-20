@@ -1,0 +1,340 @@
+{
+  "version": 3,
+  "page": "06",
+  "status": "planning-guide-not-reviewed",
+  "direction": "left-to-right, top-to-bottom",
+  "panels": [
+    {
+      "id": "06-1",
+      "rect": [
+        24,
+        24,
+        470,
+        440
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "narration",
+          "text": "Tomorrow, care may take us beyond our hometown.",
+          "rect": [
+            40,
+            40,
+            259,
+            170
+          ],
+          "center": [
+            169.5,
+            125
+          ],
+          "mouth": null
+        }
+      ],
+      "faces": {
+        "ravi": {
+          "face": [
+            313,
+            105,
+            94,
+            108
+          ],
+          "anchor": [
+            349,
+            195
+          ]
+        }
+      },
+      "protected": [],
+      "intent": {
+        "entry": [
+          40,
+          40
+        ],
+        "exit": [
+          490,
+          460
+        ]
+      },
+      "groups": null,
+      "warnings": []
+    },
+    {
+      "id": "06-2",
+      "rect": [
+        518,
+        24,
+        482,
+        440
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "label",
+          "text": "WELBUK VISION",
+          "rect": [
+            534,
+            36,
+            240,
+            74
+          ],
+          "center": [
+            654,
+            73
+          ],
+          "mouth": null
+        },
+        {
+          "number": 2,
+          "speaker": "narration",
+          "text": "The vision: trusted connections between clinics, specialists, and patients across locations.",
+          "rect": [
+            534,
+            122,
+            245,
+            266
+          ],
+          "center": [
+            656.5,
+            255
+          ],
+          "mouth": null
+        }
+      ],
+      "faces": {
+        "specialist": {
+          "face": [
+            819,
+            132,
+            73,
+            81
+          ],
+          "anchor": [
+            865,
+            195
+          ]
+        }
+      },
+      "protected": [],
+      "intent": {
+        "entry": [
+          534,
+          40
+        ],
+        "exit": [
+          990,
+          460
+        ]
+      },
+      "groups": null,
+      "warnings": []
+    },
+    {
+      "id": "06-3",
+      "rect": [
+        24,
+        488,
+        976,
+        340
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "label",
+          "text": "WELBUK VISION",
+          "rect": [
+            40,
+            504,
+            240,
+            74
+          ],
+          "center": [
+            160,
+            541
+          ],
+          "mouth": null
+        },
+        {
+          "number": 2,
+          "speaker": "narration",
+          "text": "One connected ecosystem for care and family wellness.",
+          "rect": [
+            40,
+            588,
+            367,
+            138
+          ],
+          "center": [
+            223.5,
+            657
+          ],
+          "mouth": null
+        }
+      ],
+      "faces": {
+        "ravi": {
+          "face": [
+            462,
+            501,
+            115,
+            129
+          ],
+          "anchor": [
+            526,
+            610
+          ]
+        },
+        "partner": {
+          "face": [
+            609,
+            514,
+            108,
+            122
+          ],
+          "anchor": [
+            666,
+            617
+          ]
+        },
+        "child": {
+          "face": [
+            742,
+            585,
+            89,
+            96
+          ],
+          "anchor": [
+            786,
+            662
+          ]
+        }
+      },
+      "protected": [
+        [
+          583,
+          681,
+          159,
+          103
+        ]
+      ],
+      "intent": {
+        "entry": [
+          40,
+          505
+        ],
+        "exit": [
+          990,
+          820
+        ]
+      },
+      "groups": null,
+      "warnings": []
+    },
+    {
+      "id": "06-4",
+      "rect": [
+        24,
+        852,
+        976,
+        612
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "label",
+          "text": "Welbuk Practice • Welbuk Care • Welbuk Health",
+          "rect": [
+            704,
+            872,
+            281,
+            138
+          ],
+          "center": [
+            844.5,
+            941
+          ],
+          "mouth": null
+        },
+        {
+          "number": 2,
+          "speaker": "narration",
+          "text": "Welbuk — Building a connected healthcare ecosystem.",
+          "rect": [
+            48,
+            1342,
+            433,
+            106
+          ],
+          "center": [
+            264.5,
+            1395
+          ],
+          "mouth": null
+        }
+      ],
+      "faces": {
+        "meera": {
+          "face": [
+            344,
+            925,
+            54,
+            68
+          ],
+          "anchor": [
+            371,
+            980
+          ]
+        },
+        "ananya": {
+          "face": [
+            481,
+            906,
+            62,
+            76
+          ],
+          "anchor": [
+            512,
+            968
+          ]
+        },
+        "ravi": {
+          "face": [
+            638,
+            894,
+            61,
+            73
+          ],
+          "anchor": [
+            668,
+            955
+          ]
+        }
+      },
+      "protected": [],
+      "intent": {
+        "entry": [
+          40,
+          870
+        ],
+        "exit": [
+          990,
+          1505
+        ]
+      },
+      "groups": null,
+      "warnings": []
+    }
+  ],
+  "checklist": [
+    "番号と誘導線を隠した画像を先に読み、予測した発話順を記録する",
+    "最初のセリフへ上・左から入れるか",
+    "近い非連続の吹き出しを一組と誤認して返答を飛ばさないか",
+    "前の会話のまとまりを読み終えてから次のまとまりへ進めるか",
+    "返答へ自然に移り、視線が大きく逆戻りしないか",
+    "顔の向き・視線・手や小道具の動作と読順がつながるか",
+    "話者への尾が別人物や重要物を横切らないか",
+    "場所・時間・回想の切替と物の移動を直前直後から理解できるか",
+    "最後のセリフ・反応から次のコマへ移れるか",
+    "大きなコマ・余白・情報公開の順がページの感情の狙いに合うか",
+    "話題の境界と段・ページ境界が一致し、不要な読み戻りを誘わないか"
+  ]
+}

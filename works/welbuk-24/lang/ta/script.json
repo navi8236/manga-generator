@@ -1,0 +1,318 @@
+{
+ "language": "ta",
+ "name": "Tamil",
+ "source": "Sarvam AI transcript and voice (supplied by the client, 2026-11-17)",
+ "voice": "ta-IN-Pallavi (per supplied transcript)",
+ "tour": [
+  {
+   "id": "intro",
+   "slot": 14.5,
+   "cap": "கிளினிக்குகள் மற்றும் மருத்துவமனைகளுக்கான ஒரே இணைக்கப்பட்ட தளம் Welbuk. Welbuk Practice கிளினிக்கை நிர்வகிக்கிறது. Welbuk Care முழு குழுவையும் ஆதரிக்கிறது. Welbuk Health நோயாளிகளையும் குடும்பத்தினரையும் இணைக்கிறது.",
+   "en": "Welbuk — one connected platform for clinics and hospitals. Welbuk Practice runs the clinic. Welbuk Care supports the whole team. Welbuk Health connects patients and families."
+  },
+  {
+   "id": "appointments",
+   "slot": 8.2,
+   "cap": "ஆன்லைன் புக்கிங், மருத்துவர் அட்டவணைகள், ஸ்லாட் ஒதுக்கீடு, வாக்-இன்கள் — ஒவ்வொரு அப்பாயிண்ட்மெண்டும் ஒரே இடத்தில்.",
+   "en": "Online booking, doctor schedules, slot allocation, walk-ins — every appointment in one place."
+  },
+  {
+   "id": "queue",
+   "slot": 10.3,
+   "cap": "லைவ் வரிசை: Prior, Walk-in, Emergency. அவசர நோயாளிகளுக்கு முன்னுரிமை; மாற்றங்கள் குழுவை உடனடியாக வந்தடையும்.",
+   "en": "Live queue: Prior, Walk-in, Emergency. Urgent patients get priority; changes reach the team instantly."
+  },
+  {
+   "id": "checkin",
+   "slot": 9.5,
+   "cap": "பதிவு செய்ய, டிஜிட்டல் சம்மதம், ABHA இணைப்புக்கு QR-ஐ ஸ்கேன் செய்யவும். அல்லது வரவேற்பறையில் உதவியுடன் செக்-இன் செய்யவும் — நேரடியாக வரிசைக்குச் செல்லலாம்.",
+   "en": "Scan the QR to register, digital consent, ABHA link. Or check in with help at reception — straight into the queue."
+  },
+  {
+   "id": "careteam",
+   "slot": 10.3,
+   "cap": "Welbuk Care: அனைவருக்கும் தனித்தனி பணித் திரை. செவிலியர் முக்கிய அறிகுறிகளைப் பதிவு செய்கிறார், மருத்துவர் ஆலோசனை வரிசையைப் பெறுகிறார், குழுவிற்கு அறிவிப்புகள் வருகின்றன.",
+   "en": "Welbuk Care: a separate work screen for everyone. The nurse records vitals, the doctor gets the consultation queue, the team gets notifications."
+  },
+  {
+   "id": "emr",
+   "slot": 8.2,
+   "cap": "ஒவ்வொரு ஆலோசனையும் முழுமையான தகவலுடன் தொடங்குகிறது: மருத்துவ வரலாறு, ஒவ்வாமைகள், முக்கிய அறிகுறிகள், SOAP குறிப்புகள்.",
+   "en": "Every consultation starts with the full picture: history, allergies, vitals, SOAP notes."
+  },
+  {
+   "id": "scribe",
+   "slot": 11.7,
+   "cap": "சம்மதத்துடன், Care Scribe உரையாடலை எழுத்துப்பூர்வமாக்குகிறது, பேசுபவர்களைப் பிரித்து சுருக்கம், மருந்துச் சீட்டு மற்றும் ஃபாலோ-அப் வரைவை உருவாக்குகிறது. மருத்துவர் சரிபார்த்த பிறகே கையெழுத்திடுவார்.",
+   "en": "With consent, Care Scribe transcribes the conversation, separates the speakers and drafts the summary, prescription and follow-up. The doctor signs only after checking."
+  },
+  {
+   "id": "spec-intro",
+   "slot": 2.6,
+   "cap": "சிறப்பு கருவிகளும் இதில் உள்ளன.",
+   "en": "Specialty tools are built in, too."
+  },
+  {
+   "id": "dental",
+   "slot": 4.7,
+   "cap": "பல் மருத்துவம்: ஓடான்டோகிராமில் கண்டுபிடிப்புகள் மற்றும் சிகிச்சைத் திட்டம்.",
+   "en": "Dental: findings and treatment plan on the odontogram."
+  },
+  {
+   "id": "eye",
+   "slot": 4.3,
+   "cap": "கண் மருத்துவம்: பார்வைக் கூர்மை மற்றும் ரிஃப்ராக்ஷன்.",
+   "en": "Eye care: visual acuity and refraction."
+  },
+  {
+   "id": "derm",
+   "slot": 6.1,
+   "cap": "தோல் மருத்துவம்: உடல் வரைபடத்தில் இடத்தைக் குறித்து வைத்து, காலப்போக்கில் புகைப்படங்களை ஒப்பிடுதல்.",
+   "en": "Dermatology: mark the site on a body map and compare photos over time."
+  },
+  {
+   "id": "paeds",
+   "slot": 5.8,
+   "cap": "குழந்தைகளின் ஆரோக்கியம்: வளர்ச்சி வரைபடங்கள், தடுப்பூசிகள், பரிசோதனைகள்.",
+   "en": "Children's health: growth charts, vaccinations, screening."
+  },
+  {
+   "id": "rx",
+   "slot": 7.0,
+   "cap": "மருந்து விவரங்களுடன் கூடிய டிஜிட்டல் மருந்துச் சீட்டுகள்; ஒவ்வொன்றும் பதிவில் இருக்கும்.",
+   "en": "Digital prescriptions with medicine details; each one stays on record."
+  },
+  {
+   "id": "pharmacy",
+   "slot": 7.7,
+   "cap": "மருந்தகம்: பேட்ச், காலாவதி, இருப்பு, எச்சரிக்கைகள் — முதலில் காலாவதியாவது முதலில் வழங்கப்படும்.",
+   "en": "Pharmacy: batch, expiry, stock, alerts — first to expire, first dispensed."
+  },
+  {
+   "id": "lab",
+   "slot": 6.9,
+   "cap": "ஆய்வகம்: மாதிரியிலிருந்து முடிவு மற்றும் மருத்துவரின் மதிப்பாய்வு வரை — காகிதம் இல்லாமல்.",
+   "en": "Lab: from sample to result and the doctor's review — without paper."
+  },
+  {
+   "id": "referral",
+   "slot": 6.5,
+   "cap": "பரிந்துரைகள்: நிபுணர்கள், வெளிப்புற கூட்டாளர்கள் — ஒவ்வொன்றையும் கண்காணிக்க முடியும்.",
+   "en": "Referrals: specialists, external partners — every one can be tracked."
+  },
+  {
+   "id": "billing",
+   "slot": 7.7,
+   "cap": "பில்லிங்: விலைப்பட்டியல், பொருந்தக்கூடிய GST, ஒவ்வொரு கட்டண முறை, ரசீதுகள் மற்றும் நிலுவைகள்.",
+   "en": "Billing: invoices, applicable GST, every payment method, receipts and balances."
+  },
+  {
+   "id": "dayend",
+   "slot": 7.7,
+   "cap": "நாளின் முடிவில், கொடுப்பனவுகள் மற்றும் பணத்திருப்பங்கள் சரிபார்க்கப்படுகின்றன; GST அறிக்கைகளுடன் தெளிவான நிதிப் படம்.",
+   "en": "At day end, payments and refunds are reconciled; a clear financial picture with GST reports."
+  },
+  {
+   "id": "facilities",
+   "slot": 9.9,
+   "cap": "பல கிளினிக்குகள், ஒரு தளம், ஒருங்கிணைந்த அறிக்கைகள். Welbuk Cloud இன்று கிடைக்கிறது. ஆன்-பிரிமைசஸ், ஹைப்ரிட் அல்லது ஏர்-கேப்ட் AI தேவையா? பேசுவோம்.",
+   "en": "Many clinics, one platform, combined reports. Welbuk Cloud is available today. Need on-premises, hybrid or air-gapped AI? Let's talk."
+  },
+  {
+   "id": "hrms",
+   "slot": 8.1,
+   "cap": "ஊழியர்களுக்கானது: ஊழியர் பதிவுகள், வருகைப்பதிவு, விடுப்பு மேலாண்மை, பங்கு அடிப்படையிலான அனுமதிகள்.",
+   "en": "For the staff: staff records, attendance, leave management, role-based permissions."
+  },
+  {
+   "id": "health",
+   "slot": 9.7,
+   "cap": "பரிசோதனைக்குப் பிறகு, Welbuk Health இணைந்திருக்கும்: வருகை வரலாறு, மருந்துச் சீட்டுகள், அறிக்கைகள், நினைவூட்டல்கள், பின்தொடர்தல்கள்.",
+   "en": "After the visit, Welbuk Health stays connected: visit history, prescriptions, reports, reminders, follow-ups."
+  },
+  {
+   "id": "family",
+   "slot": 6.6,
+   "cap": "குடும்ப ஆரோக்கியம் ஒரே இடத்தில்: பாதுகாவலர் இணைப்புகள், தடுப்பூசிகள், வளர்ச்சி கண்காணிப்பு.",
+   "en": "Family health in one place: guardian links, vaccinations, growth tracking."
+  },
+  {
+   "id": "ahead",
+   "slot": 10.4,
+   "cap": "எதிர்காலத்தை நோக்கி, எங்கள் குறிக்கோள்: கிளினிக்குகள், நிபுணர்கள், மருந்தகங்கள் மற்றும் ஆய்வகங்களை இணைக்கும் நம்பகமான நெட்வொர்க் — நோயாளியின் அனுமதியுடன் மட்டுமே பகிர்வது.",
+   "en": "Looking ahead, our goal: a trusted network joining clinics, specialists, pharmacies and labs — sharing only with the patient's permission."
+  },
+  {
+   "id": "close",
+   "slot": 9.4,
+   "cap": "Welbuk. மருத்துவர்கள் நோயாளிகளைக் கவனித்துக்கொள்கிறார்கள்; Welbuk மருத்துவர்களைக் கவனித்துக்கொள்கிறது. இலவச டெமோவிற்கு, welbuk.com.",
+   "en": "Welbuk. Doctors care for patients; Welbuk cares for doctors. For a free demo, welbuk.com."
+  }
+ ],
+ "reel": [
+  {
+   "id": "r01",
+   "slot": 5.0,
+   "cap": "ஒவ்வொரு கிளினிக்கும் தெரிந்த ஒரு உணர்வு. அப்பாயிண்ட்மென்ட்கள், கோப்புகள்,",
+   "en": "A feeling every clinic knows. Appointments, files,"
+  },
+  {
+   "id": "r02",
+   "slot": 4.32,
+   "cap": "ஃபாலோ-அப்கள்… நாள் முடிவதே இல்லை.",
+   "en": "follow-ups… the day never ends."
+  },
+  {
+   "id": "r03",
+   "slot": 4.54,
+   "cap": "பின்னர் டாக்டர் அனன்யா ஒரு சிறந்த வழியைக் கண்டுபிடித்தார். வெல்புக்.",
+   "en": "Then Dr. Ananya found a better way. Welbuk."
+  },
+  {
+   "id": "r04",
+   "slot": 3.64,
+   "cap": "ஆன்லைன் புக்கிங், அல்லது QR செக்-இன்.",
+   "en": "Online booking, or QR check-in."
+  },
+  {
+   "id": "r05",
+   "slot": 3.41,
+   "cap": "வாக்-இன்கள், அவசரநிலைகள் — சரியான இடம்.",
+   "en": "Walk-ins, emergencies — the right place."
+  },
+  {
+   "id": "r06",
+   "slot": 1.94,
+   "cap": "முக்கிய அறிகுறிகள் பதிவு செய்யப்படுகின்றன.",
+   "en": "Vitals recorded."
+  },
+  {
+   "id": "r07",
+   "slot": 3.36,
+   "cap": "நோயாளி அமர்வதற்கு முன்பே, மருத்துவரிடம் முழு வரலாறும் இருக்கும்;",
+   "en": "Before the patient sits, the doctor has the full history;"
+  },
+  {
+   "id": "r08",
+   "slot": 2.13,
+   "cap": "குரல் மூலம் குறிப்புகள்,",
+   "en": "notes by voice,"
+  },
+  {
+   "id": "r09",
+   "slot": 3.2,
+   "cap": "சம்மதத்துடன், முழுமையாக சரிபார்க்கப்பட்டது.",
+   "en": "with consent, fully checked."
+  },
+  {
+   "id": "r10",
+   "slot": 2.16,
+   "cap": "மருந்துச் சீட்டுகள், இருப்பு,",
+   "en": "Prescriptions, stock,"
+  },
+  {
+   "id": "r11",
+   "slot": 0.95,
+   "cap": "ஆய்வகம்,",
+   "en": "lab,"
+  },
+  {
+   "id": "r12",
+   "slot": 1.78,
+   "cap": "பில்லிங், கணக்குகள்:",
+   "en": "billing, accounts:"
+  },
+  {
+   "id": "r13",
+   "slot": 1.51,
+   "cap": "அனைத்தும் ஒரே இணைப்பில்.",
+   "en": "all in one connection."
+  },
+  {
+   "id": "r14",
+   "slot": 2.24,
+   "cap": "வீட்டிலும் கவனிப்பு,",
+   "en": "Care at home too,"
+  },
+  {
+   "id": "r15",
+   "slot": 3.11,
+   "cap": "நினைவூட்டல்கள் மற்றும் குடும்பப் பதிவுகளுடன்.",
+   "en": "with reminders and family records."
+  },
+  {
+   "id": "r16",
+   "slot": 4.78,
+   "cap": "Welbuk Practice. Welbuk Care. Welbuk Health.",
+   "en": "Welbuk Practice. Welbuk Care. Welbuk Health."
+  },
+  {
+   "id": "r17",
+   "slot": 4.87,
+   "cap": "மருத்துவர்கள் நோயாளிகளைக் கவனித்துக்கொள்கிறார்கள்; Welbuk மருத்துவர்களைக் கவனித்துக்கொள்கிறது.",
+   "en": "Doctors care for patients; Welbuk cares for doctors."
+  },
+  {
+   "id": "r18",
+   "slot": 4.5,
+   "cap": "Welbuk. இலவச டெமோவிற்கு, welbuk.com.",
+   "en": "Welbuk. For a free demo, welbuk.com."
+  }
+ ],
+ "reelGroups": [
+  [
+   "r01"
+  ],
+  [
+   "r02"
+  ],
+  [
+   "r03"
+  ],
+  [
+   "r04"
+  ],
+  [
+   "r05"
+  ],
+  [
+   "r06"
+  ],
+  [
+   "r07"
+  ],
+  [
+   "r08"
+  ],
+  [
+   "r09"
+  ],
+  [
+   "r10"
+  ],
+  [
+   "r11"
+  ],
+  [
+   "r12"
+  ],
+  [
+   "r13"
+  ],
+  [
+   "r14"
+  ],
+  [
+   "r15"
+  ],
+  [
+   "r16"
+  ],
+  [
+   "r17"
+  ],
+  [
+   "r18"
+  ]
+ ]
+}

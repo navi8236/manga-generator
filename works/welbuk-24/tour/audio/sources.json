@@ -1,0 +1,51 @@
+{
+ "voiceReference": {
+  "file": "tour/voice-ref.mp3",
+  "from": "reel/audio/vo-2e453c1b.wav 0.3-14.2 s",
+  "mediaId": "9fc1f1ed-78f9-4db0-8bed-aa0ca9eba795",
+  "sha256": "931e80f8fcf72e3fb16ea4eb543580609d342396a7f44a3446945d37497030cd"
+ },
+ "voiceover": [
+  {
+   "file": "tour/audio/vo1-86312a78.wav",
+   "model": "seed_audio (Seed Audio 1.0) via Higgsfield",
+   "jobId": "86312a78-a67e-4896-bdf4-dc41a2d8dcef",
+   "params": {
+    "format": "wav",
+    "sample_rate": 48000,
+    "audio_references": [
+     "voiceReference"
+    ]
+   },
+   "text": "script.txt paragraphs 1-8",
+   "sha256": "a5d6f08bba434d6ad933c4f9bb3a99be1f34c261eace5c11214d12db28a07443"
+  },
+  {
+   "file": "tour/audio/vo2-4b48e273.wav",
+   "model": "seed_audio (Seed Audio 1.0) via Higgsfield",
+   "jobId": "4b48e273-996c-4bbf-ad09-f1e1ccc85ae6",
+   "params": {
+    "format": "wav",
+    "sample_rate": 48000,
+    "audio_references": [
+     "voiceReference"
+    ]
+   },
+   "text": "script.txt paragraphs 9-20",
+   "sha256": "5387cd4f9ebcf02933bf60e39407a6ff0b8883779408526e74e1a1e4f34190a4"
+  }
+ ],
+ "voicePrompt": "Speak in exactly the voice of @Audio 1: the same warm, professional female narrator with a natural Indian English accent. Calm, polished product-video delivery, brief pauses between sentences, a longer pause between paragraphs. Say Welbuk as 'Well-book'. She says: <script paragraphs>",
+ "music": {
+  "file": "tour/audio/music-204d34dd.mp3",
+  "model": "elevenlabs_music_v2_5 via Higgsfield",
+  "jobId": "204d34dd-49ca-4da8-be2b-a71f1124f952",
+  "params": {
+   "duration": 190,
+   "force_instrumental": true
+  },
+  "sha256": "5fef8df5136f398eef31f188d65e711644006db314f5f5a637ea221904732609",
+  "prompt": "Polished, modern corporate background music for a 3-minute healthcare software product tour. Warm felt piano and soft plucked strings with a light, steady pulse; gentle acoustic guitar, airy pads and subtle tabla-inspired soft percussion. Confident, optimistic and calm throughout, with small lifts every 30 to 40 seconds so it never feels repetitive, a fuller section in the middle, and a warm resolved ending at 3 minutes 10 seconds. Unobtrusive under a voiceover. No vocals."
+ },
+ "checked": "Both halves transcribed offline (Whisper base.en, sherpa-onnx); every sentence of script.txt is spoken once; apparent repeats in the fast pass were recogniser artefacts, re-checked on longer windows."
+}

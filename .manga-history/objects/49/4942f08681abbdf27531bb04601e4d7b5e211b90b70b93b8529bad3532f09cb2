@@ -1,0 +1,21 @@
+{
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-08-2-bafd5bf64fb43588de86fea510908994ad8aa674570fb77e7d1e4d161dae9421.json",
+  "reviewer": {
+    "role": "subagent",
+    "task": "claude-code-agent:manga-reviewer:a212b7aa225bf0958",
+    "reportedTask": null,
+    "taskSource": "Agent ID returned by the Claude Code Agent tool to the parent."
+  },
+  "status": "pass",
+  "observations": [
+    "Reviewer identity: the runtime gave me no task ID, so reviewer.task is null. The parent must supply the real one. I opened these myself with Read: assets/panels/08-2.png, assets/characters/pharmacy-lab.png and workflow/review/page-08.png. I also used the cast and production fields of the page-8 request. I did not open the storyboard SVG.",
+    "The Lab Technician matches the sheet. She has a neat high bun with loose strands, thin round glasses, large round eyes, thin straight brows, a narrow face with a sharp chin and freckles across the nose, a small stud earring, a light-blue lab coat over a navy top, and purple nitrile gloves.",
+    "Hands match production. Her right hand (sleeve from the viewer-left shoulder) holds up one empty purple-capped tube with a blank white label, just picked from the rack. Her left gloved hand rests flat on the counter. The finger count and grip on the tube are plausible.",
+    "The monitor in the right foreground is angled toward the reader. It shows one card with three tube icons and two blank bars, with no test names, letters or values. A rack of five empty capped tubes with blank labels stands in the left foreground. The spec places the rack 'beside the monitor', but here it is on the opposite side of the panel. This is minor and does not block. A blue sample-collection chair at the left sets up the room for 08-3. The top wall is plain for the caption.",
+    "Her gaze rests on the tube in her hand rather than on the monitor. That still reads as checking the order and picking a tube, which matches production.moment.",
+    "Lettering on page-08.png: the caption (about page x 716-990, y 28-100) and the 'LAB ORDER' label (about x 792-995, y 106-243) are right of her face, which ends at about x 750. They sit above the monitor, and the tube-icon card stays visible below them. The raised tube, both gloved hands and the rack are uncovered."
+  ],
+  "issues": [],
+  "fingerprint": "bafd5bf64fb43588de86fea510908994ad8aa674570fb77e7d1e4d161dae9421",
+  "recordedAt": "2026-11-12T13:03:18.935Z"
+}

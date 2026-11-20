@@ -1,0 +1,55 @@
+# Source revision 2026-11-11
+
+## Request 1
+The user reviewed the finished comic and asked for a different scene flow on one page:
+"Lets do one page patient walks in, scans a qr in mobile. fills form in mobile. token pops up in tv
+screen, then nurse comes takes vitals, doctor notified in his tablet."
+Confirmed decisions: replace the old page 3 (Meera's desk registration); keep Dr. Ananya as the doctor
+(the request said "his tablet"; the user chose to keep the existing female doctor, so the source says
+"her tablet"); short captions for each step.
+
+## Request 2
+"patient can always checkin with front dest as an option, if we can convey that it would be good.
+we can add a page wer 3 diff patients chrck in one via health app, on using qr and another front desk
+all 3 gets slot alloted in screen"
+Confirmed decisions: the three-channel page comes before Ravi's journey; Ravi is the QR patient, so
+his own page continues with his slot, the nurse's vitals check and the doctor's tablet.
+
+## Resulting changes to `original.txt`
+- Header: the comic is now seven pages.
+- Cast: a Nurse and two other patients (an elderly man at the front desk, a young woman using the app).
+- PAGE 3 is now "Three ways to check in" (5 panels); new PAGE 4 "Ravi's turn" (3 panels).
+- The old pages 4, 5 and 6 are unchanged in content and renumbered 5, 6 and 7.
+- Every step has a short caption; 04-2 also carries the nurse's line, which names Ravi before the
+  consultation.
+- The captions, labels and the nurse's line on pages 3 and 4 were drafted by the production agent from
+  the user's descriptions. The pre-revision text is kept in `original-v1.txt`.
+
+## Wording change after the storyboard first reading (r13)
+- 03-1 caption "The front desk is always an option." became "A later morning: patients can always check in at the front desk." The first reader found the old caption out of context, because "check in" first appeared in 03-2. The new caption also gives the time cue after the evening onboarding on page 2.
+- 04-2 nurse line "Let's check your vitals, Ravi." became "Hi, Ravi! Just relax your arm for me." The reader found that it repeated the caption "A quick vitals check first."
+
+## Request 3 (2026-11-12)
+"in page five inside consult room doctor has a screen with following sections in that order
+patient details
+has current vitals, prior health info, allergy panel, ai mic on option, patient docs, lab reports
+Soap notes section
+doctor can fill in manually and choose icd or snomed codes as needed or use ai to listen and summarize the conversation.
+speciality specific treatment planner
+dentist gets odentogram, eye doctor gets eye markers, pediatrician gets scales to, vaccines etc..
+plan of care screen
+intelligent prescribing, summary, drug interactions, labs, referrals etc"
+Confirmed decisions (AskUserQuestion): rework page 5 (it stays 7 pages); the speciality planner shows three
+small example tiles (Dentist, Eye care/Eye doctor, Paediatrics); section names and contents appear as short
+lettered labels on the screen while the screen art stays text-free.
+Resulting changes: PAGE 5 now has five panels (greeting + patient details, Ravi's line + SOAP notes with the AI
+mic, the listening caption, a planner close-up, next steps + plan of care). The four lines of dialogue and the
+caption are unchanged. The label wording was drafted by the production agent from the user's lists. The
+laptop that is closed in 04-3 is opened on page 5. The pre-change text is kept in `original-v2.txt`.
+
+### Follow-up (2026-11-12): "add page if needed"
+The user answered the question about abbreviated label wording with "add page if needed". The labels therefore
+use the user's full wording, and the screen walk-through takes a new PAGE 6 "The doctor's screen": the
+speciality-specific treatment planner (06-1) and the plan of care with Dr. Ananya's next-steps line (06-2).
+PAGE 5 keeps the greeting with patient details, Ravi's line with SOAP notes and the listening caption. The old
+pages 6 and 7 become pages 7 and 8 with unchanged content and art; the comic is now eight pages.

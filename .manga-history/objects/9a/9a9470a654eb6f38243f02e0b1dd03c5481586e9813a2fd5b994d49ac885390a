@@ -1,0 +1,896 @@
+{
+  "base": {
+    "stage": "artwork",
+    "target": "09-4",
+    "sourceFile": "works/auto-6294ee8a2094/source/original.txt",
+    "decisions": [
+      {
+        "id": "renderer-higgsfield",
+        "kind": "preference",
+        "text": "Pages 1-8 and 10: images generated with Higgsfield model gpt_image_2_6 (quality high, PNG) through the connected Higgsfield account. Page 9 (Request 5, 2026-11-12): images generated with the Higgsfield API, Marketing Studio Image 2.5 Flare (marketing-studio/image/flare, quality high, 2k, enhance_prompt false), using the canonical character sheets and the layout PNG as ordered references. Character sheets and panels are text-free; lettering is composited by the shared CLI.",
+        "reason": "User instruction on 2026-11-10 ('sure') approving Higgsfield; on 2026-11-12 the connected account had 1.25 credits, the user supplied an API key with an API balance ('i’ve $10 + in hf api'), and gpt_image_2_6 is not offered through the API, so Flare (GPT Image 2.5 based) is the closest available model."
+      }
+    ],
+    "script": {
+      "title": "A Better Way to Care — Welbuk",
+      "cast": {
+        "ananya": {
+          "name": "Dr. Ananya",
+          "description": "Indian woman in her late 30s, clinic owner and doctor. Calm, confident and caring. Teal kurta beneath an open white coat (source). Shoulder-length black hair tied in a low bun with a few loose strands, slim build, small gold stud earrings, a stethoscope worn around her neck (never in use) in every scene where she wears the white coat (manga supplement, from the accepted reference sheet).",
+          "faceDesign": {
+            "traits": [
+              "Calm almond-shaped eyes with slightly heavy upper lids and a gentle downward outer corner",
+              "Soft, straight medium-thick eyebrows set fairly level",
+              "Oval face with a defined, slightly pointed chin and a small bindi-free forehead; small nose with a rounded tip"
+            ],
+            "reference": "works/auto-6294ee8a2094/assets/characters/main-cast.png",
+            "settingBasis": "Source: Indian female clinic owner, late 30s, calm, confident, caring; teal kurta beneath white coat. Manga supplement: the three face traits, low bun hairstyle and gold studs, chosen to separate her from Meera."
+          }
+        },
+        "meera": {
+          "name": "Meera",
+          "description": "Indian woman in her late 20s, clinic receptionist. Friendly and capable. Blue kurta (source). Long black hair in a single side braid over her left shoulder, round face, slim build, a thin silver bangle on the right wrist (manga supplement).",
+          "faceDesign": {
+            "traits": [
+              "Large, round bright eyes with clearly visible lower lash line",
+              "Thin, gently arched eyebrows set high above the eyes",
+              "Round face with full cheeks and a short soft chin; small dimple on the left cheek when smiling"
+            ],
+            "reference": "works/auto-6294ee8a2094/assets/characters/main-cast.png",
+            "settingBasis": "Source: Indian female receptionist, late 20s, friendly and capable, blue kurta. Manga supplement: the three face traits, side braid and silver bangle."
+          }
+        },
+        "ravi": {
+          "name": "Ravi",
+          "description": "Indian man in his mid-30s, patient. Warm and approachable. Light green shirt (source). Short neat black hair with a side part, trimmed short beard, medium build, dark trousers, a simple wristwatch on the left wrist, small dark-brown shoulder bag (manga supplement).",
+          "faceDesign": {
+            "traits": [
+              "Warm, slightly narrow eyes that crease at the outer corners when he smiles",
+              "Thick, straight dark eyebrows close to the eyes",
+              "Square jaw framed by a short trimmed beard and a broad nose"
+            ],
+            "reference": "works/auto-6294ee8a2094/assets/characters/main-cast.png",
+            "settingBasis": "Source: Indian male patient, mid-30s, warm, approachable, light green shirt. Manga supplement: the three face traits, beard, side part and wristwatch."
+          }
+        },
+        "specialist": {
+          "name": "Specialist (vision)",
+          "description": "Symbolic specialist doctor in a future-vision clinic in another city. Indian man in his 50s with greying temples, rimless glasses, light grey blazer over a pale blue shirt, stethoscope around his neck (manga supplement; the source only says \"specialist\").",
+          "faceDesign": {
+            "traits": [
+              "Kind eyes behind thin rimless rectangular glasses",
+              "Bushy salt-and-pepper eyebrows",
+              "Long face with deep smile lines and a neat grey moustache"
+            ],
+            "reference": "works/auto-6294ee8a2094/assets/characters/vision-cast.png",
+            "settingBasis": "Source: \"a conceptual Welbuk-connected clinic and specialist\". Every visual detail is a manga supplement."
+          }
+        },
+        "partner": {
+          "name": "Ravi's partner",
+          "description": "Symbolic family member in the vision scene. Indian woman in her early 30s, shoulder-length wavy hair, mustard-yellow kurta (manga supplement; the source only says 'partner').",
+          "faceDesign": {
+            "traits": [
+              "Wide-set eyes with a soft, lively expression",
+              "Medium eyebrows with a high gentle arch",
+              "Heart-shaped face with a narrow chin and a small mole under the right eye"
+            ],
+            "reference": "works/auto-6294ee8a2094/assets/characters/vision-cast.png",
+            "settingBasis": "Source: \"symbolic family scene with Ravi, partner, and child\". Appearance is a manga supplement."
+          }
+        },
+        "child": {
+          "name": "Ravi's child",
+          "description": "Symbolic family member in the vision scene. Child of about seven, short hair, orange T-shirt (manga supplement; the source only says 'child').",
+          "faceDesign": {
+            "traits": [
+              "Big round curious eyes",
+              "Short, light eyebrows",
+              "Round chubby cheeks and a small upturned nose"
+            ],
+            "reference": "works/auto-6294ee8a2094/assets/characters/vision-cast.png",
+            "settingBasis": "Source: \"symbolic family scene with Ravi, partner, and child\". Appearance is a manga supplement."
+          }
+        },
+        "nurse": {
+          "name": "Nurse",
+          "description": "Indian woman in her early 30s, clinic nurse. Friendly and efficient (revised source). Plain lavender scrub top and trousers, white clinic shoes, a plain lavender lanyard with a blank card, small wristwatch on her left wrist; chin-length wavy black bob with a side part tucked behind her right ear (manga supplement, from the accepted nurse sheet).",
+          "faceDesign": {
+            "traits": [
+              "Wide-set bright eyes with slightly lifted outer corners",
+              "Thick straight eyebrows",
+              "Heart-shaped face with a small cleft (dimpled) chin and a small straight nose"
+            ],
+            "reference": "works/auto-6294ee8a2094/assets/characters/nurse.png",
+            "settingBasis": "Revised source (2026-11-11): Indian female clinic nurse, friendly and efficient. Manga supplement: the three face traits, bob haircut and lavender scrubs, chosen to separate her from Ananya and Meera."
+          }
+        },
+        "raman": {
+          "name": "Mr. Raman",
+          "description": "Indian man in his early 70s, a regular patient (revised source: elderly man who checks in at the front desk). Cream half-sleeve shirt, grey trousers, brown sandals, round reading glasses, wooden walking stick in his right hand, short white hair (manga supplement, from the accepted check-in patients sheet).",
+          "faceDesign": {
+            "traits": [
+              "Deep-set gentle eyes with smile lines",
+              "Bushy white eyebrows",
+              "Long oval face with prominent ears"
+            ],
+            "reference": "works/auto-6294ee8a2094/assets/characters/checkin-patients.png",
+            "settingBasis": "Revised source (2026-11-11): an elderly man who checks in at the front desk. Name and appearance are manga supplements."
+          }
+        },
+        "priya": {
+          "name": "Priya",
+          "description": "Indian woman in her mid-20s, a patient (revised source: young woman who checks in on the Welbuk Health app). Coral-pink kurti over blue jeans, white sneakers, small crossbody bag, high ponytail (manga supplement, from the accepted check-in patients sheet).",
+          "faceDesign": {
+            "traits": [
+              "Large almond eyes with winged lashes",
+              "Short straight eyebrows",
+              "Small pointed chin with a beauty spot above the left lip"
+            ],
+            "reference": "works/auto-6294ee8a2094/assets/characters/checkin-patients.png",
+            "settingBasis": "Revised source (2026-11-11): a young woman who checks in on the Welbuk Health app. Name and appearance are manga supplements."
+          }
+        },
+        "pharmacist": {
+          "name": "Pharmacist",
+          "description": "Indian man in his early 40s, pharmacist. Careful and reassuring (revised source: the pharmacy fills the prescription). White pharmacist coat over a light blue collared shirt, dark grey trousers; short wavy black hair with a little grey at the temples (manga supplement, from the accepted pharmacy-lab sheet).",
+          "faceDesign": {
+            "traits": [
+              "Kind hooded eyes with crow’s feet",
+              "Thick arched eyebrows",
+              "Round face with a neat moustache and dimpled cheeks"
+            ],
+            "reference": "works/auto-6294ee8a2094/assets/characters/pharmacy-lab.png",
+            "settingBasis": "Revised source (2026-11-12): the pharmacy is notified and fills the prescription. Appearance is a manga supplement."
+          }
+        },
+        "labtech": {
+          "name": "Lab Technician",
+          "description": "Indian woman in her mid-20s, clinic lab technician. Precise and friendly (revised source: the lab is notified and the patient gives samples). Light-blue lab coat over a plain navy top, dark trousers, white clinic shoes, purple nitrile gloves; black hair in a neat high bun (manga supplement, from the accepted pharmacy-lab sheet).",
+          "faceDesign": {
+            "traits": [
+              "Large round eyes behind thin round glasses",
+              "Thin straight eyebrows",
+              "Narrow face with a sharp chin and light freckles across the nose"
+            ],
+            "reference": "works/auto-6294ee8a2094/assets/characters/pharmacy-lab.png",
+            "settingBasis": "Revised source (2026-11-12): the lab is notified of the samples and Ravi gives his samples at the clinic lab. Appearance is a manga supplement."
+          }
+        },
+        "narration": {
+          "kind": "caption",
+          "name": "Caption"
+        },
+        "label": {
+          "kind": "caption",
+          "variant": "label",
+          "name": "Product / vision label"
+        }
+      },
+      "style": "Full-colour, approachable Indian slice-of-life manga. Clean confident line art with varied line weight, soft flat cel shading, warm natural daylight, restrained blue and teal accents, simple readable backgrounds. Expressive but natural faces, precise hands. No photorealism, no glossy gradients, no surface microtexture. Absolutely no text, letters, logos, numbers, speech bubbles or captions inside the artwork; device screens show only abstract blank blocks and simple icons.",
+      "continuity": "Keep Dr. Ananya, Meera, Ravi, the Nurse, Mr. Raman, Priya, the Pharmacist and the Lab Technician identical to their canonical reference sheets in face traits, hair, build, skin tone and clothing for the whole comic. Device screens never show readable text or real personal data. Page 10 panels 2-3 (10-2, 10-3) are a future vision: soft pale-blue vignette border and lighter, airy palette so they never read as current features.",
+      "sections": {
+        "clinic-morning": {
+          "summary": "A weekday morning at Dr. Ananya’s friendly neighbourhood clinic in Tamil Nadu, before Welbuk: busy reception, paper registers, ringing phone, queue.",
+          "location": "Small neighbourhood clinic in Tamil Nadu: whitewashed entrance with potted plants and a simple awning, reception desk with paper registers and a desk phone, waiting chairs (setting is source; furniture details are manga supplement).",
+          "costumes": {
+            "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
+            "meera": "Blue kurta with white churidar, silver bangle on right wrist."
+          },
+          "objects": {
+            "registers": "Stack of paper appointment registers with blank pages (no legible writing).",
+            "desk-phone": "Corded beige desk phone on the reception desk."
+          }
+        },
+        "onboarding": {
+          "summary": "Later the same week, after hours: the clinic sets up Welbuk. Ananya configures Welbuk Practice on a laptop; Meera tries Welbuk Care on a staff phone.",
+          "location": "Dr. Ananya’s small office beside reception, desk with a laptop, window with evening light (manga supplement).",
+          "costumes": {
+            "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
+            "meera": "Blue kurta with white churidar, silver bangle on right wrist."
+          },
+          "objects": {
+            "laptop": "Silver laptop; screen shows only a generic setup form of blank fields and simple blocks, no text.",
+            "staff-phone": "Meera’s smartphone; screen shows abstract blocks and a simple calendar icon, no text."
+          }
+        },
+        "reception": {
+          "summary": "A later morning: the clinic now runs with Welbuk. Patients check in at the front desk, ahead on the Welbuk Health app, or with the QR code at the door; slots appear on the waiting-room TV; the nurse takes Ravi’s vitals.",
+          "location": "The same clinic reception, now tidy: a QR check-in stand just inside the glass entrance, a wall-mounted waiting-room TV, waiting chairs with a few seated figures seen from behind, the reception desk with a desktop monitor angled toward Meera, and a small vitals corner beside reception.",
+          "costumes": {
+            "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
+            "meera": "Blue kurta with white churidar, silver bangle on right wrist.",
+            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist.",
+            "nurse": "Plain lavender scrubs, white clinic shoes, blank lavender lanyard card, wristwatch on left wrist.",
+            "raman": "Cream half-sleeve shirt, grey trousers, brown sandals, round reading glasses, wooden walking stick.",
+            "priya": "Coral-pink kurti over blue jeans, white sneakers, small crossbody bag."
+          },
+          "objects": {
+            "monitor": "Reception desktop monitor and keyboard; screen faces Meera, only blank fields visible if seen.",
+            "qr-stand": "Small check-in stand just inside the entrance with a square abstract QR-like pattern (not a real code, no text).",
+            "waiting-tv": "Wall-mounted waiting-room TV; teal screen with an empty white token area; the token number is lettered, never drawn.",
+            "walking-stick": "Mr. Raman’s simple wooden walking stick.",
+            "priya-phone": "Priya’s smartphone; app screen shows only a calendar icon and a check-mark card, no text.",
+            "vitals-kit": "Blood-pressure cuff with a hand bulb, fingertip pulse oximeter and a small monitor showing abstract shapes only (no readings).",
+            "ravi-phone": "Ravi’s own smartphone (dark blue case). On page 7 Meera helps him open Welbuk Health on it; the screen shows only abstract appointment and info cards, no text."
+          }
+        },
+        "consultation": {
+          "summary": "The same visit: Ravi talks with Dr. Ananya in the consultation room.",
+          "location": "Bright, simple consultation room: desk, two chairs, Dr. Ananya’s laptop (closed in 04-3, open on page 5), window with plant. No medical charts with text.",
+          "costumes": {
+            "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
+            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
+          },
+          "objects": {
+            "consult-laptop": "Dr. Ananya’s laptop on the consultation desk: closed and pushed aside in 04-3, opened on page 5 with the screen turned toward the reader. The screen shows only abstract cards and icons; section names are lettered over it, never drawn.",
+            "doctor-tablet": "Dr. Ananya’s tablet. Shown only in 04-3 (a simple notification card with a blank strip; the alert text is lettered, never drawn); from 05-1 to the end of the visit it is put away in the desk drawer and must not appear (it returns days later in 08-5, results section)."
+          }
+        },
+        "departure": {
+          "summary": "The end of the same visit: Ravi leaves the clinic reassured.",
+          "location": "Clinic entrance from the street side, morning sun.",
+          "costumes": {
+            "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
+            "meera": "Blue kurta with white churidar, silver bangle on right wrist.",
+            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
+          },
+          "objects": {}
+        },
+        "after-visit": {
+          "summary": "After the visit (added 2026-11-12): the pharmacy and the clinic lab receive the orders, and later that day Ravi gives his samples at the clinic lab.",
+          "location": "A small bright pharmacy counter with shelves of plain unlabelled medicine boxes; the clinic lab room with a sample-collection chair, a tube rack and a monitor (manga supplement).",
+          "costumes": {
+            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist.",
+            "pharmacist": "White pharmacist coat over a light blue collared shirt, dark grey trousers.",
+            "labtech": "Light-blue lab coat over a plain navy top, dark trousers, white clinic shoes, purple nitrile gloves."
+          },
+          "objects": {
+            "pharmacy-tablet": "Pharmacist’s tablet on the counter: one new-prescription card with a simple pill icon; no drug names or text (the label is lettered).",
+            "medicine-boxes": "Plain medicine boxes and a paper pharmacy bag with no labels, logos or text.",
+            "lab-monitor": "Lab monitor showing one order card with simple test-tube icons; no test names or text (the label is lettered).",
+            "sample-tube": "One capped sample tube with a blank white label; a cotton pad on Ravi’s inner arm. No needle shown.",
+            "shoulder-bag": "Ravi’s dark-brown shoulder bag."
+          }
+        },
+        "results": {
+          "summary": "Some days later (added 2026-11-12): the results are ready; Ravi, Dr. Ananya and the clinic each get a notification.",
+          "location": "Ravi’s simple living room by a window; Dr. Ananya’s consultation desk; the clinic reception desk (manga supplement).",
+          "costumes": {
+            "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
+            "meera": "Blue kurta with white churidar, silver bangle on right wrist.",
+            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
+          },
+          "objects": {
+            "ravi-phone": "Ravi’s smartphone (dark blue case): one results-ready notification card with a check mark, plus small generic app, envelope and chat-bubble icons; no logos and no text.",
+            "doctor-tablet": "Dr. Ananya’s tablet: one results-ready card with a check mark and a test-tube icon; no text or values.",
+            "monitor": "Reception monitor angled toward the reader: one results-ready card with a check mark; no text or values."
+          }
+        },
+        "followup": {
+          "summary": "The follow-up visit on a different day (added 2026-11-12, Request 5): WhatsApp reminder, Ravi arrives empty-handed, self check-in, token, consultation with his history already open.",
+          "location": "Ravi’s home table; the clinic entrance, QR stand, waiting area with the TV, and the consultation room (same places as pages 3-5).",
+          "costumes": {
+            "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
+            "meera": "Blue kurta with white churidar, silver bangle on right wrist.",
+            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
+          },
+          "objects": {
+            "ravi-phone": "Ravi’s smartphone (dark blue case): a generic green chat-bubble reminder card with a calendar icon at home; a scan frame with a check mark at the QR stand. No logos, no text.",
+            "qr-stand": "The same small check-in stand just inside the entrance, abstract QR-like pattern (not a real code, no text).",
+            "waiting-tv": "The same wall-mounted waiting-room TV; teal screen with an empty white token strip; the token is lettered, never drawn.",
+            "doctor-tablet": "Dr. Ananya’s tablet: a simple timeline of cards with a test-tube icon and a check mark; no text or values."
+          }
+        },
+        "travel": {
+          "summary": "A possible journey after the follow-up: Ravi travels to another Indian city by train. Conditional framing (\"If Ravi travels, his record travels with him.\").",
+          "location": "Indian Railways-style train seat by a window, passing city skyline (no signage).",
+          "costumes": {
+            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
+          },
+          "objects": {}
+        },
+        "vision": {
+          "summary": "WELBUK VISION — not a launched feature. A conceptual future of connected clinics, specialists and family wellness, drawn inside a soft pale-blue vignette.",
+          "location": "Idealised, airy spaces: a modern clinic in another city linked by faint dotted lines to small clinic silhouettes; a family living room. Lighter palette and rounded vignette border.",
+          "costumes": {
+            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist.",
+            "specialist": "Light grey blazer over a pale blue shirt, rimless glasses, stethoscope worn around his neck (not in use).",
+            "partner": "Mustard-yellow kurta.",
+            "child": "Orange T-shirt and shorts."
+          },
+          "objects": {
+            "family-tablet": "Tablet showing an abstract family wellness app: three simple profile circles and a heart icon, no text."
+          }
+        },
+        "closing": {
+          "summary": "Symbolic closing group portrait in front of the clinic, tying the three Welbuk products to the three people.",
+          "location": "Clinic entrance with awning and plants, warm morning light.",
+          "costumes": {
+            "ananya": "Teal kurta beneath an open white coat, stethoscope worn around her neck (not in use), dark leggings, flat sandals.",
+            "meera": "Blue kurta with white churidar, silver bangle on right wrist.",
+            "ravi": "Light green shirt, dark trousers, wristwatch on left wrist."
+          },
+          "objects": {}
+        }
+      },
+      "pages": [
+        {
+          "id": "09",
+          "section": "followup",
+          "purpose": "Show the follow-up visit from the clinic side: an automatic WhatsApp reminder, Ravi arriving with nothing to carry because Welbuk already holds his records, self check-in, the token, and a consultation with his history already open. Each caption names what the clinic saves.",
+          "expectation": "Does Welbuk stop at one clinic?",
+          "panels": [
+            {
+              "id": "09-1",
+              "order": 1,
+              "role": "転換",
+              "beat": "The clinic sends the follow-up reminder on WhatsApp",
+              "rect": [
+                24,
+                24,
+                476,
+                500
+              ],
+              "scene": "Ravi at home in daylight, sitting at a small table with a cup of tea, smiling at his phone (dark blue case) held up in his right hand on the left side of the panel, screen toward the reader: one green chat-bubble message card with a small calendar icon (generic chat app, no logo, no text). Plain wall in the upper half for a caption, and plain wall just above the phone for its FOLLOW-UP REMINDER label.",
+              "action": "Ravi reads the reminder.",
+              "emotion": "Pleased, unbothered.",
+              "camera": "Medium shot, eye level.",
+              "information": "Welbuk Practice sends the follow-up reminder automatically on WhatsApp.",
+              "transition": {
+                "kind": "time-change",
+                "bridge": "A new day at home after the results; the reminder sets up the follow-up visit.",
+                "settingBasis": "User Request 5: \"clinic sends a wa msg to ravi about followup visit\"."
+              },
+              "readingFlow": {
+                "entry": [
+                  40,
+                  40
+                ],
+                "exit": [
+                  490,
+                  430
+                ]
+              },
+              "production": {
+                "moment": "Ravi glances at the reminder on his phone.",
+                "before": "His results were ready (page 8).",
+                "after": "On the follow-up day he comes to the clinic (09-2).",
+                "hands": {
+                  "ravi": {
+                    "left": "resting beside his tea cup (wristwatch on this wrist)",
+                    "right": "holding ravi-phone"
+                  }
+                },
+                "props": [
+                  {
+                    "id": "ravi-phone",
+                    "before": "on the table",
+                    "during": "in his right hand, reminder card on screen",
+                    "after": "in his pocket",
+                    "heldBy": "ravi.right"
+                  }
+                ]
+              },
+              "speakers": {
+                "ravi": {
+                  "face": [
+                    238,
+                    232,
+                    78,
+                    78
+                  ],
+                  "anchor": [
+                    274,
+                    286
+                  ]
+                }
+              },
+              "dialogue": [
+                {
+                  "speaker": "narration",
+                  "text": "Welbuk Practice sends Ravi's follow-up reminder on WhatsApp. No calls from the front desk.",
+                  "textColumns": [
+                    "Welbuk Practice sends Ravi's ",
+                    "follow-up reminder on WhatsApp. ",
+                    "No calls from the front desk."
+                  ],
+                  "textDirection": "horizontal",
+                  "side": "left",
+                  "x": 8,
+                  "dy": 2
+                },
+                {
+                  "speaker": "label",
+                  "text": "FOLLOW-UP REMINDER",
+                  "textColumns": [
+                    "FOLLOW-UP ",
+                    "REMINDER"
+                  ],
+                  "textDirection": "horizontal",
+                  "side": "left",
+                  "x": 8,
+                  "dy": 144
+                }
+              ],
+              "protected": [
+                [
+                  140,
+                  279,
+                  56,
+                  80
+                ]
+              ]
+            },
+            {
+              "id": "09-2",
+              "order": 2,
+              "role": "提示",
+              "beat": "Ravi arrives on a different day with nothing to carry",
+              "rect": [
+                524,
+                24,
+                476,
+                500
+              ],
+              "scene": "Morning, a different day: Ravi walks through the clinic’s glass entrance under the teal awning, smiling, both hands empty and relaxed (no file, no folder, no papers, no bag), his phone just visible in his shirt pocket, wristwatch on his left wrist. Plain sky and wall in the upper part for a caption.",
+              "action": "Ravi strolls in empty-handed.",
+              "emotion": "Relaxed, confident.",
+              "camera": "Full shot from inside the reception, eye level.",
+              "information": "No files to find or re-enter: Welbuk already holds his prescriptions and results.",
+              "transition": {
+                "kind": "time-change",
+                "bridge": "The caption \"On the day\" and the morning light at the familiar entrance mark the follow-up day.",
+                "settingBasis": "User Request 5: \"ravi arrives diff day free hand nothing no papers, reports or prescriptions\"."
+              },
+              "readingFlow": {
+                "entry": [
+                  540,
+                  40
+                ],
+                "exit": [
+                  990,
+                  430
+                ]
+              },
+              "production": {
+                "moment": "Ravi steps through the entrance with free hands.",
+                "before": "He received the reminder (09-1).",
+                "after": "He checks in at the QR stand (09-3).",
+                "hands": {
+                  "ravi": {
+                    "left": "empty, relaxed at his side (wristwatch on this wrist)",
+                    "right": "empty, relaxed at his side"
+                  }
+                },
+                "props": [
+                  {
+                    "id": "ravi-phone",
+                    "before": "in his shirt pocket",
+                    "during": "in his shirt pocket",
+                    "after": "in his hand for check-in",
+                    "heldBy": "none"
+                  }
+                ]
+              },
+              "speakers": {
+                "ravi": {
+                  "face": [
+                    738,
+                    254,
+                    32,
+                    38
+                  ],
+                  "anchor": [
+                    754,
+                    282
+                  ]
+                }
+              },
+              "dialogue": [
+                {
+                  "speaker": "narration",
+                  "text": "On the day, Ravi arrives empty-handed. No files to find, no reports to re-enter: Welbuk already has them.",
+                  "textColumns": [
+                    "On the day, Ravi arrives ",
+                    "empty-handed. No files to find, ",
+                    "no reports to re-enter: ",
+                    "Welbuk already has them."
+                  ],
+                  "textDirection": "horizontal",
+                  "side": "left",
+                  "x": 8,
+                  "dy": 4
+                }
+              ],
+              "protected": [
+                [
+                  712,
+                  368,
+                  14,
+                  24
+                ],
+                [
+                  780,
+                  366,
+                  14,
+                  26
+                ]
+              ]
+            },
+            {
+              "id": "09-3",
+              "order": 3,
+              "role": "始動",
+              "beat": "Self check-in with the QR code",
+              "rect": [
+                24,
+                548,
+                476,
+                380
+              ],
+              "scene": "Just inside the glass entrance: Ravi holds his phone up to the small QR check-in stand (the same stand as page 3: teal frame on a pole, white screen with an abstract grey QR-like grid, not a real code, no text); his phone shows a scan frame and a check mark. In the background the reception desk has no queue at all: nobody is waiting in front of it, and Meera, free of check-in work, types calmly at her monitor. The plain desk front at the lower left carries the caption.",
+              "action": "Ravi scans the QR code.",
+              "emotion": "Easy, focused.",
+              "camera": "Medium shot, three-quarter view.",
+              "information": "Self check-in: no queue at the desk, and nobody has to type his details in for him.",
+              "readingFlow": {
+                "entry": [
+                  40,
+                  484
+                ],
+                "exit": [
+                  490,
+                  880
+                ]
+              },
+              "production": {
+                "moment": "The phone confirms the check-in.",
+                "before": "He walked in empty-handed (09-2).",
+                "after": "He waits for his slot (09-4).",
+                "hands": {
+                  "ravi": {
+                    "left": "relaxed at his side, empty (wristwatch on this wrist)",
+                    "right": "holding ravi-phone to the QR stand"
+                  },
+                  "meera": {
+                    "left": "typing at the reception keyboard (background)",
+                    "right": "typing at the reception keyboard (background)"
+                  }
+                },
+                "props": [
+                  {
+                    "id": "ravi-phone",
+                    "before": "in his shirt pocket",
+                    "during": "held to the QR stand, check mark on screen",
+                    "after": "in his hand",
+                    "heldBy": "ravi.right"
+                  },
+                  {
+                    "id": "qr-stand",
+                    "before": "just inside the entrance",
+                    "during": "being scanned",
+                    "after": "just inside the entrance",
+                    "heldBy": "none"
+                  }
+                ]
+              },
+              "speakers": {
+                "ravi": {
+                  "face": [
+                    281,
+                    595,
+                    50,
+                    58
+                  ],
+                  "anchor": [
+                    316,
+                    638
+                  ]
+                },
+                "meera": {
+                  "face": [
+                    89,
+                    650,
+                    38,
+                    40
+                  ],
+                  "anchor": [
+                    111,
+                    683
+                  ]
+                }
+              },
+              "dialogue": [
+                {
+                  "speaker": "narration",
+                  "text": "He checks in himself. No queue at the desk.",
+                  "textColumns": [
+                    "He checks in ",
+                    "himself. ",
+                    "No queue ",
+                    "at the desk."
+                  ],
+                  "textDirection": "horizontal",
+                  "side": "left",
+                  "x": 8,
+                  "dy": 196
+                }
+              ],
+              "protected": [
+                [
+                  391,
+                  705,
+                  56,
+                  58
+                ],
+                [
+                  439,
+                  682,
+                  52,
+                  91
+                ],
+                [
+                  259,
+                  838,
+                  30,
+                  60
+                ]
+              ]
+            },
+            {
+              "id": "09-4",
+              "order": 4,
+              "role": "期待",
+              "beat": "As usual, his token comes up on the screen",
+              "rect": [
+                524,
+                548,
+                476,
+                380
+              ],
+              "scene": "Waiting area: the wall-mounted waiting-room TV in the upper right shows a teal screen with one empty white token strip (no text or numbers). Ravi sits in a waiting chair, phone in his right hand in his lap, left forearm along the chair arm with the hand (wristwatch) resting on his thigh, looking up at the TV with a small smile; two other patients seen from behind: an elderly grey-haired man at the left and a young man with short hair in a blue shirt at the right (no bun, no kurta). The whole TV is in frame with plain wall above it, and the upper-left half of the panel is plain wall for a two-line caption.",
+              "action": "Ravi sees his slot called.",
+              "emotion": "Calm.",
+              "camera": "Medium-wide shot.",
+              "information": "His slot is called on the screen; no names shouted, no paper tokens.",
+              "readingFlow": {
+                "entry": [
+                  540,
+                  484
+                ],
+                "exit": [
+                  990,
+                  880
+                ]
+              },
+              "production": {
+                "moment": "His slot appears on the TV.",
+                "before": "He checked in (09-3).",
+                "after": "He goes in to Dr. Ananya (09-5).",
+                "hands": {
+                  "ravi": {
+                    "left": "forearm along the chair arm, hand resting on his thigh (wristwatch on this wrist)",
+                    "right": "holding ravi-phone in his lap"
+                  }
+                },
+                "props": [
+                  {
+                    "id": "ravi-phone",
+                    "before": "in his hand",
+                    "during": "in his lap",
+                    "after": "in his pocket",
+                    "heldBy": "ravi.right"
+                  },
+                  {
+                    "id": "waiting-tv",
+                    "before": "on the wall",
+                    "during": "token strip shown",
+                    "after": "on the wall",
+                    "heldBy": "none"
+                  }
+                ]
+              },
+              "speakers": {
+                "ravi": {
+                  "face": [
+                    711,
+                    693,
+                    38,
+                    47
+                  ],
+                  "anchor": [
+                    736,
+                    725
+                  ]
+                }
+              },
+              "dialogue": [
+                {
+                  "speaker": "narration",
+                  "text": "As usual, his slot comes up on the screen.",
+                  "textColumns": [
+                    "As usual, his ",
+                    "slot comes up ",
+                    "on the screen."
+                  ],
+                  "textDirection": "horizontal",
+                  "side": "left",
+                  "x": 0,
+                  "dy": 0
+                },
+                {
+                  "speaker": "label",
+                  "text": "NOW · A-31",
+                  "textColumns": [
+                    "NOW · A-31"
+                  ],
+                  "textDirection": "horizontal",
+                  "side": "left",
+                  "x": 278,
+                  "dy": 38
+                }
+              ],
+              "protected": [
+                [
+                  706,
+                  835,
+                  35,
+                  28
+                ],
+                [
+                  791,
+                  833,
+                  28,
+                  48
+                ]
+              ]
+            },
+            {
+              "id": "09-5",
+              "order": 5,
+              "role": "余韻",
+              "beat": "Dr. Ananya already has his history: care continues",
+              "rect": [
+                24,
+                952,
+                976,
+                512
+              ],
+              "scene": "The consultation room (window with plant): Dr. Ananya at her desk smiles and greets Ravi, who sits opposite her, empty-handed. She holds her tablet angled toward the reader; it shows a simple timeline of cards with a test-tube icon and a check mark (no text, no values). Ravi smiles back, relaxed and at ease, glancing at the history on her tablet, his empty hands resting loosely together on the desk, forearms on the desktop. Plain wall across the top for a balloon and a caption.",
+              "action": "Ananya welcomes Ravi back.",
+              "emotion": "Ananya warm and efficient; Ravi relaxed and reassured, smiling back.",
+              "camera": "Wide two-shot, eye level.",
+              "information": "His history and results are already open; the visit is shorter and paper-free.",
+              "readingFlow": {
+                "entry": [
+                  40,
+                  928
+                ],
+                "exit": [
+                  990,
+                  1455
+                ]
+              },
+              "production": {
+                "moment": "Ananya greets Ravi with the tablet in hand; Ravi smiles back and glances at his history.",
+                "before": "His slot was called (09-4).",
+                "after": "Welbuk does not stop at one clinic (page 10).",
+                "hands": {
+                  "ananya": {
+                    "left": "holding the left edge of doctor-tablet",
+                    "right": "holding the right edge of doctor-tablet"
+                  },
+                  "ravi": {
+                    "left": "forearm on the desk, hand resting loosely beside his right hand (wristwatch on this wrist)",
+                    "right": "forearm on the desk, hand resting loosely on the desktop"
+                  }
+                },
+                "props": [
+                  {
+                    "id": "doctor-tablet",
+                    "before": "on her desk",
+                    "during": "held in both hands, history cards on screen",
+                    "after": "on her desk",
+                    "heldBy": "ananya.left"
+                  }
+                ]
+              },
+              "speakers": {
+                "ananya": {
+                  "face": [
+                    279,
+                    1017,
+                    85,
+                    105
+                  ],
+                  "anchor": [
+                    324,
+                    1100
+                  ]
+                },
+                "ravi": {
+                  "face": [
+                    704,
+                    1012,
+                    95,
+                    110
+                  ],
+                  "anchor": [
+                    736,
+                    1092
+                  ]
+                }
+              },
+              "dialogue": [
+                {
+                  "speaker": "ananya",
+                  "text": "Welcome back, Ravi. Your results are already here.",
+                  "textColumns": [
+                    "Welcome back, Ravi. ",
+                    "Your results are ",
+                    "already here."
+                  ],
+                  "textDirection": "horizontal",
+                  "side": "left",
+                  "x": 361,
+                  "dy": 10
+                },
+                {
+                  "speaker": "narration",
+                  "text": "Fewer missed follow-ups, shorter visits, less paperwork. The clinic's time goes to patients.",
+                  "textColumns": [
+                    "Fewer missed follow-ups, shorter visits, less paperwork. ",
+                    "The clinic's time goes to patients."
+                  ],
+                  "textDirection": "horizontal",
+                  "side": "left",
+                  "x": 16,
+                  "dy": 404
+                }
+              ],
+              "protected": [
+                [
+                  309,
+                  1182,
+                  175,
+                  140
+                ],
+                [
+                  674,
+                  1292,
+                  150,
+                  50
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "productionMode": "quality"
+  },
+  "files": [
+    "works/auto-6294ee8a2094/source/original.txt",
+    "works/auto-6294ee8a2094/assets/characters/main-cast.png",
+    "works/auto-6294ee8a2094/assets/characters/vision-cast.png",
+    "works/auto-6294ee8a2094/assets/characters/nurse.png",
+    "works/auto-6294ee8a2094/assets/characters/checkin-patients.png",
+    "works/auto-6294ee8a2094/assets/characters/pharmacy-lab.png",
+    "works/auto-6294ee8a2094/workflow/storyboards/page-09.svg",
+    "works/auto-6294ee8a2094/assets/panels/09-4.png"
+  ],
+  "optionalFiles": [],
+  "configFile": "works/auto-6294ee8a2094/workflow.json",
+  "entries": {
+    "works/auto-6294ee8a2094/source/original.txt": "c0df59c3155dd3f5e436082c2f81b0d1724bc23910562483a35d249a93cf4eba",
+    "works/auto-6294ee8a2094/assets/characters/main-cast.png": "4f607444611f6b74f81feafda5d76c867e62af84dc0c18d05c5e975e45bfb11b",
+    "works/auto-6294ee8a2094/assets/characters/vision-cast.png": "c20f9ad67a643ba8356fff59ec1b5013d5a4a526184103fde0aa247b15781086",
+    "works/auto-6294ee8a2094/assets/characters/nurse.png": "ac47509a83dcf45b5d446b8350bf4704a754076c266006266f3a4cdf24d01d82",
+    "works/auto-6294ee8a2094/assets/characters/checkin-patients.png": "d8409881393a019ef555cebce4f63d07cd38938aa329a860ad283f277acd0763",
+    "works/auto-6294ee8a2094/assets/characters/pharmacy-lab.png": "60d3a9c1218175b6972e8a420cc525ad3bb1fbcb72fe7153bfa09652e3d2b0b3",
+    "works/auto-6294ee8a2094/workflow/storyboards/page-09.svg": "ff208f06840ad02a34b4d27df2a7274e24ce6399a2bcdbef0c369546607b04a9",
+    "works/auto-6294ee8a2094/assets/panels/09-4.png": "103a7ff0c998dabdccc6954272384f0adb0459616784fef230580563630ade29"
+  },
+  "fingerprint": "c06baa4acca602b8acf4d1f94017b5cee67850fca78e4d2ee1ed28a92d619d29"
+}

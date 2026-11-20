@@ -1,0 +1,81 @@
+{
+ "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-08-add9a8547fe9e9e65e51fddbc8e88733ec22227907a9f47cc8d3351ca68c2559.json",
+ "reviewer": {
+  "role": "subagent",
+  "task": "claude-code-agent:manga-reviewer:aaaee08dce305c752",
+  "reportedTask": null,
+  "taskSource": "Agent ID returned by the Claude Code Agent tool to the parent."
+ },
+ "status": "pass",
+ "observations": [
+  "What I read: the request JSON (page 08 script and first reading). With Read I viewed storyboards-unnumbered/page-08.png and storyboards/page-08.png, then review/page-08.png, review/page-07.png and assets/panels/08-1 to 08-4.png. I also read source/original.txt. All files were readable. The runtime gave me no task ID, so task is null.",
+  "PNG against SVG: the label rects in both SVGs are 518,24 240x74; 40,504 240x74; and 704,872 281x138. Both PNGs match, and the captions sit where the script x/dy values put them. The numbered PNG adds only the grey guide captions. On the numbered PNG, guide '4 / The three people...' runs under the closing caption box; that is a guide-only overlap.",
+  "Text against source lines 53-56: all verbatim, including the 'WELBUK VISION' label the source requires on 08-2.",
+  "First reader, who 'us' is in 08-1: this is the source's own narrator caption, in the same rectangular narrator box as the other captions. With Ravi thinking at the train window beside it, 'us' reads as an inclusive 'us', meaning patients and carers. That is acceptable for this promotional framing and does not mislead.",
+  "First reader, imagined or real: 08-2 and 08-3 each carry the teal 'WELBUK VISION' tag and, in the art, the soft pale-blue rounded vignette with a lighter palette. 08-4 returns to the normal full-colour clinic. The source requires future features to be marked as vision (line 4). The repeated label is therefore a deliberate safeguard, not redundancy.",
+  "First reader, unintroduced specialist and family: the source calls them conceptual and symbolic (lines 54-55). In 08-3, Ravi on the sofa beside a woman and a child, all sharing one tablet, reads as his family without further text. Acceptable.",
+  "First reader, the 08-4 label butting against Ravi's face box, and 'rav' clipped: the label starts at x 704 and the face box ends at 699, so there is a 5 px gap. The clipped name is a placeholder artefact. On the composed page Ravi's face and waving hand are clear of the label.",
+  "First reader, empty middle of 08-4 and an ending that reads as a tagline: the middle holds the three standing figures in the art. The closing caption is the source's final line, and the source makes the panel a symbolic product close. Acceptable."
+ ],
+ "issues": [],
+ "readingReview": {
+  "withoutGuides": true,
+  "firstReadingHash": "e101c960bf188058d97dc3c773bf35dac272f9a05b4418cafb11eead9d23218e",
+  "predictedOrder": [
+   {
+    "panel": "08-1",
+    "dialogue": [
+     1
+    ]
+   },
+   {
+    "panel": "08-2",
+    "dialogue": [
+     1,
+     2
+    ]
+   },
+   {
+    "panel": "08-3",
+    "dialogue": [
+     1,
+     2
+    ]
+   },
+   {
+    "panel": "08-4",
+    "dialogue": [
+     1,
+     2
+    ]
+   }
+  ],
+  "observations": [
+   "Unnumbered ネーム: the 08-1 caption; then the 08-2 WELBUK VISION tag at top left and the vision caption at the bottom; then the 08-3 tag and its caption; then the 08-4 product label at top right and the closing caption at bottom left. This matches the script and the first reader.",
+   "In 08-4 the eye moves from top right down to bottom left for the final tagline. That is a normal end-of-page move, and the tagline is clearly the last and largest closing line."
+  ],
+  "transitions": [
+   {
+    "from": "07-4",
+    "to": "08-1",
+    "observation": "From Ravi waving goodbye at the clinic to Ravi on a train. 'Tomorrow' and 'may' frame the jump in time and place as hypothetical, and his costume and bag carry over."
+   },
+   {
+    "from": "08-1",
+    "to": "08-2",
+    "observation": "Ravi's thoughtful look out of the window leads into the WELBUK VISION panel: a specialist at a clinic in another city, with dotted lines linking clinic silhouettes. The tag and the vignette mark it as vision."
+   },
+   {
+    "from": "08-2",
+    "to": "08-3",
+    "observation": "The vision widens from clinics to the family: Ravi, a partner and a child with the family tablet, in the same vignette style and with the same tag."
+   },
+   {
+    "from": "08-3",
+    "to": "08-4",
+    "observation": "The vignette ends. The present-day clinic entrance appears with Meera, Ananya and Ravi in their usual costumes, closing on the three products and the tagline."
+   }
+  ],
+  "comparison": "My reading order matches the first reader's. Their concerns are covered by the source and the art: the vision is marked by the label and the vignette, the family is symbolic but readable, and 'us' is the source narrator. The 08-4 label clears Ravi's face box by 5 px, and the clipped name is a placeholder artefact. No change is needed on page 08, which changed only as a neighbour."
+ }
+}

@@ -1,0 +1,305 @@
+[
+ {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-03-8047b986681277dea2fa19be10854711c3714e1ddb59d93a03a26ba18b4b5465.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Files read: AGENTS.md (from the session context), docs/REVISION-AND-REVIEWS.md, docs/PROMPTS.md, the full request JSON (script, boundary pages 02 and 04, and the embedded first reading), source/original.txt, and source/REVISION-2026-11-11.md from Request 3 to the end. I opened these PNGs with Read and looked at them: storyboards-unnumbered/page-03.png, storyboards/page-03.png, review/page-02.png, review/page-03.png and review/page-04.png. I read storyboards-unnumbered/page-03.svg and checked reading-flow/page-03.json with Grep.",
+   "PNG against SVG: I cannot compute hashes here, so I compared by eye against the SVG source. In storyboards-unnumbered/page-03.png, every panel frame, caption box, placeholder box and label matches page-03.svg: 03-1 caption rect 40,40,373x138; 03-5 label 664,1012,305x74 reading 'A-10 · A-11 · A-12'; the raman, priya and ravi boxes at 166/384/561 x. The text strings are identical. storyboards/page-03.png is the same layout with the five guide lines '1 / Front-desk check-in with Meera' to '5 / All three get slots on the screen', and those strings match the numbered SVG. I found no stale PNG.",
+   "The page has five narration captions and one label, and each sits at the top left of its panel. Order is 03-1 → 03-2 on the top row, 03-3 → 03-4 on the middle row, and 03-5 across the bottom. Within 03-5 the caption at the top left is read before the A-10/A-11/A-12 label at the top right. This matches the script dialogue order and the five panels of source PAGE 3, and the wording is unchanged.",
+   "The 04-2 shoulder-bag record change does not alter page 03. The shoulder bag is on Ravi's shoulder in 03-3 (preview: strap across his chest) and on his lap in 03-5 (preview: brown bag on his knees). That fits the 04-1 'back on his shoulder' and 04-2 'on the floor beside his chair' records, and the new 'after' field (beside his chair in 05-1, on his shoulder in 07-1) agrees with review/page-05.png, page-06.png and page-07.png.",
+   "The reading-flow warning on 03-5 (caption 1 → label 2) is an ordinary left-to-right step on the same row. It is not a read-back, because the caption sits clearly at the far left and the label on the TV at the right.",
+   "The art carries the acting that the captions do not. In 03-1 Meera smiles at Mr. Raman while typing. In 03-2 Priya smiles at her phone and taps it. In 03-3 Ravi scans the QR stand. In 03-4 a thumb ticks the consent box. In 03-5 all three look up and smile at the TV."
+  ],
+  "issues": [],
+  "readingReview": {
+   "withoutGuides": true,
+   "predictedOrder": [
+    {
+     "panel": "03-1",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "03-2",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "03-3",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "03-4",
+     "dialogue": [
+      1
+     ]
+    },
+    {
+     "panel": "03-5",
+     "dialogue": [
+      1,
+      2
+     ]
+    }
+   ],
+   "observations": [
+    "Unnumbered PNG: 2+2+1 grid with no speech balloons. Every caption is the top-left element of its panel, so no two text blocks compete for first read. Text sits close together only in 03-5, and there the caption is 320 px left of the TV label on the same band.",
+    "No caption covers a face box in the storyboard. In the composed preview the 03-1 caption ends above Mr. Raman's and Meera's heads, and the 03-4 caption sits beside Ravi's profile without covering it."
+   ],
+   "transitions": [
+    {
+     "from": "02-4",
+     "to": "03-1",
+     "observation": "In review/page-02.png, 02-4 is an evening office with sunset light. 03-1 is a bright reception with a QR stand, waiting chairs and the desk monitor. The caption 'A later morning:' states the time jump, and the shift in light and setting confirms it, so the change of day and room is not abrupt."
+    },
+    {
+     "from": "03-1",
+     "to": "03-2",
+     "observation": "The scene moves from the reception counter to a sunny street. The teal awning and glass doors with the reception visible behind Priya place her outside the same clinic. The caption 'Some check in ahead...' frames the panel as a second route rather than a sequel to 03-1."
+    },
+    {
+     "from": "03-2",
+     "to": "03-3",
+     "observation": "03-3 is just inside the glass entrance. The 03-3 background in the preview shows Meera at the desk and a seated elderly man and a woman in a pink kurti, so Raman and Priya have already arrived. The caption names Ravi, the new protagonist, at first appearance."
+    },
+    {
+     "from": "03-3",
+     "to": "03-4",
+     "observation": "This is a direct action cut. The phone held to the QR stand in 03-3 becomes an over-the-shoulder close-up of the same phone and green sleeve, now showing a form with a tick-box. 'his own phone' clearly refers back to Ravi."
+    },
+    {
+     "from": "03-4",
+     "to": "03-5",
+     "observation": "The form is submitted and the scene moves to the waiting area. Raman, Priya and Ravi sit left to right in the same order as A-10 · A-11 · A-12 on the TV. Ravi has his phone in hand and his bag on his lap, which carries over from 03-3 and 03-4."
+    },
+    {
+     "from": "03-5",
+     "to": "04-1",
+     "observation": "In review/page-04.png, 04-1 shows the same chairs, now with Raman and Priya gone, and Ravi standing with the bag back on his shoulder. The TV label reads 'NOW · A-12', which confirms the Ravi = A-12 link suggested by the order in 03-5. The caption 'Soon, his slot comes up.' covers the short wait."
+    }
+   ],
+   "firstReadingHash": "1c77748022e7cb8b41d0ae674f933a5c7dca3273c9400a6c135947d729a2a8b3",
+   "comparison": "The first reader's order matches the intended order exactly: 03-1 [1], 03-2 [1], 03-3 [1], 03-4 [1], 03-5 [1, 2]. Each concern was checked. (a) Raman and Priya are unnamed. That is acceptable: source PAGE 3 calls them only 'an elderly patient' and 'a young woman', the captions say 'patients' and 'Some', and the names exist only in the cast data. (b) Ravi = A-12 must be visible. That is resolved in the art: the left-to-right seating in 03-5 matches the slot order, and 04-1 shows 'NOW · A-12' as only Ravi stands with the two chairs beside him empty. (c) The page is all narration. That is acceptable: source PAGE 3 itself is caption-only, and the accepted art carries the acting (Meera's greeting smile, Priya tapping, Ravi scanning and ticking, the shared upward look). (d) 'his own phone' is unambiguous, as the first reader noted. Page 03 changed only through the 04-2 shoulder-bag record, and the SVG and PNG are unchanged in substance. Nothing is unresolved."
+  }
+ },
+ {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-04-f0d8677a79e11edde31f052a1d006620c7fd2a24513894d3b53f3575ad67a6c7.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Files read: the full request (script page 04, boundary pages 03 and 05, and the embedded new first reading by a0b3f724fe1af5e09), the source and the revision notes. I opened these PNGs with Read and looked at them: storyboards-unnumbered/page-04.png, storyboards/page-04.png, review/page-03.png, review/page-04.png and review/page-05.png. I read storyboards-unnumbered/page-04.svg and checked reading-flow/page-04.json with Grep.",
+   "PNG against SVG, compared by eye with the SVG coordinates since no hash tool is available here: the 04-1 caption at 40,40,215x106; the 'NOW · A-12' label at 786,64,190x74; the ravi box at 577,71 and the meera box at 908,205. In 04-2 the nurse balloon is at 274,618,290x106 with a short tail from 418-432,720 to 427,733 above the nurse box at 389,739. In 04-3 the caption is at 624,484 and the 'RAVI · READY' label at 790,1202. All of these match the PNG. The numbered PNG adds only the guide lines '1 / Ravi’s slot comes up', '2 / The nurse takes his vitals' and '3 / Dr. Ananya is notified on her tablet', and these match the numbered SVG. I found no stale PNG.",
+   "Changed record: the 04-2 shoulder-bag 'after' now reads 'carried into the consultation and set beside his chair (05-1); back on his shoulder at reception (07-1)'. The art supports it. In review/page-04.png, 04-2 shows the brown bag on the floor at the lower left beside his chair. In review/page-05.png, 05-1 shows the bag on the floor beside the patient chair at the lower right, which the art in assets/panels/05-1.png confirms. 06-2 shows it beside his chair, and 07-1 shows it on his shoulder. The 06-2 prop record ('back on his shoulder as he leaves (07-1)') agrees.",
+   "The dialogue and labels match source PAGE 4 word for word: 'Soon, his slot comes up.', 'NOW · A-12', 'A quick vitals check first.', 'Hi, Ravi! Just relax your arm for me.', 'Dr. Ananya is notified when he's ready.', 'RAVI · READY'.",
+   "The 04-3 production 'after' says the tablet goes into the drawer before 05-1. No tablet is visible in the 05-1 art, and the laptop that was closed at the lower right of 04-3 is open in 05-1, so the prop records and the art agree."
+  ],
+  "issues": [],
+  "readingReview": {
+   "withoutGuides": true,
+   "predictedOrder": [
+    {
+     "panel": "04-1",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "04-2",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "04-3",
+     "dialogue": [
+      1,
+      2
+     ]
+    }
+   ],
+   "observations": [
+    "Unnumbered PNG: the 04-1 caption at the top left and the label at the top right share the top band, so they read left to right. In 04-2 the caption at the top left is above and left of the nurse balloon (y 618), and the balloon tail drops 9 px onto the nurse box. In 04-3 the caption at the top is read before the label far below at y 1202. Each panel has one cluster, with no nearby balloons that could be confused.",
+    "In the composed preview, the 04-2 balloon tail touches the top of the nurse's head and Ravi's face is clear. The 04-3 'RAVI · READY' label sits on the tablet screen held in Ananya's hands, and the 04-1 'NOW · A-12' label sits on the wall TV."
+   ],
+   "transitions": [
+    {
+     "from": "03-5",
+     "to": "04-1",
+     "observation": "Same waiting area. The chairs at screen-left of Ravi are empty because Raman and Priya have been called, and Ravi stands with his bag back on his shoulder, tucking his phone into his pocket. The TV now reads NOW · A-12. 'Soon,' covers the short wait."
+    },
+    {
+     "from": "04-1",
+     "to": "04-2",
+     "observation": "The scene moves to the vitals corner. The caption 'A quick vitals check first.' and a teal reception counter and teal chair visible behind the nurse in the preview tie it to reception. Ravi's green shirt and watch carry over. His bag goes from his shoulder to the floor beside his chair, which fits sitting down."
+    },
+    {
+     "from": "04-2",
+     "to": "04-3",
+     "observation": "The scene cuts to the consultation room: window, plant, the closed laptop at the lower right. Ananya holds a tablet showing a check-mark card and the 'RAVI · READY' label. The caption 'Dr. Ananya is notified when he's ready.' explains the cut as the result of the vitals step."
+    },
+    {
+     "from": "04-3",
+     "to": "05-1",
+     "observation": "In review/page-05.png, 05-1 is the same room (window and plant at the upper left), with the closed laptop now open and the tablet gone. Ravi has sat down, his bag beside the chair as the updated 04-2 record says, and Ananya greets him. The place change is readable without a caption."
+    }
+   ],
+   "firstReadingHash": "6f32389be005f83524af95075c5feb90a21f96f23f71087b28f51062b86f4a19",
+   "comparison": "The first reader's order (caption → NOW · A-12 → caption → nurse line → caption → RAVI · READY) is the intended [1, 2] in every panel. Each concern was checked. (a) The placeholder does not show who displays 'NOW · A-12'. That is resolved in the art: the label sits on the wall TV at the top right of 04-1. (b) Meera is tiny and her role is not established. That is acceptable: she was established on pages 1-3, and in 04-1 she is a background figure typing at the reception desk, which places the scene. (c) Ravi makes no verbal reply to the nurse. That is acceptable: the nurse gives an instruction, not a question, and the art shows Ravi smiling with his arm relaxed on the table, so no answer is skipped. (d) The link between 'RAVI · READY' and Ananya depends on the art. That is resolved: the label is on the tablet she holds while smiling at it. (e) Panels 04-2 and 04-3 are tall and mostly empty in the placeholder. That is resolved: the art fills them with the full seated figures, the vitals kit and the tablet close-up. The changed 04-2 shoulder-bag record agrees with 04-2, 05-1, 06-2 and 07-1. Nothing is unresolved."
+  }
+ },
+ {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-05-e7a4be9053b9e14db3ad59c7657109d5d9a442d79be3346d1a1ffb7457b13a54.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Files read: the full request (script page 05, boundary pages 04 and 06, and the embedded new first reading by a9d564d5391bf6262), the source, and REVISION-2026-11-11.md Request 3 with both follow-ups ('add page if needed' and the AI voice consent). I opened these PNGs with Read and looked at them: storyboards-unnumbered/page-05.png, storyboards/page-05.png, review/page-05.png, assets/panels/05-1.png, 05-2.png and 05-4.png. I read storyboards-unnumbered/page-05.svg, the tail paths in storyboards/page-05.svg, and reading-flow/page-05.json.",
+   "PNG against SVG, compared by eye with the SVG source since no hash tool is available: the unnumbered PNG shows the 05-2 layout of the current SVG. The question balloon is at 64,572,332x106. The 'Yes, I agree.' balloon is at 396,572,199x74, with a tail running from 531-545,643.5 to 665.4,746.8. The AI VOICE CONSENT label is at 631,572,369x138, reading 'AI VOICE CONSENT: / asked at the first visit, / before any voice is saved'. The 05-1 label reads 'AI mic option', and the 05-4 caption is at 620,934. The numbered SVG has the same tail coordinates and adds the four guide lines, and these match the numbered PNG. This page shows the re-exported current version, not the stale one.",
+   "05-2 tail clearance: the 'Yes, I agree.' tail passes below and left of the consent label. At the label's bottom edge (y=710) the two tail edges are at about x=617 and x=622, against the label's left edge at x=631 with a 10 px corner radius. The nearest point of the tail to the label corner is about 5-8 px away after stroke widths. In the unnumbered PNG, the numbered PNG and review/page-05.png the tail visibly clears the corner without touching or crossing the label, and it ends at Ravi's head (preview, about 665,746). The clearance is tight but the adjustment works.",
+   "The script matches the source and the user's decisions. The order follows the user's screen sections: patient details (05-1), then consent before any voice is saved (05-2, the follow-up), then SOAP notes with the AI listening (05-3), then the human-conversation caption (05-4). All lines and labels are word for word from the source. The 05-1 label uses the user's 'AI mic option', and the accepted 05-1 art shows the mic toggle grey and off, so the AI is not shown listening before consent. The microphone glows only in 05-3 and 05-4.",
+   "Non-blocking notes for lettering, not reading-order defects. (1) In the composed 05-1 the PATIENT DETAILS label covers the whole laptop screen, so the six icon cards and the off mic toggle visible in assets/panels/05-1.png are hidden. Nothing visible contradicts consent, and the label wording carries the content. (2) The right edge of the AI VOICE CONSENT label (x=1000) coincides with the panel frame, and the SOAP NOTES label (x=26) touches the left frame. The text keeps 18 px inner padding and is fully legible in the preview. (3) The guide lines on the numbered PNG overlap: '3 / ...' runs under the SOAP label and '4 / ...' overflows the right frame. These are guide-only and not reader-facing."
+  ],
+  "issues": [],
+  "readingReview": {
+   "withoutGuides": true,
+   "predictedOrder": [
+    {
+     "panel": "05-1",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "05-2",
+     "dialogue": [
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "panel": "05-3",
+     "dialogue": [
+      1,
+      2
+     ]
+    },
+    {
+     "panel": "05-4",
+     "dialogue": [
+      1
+     ]
+    }
+   ],
+   "observations": [
+    "05-1: the greeting balloon starts at y=40 and the PATIENT DETAILS label at y=224. The balloon is the highest element and its tail reaches Ananya's mouth, so it is read first. The label sits low over the foreground laptop and reads as screen content after the line. 05-2: the three blocks sit in one top row, question (x 64-396) → answer (396-595) → label (631-1000). The two balloons share an edge at x=396, but their tails go in opposite directions to Ananya (left, about 279,738) and Ravi (right, about 665,746), so the question-then-answer pair is read in order and no reply is skipped.",
+    "05-3: Ravi's balloon at the top left points right to his face, and the SOAP label sits below over the laptop. 05-4 has only the caption. The reading-flow warnings on 05-2 (1→2, 2→3) flag normal left-to-right steps along one row with overlapping vertical range. They are not read-backs."
+   ],
+   "transitions": [
+    {
+     "from": "04-3",
+     "to": "05-1",
+     "observation": "Same consultation room: window and plant at the upper left, Ananya in the same coat and bun. The laptop that was closed in 04-3 is now open and the tablet is gone. Ravi sits down with his bag on the floor beside the chair, and the greeting marks his arrival."
+    },
+    {
+     "from": "05-1",
+     "to": "05-2",
+     "observation": "The same staging is shown wider: Ananya at the left, the laptop at the centre showing the mic and shield consent card with a ticked box, Ravi at the right with an open hand. 'May the AI listen...' follows the greeting as a natural first-visit step before he explains."
+    },
+    {
+     "from": "05-2",
+     "to": "05-3",
+     "observation": "With consent given, the laptop now shows a glowing microphone with sound waves (preview, lower part of 05-3), and Ravi, rubbing his neck, answers the 05-1 question 'what brings you in' with 'I've been feeling tired lately.' Consent coming before the answer is causal: the AI may listen only after he agrees."
+    },
+    {
+     "from": "05-3",
+     "to": "05-4",
+     "observation": "The reverse angle over Ravi's shoulder: the back of his head and green shoulder at the lower right (accepted 05-4 art), and Ananya facing him with folded hands, nodding (motion marks by her head). The laptop at the left edge still shows the glowing mic. Her eyes are on Ravi, not the screen."
+    },
+    {
+     "from": "05-4",
+     "to": "06-1",
+     "observation": "The page turn goes to a close-up of the same laptop, now on the planner. In assets/panels/06-1.png the dark bezel and camera dot, the wooden desk, the plant at the top right and a hand with a white coat cuff and teal kurta sleeve on the trackpad keep it inside the same consultation with Ananya at the controls."
+    }
+   ],
+   "firstReadingHash": "89f54cf287603bd846d8c7170b4829f0e416fe72ceda32db232a11bd64de014d",
+   "comparison": "The first reader's natural order is the intended order in every panel: 05-1 [1, 2], 05-2 [1, 2, 3], 05-3 [1, 2], 05-4 [1]. Each concern was checked. (1) The order in 05-1 was ambiguous. Acceptable: the reader chose the balloon because it is 184 px higher, which is the intended order, and in the art the label sits over the foreground laptop screen while the balloon's tail is at Ananya's mouth. (2) A reply to Ravi might be skipped. Acceptable: 'I've been feeling tired lately.' answers the 05-1 'Tell me what brings you in.', and the consent exchange that comes between them is the user's explicit 2026-11-12 requirement (consent before any voice is saved). Ananya responds non-verbally in 05-4 (art: leaning in, folded hands, nod marks, eye contact), and verbally in 06-2 with 'We'll go through your concerns and decide the right next steps together', which picks up 'tired'. Source PAGE 5 has the same structure. (3) The two balloons in 05-2 touch and the tail is crowded. Acceptable: the tails split to the two speakers at opposite ends, and the 'Yes, I agree.' tail now visibly clears the consent label corner by about 5-8 px in both storyboard PNGs and the preview. (4) The consent label is read after the agreement. Acceptable: it is screen content naming the step that just happened, and the dialogue itself already shows asking before recording. (5) Text touches the panel frames. Acceptable for this stage: the text keeps its inner padding and is legible in the preview, and I noted it for lettering polish. (6) Ravi appears in 05-4 only as a dot. Resolved: the accepted art shows the back of his head and shoulder at the lower right. (7) The text is dense. Acceptable: the user asked for the full wording ('add page if needed'), and the screen walk-through was split across pages 5 and 6 to make room. Nothing is unresolved."
+  }
+ },
+ {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-06-7353efe9668ffe6b4dda09bd0225b9d29c4b9543fc65c7295bce0b948b5e6aba.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Files read: the full request (script page 06, boundary pages 05 and 07, and the embedded new first reading by a0b3f724fe1af5e09), the source and the revision notes. I opened these PNGs with Read and looked at them: storyboards-unnumbered/page-06.png, storyboards/page-06.png, review/page-06.png, review/page-07.png and assets/panels/06-1.png. I read storyboards-unnumbered/page-06.svg and reading-flow/page-06.json.",
+   "PNG against SVG, compared by eye with the SVG source since no hash tool is available: the title label is at 138,106,639x74. The three tile labels are at 193,388 (182 wide), 421,388 (197 wide) and 624,388 (244x138, three lines). The 06-2 balloon is at 304,684,441x138 with a tail to 418,913, and the PLAN OF CARE label at 40,1108,287x234. All strings match. The numbered PNG adds only '1 / Close-up: the speciality-specific treatment planner' and '2 / Next steps together; the plan of care', matching the numbered SVG. This page shows the re-exported current version, not the stale one.",
+   "The script matches the source and the user's Request 3 order: the speciality-specific treatment planner (06-1), then the plan of care (06-2). The labels follow the review notes (r7): 'odontogram' corrected, 'growth scales', British spelling. The page split follows the user's 'add page if needed'. 06-2's line is word for word from the source and gives no treatment advice, and the art shows no prescriptions or instruments in use.",
+   "The art supports the scene. In 06-1 the tooth, eye and growth/vaccine tiles each sit above the label band reserved for them, and the labels fall inside those bands in the preview. In 06-2 Ravi sits relaxed and smiling with both hands on his knees and the bag beside his chair, consistent with the updated 04-2 'after' record and with 07-1, where the bag is back on his shoulder.",
+   "Non-blocking note for lettering: in the composed 06-2 the PLAN OF CARE label covers almost all of the laptop screen (only the arrow-out icon shows), and in 06-1 the Paediatrician label is 6 px from the Eye doctor label and overhangs the screen's lower bezel. Both remain legible and attached to their tiles."
+  ],
+  "issues": [],
+  "readingReview": {
+   "withoutGuides": true,
+   "predictedOrder": [
+    {
+     "panel": "06-1",
+     "dialogue": [
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    {
+     "panel": "06-2",
+     "dialogue": [
+      1,
+      2
+     ]
+    }
+   ],
+   "observations": [
+    "06-1: the title runs across the top of the screen, then the three tile labels form one row read left to right (Dentist → Eye doctor → Paediatrician), each under its own drawing in the art. The reading-flow warnings 2→3 and 3→4 are normal steps along one row, not read-backs. The 6 px gap between the Eye doctor and Paediatrician labels does not merge them, because each has its own border and a bold heading word.",
+    "06-2: the balloon at the top (y 684) with its tail to Ananya's face is the first element. The PLAN OF CARE label starts at y 1108, low in the foreground over the laptop screen, so it is read after the line even though it is at the far left. Ravi's silent smile and relaxed posture at the right close the panel."
+   ],
+   "transitions": [
+    {
+     "from": "05-4",
+     "to": "06-1",
+     "observation": "The page turn goes from Ananya listening to a close-up of the same laptop. The bezel with its camera dot, the wooden desk, the plant at the top right and her hand with a white cuff and teal sleeve on the trackpad (assets/panels/06-1.png and the preview) show it is the same consultation, now on the next screen section. The glowing mic of 05-4 gives way to the planner in the user's order."
+    },
+    {
+     "from": "06-1",
+     "to": "06-2",
+     "observation": "The camera pulls back to the 05-1 staging: laptop at the left foreground, Ananya at the centre with an open hand, Ravi at the right with his bag beside the chair. The screen now shows the plan-of-care icons under the label, so the close-up resolves back into the conversation."
+    },
+    {
+     "from": "06-2",
+     "to": "07-1",
+     "observation": "In review/page-07.png, 07-1 is the reception desk: Meera points at Ravi's phone, and Ravi's bag is back on his shoulder, as the 06-2 'after' and the updated 04-2 record say. The place change follows from 'decide the right next steps together' ending the consultation, and the 07-1 dialogue opens the new topic."
+    }
+   ],
+   "firstReadingHash": "157ece33d0f8ea4b002e4484d720fabaac6df40fe539fa8d32f612344b737ce8",
+   "comparison": "The first reader's order (title → Dentist → Eye doctor → Paediatrician → Ananya's line → PLAN OF CARE) is the intended 06-1 [1, 2, 3, 4], 06-2 [1, 2]. Each concern was checked. (a) In the placeholder, nobody is shown looking at the planner and its link to the previous scene is unclear. Resolved in the art: the bezel, desk, plant and Ananya's coat-cuffed hand on the trackpad place it in the consultation. (b) The spacing of the tile labels is uneven. Acceptable: each label sits on its own tile drawing, so the pairing is visual and the 6 px gap causes no merging. (c) There is a large blank area between the title and the labels. Resolved: the tile drawings fill it. (d) Ravi gives no verbal reply to 'together'. Acceptable: the line states a plan rather than asking a question, the art shows him smiling and relaxed in agreement, and source PAGE 6 has no reply line. (e) PLAN OF CARE might be read before the balloon. Acceptable: it is 424 px lower and sits over the laptop screen in the foreground as screen content, so the balloon at the top is read first, and the label names the screen section that supports her line. Nothing is unresolved."
+  }
+ }
+]

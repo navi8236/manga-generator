@@ -1,0 +1,326 @@
+{
+  "version": 3,
+  "page": "06",
+  "status": "planning-guide-not-reviewed",
+  "direction": "left-to-right, top-to-bottom",
+  "panels": [
+    {
+      "id": "06-1",
+      "rect": [
+        24,
+        24,
+        976,
+        500
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "meera",
+          "text": "Welbuk Health is designed to help patients stay connected with their care.",
+          "rect": [
+            48,
+            44,
+            249,
+            202
+          ],
+          "center": [
+            172.5,
+            145
+          ],
+          "mouth": [
+            428,
+            232
+          ]
+        }
+      ],
+      "faces": {
+        "meera": {
+          "face": [
+            367,
+            128,
+            96,
+            111
+          ],
+          "anchor": [
+            428,
+            232
+          ]
+        },
+        "ravi": {
+          "face": [
+            572,
+            114,
+            131,
+            118
+          ],
+          "anchor": [
+            641,
+            191
+          ]
+        }
+      },
+      "protected": [
+        [
+          528,
+          277,
+          66,
+          94
+        ]
+      ],
+      "intent": {
+        "entry": [
+          40,
+          40
+        ],
+        "exit": [
+          990,
+          520
+        ]
+      },
+      "groups": null,
+      "warnings": []
+    },
+    {
+      "id": "06-2",
+      "rect": [
+        24,
+        548,
+        560,
+        560
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "ravi",
+          "text": "So I can keep useful information in one place?",
+          "rect": [
+            44,
+            568,
+            305,
+            138
+          ],
+          "center": [
+            196.5,
+            637
+          ],
+          "mouth": [
+            423,
+            739
+          ]
+        },
+        {
+          "number": 2,
+          "speaker": "label",
+          "text": "WELBUK HEALTH for patients",
+          "rect": [
+            24,
+            988,
+            268,
+            106
+          ],
+          "center": [
+            158,
+            1041
+          ],
+          "mouth": null
+        }
+      ],
+      "faces": {
+        "ravi": {
+          "face": [
+            369,
+            614,
+            147,
+            169
+          ],
+          "anchor": [
+            423,
+            739
+          ]
+        }
+      },
+      "protected": [
+        [
+          297,
+          805,
+          115,
+          208
+        ]
+      ],
+      "intent": {
+        "entry": [
+          44,
+          570
+        ],
+        "exit": [
+          580,
+          1100
+        ]
+      },
+      "groups": null,
+      "warnings": []
+    },
+    {
+      "id": "06-3",
+      "rect": [
+        608,
+        548,
+        392,
+        560
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "meera",
+          "text": "That's the idea. Let's walk through what is available to you.",
+          "rect": [
+            616,
+            556,
+            342,
+            138
+          ],
+          "center": [
+            787,
+            625
+          ],
+          "mouth": [
+            761,
+            838
+          ]
+        }
+      ],
+      "faces": {
+        "meera": {
+          "face": [
+            691,
+            741,
+            111,
+            125
+          ],
+          "anchor": [
+            761,
+            838
+          ]
+        },
+        "ravi": {
+          "kind": "head",
+          "anchor": [
+            970,
+            760
+          ]
+        }
+      },
+      "protected": [
+        [
+          890,
+          898,
+          79,
+          120
+        ]
+      ],
+      "intent": {
+        "entry": [
+          624,
+          570
+        ],
+        "exit": [
+          990,
+          1100
+        ]
+      },
+      "groups": null,
+      "warnings": []
+    },
+    {
+      "id": "06-4",
+      "rect": [
+        24,
+        1132,
+        976,
+        332
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "narration",
+          "text": "A smoother visit. A more connected experience.",
+          "rect": [
+            48,
+            1142,
+            640,
+            74
+          ],
+          "center": [
+            368,
+            1179
+          ],
+          "mouth": null
+        }
+      ],
+      "faces": {
+        "ravi": {
+          "face": [
+            755,
+            1164,
+            70,
+            85
+          ],
+          "anchor": [
+            786,
+            1229
+          ]
+        },
+        "ananya": {
+          "face": [
+            291,
+            1239,
+            51,
+            52
+          ],
+          "anchor": [
+            316,
+            1282
+          ]
+        },
+        "meera": {
+          "face": [
+            370,
+            1255,
+            45,
+            49
+          ],
+          "anchor": [
+            392,
+            1296
+          ]
+        }
+      },
+      "protected": [],
+      "intent": {
+        "entry": [
+          40,
+          1150
+        ],
+        "exit": [
+          990,
+          1505
+        ]
+      },
+      "groups": null,
+      "warnings": []
+    }
+  ],
+  "checklist": [
+    "番号と誘導線を隠した画像を先に読み、予測した発話順を記録する",
+    "最初のセリフへ上・左から入れるか",
+    "近い非連続の吹き出しを一組と誤認して返答を飛ばさないか",
+    "前の会話のまとまりを読み終えてから次のまとまりへ進めるか",
+    "返答へ自然に移り、視線が大きく逆戻りしないか",
+    "顔の向き・視線・手や小道具の動作と読順がつながるか",
+    "話者への尾が別人物や重要物を横切らないか",
+    "場所・時間・回想の切替と物の移動を直前直後から理解できるか",
+    "最後のセリフ・反応から次のコマへ移れるか",
+    "大きなコマ・余白・情報公開の順がページの感情の狙いに合うか",
+    "話題の境界と段・ページ境界が一致し、不要な読み戻りを誘わないか"
+  ]
+}

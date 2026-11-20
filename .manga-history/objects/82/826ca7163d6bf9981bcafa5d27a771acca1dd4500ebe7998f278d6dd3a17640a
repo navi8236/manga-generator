@@ -1,0 +1,115 @@
+{
+ "_note": "The runtime did not give me a subagent/task identity, so reviewer.task is null in every entry. The parent must not make one up. For each page I read only the request JSON and then the unnumbered storyboard PNG it names, opened with Read, before anything else about that work. I also read AGENTS.md (already in context), docs/REVISION-AND-REVIEWS.md and docs/PROMPTS.md, as my instructions require. I did not read the source, the script, workflow.json or the numbered storyboards. All 8 images loaded and were readable. I did not check hashes. Overall verdict for the parent: changes are needed. The main problems are on pages 05-08: scene changes with no transition, a reply carried across a page break, the 'walk through' promise on page 07 never followed up, and labels or balloons that cut into face boxes on pages 02, 07 and 08.",
+ "01": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/first-reading-054264f62cb77e438f4dbafb8f8d5f3b1bb143be4bb6c84cfa87cb77a82046d7.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "pages": [
+   {
+    "page": "01",
+    "scan": "Opened works/auto-6294ee8a2094/workflow/storyboards-unnumbered/page-01.png with Read. It loaded. The page has 3 panels: a wide top panel, then a large lower-left panel and a lower-right panel.",
+    "observation": "Natural order. Panel 1: caption 'A busy day at Dr. Ananya's clinic.' (top left), then a small silent Ananya face. Panel 2 (Meera): 'Appointments, patient details, follow-ups...' then 'I wish everything were easier to manage!' Panel 3: Ananya's 'Our time belongs with patients. Let's make the rest simpler.', with Meera silent below left. The order is clear. Issues: (1) Meera appears without any introduction. Her name and role (receptionist? nurse? colleague?) are not given, so it is unclear who complains and why Ananya answers her. (2) The tail of the first panel 2 balloon ends just left of Meera's face box rather than at her mouth. It still reads as hers but looks loose. (3) 'Let's make the rest simpler' is vague, and nothing shows how it will be done; the page ends without a hook. (4) Panels 2 and 3 have large empty areas in their lower halves, and panel 1 has one small face in a big panel. Both depend on art that is not drawn yet. Nothing covers a face."
+   }
+  ]
+ },
+ "02": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/first-reading-37c02b24bed1c2d5d4ec57635623b4cd817c08260048b906a480f329cfaab9ab.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "pages": [
+   {
+    "page": "02",
+    "scan": "Opened works/auto-6294ee8a2094/workflow/storyboards-unnumbered/page-02.png with Read. It loaded. The page has 4 panels: a wide top panel, a middle-left and middle-right pair, and a wide bottom panel.",
+    "observation": "Natural order: caption 'The clinic begins its Welbuk onboarding.' (top left), teal label 'WELBUK PRACTICE for the clinic' (top right), Ananya 'We can organise our clinic workflow here.', Meera 'And our team can use tools suited to each staff role.', teal 'WELBUK CARE for clinic staff' (bottom of the middle-right panel), then Ananya 'One team. Better coordination.' with Meera silent at right. Issues: (1) 'Welbuk' is a new name and only the caption explains it. Two product names arrive on one page; it is readable, but brochure-like. (2) In the bottom panel the balloon's left edge touches or overlaps Ananya's face box, and her name label is clipped to 'anany'. The balloon would sit on her face, so move it right or up. (3) The caption box and teal label in the top panel sit on the panel border (top-left and top-right), and the caption text nearly touches its box edge. (4) Very short tails in the middle-left and bottom panels. (5) 'here' in the middle-left panel relies on the teal screen label in the top panel. That works if the screen is drawn clearly. Speakers are unambiguous."
+   }
+  ]
+ },
+ "03": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/first-reading-a943a89164fefd2571dfa73347604371e883b0e3116bccc44e4fd40f6d2df11c.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "pages": [
+   {
+    "page": "03",
+    "scan": "Opened works/auto-6294ee8a2094/workflow/storyboards-unnumbered/page-03.png with Read. It loaded. The page has 5 panels: a top pair, a middle pair and a wide bottom panel. There are no speech balloons, only captions.",
+    "observation": "Natural order: 'A later morning: patients can always check in at the front desk.' (faces raman, meera), 'Some check in ahead on the Welbuk Health app.' (priya), 'Ravi scans the QR code at the door.' (ravi), 'A short form on his own phone, shared with consent.' (ravi), 'Every check-in gets a slot on the screen.' plus teal 'A-10 · A-11 · A-12' (raman, priya, ravi). The time jump is marked clearly. Issues: (1) The whole page is narration with no dialogue, so it reads like a feature list. (2) Raman and Priya are never named in the text, and the reader cannot tell who they are. Only Ravi is named. (3) 'Welbuk Health app' is a third product name after Practice and Care, which may confuse. (4) Nothing marks the QR code or the phone form on screen; there is no teal label for the phone. (5) The slots A-10/A-11/A-12 are never assigned to anyone. Left-to-right order suggests Raman=A-10, Priya=A-11, Ravi=A-12, but that is a guess, and page 04 depends on it. (6) In panel 2 the caption's bottom edge almost touches Priya's face box. (7) It is unclear where 'the screen' is in the bottom panel, which seems to be a waiting area. Large empty lower halves in all panels."
+   }
+  ]
+ },
+ "04": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/first-reading-a2e3d163279ddcc014d779ca98f5d2c3b12ff4a9f3b520b9e69ab5de63c0cbcb.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "pages": [
+   {
+    "page": "04",
+    "scan": "Opened works/auto-6294ee8a2094/workflow/storyboards-unnumbered/page-04.png with Read. It loaded. The page has 3 panels: a wide top panel, then a lower-left and a lower-right panel.",
+    "observation": "Natural order: 'Soon, his slot comes up.' then teal 'NOW · A-12' (ravi, meera far right), 'A quick vitals check first.' then nurse 'Hi, Ravi! Just relax your arm for me.' (Ravi lower left), 'Dr. Ananya is notified when he's ready.' then teal 'RAVI · READY' (ananya). Issues: (1) 'his' in the first caption follows a page turn after a panel with three patients. The reader has to infer that A-12 is Ravi, which page 03 never stated. Name him or show the match. (2) Meera's face box sits at the far right edge, and her name label runs to the panel border; she may be cropped. (3) The nurse is unnamed and new, and nothing says where the vitals check happens. The tail is very short. The nurse is at right and Ravi lower left, which suits left-to-right reading poorly, though there is only one balloon. (4) 'RAVI · READY' wraps awkwardly as 'RAVI ·' / 'READY'. (5) 'when he's ready' could mean ready after vitals or emotionally ready. The label helps. (6) Large empty lower halves in both lower panels. No face is covered."
+   }
+  ]
+ },
+ "05": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/first-reading-b20192b1daaba0429f289f075346a612889d28ef85d6266beb4b8eba4eec7373.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "pages": [
+   {
+    "page": "05",
+    "scan": "Opened works/auto-6294ee8a2094/workflow/storyboards-unnumbered/page-05.png with Read. It loaded. The page has 3 panels: a wide top panel, then a lower-left and a lower-right panel.",
+    "observation": "Natural order: Ananya 'Hello, Ravi. Tell me what brings you in.' (top right), then the large teal 'PATIENT DETAILS: current vitals · prior health info · allergy panel · AI mic on · patient docs · lab reports' (left), Ravi 'I've been feeling tired lately.', teal 'SOAP NOTES: fill in manually and choose ICD or SNOMED codes, or let AI listen and summarise the conversation', then caption 'Technology supports the workflow. The conversation stays human.' (ananya). Issues: (1) The move to the consulting room has no transition caption; Ananya and Ravi are suddenly together. (2) In the top panel the balloon is top right but the large label is on the left. A left-to-right reader may start with the label. The balloon's higher position probably wins, but it is uncertain. (3) Both teal labels are long, dense lists of features. 'AI mic on' and 'ICD or SNOMED' are jargon with no explanation, and it is unclear whose screen it is and whether both labels are on the same screen. (4) Ananya never answers 'I've been feeling tired lately' on this page. A caption follows instead, so the patient's complaint is left hanging; the reply comes only on page 06. (5) The caption's claim that 'the conversation stays human' conflicts with the SOAP label advertising that AI listens. The art must show this visually. No face is covered."
+   }
+  ]
+ },
+ "06": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/first-reading-423655aab0376c3f681249c3a2b7e7f7e9f917b12ddd01aed43f5e07bc6aa372.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "pages": [
+   {
+    "page": "06",
+    "scan": "Opened works/auto-6294ee8a2094/workflow/storyboards-unnumbered/page-06.png with Read. It loaded. The page has 2 wide panels.",
+    "observation": "Natural order. Panel 1 has no people: teal 'SPECIALITY-SPECIFIC TREATMENT PLANNER', then left to right 'Dentist: odontogram', 'Eye doctor: eye markers', 'Paediatrician: growth scales · vaccines'. Panel 2: Ananya 'We'll go through your concerns and decide the right next steps together.', then teal 'PLAN OF CARE: intelligent prescribing · summary · drug interactions · labs · referrals' (lower left), with Ravi silent at right. Issues: (1) Panel 1 breaks the scene. It has no characters, caption or context, and a general clinic seeing a tired adult has no reason to show dentist, eye or paediatric tools. It reads like an advert inserted into the visit. (2) Ananya's reply to 'tired lately' comes only after a page turn and this interruption, so the question-and-answer link is weak. (3) Ravi does not react. (4) In panel 2 the balloon is upper right and the label lower left. The order is probably balloon then label, but a left-to-right reader may glance at the label first. (5) It is unclear whose screen shows PLAN OF CARE. No face is covered."
+   }
+  ]
+ },
+ "07": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/first-reading-72c15337a6d2c9080e69d7793f811927d03b93c7130cf5ce9781b039dd922986.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "pages": [
+   {
+    "page": "07",
+    "scan": "Opened works/auto-6294ee8a2094/workflow/storyboards-unnumbered/page-07.png with Read. It loaded. The page has 4 panels: a wide top panel, a middle-left and middle-right pair, and a wide bottom panel.",
+    "observation": "Natural order: Meera 'Welbuk Health is designed to help patients stay connected with their care.' (ravi at right), Ravi 'So I can keep useful information in one place?', teal 'WELBUK HEALTH for patients' (lower left), Meera 'That's the idea. Let's walk through what is available to you.', then caption 'A smoother visit. A more connected experience.' (ananya, meera, ravi). Issues: (1) The scene jumps from the consultation with Ananya to Meera talking to Ravi with no transition caption (after the visit? at the front desk?). (2) In the middle-right panel Ravi's marker sits on the right panel border, and his label 'ravi' crosses the border. He is cut off by the frame; confirm whether he is meant to be offscreen. (3) The teal label in the middle-left panel overlaps the left panel border. (4) In the bottom panel the Ananya and Meera face boxes almost touch, Ananya's label is clipped to 'anany', and all three faces are tiny. Ananya reappears with no transition. (5) The bottom caption reads like an ending tagline even though page 08 follows. (6) Meera's 'Let's walk through what is available to you' sets up a walkthrough that page 08 never delivers. (7) Ravi used the QR code on page 03, while the app was shown with Priya. Introducing the app to Ravi now is consistent, but a reader may not remember the link."
+   }
+  ]
+ },
+ "08": {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/first-reading-a1e5b19d1c265fc62cdd305a1c6ced9da00921422c737c0162e54ca5a9251777.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "pages": [
+   {
+    "page": "08",
+    "scan": "Opened works/auto-6294ee8a2094/workflow/storyboards-unnumbered/page-08.png with Read. It loaded. The page has 4 panels: a top pair, a wide middle panel and a large bottom panel.",
+    "observation": "Natural order: 'Tomorrow, care may take us beyond our hometown.' (ravi), teal 'WELBUK VISION' then 'specialist' face then caption 'The vision: trusted connections between clinics, specialists, and patients across locations.', teal 'WELBUK VISION' again, 'One connected ecosystem for care and family wellness.' (ravi, partner, child), teal 'Welbuk Practice • Welbuk Care • Welbuk Health' (meera, ananya, ravi), then bottom caption 'Welbuk — Building a connected healthcare ecosystem.' Issues: (1) In the bottom panel the teal label overlaps Ravi's face box, and his label is clipped to 'rav'. The label covers a face, so it must move. (2) In the top-right panel the teal label overlaps the panel's top-left border, and the caption box sits on and doubles the panel's bottom border. (3) 'WELBUK VISION' is repeated in two consecutive panels. Teal means on-screen text, but no screen or viewer is shown, so it reads as a heading, not a label. (4) The jump to 'Tomorrow' is a speculative future with no clear narrator. Who is 'us' and 'our hometown' (Ravi? the clinic?) Ravi is shown alone. (5) The specialist, partner and child are new and unexplained. The family is presumably Ravi's, but the page does not say so. (6) The walkthrough Meera promises on page 07 never happens, and the story becomes a brand montage. (7) The large bottom panel is mostly empty apart from three small faces at the top and the tagline at the bottom left. The ending has no character beat or dialogue."
+   }
+  ]
+ }
+}

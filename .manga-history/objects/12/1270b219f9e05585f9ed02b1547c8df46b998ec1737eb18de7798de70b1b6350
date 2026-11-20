@@ -1,0 +1,267 @@
+{
+  "version": 3,
+  "page": "19",
+  "status": "planning-guide-not-reviewed",
+  "direction": "left-to-right, top-to-bottom",
+  "panels": [
+    {
+      "id": "19-1",
+      "rect": [
+        43,
+        27,
+        464,
+        461
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "admin",
+          "text": "We're expanding. Can one platform support our locations?",
+          "rect": [
+            51,
+            35,
+            368,
+            138
+          ],
+          "center": [
+            235,
+            104
+          ],
+          "mouth": [
+            196,
+            253
+          ]
+        }
+      ],
+      "faces": {
+        "admin": {
+          "face": [
+            127,
+            180,
+            82,
+            87
+          ],
+          "anchor": [
+            196,
+            253
+          ]
+        }
+      },
+      "protected": [],
+      "intent": null,
+      "groups": null,
+      "warnings": []
+    },
+    {
+      "id": "19-2",
+      "rect": [
+        518,
+        27,
+        462,
+        461
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "label",
+          "text": "CLOUD — AVAILABLE",
+          "rect": [
+            526,
+            35,
+            320,
+            74
+          ],
+          "center": [
+            686,
+            72
+          ],
+          "mouth": null
+        },
+        {
+          "number": 2,
+          "speaker": "narration",
+          "text": "Welbuk Cloud is available today.",
+          "rect": [
+            526,
+            119,
+            438,
+            74
+          ],
+          "center": [
+            745,
+            156
+          ],
+          "mouth": null
+        }
+      ],
+      "faces": {},
+      "protected": [],
+      "intent": null,
+      "groups": null,
+      "warnings": []
+    },
+    {
+      "id": "19-3",
+      "rect": [
+        43,
+        499,
+        937,
+        415
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "admin",
+          "text": "What if a hospital needs a different deployment model?",
+          "rect": [
+            627,
+            507,
+            343,
+            92
+          ],
+          "center": [
+            798.5,
+            553
+          ],
+          "mouth": [
+            827,
+            687
+          ]
+        },
+        {
+          "number": 2,
+          "speaker": "narration",
+          "text": "On-premises and hybrid solutions are work in progress.",
+          "rect": [
+            51,
+            591,
+            538,
+            92
+          ],
+          "center": [
+            320,
+            637
+          ],
+          "mouth": null
+        },
+        {
+          "number": 3,
+          "speaker": "label",
+          "text": "ON-PREMISES — WORK IN PROGRESS",
+          "rect": [
+            109,
+            796,
+            235,
+            86
+          ],
+          "center": [
+            226.5,
+            839
+          ],
+          "mouth": null
+        },
+        {
+          "number": 4,
+          "speaker": "label",
+          "text": "HYBRID — WORK IN PROGRESS",
+          "rect": [
+            467,
+            796,
+            235,
+            86
+          ],
+          "center": [
+            584.5,
+            839
+          ],
+          "mouth": null
+        }
+      ],
+      "faces": {
+        "admin": {
+          "face": [
+            809,
+            607,
+            74,
+            93
+          ],
+          "anchor": [
+            827,
+            687
+          ]
+        }
+      },
+      "protected": [],
+      "intent": null,
+      "groups": null,
+      "warnings": [
+        {
+          "from": 3,
+          "to": 4,
+          "reason": "左から右へ戻る移動と縦方向の範囲が重なる。段差・余白・人物の配置を目視で検討する。"
+        }
+      ]
+    },
+    {
+      "id": "19-4",
+      "rect": [
+        43,
+        926,
+        937,
+        517
+      ],
+      "steps": [
+        {
+          "number": 1,
+          "speaker": "label",
+          "text": "AIR-GAPPED AI — WORK IN PROGRESS",
+          "rect": [
+            51,
+            934,
+            537,
+            74
+          ],
+          "center": [
+            319.5,
+            971
+          ],
+          "mouth": null
+        },
+        {
+          "number": 2,
+          "speaker": "narration",
+          "text": "Air-gapped AI solutions are also a work in progress.",
+          "rect": [
+            51,
+            1018,
+            554,
+            106
+          ],
+          "center": [
+            328,
+            1071
+          ],
+          "mouth": null
+        }
+      ],
+      "faces": {},
+      "protected": [],
+      "intent": null,
+      "groups": null,
+      "warnings": []
+    }
+  ],
+  "checklist": [
+    "番号と誘導線を隠した画像を先に読み、予測した発話順を記録する",
+    "最初のセリフへ上・左から入れるか",
+    "近い非連続の吹き出しを一組と誤認して返答を飛ばさないか",
+    "前の会話のまとまりを読み終えてから次のまとまりへ進めるか",
+    "返答へ自然に移り、視線が大きく逆戻りしないか",
+    "顔の向き・視線・手や小道具の動作と読順がつながるか",
+    "話者への尾が別人物や重要物を横切らないか",
+    "場所・時間・回想の切替と物の移動を直前直後から理解できるか",
+    "最後のセリフ・反応から次のコマへ移れるか",
+    "大きなコマ・余白・情報公開の順がページの感情の狙いに合うか",
+    "話題の境界と段・ページ境界が一致し、不要な読み戻りを誘わないか"
+  ]
+}

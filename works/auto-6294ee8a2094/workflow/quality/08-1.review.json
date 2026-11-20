@@ -1,0 +1,62 @@
+{
+ "panel": "08-1",
+ "fingerprint": "89569ee6b9a350e6b2f124f4cb40f246bbf218ff7979d8b8c9245748bf37bfdd",
+ "observation": "Pharmacy counter: the pharmacist slips a plain box into a paper bag; prescription tablet in the left foreground. Inspected at 25% (contact sheet), 100% (full panel) and 200% (face crops), and on the composed page.",
+ "views": {
+  "thumbnail": true,
+  "native": true,
+  "detail": true
+ },
+ "checks": {
+  "anatomy": {
+   "result": "pass",
+   "note": "Left hand holds the bag open, right hand places the box; fingers read correctly."
+  },
+  "contact": {
+   "result": "pass",
+   "note": "Box held between right fingers at the bag mouth; bag rests on the counter."
+  },
+  "objects": {
+   "result": "pass",
+   "note": "Unlabelled medicine boxes on the shelves; tablet card shows icons and bars only, no text or drug names."
+  },
+  "faces": {
+   "result": "pass",
+   "note": "Faces match the sheets at 200%; see faceIdentity."
+  },
+  "linework": {
+   "result": "pass",
+   "note": "Clean contours and flat cel shading matching the other pages."
+  },
+  "background": {
+   "result": "pass",
+   "note": "Shelves, plant and window give a pharmacy with light detail."
+  },
+  "continuity": {
+   "result": "pass",
+   "note": "Pharmacist matches the pharmacy-lab sheet (white coat, blue shirt, moustache)."
+  },
+  "lettering": {
+   "result": "pass",
+   "note": "Four-line caption top-left; the NEW PRESCRIPTION label just below it, over the tablet top bezel only, so the prescription card stays visible; clear of his face and both hands."
+  }
+ },
+ "issues": [
+  {
+   "category": "lettering",
+   "description": "Artwork review r14: the NEW PRESCRIPTION label hid the tablet and its prescription card; moved up to sit above the screen.",
+   "status": "resolved"
+  }
+ ],
+ "faceIdentity": {
+  "pharmacist": {
+   "reference": "works/auto-6294ee8a2094/assets/characters/pharmacy-lab.png",
+   "traits": [
+    "kind hooded eyes with crow's feet",
+    "thick arched eyebrows",
+    "round face with a neat moustache and dimpled cheeks; greying temples as on the pharmacy-lab sheet"
+   ],
+   "expression": "Warm reassuring smile"
+  }
+ }
+}

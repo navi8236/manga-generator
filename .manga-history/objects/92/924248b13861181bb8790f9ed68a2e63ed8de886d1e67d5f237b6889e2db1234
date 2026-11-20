@@ -1,0 +1,79 @@
+<!doctype html>
+<!-- Page 25: feature summary, typeset (not generated art). Features are taken only from the
+     "Product focus" lines of storyboard v3.0 (source/original.txt), with the user's 2026-11-13
+     status corrections: everything is available except on-premises, hybrid and air-gapped AI
+     (work in progress) and the cross-provider network (vision).
+     Rendered to assets/generated/page-25-*.png by tools/render-page25.cjs (1024x1536). -->
+<html lang="en"><head><meta charset="utf-8"><style>
+  html,body{margin:0;width:1024px;height:1536px;background:#fff;font-family:Inter,'DejaVu Sans',sans-serif;color:#24202f}
+  .panel{position:absolute;left:30px;width:964px;box-sizing:border-box;border:3px solid #000;padding:24px 30px;overflow:hidden}
+  .pa{top:16px;height:1080px}
+  .pb{top:1110px;height:346px;padding-top:18px}
+  header{display:flex;align-items:center;gap:18px;border-bottom:4px solid #FD006A;padding-bottom:14px;margin-bottom:18px}
+  header img{width:84px;height:84px}
+  h1{font-size:40px;margin:0;line-height:1.05;letter-spacing:-.5px}
+  h1 span{color:#FD006A}
+  .sub{font-size:18px;color:#555;margin-top:6px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px 18px}
+  .card{border:2px solid #f3c2d6;border-radius:14px;padding:14px 16px 12px;background:#fffafc}
+  .card h2{font-size:21px;margin:0 0 8px;color:#FD006A;display:flex;align-items:center;gap:8px}
+  .card h2 i{display:inline-block;width:10px;height:10px;border-radius:50%;background:#FD006A}
+  ul{margin:0;padding-left:20px;font-size:18px;line-height:1.42}
+  li{margin:0}
+  .wide{grid-column:1 / span 2}
+  .deploy{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:4px}
+  .chip{border-radius:10px;padding:10px 10px;font-size:17px;font-weight:600;text-align:center;line-height:1.25}
+  .chip small{display:block;font-weight:600;font-size:12.5px;letter-spacing:.5px;margin-top:3px}
+  .live{background:#FD006A;color:#fff}
+  .wip{background:#fff;color:#555;border:2px solid #9a9a9a}
+  .vision{border:2px dashed #FD006A;background:#fff}
+  .vision h2{color:#24202f}
+  footer{position:absolute;left:30px;right:30px;bottom:22px;font-size:14px;color:#666;display:flex;justify-content:space-between}
+</style></head><body><div class="panel pa">
+<header><img src="../source/brand/welbuk-logo-pink-transparent.png" alt="">
+  <div><h1>Everything <span>Welbuk</span> does</h1>
+  <div class="sub">One connected platform for clinic operations, healthcare teams and patients.</div></div></header>
+<div class="grid">
+  <div class="card"><h2><i></i>Appointments &amp; front desk</h2><ul>
+    <li>Online booking with doctor schedules</li><li>Slot allocation for booked visits and walk-ins</li>
+    <li>Prior, Walk-in and Emergency queue priorities</li><li>Live queue and token display</li>
+    <li>QR check-in with digital consent</li><li>Assisted registration at reception</li></ul></div>
+  <div class="card"><h2><i></i>Clinical care</h2><ul>
+    <li>Electronic medical records: history, allergies, medications, vitals</li>
+    <li>Vitals recording by nursing staff</li><li>Doctor consultation queue</li>
+    <li>SOAP-style clinical notes</li><li>Digital prescriptions and prescription history</li>
+    <li>Specialist referrals with status tracking</li></ul></div>
+  <div class="card"><h2><i></i>SpeakADoc voice documentation</h2><ul>
+    <li>Patient consent before recording</li><li>Voice transcription with speaker separation</li>
+    <li>AI-drafted clinical summary</li><li>Doctor review before the record is completed</li></ul></div>
+  <div class="card"><h2><i></i>Specialty workflows</h2><ul>
+    <li>Dentistry: odontogram, findings, treatment planning</li>
+    <li>Ophthalmology: visual acuity, refraction, eye charts</li>
+    <li>Dermatology: body-site mapping, clinical photos, visit comparison</li>
+    <li>Paediatrics: WHO growth charts, vaccinations, screening</li></ul></div>
+  <div class="card"><h2><i></i>Pharmacy &amp; laboratory</h2><ul>
+    <li>Batch-wise inventory with expiry tracking</li><li>FEFO dispensing and live stock levels</li>
+    <li>Lab orders linked to the patient</li><li>Sample collection and result review</li></ul></div>
+  <div class="card"><h2><i></i>Billing &amp; finance</h2><ul>
+    <li>Invoicing with applicable GST</li><li>QR and other payment methods, receipts</li>
+    <li>Balance tracking and refunds</li><li>Day-end reconciliation and financial reports</li></ul></div>
+  <div class="card"><h2><i></i>Staff &amp; administration</h2><ul>
+    <li>Role-based workflows and access control</li><li>Staff records and attendance (HRMS)</li>
+    <li>Leave and department management</li><li>Notifications across the team</li>
+    <li>Multi-facility operations</li></ul></div>
+  <div class="card"><h2><i></i>Patients &amp; families: Welbuk Health</h2><ul>
+    <li>Visit history, prescriptions and reports</li><li>Follow-up reminders on consented channels</li>
+    <li>Family profiles with guardian links</li><li>Children's vaccination and growth records</li></ul></div>
+</div></div>
+<div class="panel pb"><div class="grid">
+  <div class="card wide"><h2><i></i>Deployment</h2><div class="deploy">
+    <div class="chip live">Welbuk Cloud<small>AVAILABLE</small></div>
+    <div class="chip wip">On-premises<small>WORK IN PROGRESS</small></div>
+    <div class="chip wip">Hybrid<small>WORK IN PROGRESS</small></div>
+    <div class="chip wip">Air-gapped AI<small>WORK IN PROGRESS</small></div></div></div>
+  <div class="card wide vision"><h2>WELBUK VISION</h2><ul>
+    <li>A trusted network of connected clinics, specialists, pharmacies and laboratories</li>
+    <li>Cross-city care with consent-based record sharing</li></ul></div>
+</div>
+<footer><span>Doctors remain responsible for all clinical decisions. Screens in this comic are illustrative.</span><span>welbuk.com</span></footer>
+</div></body></html>

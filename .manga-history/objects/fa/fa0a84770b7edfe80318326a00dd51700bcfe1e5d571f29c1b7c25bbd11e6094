@@ -1,0 +1,294 @@
+// Build works/welbuk-24/workflow.json (page render mode) from the storyboard v3.0 dialogue, the
+// detected panels (workflow/page-panels.json) and the faces measured on the composed pages.
+// Usage (repository root): node works/welbuk-24/tools/build-script.mjs
+// Dialogue text is verbatim from source/original.txt. Balloons are placed automatically in each
+// panel's top band (left to right, wrapping to a new row), near the speaker for speech; an item
+// may override placement with x/dy (panel-local).
+import fs from 'node:fs';
+import { box, horizontalAdvance, createLettering, segmentEntry } from '../../../src/lettering.mjs';
+import { pages as artPages } from './pages.mjs';
+
+const W = 'works/welbuk-24';
+const cfgFile = `${W}/workflow.json`;
+const cfg = JSON.parse(fs.readFileSync(cfgFile, 'utf8'));
+const panelsData = JSON.parse(fs.readFileSync(`${W}/workflow/page-panels.json`, 'utf8'));
+const old = JSON.parse(fs.readFileSync('works/auto-6294ee8a2094/workflow.json', 'utf8'));
+
+// ---- cast -------------------------------------------------------------------------------
+const keep = ['ananya', 'meera', 'ravi', 'nurse', 'raman', 'priya', 'pharmacist', 'labtech', 'specialist', 'partner', 'child'];
+const cast = {};
+for (const k of keep) {
+  cast[k] = JSON.parse(JSON.stringify(old.cast[k]));
+  if (cast[k].faceDesign?.reference) cast[k].faceDesign.reference = cast[k].faceDesign.reference.replace('works/auto-6294ee8a2094/', 'works/welbuk-24/');
+}
+const extra = {
+  family: ['Family member', 'Son of the unwell elderly man, Indian man in his 40s, checked shirt (manga supplement, page 4).'],
+  urgent: ['Unwell elderly man', 'Indian man in his 70s, bald with a grey beard, white kurta and veshti (manga supplement; not Mr. Raman).'],
+  dentist: ['Dentist', 'Indian woman, 40s, short bob, white coat over a navy top, mask lowered (manga supplement, page 9).'],
+  dentalpt: ['Dental patient', 'Indian man, late 20s, curly hair, yellow T-shirt (manga supplement, page 9).'],
+  ophth: ['Ophthalmologist', 'Indian man, 40s, thin glasses, white coat over a maroon shirt (manga supplement, page 10).'],
+  derm: ['Dermatologist', 'Indian woman, 40s, low ponytail, white coat over a purple kurta (manga supplement, page 11).'],
+  dermpt: ['Dermatology patient', 'Indian woman, 50s, grey-streaked bun, green sari (manga supplement, page 11).'],
+  paed: ['Paediatrician', 'Indian man, 30s, white coat over a light yellow shirt (manga supplement, page 12).'],
+  mother: ['Mother', 'Indian woman, early 30s, long braid, red-and-gold churidar (manga supplement, page 12).'],
+  admin: ['Clinic Administrator', 'Indian man, 40s, glasses, navy blazer over a white shirt (manga supplement, pages 18-20).'],
+};
+const TR = {
+  family: ['Worried narrow eyes', 'Thick dark eyebrows', 'Oval face with a short stubble beard'],
+  urgent: ['Tired drooping eyes', 'Sparse white eyebrows', 'Bald head with a full grey beard'],
+  dentist: ['Bright round eyes', 'Soft arched eyebrows', 'Round face framed by a short bob'],
+  dentalpt: ['Squinting expressive eyes', 'Thick eyebrows', 'Curly hair and a short beard'],
+  ophth: ['Calm eyes behind thin rectangular glasses', 'Straight dark eyebrows', 'Long face with a trimmed beard'],
+  derm: ['Large gentle eyes', 'Thin arched eyebrows', 'Oval face with long hair in a low ponytail'],
+  dermpt: ['Kind eyes with smile lines', 'Light greying eyebrows', 'Round face with grey-streaked hair in a bun'],
+  paed: ['Friendly wide eyes', 'Straight dark eyebrows', 'Round face with a broad smile'],
+  mother: ['Almond eyes', 'Arched eyebrows', 'Oval face with a long braid'],
+  admin: ['Focused eyes behind rectangular glasses', 'Straight eyebrows', 'Square face with short neat hair'],
+};
+const SUP = `${W}/assets/characters/supporting-cast.png`;
+for (const [k, [name, description]] of Object.entries(extra))
+  cast[k] = { name, description, faceDesign: { traits: TR[k], reference: SUP, settingBasis: 'Storyboard v3.0 names only the role; appearance is a manga supplement fixed by the accepted generated page (crop sheet).' } };
+cast.narration = { name: 'Narration', kind: 'caption' };
+cast.label = { name: 'Label', kind: 'caption', variant: 'label' };
+const { tailGeometry } = createLettering(cast);
+
+// ---- measured faces (final page coordinates): [fx, fy, fw, fh, ax, ay, kind?] ------------
+// Faces were measured on grids composed at scale 0.95 (offset 25.6, 16); the layout now uses
+// 0.94 (offset 30.72, 16) to stay inside the safe area, so measured points are converted.
+const M = (v, o) => Math.round(o.n + ((v - o.o) * 0.94) / 0.95);
+const MX = (v) => M(v, { o: 25.6, n: 30.72 }), MY = (v) => M(v, { o: 16, n: 16 }), MS = (v) => Math.round((v * 0.94) / 0.95);
+// Measured boxes ran from forehead to mouth; widen by 20% and extend 35% down so chins, jaws and
+// hair edges are also kept clear of lettering.
+const GROW = ([x, y, w, h]) => [Math.round(x - w * 0.1), y, Math.round(w * 1.2), Math.round(h * 1.35)];
+const F = (fx, fy, fw, fh, ax, ay, kind) => ({ face: GROW([MX(fx), MY(fy), MS(fw), MS(fh)]), anchor: [MX(ax), MY(ay)], ...(kind ? { kind } : {}) });
+const OFF = { kind: 'offscreen' };
+
+// Faces measured directly on the 0.94 layout (pages regenerated after the layout change).
+const G = (fx, fy, fw, fh, ax, ay, kind) => ({ face: GROW([fx, fy, fw, fh]), anchor: [ax, ay], ...(kind ? { kind } : {}) });
+const SP = {
+  '01': [{}, { meera: F(273, 620, 67, 80, 309, 687) }, { meera: F(907, 727, 26, 26, 920, 750), ananya: F(713, 673, 67, 74, 747, 733) }, { ananya: F(227, 1107, 100, 80, 280, 1180), meera: F(747, 1200, 53, 67, 775, 1260) }],
+  '02': [{ ananya: F(143, 167, 93, 80, 209, 240), meera: F(296, 173, 80, 80, 336, 247) }, { ananya: OFF }, { meera: F(376, 627, 80, 93, 423, 707), ananya: F(763, 547, 66, 80, 795, 615) }, { ananya: F(356, 1067, 73, 93, 396, 1147), meera: F(569, 1093, 74, 94, 606, 1180) }],
+  '03': [{ ravi: F(380, 140, 107, 127, 440, 253) }, { priya: F(387, 513, 73, 87, 440, 593), meera: F(667, 567, 73, 86, 704, 647) }, { meera: F(47, 933, 126, 214, 147, 1093, 'head') }, { ananya: F(887, 1013, 46, 54, 913, 1060), ravi: F(560, 1040, 80, 107, 600, 1130), priya: F(720, 1053, 80, 107, 760, 1150) }],
+  '04': [{ family: F(263, 127, 80, 86, 296, 200), urgent: F(163, 167, 73, 86, 200, 240), meera: F(636, 147, 73, 80, 683, 220) }, {}, { ananya: F(883, 600, 53, 67, 912, 660), nurse: F(629, 607, 67, 73, 660, 670) }, { meera: F(403, 1100, 80, 100, 443, 1187) }],
+  '05': [{ ravi: F(167, 240, 93, 127, 213, 353) }, {}, { raman: F(600, 553, 60, 87, 660, 627), meera: F(787, 560, 66, 87, 820, 637) }, { ravi: F(320, 1100, 80, 100, 367, 1187), raman: F(573, 1107, 80, 93, 613, 1190) }],
+  '06': [{ meera: F(129, 167, 80, 100, 176, 260) }, { nurse: F(583, 133, 73, 94, 629, 220), ravi: F(849, 180, 74, 93, 886, 265) }, { ananya: F(349, 587, 94, 106, 396, 680) }, {}],
+  '07': [{ ananya: F(253, 133, 74, 87, 293, 213) }, { ravi: F(220, 573, 107, 127, 287, 693), ananya: F(680, 587, 80, 93, 720, 670) }, { ananya: F(47, 920, 120, 227, 160, 1093, 'head') }, { ananya: F(627, 1053, 93, 94, 673, 1140) }],
+  '08': [{ ananya: F(209, 140, 100, 107, 276, 240), ravi: F(683, 147, 93, 113, 723, 247) }, { ananya: F(116, 627, 93, 100, 163, 715) }, {}, { ananya: F(356, 1067, 113, 120, 423, 1173) }],
+  '09': [{ dentalpt: F(113, 200, 100, 133, 180, 320), dentist: F(360, 147, 87, 120, 405, 260) }, { dentist: F(527, 140, 126, 193, 640, 320, 'head') }, { dentist: OFF }, { dentist: F(160, 1013, 153, 160, 260, 1147), dentalpt: F(787, 1067, 93, 200, 807, 1247) }],
+  '10': [{ priya: F(83, 333, 80, 107, 136, 427), ophth: F(376, 300, 80, 140, 416, 430) }, { ophth: F(536, 173, 93, 140, 603, 300) }, {}, { ophth: F(209, 1027, 147, 160, 290, 1170), priya: F(669, 1067, 94, 120, 716, 1173) }],
+  '11': [{ derm: F(300, 147, 93, 113, 346, 250), dermpt: F(667, 167, 93, 106, 693, 267) }, { derm: F(40, 507, 160, 240, 173, 693, 'head') }, {}, { derm: F(227, 1027, 160, 146, 333, 1160) }],
+  '12': [{ mother: F(229, 120, 94, 113, 289, 227), paed: F(663, 100, 93, 113, 710, 205) }, { paed: F(583, 473, 73, 87, 623, 553) }, {}, { mother: F(809, 973, 87, 107, 856, 1073), paed: F(576, 947, 107, 133, 630, 1070) }],
+  '13': [{ ananya: F(153, 167, 67, 80, 187, 240) }, {}, { ananya: F(360, 560, 100, 107, 413, 660) }, { ravi: F(440, 947, 120, 186, 507, 1113) }],
+  '14': [{ pharmacist: F(309, 127, 140, 160, 383, 273) }, {}, { pharmacist: F(583, 560, 113, 133, 669, 680) }, {}],
+  '15': [{ ananya: G(133, 307, 94, 120, 187, 413) }, { labtech: G(607, 253, 66, 87, 647, 320) }, { ravi: G(587, 637, 86, 96, 647, 707), labtech: G(867, 587, 66, 86, 896, 667) }, { ananya: G(313, 980, 147, 187, 407, 1133) }],
+  '16': [{ ananya: F(283, 127, 93, 113, 343, 233), ravi: F(723, 147, 93, 120, 770, 255) }, {}, { ananya: OFF }, {}],
+  '17': [{ meera: F(540, 187, 73, 86, 580, 267), ravi: F(247, 80, 66, 107, 290, 175) }, {}, { ravi: F(607, 547, 80, 133, 640, 667) }, { meera: F(220, 1087, 100, 113, 273, 1193) }],
+  '18': [{}, { meera: F(603, 193, 80, 94, 649, 280) }, {}, { ananya: F(383, 1013, 86, 107, 429, 1113), meera: F(676, 1067, 73, 93, 712, 1150) }],
+  '19': [{ admin: G(127, 180, 82, 87, 196, 253) }, {}, { admin: G(809, 607, 74, 93, 827, 687) }, {}],
+  '20': [{}, { nurse: F(123, 640, 86, 107, 183, 740) }, { admin: F(623, 620, 100, 113, 683, 720) }, {}],
+  '21': [{ ravi: F(380, 113, 93, 114, 433, 220) }, {}, { ravi: F(160, 1000, 87, 107, 213, 1100) }, { ananya: F(773, 987, 80, 106, 813, 1087) }],
+  '22': [{ ravi: F(149, 153, 94, 107, 196, 253), partner: F(323, 187, 93, 100, 370, 280) }, { partner: F(523, 133, 106, 307, 609, 307, 'head') }, {}, {}],
+  '23': [{ ravi: G(300, 320, 140, 173, 380, 460) }, { ravi: G(740, 187, 67, 86, 773, 260) }, {}, { specialist: G(247, 1027, 120, 146, 320, 1133) }],
+  '24': [{}, {}, {}, {}],
+};
+
+// ---- dialogue (verbatim storyboard text) ------------------------------------------------
+const N = (text, o = {}) => ({ speaker: 'narration', text, ...o });
+const L = (text, o = {}) => ({ speaker: 'label', text, ...o });
+const S = (speaker, text, o = {}) => ({ speaker, text, ...o });
+const STAGING = 'STAGING DEMONSTRATION';
+const D = {
+  '01': [[N("A busy day at Dr. Ananya's clinic.")], [S('meera', "Appointments, patient details, follow-ups... there's always something to manage!")], [S('meera', "The patients have gone home... but we're still here.")], [S('ananya', 'Our time should belong to patients, not paperwork.')]],
+  '02': [[S('ananya', "Meera, I think we've found a better way."), S('meera', 'Tell me more, Doctor!')], [S('ananya', 'Welbuk connects clinic operations, staff workflows and patient care.'), L('Screens shown are illustrative.', { fontSize: 20, place: 'bottom-right' })], [N('A few weeks later, their clinic is powered by Welbuk.'), S('meera', 'Appointments, records and follow-ups are easier to manage!')], [S('ananya', 'Now we can focus more on our patients.')]],
+  '03': [[S('ravi', 'I can choose a doctor and book a convenient slot!')], [S('priya', "I don't have an appointment. Can I still see the doctor?"), S('meera', 'Of course. Let me check the available slots.')], [S('meera', 'Booked visits and walk-ins are organized in one schedule.')], [S('ananya', "The team knows who's coming and can prepare in advance.")]],
+  '04': [[S('family', 'He needs urgent medical attention!'), S('meera', "I'll alert the clinical team immediately.")], [N('Welbuk supports emergency-priority queue management.')], [S('ananya', 'Bring him in for assessment.')], [S('meera', 'The queue is updated, and everyone knows the next step.')]],
+  '05': [[S('ravi', 'I can check in using this QR code!')], [N('Registration and consent become part of a connected workflow.')], [S('raman', "I'm not very comfortable using my phone.", { fontSize: 20, cols: ["I'm not very comfortable", 'using my phone.'] }), S('meera', "No problem, sir. I'll help you register.", { fontSize: 20, cols: ['No problem, sir.', "I'll help you register."] })], [S('ravi', 'That was much easier than filling out forms!')]],
+  '06': [[S('meera', 'The front desk can track who has arrived.')], [S('nurse', "Ravi's vitals are recorded.")], [S('ananya', 'I can review his observations before the consultation.')], [N('The right information reaches the right team members.')]],
+  '07': [[S('ananya', 'Hello, Ravi. What brings you in?')], [S('ravi', "I've been feeling unusually tired lately.")], [S('ananya', 'Let me review your medical history.')], [N('Clinical information stays organized for the visit and future follow-ups.')]],
+  '08': [[L(STAGING), S('ananya', 'May I use a voice assistant to help draft my notes?'), S('ravi', 'Yes, I consent.')], [N('SpeakADoc is designed to support clinical documentation.')], [N('The assistant prepares a draft from the conversation.')], [S('ananya', "I'll review everything before completing the record.")]],
+  '09': [[S('dentalpt', 'This tooth hurts when I chew.')], [S('dentist', "Let's record the exact tooth and what we find.")], [S('dentist', 'We can document the findings and plan the next steps.')], [S('dentalpt', 'Now I understand which tooth needs attention!')]],
+  '10': [[S('priya', 'Distant objects have started looking blurry.')], [S('ophth', "Let's check your vision carefully.")], [N('Specialized findings can be documented in the appropriate clinical format.')], [S('priya', 'Thank you, Doctor. That makes sense.')]],
+  '11': [[S('dermpt', 'This patch looks different from my last visit.')], [S('derm', "Let's record the exact location.")], [N('Images can help document the finding when clinically appropriate.')], [S('derm', 'Now we can review how it has changed.')]],
+  '12': [[L(STAGING), S('mother', "I'd like to check my child's growth.")], [S('paed', "Let's review the measurements.")], [N("Welbuk is expanding structured children's health workflows.")], [S('mother', "It's helpful to see the information together.")]],
+  '13': [[S('ananya', "Let's go through the recommended next steps.")], [N('Prescriptions are recorded as part of the clinical visit.')], [S('ananya', "I'll review the prescription before issuing it.")], [S('ravi', "I won't need to worry about misplacing the paper.")]],
+  '14': [[S('pharmacist', "Let's check the medicine stock.")], [N('Inventory is tracked by batch and expiry.')], [S('pharmacist', "We'll dispense from the appropriate batch.")], [N('Dispensing and inventory remain connected.')]],
+  '15': [[S('ananya', "I'd like you to complete these tests.")], [S('labtech', 'The test order is here.')], [S('ravi', 'Will the clinic receive the report?', { cols: ['Will the clinic', 'receive the report?'] }), S('labtech', 'The report will be updated through the workflow.', { fontSize: 20, cols: ['The report', 'will be', 'updated', 'through the', 'workflow.'] })], [N("Orders and reports remain linked to the patient's care.")]],
+  '16': [[L(STAGING), S('ananya', "I'd like a specialist to review your case.")], [N('Welbuk is developing more structured referral workflows.')], [S('ananya', "This could help us track the referral's progress.")], [N('The goal is better coordination between care providers.')]],
+  '17': [[S('meera', 'Your consultation bill is ready.')], [N('Billing information is organized in one place.')], [S('ravi', "I'll pay by QR.")], [S('meera', "Payment received. Here's your receipt.")]],
+  '18': [[N("It's the end of another busy day.")], [S('meera', "Today's collections and balances are ready for review.")], [N('Clinic finances are easier to track and reconcile.')], [S('ananya', 'A much better way to end the day.')]],
+  '19': [[S('admin', "We're expanding. Can one platform support our locations?")], [L('CLOUD — AVAILABLE'), N('Welbuk Cloud is available today.')], [S('admin', 'What if a hospital needs a different deployment model?', { fontSize: 22 }), N('On-premises and hybrid solutions are work in progress.', { fontSize: 22 }), L('ON-PREMISES — WORK IN PROGRESS', { fontSize: 20, cols: ['ON-PREMISES —', 'WORK IN PROGRESS'] }), L('HYBRID — WORK IN PROGRESS', { fontSize: 20, cols: ['HYBRID —', 'WORK IN PROGRESS'] })], [L('AIR-GAPPED AI — WORK IN PROGRESS'), N('Air-gapped AI solutions are also a work in progress.')]],
+  '20': [[N('Good care depends on the people behind it.')], [S('nurse', 'My attendance is recorded.')], [S('admin', 'I can review staff records and requests here.')], [N('Every role has its responsibilities and appropriate access.')]],
+  '21': [[S('ravi', 'I can keep track of my visit details.')], [N('Relevant health information can remain accessible to the patient.')], [S('ravi', 'I almost forgot my follow-up!')], [S('ananya', "Welcome back, Ravi. Let's review your progress.")]],
+  '22': [[S('ravi', "Healthcare isn't just about my appointments.")], [S('partner', 'Each of us has different health needs.')], [L('STAGING'), N("New family and children's wellness capabilities are being developed.")], [L('WELBUK VISION'), N('The vision: a more complete way to manage family wellness.')]],
+  '23': [[L('WELBUK VISION'), N("Life doesn't always happen in one city.")], [S('ravi', 'What if I could find trusted connected care here too?')], [N('The vision is to enable appropriate record sharing with patient permission.')], [S('specialist', "Let's continue your care with the information you've chosen to share.")]],
+  '24': [[N('Behind every patient visit is an entire care team.')], [N('Welbuk Practice — Clinic and hospital operations.', { fontSize: 20 }), N('Welbuk Care — Role-based tools for healthcare staff.', { fontSize: 20 }), N('Welbuk Health — Connected patient and family care.', { fontSize: 20 })], [L('WELBUK VISION'), N('Our vision is a trusted, connected healthcare ecosystem.')], [L('Building a Connected Healthcare Ecosystem', { fontSize: 22 }), N('Technology supports the work. People deliver the care.'), L('Better workflows. Better coordination. More time for care.', { fontSize: 20 }), L('welbuk.com', { fontSize: 20 })]],
+};
+// Manual placement overrides: OV[page][panel][index] = { x, dy } (panel-local), set after inspection.
+// Busyness per 8 px cell of the composed page (tools/busy-map.py). A cell counts as busy if it or a
+// neighbour has detail (dilated by one cell); balloons may cover only a small share of busy cells.
+const BUSY = JSON.parse(fs.readFileSync(`${W}/workflow/busy-map.json`, 'utf8'));
+function busyIndex(pid) {
+  const m = BUSY[pid];
+  const raw = m.rows.map((r) => [...r].map((ch) => parseInt(ch, 16) >= 4));
+  const dil = raw.map((r, y) => r.map((_, x) => {
+    for (let dy = -1; dy <= 1; dy++) for (let dx = -1; dx <= 1; dx++) if (raw[y + dy]?.[x + dx]) return 1;
+    return 0;
+  }));
+  const S = Array.from({ length: m.h + 1 }, () => new Int32Array(m.w + 1));
+  for (let y = 0; y < m.h; y++) for (let x = 0; x < m.w; x++) S[y + 1][x + 1] = dil[y][x] + S[y][x + 1] + S[y + 1][x] - S[y][x];
+  return ([bx, by, bw, bh]) => {
+    const c = m.cell, x0 = Math.max(0, Math.floor(bx / c)), y0 = Math.max(0, Math.floor(by / c));
+    const x1 = Math.min(m.w, Math.ceil((bx + bw) / c)), y1 = Math.min(m.h, Math.ceil((by + bh) / c));
+    const n = (x1 - x0) * (y1 - y0);
+    return n ? (S[y1][x1] - S[y0][x1] - S[y1][x0] + S[y0][x0]) / n : 1;
+  };
+}
+// Extra keep-clear rectangles (page coordinates) per panel, e.g. the composited logo.
+const PROTECT = { '24': { 3: [[838, 946, 132, 132]] } };
+const OV = JSON.parse(fs.existsSync(`${W}/tools/overrides.json`) ? fs.readFileSync(`${W}/tools/overrides.json`, 'utf8') : '{}');
+
+// ---- wrapping and placement ----------------------------------------------------------------
+function wrap(text, maxPx, fs) {
+  const scale = (fs || 26) / 26;
+  const words = text.split(' ');
+  const lines = [];
+  let cur = '';
+  for (const w of words) {
+    const cand = cur ? cur + ' ' + w : w;
+    if (cur && horizontalAdvance(cand) * scale > maxPx) { lines.push(cur); cur = w; } else cur = cand;
+  }
+  if (cur) lines.push(cur);
+  return lines.map((s, i) => (i < lines.length - 1 ? s + ' ' : s));
+}
+const ROLES = ['提示', '始動', '反応', '期待', '転換', '決定', '余韻', '笑い'];
+const roleFor = (pi, n) => (pi === 0 ? '提示' : pi === n - 1 ? '余韻' : pi === 1 ? '始動' : '反応');
+
+const pages = [];
+for (const art of artPages) {
+  const pid = art.id;
+  const pd = panelsData[pid];
+  const busy = busyIndex(pid);
+  // Panels in the same row must share an exact top edge (the plan's reading-order rule); snap
+  // tops that differ by a few pixels of detection noise, keeping each panel's bottom edge.
+  const rects = pd.targetRects.map((r) => [...r]);
+  for (let i = 1; i < rects.length; i++)
+    for (let j = 0; j < i; j++)
+      if (Math.abs(rects[i][1] - rects[j][1]) <= 4 && rects[i][1] !== rects[j][1]) {
+        const top = Math.min(rects[i][1], rects[j][1]);
+        for (const r of [rects[i], rects[j]]) { r[3] += r[1] - top; r[1] = top; }
+      }
+  const panels = rects.map((rect, pi) => {
+    const [px, py, pw, ph] = rect;
+    const speakers = JSON.parse(JSON.stringify(SP[pid][pi] || {}));
+    for (const q of Object.values(speakers)) if (q.face) {
+      const [fx, fy, fw, fh] = q.face, x0 = Math.max(fx, px), y0 = Math.max(fy, py);
+      q.face = [x0, y0, Math.min(fx + fw, px + pw) - x0, Math.min(fy + fh, py + ph) - y0];
+    }
+    const items = D[pid][pi];
+    const placed = [];
+    const dialogue = items.map((it, idx) => {
+      const isSpeech = it.speaker !== 'narration' && it.speaker !== 'label';
+      const maxW0 = Math.min(isSpeech ? 520 : 600, pw - 40);
+      let d, bw, bh, x, dy;
+      outer: for (const LIM of [0.03, 0.08, 0.15, 0.25, 0.4, 1.01]) for (const f of [1, 0.8, 0.65, 0.5, 0.42, 0.36]) {
+      const fsz = it.fontSize || 21;
+      d = { speaker: it.speaker, text: it.text, textColumns: it.cols ? it.cols.map((c, i, arr) => (i < arr.length - 1 ? c + ' ' : c)) : wrap(it.text, Math.round(maxW0 * f), fsz), textDirection: 'horizontal', side: 'left' };
+      d.fontSize = fsz;
+      d.compact = true;
+      [, , bw, bh] = box({ rect }, { ...d, x: 0, dy: 0 });
+      const ov = OV[pid]?.[pi]?.[idx];
+      const faces = [...Object.values(speakers).filter((q) => q.face).map((q) => q.face), ...(PROTECT[pid]?.[pi] || [])];
+      const hit = (a, b) => a[0] < b[0] + b[2] + 6 && b[0] < a[0] + a[2] + 6 && a[1] < b[1] + b[3] + 6 && b[1] < a[1] + a[3] + 6;
+      if (ov) ({ x, dy } = ov);
+      else if (it.place === 'bottom-right') { x = pw - bw - 12; dy = ph - bh - 12; }
+      else {
+        // Search the panel for the best free spot (page coordinates), then store panel-local x/dy.
+        const sp = speakers[it.speaker];
+        const prev = placed.length ? placed[placed.length - 1] : null;
+        let best = null;
+        {
+        for (let yy = py + 8; yy + bh <= py + ph - 8; yy += 6)
+          for (let xx = px + 8; xx + bw <= px + pw - 8; xx += 6) {
+            const b = [xx, yy, bw, bh];
+            if (faces.some((f) => hit(b, f))) continue;
+            const bz = busy(b);
+            if (bz > LIM) continue;
+            if (placed.some((q) => hit(b, [q[0] + px, q[1] + py, q[2], q[3]]))) continue;
+            if (prev) {
+              // The plan's reading-order rule: not higher than the previous box, and to its right or 80 px lower.
+              const [qx, qy] = [prev[0] + px, prev[1] + py];
+              if (!(yy >= qy && (xx >= qx || yy >= qy + 80))) continue;
+            }
+            // Tails: this item's tail must not cross a face or an earlier box; earlier tails must not cross this box.
+            const pobj = { id: `${pid}-${pi + 1}`, rect, speakers };
+            let bad = false;
+            if (isSpeech && sp && sp.kind !== 'offscreen') {
+              const t = tailGeometry(pobj, { ...d, x: xx - px, dy: yy - py });
+              if (t && (faces.some((f) => segmentEntry(t.base, t.tip, f) !== null) || placed.some((q) => segmentEntry(t.base, t.tip, [q[0] + px, q[1] + py, q[2], q[3]]) !== null))) bad = true;
+            }
+            if (!bad) for (const q of placed) if (q[4] && segmentEntry(q[4].base, q[4].tip, b) !== null) { bad = true; break; }
+            if (bad) continue;
+            let score;
+            if (isSpeech && sp?.anchor && sp.kind !== 'offscreen') {
+              const cx = xx + bw / 2, by = yy + bh;
+              score = Math.hypot(cx - sp.anchor[0], by - sp.anchor[1]) + (by > sp.anchor[1] ? 400 : 0);
+            } else score = (yy - py) * 2 + (xx - px) * 0.6;
+            score += bz * 3000;
+            if (!best || score < best.score) best = { score, xx, yy, bz };
+          }
+        }
+        if (!best) continue;
+        x = best.xx - px; dy = best.yy - py;
+      }
+      break outer;
+      }
+      if (x === undefined) { x = 10; dy = 10; console.log(`NO SPOT ${pid}-${pi + 1}#${idx} ${it.speaker}`); }
+      const cover = busy([px + x, py + dy, bw, bh]);
+      if (cover > 0.04) console.log(`COVERS DETAIL ${(cover * 100).toFixed(0)}% ${pid}-${pi + 1}#${idx} ${it.speaker}`);
+      const tq = isSpeech && speakers[it.speaker] && speakers[it.speaker].kind !== 'offscreen' ? tailGeometry({ id: `${pid}-${pi + 1}`, rect, speakers }, { ...d, x, dy }) : null;
+      placed.push([x, dy, bw, bh, tq]);
+      return { ...d, x, dy };
+    });
+    return {
+      id: `${pid}-${pi + 1}`,
+      order: pi + 1,
+      role: roleFor(pi, pd.targetRects.length),
+      beat: art.panels[pi].split(':')[0].slice(0, 60),
+      rect,
+      scene: art.panels[pi],
+      speakers,
+      dialogue,
+      ...(PROTECT[pid]?.[pi] ? { protected: PROTECT[pid][pi] } : {}),
+    };
+  });
+  const page = { id: pid, section: 'main', purpose: `Storyboard v3.0 page ${Number(pid)}.`, expectation: 'Next workflow step.', panels };
+  if (pid === '01') page.brand = false;
+  pages.push(page);
+}
+assert(pages.every((p) => p.panels.every((q) => ROLES.includes(q.role))));
+function assert(v) { if (!v) throw new Error('assertion failed'); }
+
+cfg.renderMode = 'page';
+cfg.readingDirection = 'left-to-right';
+cfg.language = 'en';
+cfg.narrativeDesign = { ...old.narrativeDesign };
+cfg.quality = old.quality;
+const sheets = ['main-cast.png', 'vision-cast.png', 'nurse.png', 'checkin-patients.png', 'pharmacy-lab.png', 'supporting-cast.png'];
+cfg.references = sheets.map((f) => `${W}/assets/characters/${f}`);
+cfg.referenceRoles = Object.fromEntries(sheets.map((f) => [`${W}/assets/characters/${f}`, old.referenceRoles[`works/auto-6294ee8a2094/assets/characters/${f}`] || 'identity: face crops of the one-off supporting characters taken from the accepted generated pages (no separate sheet).']));
+cfg.sections = { main: { summary: 'Dr. Ananya\'s neighbourhood clinic in Tamil Nadu before and after adopting Welbuk; specialty clinics, pharmacy, lab, home and a future vision (storyboard v3.0).', location: 'The clinic and its rooms; specialist clinics; Ravi\'s home; another city (vision).', costumes: {}, objects: {} } };
+cfg.title = 'Welbuk — A Better Way to Care';
+cfg.cast = cast;
+cfg.pages = pages;
+cfg.style = 'Full-colour approachable Indian slice-of-life manga, clean line art, soft flat cel shading, warm natural light; hot-pink (#FD006A) and white Welbuk interface accents from page 2. Art is text-free; lettering, status tabs and the real logo are composited.';
+cfg.brand = {
+  accent: '#FD006A',
+  labelFill: '#FFF0F6',
+  captionBar: true,
+  fontFamily: 'Inter, DejaVu Sans, sans-serif',
+  footer: true,
+  logo: 'source/brand/welbuk-logo-pink-transparent.png',
+  logos: [{ page: '24', x: 844, y: 952, size: 120 }],
+};
+fs.writeFileSync(cfgFile, JSON.stringify(cfg, null, 2) + '\n');
+console.log(`Wrote ${pages.length} pages, ${pages.reduce((a, p) => a + p.panels.length, 0)} panels, ${pages.reduce((a, p) => a + p.panels.reduce((b, q) => b + q.dialogue.length, 0), 0)} text items`);

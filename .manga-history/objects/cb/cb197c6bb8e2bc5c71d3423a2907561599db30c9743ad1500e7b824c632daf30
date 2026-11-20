@@ -1,0 +1,86 @@
+{
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-07-6f815f821fc3f87ae6d9ebe9c154bfe5b4034e9b25f32c4fd4f0bedda19374c4.json",
+  "reviewer": {
+    "role": "subagent",
+    "task": "claude-code-agent:manga-reviewer:aaaee08dce305c752",
+    "reportedTask": null,
+    "taskSource": "Agent ID returned by the Claude Code Agent tool to the parent."
+  },
+  "status": "pass",
+  "observations": [
+    "What I read: the request JSON in full. With Read I viewed storyboards-unnumbered/page-07.png and storyboards/page-07.png, then review/page-07.png and assets/panels/07-1 to 07-4.png. I read the full text of storyboards-unnumbered/page-07.svg and the element list of storyboards/page-07.svg. I also read source/original.txt. All files were readable. The runtime gave me no task ID, so task is null.",
+    "PNG against SVG: both SVGs put the 07-2 label rect at x24 y764 268x106 and the 07-4 caption at x32 y1138 640x74. The tails end at (361,209) for Meera in 07-1, (363.5,712) for Ravi in 07-2 and (773.6,735) for Meera in 07-3. Both PNGs show exactly these. The numbered PNG adds only the guide captions '1 / Meera introduces Welbuk Health' to '4 / Ravi leaves, reassured'.",
+    "Text against source lines 47-50 and workflow.json 07-1 to 07-4: all verbatim. The 07-2 'WELBUK HEALTH for patients' label is a manga product tag, consistent with the product labels on pages 2 and 8.",
+    "Changed placement 07-2: the label now sits at mid-left (y 764-870), directly under Ravi's question balloon (y 568-706), and is read after it. It no longer reaches the bottom-left area of the panel. Its bottom edge is at 870, above protected hand box [250,876,50,145], and its right edge (292) is left of protected phone box [297,805,115,208].",
+    "Changed placement 07-4: the caption's right edge is now at x 672, left of protected waving-hand box [678,1198,52,64].",
+    "First reader, the 'WELBUK HEALTH' label touches the left panel border: it is flush with the border (x 24) by design, as a tag. It is not read as speech, and the first reader also read it after the question. Acceptable.",
+    "First reader, the 07-3 'ravi' marker and its name crossing the panel border, and the clipped 'anany' in 07-4: these are placeholder-label artefacts. Ravi in 07-3 is a back-of-head 'head' anchor at x 970. Neither appears on the composed page (review/page-07.png). No action needed.",
+    "First reader, the walkthrough is skipped before the farewell: the source moves straight from 'Let's walk through what is available to you.' (line 49) to 'Ravi leaves, reassured' with the caption (line 50). In the art, 07-4 shows Ravi outside waving, with his phone and bag, and Ananya and Meera waving from the doorway. The caption 'A smoother visit...' marks the ellipsis. Acceptable and true to the source."
+  ],
+  "issues": [],
+  "readingReview": {
+    "withoutGuides": true,
+    "firstReadingHash": "3006ca4e2d1a73e2da6249715767762761f20e5d5c217b55853f452a35febcc8",
+    "predictedOrder": [
+      {
+        "panel": "07-1",
+        "dialogue": [
+          1
+        ]
+      },
+      {
+        "panel": "07-2",
+        "dialogue": [
+          1,
+          2
+        ]
+      },
+      {
+        "panel": "07-3",
+        "dialogue": [
+          1
+        ]
+      },
+      {
+        "panel": "07-4",
+        "dialogue": [
+          1
+        ]
+      }
+    ],
+    "observations": [
+      "Unnumbered ネーム: Meera's explanation, then Ravi's question, then the WELBUK HEALTH label just below it, then Meera's 'That's the idea...' at the top of the right panel, then the bottom caption. One text group per tier. The question and its answer are adjacent and in order.",
+      "The 07-3 balloon's top (556) is level with the 07-2 balloon. The middle row is two side-by-side panels with a gutter, and the left panel is clearly read first. The label (x 24-292) is far from the 07-3 balloon (x 616+), so no jump is likely."
+    ],
+    "transitions": [
+      {
+        "from": "06-2",
+        "to": "07-1",
+        "observation": "From the consultation ('decide the right next steps together') back to the familiar reception after the page turn. Ravi has his bag on his shoulder and holds his phone, and Meera points at it. It reads as after the visit, on his way out."
+      },
+      {
+        "from": "07-1",
+        "to": "07-2",
+        "observation": "Meera points at the phone. 07-2 shows its calendar and heart screen as Ravi holds it in both hands and asks. His 'So...' is an inference from her words and the screen."
+      },
+      {
+        "from": "07-2",
+        "to": "07-3",
+        "observation": "Meera, on the left, answers facing right toward the back of Ravi's head and his phone. This keeps the Meera-left / Ravi-right placement of 07-1, and 'That's the idea.' answers the question directly."
+      },
+      {
+        "from": "07-3",
+        "to": "07-4",
+        "observation": "From the offer of a walkthrough, cut to outside: Ravi waving goodbye, with both staff waving from the glass door. The caption sums up the visit, and the walkthrough is an ellipsis."
+      },
+      {
+        "from": "07-4",
+        "to": "08-1",
+        "observation": "From the farewell to Ravi on a train under 'Tomorrow, care may take us beyond our hometown.'. The same shirt, bag and phone keep him recognisable, and 'Tomorrow'/'may' frame the jump as hypothetical."
+      }
+    ],
+    "comparison": "The first reader's order is the same as mine and the script's. The two lettering moves (07-2 label to mid-left, 07-4 caption shortened to x 672) do not change the reading order: the label still follows Ravi's question, and the caption is still the first and only text in 07-4. The first reader's remaining notes are placeholder artefacts that do not appear on the page, plus the source-faithful ellipsis of the walkthrough."
+  },
+  "fingerprint": "6f815f821fc3f87ae6d9ebe9c154bfe5b4034e9b25f32c4fd4f0bedda19374c4",
+  "recordedAt": "2026-11-12T12:04:04.412Z"
+}

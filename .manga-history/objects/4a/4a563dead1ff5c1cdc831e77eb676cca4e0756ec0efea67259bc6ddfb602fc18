@@ -1,0 +1,79 @@
+"""Extend a panel image's canvas by repeating its edge pixels (flat wall/floor), recorded.
+
+Usage: python3 -I pad-canvas.py SOURCE.png TOP_PX TARGET_ASPECT OUT_DIR [pad-sides|crop-bottom|crop-top]
+
+Adds TOP_PX rows above the image filled with the median wall colour (blended into the original top row), then widens the canvas equally on
+both sides by repeating each row's edge pixel until width/height == TARGET_ASPECT. This only
+suits panels whose top and side edges are plain flat colour (empty wall), and is used to make
+room for lettering without regenerating. Writes OUT_DIR/<panel>-<hash16>.png and a .json
+provenance record (source path and hash, parameters, output hash). It does not add or change
+any drawn content.
+"""
+import hashlib
+import json
+import os
+import sys
+
+import numpy as np
+from PIL import Image
+
+src, top, aspect, out_dir = sys.argv[1], int(sys.argv[2]), float(sys.argv[3]), sys.argv[4]
+mode = sys.argv[5] if len(sys.argv) > 5 else 'pad-sides'  # or 'crop-bottom'
+im = np.asarray(Image.open(src).convert('RGB'))
+# Top: fill with the median wall colour, blended into the original top row over BLEND rows so no
+# streaks from single-row repetition appear.
+BLEND = 120
+wall = np.median(im[:40].reshape(-1, 3), axis=0)
+pad = np.tile(wall, (top, im.shape[1], 1)).astype(np.float32)
+edge = im[0:1].astype(np.float32)
+# Blend only columns whose top pixel is close to the wall colour; columns where an object
+# (window frame, TV) touches the top edge are repeated upward unchanged when they are window
+# frames is not wanted, so they get a hard edge against the flat wall instead.
+near = (np.abs(edge[0] - wall).max(axis=1) < 28)[:, None]
+for i in range(min(BLEND, top)):
+    t = (i + 1) / (min(BLEND, top) + 1)
+    row = (1 - t) * wall + t * edge[0]
+    pad[top - min(BLEND, top) + i] = np.where(near, row, wall)
+im = np.concatenate([pad.round().astype(np.uint8), im], axis=0)
+h, w = im.shape[:2]
+crop = 0
+if mode == 'crop-top':
+    # Fill the panel width: trim rows from the top (plain wall) to reach the target aspect.
+    target_h = round(w / aspect)
+    crop = max(0, h - target_h)
+    im = im[crop:]
+    side = 0
+    target_w = w
+elif mode == 'crop-bottom':
+    # Restore the aspect by trimming rows from the bottom (like tilting the camera up).
+    target_h = round(w / aspect)
+    crop = max(0, h - target_h)
+    im = im[: h - crop]
+    side = 0
+    target_w = w
+else:
+    target_w = round(h * aspect)
+    side = max(0, (target_w - w) // 2)
+    im = np.pad(im, ((0, 0), (side, target_w - w - side), (0, 0)), mode='edge')
+out = Image.fromarray(im)
+panel = os.path.basename(src).split('-')[0] + '-' + os.path.basename(src).split('-')[1]
+tmp = os.path.join(out_dir, 'tmp-pad.png')
+out.save(tmp)
+data = open(tmp, 'rb').read()
+digest = hashlib.sha256(data).hexdigest()
+dest = os.path.join(out_dir, f'{panel}-pad-{digest[:16]}.png')
+os.replace(tmp, dest)
+record = {
+    'operation': 'canvas extension by edge-pixel repetition (no drawn content added)',
+    'source': os.path.relpath(src),
+    'sourceSha256': hashlib.sha256(open(src, 'rb').read()).hexdigest(),
+    'topPx': top,
+    'sidePx': [side, target_w - w - side],
+    'mode': mode,
+    'bottomCropPx': crop,
+    'targetAspect': aspect,
+    'size': list(out.size),
+    'sha256': digest,
+}
+json.dump(record, open(dest[:-4] + '.json', 'w'), indent=1)
+print(dest, out.size)

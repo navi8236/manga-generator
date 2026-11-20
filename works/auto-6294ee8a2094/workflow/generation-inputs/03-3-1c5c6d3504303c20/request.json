@@ -1,0 +1,23 @@
+{
+  "promptVersion": 2,
+  "panel": "03-3",
+  "project": "works/auto-6294ee8a2094/workflow.json",
+  "fingerprint": "c2797cc03d6c5d954dc68fe8e0fa4d6656c2bd29b616867e90faffa8bea40e3b",
+  "operation": "edit",
+  "sourceHash": "6294ee8a20944646ae8401695eeb8ea6cab68725127d488e11e4dae584d40adb",
+  "prompt": "TASK: Edit image 1. This is a local revision of the supplied artwork.\nINPUT IMAGES (in supplied order):\nImage 1: edit-target. Base image to edit; requested changes take precedence over preservation.\nCHANGE REQUEST:\nTwo continuity fixes only. (1) Meera's silver bangle is on the typing hand at the viewer's right, which is her LEFT wrist; move it to her RIGHT wrist (the typing hand at the viewer's left) and leave the left wrist bare. (2) Ravi's brown bag strap is over his near (right) shoulder with the bag at his near hip; move it so the strap is over his far LEFT shoulder and the bag hangs at his left side, mostly hidden behind his body. Keep both faces, Ravi's closed-eye smiling nod and motion marks, his hands and watch on the desk edge, the dark-blue phone lying on the desk, the monitor, keyboard, pen cup and background exactly as they are. No text.\nPRESERVE: retain all areas, identity traits, acting, clothing, composition and lettering space outside the requested change. The change request overrides preservation where necessary; repair connected anatomy, contact objects and occlusion together. Supporting images supply only their stated roles. Do not copy their entire scene or pose.\nOUTPUT: one edited image matching the target aspect. Do not add text, guide marks or a global style filter. Re-measure faces and mouths and inspect lettering space after adoption.",
+  "promptHash": "aedc9ad4ce9018dc4909c2c2e7d55badf1079f6d5d930a03e0545320300e6e46",
+  "references": [
+    {
+      "file": "works/auto-6294ee8a2094/workflow/generation-inputs/03-3-1c5c6d3504303c20/reference-0.png",
+      "hash": "68420116c8a6f3925b5533bc74b0fdab8c94c5940fde23c7c08752dd4edcd5be",
+      "original": "works/auto-6294ee8a2094/assets/generated/03-3-68420116c8a6f392.png",
+      "index": 1,
+      "kind": "edit-target",
+      "role": "Base image to edit; requested changes take precedence over preservation."
+    }
+  ],
+  "renderer": "Higgsfield gpt_image_2_6",
+  "model": "gpt_image_2_6",
+  "seed": null
+}

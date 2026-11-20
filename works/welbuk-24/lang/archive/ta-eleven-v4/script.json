@@ -1,0 +1,380 @@
+{
+ "language": "ta",
+ "name": "Tamil",
+ "status": "DRAFT for native-speaker review: not yet approved",
+ "notes": [
+  "Spoken, everyday Tamil as used in clinics; product and technical terms stay in English, as staff say them.",
+  "'say' is the text sent to the voice model (English terms written in Tamil script so they are pronounced as Indian staff say them). 'cap' is the caption shown on screen (product names in English letters). 'en' is a back-translation for review.",
+  "Welbuk is spoken 'Well-book' and written வெல்புக் in speech text.",
+  "slot = seconds available in the existing picture for that line (tour: paragraph slot; reel: cut length). Lines must not run longer.",
+  "Flyer additions (not in the English voice-over): ABHA at check-in, Care Scribe drafting prescriptions and follow-ups, pharmacy alerts, multi-clinic reporting, and the closing 'Doctors care for patients. Welbuk cares for doctors.' with the free-demo line.",
+  "v2 (2026-11-17): lines over their time budget shortened after measuring the voice at about 12.8 characters per second; the clip for spec-intro from v1 is kept."
+ ],
+ "tour": [
+  {
+   "id": "intro",
+   "slot": 14.49,
+   "say": "வெல்புக் — கிளினிக், மருத்துவமனைகளுக்கான ஒரே இணைந்த தளம். வெல்புக் ப்ராக்டிஸ், கிளினிக்கை இயக்குகிறது. வெல்புக் கேர், முழு குழுவுக்கும் துணை. வெல்புக் ஹெல்த், நோயாளிகளையும் குடும்பங்களையும் இணைக்கிறது.",
+   "cap": "Welbuk — கிளினிக், மருத்துவமனைகளுக்கான ஒரே இணைந்த தளம். Welbuk Practice, கிளினிக்கை இயக்குகிறது. Welbuk Care, முழு குழுவுக்கும் துணை. Welbuk Health, நோயாளிகளையும் குடும்பங்களையும் இணைக்கிறது.",
+   "en": "Welbuk — one connected platform for clinics and hospitals. Welbuk Practice runs the clinic. Welbuk Care supports the whole team. Welbuk Health connects patients and families.",
+   "v": 2
+  },
+  {
+   "id": "appointments",
+   "slot": 8.17,
+   "say": "ஆன்லைன் புக்கிங், டாக்டர் ஷெட்யூல், ஸ்லாட் ஒதுக்கீடு, வாக்-இன் — எல்லா அப்பாயின்ட்மென்ட்டும் ஒரே இடத்தில்.",
+   "cap": "ஆன்லைன் புக்கிங், டாக்டர் ஷெட்யூல், ஸ்லாட் ஒதுக்கீடு, வாக்-இன் — எல்லா அப்பாயின்ட்மென்ட்டும் ஒரே இடத்தில்.",
+   "en": "Online booking, doctor schedules, slot allocation, walk-ins — every appointment in one place."
+  },
+  {
+   "id": "queue",
+   "slot": 10.31,
+   "say": "லைவ் க்யூ: ப்ரையர், வாக்-இன், எமர்ஜென்சி. அவசர நோயாளிகளுக்கு முன்னுரிமை; மாற்றம் உடனே குழுவுக்குத் தெரியும்.",
+   "cap": "லைவ் க்யூ: Prior, Walk-in, Emergency. அவசர நோயாளிகளுக்கு முன்னுரிமை; மாற்றம் உடனே குழுவுக்குத் தெரியும்.",
+   "en": "Live queue: Prior, Walk-in, Emergency. Urgent patients get priority; changes reach the team instantly.",
+   "v": 3
+  },
+  {
+   "id": "checkin",
+   "slot": 9.52,
+   "say": "க்யூ-ஆர் ஸ்கேன் செய்து பதிவு, டிஜிட்டல் ஒப்புதல், ஆபா இணைப்பு. அல்லது ரிசெப்ஷனில் உதவியுடன் செக்-இன் — நேராக க்யூவில்.",
+   "cap": "QR ஸ்கேன் செய்து பதிவு, டிஜிட்டல் ஒப்புதல், ABHA இணைப்பு. அல்லது ரிசெப்ஷனில் உதவியுடன் செக்-இன் — நேராக க்யூவில்.",
+   "en": "Scan the QR to register, digital consent, ABHA link. Or check in with help at reception — straight into the queue.",
+   "v": 2
+  },
+  {
+   "id": "careteam",
+   "slot": 10.3,
+   "say": "வெல்புக் கேர்: ஒவ்வொருவருக்கும் தனி வேலைத் திரை. நர்ஸ் வைட்டல்ஸ் பதிவு, டாக்டருக்கு கன்சல்டேஷன் க்யூ, குழுவுக்கு நோட்டிஃபிகேஷன்.",
+   "cap": "Welbuk Care: ஒவ்வொருவருக்கும் தனி வேலைத் திரை. நர்ஸ் வைட்டல்ஸ் பதிவு, டாக்டருக்கு கன்சல்டேஷன் க்யூ, குழுவுக்கு நோட்டிஃபிகேஷன்.",
+   "en": "Welbuk Care: a separate work screen for everyone. The nurse records vitals, the doctor gets the consultation queue, the team gets notifications.",
+   "v": 2
+  },
+  {
+   "id": "emr",
+   "slot": 8.21,
+   "say": "ஒவ்வொரு கன்சல்டேஷனும் முழு விவரத்துடன் தொடங்குகிறது: ஹிஸ்டரி, அலர்ஜி, வைட்டல்ஸ், சோப் நோட்ஸ்.",
+   "cap": "ஒவ்வொரு கன்சல்டேஷனும் முழு விவரத்துடன் தொடங்குகிறது: ஹிஸ்டரி, அலர்ஜி, வைட்டல்ஸ், SOAP நோட்ஸ்.",
+   "en": "Every consultation starts with the full picture: history, allergies, vitals, SOAP notes."
+  },
+  {
+   "id": "scribe",
+   "slot": 11.67,
+   "say": "ஒப்புதலுடன், கேர் ஸ்க்ரைப் உரையாடலை எழுத்தாக்கி, பேசுபவர்களைப் பிரித்து, சுருக்கம், பிரிஸ்கிரிப்ஷன், ஃபாலோ-அப் வரைவு தயாரிக்கிறது. டாக்டர் சரிபார்த்தே கையெழுத்திடுகிறார்.",
+   "cap": "ஒப்புதலுடன், Care Scribe உரையாடலை எழுத்தாக்கி, பேசுபவர்களைப் பிரித்து, சுருக்கம், பிரிஸ்கிரிப்ஷன், ஃபாலோ-அப் வரைவு தயாரிக்கிறது. டாக்டர் சரிபார்த்தே கையெழுத்திடுகிறார்.",
+   "en": "With consent, Care Scribe transcribes the conversation, separates the speakers and drafts the summary, prescription and follow-up. The doctor signs only after checking.",
+   "v": 2
+  },
+  {
+   "id": "spec-intro",
+   "slot": 2.63,
+   "say": "ஸ்பெஷாலிட்டி கருவிகளும் உள்ளேயே.",
+   "cap": "ஸ்பெஷாலிட்டி கருவிகளும் உள்ளேயே.",
+   "en": "Specialty tools are built in, too."
+  },
+  {
+   "id": "dental",
+   "slot": 4.7,
+   "say": "டென்டல்: ஓடான்டோகிராமில் ஃபைண்டிங்ஸ், ட்ரீட்மென்ட் ப்ளான்.",
+   "cap": "டென்டல்: ஓடான்டோகிராமில் ஃபைண்டிங்ஸ், ட்ரீட்மென்ட் ப்ளான்.",
+   "en": "Dental: findings and treatment plan on the odontogram."
+  },
+  {
+   "id": "eye",
+   "slot": 4.26,
+   "say": "கண் சிகிச்சை: விஷுவல் அக்யூட்டி, ரிஃப்ராக்ஷன்.",
+   "cap": "கண் சிகிச்சை: விஷுவல் அக்யூட்டி, ரிஃப்ராக்ஷன்.",
+   "en": "Eye care: visual acuity and refraction."
+  },
+  {
+   "id": "derm",
+   "slot": 6.06,
+   "say": "டெர்மடாலஜி: உடல் வரைபடத்தில் இடம் குறித்து, படங்களை காலவாரியாக ஒப்பிடலாம்.",
+   "cap": "டெர்மடாலஜி: உடல் வரைபடத்தில் இடம் குறித்து, படங்களை காலவாரியாக ஒப்பிடலாம்.",
+   "en": "Dermatology: mark the site on a body map and compare photos over time.",
+   "v": 2
+  },
+  {
+   "id": "paeds",
+   "slot": 5.82,
+   "say": "குழந்தைகள் நலம்: வளர்ச்சி சார்ட், தடுப்பூசிகள், ஸ்கிரீனிங்.",
+   "cap": "குழந்தைகள் நலம்: வளர்ச்சி சார்ட், தடுப்பூசிகள், ஸ்கிரீனிங்.",
+   "en": "Children's health: growth charts, vaccinations, screening."
+  },
+  {
+   "id": "rx",
+   "slot": 6.97,
+   "say": "டிஜிட்டல் பிரிஸ்கிரிப்ஷனில் மருந்து விவரங்கள்; ஒவ்வொன்றும் பதிவில் இருக்கும்.",
+   "cap": "டிஜிட்டல் பிரிஸ்கிரிப்ஷனில் மருந்து விவரங்கள்; ஒவ்வொன்றும் பதிவில் இருக்கும்.",
+   "en": "Digital prescriptions with medicine details; each one stays on record.",
+   "v": 2
+  },
+  {
+   "id": "pharmacy",
+   "slot": 7.73,
+   "say": "ஃபார்மசி: பேட்ச், எக்ஸ்பைரி, ஸ்டாக், அலர்ட்கள் — முதல் எக்ஸ்பைரி, முதல் விநியோகம்.",
+   "cap": "ஃபார்மசி: பேட்ச், எக்ஸ்பைரி, ஸ்டாக், அலர்ட்கள் — முதல் எக்ஸ்பைரி, முதல் விநியோகம்.",
+   "en": "Pharmacy: batch, expiry, stock, alerts — first to expire, first dispensed.",
+   "v": 3
+  },
+  {
+   "id": "lab",
+   "slot": 6.93,
+   "say": "லேப்: சாம்பிள் முதல் ரிசல்ட், டாக்டர் பரிசீலனை வரை — காகிதம் இல்லாமல்.",
+   "cap": "லேப்: சாம்பிள் முதல் ரிசல்ட், டாக்டர் பரிசீலனை வரை — காகிதம் இல்லாமல்.",
+   "en": "Lab: from sample to result and the doctor's review — without paper.",
+   "v": 3
+  },
+  {
+   "id": "referral",
+   "slot": 6.53,
+   "say": "ரெஃபரல்கள்: ஸ்பெஷலிஸ்ட்கள், வெளி பார்ட்னர்கள் — ஒவ்வொன்றையும் ட்ராக் செய்யலாம்.",
+   "cap": "ரெஃபரல்கள்: ஸ்பெஷலிஸ்ட்கள், வெளி பார்ட்னர்கள் — ஒவ்வொன்றையும் ட்ராக் செய்யலாம்.",
+   "en": "Referrals: specialists, external partners — every one can be tracked.",
+   "v": 2
+  },
+  {
+   "id": "billing",
+   "slot": 7.73,
+   "say": "பில்லிங்: இன்வாய்ஸ், பொருந்தும் ஜி-எஸ்-டி, எல்லா பேமென்ட் முறைகளும், ரசீது, நிலுவைத் தொகை.",
+   "cap": "பில்லிங்: இன்வாய்ஸ், பொருந்தும் GST, எல்லா பேமென்ட் முறைகளும், ரசீது, நிலுவைத் தொகை.",
+   "en": "Billing: invoices, applicable GST, every payment method, receipts and balances."
+  },
+  {
+   "id": "dayend",
+   "slot": 7.69,
+   "say": "நாள் முடிவில் பேமென்ட், ரீஃபண்ட் சரிபார்ப்பு; ஜி-எஸ்-டி ரிப்போர்ட்டுடன் தெளிவான நிதிக் கணக்கு.",
+   "cap": "நாள் முடிவில் பேமென்ட், ரீஃபண்ட் சரிபார்ப்பு; GST ரிப்போர்ட்டுடன் தெளிவான நிதிக் கணக்கு.",
+   "en": "At day end, payments and refunds are reconciled; a clear financial picture with GST reports.",
+   "v": 2
+  },
+  {
+   "id": "facilities",
+   "slot": 9.89,
+   "say": "பல கிளினிக்குகள், ஒரே தளம், மொத்த ரிப்போர்ட். வெல்புக் கிளவுட் இன்றே கிடைக்கிறது. ஆன்-ப்ரிமைசஸ், ஹைப்ரிட், ஏர்-கேப்டு ஏ-ஐ வேண்டுமா? பேசலாம்.",
+   "cap": "பல கிளினிக்குகள், ஒரே தளம், மொத்த ரிப்போர்ட். Welbuk Cloud இன்றே கிடைக்கிறது. On-premises, hybrid, air-gapped AI வேண்டுமா? பேசலாம்.",
+   "en": "Many clinics, one platform, combined reports. Welbuk Cloud is available today. Need on-premises, hybrid or air-gapped AI? Let's talk.",
+   "v": 2
+  },
+  {
+   "id": "hrms",
+   "slot": 8.09,
+   "say": "பணியாளர்களுக்காக: ஸ்டாஃப் ரெக்கார்ட், அட்டென்டன்ஸ், லீவ் மேனேஜ்மென்ட், ரோல் அடிப்படையிலான அனுமதிகள்.",
+   "cap": "பணியாளர்களுக்காக: ஸ்டாஃப் ரெக்கார்ட், அட்டென்டன்ஸ், லீவ் மேனேஜ்மென்ட், ரோல் அடிப்படையிலான அனுமதிகள்.",
+   "en": "For the staff: staff records, attendance, leave management, role-based permissions."
+  },
+  {
+   "id": "health",
+   "slot": 9.71,
+   "say": "வருகைக்குப் பிறகும் வெல்புக் ஹெல்த் இணைப்பில்: விசிட் ஹிஸ்டரி, பிரிஸ்கிரிப்ஷன், ரிப்போர்ட், ரிமைண்டர், ஃபாலோ-அப்.",
+   "cap": "வருகைக்குப் பிறகும் Welbuk Health இணைப்பில்: விசிட் ஹிஸ்டரி, பிரிஸ்கிரிப்ஷன், ரிப்போர்ட், ரிமைண்டர், ஃபாலோ-அப்.",
+   "en": "After the visit, Welbuk Health stays connected: visit history, prescriptions, reports, reminders, follow-ups.",
+   "v": 2
+  },
+  {
+   "id": "family",
+   "slot": 6.56,
+   "say": "குடும்ப நலம் ஒரே இடத்தில்: கார்டியன் இணைப்பு, தடுப்பூசி, வளர்ச்சிக் கண்காணிப்பு.",
+   "cap": "குடும்ப நலம் ஒரே இடத்தில்: கார்டியன் இணைப்பு, தடுப்பூசி, வளர்ச்சிக் கண்காணிப்பு.",
+   "en": "Family health in one place: guardian links, vaccinations, growth tracking.",
+   "v": 2
+  },
+  {
+   "id": "ahead",
+   "slot": 10.44,
+   "say": "வருங்காலத்தில், எங்கள் இலக்கு: கிளினிக், ஸ்பெஷலிஸ்ட், ஃபார்மசி, லேப் இணைந்த நம்பகமான நெட்வொர்க் — நோயாளியின் அனுமதியுடன் மட்டுமே பகிர்வு.",
+   "cap": "வருங்காலத்தில், எங்கள் இலக்கு: கிளினிக், ஸ்பெஷலிஸ்ட், ஃபார்மசி, லேப் இணைந்த நம்பகமான நெட்வொர்க் — நோயாளியின் அனுமதியுடன் மட்டுமே பகிர்வு.",
+   "en": "Looking ahead, our goal: a trusted network joining clinics, specialists, pharmacies and labs — sharing only with the patient's permission.",
+   "v": 2
+  },
+  {
+   "id": "close",
+   "slot": 9.36,
+   "say": "வெல்புக். டாக்டர்கள் நோயாளிகளைக் கவனிக்கிறார்கள்; வெல்புக் டாக்டர்களைக் கவனிக்கிறது. இலவச டெமோவுக்கு, வெல்புக் டாட் காம்.",
+   "cap": "Welbuk. டாக்டர்கள் நோயாளிகளைக் கவனிக்கிறார்கள்; Welbuk டாக்டர்களைக் கவனிக்கிறது. இலவச டெமோவுக்கு, welbuk.com.",
+   "en": "Welbuk. Doctors care for patients; Welbuk cares for doctors. For a free demo, welbuk.com."
+  }
+ ],
+ "reel": [
+  {
+   "id": "r01",
+   "slot": 5.0,
+   "say": "ஒவ்வொரு கிளினிக்கும் அறிந்த உணர்வு. அப்பாயின்ட்மென்ட், ஃபைல்கள்,",
+   "cap": "ஒவ்வொரு கிளினிக்கும் அறிந்த உணர்வு. அப்பாயின்ட்மென்ட், ஃபைல்கள்,",
+   "en": "A feeling every clinic knows. Appointments, files,",
+   "v": 2
+  },
+  {
+   "id": "r02",
+   "slot": 4.32,
+   "say": "ஃபாலோ-அப்கள்… நாள் முடிவதே இல்லை.",
+   "cap": "ஃபாலோ-அப்கள்… நாள் முடிவதே இல்லை.",
+   "en": "follow-ups… the day never ends."
+  },
+  {
+   "id": "r03",
+   "slot": 4.54,
+   "say": "பிறகு, டாக்டர் அனன்யா சிறந்த வழியைக் கண்டார். வெல்புக்.",
+   "cap": "பிறகு, டாக்டர் அனன்யா சிறந்த வழியைக் கண்டார். Welbuk.",
+   "en": "Then Dr. Ananya found a better way. Welbuk.",
+   "v": 2
+  },
+  {
+   "id": "r04",
+   "slot": 3.64,
+   "say": "ஆன்லைன் புக்கிங், அல்லது க்யூ-ஆர் செக்-இன்.",
+   "cap": "ஆன்லைன் புக்கிங், அல்லது QR செக்-இன்.",
+   "en": "Online booking, or QR check-in."
+  },
+  {
+   "id": "r05",
+   "slot": 3.41,
+   "say": "வாக்-இன், எமர்ஜென்சி — சரியான இடம்.",
+   "cap": "வாக்-இன், எமர்ஜென்சி — சரியான இடம்.",
+   "en": "Walk-ins, emergencies — the right place.",
+   "v": 3
+  },
+  {
+   "id": "r06",
+   "slot": 1.94,
+   "say": "வைட்டல்ஸ் பதிவு.",
+   "cap": "வைட்டல்ஸ் பதிவு.",
+   "en": "Vitals recorded.",
+   "v": 2
+  },
+  {
+   "id": "r07",
+   "slot": 3.36,
+   "say": "அமரும் முன்பே டாக்டருக்கு முழு ஹிஸ்டரி;",
+   "cap": "அமரும் முன்பே டாக்டருக்கு முழு ஹிஸ்டரி;",
+   "en": "Before the patient sits, the doctor has the full history;",
+   "v": 2
+  },
+  {
+   "id": "r08",
+   "slot": 2.13,
+   "say": "குரலிலேயே நோட்ஸ்,",
+   "cap": "குரலிலேயே நோட்ஸ்,",
+   "en": "notes by voice,"
+  },
+  {
+   "id": "r09",
+   "slot": 3.2,
+   "say": "ஒப்புதலுடன், முழுமையாகச் சரிபார்த்து.",
+   "cap": "ஒப்புதலுடன், முழுமையாகச் சரிபார்த்து.",
+   "en": "with consent, fully checked.",
+   "v": 2
+  },
+  {
+   "id": "r10",
+   "slot": 2.16,
+   "say": "பிரிஸ்கிரிப்ஷன், ஸ்டாக்,",
+   "cap": "பிரிஸ்கிரிப்ஷன், ஸ்டாக்,",
+   "en": "Prescriptions, stock,",
+   "v": 2
+  },
+  {
+   "id": "r11",
+   "slot": 0.95,
+   "say": "லேப்,",
+   "cap": "லேப்,",
+   "en": "lab,"
+  },
+  {
+   "id": "r12",
+   "slot": 1.78,
+   "say": "பில்லிங், கணக்கு:",
+   "cap": "பில்லிங், கணக்கு:",
+   "en": "billing, accounts:",
+   "v": 2
+  },
+  {
+   "id": "r13",
+   "slot": 1.51,
+   "say": "ஒரே இணைப்பில்.",
+   "cap": "ஒரே இணைப்பில்.",
+   "en": "all in one connection.",
+   "v": 2
+  },
+  {
+   "id": "r14",
+   "slot": 2.24,
+   "say": "வீட்டிலும் கவனிப்பு,",
+   "cap": "வீட்டிலும் கவனிப்பு,",
+   "en": "Care at home too,",
+   "v": 2
+  },
+  {
+   "id": "r15",
+   "slot": 3.11,
+   "say": "ரிமைண்டர்கள், குடும்பப் பதிவுகளுடன்.",
+   "cap": "ரிமைண்டர்கள், குடும்பப் பதிவுகளுடன்.",
+   "en": "with reminders and family records.",
+   "v": 2
+  },
+  {
+   "id": "r16",
+   "slot": 4.78,
+   "say": "வெல்புக் ப்ராக்டிஸ். வெல்புக் கேர். வெல்புக் ஹெல்த்.",
+   "cap": "Welbuk Practice. Welbuk Care. Welbuk Health.",
+   "en": "Welbuk Practice. Welbuk Care. Welbuk Health."
+  },
+  {
+   "id": "r17",
+   "slot": 4.87,
+   "say": "டாக்டர்கள் நோயாளிகளைக் கவனிக்கிறார்கள்; வெல்புக் டாக்டர்களை.",
+   "cap": "டாக்டர்கள் நோயாளிகளைக் கவனிக்கிறார்கள்; Welbuk டாக்டர்களை.",
+   "en": "Doctors care for patients; Welbuk cares for doctors.",
+   "v": 2
+  },
+  {
+   "id": "r18",
+   "slot": 4.5,
+   "say": "வெல்புக். இலவச டெமோவுக்கு, வெல்புக் டாட் காம்.",
+   "cap": "Welbuk. இலவச டெமோவுக்கு, welbuk.com.",
+   "en": "Welbuk. For a free demo, welbuk.com."
+  }
+ ],
+ "reelGroups": [
+  [
+   "r01",
+   "r02"
+  ],
+  [
+   "r03"
+  ],
+  [
+   "r04"
+  ],
+  [
+   "r05"
+  ],
+  [
+   "r06"
+  ],
+  [
+   "r07",
+   "r08",
+   "r09"
+  ],
+  [
+   "r10",
+   "r11",
+   "r12",
+   "r13"
+  ],
+  [
+   "r14",
+   "r15"
+  ],
+  [
+   "r16"
+  ],
+  [
+   "r17"
+  ],
+  [
+   "r18"
+  ]
+ ]
+}

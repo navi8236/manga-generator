@@ -1,0 +1,81 @@
+{
+ "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/storyboard-05-aad7b9d56be87da9a24d9ed0ca31c3a69c3e1855844a35992e1d6909144fdabb.json",
+ "reviewer": {
+  "role": "subagent",
+  "task": "claude-code-agent:manga-reviewer:aca9274833ae880ae",
+  "reportedTask": null,
+  "taskSource": "Agent ID returned by the Claude Code Agent tool to the parent."
+ },
+ "status": "changes-requested",
+ "observations": [
+  "Reviewer identity: the runtime gave me no task ID, so task is null. The parent must record the real Agent ID returned by the Agent tool. Do not invent one.",
+  "What I read, in order: docs/REVISION-AND-REVIEWS.md, docs/PROMPTS.md, then this request JSON (which contains the page 5 script and the recorded first reading). After that I opened storyboards-unnumbered/page-05.png with Read, then source/REVISION-2026-11-11.md (Request 3 and the follow-up), source/original.txt, storyboards/page-05.png (numbered), reading-flow/page-05.json, and storyboards-unnumbered/page-04.png for the 04-3 boundary. All of these PNGs loaded and I looked at them. This is a comparison request, so the script came before the image. I did not open the SVG files or the character sheets as images; I used the PNG exports of the same storyboards instead.",
+  "Unnumbered scan of page 05. Top wide panel: Ananya's balloon 'Hello, Ravi. Tell me what brings you in.' at top right (y40-178), tail to the Ananya face box; Ravi's face box at far right; teal label 'PATIENT DETAILS: current vitals · prior health info · allergy panel · AI mic on · patient docs · lab reports' at left (x40-403, y324-558). Lower-left tall panel: Ravi 'I've been feeling tired lately.' at top left, tail to Ravi; teal 'SOAP NOTES: ...' label at bottom left (y1188-1422). Lower-right tall panel: caption 'Technology supports the workflow. The conversation stays human.' above the Ananya face box. My order matches the script order and source page 5.",
+  "First-reader concern 1 (no transition caption into the consulting room): not blocking. 04-3 has already shown this room (window, plant, closed laptop) with the 'RAVI · READY' alert. 05-1 shows the same window and plant with the laptop now open, and opens on 'Hello, Ravi.' Together these carry the move as the same visit.",
+  "First-reader concern 2 (label or balloon first in 05-1): the balloon's top is at y40 and the label's at y324, so the balloon is clearly higher and read first under top-then-left reading. The label also sits over the laptop screen, where it reads as on-screen content rather than speech. Resolved.",
+  "First-reader concern 3 (dense labels and jargon such as 'AI mic on' and 'ICD or SNOMED'): the user asked for this wording and said 'add page if needed' rather than shortening it (REVISION follow-up). This is not a storyboard defect. The question 'whose screen is it' is answered by the plan: the laptop on Ananya's desk faces the reader, and the teal style is the work's on-screen label convention. The art must show the laptop clearly.",
+  "First-reader concern 4 (Ananya does not answer 'tired lately' on this page): 05-3 is a silent listening reaction, which the source specifies. Her verbal reply 'We'll go through your concerns...' comes in 06-2 and refers back to his concern. This is acceptable, although the 06-1 insert lengthens the gap (see page 06).",
+  "First-reader concern 5 ('stays human' versus AI listening): consistent once drawn. The caption says the technology supports the workflow, and 05-3's plan has Ananya making eye contact with Ravi, not the laptop. Whether this works depends on the 05-3 staging, which leads to issue 1.",
+  "The prop and costume chain is consistent with 04-3: the tablet is put away, the laptop is opened, and the bag goes on the floor. The 05-1 hands (Ananya's open palm, Ravi's hand on the armrest) and Ravi's 05-2 hands (right hand rubbing his neck, watch on his left wrist) are coherent.",
+  "Cosmetic (numbered guide only): the 05-3 beat line is clipped at the panel edge ('...in the backgrour'). Readers never see it.",
+  "Out of scope but a risk for the parent: assets/panels/05-1.png still holds the OLD page-5 art (closed laptop, no screen), and assets/panels/06-1.png holds the old Meera/Ravi reception art that is now 07-1. assets/panels/05-4.png, 06-3.png and 06-4.png have no matching panel in the new script. None of these may be accepted or composited as the new 05-x or 06-x panels."
+ ],
+ "issues": [
+  "05-2 / 05-3 gaze across the gutter: in 05-2 (left panel) Ravi faces screen-left toward the doctor off-panel; in 05-3 (right panel) Ananya faces screen-right toward Ravi off-panel. Side by side on the page they look away from each other across the gutter at x584-608. The panel meant to show 'full attention and gentle eye contact', with the caption 'The conversation stays human.', would read as two people turned back to back. Fix before generation and keep the 05-1 axis (Ananya left, Ravi right): make 05-3 an over-the-shoulder shot, with the back of Ravi's head and his shoulder in the right foreground (registered as kind 'head', as in the accepted 07-3 staging), so the eye contact is visible inside the panel. Optionally, also show a sliver of Ananya's shoulder at the lower-left edge of 05-2 beside the laptop.",
+  "05-2 AI-listening icon may be covered by its label: the laptop screen fills the lower half of the panel (about y1056-1464), and the SOAP NOTES label box covers x40-380, y1188-1422. The scene text does not say where the glowing microphone with sound-wave arcs goes, yet it is the one image that shows 'AI listening'. Specify its position in the uncovered part of the screen (for example the right portion x≈400-560, or above y≈1180) and register it as protected, so the art and the lettering cannot collide. Apply the same treatment to the 'microphone toggle switched on' card in 05-1, which sits in the column under the PATIENT DETAILS label (x40-403, y324-558). That one does not block, because the label itself says 'AI mic on'."
+ ],
+ "readingReview": {
+  "withoutGuides": true,
+  "firstReadingHash": "c7998dc221b519cf27cccff0ce30627925bd3820d0f6f5107d237d973056b195",
+  "comparison": "My order (balloon, label, balloon, label, caption) matches the first reader's, with no skips. Their concern 2 is resolved by the large height difference. Concerns 1, 3, 4 and 5 are covered by the 04-3 room setup, the user's explicit full wording, the silent listening beat and the 06-2 reply. Concern 5 depends on staging, which raised a new point the first reader did not name: the outward-facing gazes across the 05-2/05-3 gutter (issue 1).",
+  "predictedOrder": [
+   {
+    "panel": "05-1",
+    "dialogue": [
+     1,
+     2
+    ]
+   },
+   {
+    "panel": "05-2",
+    "dialogue": [
+     1,
+     2
+    ]
+   },
+   {
+    "panel": "05-3",
+    "dialogue": [
+     1
+    ]
+   }
+  ],
+  "observations": [
+   "05-1: the eye enters at the empty upper-left wall, moves right to the high balloon over Ananya, then drops left to the screen label, then exits right past Ravi toward the lower row. The tail points down to Ananya and does not cross Ravi's face box (x834-934).",
+   "05-2: balloon at top left, then Ravi's face, then the SOAP label at the bottom. The order is clean and the label does not separate the question from the answer, because Ravi's line answers Ananya's 05-1 question across the tier break.",
+   "05-3: the single caption is at the top and Ananya's face is below. With only one text element there is no ordering risk. The issue is gaze direction only (issue 1)."
+  ],
+  "transitions": [
+   {
+    "from": "04-3",
+    "to": "05-1",
+    "observation": "04-3 ends in the consultation room with Ananya reading 'RAVI · READY' on her tablet. 05-1 is the same room (window and plant), the tablet is gone, the laptop that was closed in 04-3 is open, and Ravi is sitting down to 'Hello, Ravi.' The place change is bridged by the setting and the greeting. Ravi's bag is on the floor, consistent with his arrival."
+   },
+   {
+    "from": "05-1",
+    "to": "05-2",
+    "observation": "Ananya's question 'Tell me what brings you in.' is answered by Ravi's 'I've been feeling tired lately.' at the top of the next tier. The laptop changes from patient details to SOAP notes. The axis is kept: Ravi faces left toward Ananya."
+   },
+   {
+    "from": "05-2",
+    "to": "05-3",
+    "observation": "His complaint is followed by her silent listening, which is a valid reaction beat, but as planned the two panels face away from each other across the gutter (issue 1)."
+   },
+   {
+    "from": "05-3",
+    "to": "06-1",
+    "observation": "Page turn from Ananya listening to a close-up of the laptop on the planner section. It is the same laptop with the same teal label convention. This works only if 06-1 visibly stays anchored in the consultation (see page 06, issue 1)."
+   }
+  ]
+ }
+}

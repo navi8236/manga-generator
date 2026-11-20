@@ -1,0 +1,73 @@
+# Source revision 2026-11-11
+
+## Request 1
+The user reviewed the finished comic and asked for a different scene flow on one page:
+"Lets do one page patient walks in, scans a qr in mobile. fills form in mobile. token pops up in tv
+screen, then nurse comes takes vitals, doctor notified in his tablet."
+Confirmed decisions: replace the old page 3 (Meera's desk registration); keep Dr. Ananya as the doctor
+(the request said "his tablet"; the user chose to keep the existing female doctor, so the source says
+"her tablet"); short captions for each step.
+
+## Request 2
+"patient can always checkin with front dest as an option, if we can convey that it would be good.
+we can add a page wer 3 diff patients chrck in one via health app, on using qr and another front desk
+all 3 gets slot alloted in screen"
+Confirmed decisions: the three-channel page comes before Ravi's journey; Ravi is the QR patient, so
+his own page continues with his slot, the nurse's vitals check and the doctor's tablet.
+
+## Resulting changes to `original.txt`
+- Header: the comic is now seven pages.
+- Cast: a Nurse and two other patients (an elderly man at the front desk, a young woman using the app).
+- PAGE 3 is now "Three ways to check in" (5 panels); new PAGE 4 "Ravi's turn" (3 panels).
+- The old pages 4, 5 and 6 are unchanged in content and renumbered 5, 6 and 7.
+- Every step has a short caption; 04-2 also carries the nurse's line, which names Ravi before the
+  consultation.
+- The captions, labels and the nurse's line on pages 3 and 4 were drafted by the production agent from
+  the user's descriptions. The pre-revision text is kept in `original-v1.txt`.
+
+## Wording change after the storyboard first reading (r13)
+- 03-1 caption "The front desk is always an option." became "A later morning: patients can always check in at the front desk." The first reader found the old caption out of context, because "check in" first appeared in 03-2. The new caption also gives the time cue after the evening onboarding on page 2.
+- 04-2 nurse line "Let's check your vitals, Ravi." became "Hi, Ravi! Just relax your arm for me." The reader found that it repeated the caption "A quick vitals check first."
+
+## Request 3 (2026-11-12)
+"in page five inside consult room doctor has a screen with following sections in that order
+patient details
+has current vitals, prior health info, allergy panel, ai mic on option, patient docs, lab reports
+Soap notes section
+doctor can fill in manually and choose icd or snomed codes as needed or use ai to listen and summarize the conversation.
+speciality specific treatment planner
+dentist gets odentogram, eye doctor gets eye markers, pediatrician gets scales to, vaccines etc..
+plan of care screen
+intelligent prescribing, summary, drug interactions, labs, referrals etc"
+Confirmed decisions (AskUserQuestion): rework page 5 (it stays 7 pages); the speciality planner shows three
+small example tiles (Dentist, Eye care/Eye doctor, Paediatrics); section names and contents appear as short
+lettered labels on the screen while the screen art stays text-free.
+Resulting changes: PAGE 5 now has five panels (greeting + patient details, Ravi's line + SOAP notes with the AI
+mic, the listening caption, a planner close-up, next steps + plan of care). The four lines of dialogue and the
+caption are unchanged. The label wording was drafted by the production agent from the user's lists. The
+laptop that is closed in 04-3 is opened on page 5. The pre-change text is kept in `original-v2.txt`.
+
+### Follow-up (2026-11-12): "add page if needed"
+The user answered the question about abbreviated label wording with "add page if needed". The labels therefore
+use the user's full wording, and the screen walk-through takes a new PAGE 6 "The doctor's screen": the
+speciality-specific treatment planner (06-1) and the plan of care with Dr. Ananya's next-steps line (06-2).
+PAGE 5 keeps the greeting with patient details, Ravi's line with SOAP notes and the listening caption. The old
+pages 6 and 7 become pages 7 and 8 with unchanged content and art; the comic is now eight pages.
+Label wording notes (source review r7): the labels follow the user's lists closely but not literally.
+"odentogram" is corrected to "odontogram"; "scales to," is read as "growth scales"; "option" (AI mic on),
+"as needed" (ICD/SNOMED) and each trailing "etc." are dropped; British spelling ("summarise", "Paediatrician").
+
+### Follow-up (2026-11-12): AI voice consent
+User: "in actuals there is a consent check for first time for ai voice save."
+PAGE 5 gains a consent panel (05-2) before the AI mic listens: the laptop shows a consent card, Dr. Ananya asks
+"May the AI listen and save notes of our talk?" and Ravi answers "Yes, I agree." The label reads "AI VOICE
+CONSENT: asked at the first visit, before any voice is saved". These two lines and the label were drafted by the
+production agent from the user's note. Ravi's line and SOAP notes move to 05-3 and the listening caption to 05-4.
+The 05-1 label now reads "AI mic option" (the user's own wording) and the mic toggle is drawn off until consent, so the AI is not shown listening before Ravi agrees (source review r8).
+
+## Request 4 (2026-11-12)
+User, verbatim: "page 7,8 can stay but we need a page in between. a page where pharmacy gets notified and they fill prescriptions, lab gets notified on what needs to be taken. Patient arrives gives samples and get notiified on mobile app,/email/ whats app  and doctor gets notified on the care app and clinic via practice once test results are ready."
+Confirmed decisions (AskUserQuestion): the new page goes between page 7 (reception and departure) and the vision page; the samples are given at the clinic lab on the same day.
+Resulting changes: a new PAGE 8 "After the visit" with six panels (pharmacy notified and filling the prescription; lab notified of the samples; Ravi gives samples at the clinic lab; Ravi notified on the Welbuk Health app, email or WhatsApp; Dr. Ananya notified on Welbuk Care; the clinic notified on Welbuk Practice). The old page 8 becomes page 9 with unchanged content and art; the comic is now nine pages. Pages 1-7 are unchanged.
+Drafted by the production agent: every caption and label on the new page, and the lab technician's line "All done, Ravi! We'll let you know when your results are ready." Because page 7 ends with Ravi walking out of the clinic, the sample visit is captioned "Later that day" (same day, clinic lab, as confirmed). The pharmacist and lab technician are new manga characters with a new reference sheet. The prescription and lab order show no drug names, tests, results or personal data, and nothing implies a diagnosis.
+The pre-change source is kept in `original-v3.txt`.

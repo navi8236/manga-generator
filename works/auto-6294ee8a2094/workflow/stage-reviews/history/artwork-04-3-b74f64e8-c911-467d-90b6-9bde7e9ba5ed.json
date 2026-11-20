@@ -1,0 +1,23 @@
+{
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/artwork-04-3-10ff5551110578dae645db19c009440dae8c2238bb0f0308d0e82087d652b4df.json",
+  "reviewer": {
+    "role": "subagent",
+    "task": "claude-code-agent:manga-reviewer:a36d1b3408febca21",
+    "reportedTask": null,
+    "taskSource": "Agent ID returned by the Claude Code Agent tool to the parent."
+  },
+  "status": "pass",
+  "observations": [
+    "Identity note: the runtime did not give me a subagent or task ID, so task is null.",
+    "What I read and saw: I read the request JSON in full. I opened these images with Read and looked at them: assets/panels/04-3.png and main-cast.png. I also read artwork-r10-04-3.json. I did not open page-04.svg, the source text or docs/PROMPTS.md.",
+    "Dr. Ananya matches main-cast.png: a low bun with loose strands, a small gold stud earring, calm almond eyes with heavy lids, level medium-thick brows, an oval face with a defined chin, a teal kurta under an open white coat and a stethoscope hanging around her neck, not in use. She looks down at the tablet with a small smile.",
+    "Hands: she holds the tablet by its left and right edges, with her fingers over the bezel. Each hand shows a plausible number of fingers. The screen is angled toward the reader and shows a light card with a teal check icon, small spark strokes and one blank white strip at about x315-490, y1215-1265 in panel pixels. I saw no text or numbers.",
+    "Setting: a window with a potted plant behind her and a closed silver laptop pushed to the lower right of the wooden desk. There are no charts. The upper third is plain white for the caption.",
+    "Changed label record: 'RAVI · READY' is now wrapped over two lines and placed at x182, dy734. At scale about 1.633 that maps to a start point of about x297, y1199. That is just left of and above the strip's top-left corner (about x315, y1215), and much closer to the strip than the old point (about x229, y1190). Whether the two-line label box sits on the card strip without hiding the check icon above it is a lettering-stage check. Nothing in the art needs to change for it.",
+    "Face box: (730,834,116,150) maps to about x199-388, y598-843, which covers her face (about x200-380, y560-850).",
+    "The art matches the description in r10, and I saw no new text, numbers or artefacts. The tablet appears only in this panel, as the section requires."
+  ],
+  "issues": [],
+  "fingerprint": "10ff5551110578dae645db19c009440dae8c2238bb0f0308d0e82087d652b4df",
+  "recordedAt": "2026-11-11T11:44:17.405Z"
+}

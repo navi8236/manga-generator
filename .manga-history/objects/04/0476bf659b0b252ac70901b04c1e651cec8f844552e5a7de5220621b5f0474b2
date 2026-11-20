@@ -1,0 +1,4922 @@
+{
+  "productionMode": "economy",
+  "reviewPolicy": {
+    "version": 3
+  },
+  "version": 8,
+  "quality": {
+    "required": true,
+    "drawing": [
+      "Use clear silhouettes and deliberate variation between outer contours and interior lines.",
+      "Group hair into readable masses; use only folds that explain the pose.",
+      "Make joint structure, grip, contact and object occlusion legible. Repair interacting hands and held objects together.",
+      "Use white space in close shots and a few location contours in wide shots."
+    ],
+    "avoid": [
+      "Uniform microdetail, glossy gradients, dense decorative hatching, random grain and redundant highlights.",
+      "Any readable text, logos, fake UI copy, real patient names or numbers on screens, papers or signs.",
+      "Medical equipment, prescriptions or imagery that implies a diagnosis or treatment."
+    ]
+  },
+  "renderMode": "page",
+  "productionPreflight": {
+    "required": true
+  },
+  "narrativeDesign": {
+    "version": 1,
+    "direction": "left-to-right, top-to-bottom",
+    "rules": [
+      "one beat per panel",
+      "speech groups and faces are planned together",
+      "scene and time boundaries receive a visual or caption anchor",
+      "page-end question and next-page answer are reviewed, not forced",
+      "future-vision panels are visually and verbally separated from current features"
+    ]
+  },
+  "sections": {
+    "main": {
+      "summary": "Dr. Ananya's neighbourhood clinic in Tamil Nadu before and after adopting Welbuk; specialty clinics, pharmacy, lab, home and a future vision (storyboard v3.0).",
+      "location": "The clinic and its rooms; specialist clinics; Ravi's home; another city (vision).",
+      "costumes": {},
+      "objects": {}
+    }
+  },
+  "assetSources": {},
+  "title": "Welbuk — A Better Way to Care",
+  "author": "",
+  "sourceFile": "works/welbuk-24/source/original.txt",
+  "style": "Full-colour approachable Indian slice-of-life manga, clean line art, soft flat cel shading, warm natural light; hot-pink (#FD006A) and white Welbuk interface accents from page 2. Art is text-free; lettering, status tabs and the real logo are composited.",
+  "cast": {
+    "ananya": {
+      "name": "Dr. Ananya",
+      "description": "Indian woman in her late 30s, clinic owner and doctor. Calm, confident and caring. Teal kurta beneath an open white coat (source). Shoulder-length black hair tied in a low bun with a few loose strands, slim build, small gold stud earrings, a stethoscope worn around her neck (never in use) in every scene where she wears the white coat (manga supplement, from the accepted reference sheet).",
+      "faceDesign": {
+        "traits": [
+          "Calm almond-shaped eyes with slightly heavy upper lids and a gentle downward outer corner",
+          "Soft, straight medium-thick eyebrows set fairly level",
+          "Oval face with a defined, slightly pointed chin and a small bindi-free forehead; small nose with a rounded tip"
+        ],
+        "reference": "works/welbuk-24/assets/characters/main-cast.png",
+        "settingBasis": "Source: Indian female clinic owner, late 30s, calm, confident, caring; teal kurta beneath white coat. Manga supplement: the three face traits, low bun hairstyle and gold studs, chosen to separate her from Meera."
+      }
+    },
+    "meera": {
+      "name": "Meera",
+      "description": "Indian woman in her late 20s, clinic receptionist. Friendly and capable. Blue kurta (source). Long black hair in a single side braid over her left shoulder, round face, slim build, a thin silver bangle on the right wrist (manga supplement).",
+      "faceDesign": {
+        "traits": [
+          "Large, round bright eyes with clearly visible lower lash line",
+          "Thin, gently arched eyebrows set high above the eyes",
+          "Round face with full cheeks and a short soft chin; small dimple on the left cheek when smiling"
+        ],
+        "reference": "works/welbuk-24/assets/characters/main-cast.png",
+        "settingBasis": "Source: Indian female receptionist, late 20s, friendly and capable, blue kurta. Manga supplement: the three face traits, side braid and silver bangle."
+      }
+    },
+    "ravi": {
+      "name": "Ravi",
+      "description": "Indian man in his mid-30s, patient. Warm and approachable. Light green shirt (source). Short neat black hair with a side part, trimmed short beard, medium build, dark trousers, a simple wristwatch on the left wrist, small dark-brown shoulder bag (manga supplement).",
+      "faceDesign": {
+        "traits": [
+          "Warm, slightly narrow eyes that crease at the outer corners when he smiles",
+          "Thick, straight dark eyebrows close to the eyes",
+          "Square jaw framed by a short trimmed beard and a broad nose"
+        ],
+        "reference": "works/welbuk-24/assets/characters/main-cast.png",
+        "settingBasis": "Source: Indian male patient, mid-30s, warm, approachable, light green shirt. Manga supplement: the three face traits, beard, side part and wristwatch."
+      }
+    },
+    "nurse": {
+      "name": "Nurse",
+      "description": "Indian woman in her early 30s, clinic nurse. Friendly and efficient (revised source). Plain lavender scrub top and trousers, white clinic shoes, a plain lavender lanyard with a blank card, small wristwatch on her left wrist; chin-length wavy black bob with a side part tucked behind her right ear (manga supplement, from the accepted nurse sheet).",
+      "faceDesign": {
+        "traits": [
+          "Wide-set bright eyes with slightly lifted outer corners",
+          "Thick straight eyebrows",
+          "Heart-shaped face with a small cleft (dimpled) chin and a small straight nose"
+        ],
+        "reference": "works/welbuk-24/assets/characters/nurse.png",
+        "settingBasis": "Revised source (2026-11-11): Indian female clinic nurse, friendly and efficient. Manga supplement: the three face traits, bob haircut and lavender scrubs, chosen to separate her from Ananya and Meera."
+      }
+    },
+    "raman": {
+      "name": "Mr. Raman",
+      "description": "Indian man in his early 70s, a regular patient (revised source: elderly man who checks in at the front desk). Cream half-sleeve shirt, grey trousers, brown sandals, round reading glasses, wooden walking stick in his right hand, short white hair (manga supplement, from the accepted check-in patients sheet).",
+      "faceDesign": {
+        "traits": [
+          "Deep-set gentle eyes with smile lines",
+          "Bushy white eyebrows",
+          "Long oval face with prominent ears"
+        ],
+        "reference": "works/welbuk-24/assets/characters/checkin-patients.png",
+        "settingBasis": "Revised source (2026-11-11): an elderly man who checks in at the front desk. Name and appearance are manga supplements."
+      }
+    },
+    "priya": {
+      "name": "Priya",
+      "description": "Indian woman in her mid-20s, a patient (revised source: young woman who checks in on the Welbuk Health app). Coral-pink kurti over blue jeans, white sneakers, small crossbody bag, high ponytail (manga supplement, from the accepted check-in patients sheet).",
+      "faceDesign": {
+        "traits": [
+          "Large almond eyes with winged lashes",
+          "Short straight eyebrows",
+          "Small pointed chin with a beauty spot above the left lip"
+        ],
+        "reference": "works/welbuk-24/assets/characters/checkin-patients.png",
+        "settingBasis": "Revised source (2026-11-11): a young woman who checks in on the Welbuk Health app. Name and appearance are manga supplements."
+      }
+    },
+    "pharmacist": {
+      "name": "Pharmacist",
+      "description": "Indian man in his early 40s, pharmacist. Careful and reassuring (revised source: the pharmacy fills the prescription). White pharmacist coat over a light blue collared shirt, dark grey trousers; short wavy black hair with a little grey at the temples (manga supplement, from the accepted pharmacy-lab sheet).",
+      "faceDesign": {
+        "traits": [
+          "Kind hooded eyes with crow’s feet",
+          "Thick arched eyebrows",
+          "Round face with a neat moustache and dimpled cheeks"
+        ],
+        "reference": "works/welbuk-24/assets/characters/pharmacy-lab.png",
+        "settingBasis": "Revised source (2026-11-12): the pharmacy is notified and fills the prescription. Appearance is a manga supplement."
+      }
+    },
+    "labtech": {
+      "name": "Lab Technician",
+      "description": "Indian woman in her mid-20s, clinic lab technician. Precise and friendly (revised source: the lab is notified and the patient gives samples). Light-blue lab coat over a plain navy top, dark trousers, white clinic shoes, purple nitrile gloves; black hair in a neat high bun (manga supplement, from the accepted pharmacy-lab sheet).",
+      "faceDesign": {
+        "traits": [
+          "Large round eyes behind thin round glasses",
+          "Thin straight eyebrows",
+          "Narrow face with a sharp chin and light freckles across the nose"
+        ],
+        "reference": "works/welbuk-24/assets/characters/pharmacy-lab.png",
+        "settingBasis": "Revised source (2026-11-12): the lab is notified of the samples and Ravi gives his samples at the clinic lab. Appearance is a manga supplement."
+      }
+    },
+    "specialist": {
+      "name": "Specialist (vision)",
+      "description": "Symbolic specialist doctor in a future-vision clinic in another city. Indian man in his 50s with greying temples, rimless glasses, light grey blazer over a pale blue shirt, stethoscope around his neck (manga supplement; the source only says \"specialist\").",
+      "faceDesign": {
+        "traits": [
+          "Kind eyes behind thin rimless rectangular glasses",
+          "Bushy salt-and-pepper eyebrows",
+          "Long face with deep smile lines and a neat grey moustache"
+        ],
+        "reference": "works/welbuk-24/assets/characters/vision-cast.png",
+        "settingBasis": "Source: \"a conceptual Welbuk-connected clinic and specialist\". Every visual detail is a manga supplement."
+      }
+    },
+    "partner": {
+      "name": "Ravi's partner",
+      "description": "Symbolic family member in the vision scene. Indian woman in her early 30s, shoulder-length wavy hair, mustard-yellow kurta (manga supplement; the source only says 'partner').",
+      "faceDesign": {
+        "traits": [
+          "Wide-set eyes with a soft, lively expression",
+          "Medium eyebrows with a high gentle arch",
+          "Heart-shaped face with a narrow chin and a small mole under the right eye"
+        ],
+        "reference": "works/welbuk-24/assets/characters/vision-cast.png",
+        "settingBasis": "Source: \"symbolic family scene with Ravi, partner, and child\". Appearance is a manga supplement."
+      }
+    },
+    "child": {
+      "name": "Ravi's child",
+      "description": "Symbolic family member in the vision scene. Child of about seven, short hair, orange T-shirt (manga supplement; the source only says 'child').",
+      "faceDesign": {
+        "traits": [
+          "Big round curious eyes",
+          "Short, light eyebrows",
+          "Round chubby cheeks and a small upturned nose"
+        ],
+        "reference": "works/welbuk-24/assets/characters/vision-cast.png",
+        "settingBasis": "Source: \"symbolic family scene with Ravi, partner, and child\". Appearance is a manga supplement."
+      }
+    },
+    "family": {
+      "name": "Family member",
+      "description": "Son of the unwell elderly man, Indian man in his 40s, checked shirt (manga supplement, page 4).",
+      "faceDesign": {
+        "traits": [
+          "Worried narrow eyes",
+          "Thick dark eyebrows",
+          "Oval face with a short stubble beard"
+        ],
+        "reference": "works/welbuk-24/assets/characters/supporting-cast.png",
+        "settingBasis": "Storyboard v3.0 names only the role; appearance is a manga supplement fixed by the accepted generated page (crop sheet)."
+      }
+    },
+    "urgent": {
+      "name": "Unwell elderly man",
+      "description": "Indian man in his 70s, bald with a grey beard, white kurta and veshti (manga supplement; not Mr. Raman).",
+      "faceDesign": {
+        "traits": [
+          "Tired drooping eyes",
+          "Sparse white eyebrows",
+          "Bald head with a full grey beard"
+        ],
+        "reference": "works/welbuk-24/assets/characters/supporting-cast.png",
+        "settingBasis": "Storyboard v3.0 names only the role; appearance is a manga supplement fixed by the accepted generated page (crop sheet)."
+      }
+    },
+    "dentist": {
+      "name": "Dentist",
+      "description": "Indian woman, 40s, short bob, white coat over a navy top, mask lowered (manga supplement, page 9).",
+      "faceDesign": {
+        "traits": [
+          "Bright round eyes",
+          "Soft arched eyebrows",
+          "Round face framed by a short bob"
+        ],
+        "reference": "works/welbuk-24/assets/characters/supporting-cast.png",
+        "settingBasis": "Storyboard v3.0 names only the role; appearance is a manga supplement fixed by the accepted generated page (crop sheet)."
+      }
+    },
+    "dentalpt": {
+      "name": "Dental patient",
+      "description": "Indian man, late 20s, curly hair, yellow T-shirt (manga supplement, page 9).",
+      "faceDesign": {
+        "traits": [
+          "Squinting expressive eyes",
+          "Thick eyebrows",
+          "Curly hair and a short beard"
+        ],
+        "reference": "works/welbuk-24/assets/characters/supporting-cast.png",
+        "settingBasis": "Storyboard v3.0 names only the role; appearance is a manga supplement fixed by the accepted generated page (crop sheet)."
+      }
+    },
+    "ophth": {
+      "name": "Ophthalmologist",
+      "description": "Indian man, 40s, thin glasses, white coat over a maroon shirt (manga supplement, page 10).",
+      "faceDesign": {
+        "traits": [
+          "Calm eyes behind thin rectangular glasses",
+          "Straight dark eyebrows",
+          "Long face with a trimmed beard"
+        ],
+        "reference": "works/welbuk-24/assets/characters/supporting-cast.png",
+        "settingBasis": "Storyboard v3.0 names only the role; appearance is a manga supplement fixed by the accepted generated page (crop sheet)."
+      }
+    },
+    "derm": {
+      "name": "Dermatologist",
+      "description": "Indian woman, 40s, low ponytail, white coat over a purple kurta (manga supplement, page 11).",
+      "faceDesign": {
+        "traits": [
+          "Large gentle eyes",
+          "Thin arched eyebrows",
+          "Oval face with long hair in a low ponytail"
+        ],
+        "reference": "works/welbuk-24/assets/characters/supporting-cast.png",
+        "settingBasis": "Storyboard v3.0 names only the role; appearance is a manga supplement fixed by the accepted generated page (crop sheet)."
+      }
+    },
+    "dermpt": {
+      "name": "Dermatology patient",
+      "description": "Indian woman, 50s, grey-streaked bun, green sari (manga supplement, page 11).",
+      "faceDesign": {
+        "traits": [
+          "Kind eyes with smile lines",
+          "Light greying eyebrows",
+          "Round face with grey-streaked hair in a bun"
+        ],
+        "reference": "works/welbuk-24/assets/characters/supporting-cast.png",
+        "settingBasis": "Storyboard v3.0 names only the role; appearance is a manga supplement fixed by the accepted generated page (crop sheet)."
+      }
+    },
+    "paed": {
+      "name": "Paediatrician",
+      "description": "Indian man, 30s, white coat over a light yellow shirt (manga supplement, page 12).",
+      "faceDesign": {
+        "traits": [
+          "Friendly wide eyes",
+          "Straight dark eyebrows",
+          "Round face with a broad smile"
+        ],
+        "reference": "works/welbuk-24/assets/characters/supporting-cast.png",
+        "settingBasis": "Storyboard v3.0 names only the role; appearance is a manga supplement fixed by the accepted generated page (crop sheet)."
+      }
+    },
+    "mother": {
+      "name": "Mother",
+      "description": "Indian woman, early 30s, long braid, red-and-gold churidar (manga supplement, page 12).",
+      "faceDesign": {
+        "traits": [
+          "Almond eyes",
+          "Arched eyebrows",
+          "Oval face with a long braid"
+        ],
+        "reference": "works/welbuk-24/assets/characters/supporting-cast.png",
+        "settingBasis": "Storyboard v3.0 names only the role; appearance is a manga supplement fixed by the accepted generated page (crop sheet)."
+      }
+    },
+    "admin": {
+      "name": "Clinic Administrator",
+      "description": "Indian man, 40s, glasses, navy blazer over a white shirt (manga supplement, pages 18-20).",
+      "faceDesign": {
+        "traits": [
+          "Focused eyes behind rectangular glasses",
+          "Straight eyebrows",
+          "Square face with short neat hair"
+        ],
+        "reference": "works/welbuk-24/assets/characters/supporting-cast.png",
+        "settingBasis": "Storyboard v3.0 names only the role; appearance is a manga supplement fixed by the accepted generated page (crop sheet)."
+      }
+    },
+    "narration": {
+      "name": "Narration",
+      "kind": "caption"
+    },
+    "label": {
+      "name": "Label",
+      "kind": "caption",
+      "variant": "label"
+    }
+  },
+  "references": [
+    "works/welbuk-24/assets/characters/main-cast.png",
+    "works/welbuk-24/assets/characters/vision-cast.png",
+    "works/welbuk-24/assets/characters/nurse.png",
+    "works/welbuk-24/assets/characters/checkin-patients.png",
+    "works/welbuk-24/assets/characters/pharmacy-lab.png",
+    "works/welbuk-24/assets/characters/supporting-cast.png"
+  ],
+  "assetDir": "works/welbuk-24/assets",
+  "workflowDir": "works/welbuk-24/workflow",
+  "outputDir": "works/welbuk-24/output",
+  "pages": [
+    {
+      "id": "01",
+      "section": "main",
+      "purpose": "Storyboard v3.0 page 1.",
+      "expectation": "Next workflow step.",
+      "panels": [
+        {
+          "id": "01-1",
+          "order": 1,
+          "role": "提示",
+          "beat": "Morning, wide establishing shot of a small neighbourhood cli",
+          "rect": [
+            45,
+            29,
+            934,
+            452
+          ],
+          "scene": "Morning, wide establishing shot of a small neighbourhood clinic in Tamil Nadu: patients waiting on metal chairs outside the open glass door under a teal awning; Dr. Ananya at the door welcoming an elderly woman; inside, Meera behind a reception desk piled with paper.",
+          "speakers": {},
+          "dialogue": [
+            {
+              "speaker": "narration",
+              "text": "A busy day at Dr. Ananya's clinic.",
+              "textColumns": [
+                "A busy day at Dr. Ananya's clinic."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 176,
+              "dy": 8
+            }
+          ]
+        },
+        {
+          "id": "01-2",
+          "order": 2,
+          "role": "始動",
+          "beat": "Medium shot",
+          "rect": [
+            45,
+            494,
+            463,
+            478
+          ],
+          "scene": "Medium shot: Meera at the crowded desk, landline receiver at her ear with her left hand, writing in a paper register with her right; appointment slips and files around her; patients waiting in front; she looks stretched but friendly.",
+          "speakers": {
+            "meera": {
+              "face": [
+                269,
+                614,
+                79,
+                107
+              ],
+              "anchor": [
+                311,
+                680
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "meera",
+              "text": "Appointments, patient details, follow-ups... there's always something to manage!",
+              "textColumns": [
+                "Appointments, patient details, ",
+                "follow-ups... there's always ",
+                "something to manage!"
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 98,
+              "dy": 8
+            }
+          ]
+        },
+        {
+          "id": "01-3",
+          "order": 3,
+          "role": "反応",
+          "beat": "Evening",
+          "rect": [
+            518,
+            494,
+            462,
+            478
+          ],
+          "scene": "Evening: empty waiting chairs; Dr. Ananya reviewing a stack of paper patient files at a desk while Meera keeps writing in the background.",
+          "speakers": {
+            "meera": {
+              "face": [
+                900,
+                720,
+                31,
+                35
+              ],
+              "anchor": [
+                916,
+                742
+              ]
+            },
+            "ananya": {
+              "face": [
+                704,
+                666,
+                79,
+                99
+              ],
+              "anchor": [
+                745,
+                725
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "meera",
+              "text": "The patients have gone home... but we're still here.",
+              "textColumns": [
+                "The patients have gone home... but we're ",
+                "still here."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 8,
+              "dy": 8
+            }
+          ]
+        },
+        {
+          "id": "01-4",
+          "order": 4,
+          "role": "余韻",
+          "beat": "Large emotional panel, late evening, a wall clock (no number",
+          "rect": [
+            45,
+            984,
+            934,
+            461
+          ],
+          "scene": "Large emotional panel, late evening, a wall clock (no numbers, just hands near nine) on the wall: Dr. Ananya exhausted at the desk, hand to her forehead; Meera resting her head on a pile of registers; desk lamp light.",
+          "speakers": {
+            "ananya": {
+              "face": [
+                220,
+                1096,
+                119,
+                107
+              ],
+              "anchor": [
+                282,
+                1168
+              ]
+            },
+            "meera": {
+              "face": [
+                740,
+                1188,
+                62,
+                89
+              ],
+              "anchor": [
+                772,
+                1247
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "ananya",
+              "text": "Our time should belong to patients, not paperwork.",
+              "textColumns": [
+                "Our time should belong to patients, not paperwork."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 8,
+              "dy": 8
+            }
+          ]
+        }
+      ],
+      "brand": false
+    },
+    {
+      "id": "02",
+      "section": "main",
+      "purpose": "Storyboard v3.0 page 2.",
+      "expectation": "Next workflow step.",
+      "panels": [
+        {
+          "id": "02-1",
+          "order": 1,
+          "role": "提示",
+          "beat": "Daytime, the same reception, paper files still piled at the ",
+          "rect": [
+            41,
+            25,
+            466,
+            462
+          ],
+          "scene": "Daytime, the same reception, paper files still piled at the side: Dr. Ananya and Meera lean in together over a laptop showing a pink-headed dashboard; Ananya points at it, Meera curious and pleased.",
+          "speakers": {
+            "ananya": {
+              "face": [
+                138,
+                165,
+                110,
+                107
+              ],
+              "anchor": [
+                212,
+                238
+              ]
+            },
+            "meera": {
+              "face": [
+                290,
+                171,
+                95,
+                107
+              ],
+              "anchor": [
+                338,
+                245
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "ananya",
+              "text": "Meera, I think we've found a better way.",
+              "textColumns": [
+                "Meera, I think we've found a better way."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 8,
+              "dy": 32
+            },
+            {
+              "speaker": "meera",
+              "text": "Tell me more, Doctor!",
+              "textColumns": [
+                "Tell me more, ",
+                "Doctor!"
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 266,
+              "dy": 332
+            }
+          ]
+        },
+        {
+          "id": "02-2",
+          "order": 2,
+          "role": "始動",
+          "beat": "Close-up of the laptop screen alone filling the panel",
+          "rect": [
+            517,
+            25,
+            466,
+            461
+          ],
+          "scene": "Close-up of the laptop screen alone filling the panel: three simple pink-and-white rounded tiles side by side with abstract icons (a laptop with a calendar, a group of three people, a smartphone with a person silhouette), joined by thin pink lines. No text.",
+          "speakers": {
+            "ananya": {
+              "kind": "offscreen"
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "ananya",
+              "text": "Welbuk connects clinic operations, staff workflows and patient care.",
+              "textColumns": [
+                "Welbuk connects clinic operations, staff ",
+                "workflows and patient care."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 8,
+              "dy": 8
+            },
+            {
+              "speaker": "label",
+              "text": "Screens shown are illustrative.",
+              "textColumns": [
+                "Screens shown are illustrative."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 20,
+              "compact": true,
+              "x": 119,
+              "dy": 404
+            }
+          ]
+        },
+        {
+          "id": "02-3",
+          "order": 3,
+          "role": "反応",
+          "beat": "A few weeks later, bright and tidy",
+          "rect": [
+            41,
+            496,
+            942,
+            411
+          ],
+          "scene": "A few weeks later, bright and tidy: Meera at reception working on a monitor with a pink-headed dashboard; behind her Dr. Ananya reviews a schedule on a tablet. No paper piles.",
+          "speakers": {
+            "meera": {
+              "face": [
+                369,
+                621,
+                95,
+                124
+              ],
+              "anchor": [
+                424,
+                700
+              ]
+            },
+            "ananya": {
+              "face": [
+                754,
+                541,
+                78,
+                107
+              ],
+              "anchor": [
+                792,
+                609
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "narration",
+              "text": "A few weeks later, their clinic is powered by Welbuk.",
+              "textColumns": [
+                "A few weeks later, their clinic is powered by Welbuk."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 8,
+              "dy": 8
+            },
+            {
+              "speaker": "meera",
+              "text": "Appointments, records and follow-ups are easier to manage!",
+              "textColumns": [
+                "Appointments, records and follow-ups are easier ",
+                "to manage!"
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 80,
+              "dy": 296
+            }
+          ]
+        },
+        {
+          "id": "02-4",
+          "order": 4,
+          "role": "余韻",
+          "beat": "Wide",
+          "rect": [
+            41,
+            917,
+            942,
+            533
+          ],
+          "scene": "Wide: Dr. Ananya and Meera smiling and welcoming two arriving patients at a clean reception desk; plants, calm daylight.",
+          "speakers": {
+            "ananya": {
+              "face": [
+                351,
+                1056,
+                86,
+                124
+              ],
+              "anchor": [
+                397,
+                1135
+              ]
+            },
+            "meera": {
+              "face": [
+                561,
+                1082,
+                88,
+                126
+              ],
+              "anchor": [
+                605,
+                1168
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "ananya",
+              "text": "Now we can focus more on our patients.",
+              "textColumns": [
+                "Now we can focus more on our patients."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 140,
+              "dy": 20
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "section": "main",
+      "purpose": "Storyboard v3.0 page 3.",
+      "expectation": "Next workflow step.",
+      "panels": [
+        {
+          "id": "03-1",
+          "order": 1,
+          "role": "提示",
+          "beat": "Ravi at home in the morning, smiling at his phone, which sho",
+          "rect": [
+            46,
+            30,
+            933,
+            389
+          ],
+          "scene": "Ravi at home in the morning, smiling at his phone, which shows an abstract pink appointment card with a calendar icon.",
+          "speakers": {
+            "ravi": {
+              "face": [
+                370,
+                139,
+                127,
+                170
+              ],
+              "anchor": [
+                441,
+                251
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "ravi",
+              "text": "I can choose a doctor and book a convenient slot!",
+              "textColumns": [
+                "I can choose a doctor and book a convenient slot!"
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 128,
+              "dy": 8
+            }
+          ]
+        },
+        {
+          "id": "03-2",
+          "order": 2,
+          "role": "始動",
+          "beat": "Clinic reception",
+          "rect": [
+            46,
+            432,
+            933,
+            409
+          ],
+          "scene": "Clinic reception: Priya walks up to Meera at the desk and asks; a few patients wait on chairs behind her.",
+          "speakers": {
+            "priya": {
+              "face": [
+                381,
+                508,
+                86,
+                116
+              ],
+              "anchor": [
+                441,
+                587
+              ]
+            },
+            "meera": {
+              "face": [
+                658,
+                561,
+                86,
+                115
+              ],
+              "anchor": [
+                702,
+                640
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "priya",
+              "text": "I don't have an appointment. Can I still see the doctor?",
+              "textColumns": [
+                "I don't have an appointment. Can I still see the ",
+                "doctor?"
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 428,
+              "dy": 20
+            },
+            {
+              "speaker": "meera",
+              "text": "Of course. Let me check the available slots.",
+              "textColumns": [
+                "Of course. Let me ",
+                "check the ",
+                "available slots."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 704,
+              "dy": 128
+            }
+          ]
+        },
+        {
+          "id": "03-3",
+          "order": 3,
+          "role": "反応",
+          "beat": "Over-the-shoulder close-up of Meera's monitor",
+          "rect": [
+            46,
+            856,
+            445,
+            588
+          ],
+          "scene": "Over-the-shoulder close-up of Meera's monitor: an abstract schedule grid with rows of coloured blocks: pink blocks (booked), light-blue blocks (walk-in) and empty slots. No text.",
+          "speakers": {
+            "meera": {
+              "face": [
+                46,
+                923,
+                144,
+                286
+              ],
+              "anchor": [
+                151,
+                1082
+              ],
+              "kind": "head"
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "meera",
+              "text": "Booked visits and walk-ins are organized in one schedule.",
+              "textColumns": [
+                "Booked visits and ",
+                "walk-ins are organized ",
+                "in one schedule."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 152,
+              "dy": 38
+            }
+          ]
+        },
+        {
+          "id": "03-4",
+          "order": 4,
+          "role": "余韻",
+          "beat": "Waiting area",
+          "rect": [
+            504,
+            856,
+            476,
+            588
+          ],
+          "scene": "Waiting area: Ravi seated calmly with his phone confirmation card; Priya holding a small paper token slip; Dr. Ananya visible at a doorway behind, smiling.",
+          "speakers": {
+            "ananya": {
+              "face": [
+                878,
+                1003,
+                55,
+                72
+              ],
+              "anchor": [
+                909,
+                1049
+              ]
+            },
+            "ravi": {
+              "face": [
+                551,
+                1029,
+                95,
+                143
+              ],
+              "anchor": [
+                599,
+                1118
+              ]
+            },
+            "priya": {
+              "face": [
+                710,
+                1042,
+                95,
+                143
+              ],
+              "anchor": [
+                757,
+                1138
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "ananya",
+              "text": "The team knows who's coming and can prepare in advance.",
+              "textColumns": [
+                "The team knows who's coming and can ",
+                "prepare in advance."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 14,
+              "dy": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "section": "main",
+      "purpose": "Storyboard v3.0 page 4.",
+      "expectation": "Next workflow step.",
+      "panels": [
+        {
+          "id": "04-1",
+          "order": 1,
+          "role": "提示",
+          "beat": "Reception",
+          "rect": [
+            42,
+            25,
+            941,
+            440
+          ],
+          "scene": "Reception: a worried son helps an unwell elderly man through the door; Meera stands up from her desk, alert, reaching for the phone.",
+          "speakers": {
+            "family": {
+              "face": [
+                258,
+                126,
+                95,
+                115
+              ],
+              "anchor": [
+                298,
+                198
+              ]
+            },
+            "urgent": {
+              "face": [
+                160,
+                165,
+                86,
+                115
+              ],
+              "anchor": [
+                203,
+                238
+              ]
+            },
+            "meera": {
+              "face": [
+                628,
+                146,
+                86,
+                107
+              ],
+              "anchor": [
+                681,
+                218
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "family",
+              "text": "He needs urgent medical attention!",
+              "textColumns": [
+                "He needs urgent medical attention!"
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 68,
+              "dy": 20
+            },
+            {
+              "speaker": "meera",
+              "text": "I'll alert the clinical team immediately.",
+              "textColumns": [
+                "I'll alert the clinical team immediately."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 452,
+              "dy": 20
+            }
+          ]
+        },
+        {
+          "id": "04-2",
+          "order": 2,
+          "role": "始動",
+          "beat": "Close-up of a monitor",
+          "rect": [
+            42,
+            475,
+            464,
+            497
+          ],
+          "scene": "Close-up of a monitor: an abstract queue list with one row highlighted in red at the top, other rows pink and blue below. No text or numbers.",
+          "speakers": {},
+          "dialogue": [
+            {
+              "speaker": "narration",
+              "text": "Welbuk supports emergency-priority queue management.",
+              "textColumns": [
+                "Welbuk supports emergency-priority ",
+                "queue management."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 8,
+              "dy": 8
+            }
+          ]
+        },
+        {
+          "id": "04-3",
+          "order": 3,
+          "role": "反応",
+          "beat": "The Nurse guides the elderly man by the arm toward an assess",
+          "rect": [
+            519,
+            475,
+            464,
+            497
+          ],
+          "scene": "The Nurse guides the elderly man by the arm toward an assessment room; Dr. Ananya at the open door preparing, gesturing him in.",
+          "speakers": {
+            "ananya": {
+              "face": [
+                874,
+                594,
+                62,
+                89
+              ],
+              "anchor": [
+                908,
+                653
+              ]
+            },
+            "nurse": {
+              "face": [
+                621,
+                601,
+                79,
+                97
+              ],
+              "anchor": [
+                658,
+                663
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "ananya",
+              "text": "Bring him in for assessment.",
+              "textColumns": [
+                "Bring him in for assessment."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 8,
+              "dy": 8
+            }
+          ]
+        },
+        {
+          "id": "04-4",
+          "order": 4,
+          "role": "余韻",
+          "beat": "The waiting room",
+          "rect": [
+            42,
+            981,
+            941,
+            468
+          ],
+          "scene": "The waiting room: a wall display with abstract coloured rows updated; Meera calmly speaking to two waiting patients, reassuring them.",
+          "speakers": {
+            "meera": {
+              "face": [
+                396,
+                1089,
+                95,
+                134
+              ],
+              "anchor": [
+                444,
+                1175
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "meera",
+              "text": "The queue is updated, and everyone knows the next step.",
+              "textColumns": [
+                "The queue is updated, and everyone knows the ",
+                "next step."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 146,
+              "dy": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "section": "main",
+      "purpose": "Storyboard v3.0 page 5.",
+      "expectation": "Next workflow step.",
+      "panels": [
+        {
+          "id": "05-1",
+          "order": 1,
+          "role": "提示",
+          "beat": "Tall panel",
+          "rect": [
+            43,
+            27,
+            466,
+            929
+          ],
+          "scene": "Tall panel: Ravi at the clinic entrance holding his phone up to a pink-and-white QR standee (abstract QR-like square pattern, no text, no logo).",
+          "speakers": {
+            "ravi": {
+              "face": [
+                162,
+                238,
+                110,
+                170
+              ],
+              "anchor": [
+                216,
+                349
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "ravi",
+              "text": "I can check in using this QR code!",
+              "textColumns": [
+                "I can check in using this QR code!"
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 8,
+              "dy": 68
+            }
+          ]
+        },
+        {
+          "id": "05-2",
+          "order": 2,
+          "role": "始動",
+          "beat": "Close-up of Ravi's hands holding the phone",
+          "rect": [
+            518,
+            27,
+            464,
+            415
+          ],
+          "scene": "Close-up of Ravi's hands holding the phone: an abstract check-in form with a ticked consent box and a pink button.",
+          "speakers": {},
+          "dialogue": [
+            {
+              "speaker": "narration",
+              "text": "Registration and consent become part of a connected workflow.",
+              "textColumns": [
+                "Registration and consent become part of ",
+                "a connected workflow."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 8,
+              "dy": 8
+            }
+          ]
+        },
+        {
+          "id": "05-3",
+          "order": 3,
+          "role": "反応",
+          "beat": "Mr. Raman at the reception counter with his walking stick; M",
+          "rect": [
+            518,
+            452,
+            464,
+            504
+          ],
+          "scene": "Mr. Raman at the reception counter with his walking stick; Meera leans forward, smiling, offering to help.",
+          "speakers": {
+            "raman": {
+              "face": [
+                593,
+                547,
+                71,
+                116
+              ],
+              "anchor": [
+                658,
+                621
+              ]
+            },
+            "meera": {
+              "face": [
+                778,
+                554,
+                78,
+                116
+              ],
+              "anchor": [
+                817,
+                630
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "raman",
+              "text": "I'm not very comfortable using my phone.",
+              "textColumns": [
+                "I'm not very comfortable ",
+                "using my phone."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 20,
+              "compact": true,
+              "x": 10,
+              "dy": 6
+            },
+            {
+              "speaker": "meera",
+              "text": "No problem, sir. I'll help you register.",
+              "textColumns": [
+                "No problem, sir. ",
+                "I'll help you register."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 20,
+              "compact": true,
+              "x": 200,
+              "dy": 380
+            }
+          ]
+        },
+        {
+          "id": "05-4",
+          "order": 4,
+          "role": "余韻",
+          "beat": "Waiting area",
+          "rect": [
+            43,
+            966,
+            938,
+            482
+          ],
+          "scene": "Waiting area: Ravi and Mr. Raman seated side by side, relaxed; a wall display shows abstract queue tiles; Ravi looks at his phone happily.",
+          "speakers": {
+            "ravi": {
+              "face": [
+                314,
+                1089,
+                95,
+                134
+              ],
+              "anchor": [
+                369,
+                1175
+              ]
+            },
+            "raman": {
+              "face": [
+                564,
+                1096,
+                95,
+                124
+              ],
+              "anchor": [
+                612,
+                1178
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "ravi",
+              "text": "That was much easier than filling out forms!",
+              "textColumns": [
+                "That was much easier than filling out forms!"
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 86,
+              "dy": 26
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "06",
+      "section": "main",
+      "purpose": "Storyboard v3.0 page 6.",
+      "expectation": "Next workflow step.",
+      "panels": [
+        {
+          "id": "06-1",
+          "order": 1,
+          "role": "提示",
+          "beat": "Meera at reception looking at her monitor with an abstract a",
+          "rect": [
+            41,
+            25,
+            467,
+            485
+          ],
+          "scene": "Meera at reception looking at her monitor with an abstract arrivals list, a few ticks.",
+          "speakers": {
+            "meera": {
+              "face": [
+                125,
+                165,
+                95,
+                134
+              ],
+              "anchor": [
+                180,
+                257
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "meera",
+              "text": "The front desk can track who has arrived.",
+              "textColumns": [
+                "The front desk can track who has ",
+                "arrived."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 8,
+              "dy": 20
+            }
+          ]
+        },
+        {
+          "id": "06-2",
+          "order": 2,
+          "role": "始動",
+          "beat": "Vitals corner",
+          "rect": [
+            518,
+            25,
+            465,
+            485
+          ],
+          "scene": "Vitals corner: the Nurse takes Ravi's blood pressure with a cuff and enters it on a tablet; Ravi seated, relaxed.",
+          "speakers": {
+            "nurse": {
+              "face": [
+                575,
+                132,
+                86,
+                126
+              ],
+              "anchor": [
+                628,
+                218
+              ]
+            },
+            "ravi": {
+              "face": [
+                838,
+                178,
+                88,
+                124
+              ],
+              "anchor": [
+                882,
+                262
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "nurse",
+              "text": "Ravi's vitals are recorded.",
+              "textColumns": [
+                "Ravi's vitals are recorded."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 8,
+              "dy": 38
+            }
+          ]
+        },
+        {
+          "id": "06-3",
+          "order": 3,
+          "role": "反応",
+          "beat": "Consultation room",
+          "rect": [
+            42,
+            523,
+            941,
+            411
+          ],
+          "scene": "Consultation room: Dr. Ananya at her desk looking at a tablet with an abstract patient queue and a small vitals card (icons only).",
+          "speakers": {
+            "ananya": {
+              "face": [
+                342,
+                581,
+                112,
+                142
+              ],
+              "anchor": [
+                397,
+                673
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "ananya",
+              "text": "I can review his observations before the consultation.",
+              "textColumns": [
+                "I can review his observations before the ",
+                "consultation."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 464,
+              "dy": 8
+            }
+          ]
+        },
+        {
+          "id": "06-4",
+          "order": 4,
+          "role": "余韻",
+          "beat": "Wide connected scene",
+          "rect": [
+            42,
+            945,
+            941,
+            505
+          ],
+          "scene": "Wide connected scene: three zones of the clinic side by side (reception with Meera, vitals corner with the Nurse, consultation room with Dr. Ananya), joined by thin dotted pink lines between their devices.",
+          "speakers": {},
+          "dialogue": [
+            {
+              "speaker": "narration",
+              "text": "The right information reaches the right team members.",
+              "textColumns": [
+                "The right information reaches the right team members."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 8,
+              "dy": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "07",
+      "section": "main",
+      "purpose": "Storyboard v3.0 page 7.",
+      "expectation": "Next workflow step.",
+      "panels": [
+        {
+          "id": "07-1",
+          "order": 1,
+          "role": "提示",
+          "beat": "Consultation room with a window and a plant",
+          "rect": [
+            45,
+            28,
+            935,
+            442
+          ],
+          "scene": "Consultation room with a window and a plant: Dr. Ananya welcomes Ravi as he comes in and sits down.",
+          "speakers": {
+            "ananya": {
+              "face": [
+                249,
+                132,
+                88,
+                116
+              ],
+              "anchor": [
+                295,
+                211
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "ananya",
+              "text": "Hello, Ravi. What brings you in?",
+              "textColumns": [
+                "Hello, Ravi. What brings you in?"
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 74,
+              "dy": 20
+            }
+          ]
+        },
+        {
+          "id": "07-2",
+          "order": 2,
+          "role": "始動",
+          "beat": "Two-shot across the desk",
+          "rect": [
+            45,
+            480,
+            935,
+            408
+          ],
+          "scene": "Two-shot across the desk: Ravi explaining, slightly tired, a hand at the back of his neck; Dr. Ananya listening attentively.",
+          "speakers": {
+            "ravi": {
+              "face": [
+                212,
+                567,
+                127,
+                170
+              ],
+              "anchor": [
+                289,
+                686
+              ]
+            },
+            "ananya": {
+              "face": [
+                670,
+                581,
+                95,
+                124
+              ],
+              "anchor": [
+                718,
+                663
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "ravi",
+              "text": "I've been feeling unusually tired lately.",
+              "textColumns": [
+                "I've been feeling unusually tired lately."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 32,
+              "dy": 8
+            }
+          ]
+        },
+        {
+          "id": "07-3",
+          "order": 3,
+          "role": "反応",
+          "beat": "Over-the-shoulder view of Dr. Ananya's laptop",
+          "rect": [
+            45,
+            898,
+            462,
+            549
+          ],
+          "scene": "Over-the-shoulder view of Dr. Ananya's laptop: abstract history cards (calendar, pill, allergy warning triangle, heart-rate icon). No text.",
+          "speakers": {
+            "ananya": {
+              "face": [
+                45,
+                910,
+                138,
+                304
+              ],
+              "anchor": [
+                164,
+                1082
+              ],
+              "kind": "head"
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "ananya",
+              "text": "Let me review your medical history.",
+              "textColumns": [
+                "Let me review your ",
+                "medical history."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 158,
+              "dy": 14
+            }
+          ]
+        },
+        {
+          "id": "07-4",
+          "order": 4,
+          "role": "余韻",
+          "beat": "Dr. Ananya typing structured notes into the laptop, focused ",
+          "rect": [
+            518,
+            898,
+            462,
+            549
+          ],
+          "scene": "Dr. Ananya typing structured notes into the laptop, focused and caring; Ravi seen from behind in the foreground.",
+          "speakers": {
+            "ananya": {
+              "face": [
+                617,
+                1042,
+                110,
+                126
+              ],
+              "anchor": [
+                671,
+                1128
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "narration",
+              "text": "Clinical information stays organized for the visit and future follow-ups.",
+              "textColumns": [
+                "Clinical information stays ",
+                "organized for the visit and ",
+                "future follow-ups."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 8,
+              "dy": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "08",
+      "section": "main",
+      "purpose": "Storyboard v3.0 page 8.",
+      "expectation": "Next workflow step.",
+      "panels": [
+        {
+          "id": "08-1",
+          "order": 1,
+          "role": "提示",
+          "beat": "Consultation room two-shot",
+          "rect": [
+            45,
+            28,
+            934,
+            448
+          ],
+          "scene": "Consultation room two-shot: Dr. Ananya explaining, an open-hand gesture toward a small phone or mic on the desk; Ravi nodding, open palm in agreement.",
+          "speakers": {
+            "ananya": {
+              "face": [
+                202,
+                139,
+                119,
+                143
+              ],
+              "anchor": [
+                278,
+                238
+              ]
+            },
+            "ravi": {
+              "face": [
+                672,
+                146,
+                110,
+                151
+              ],
+              "anchor": [
+                721,
+                245
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "ananya",
+              "text": "May I use a voice assistant to help draft my notes?",
+              "textColumns": [
+                "May I use a voice assistant to help draft my notes?"
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 8,
+              "dy": 38
+            },
+            {
+              "speaker": "ravi",
+              "text": "Yes, I consent.",
+              "textColumns": [
+                "Yes, I consent."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 440,
+              "dy": 170
+            }
+          ]
+        },
+        {
+          "id": "08-2",
+          "order": 2,
+          "role": "始動",
+          "beat": "The consultation continues naturally, the doctor listening; ",
+          "rect": [
+            45,
+            492,
+            463,
+            469
+          ],
+          "scene": "The consultation continues naturally, the doctor listening; a small pink recording dot on the device on the desk.",
+          "speakers": {
+            "ananya": {
+              "face": [
+                111,
+                621,
+                110,
+                134
+              ],
+              "anchor": [
+                167,
+                708
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "narration",
+              "text": "SpeakADoc is designed to support clinical documentation.",
+              "textColumns": [
+                "SpeakADoc is designed to ",
+                "support clinical documentation."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 8,
+              "dy": 8
+            }
+          ]
+        },
+        {
+          "id": "08-3",
+          "order": 3,
+          "role": "反応",
+          "beat": "Close-up of a laptop",
+          "rect": [
+            520,
+            492,
+            460,
+            469
+          ],
+          "scene": "Close-up of a laptop: an abstract two-column interface: left, transcript lines in two alternating colours (two speakers); right, a summary card of grey lines. No text.",
+          "speakers": {},
+          "dialogue": [
+            {
+              "speaker": "narration",
+              "text": "The assistant prepares a draft from the conversation.",
+              "textColumns": [
+                "The assistant prepares a draft ",
+                "from the conversation."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 8,
+              "dy": 8
+            }
+          ]
+        },
+        {
+          "id": "08-4",
+          "order": 4,
+          "role": "余韻",
+          "beat": "Dr. Ananya reviewing and editing the draft notes on the lapt",
+          "rect": [
+            45,
+            975,
+            934,
+            471
+          ],
+          "scene": "Dr. Ananya reviewing and editing the draft notes on the laptop with a careful expression, pen in hand.",
+          "speakers": {
+            "ananya": {
+              "face": [
+                347,
+                1056,
+                134,
+                161
+              ],
+              "anchor": [
+                424,
+                1161
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "ananya",
+              "text": "I'll review everything before completing the record.",
+              "textColumns": [
+                "I'll review everything before completing the ",
+                "record."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 446,
+              "dy": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "09",
+      "section": "main",
+      "purpose": "Storyboard v3.0 page 9.",
+      "expectation": "Next workflow step.",
+      "panels": [
+        {
+          "id": "09-1",
+          "order": 1,
+          "role": "提示",
+          "beat": "Dental clinic",
+          "rect": [
+            43,
+            28,
+            464,
+            454
+          ],
+          "scene": "Dental clinic: the dental patient in the chair points to his cheek, wincing; the Dentist listens.",
+          "speakers": {
+            "dentalpt": {
+              "face": [
+                107,
+                198,
+                119,
+                178
+              ],
+              "anchor": [
+                183,
+                317
+              ]
+            },
+            "dentist": {
+              "face": [
+                353,
+                146,
+                103,
+                161
+              ],
+              "anchor": [
+                406,
+                257
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "dentalpt",
+              "text": "This tooth hurts when I chew.",
+              "textColumns": [
+                "This tooth hurts when I chew."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 86,
+              "dy": 38
+            }
+          ]
+        },
+        {
+          "id": "09-2",
+          "order": 2,
+          "role": "始動",
+          "beat": "The Dentist looks at a monitor showing an abstract tooth cha",
+          "rect": [
+            518,
+            28,
+            463,
+            454
+          ],
+          "scene": "The Dentist looks at a monitor showing an abstract tooth chart (two arches of small white teeth, one tooth highlighted pink).",
+          "speakers": {
+            "dentist": {
+              "face": [
+                518,
+                139,
+                147,
+                258
+              ],
+              "anchor": [
+                639,
+                317
+              ],
+              "kind": "head"
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "dentist",
+              "text": "Let's record the exact tooth and what we find.",
+              "textColumns": [
+                "Let's record the exact tooth and what we ",
+                "find."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 8,
+              "dy": 20
+            }
+          ]
+        },
+        {
+          "id": "09-3",
+          "order": 3,
+          "role": "反応",
+          "beat": "Close-up of the monitor",
+          "rect": [
+            43,
+            496,
+            938,
+            428
+          ],
+          "scene": "Close-up of the monitor: the tooth chart with a highlighted tooth and simple treatment-option cards (icons only).",
+          "speakers": {
+            "dentist": {
+              "kind": "offscreen"
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "dentist",
+              "text": "We can document the findings and plan the next steps.",
+              "textColumns": [
+                "We can document the findings and plan the next ",
+                "steps."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 10,
+              "dy": 8
+            }
+          ]
+        },
+        {
+          "id": "09-4",
+          "order": 4,
+          "role": "余韻",
+          "beat": "The Dentist turns the monitor toward the patient and points;",
+          "rect": [
+            43,
+            940,
+            938,
+            507
+          ],
+          "scene": "The Dentist turns the monitor toward the patient and points; the patient looks relieved and understanding.",
+          "speakers": {
+            "dentist": {
+              "face": [
+                149,
+                1003,
+                181,
+                213
+              ],
+              "anchor": [
+                263,
+                1135
+              ]
+            },
+            "dentalpt": {
+              "face": [
+                775,
+                1056,
+                110,
+                267
+              ],
+              "anchor": [
+                804,
+                1234
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "dentalpt",
+              "text": "Now I understand which tooth needs attention!",
+              "textColumns": [
+                "Now I understand which tooth needs attention!"
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 308,
+              "dy": 14
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "section": "main",
+      "purpose": "Storyboard v3.0 page 10.",
+      "expectation": "Next workflow step.",
+      "panels": [
+        {
+          "id": "10-1",
+          "order": 1,
+          "role": "提示",
+          "beat": "Tall panel",
+          "rect": [
+            46,
+            30,
+            462,
+            854
+          ],
+          "scene": "Tall panel: eye clinic; Priya seated, squinting slightly as she describes her blurry distance vision; the Ophthalmologist listening, an eye chart on the far wall drawn as abstract shapes (no letters).",
+          "speakers": {
+            "priya": {
+              "face": [
+                80,
+                330,
+                95,
+                143
+              ],
+              "anchor": [
+                140,
+                423
+              ]
+            },
+            "ophth": {
+              "face": [
+                369,
+                297,
+                95,
+                188
+              ],
+              "anchor": [
+                417,
+                426
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "priya",
+              "text": "Distant objects have started looking blurry.",
+              "textColumns": [
+                "Distant objects have started looking ",
+                "blurry."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 8,
+              "dy": 62
+            }
+          ]
+        },
+        {
+          "id": "10-2",
+          "order": 2,
+          "role": "始動",
+          "beat": "The Ophthalmologist examines Priya's eyes with a slit-lamp s",
+          "rect": [
+            518,
+            30,
+            462,
+            459
+          ],
+          "scene": "The Ophthalmologist examines Priya's eyes with a slit-lamp style instrument.",
+          "speakers": {
+            "ophth": {
+              "face": [
+                527,
+                171,
+                110,
+                188
+              ],
+              "anchor": [
+                602,
+                297
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "ophth",
+              "text": "Let's check your vision carefully.",
+              "textColumns": [
+                "Let's check your vision carefully."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 8,
+              "dy": 56
+            }
+          ]
+        },
+        {
+          "id": "10-3",
+          "order": 3,
+          "role": "反応",
+          "beat": "Close-up of a screen",
+          "rect": [
+            519,
+            500,
+            461,
+            384
+          ],
+          "scene": "Close-up of a screen: abstract two-column interface, left eye and right eye, each with a small eye icon and grey fields. No text or numbers.",
+          "speakers": {},
+          "dialogue": [
+            {
+              "speaker": "narration",
+              "text": "Specialized findings can be documented in the appropriate clinical format.",
+              "textColumns": [
+                "Specialized findings can be documented ",
+                "in the appropriate clinical format."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 8,
+              "dy": 8
+            }
+          ]
+        },
+        {
+          "id": "10-4",
+          "order": 4,
+          "role": "余韻",
+          "beat": "The Ophthalmologist explains with a gesture; Priya smiles, r",
+          "rect": [
+            46,
+            896,
+            933,
+            550
+          ],
+          "scene": "The Ophthalmologist explains with a gesture; Priya smiles, reassured.",
+          "speakers": {
+            "ophth": {
+              "face": [
+                198,
+                1016,
+                174,
+                213
+              ],
+              "anchor": [
+                292,
+                1158
+              ]
+            },
+            "priya": {
+              "face": [
+                658,
+                1056,
+                112,
+                161
+              ],
+              "anchor": [
+                714,
+                1161
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "priya",
+              "text": "Thank you, Doctor. That makes sense.",
+              "textColumns": [
+                "Thank you, Doctor. That makes sense."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 458,
+              "dy": 62
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "11",
+      "section": "main",
+      "purpose": "Storyboard v3.0 page 11.",
+      "expectation": "Next workflow step.",
+      "panels": [
+        {
+          "id": "11-1",
+          "order": 1,
+          "role": "提示",
+          "beat": "Dermatology room",
+          "rect": [
+            43,
+            28,
+            937,
+            460
+          ],
+          "scene": "Dermatology room: the patient shows a small patch on her forearm and talks; the Dermatologist listens closely.",
+          "speakers": {
+            "derm": {
+              "face": [
+                293,
+                146,
+                110,
+                151
+              ],
+              "anchor": [
+                348,
+                248
+              ]
+            },
+            "dermpt": {
+              "face": [
+                656,
+                165,
+                110,
+                142
+              ],
+              "anchor": [
+                691,
+                264
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "dermpt",
+              "text": "This patch looks different from my last visit.",
+              "textColumns": [
+                "This patch looks different from my last visit."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 404,
+              "dy": 44
+            }
+          ]
+        },
+        {
+          "id": "11-2",
+          "order": 2,
+          "role": "始動",
+          "beat": "The Dermatologist marks the location on a tablet showing an ",
+          "rect": [
+            44,
+            496,
+            463,
+            459
+          ],
+          "scene": "The Dermatologist marks the location on a tablet showing an abstract body outline with one pink dot on the forearm.",
+          "speakers": {
+            "derm": {
+              "face": [
+                44,
+                502,
+                175,
+                320
+              ],
+              "anchor": [
+                177,
+                686
+              ],
+              "kind": "head"
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "derm",
+              "text": "Let's record the exact location.",
+              "textColumns": [
+                "Let's record the exact ",
+                "location."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 188,
+              "dy": 86
+            }
+          ]
+        },
+        {
+          "id": "11-3",
+          "order": 3,
+          "role": "反応",
+          "beat": "The patient nods consent while the Dermatologist photographs",
+          "rect": [
+            517,
+            496,
+            464,
+            459
+          ],
+          "scene": "The patient nods consent while the Dermatologist photographs the forearm with a clinic tablet; privacy screen behind.",
+          "speakers": {},
+          "dialogue": [
+            {
+              "speaker": "narration",
+              "text": "Images can help document the finding when clinically appropriate.",
+              "textColumns": [
+                "Images can help document the finding ",
+                "when clinically appropriate."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 8,
+              "dy": 8
+            }
+          ]
+        },
+        {
+          "id": "11-4",
+          "order": 4,
+          "role": "余韻",
+          "beat": "The Dermatologist compares two abstract photo cards side by ",
+          "rect": [
+            43,
+            965,
+            937,
+            480
+          ],
+          "scene": "The Dermatologist compares two abstract photo cards side by side on the screen (earlier and current), thoughtful.",
+          "speakers": {
+            "derm": {
+              "face": [
+                214,
+                1016,
+                190,
+                194
+              ],
+              "anchor": [
+                335,
+                1148
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "derm",
+              "text": "Now we can review how it has changed.",
+              "textColumns": [
+                "Now we can review how it has changed."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 374,
+              "dy": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "12",
+      "section": "main",
+      "purpose": "Storyboard v3.0 page 12.",
+      "expectation": "Next workflow step.",
+      "panels": [
+        {
+          "id": "12-1",
+          "order": 1,
+          "role": "提示",
+          "beat": "Paediatric clinic with bright colours",
+          "rect": [
+            41,
+            26,
+            942,
+            404
+          ],
+          "scene": "Paediatric clinic with bright colours: the mother brings her young son in; the Paediatrician greets them warmly.",
+          "speakers": {
+            "mother": {
+              "face": [
+                223,
+                119,
+                112,
+                151
+              ],
+              "anchor": [
+                291,
+                225
+              ]
+            },
+            "paed": {
+              "face": [
+                652,
+                99,
+                110,
+                151
+              ],
+              "anchor": [
+                708,
+                203
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "mother",
+              "text": "I'd like to check my child's growth.",
+              "textColumns": [
+                "I'd like to check my child's growth."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 62,
+              "dy": 14
+            }
+          ]
+        },
+        {
+          "id": "12-2",
+          "order": 2,
+          "role": "始動",
+          "beat": "The child stands on a height-measuring board, the Paediatric",
+          "rect": [
+            41,
+            441,
+            942,
+            388
+          ],
+          "scene": "The child stands on a height-measuring board, the Paediatrician measuring; a small scale nearby.",
+          "speakers": {
+            "paed": {
+              "face": [
+                575,
+                468,
+                86,
+                116
+              ],
+              "anchor": [
+                622,
+                547
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "paed",
+              "text": "Let's review the measurements.",
+              "textColumns": [
+                "Let's review the measurements."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 8,
+              "dy": 14
+            }
+          ]
+        },
+        {
+          "id": "12-3",
+          "order": 3,
+          "role": "反応",
+          "beat": "Close-up of a screen",
+          "rect": [
+            41,
+            838,
+            465,
+            609
+          ],
+          "scene": "Close-up of a screen: an abstract growth curve chart with a dotted line, plus small vaccine-check icons. No text or numbers.",
+          "speakers": {},
+          "dialogue": [
+            {
+              "speaker": "narration",
+              "text": "Welbuk supports structured children's health workflows.",
+              "textColumns": [
+                "Welbuk supports structured children's ",
+                "health workflows."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 8,
+              "dy": 8
+            }
+          ]
+        },
+        {
+          "id": "12-4",
+          "order": 4,
+          "role": "余韻",
+          "beat": "The Paediatrician explains to the mother, who smiles; the ch",
+          "rect": [
+            516,
+            838,
+            467,
+            610
+          ],
+          "scene": "The Paediatrician explains to the mother, who smiles; the child sits on her lap.",
+          "speakers": {
+            "mother": {
+              "face": [
+                797,
+                963,
+                103,
+                143
+              ],
+              "anchor": [
+                852,
+                1062
+              ]
+            },
+            "paed": {
+              "face": [
+                564,
+                937,
+                127,
+                178
+              ],
+              "anchor": [
+                629,
+                1059
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "mother",
+              "text": "It's helpful to see the information together.",
+              "textColumns": [
+                "It's helpful to see the ",
+                "information together."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 8,
+              "dy": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "13",
+      "section": "main",
+      "purpose": "Storyboard v3.0 page 13.",
+      "expectation": "Next workflow step.",
+      "panels": [
+        {
+          "id": "13-1",
+          "order": 1,
+          "role": "提示",
+          "beat": "Consultation room",
+          "rect": [
+            43,
+            28,
+            558,
+            490
+          ],
+          "scene": "Consultation room: Dr. Ananya explaining calmly to Ravi across the desk.",
+          "speakers": {
+            "ananya": {
+              "face": [
+                150,
+                165,
+                79,
+                107
+              ],
+              "anchor": [
+                190,
+                238
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "ananya",
+              "text": "Let's go through the recommended next steps.",
+              "textColumns": [
+                "Let's go through the recommended next steps."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 8,
+              "dy": 38
+            }
+          ]
+        },
+        {
+          "id": "13-2",
+          "order": 2,
+          "role": "始動",
+          "beat": "Close-up of her laptop",
+          "rect": [
+            612,
+            28,
+            369,
+            490
+          ],
+          "scene": "Close-up of her laptop: an abstract prescription screen with pill icons and grey lines. No drug names or text.",
+          "speakers": {},
+          "dialogue": [
+            {
+              "speaker": "narration",
+              "text": "Prescriptions are recorded as part of the clinical visit.",
+              "textColumns": [
+                "Prescriptions are recorded as ",
+                "part of the clinical visit."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 8,
+              "dy": 8
+            }
+          ]
+        },
+        {
+          "id": "13-3",
+          "order": 3,
+          "role": "反応",
+          "beat": "Dr. Ananya checking the screen carefully, finger on the trac",
+          "rect": [
+            44,
+            528,
+            937,
+            372
+          ],
+          "scene": "Dr. Ananya checking the screen carefully, finger on the trackpad.",
+          "speakers": {
+            "ananya": {
+              "face": [
+                352,
+                554,
+                119,
+                143
+              ],
+              "anchor": [
+                414,
+                653
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "ananya",
+              "text": "I'll review the prescription before issuing it.",
+              "textColumns": [
+                "I'll review the ",
+                "prescription ",
+                "before issuing it."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 716,
+              "dy": 26
+            }
+          ]
+        },
+        {
+          "id": "13-4",
+          "order": 4,
+          "role": "余韻",
+          "beat": "Ravi smiling at his phone, which shows an abstract prescript",
+          "rect": [
+            43,
+            911,
+            938,
+            537
+          ],
+          "scene": "Ravi smiling at his phone, which shows an abstract prescription card with a pill icon and a tick.",
+          "speakers": {
+            "ravi": {
+              "face": [
+                429,
+                937,
+                143,
+                248
+              ],
+              "anchor": [
+                507,
+                1101
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "ravi",
+              "text": "I won't need to worry about misplacing the paper.",
+              "textColumns": [
+                "I won't need to worry about ",
+                "misplacing the paper."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 578,
+              "dy": 86
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "14",
+      "section": "main",
+      "purpose": "Storyboard v3.0 page 14.",
+      "expectation": "Next workflow step.",
+      "panels": [
+        {
+          "id": "14-1",
+          "order": 1,
+          "role": "提示",
+          "beat": "Clinic pharmacy counter",
+          "rect": [
+            46,
+            29,
+            932,
+            414
+          ],
+          "scene": "Clinic pharmacy counter: the Pharmacist looks at a monitor with an abstract prescription card; shelves of medicine boxes behind (no labels).",
+          "speakers": {
+            "pharmacist": {
+              "face": [
+                297,
+                126,
+                167,
+                213
+              ],
+              "anchor": [
+                384,
+                270
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "pharmacist",
+              "text": "Let's check the medicine stock.",
+              "textColumns": [
+                "Let's check the medicine stock."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 164,
+              "dy": 8
+            }
+          ]
+        },
+        {
+          "id": "14-2",
+          "order": 2,
+          "role": "始動",
+          "beat": "Close-up of the monitor",
+          "rect": [
+            46,
+            458,
+            460,
+            497
+          ],
+          "scene": "Close-up of the monitor: abstract inventory table with rows of boxes, small calendar icons and bar lengths. No text or numbers.",
+          "speakers": {},
+          "dialogue": [
+            {
+              "speaker": "narration",
+              "text": "Inventory is tracked by batch and expiry.",
+              "textColumns": [
+                "Inventory is tracked by batch and ",
+                "expiry."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 8,
+              "dy": 8
+            }
+          ]
+        },
+        {
+          "id": "14-3",
+          "order": 3,
+          "role": "反応",
+          "beat": "The Pharmacist picks a box from the front of a shelf section",
+          "rect": [
+            520,
+            458,
+            460,
+            497
+          ],
+          "scene": "The Pharmacist picks a box from the front of a shelf section, checking it.",
+          "speakers": {
+            "pharmacist": {
+              "face": [
+                571,
+                554,
+                134,
+                178
+              ],
+              "anchor": [
+                667,
+                673
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "pharmacist",
+              "text": "We'll dispense from the appropriate batch.",
+              "textColumns": [
+                "We'll dispense from the appropriate ",
+                "batch."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 8,
+              "dy": 8
+            }
+          ]
+        },
+        {
+          "id": "14-4",
+          "order": 4,
+          "role": "余韻",
+          "beat": "The Pharmacist hands a paper bag across the counter; the mon",
+          "rect": [
+            46,
+            970,
+            933,
+            476
+          ],
+          "scene": "The Pharmacist hands a paper bag across the counter; the monitor beside him shows an abstract stock bar going down with a tick.",
+          "speakers": {},
+          "dialogue": [
+            {
+              "speaker": "narration",
+              "text": "Dispensing and inventory remain connected.",
+              "textColumns": [
+                "Dispensing and inventory remain connected."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 314,
+              "dy": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "15",
+      "section": "main",
+      "purpose": "Storyboard v3.0 page 15.",
+      "expectation": "Next workflow step.",
+      "panels": [
+        {
+          "id": "15-1",
+          "order": 1,
+          "role": "提示",
+          "beat": "Tall panel",
+          "rect": [
+            44,
+            28,
+            462,
+            905
+          ],
+          "scene": "Tall panel: consultation room; Dr. Ananya explaining tests to Ravi and tapping her laptop.",
+          "speakers": {
+            "ananya": {
+              "face": [
+                124,
+                307,
+                113,
+                162
+              ],
+              "anchor": [
+                187,
+                413
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "ananya",
+              "text": "I'd like you to complete these tests.",
+              "textColumns": [
+                "I'd like you to complete these tests."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 8,
+              "dy": 134
+            }
+          ]
+        },
+        {
+          "id": "15-2",
+          "order": 2,
+          "role": "始動",
+          "beat": "Clinic lab",
+          "rect": [
+            518,
+            28,
+            462,
+            435
+          ],
+          "scene": "Clinic lab: the Lab Technician reads an abstract order card on a monitor, tube rack beside her.",
+          "speakers": {
+            "labtech": {
+              "face": [
+                600,
+                253,
+                79,
+                117
+              ],
+              "anchor": [
+                647,
+                320
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "labtech",
+              "text": "The test order is here.",
+              "textColumns": [
+                "The test order is here."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 8,
+              "dy": 92
+            }
+          ]
+        },
+        {
+          "id": "15-3",
+          "order": 3,
+          "role": "反応",
+          "beat": "Ravi seated in a sample chair, cotton pad on his inner arm; ",
+          "rect": [
+            518,
+            474,
+            462,
+            459
+          ],
+          "scene": "Ravi seated in a sample chair, cotton pad on his inner arm; the Lab Technician standing at the right holding a capped tube; Ravi asks her something. Both figures are in the LOWER 55% of this panel, drawn smaller; the upper 45% is a wide, completely empty plain wall (draw nothing there: no shapes, no bubbles).",
+          "speakers": {
+            "ravi": {
+              "face": [
+                578,
+                637,
+                103,
+                130
+              ],
+              "anchor": [
+                647,
+                707
+              ]
+            },
+            "labtech": {
+              "face": [
+                860,
+                587,
+                79,
+                116
+              ],
+              "anchor": [
+                896,
+                667
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "ravi",
+              "text": "Will the clinic receive the report?",
+              "textColumns": [
+                "Will the clinic ",
+                "receive the report?"
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 10,
+              "dy": 10
+            },
+            {
+              "speaker": "labtech",
+              "text": "The report will be updated through the workflow.",
+              "textColumns": [
+                "The report ",
+                "will be ",
+                "updated ",
+                "through the ",
+                "workflow."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 20,
+              "compact": true,
+              "x": 172,
+              "dy": 122
+            }
+          ]
+        },
+        {
+          "id": "15-4",
+          "order": 4,
+          "role": "余韻",
+          "beat": "Dr. Ananya reviewing an abstract lab report card with a test",
+          "rect": [
+            44,
+            946,
+            936,
+            501
+          ],
+          "scene": "Dr. Ananya reviewing an abstract lab report card with a test-tube icon and a tick on her tablet.",
+          "speakers": {
+            "ananya": {
+              "face": [
+                298,
+                980,
+                176,
+                252
+              ],
+              "anchor": [
+                407,
+                1133
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "narration",
+              "text": "Orders and reports remain linked to the patient's care.",
+              "textColumns": [
+                "Orders and reports remain linked to the ",
+                "patient's care."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 446,
+              "dy": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "16",
+      "section": "main",
+      "purpose": "Storyboard v3.0 page 16.",
+      "expectation": "Next workflow step.",
+      "panels": [
+        {
+          "id": "16-1",
+          "order": 1,
+          "role": "提示",
+          "beat": "Consultation room",
+          "rect": [
+            46,
+            30,
+            933,
+            460
+          ],
+          "scene": "Consultation room: Dr. Ananya explaining to Ravi with a reassuring gesture.",
+          "speakers": {
+            "ananya": {
+              "face": [
+                276,
+                126,
+                110,
+                151
+              ],
+              "anchor": [
+                345,
+                231
+              ]
+            },
+            "ravi": {
+              "face": [
+                712,
+                146,
+                110,
+                161
+              ],
+              "anchor": [
+                767,
+                252
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "ananya",
+              "text": "I'd like a specialist to review your case.",
+              "textColumns": [
+                "I'd like a specialist to review your case."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 80,
+              "dy": 26
+            }
+          ]
+        },
+        {
+          "id": "16-2",
+          "order": 2,
+          "role": "始動",
+          "beat": "Close-up of a laptop",
+          "rect": [
+            46,
+            501,
+            933,
+            374
+          ],
+          "scene": "Close-up of a laptop: an abstract referral form with a doctor icon and a pink send arrow.",
+          "speakers": {},
+          "dialogue": [
+            {
+              "speaker": "narration",
+              "text": "Welbuk supports structured referral workflows.",
+              "textColumns": [
+                "Welbuk supports ",
+                "structured referral ",
+                "workflows."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 644,
+              "dy": 104
+            }
+          ]
+        },
+        {
+          "id": "16-3",
+          "order": 3,
+          "role": "反応",
+          "beat": "Close-up",
+          "rect": [
+            46,
+            887,
+            461,
+            557
+          ],
+          "scene": "Close-up: an abstract status track of four connected circles (first two filled pink, the others outlined).",
+          "speakers": {
+            "ananya": {
+              "kind": "offscreen"
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "ananya",
+              "text": "This helps us track the referral's progress.",
+              "textColumns": [
+                "This helps us track the referral's ",
+                "progress."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 8,
+              "dy": 8
+            }
+          ]
+        },
+        {
+          "id": "16-4",
+          "order": 4,
+          "role": "余韻",
+          "beat": "Another clinic",
+          "rect": [
+            518,
+            887,
+            462,
+            557
+          ],
+          "scene": "Another clinic: the Specialist reviewing information on a tablet that shows a consent tick icon.",
+          "speakers": {},
+          "dialogue": [
+            {
+              "speaker": "narration",
+              "text": "The goal is better coordination between care providers.",
+              "textColumns": [
+                "The goal is better coordination between ",
+                "care providers."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 8,
+              "dy": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "17",
+      "section": "main",
+      "purpose": "Storyboard v3.0 page 17.",
+      "expectation": "Next workflow step.",
+      "panels": [
+        {
+          "id": "17-1",
+          "order": 1,
+          "role": "提示",
+          "beat": "Billing desk at reception",
+          "rect": [
+            43,
+            28,
+            937,
+            449
+          ],
+          "scene": "Billing desk at reception: Ravi walks up; Meera smiles and turns her monitor slightly toward him.",
+          "speakers": {
+            "meera": {
+              "face": [
+                533,
+                185,
+                86,
+                115
+              ],
+              "anchor": [
+                579,
+                264
+              ]
+            },
+            "ravi": {
+              "face": [
+                244,
+                79,
+                78,
+                143
+              ],
+              "anchor": [
+                292,
+                173
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "meera",
+              "text": "Your consultation bill is ready.",
+              "textColumns": [
+                "Your consultation bill is ready."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 362,
+              "dy": 26
+            }
+          ]
+        },
+        {
+          "id": "17-2",
+          "order": 2,
+          "role": "始動",
+          "beat": "Close-up of the monitor",
+          "rect": [
+            43,
+            494,
+            463,
+            450
+          ],
+          "scene": "Close-up of the monitor: an abstract invoice with grey line items and a total bar. No numbers or text.",
+          "speakers": {},
+          "dialogue": [
+            {
+              "speaker": "narration",
+              "text": "Billing information is organized in one place.",
+              "textColumns": [
+                "Billing information is ",
+                "organized in one place."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 8,
+              "dy": 8
+            }
+          ]
+        },
+        {
+          "id": "17-3",
+          "order": 3,
+          "role": "反応",
+          "beat": "Ravi scans a pink-framed payment QR stand on the counter wit",
+          "rect": [
+            519,
+            494,
+            462,
+            450
+          ],
+          "scene": "Ravi scans a pink-framed payment QR stand on the counter with his phone.",
+          "speakers": {
+            "ravi": {
+              "face": [
+                598,
+                541,
+                95,
+                178
+              ],
+              "anchor": [
+                639,
+                660
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "ravi",
+              "text": "I'll pay by QR.",
+              "textColumns": [
+                "I'll pay by QR."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 182,
+              "dy": 116
+            }
+          ]
+        },
+        {
+          "id": "17-4",
+          "order": 4,
+          "role": "余韻",
+          "beat": "Meera hands Ravi a small receipt slip with a smile; Ravi nod",
+          "rect": [
+            43,
+            958,
+            937,
+            489
+          ],
+          "scene": "Meera hands Ravi a small receipt slip with a smile; Ravi nods thanks.",
+          "speakers": {
+            "meera": {
+              "face": [
+                213,
+                1076,
+                119,
+                151
+              ],
+              "anchor": [
+                276,
+                1181
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "meera",
+              "text": "Payment received. Here's your receipt.",
+              "textColumns": [
+                "Payment received. Here's your receipt."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 14,
+              "dy": 26
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "18",
+      "section": "main",
+      "purpose": "Storyboard v3.0 page 18.",
+      "expectation": "Next workflow step.",
+      "panels": [
+        {
+          "id": "18-1",
+          "order": 1,
+          "role": "提示",
+          "beat": "Evening, wide exterior mirroring page 1",
+          "rect": [
+            48,
+            30,
+            459,
+            460
+          ],
+          "scene": "Evening, wide exterior mirroring page 1: the same small neighbourhood clinic with the teal awning and glass door, warm lights inside, tidy empty waiting chairs, an organised reception desk with a monitor visible through the glass.",
+          "speakers": {},
+          "dialogue": [
+            {
+              "speaker": "narration",
+              "text": "It's the end of another busy day.",
+              "textColumns": [
+                "It's the end of another busy day."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 74,
+              "dy": 8
+            }
+          ]
+        },
+        {
+          "id": "18-2",
+          "order": 2,
+          "role": "始動",
+          "beat": "Meera at her monitor reviewing an abstract day-end summary w",
+          "rect": [
+            518,
+            30,
+            460,
+            459
+          ],
+          "scene": "Meera at her monitor reviewing an abstract day-end summary with simple bar and pie charts.",
+          "speakers": {
+            "meera": {
+              "face": [
+                594,
+                191,
+                95,
+                126
+              ],
+              "anchor": [
+                648,
+                277
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "meera",
+              "text": "Today's collections and balances are ready for review.",
+              "textColumns": [
+                "Today's collections and balances are ",
+                "ready for review."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 8,
+              "dy": 32
+            }
+          ]
+        },
+        {
+          "id": "18-3",
+          "order": 3,
+          "role": "反応",
+          "beat": "The Clinic Administrator in a small office reviewing abstrac",
+          "rect": [
+            48,
+            504,
+            929,
+            405
+          ],
+          "scene": "The Clinic Administrator in a small office reviewing abstract financial charts on a laptop.",
+          "speakers": {},
+          "dialogue": [
+            {
+              "speaker": "narration",
+              "text": "Clinic finances are easier to track and reconcile.",
+              "textColumns": [
+                "Clinic finances are easier to track and reconcile."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 380,
+              "dy": 8
+            }
+          ]
+        },
+        {
+          "id": "18-4",
+          "order": 4,
+          "role": "余韻",
+          "beat": "Wide",
+          "rect": [
+            48,
+            920,
+            929,
+            525
+          ],
+          "scene": "Wide: Dr. Ananya and Meera leaving together at dusk under the same teal awning, smiling, Ananya locking the glass door.",
+          "speakers": {
+            "ananya": {
+              "face": [
+                376,
+                1003,
+                102,
+                143
+              ],
+              "anchor": [
+                430,
+                1101
+              ]
+            },
+            "meera": {
+              "face": [
+                667,
+                1056,
+                86,
+                124
+              ],
+              "anchor": [
+                710,
+                1138
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "ananya",
+              "text": "A much better way to end the day.",
+              "textColumns": [
+                "A much better way ",
+                "to end the day."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 698,
+              "dy": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "19",
+      "section": "main",
+      "purpose": "Storyboard v3.0 page 19.",
+      "expectation": "Next workflow step.",
+      "panels": [
+        {
+          "id": "19-1",
+          "order": 1,
+          "role": "提示",
+          "beat": "Tall panel",
+          "rect": [
+            43,
+            27,
+            464,
+            461
+          ],
+          "scene": "Tall panel: the Clinic Administrator at a desk with a large monitor showing two small plain building icons connected to one dashboard.",
+          "speakers": {
+            "admin": {
+              "face": [
+                119,
+                180,
+                98,
+                117
+              ],
+              "anchor": [
+                196,
+                253
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "admin",
+              "text": "We're expanding. Can one platform support our locations?",
+              "textColumns": [
+                "We're expanding. Can one platform ",
+                "support our locations?"
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 8,
+              "dy": 20
+            }
+          ]
+        },
+        {
+          "id": "19-2",
+          "order": 2,
+          "role": "始動",
+          "beat": "A plain building icon connected by a secure pink line to a c",
+          "rect": [
+            518,
+            27,
+            462,
+            461
+          ],
+          "scene": "A plain building icon connected by a secure pink line to a cloud with a padlock.",
+          "speakers": {},
+          "dialogue": [
+            {
+              "speaker": "label",
+              "text": "CLOUD — AVAILABLE",
+              "textColumns": [
+                "CLOUD — AVAILABLE"
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 8,
+              "dy": 8
+            },
+            {
+              "speaker": "narration",
+              "text": "Welbuk Cloud is available today.",
+              "textColumns": [
+                "Welbuk Cloud is available today."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 8,
+              "dy": 62
+            }
+          ]
+        },
+        {
+          "id": "19-3",
+          "order": 3,
+          "role": "反応",
+          "beat": "Full-width panel",
+          "rect": [
+            43,
+            499,
+            937,
+            415
+          ],
+          "scene": "Full-width panel: two separate simple diagrams side by side in the LEFT 75%: a plain large building with its own server rack (on-premises) and a plain large building with a server rack linked to a cloud (hybrid), each with an empty plain strip directly under it for a label; the Administrator small at the far RIGHT edge, looking at them thoughtfully.",
+          "speakers": {
+            "admin": {
+              "face": [
+                802,
+                607,
+                89,
+                126
+              ],
+              "anchor": [
+                827,
+                687
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "admin",
+              "text": "What if a hospital needs a different deployment model?",
+              "textColumns": [
+                "What if a hospital needs a different deployment ",
+                "model?"
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 22,
+              "compact": true,
+              "x": 302,
+              "dy": 14
+            },
+            {
+              "speaker": "narration",
+              "text": "On-premises and hybrid solutions are work in progress.",
+              "textColumns": [
+                "On-premises and hybrid solutions ",
+                "are work in progress."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 22,
+              "compact": true,
+              "x": 194,
+              "dy": 98
+            },
+            {
+              "speaker": "label",
+              "text": "ON-PREMISES — WORK IN PROGRESS",
+              "textColumns": [
+                "ON-PREMISES — ",
+                "WORK IN PROGRESS"
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 20,
+              "compact": true,
+              "x": 66,
+              "dy": 297
+            },
+            {
+              "speaker": "label",
+              "text": "HYBRID — WORK IN PROGRESS",
+              "textColumns": [
+                "HYBRID — ",
+                "WORK IN PROGRESS"
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 20,
+              "compact": true,
+              "x": 424,
+              "dy": 297
+            }
+          ]
+        },
+        {
+          "id": "19-4",
+          "order": 4,
+          "role": "余韻",
+          "beat": "A plain large building drawn inside a closed boundary box, w",
+          "rect": [
+            43,
+            926,
+            937,
+            517
+          ],
+          "scene": "A plain large building drawn inside a closed boundary box, with a server and a small chip icon entirely inside it and no lines going outside.",
+          "speakers": {},
+          "dialogue": [
+            {
+              "speaker": "label",
+              "text": "AIR-GAPPED AI — AVAILABLE",
+              "textColumns": [
+                "AIR-GAPPED AI — AVAILABLE"
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 8,
+              "dy": 8
+            },
+            {
+              "speaker": "narration",
+              "text": "Air-gapped AI solutions are available too.",
+              "textColumns": [
+                "Air-gapped AI solutions are available too."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 362,
+              "dy": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "20",
+      "section": "main",
+      "purpose": "Storyboard v3.0 page 20.",
+      "expectation": "Next workflow step.",
+      "panels": [
+        {
+          "id": "20-1",
+          "order": 1,
+          "role": "提示",
+          "beat": "Morning",
+          "rect": [
+            45,
+            29,
+            934,
+            472
+          ],
+          "scene": "Morning: Meera and the Nurse arrive at the clinic entrance for their shift.",
+          "speakers": {},
+          "dialogue": [
+            {
+              "speaker": "narration",
+              "text": "Good care depends on the people behind it.",
+              "textColumns": [
+                "Good care depends on the people behind it."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 8,
+              "dy": 8
+            }
+          ]
+        },
+        {
+          "id": "20-2",
+          "order": 2,
+          "role": "始動",
+          "beat": "The Nurse taps her phone on a small attendance terminal by t",
+          "rect": [
+            45,
+            513,
+            462,
+            471
+          ],
+          "scene": "The Nurse taps her phone on a small attendance terminal by the staff door.",
+          "speakers": {
+            "nurse": {
+              "face": [
+                119,
+                633,
+                102,
+                143
+              ],
+              "anchor": [
+                186,
+                732
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "nurse",
+              "text": "My attendance is recorded.",
+              "textColumns": [
+                "My attendance is recorded."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 8,
+              "dy": 32
+            }
+          ]
+        },
+        {
+          "id": "20-3",
+          "order": 3,
+          "role": "反応",
+          "beat": "The Clinic Administrator reviewing an abstract staff calenda",
+          "rect": [
+            519,
+            513,
+            461,
+            471
+          ],
+          "scene": "The Clinic Administrator reviewing an abstract staff calendar and attendance grid on his laptop.",
+          "speakers": {
+            "admin": {
+              "face": [
+                612,
+                614,
+                119,
+                151
+              ],
+              "anchor": [
+                681,
+                713
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "admin",
+              "text": "I can review staff records and requests here.",
+              "textColumns": [
+                "I can review staff records and ",
+                "requests here."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 8,
+              "dy": 14
+            }
+          ]
+        },
+        {
+          "id": "20-4",
+          "order": 4,
+          "role": "余韻",
+          "beat": "Wide",
+          "rect": [
+            45,
+            998,
+            934,
+            447
+          ],
+          "scene": "Wide: reception, nursing, a doctor and the administrator each working at their stations, each with a device.",
+          "speakers": {},
+          "dialogue": [
+            {
+              "speaker": "narration",
+              "text": "Every role has its responsibilities and appropriate access.",
+              "textColumns": [
+                "Every role has its responsibilities and appropriate ",
+                "access."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 8,
+              "dy": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "21",
+      "section": "main",
+      "purpose": "Storyboard v3.0 page 21.",
+      "expectation": "Next workflow step.",
+      "panels": [
+        {
+          "id": "21-1",
+          "order": 1,
+          "role": "提示",
+          "beat": "Evening at home",
+          "rect": [
+            44,
+            28,
+            936,
+            396
+          ],
+          "scene": "Evening at home: Ravi on his sofa looking at his phone with an abstract visit-summary card.",
+          "speakers": {
+            "ravi": {
+              "face": [
+                372,
+                112,
+                110,
+                153
+              ],
+              "anchor": [
+                434,
+                218
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "ravi",
+              "text": "I can keep track of my visit details.",
+              "textColumns": [
+                "I can keep track of my visit details."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 194,
+              "dy": 14
+            }
+          ]
+        },
+        {
+          "id": "21-2",
+          "order": 2,
+          "role": "始動",
+          "beat": "Close-up of his phone",
+          "rect": [
+            44,
+            438,
+            936,
+            373
+          ],
+          "scene": "Close-up of his phone: abstract app sections, a prescription card and a report card with icons.",
+          "speakers": {},
+          "dialogue": [
+            {
+              "speaker": "narration",
+              "text": "Relevant health information can remain accessible to the patient.",
+              "textColumns": [
+                "Relevant health information can ",
+                "remain accessible to the patient."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 8,
+              "dy": 98
+            }
+          ]
+        },
+        {
+          "id": "21-3",
+          "order": 3,
+          "role": "反応",
+          "beat": "Daytime",
+          "rect": [
+            44,
+            825,
+            462,
+            619
+          ],
+          "scene": "Daytime: Ravi at a small table with tea, surprised and smiling at a reminder card on his phone with a calendar icon.",
+          "speakers": {
+            "ravi": {
+              "face": [
+                155,
+                990,
+                103,
+                143
+              ],
+              "anchor": [
+                216,
+                1089
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "ravi",
+              "text": "I almost forgot my follow-up!",
+              "textColumns": [
+                "I almost forgot my follow-up!"
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 44,
+              "dy": 68
+            }
+          ]
+        },
+        {
+          "id": "21-4",
+          "order": 4,
+          "role": "余韻",
+          "beat": "The clinic consultation room",
+          "rect": [
+            518,
+            825,
+            462,
+            619
+          ],
+          "scene": "The clinic consultation room: Dr. Ananya welcomes Ravi back with a warm smile as he sits down.",
+          "speakers": {
+            "ananya": {
+              "face": [
+                762,
+                977,
+                95,
+                142
+              ],
+              "anchor": [
+                810,
+                1076
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "ananya",
+              "text": "Welcome back, Ravi. Let's review your progress.",
+              "textColumns": [
+                "Welcome back, Ravi. Let's review your ",
+                "progress."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 26,
+              "dy": 14
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "22",
+      "section": "main",
+      "purpose": "Storyboard v3.0 page 22.",
+      "expectation": "Next workflow step.",
+      "panels": [
+        {
+          "id": "22-1",
+          "order": 1,
+          "role": "提示",
+          "beat": "Home",
+          "rect": [
+            44,
+            27,
+            462,
+            494
+          ],
+          "scene": "Home: Ravi, his partner and their child sit together on a sofa, relaxed.",
+          "speakers": {
+            "ravi": {
+              "face": [
+                144,
+                152,
+                112,
+                143
+              ],
+              "anchor": [
+                199,
+                251
+              ]
+            },
+            "partner": {
+              "face": [
+                316,
+                185,
+                110,
+                134
+              ],
+              "anchor": [
+                371,
+                277
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "ravi",
+              "text": "Healthcare isn't just about my appointments.",
+              "textColumns": [
+                "Healthcare isn't just about my ",
+                "appointments."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 8,
+              "dy": 8
+            }
+          ]
+        },
+        {
+          "id": "22-2",
+          "order": 2,
+          "role": "始動",
+          "beat": "Close-up of a tablet held by the partner",
+          "rect": [
+            518,
+            27,
+            462,
+            494
+          ],
+          "scene": "Close-up of a tablet held by the partner: three separate round profile icons in a row.",
+          "speakers": {
+            "partner": {
+              "face": [
+                518,
+                132,
+                121,
+                389
+              ],
+              "anchor": [
+                608,
+                304
+              ],
+              "kind": "head"
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "partner",
+              "text": "Each of us has different health needs.",
+              "textColumns": [
+                "Each of us has different health needs."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 8,
+              "dy": 44
+            }
+          ]
+        },
+        {
+          "id": "22-3",
+          "order": 3,
+          "role": "反応",
+          "beat": "Soft vignette",
+          "rect": [
+            44,
+            532,
+            936,
+            372
+          ],
+          "scene": "Soft vignette: a tablet with an abstract growth curve and small vaccine icons, the child looking at it curiously.",
+          "speakers": {},
+          "dialogue": [
+            {
+              "speaker": "narration",
+              "text": "Family and children's wellness features are part of Welbuk Health.",
+              "textColumns": [
+                "Family and children's wellness features are ",
+                "part of Welbuk Health."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 434,
+              "dy": 8
+            }
+          ]
+        },
+        {
+          "id": "22-4",
+          "order": 4,
+          "role": "余韻",
+          "beat": "Soft vignette, warm scene",
+          "rect": [
+            44,
+            915,
+            936,
+            534
+          ],
+          "scene": "Soft vignette, warm scene: three generations together smiling: an elderly grandmother with white hair in a bun and a maroon sari, an elderly grandfather with white hair, no glasses, in a white kurta, with Ravi, his partner and the child.",
+          "speakers": {},
+          "dialogue": [
+            {
+              "speaker": "label",
+              "text": "WELBUK VISION",
+              "textColumns": [
+                "WELBUK VISION"
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 8,
+              "dy": 8
+            },
+            {
+              "speaker": "narration",
+              "text": "The vision: a more complete way to manage family wellness.",
+              "textColumns": [
+                "The vision: a more complete way to manage ",
+                "family wellness."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 452,
+              "dy": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "23",
+      "section": "main",
+      "purpose": "Storyboard v3.0 page 23.",
+      "expectation": "Next workflow step.",
+      "panels": [
+        {
+          "id": "23-1",
+          "order": 1,
+          "role": "提示",
+          "beat": "Tall panel",
+          "rect": [
+            50,
+            35,
+            456,
+            908
+          ],
+          "scene": "Tall panel: Ravi on a train by the window, a different Indian city skyline outside (no signs or text), phone in hand.",
+          "speakers": {
+            "ravi": {
+              "face": [
+                286,
+                320,
+                168,
+                234
+              ],
+              "anchor": [
+                380,
+                460
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "label",
+              "text": "WELBUK VISION",
+              "textColumns": [
+                "WELBUK VISION"
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 8,
+              "dy": 8
+            },
+            {
+              "speaker": "narration",
+              "text": "Life doesn't always happen in one city.",
+              "textColumns": [
+                "Life doesn't always happen in one city."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 8,
+              "dy": 62
+            }
+          ]
+        },
+        {
+          "id": "23-2",
+          "order": 2,
+          "role": "始動",
+          "beat": "Ravi standing outside a modern clinic in the new city, looki",
+          "rect": [
+            519,
+            35,
+            456,
+            478
+          ],
+          "scene": "Ravi standing outside a modern clinic in the new city, looking at his phone, hopeful.",
+          "speakers": {
+            "ravi": {
+              "face": [
+                733,
+                187,
+                80,
+                116
+              ],
+              "anchor": [
+                773,
+                260
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "ravi",
+              "text": "What if I could find trusted connected care here too?",
+              "textColumns": [
+                "What if I could find trusted connected ",
+                "care here too?"
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 26,
+              "dy": 20
+            }
+          ]
+        },
+        {
+          "id": "23-3",
+          "order": 3,
+          "role": "反応",
+          "beat": "Medium close-up of Ravi's hand holding his phone in the LOWE",
+          "rect": [
+            519,
+            526,
+            456,
+            416
+          ],
+          "scene": "Medium close-up of Ravi's hand holding his phone in the LOWER 60% of the panel, phone drawn smaller: an abstract consent screen with a toggle switched on and a doctor icon linked by a dotted line. The upper 40% of the panel is soft, empty, out-of-focus background with nothing in it.",
+          "speakers": {},
+          "dialogue": [
+            {
+              "speaker": "narration",
+              "text": "The vision is to enable appropriate record sharing with patient permission.",
+              "textColumns": [
+                "The vision is to enable appropriate ",
+                "record sharing with patient permission."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 8,
+              "dy": 8
+            }
+          ]
+        },
+        {
+          "id": "23-4",
+          "order": 4,
+          "role": "余韻",
+          "beat": "Inside the clinic",
+          "rect": [
+            50,
+            957,
+            924,
+            484
+          ],
+          "scene": "Inside the clinic: the Specialist with a tablet warmly welcoming Ravi, open hand.",
+          "speakers": {
+            "specialist": {
+              "face": [
+                235,
+                1027,
+                144,
+                197
+              ],
+              "anchor": [
+                320,
+                1133
+              ]
+            }
+          },
+          "dialogue": [
+            {
+              "speaker": "specialist",
+              "text": "Let's continue your care with the information you've chosen to share.",
+              "textColumns": [
+                "Let's continue your ",
+                "care with the ",
+                "information you've ",
+                "chosen to share."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 338,
+              "dy": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "24",
+      "section": "main",
+      "purpose": "Storyboard v3.0 page 24.",
+      "expectation": "Next workflow step.",
+      "panels": [
+        {
+          "id": "24-1",
+          "order": 1,
+          "role": "提示",
+          "beat": "Wide",
+          "rect": [
+            46,
+            30,
+            932,
+            403
+          ],
+          "scene": "Wide: the clinic team working together in one bright space: Dr. Ananya, Meera, the Nurse, the Pharmacist and the Lab Technician, each at their task, smiling.",
+          "speakers": {},
+          "dialogue": [
+            {
+              "speaker": "narration",
+              "text": "Behind every patient visit is an entire care team.",
+              "textColumns": [
+                "Behind every patient visit is an entire care team."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 92,
+              "dy": 8
+            }
+          ]
+        },
+        {
+          "id": "24-2",
+          "order": 2,
+          "role": "始動",
+          "beat": "A clean white panel with three empty pink rounded rectangles",
+          "rect": [
+            46,
+            445,
+            446,
+            483
+          ],
+          "scene": "A clean white panel with three empty pink rounded rectangles stacked, each with a simple icon (a laptop, a group of people, a person with a heart-free phone icon). Leave large clean white space.",
+          "speakers": {},
+          "dialogue": [
+            {
+              "speaker": "narration",
+              "text": "Welbuk Practice — Clinic and hospital operations.",
+              "textColumns": [
+                "Welbuk Practice — Clinic ",
+                "and hospital operations."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 20,
+              "compact": true,
+              "x": 134,
+              "dy": 86
+            },
+            {
+              "speaker": "narration",
+              "text": "Welbuk Care — Role-based tools for healthcare staff.",
+              "textColumns": [
+                "Welbuk Care — Role-based tools ",
+                "for healthcare staff."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 20,
+              "compact": true,
+              "x": 74,
+              "dy": 224
+            },
+            {
+              "speaker": "narration",
+              "text": "Welbuk Health — Connected patient and family care.",
+              "textColumns": [
+                "Welbuk Health — Connected ",
+                "patient and family care."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 20,
+              "compact": true,
+              "x": 110,
+              "dy": 356
+            }
+          ]
+        },
+        {
+          "id": "24-3",
+          "order": 3,
+          "role": "反応",
+          "beat": "Soft vision vignette",
+          "rect": [
+            503,
+            445,
+            476,
+            483
+          ],
+          "scene": "Soft vision vignette: a network of small round icons (plain clinic buildings with no cross, a pill bottle for a pharmacy, a lab flask, a family) linked by dotted pink lines.",
+          "speakers": {},
+          "dialogue": [
+            {
+              "speaker": "label",
+              "text": "WELBUK VISION",
+              "textColumns": [
+                "WELBUK ",
+                "VISION"
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 8,
+              "dy": 8
+            },
+            {
+              "speaker": "narration",
+              "text": "Our vision is a trusted, connected healthcare ecosystem.",
+              "textColumns": [
+                "Our vision is a ",
+                "trusted, ",
+                "connected ",
+                "healthcare ",
+                "ecosystem."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 284,
+              "dy": 8
+            }
+          ]
+        },
+        {
+          "id": "24-4",
+          "order": 4,
+          "role": "余韻",
+          "beat": "Final full-width scene in front of the clinic",
+          "rect": [
+            46,
+            940,
+            932,
+            505
+          ],
+          "scene": "Final full-width scene in front of the clinic: Dr. Ananya welcoming a patient, staff in the doorway, Ravi with his partner and child smiling. Keep the upper third as clean sky for the logo.",
+          "speakers": {},
+          "dialogue": [
+            {
+              "speaker": "label",
+              "text": "Building a Connected Healthcare Ecosystem",
+              "textColumns": [
+                "Building a Connected Healthcare Ecosystem"
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 22,
+              "compact": true,
+              "x": 8,
+              "dy": 8
+            },
+            {
+              "speaker": "narration",
+              "text": "Technology supports the work. People deliver the care.",
+              "textColumns": [
+                "Technology supports the work. People deliver the care."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 21,
+              "compact": true,
+              "x": 44,
+              "dy": 62
+            },
+            {
+              "speaker": "label",
+              "text": "Better workflows. Better coordination. More time for care.",
+              "textColumns": [
+                "Better workflows. Better coordination. More time for care."
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 20,
+              "compact": true,
+              "x": 44,
+              "dy": 116
+            },
+            {
+              "speaker": "label",
+              "text": "welbuk.com",
+              "textColumns": [
+                "welbuk.com"
+              ],
+              "textDirection": "horizontal",
+              "side": "left",
+              "fontSize": 20,
+              "compact": true,
+              "x": 50,
+              "dy": 380
+            }
+          ],
+          "protected": [
+            [
+              838,
+              946,
+              132,
+              132
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "promptPolicy": {
+    "version": 2
+  },
+  "productionReview": {
+    "designSealRequired": true,
+    "readingProtocol": "two-phase-v1",
+    "required": true,
+    "reviewer": "subagent",
+    "stages": [
+      "source",
+      "script",
+      "storyboard",
+      "artwork",
+      "lettering",
+      "final"
+    ]
+  },
+  "referenceRoles": {
+    "works/welbuk-24/assets/characters/main-cast.png": "identity: canonical turnaround and expression sheet for Dr. Ananya, Meera and Ravi (face traits, hair, build, skin tone, clothing).",
+    "works/welbuk-24/assets/characters/vision-cast.png": "identity: canonical sheet for the vision-only characters (specialist, Ravi's partner, Ravi's child).",
+    "works/welbuk-24/assets/characters/nurse.png": "identity: canonical sheet for the clinic nurse (added in the 2026-11-11 revision; appears on page 4).",
+    "works/welbuk-24/assets/characters/checkin-patients.png": "identity: canonical sheet for the two other patients on page 3, Mr. Raman (elderly, front desk) and Priya (young, Welbuk Health app).",
+    "works/welbuk-24/assets/characters/pharmacy-lab.png": "identity: canonical sheet for the Pharmacist and the Lab Technician (added in the 2026-11-12 revision; appear on page 8).",
+    "works/welbuk-24/assets/characters/supporting-cast.png": "identity: face crops of the one-off supporting characters taken from the accepted generated pages (no separate sheet)."
+  },
+  "brand": {
+    "accent": "#FD006A",
+    "labelFill": "#FFF0F6",
+    "captionBar": true,
+    "fontFamily": "Inter, DejaVu Sans, sans-serif",
+    "footer": true,
+    "logo": "source/brand/welbuk-logo-pink-transparent.png",
+    "logos": [
+      {
+        "page": "24",
+        "x": 844,
+        "y": 952,
+        "size": 120
+      }
+    ]
+  },
+  "readingDirection": "left-to-right",
+  "language": "en"
+}

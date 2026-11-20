@@ -1,0 +1,168 @@
+[
+ {
+  "request": "works/auto-6294ee8a2094/workflow/stage-reviews/requests/script-all-f30a6bb0b78c57700cede4e46d407cbd96a481307f27074b2dbc70c482e69fdd.json",
+  "reviewer": {
+   "role": "subagent",
+   "task": null
+  },
+  "status": "pass",
+  "observations": [
+   "Reviewer identity: the runtime gave me no task or agent ID, so reviewer.task is null. Do not substitute an invented value.",
+   "What I read in this request (fingerprint f30a6bb0..., 2335 lines): every speaker, text and textColumns line in all 35 panels, from a content search over the whole file, plus the entries and fingerprint lines. The entries are unchanged: original.txt 0201d6ee... and source-coverage.json 2f7f5045.... So the source and coverage files are the versions I read in full earlier in this session. Earlier in this session I also read the docs, the Request 4 section of REVISION-2026-11-11.md and the whole of request b4240e4f.... Limit: in this request I did not re-read the non-dialogue fields (cast, sections, scenes) line by line. Panel-id and dialogue line numbers match request 18dea5da... up to 02-1. They then shift by +1 (the extra 02-1 column) and from 03-2 on by +3 (two more 03-2 columns). That fits a change limited to these columns, but I did not verify the non-dialogue text line by line. This is a script request with no images. I did not view or claim to inspect any image, and I did not recompute any hash.",
+   "Reading order: I read the source first. I then re-read only the lettered text in panel order to check that each question, referent and promise is resolved by earlier lettering.",
+   "Panel count: 3+4+5+3+4+2+4+6+4 = 35 panels. All 35 are in dialogueReview.",
+   "textColumns rejoin: I rejoined every balloon, caption and label in all 35 panels and compared each with its text field. All of them match exactly, with no lost or doubled spaces. All texts are verbatim from original.txt. The exceptions are the recorded supplement labels 'WELBUK PRACTICE for the clinic', 'WELBUK CARE for clinic staff', 'WELBUK HEALTH for patients' and the repeated 09-3 'WELBUK VISION'.",
+   "Changes verified. 02-1 caption ['The clinic ','begins its ','Welbuk ','onboarding.'] rejoins to 'The clinic begins its Welbuk onboarding.', which matches its text and original.txt line 20. 03-2 caption ['Some check ','in ahead on ','the Welbuk ','Health app.'] rejoins to 'Some check in ahead on the Welbuk Health app.', which matches its text and line 27. In both, the words are unchanged and only the breaks moved. Minor, non-blocking: 03-2 now breaks inside the phrasal verb 'check / in' and the product name 'Welbuk / Health'. Both still read correctly. Whether they fit the art and avoid the hair is a question for the lettering review. No other dialogue text or columns differ from request 18dea5da...: the 03-3 ['Ravi scans ','the QR code ','at the door.'], 08-2 and 08-4 rewraps are as previously reviewed.",
+   "Page 8 wording still matches original.txt lines 54-59 word for word in all six panels.",
+   "Safety: no lettering contains a drug name, test name, value or diagnosis. ICD and SNOMED (05-3) are coding systems. 'feeling tired' is a routine concern.",
+   "Dependency chain: each question comes before its answer (05-1, 05-2, 05-3; 07-2, 07-3). 03-3 names Ravi before 'his' in 03-4. 06-2 'prescribing · labs' sets up 08-1 and 08-2. 08-3 'Later that day' follows 07-4. The technician's promise is paid off in 08-4 to 08-6. No turn is merged across an intervening speaker.",
+   "Non-blocking note carried forward: the 08-4 'some days later' time skip is carried by the art only. Storyboard and lettering should confirm that it reads."
+  ],
+  "issues": [],
+  "dialogueReview": {
+   "sourceCompared": true,
+   "panels": [
+    {
+     "panel": "01-1",
+     "observation": "The caption 'A busy day at Dr. Ananya's clinic.' is verbatim from original.txt line 15, and its 2 columns rejoin. It names Ananya before her first balloon in 01-3."
+    },
+    {
+     "panel": "01-2",
+     "observation": "Meera's line 16 is kept verbatim as two consecutive Meera balloons split at the ellipsis, with no speaker between them. Both rejoin. The list is the premise for 01-3."
+    },
+    {
+     "panel": "01-3",
+     "observation": "'Our time belongs with patients. Let's make the rest simpler.' is verbatim from line 17, and its 4 columns rejoin. 'the rest' refers to Meera's list in 01-2."
+    },
+    {
+     "panel": "02-1",
+     "observation": "The rewrapped caption ['The clinic ','begins its ','Welbuk ','onboarding.'] rejoins to the line 20 caption verbatim, with the words unchanged. 'WELBUK PRACTICE for the clinic' is a recorded supplement label, and it rejoins."
+    },
+    {
+     "panel": "02-2",
+     "observation": "'We can organise our clinic workflow here.' is verbatim from line 21. 'here' refers to the 02-1 laptop setup."
+    },
+    {
+     "panel": "02-3",
+     "observation": "Meera's line is verbatim from line 22. 'And' continues 02-2 with no skipped turn. 'WELBUK CARE for clinic staff' is a supplement. Both rejoin."
+    },
+    {
+     "panel": "02-4",
+     "observation": "'One team. Better coordination.' is verbatim from line 23 and sums up the 02-2 and 02-3 exchange."
+    },
+    {
+     "panel": "03-1",
+     "observation": "The caption is verbatim from line 26, and its 3 columns rejoin. 'A later morning' marks the time change. The front desk stays an option."
+    },
+    {
+     "panel": "03-2",
+     "observation": "The rewrapped caption ['Some check ','in ahead on ','the Welbuk ','Health app.'] rejoins to 'Some check in ahead on the Welbuk Health app.', verbatim from line 27, with the words unchanged. 'Some' contrasts with 03-1."
+    },
+    {
+     "panel": "03-3",
+     "observation": "The caption ['Ravi scans ','the QR code ','at the door.'] rejoins verbatim to line 28. It names Ravi before 'his' in 03-4."
+    },
+    {
+     "panel": "03-4",
+     "observation": "The caption is verbatim from line 29, and its 3 columns rejoin. 'his' resolves to Ravi."
+    },
+    {
+     "panel": "03-5",
+     "observation": "The caption and 'A-10 · A-11 · A-12' are verbatim from line 30. 'Every check-in' gathers the three routes. The labels are slot tokens, not values."
+    },
+    {
+     "panel": "04-1",
+     "observation": "'Soon, his slot comes up.' and 'NOW · A-12' are verbatim from line 33. 'his slot' refers to Ravi and to 03-5."
+    },
+    {
+     "panel": "04-2",
+     "observation": "The caption and the Nurse's line are verbatim from line 34, and both rejoin. No readings."
+    },
+    {
+     "panel": "04-3",
+     "observation": "The caption and 'RAVI · READY' are verbatim from line 35. 'he' resolves to Ravi."
+    },
+    {
+     "panel": "05-1",
+     "observation": "The greeting and the PATIENT DETAILS label are verbatim from line 38, and the 7 label columns rejoin. The question is answered in 05-3, after the 05-2 consent."
+    },
+    {
+     "panel": "05-2",
+     "observation": "The question comes before 'Yes, I agree.'. Both lines and the consent label are verbatim from line 39, and they rejoin."
+    },
+    {
+     "panel": "05-3",
+     "observation": "'I've been feeling tired lately.' answers 05-1. It is verbatim from line 40 and is not a diagnosis. The SOAP NOTES label is verbatim, and its 8 columns rejoin."
+    },
+    {
+     "panel": "05-4",
+     "observation": "The caption is verbatim from line 41, and its 4 columns rejoin. It comments on 05-3."
+    },
+    {
+     "panel": "06-1",
+     "observation": "The heading and the three tile labels are verbatim from line 44, and all of them rejoin. They are speciality examples only."
+    },
+    {
+     "panel": "06-2",
+     "observation": "The line is verbatim from line 45, and 'your concerns' refers to 05-3. The PLAN OF CARE label is verbatim, and its 6 columns rejoin. It sets up 08-1 and 08-2."
+    },
+    {
+     "panel": "07-1",
+     "observation": "Meera's line is verbatim from line 48, and its 5 columns rejoin. It introduces Welbuk Health at the patient level."
+    },
+    {
+     "panel": "07-2",
+     "observation": "Ravi's question is verbatim from line 49 and responds to 07-1. 'WELBUK HEALTH for patients' is a supplement."
+    },
+    {
+     "panel": "07-3",
+     "observation": "Meera's answer is verbatim from line 50 and directly answers the 07-2 question. 'available to you' avoids unlaunched claims."
+    },
+    {
+     "panel": "07-4",
+     "observation": "The caption is verbatim from line 51. Ravi's exit sets up 08-3 'Later that day'."
+    },
+    {
+     "panel": "08-1",
+     "observation": "The caption (4 columns) and 'NEW PRESCRIPTION' rejoin and match line 54 word for word. 'the prescription' follows from 06-2. No drug names."
+    },
+    {
+     "panel": "08-2",
+     "observation": "The caption ['The lab is ','notified.'] and 'LAB ORDER: samples to collect' rejoin and match line 55. No test named."
+    },
+    {
+     "panel": "08-3",
+     "observation": "The caption (2 columns) and the labtech balloon (4 columns) rejoin and match line 56. Single speaker. The promise sets up 08-4 to 08-6."
+    },
+    {
+     "panel": "08-4",
+     "observation": "The caption ['Results ready: ','Ravi is ','notified.'] and the channel label rejoin and match line 57. They fulfil the 08-3 promise. Non-blocking: the time skip is shown only by the art."
+    },
+    {
+     "panel": "08-5",
+     "observation": "The caption (3 columns) and 'RESULTS READY' rejoin and match line 58. Welbuk Care comes from 02-3."
+    },
+    {
+     "panel": "08-6",
+     "observation": "The caption (4 columns) and 'RESULTS READY' rejoin and match line 59. Welbuk Practice comes from 02-1."
+    },
+    {
+     "panel": "09-1",
+     "observation": "The caption is verbatim from line 62, and its 4 columns rejoin. The conditional 'may' frames the vision."
+    },
+    {
+     "panel": "09-2",
+     "observation": "'WELBUK VISION' and the caption are verbatim from line 63, and they rejoin. They are marked as vision."
+    },
+    {
+     "panel": "09-3",
+     "observation": "The caption is verbatim from line 64, and its 3 columns rejoin. The repeated 'WELBUK VISION' label is a recorded supplement."
+    },
+    {
+     "panel": "09-4",
+     "observation": "The product label and the final caption are verbatim from line 65, and both rejoin. The panel ties the three products to the three people."
+    }
+   ]
+  }
+ }
+]
